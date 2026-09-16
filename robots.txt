@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://z3r0colt.github.io/gentleking.github.io/sitemap.xml

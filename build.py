@@ -36,7 +36,7 @@ SITE_TAGLINE = "The King who is gentle toward sinners reigns over all things."
 # and add the same domain to the CNAME file.
 SITE_URL = "https://z3r0colt.github.io/gentleking.github.io"
 
-REPO_URL = "https://github.com/z3r0colt/gentleking.github.io"
+REPO_URL = "https://github.com/z3r0Colt/gentleking.github.io"
 
 # The working name of the Bible study software.
 APP_NAME = "Gentle King Study"

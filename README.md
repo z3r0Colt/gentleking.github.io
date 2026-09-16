@@ -26,8 +26,15 @@ GitHub Pages never runs the script, it only serves what you commit.
 preview text**, edit `build.py` and run it again.
 
 **To change how the site looks**, edit `assets/css/site.css`. The colors, the fonts,
-and the spacing are all set as variables in the first section of that file, so a
-small edit there changes the whole site at once.
+and the spacing are all set as variables near the top of that file, so a small edit
+there changes the whole site at once.
+
+**Before you push**, run the checker. It catches broken HTML, links pointing at
+files that are not there, duplicate section ids, and stray punctuation.
+
+```
+python3 check.py
+```
 
 ---
 
@@ -35,6 +42,7 @@ small edit there changes the whole site at once.
 
 ```
 build.py                the builder. Wraps content in the shell.
+check.py                looks over the built pages for mistakes.
 content/                the words. One file per page. Edit these.
 assets/css/site.css     the whole design. Colors and fonts at the top.
 assets/js/site.js       theme switch, mobile menu, on-this-page links.

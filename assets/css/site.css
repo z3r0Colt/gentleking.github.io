@@ -1023,3 +1023,6 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   main.has-toc > .toc li { margin-bottom: .55rem; }
   main.has-toc > .toc a { font-size: .82rem; line-height: 1.4; display: inline-block; }
 }
+
+/* The reading column of the mock. Kept from spilling out of its grid track. */
+.mock-text { min-width: 0; }
