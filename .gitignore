@@ -1,0 +1,5 @@
+# nothing to ignore yet, but keep editor and OS clutter out of the repo
+.DS_Store
+Thumbs.db
+*.swp
+__pycache__/
