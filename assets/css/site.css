@@ -1002,7 +1002,8 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
     grid-template-columns: minmax(0, 1fr) 12.5rem;
     column-gap: clamp(2.5rem, 4vw, 3.5rem);
   }
-  main.has-toc > .section { grid-column: 1; }
+  /* Everything but the rail belongs in the reading column, rules included. */
+  main.has-toc > * { grid-column: 1; }
   main.has-toc > .toc {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1026,3 +1027,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 
 /* The reading column of the mock. Kept from spilling out of its grid track. */
 .mock-text { min-width: 0; }
+
+/* The ESV prints the covenant name of God in small capitals. So do we. */
+.sc {
+  font-variant-caps: small-caps;
+  letter-spacing: .02em;
+}

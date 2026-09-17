@@ -142,9 +142,13 @@ def check(path):
             found.append(f"id {name!r} is used {count} times, anchors will jump to the wrong place")
 
     for href, _ in reader.internal:
-        target = href.split("#")[0]
-        if target and not (ROOT / target).exists():
+        target, _, anchor = href.partition("#")
+        page = ROOT / target if target else path
+        if target and not page.exists():
             found.append(f"link to {href} but that file is not in the repo")
+        elif anchor and page.exists():
+            if f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
+                found.append(f"link to {href} but nothing on that page has that id")
 
     for href, attr in reader.external:
         if attr.get("target") != "_blank" or "noopener" not in (attr.get("rel") or ""):
