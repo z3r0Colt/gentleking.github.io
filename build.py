@@ -451,8 +451,16 @@ def build_sitemap():
         encoding="utf-8",
     )
 
+    # Pages serves this repository as it stands, so the source folders sit next
+    # to the site. Keep search engines out of them, since a raw content fragment
+    # is half a page and would only confuse anyone who landed on it.
     (ROOT / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8"
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /content/\n"
+        "Disallow: /.github/\n"
+        f"\nSitemap: {SITE_URL}/sitemap.xml\n",
+        encoding="utf-8",
     )
 
 

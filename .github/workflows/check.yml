@@ -1,0 +1,59 @@
+# Rebuilds the site and checks it on every push to main.
+#
+# GitHub Pages serves this repository straight from the main branch, so the
+# .html files committed here are literally what readers get. That makes one
+# thing important. If the words in content/ change and build.py is never run,
+# the repo and the live site quietly disagree.
+#
+# So this job rebuilds from content/ and fails if the result differs from what
+# was committed. A red mark means "you forgot to run build.py", and the fix is
+# to run it and commit the pages it writes.
+#
+# It also runs check.py, which catches broken HTML, links pointing at files
+# that are not here, anchors pointing at ids no page has, and stray em dashes,
+# semicolons, and colons in prose.
+
+name: Build and check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild the pages from content/
+        run: python3 build.py
+
+      - name: Fail if the committed pages are out of date
+        run: |
+          if git diff --quiet -- '*.html' sitemap.xml robots.txt; then
+            echo "The committed pages match a fresh build."
+            exit 0
+          fi
+          echo "The pages committed here do not match a fresh build of content/."
+          echo "GitHub Pages serves the committed files, so the live site is stale."
+          echo
+          echo "To fix it, run this at the top of the repo and commit what changes:"
+          echo
+          echo "    python3 build.py"
+          echo
+          git diff --stat -- '*.html' sitemap.xml robots.txt
+          exit 1
+
+      - name: Check the pages
+        run: python3 check.py
