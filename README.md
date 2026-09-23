@@ -116,9 +116,9 @@ the site is relative, so nothing else has to change.
 
 ## A note on the words
 
-Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard
-Version®), copyright © 2001 by Crossway, a publishing ministry of Good News
-Publishers. Used by permission. All rights reserved.
+Scripture quotations are from the Authorized Version, the King James Bible of
+1611, which is in the public domain. The site quotes it rather than a modern
+translation so that nothing here is under anyone's copyright.
 
 Everything written here may be copied, printed, and shared freely. Please do not
 sell it and please do not alter it.

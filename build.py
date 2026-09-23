@@ -43,12 +43,11 @@ APP_NAME = "Sojourner"
 APP_FULL = "Sojourner, Bible Study Companion"
 APP_VERSION = "0.2.7"
 APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
-APP_EMAIL = "sojourner@gentleking.org"
+APP_EMAIL = "colt@sojourner.com"
 
-ESV_NOTICE = (
-    "Scripture quotations are from the ESV® Bible (The Holy Bible, English "
-    "Standard Version®), copyright © 2001 by Crossway, a publishing "
-    "ministry of Good News Publishers. Used by permission. All rights reserved."
+SCRIPTURE_NOTICE = (
+    "Scripture quotations are from the Authorized Version, the King James Bible "
+    "of 1611, which is in the public domain."
 )
 
 COPYRIGHT_YEAR = "2026"
@@ -59,7 +58,6 @@ NAV = [
     ("gospel.html", "The Gospel"),
     ("doctrine.html", "Doctrine"),
     ("resources.html", "Resources"),
-    ("books.html", "Books"),
     ("about.html", "About"),
 ]
 
@@ -150,22 +148,6 @@ PAGES = [
             "for beginners and for going deeper, free study tools, and faithful preaching."
         ),
         "toc": True,
-    },
-    {
-        "file": "books.html",
-        "content": "books.html",
-        "title": "Books",
-        "eyebrow": "Books",
-        "h1": "Books, Given Away Free",
-        "deck": (
-            "Everything written here is free to download, free to print, and free to pass "
-            "along. Nothing to buy and no email required."
-        ),
-        "description": (
-            "Free books from Gentle King. Written for ordinary Christians, given away without "
-            "charge, free to copy and share."
-        ),
-        "toc": False,
     },
     {
         "file": "about.html",
@@ -313,9 +295,9 @@ FOOTER = """<footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <p class="footer-verse">&ldquo;Take my yoke upon you, and learn from me, for I am gentle
-          and lowly in heart, and you will find rest for your souls.&rdquo;</p>
-        <p class="footer-verse-ref">Matthew 11:29 (ESV)</p>
+        <p class="footer-verse">Take my yoke upon you, and learn of me; for I am meek and lowly
+          in heart: and ye shall find rest unto your souls.</p>
+        <p class="footer-verse-ref">Matthew 11:29 (KJV)</p>
       </div>
       <div>
         <p class="footer-head">Read</p>
@@ -329,7 +311,6 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Get</p>
         <ul class="footer-links">
           <li><a href="software.html">Sojourner</a></li>
-          <li><a href="books.html">Books</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
       </div>
@@ -337,7 +318,7 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Elsewhere</p>
         <ul class="footer-links">
           <li><a href="{repo_url}" target="_blank" rel="noopener">The project on GitHub</a></li>
-          <li><a href="https://www.opc.org/wcf.html" target="_blank" rel="noopener">Westminster Standards</a></li>
+          <li><a href="https://thewestminsterstandard.org/the-westminster-confession/" target="_blank" rel="noopener">Westminster Confession</a></li>
           <li><a href="https://www.esv.org" target="_blank" rel="noopener">Read the ESV</a></li>
         </ul>
       </div>
@@ -346,7 +327,7 @@ FOOTER = """<footer class="site-footer">
       <p>&copy; {year} Gentle King. Everything written here may be copied and shared freely.</p>
       <p><a href="about.html">About this site</a></p>
     </div>
-    <p class="footer-fineprint">{esv_notice}</p>
+    <p class="footer-fineprint">{scripture_notice}</p>
   </div>
 </footer>
 
@@ -452,7 +433,7 @@ def build_page(page):
         parts.append('<nav data-toc></nav>\n')
     parts.append(body)
     parts.append("\n</main>\n\n")
-    parts.append(render(FOOTER, repo_url=REPO_URL, year=COPYRIGHT_YEAR, esv_notice=ESV_NOTICE))
+    parts.append(render(FOOTER, repo_url=REPO_URL, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE))
 
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
