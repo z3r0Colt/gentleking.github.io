@@ -619,6 +619,14 @@ blockquote { margin: 2rem 0; }
     transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s;
   }
   .nav[data-open="true"] { transform: none; opacity: 1; visibility: visible; }
+  /* A phone on its side is short. Let the open menu scroll instead of
+     running off the bottom of the screen. */
+  .nav {
+    max-height: calc(100vh - 4.4rem);
+    max-height: calc(100dvh - 4.4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
   .nav a {
     padding: .85rem .2rem;
     font-size: 1rem;
