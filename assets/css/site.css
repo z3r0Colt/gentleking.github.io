@@ -1153,3 +1153,28 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   content: " Click it for the full size image.";
   color: var(--gold);
 }
+
+/* --------------------------------------------------------------------------
+   19. A page that leads with its own mark
+   Two files, one drawn for parchment and one for the dark theme, swapped by
+   the same rules the theme toggle uses everywhere else on the site.
+   -------------------------------------------------------------------------- */
+
+.page-head-logo { padding-block: clamp(2.25rem, 6vw, 4rem) clamp(1.75rem, 4vw, 2.75rem); }
+
+.brandmark {
+  margin: 0 0 clamp(1.25rem, 3vw, 1.9rem);
+  line-height: 0;
+}
+.brandmark img {
+  width: clamp(13rem, 26vw, 19rem);
+  height: auto;
+}
+.brandmark-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brandmark-light { display: none; }
+  :root:not([data-theme="light"]) .brandmark-dark { display: block; }
+}
+:root[data-theme="dark"] .brandmark-light { display: none; }
+:root[data-theme="dark"] .brandmark-dark { display: block; }

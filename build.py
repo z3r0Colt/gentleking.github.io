@@ -87,6 +87,10 @@ PAGES = [
         "full_title": "Sojourner \u00b7 A Bible study companion for Windows",
         "eyebrow": "Bible Study Companion",
         "h1": "Sojourner",
+        "logo": "sojourner-logo",
+        "logo_alt": "Sojourner, Bible Study Companion",
+        "og_image": "og-sojourner.png",
+        "og_alt": "Sojourner, Bible Study Companion. A free, offline Bible study companion for Windows.",
         "deck": (
             "Scripture beside the commentaries, confessions, and reference works of the "
             "Reformed church. It runs on your own machine, it works with the network off, "
@@ -208,14 +212,14 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:title" content="{full_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{site_url}/assets/img/og-cover.png">
+<meta property="og:image" content="{site_url}/assets/img/{og_image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Gentle King. The King who is gentle toward sinners reigns over all things.">
+<meta property="og:image:alt" content="{og_alt}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{full_title}">
 <meta name="twitter:description" content="{description}">
-<meta name="twitter:image" content="{site_url}/assets/img/og-cover.png">
+<meta name="twitter:image" content="{site_url}/assets/img/{og_image}">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/img/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -284,6 +288,22 @@ PAGE_HEAD = """<div class="page-head">
   <div class="wrap">
     <p class="eyebrow">{eyebrow}</p>
     <h1>{h1}</h1>
+    <p class="page-deck">{deck}</p>
+  </div>
+</div>
+"""
+
+# A page with its own mark shows it in place of a typeset name. The name still
+# sits in the heading for screen readers and for search, just not drawn twice.
+PAGE_HEAD_LOGO = """<div class="page-head page-head-logo">
+  <div class="wrap">
+    <h1 class="brandmark">
+      <img class="brandmark-light" src="assets/img/{logo}.webp" width="620" height="462"
+           alt="" decoding="async">
+      <img class="brandmark-dark" src="assets/img/{logo}-dark.webp" width="620" height="461"
+           alt="" decoding="async">
+      <span class="visually-hidden">{logo_alt}</span>
+    </h1>
     <p class="page-deck">{deck}</p>
   </div>
 </div>
@@ -392,6 +412,14 @@ def build_page(page):
             canonical=canonical,
             site_url=SITE_URL,
             site_name=SITE_NAME,
+            og_image=page.get("og_image", "og-cover.png"),
+            og_alt=html.escape(
+                page.get(
+                    "og_alt",
+                    "Gentle King. The King who is gentle toward sinners reigns over all things.",
+                ),
+                quote=True,
+            ),
             structured_data=structured_data(page, canonical),
         ),
         render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"])),
@@ -399,6 +427,15 @@ def build_page(page):
 
     if page.get("hero"):
         parts.append(render(HERO, version=APP_VERSION))
+    elif page.get("logo"):
+        parts.append(
+            render(
+                PAGE_HEAD_LOGO,
+                logo=page["logo"],
+                logo_alt=html.escape(page["logo_alt"], quote=True),
+                deck=html.escape(page["deck"], quote=False),
+            )
+        )
     else:
         parts.append(
             render(
