@@ -4,7 +4,7 @@ Gentle King, site builder.
 
 Every page on this site is plain static HTML. This script exists so the header,
 the footer, and all of the <head> metadata live in exactly one place instead of
-seven. It reads a content fragment out of content/ and wraps it in the shell.
+six. It reads a content fragment out of content/ and wraps it in the shell.
 
     python3 build.py
 
@@ -70,10 +70,10 @@ PAGES = [
         "file": "index.html",
         "content": "index.html",
         "title": SITE_NAME,
-        "full_title": "Gentle King · Reformed doctrine, free books, and Bible study software",
+        "full_title": "Gentle King · Reformed doctrine, the gospel, and Bible study software",
         "description": (
-            "A Reformed ministry site. The whole gospel, the doctrines of grace, free books, "
-            "reading and study resources, and Sojourner, a free offline Bible study companion."
+            "A Reformed ministry site. The whole gospel, the doctrines of grace, reading and "
+            "study resources, and Sojourner, a free offline Bible study companion."
         ),
         "hero": True,
         "toc": False,
@@ -318,7 +318,6 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Elsewhere</p>
         <ul class="footer-links">
           <li><a href="https://thewestminsterstandard.org/the-westminster-confession/" target="_blank" rel="noopener">Westminster Confession</a></li>
-          <li><a href="https://www.esv.org" target="_blank" rel="noopener">Read the ESV</a></li>
         </ul>
       </div>
     </div>

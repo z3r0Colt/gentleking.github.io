@@ -16,8 +16,9 @@ What it looks for.
   Stray classes        a class name the stylesheet does not define
   Punctuation          em dashes, semicolons, and colons in ordinary prose
 
-Quoted Scripture is skipped on the punctuation check. The ESV punctuates the
-way it punctuates and nothing here should change it.
+Quoted Scripture is skipped on the punctuation check. The Authorized Version
+uses colons and semicolons far more than we do, and nothing here should
+change it.
 
 An exit code of 0 means everything passed.
 """
