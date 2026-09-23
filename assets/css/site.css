@@ -80,6 +80,7 @@
   --measure:      37rem;   /* prose column */
   --wide:         66rem;   /* full container */
   --gutter:       clamp(1.25rem, 5vw, 2.75rem);
+  --section-gap:  clamp(2.75rem, 7vw, 4.75rem);
 
   --step:         clamp(1.05rem, .96rem + .38vw, 1.175rem);
   --lh:           1.72;
@@ -226,7 +227,7 @@ main > .section > .pull {
 
 .page-body { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3.5rem, 9vw, 6rem); }
 
-.section { margin-block: clamp(2.75rem, 7vw, 4.75rem); scroll-margin-top: 6rem; }
+.section { margin-block: var(--section-gap); scroll-margin-top: 6rem; }
 .section:first-of-type { margin-top: 0; }
 .section:last-child { margin-bottom: 0; }
 
@@ -245,7 +246,7 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: clamp(2.2rem, 1.6rem + 3vw, 3.5rem); letter-spacing: -.018em; }
-h2 { font-size: clamp(1.65rem, 1.35rem + 1.3vw, 2.2rem); margin-top: 0; }
+h2 { font-size: clamp(1.8rem, 1.45rem + 1.3vw, 2.2rem); margin-top: 0; }
 h3 { font-size: clamp(1.18rem, 1.08rem + .42vw, 1.35rem); margin-bottom: .45em; }
 h4 { font-size: 1.03rem; letter-spacing: .01em; }
 
@@ -253,20 +254,24 @@ h2 + p, h2 + .lede, h3 + p { margin-top: 0; }
 
 /* A heading loose in a section's prose. Garamond runs small beside Charter,
    so at h3 size it read as a line of text that had lost its full stop. It
-   needs real size, weight and room above, and a gold mark to announce it. */
+   needs real size, weight and room above, and a gold mark to announce it.
+   It must still sit below the section's h2 and break less than a new section
+   does, so its size stays under the h2's and its room above under the gap
+   between sections. The mark is a border so it survives printing, and it is
+   shorter than the gold tick on the divider between sections. */
 main > .section > h3 {
-  font-size: clamp(1.45rem, 1.25rem + .8vw, 1.7rem);
+  font-size: clamp(1.36rem, 1.16rem + .8vw, 1.7rem);
   font-weight: 600;
-  margin-top: 2.2em;
+  margin-top: calc(var(--section-gap) * .75);
 }
 main > .section > h3::before {
   content: "";
   display: block;
   width: 2rem;
-  height: 2px;
   margin-bottom: .6em;
-  background: var(--gold-soft);
+  border-top: 1px solid var(--gold);
 }
+main > .section > h3 + blockquote { margin-top: .9rem; }
 
 p { margin: 0 0 1.15em; }
 p:last-child { margin-bottom: 0; }
@@ -824,6 +829,8 @@ blockquote { margin: 2rem 0; }
   :root { --paper: #fff; --ink: #000; --ink-soft: #333; }
   .site-header, .site-footer, .to-top, .toc, .btn-row, .skip-link { display: none !important; }
   body { font-size: 11pt; }
+  :root { --section-gap: 1.5rem; }
+  main > .section > h3 { font-size: 15pt; break-after: avoid; page-break-after: avoid; }
   .section { margin-block: 1.5rem; page-break-inside: avoid; }
   a { text-decoration: none; color: #000; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
