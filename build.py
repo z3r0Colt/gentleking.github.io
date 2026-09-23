@@ -94,8 +94,8 @@ PAGES = [
         ),
         "description": (
             "Sojourner is a free offline Bible study companion for Windows. Ten translations, "
-            "Calvin and Henry and Spurgeon, the Westminster Standards, an interlinear Greek "
-            "New Testament, and a 9,349 article encyclopedia, all on your own machine."
+            "Calvin and Henry and Spurgeon, the Westminster Standards, a word-by-word interlinear "
+            "in Hebrew and Greek, and a 9,349 article encyclopedia, all on your own machine."
         ),
         "toc": True,
     },

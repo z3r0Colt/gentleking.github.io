@@ -1147,3 +1147,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 
 /* An address split across data attributes, joined by the script. */
 .mail { white-space: nowrap; }
+
+/* Every screenshot opens full size, so say so once here rather than in each caption. */
+.shot > a + figcaption::after {
+  content: " Click it for the full size image.";
+  color: var(--gold);
+}
