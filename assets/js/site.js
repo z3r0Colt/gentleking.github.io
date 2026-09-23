@@ -105,52 +105,147 @@
 
   var mount = doc.querySelector('[data-toc]');
   var main = doc.querySelector('main');
+  var tocObserver = null;
 
-  if (mount && main) {
+  /* Built from the sections that are actually showing, so a page that changes
+     what it shows can build it again. */
+  function buildToc() {
+    if (!mount || !main) { return; }
+    if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
+    mount.textContent = '';
+    mount.className = '';
+    mount.removeAttribute('aria-label');
+
     var headings = [];
     var sections = main.querySelectorAll('section.section[id]');
 
     for (var i = 0; i < sections.length; i++) {
-      var h2 = sections[i].querySelector('h2');
-      if (h2) { headings.push({ id: sections[i].id, text: h2.textContent.trim(), el: sections[i] }); }
+      var sec = sections[i];
+      if (sec.hasAttribute('data-half') && !sec.classList.contains('is-shown')) { continue; }
+      var h2 = sec.querySelector('h2');
+      if (h2) { headings.push({ id: sec.id, text: h2.textContent.trim(), el: sec }); }
     }
 
-    if (headings.length >= 3) {
-      var title = doc.createElement('p');
-      title.className = 'toc-title';
-      title.textContent = 'On this page';
+    if (headings.length < 3) { return; }
 
-      var list = doc.createElement('ol');
-      var links = [];
+    var title = doc.createElement('p');
+    title.className = 'toc-title';
+    title.textContent = 'On this page';
 
-      headings.forEach(function (h) {
-        var li = doc.createElement('li');
-        var a = doc.createElement('a');
-        a.href = '#' + h.id;
-        a.textContent = h.text;
-        li.appendChild(a);
-        list.appendChild(li);
-        links.push(a);
-      });
+    var list = doc.createElement('ol');
+    var links = [];
 
-      mount.className = 'toc';
-      mount.setAttribute('aria-label', 'On this page');
-      mount.appendChild(title);
-      mount.appendChild(list);
+    headings.forEach(function (h) {
+      var li = doc.createElement('li');
+      var a = doc.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.text;
+      li.appendChild(a);
+      list.appendChild(li);
+      links.push(a);
+    });
 
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) { return; }
-            links.forEach(function (a) {
-              a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
-            });
+    mount.className = 'toc';
+    mount.setAttribute('aria-label', 'On this page');
+    mount.appendChild(title);
+    mount.appendChild(list);
+
+    if ('IntersectionObserver' in window) {
+      tocObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) { return; }
+          links.forEach(function (a) {
+            a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
           });
-        }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+        });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
 
-        headings.forEach(function (h) { observer.observe(h.el); });
+      headings.forEach(function (h) { tocObserver.observe(h.el); });
+    }
+  }
+
+  /* ----------------------------------------------------- one half at a time */
+
+  /* A page can split into halves, each section marked with data-half. Nothing
+     in either half shows until the reader chooses, then only the chosen half
+     does. The address follows the choice, so back, reload, and a shared link
+     all land in the right half. */
+  var halfSections = doc.querySelectorAll('[data-half]');
+  var choosers = doc.querySelectorAll('[data-choose]');
+  var currentHalf = null;
+
+  function hashId() {
+    try { return decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return ''; }
+  }
+
+  function halfOf(id) {
+    var el = id ? doc.getElementById(id) : null;
+    var owner = el ? el.closest('[data-half]') : null;
+    return owner ? owner.getAttribute('data-half') : null;
+  }
+
+  function showHalf(name) {
+    currentHalf = name;
+    for (var i = 0; i < halfSections.length; i++) {
+      halfSections[i].classList.toggle('is-shown', halfSections[i].getAttribute('data-half') === name);
+    }
+    for (var j = 0; j < choosers.length; j++) {
+      if (choosers[j].getAttribute('data-choose') === name) {
+        choosers[j].setAttribute('aria-current', 'true');
+      } else {
+        choosers[j].removeAttribute('aria-current');
       }
     }
+    buildToc();
+  }
+
+  function goTo(id, smooth, moveFocus) {
+    var el = doc.getElementById(id);
+    if (!el) { return; }
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: smooth && !reduce ? 'smooth' : 'auto', block: 'start' });
+    if (moveFocus) {
+      var heading = el.querySelector('h2') || el;
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+  }
+
+  /* Bring the page into line with the address. A link inside one half that
+     points into the other switches halves here, since the browser cannot
+     scroll to a section it cannot see. */
+  function syncToHash() {
+    var id = hashId();
+    if (!id) { showHalf(null); return; }
+    var half = halfOf(id);
+    if (half && half !== currentHalf) {
+      showHalf(half);
+      goTo(id, true, true);
+    }
+  }
+
+  if (halfSections.length) {
+    var startId = hashId();
+    var startHalf = halfOf(startId);
+    showHalf(startHalf);
+    if (startHalf) { goTo(startId, false, false); }
+
+    for (var c = 0; c < choosers.length; c++) {
+      choosers[c].addEventListener('click', function (event) {
+        var name = this.getAttribute('data-choose');
+        event.preventDefault();
+        if (name !== currentHalf && window.history && history.pushState) {
+          history.pushState(null, '', '#' + name);
+        }
+        showHalf(name);
+        goTo(name, true, true);
+      });
+    }
+
+    window.addEventListener('popstate', syncToHash);
+    window.addEventListener('hashchange', syncToHash);
+  } else {
+    buildToc();
   }
 
   /* ------------------------------------------------------- email addresses */

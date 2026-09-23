@@ -226,7 +226,9 @@ HEAD = """<!DOCTYPE html>
 <link rel="preload" href="assets/fonts/ebgaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <script>
-/* Applied before paint so a reader who chose a theme never sees the other one flash. */
+/* Applied before paint. The js class lets a page hide what script will reveal,
+   so nothing flashes, and a reader who chose a theme never sees the other one. */
+document.documentElement.classList.add('js');
 (function(){try{var t=localStorage.getItem('gk-theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
 </script>
 {structured_data}</head>

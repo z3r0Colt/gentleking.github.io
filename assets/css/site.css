@@ -1018,3 +1018,25 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 }
 :root[data-theme="dark"] .brandmark-light { display: none; }
 :root[data-theme="dark"] .brandmark-dark { display: block; }
+
+/* --------------------------------------------------------------------------
+   20. One half at a time
+   The apologetics page shows a chooser, then only the half that was chosen.
+   Hidden only on screen and only once script is running, so a reader with
+   scripts off, or anyone printing the page, still gets all of it.
+   -------------------------------------------------------------------------- */
+
+@media screen {
+  .js [data-half]:not(.is-shown) { display: none; }
+}
+
+.chooser { margin-top: 2rem; }
+.chooser .btn[aria-current="true"] {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.chooser .btn[aria-current="true"]:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
