@@ -54,8 +54,8 @@ COPYRIGHT_YEAR = "2026"
 
 NAV = [
     ("index.html", "Home"),
-    ("software.html", "Sojourner"),
     ("gospel.html", "The Gospel"),
+    ("software.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
     ("resources.html", "Resources"),
@@ -71,10 +71,10 @@ PAGES = [
         "file": "index.html",
         "content": "index.html",
         "title": SITE_NAME,
-        "full_title": "Gentle King · Reformed doctrine, the gospel, and Bible study software",
+        "full_title": "Gentle King · The gospel of Jesus Christ and the Reformed faith",
         "description": (
-            "A Reformed ministry site. The whole gospel, the doctrines of grace, reading and "
-            "study resources, and Sojourner, a free offline Bible study companion."
+            "The gospel of Jesus Christ, the gentle King who calls sinners to come to him for "
+            "rest, with Reformed doctrine and Sojourner, a free Bible study companion."
         ),
         "hero": True,
         "toc": False,
@@ -258,29 +258,16 @@ HEADER = """<header class="site-header">
 </header>
 """
 
-HERO = """<section class="hero">
+HERO = """<section class="hero hero-word">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Gentle King</p>
-        <h1>A Bible study companion that asks nothing of you.</h1>
-        <p class="hero-deck">Sojourner sets Scripture beside the commentaries, confessions, and
-          reference works of the Reformed church. No account, no subscription, no connection
-          needed. It is free, and it is far enough along to use today.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="software.html">Get Sojourner</a>
-          <a class="btn" href="gospel.html">Read the gospel</a>
-        </div>
-        <p class="hero-note">Free for Windows 10 and 11. Version {version}. Everything you write
-          stays in one file on your own machine.</p>
-      </div>
-      <figure class="shot hero-shot">
-        <a href="assets/img/sojourner-study.webp" aria-label="See the full size screenshot">
-          <img src="assets/img/sojourner-study-1000.webp" width="1000" height="544"
-               loading="eager" decoding="async"
-               alt="Sojourner showing John 3 in the King James Version beside a Greek interlinear with a Strong&#39;s lexicon card open, and the Jamieson, Fausset and Brown commentary on verse 16.">
-        </a>
-      </figure>
+    <p class="eyebrow">The Lord Jesus Christ</p>
+    <h1>Come unto me, all ye that labour and are heavy laden, and I will give you rest.</h1>
+    <p class="hero-ref">Matthew 11:28 (KJV)</p>
+    <p class="hero-deck">He is the eternal Son of God. In the place of sinners he bore the wrath
+      they deserved, and he rose from the dead. He is speaking to you, and he means every
+      word.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#the-gospel">Hear the gospel</a>
     </div>
   </div>
 </section>
@@ -416,7 +403,8 @@ def build_page(page):
             og_alt=html.escape(
                 page.get(
                     "og_alt",
-                    "Gentle King. The King who is gentle toward sinners reigns over all things.",
+                    "Gentle King. Come unto me, all ye that labour and are heavy laden, "
+                    "and I will give you rest. Matthew 11:28.",
                 ),
                 quote=True,
             ),

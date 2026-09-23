@@ -648,15 +648,6 @@ blockquote { margin: 2rem 0; }
 }
 .hero .wrap { position: relative; max-width: 76rem; }
 
-.hero-grid {
-  display: grid;
-  gap: clamp(2.25rem, 5vw, 3.5rem);
-  align-items: center;
-}
-@media (min-width: 60rem) {
-  .hero-grid { grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr); }
-}
-
 .hero h1 { margin-bottom: .35em; }
 .hero-deck {
   font-size: clamp(1.14rem, 1.03rem + .55vw, 1.4rem);
@@ -665,13 +656,23 @@ blockquote { margin: 2rem 0; }
   max-width: 34rem;
   margin-bottom: 1.5rem;
 }
-.hero-note {
+
+/* The home page opens on the words of Christ, set alone and centred, so the
+   first voice anyone meets on this site is his. */
+.hero-word { text-align: center; }
+.hero-word .wrap { max-width: 50rem; }
+.hero-word h1 { max-width: 24ch; margin-inline: auto; margin-bottom: .45em; }
+.hero-ref {
   font-family: var(--font-ui);
-  font-size: .82rem;
-  color: var(--ink-faint);
-  margin-top: 1.15rem;
-  max-width: 30rem;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1.6rem;
 }
+.hero-word .hero-deck { margin-inline: auto; }
+.hero-word .btn-row { justify-content: center; }
 
 /* --------------------------------------------------------------------------
    9. Page header, for interior pages
@@ -914,7 +915,6 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   color: var(--ink-faint);
   max-width: var(--measure);
 }
-.hero-shot { margin: 0; }
 
 /* --------------------------------------------------------------------------
    17. Counts
