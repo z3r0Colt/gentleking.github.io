@@ -1054,7 +1054,7 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 
 /* --------------------------------------------------------------------------
    20. One half at a time
-   The apologetics page shows a chooser, then only the half that was chosen.
+   The apologetics and comfort pages show a chooser, then only the part that was chosen.
    Hidden only on screen and only once script is running, so a reader with
    scripts off, or anyone printing the page, still gets all of it.
    -------------------------------------------------------------------------- */
@@ -1072,4 +1072,51 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 .chooser .btn[aria-current="true"]:hover {
   background: var(--gold);
   border-color: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   21. The list of sorrows
+   The comfort page opens on this list. Each row is a whole tap target, sized
+   for an unsteady thumb, drawn only in the theme's own colors so it reads the
+   same at night. It is the chooser for one sorrow at a time, run by the same
+   script as the apologetics page. Links do nothing on paper, so it is left off
+   a printed copy.
+   -------------------------------------------------------------------------- */
+
+.sorrows {
+  list-style: none;
+  margin: 1.2rem 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: .5rem;
+}
+.sorrows a {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: .7rem 1rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  transition: border-color .18s var(--ease), background-color .18s var(--ease);
+}
+.sorrows a:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+.sorrows a[aria-current="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+
+/* On the comfort page a chosen part should land just under the header, so the
+   safety numbers are not pushed off a small screen. Other pages keep their
+   usual spacing. */
+main:has(.sorrows) .section { scroll-margin-top: 0; }
+
+@media print {
+  .sorrows { display: none; }
+  /* With any part open, including the friend's part, print that part and the
+     closing sections. With nothing chosen, the whole page prints. Only a page
+     with this list is affected, so the apologetics page prints as it always has. */
+  .js main:has(.sorrows):has([data-half].is-shown) [data-half]:not(.is-shown) { display: none; }
 }
