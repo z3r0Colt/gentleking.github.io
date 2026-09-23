@@ -251,6 +251,23 @@ h4 { font-size: 1.03rem; letter-spacing: .01em; }
 
 h2 + p, h2 + .lede, h3 + p { margin-top: 0; }
 
+/* A heading loose in a section's prose. Garamond runs small beside Charter,
+   so at h3 size it read as a line of text that had lost its full stop. It
+   needs real size, weight and room above, and a gold mark to announce it. */
+main > .section > h3 {
+  font-size: clamp(1.45rem, 1.25rem + .8vw, 1.7rem);
+  font-weight: 600;
+  margin-top: 2.2em;
+}
+main > .section > h3::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-bottom: .6em;
+  background: var(--gold-soft);
+}
+
 p { margin: 0 0 1.15em; }
 p:last-child { margin-bottom: 0; }
 
