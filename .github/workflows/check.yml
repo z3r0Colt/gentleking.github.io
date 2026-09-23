@@ -7,7 +7,8 @@
 #
 # So this job rebuilds from content/ and fails if the result differs from what
 # was committed. A red mark means "you forgot to run build.py", and the fix is
-# to run it and commit the pages it writes.
+# to run it and commit the pages it writes. A line starting with ?? is a page
+# build.py wrote that was never committed.
 #
 # It also runs check.py, which catches broken HTML, links pointing at files
 # that are not here, anchors pointing at ids no page has, and stray em dashes,
@@ -41,7 +42,7 @@ jobs:
 
       - name: Fail if the committed pages are out of date
         run: |
-          if git diff --quiet -- '*.html' sitemap.xml robots.txt CNAME; then
+          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt CNAME)" ]; then
             echo "The committed pages match a fresh build."
             exit 0
           fi
@@ -52,7 +53,7 @@ jobs:
           echo
           echo "    python3 build.py"
           echo
-          git diff --stat -- '*.html' sitemap.xml robots.txt CNAME
+          git status --short -- '*.html' sitemap.xml robots.txt CNAME
           exit 1
 
       - name: Check the pages
