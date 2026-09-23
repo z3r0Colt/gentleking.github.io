@@ -15,6 +15,7 @@ What it looks for.
   Duplicate ids        two sections sharing an id, which breaks the anchors
   Stray classes        a class name the stylesheet does not define
   Punctuation          em dashes, semicolons, and colons in ordinary prose
+  Phone links          a tel or sms link with anything but digits in it
 
 Quoted Scripture is skipped on the punctuation check. The Authorized Version
 uses colons and semicolons far more than we do, and nothing here should
@@ -76,7 +77,13 @@ class Reader(html.parser.HTMLParser):
             self.ids[attr["id"]] += 1
         if tag == "a" and attr.get("href"):
             href = attr["href"]
-            (self.external if href.startswith("http") else self.internal).append((href, attr))
+            if href.startswith(("tel:", "sms:")):
+                # These open the reader's own phone, so there is no page to look for.
+                # A number with a dash or a space in it may not dial, so keep it bare.
+                if not re.fullmatch(r"(tel|sms):\+?\d+", href):
+                    self.problems.append(f"phone link should be digits only: {href}")
+            else:
+                (self.external if href.startswith("http") else self.internal).append((href, attr))
         raw = self.get_starttag_text() or ""
         if tag not in VOID and not raw.endswith("/>") and not self.svg_depth:
             self.stack.append(tag)
