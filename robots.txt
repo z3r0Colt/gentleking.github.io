@@ -3,4 +3,4 @@ Allow: /
 Disallow: /content/
 Disallow: /.github/
 
-Sitemap: https://z3r0colt.github.io/gentleking.github.io/sitemap.xml
+Sitemap: https://gentleking.org/sitemap.xml

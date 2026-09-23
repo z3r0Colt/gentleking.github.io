@@ -689,7 +689,7 @@ blockquote { margin: 2rem 0; }
   opacity: .9;
   pointer-events: none;
 }
-.hero .wrap { position: relative; }
+.hero .wrap { position: relative; max-width: 76rem; }
 
 .hero-grid {
   display: grid;
@@ -697,7 +697,7 @@ blockquote { margin: 2rem 0; }
   align-items: center;
 }
 @media (min-width: 60rem) {
-  .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+  .hero-grid { grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr); }
 }
 
 .hero h1 { margin-bottom: .35em; }
@@ -1033,3 +1033,117 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   font-variant-caps: small-caps;
   letter-spacing: .02em;
 }
+
+/* --------------------------------------------------------------------------
+   16. Screenshots
+   -------------------------------------------------------------------------- */
+
+.shot { margin: 2.25rem 0; }
+.shot > a {
+  display: block;
+  border: 1px solid var(--rule-strong);
+  border-radius: 5px;
+  overflow: hidden;
+  background: var(--paper-sunk);
+  box-shadow: var(--shadow-lift);
+  text-decoration: none;
+  transition: border-color .2s var(--ease);
+}
+.shot > a:hover { border-color: var(--gold); }
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption {
+  margin-top: .8rem;
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  max-width: var(--measure);
+}
+.hero-shot { margin: 0; }
+
+/* --------------------------------------------------------------------------
+   17. Counts
+   A row of headline numbers, not a chart. These count unlike things, so there
+   is no shared scale to plot them against. Values wear ink, never an accent,
+   and the figures are tabular so the column of digits lines up.
+   -------------------------------------------------------------------------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: .6rem;
+  margin: 2rem 0;
+}
+/* Each tile carries its own border. A shared grid background would show through
+   as a blank slab whenever the last row came up short, which it does at most
+   widths. */
+.stat {
+  padding: 1.1rem 1.15rem 1.2rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -.012em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.stat-label {
+  display: block;
+  margin-top: .4rem;
+  font-family: var(--font-ui);
+  font-size: .765rem;
+  line-height: 1.45;
+  color: var(--ink-faint);
+}
+
+/* --------------------------------------------------------------------------
+   18. The download block and the plain spec list
+   -------------------------------------------------------------------------- */
+
+.get {
+  margin: 2.5rem 0;
+  padding: 1.7rem 1.8rem 1.55rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-top: 2px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: calc(var(--measure) + 4rem);
+}
+.get h3 { margin-bottom: .3rem; }
+.get-meta {
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  letter-spacing: .02em;
+  color: var(--ink-faint);
+  margin: 0 0 1.05rem;
+}
+.get > p { font-size: .97rem; color: var(--ink-soft); }
+.get .btn-row { margin-top: 1.3rem; }
+
+.spec {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: .62rem 1.5rem;
+  margin: 1.75rem 0;
+  max-width: calc(var(--measure) + 4rem);
+  font-family: var(--font-ui);
+  font-size: .875rem;
+  line-height: 1.55;
+}
+.spec dt { color: var(--ink-faint); }
+.spec dd { margin: 0; color: var(--ink); }
+@media (max-width: 34rem) {
+  .spec { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+  .spec dt { margin-top: .85rem; }
+  .spec dt:first-child { margin-top: 0; }
+}
+
+/* An address split across data attributes, joined by the script. */
+.mail { white-space: nowrap; }

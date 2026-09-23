@@ -41,7 +41,7 @@ jobs:
 
       - name: Fail if the committed pages are out of date
         run: |
-          if git diff --quiet -- '*.html' sitemap.xml robots.txt; then
+          if git diff --quiet -- '*.html' sitemap.xml robots.txt CNAME; then
             echo "The committed pages match a fresh build."
             exit 0
           fi
@@ -52,7 +52,7 @@ jobs:
           echo
           echo "    python3 build.py"
           echo
-          git diff --stat -- '*.html' sitemap.xml robots.txt
+          git diff --stat -- '*.html' sitemap.xml robots.txt CNAME
           exit 1
 
       - name: Check the pages

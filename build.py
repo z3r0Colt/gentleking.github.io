@@ -34,12 +34,16 @@ SITE_TAGLINE = "The King who is gentle toward sinners reigns over all things."
 # preview card that shows up when someone shares a page. If you point a custom
 # domain at this repository, put it here (for example "https://gentleking.org")
 # and add the same domain to the CNAME file.
-SITE_URL = "https://z3r0colt.github.io/gentleking.github.io"
+SITE_URL = "https://gentleking.org"
 
 REPO_URL = "https://github.com/z3r0Colt/gentleking.github.io"
 
-# The working name of the Bible study software.
-APP_NAME = "Gentle King Study"
+# The Bible study software.
+APP_NAME = "Sojourner"
+APP_FULL = "Sojourner, Bible Study Companion"
+APP_VERSION = "0.2.7"
+APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
+APP_EMAIL = "sojourner@gentleking.org"
 
 ESV_NOTICE = (
     "Scripture quotations are from the ESV® Bible (The Holy Bible, English "
@@ -51,7 +55,7 @@ COPYRIGHT_YEAR = "2026"
 
 NAV = [
     ("index.html", "Home"),
-    ("software.html", "Study App"),
+    ("software.html", "Sojourner"),
     ("gospel.html", "The Gospel"),
     ("doctrine.html", "Doctrine"),
     ("resources.html", "Resources"),
@@ -71,7 +75,7 @@ PAGES = [
         "full_title": "Gentle King · Reformed doctrine, free books, and Bible study software",
         "description": (
             "A Reformed ministry site. The whole gospel, the doctrines of grace, free books, "
-            "reading and study resources, and a Bible study application in development."
+            "reading and study resources, and Sojourner, a free offline Bible study companion."
         ),
         "hero": True,
         "toc": False,
@@ -79,16 +83,19 @@ PAGES = [
     {
         "file": "software.html",
         "content": "software.html",
-        "title": "Software",
-        "eyebrow": "Software",
-        "h1": APP_NAME,
+        "title": "Sojourner",
+        "full_title": "Sojourner \u00b7 A Bible study companion for Windows",
+        "eyebrow": "Bible Study Companion",
+        "h1": "Sojourner",
         "deck": (
-            "A Bible study application being built to get out of the way and put you "
-            "in the text. It is still in development, so there is nothing to download yet."
+            "Scripture beside the commentaries, confessions, and reference works of the "
+            "Reformed church. It runs on your own machine, it works with the network off, "
+            "and it is free."
         ),
         "description": (
-            "Gentle King Study is a Bible study application in development. Read the text, "
-            "keep your own notes, and hold the confessions beside the page."
+            "Sojourner is a free offline Bible study companion for Windows. Ten translations, "
+            "Calvin and Henry and Spurgeon, the Westminster Standards, an interlinear Greek "
+            "New Testament, and a 9,349 article encyclopedia, all on your own machine."
         ),
         "toc": True,
     },
@@ -250,42 +257,24 @@ HERO = """<section class="hero">
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Gentle King</p>
-        <h1>Sound doctrine, free books, and a Bible worth studying well.</h1>
-        <p class="hero-deck">A Bible study application built for people who want to sit with the
-          text and not be sold anything. Alongside it, the whole gospel, the Reformed faith,
-          and every book here given away free.</p>
+        <h1>A Bible study companion that asks nothing of you.</h1>
+        <p class="hero-deck">Sojourner sets Scripture beside the commentaries, confessions, and
+          reference works of the Reformed church. No account, no subscription, no connection
+          needed. It is free, and it is far enough along to use today.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="software.html">See the study app</a>
+          <a class="btn btn-primary" href="software.html">Get Sojourner</a>
           <a class="btn" href="gospel.html">Read the gospel</a>
         </div>
-        <p class="hero-note">The app is still being built, so there is nothing to download yet.
-          The download will be posted here first, free, with nothing to sign up for.</p>
+        <p class="hero-note">Free for Windows 10 and 11. Version {version}. Everything you write
+          stays in one file on your own machine.</p>
       </div>
-      <div class="app-frame" aria-hidden="true">
-        <div class="app-frame-bar">
-          <span class="app-dot"></span><span class="app-dot"></span><span class="app-dot"></span>
-          <span class="app-frame-title">Gentle King Study</span>
-        </div>
-        <div class="app-frame-body">
-          <div class="mock">
-            <div class="mock-text">
-              <p class="mock-ref">Romans 8</p>
-              <p class="mock-verse"><span class="mock-num">1</span>There is therefore now no
-                condemnation for those who are in Christ Jesus.</p>
-              <p class="mock-verse"><span class="mock-num">2</span>For the law of the Spirit of
-                life has set you free in Christ Jesus from the law of sin and death.</p>
-            </div>
-            <div class="mock-side">
-              <p class="mock-side-head">Note</p>
-              <p class="mock-line"></p>
-              <p class="mock-line short"></p>
-              <p class="mock-line"></p>
-              <p class="mock-chip">WCF 11.1</p>
-              <p class="mock-chip">Rom 5:1</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <figure class="shot hero-shot">
+        <a href="assets/img/sojourner-study.webp" aria-label="See the full size screenshot">
+          <img src="assets/img/sojourner-study-1000.webp" width="1000" height="544"
+               loading="eager" decoding="async"
+               alt="Sojourner showing John 3 in the King James Version beside a Greek interlinear with a Strong&#39;s lexicon card open, and the Jamieson, Fausset and Brown commentary on verse 16.">
+        </a>
+      </figure>
     </div>
   </div>
 </section>
@@ -319,7 +308,7 @@ FOOTER = """<footer class="site-footer">
       <div>
         <p class="footer-head">Get</p>
         <ul class="footer-links">
-          <li><a href="software.html">Study App</a></li>
+          <li><a href="software.html">Sojourner</a></li>
           <li><a href="books.html">Books</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
@@ -409,7 +398,7 @@ def build_page(page):
     ]
 
     if page.get("hero"):
-        parts.append(HERO)
+        parts.append(render(HERO, version=APP_VERSION))
     else:
         parts.append(
             render(
@@ -431,6 +420,13 @@ def build_page(page):
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     return page["file"], words
+
+
+def build_cname():
+    """The custom domain, written from SITE_URL so the two cannot drift apart."""
+    host = SITE_URL.split("//", 1)[-1].rstrip("/")
+    (ROOT / "CNAME").write_text(host + "\n", encoding="utf-8")
+    return host
 
 
 def build_sitemap():
@@ -471,8 +467,10 @@ def main():
         total += words
         print(f"  {name:<18} {words:>6,} words")
     build_sitemap()
+    host = build_cname()
     print(f"  {'sitemap.xml':<18} {'':>6}")
     print(f"  {'robots.txt':<18} {'':>6}")
+    print(f"  {'CNAME':<18} {host:>6}")
     print(f"\nBuilt {len(PAGES)} pages, {total:,} words.")
 
 

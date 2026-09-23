@@ -153,6 +153,22 @@
     }
   }
 
+  /* ------------------------------------------------------- email addresses */
+
+  /* Written in two halves in the HTML so a scraper reading the page source does
+     not get a usable address. With scripts off the text still reads correctly,
+     it just is not clickable. */
+  var mails = doc.querySelectorAll('.mail[data-user][data-domain]');
+  for (var k = 0; k < mails.length; k++) {
+    var span = mails[k];
+    var address = span.getAttribute('data-user') + '@' + span.getAttribute('data-domain');
+    var link = doc.createElement('a');
+    link.href = 'mailto:' + address;
+    link.textContent = address;
+    span.textContent = '';
+    span.appendChild(link);
+  }
+
   /* --------------------------------------------------- mark the current page */
 
   var here = window.location.pathname.split('/').pop() || 'index.html';
