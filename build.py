@@ -41,7 +41,6 @@ REPO_URL = "https://github.com/z3r0Colt/gentleking.github.io"
 # The Bible study software.
 APP_NAME = "Sojourner"
 APP_FULL = "Sojourner, Bible Study Companion"
-APP_VERSION = "0.2.7"
 APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
 APP_EMAIL = "sojourner@gentleking.org"
 
@@ -73,8 +72,8 @@ PAGES = [
         "title": SITE_NAME,
         "full_title": "Gentle King · The gospel of Jesus Christ and the Reformed faith",
         "description": (
-            "The gospel of Jesus Christ, the gentle King who calls sinners to come to him for "
-            "rest, with Reformed doctrine and Sojourner, a free Bible study companion."
+            "Jesus Christ, the gentle King, calls the weary to come to him for rest. Read his "
+            "gospel and the Reformed faith here, and find Sojourner, a free Bible study companion."
         ),
         "hero": True,
         "toc": False,
@@ -263,9 +262,9 @@ HERO = """<section class="hero hero-word">
     <p class="eyebrow">The Lord Jesus Christ</p>
     <h1>Come unto me, all ye that labour and are heavy laden, and I will give you rest.</h1>
     <p class="hero-ref">Matthew 11:28 (KJV)</p>
-    <p class="hero-deck">He is the eternal Son of God. In the place of sinners he bore the wrath
-      they deserved, and he rose from the dead. He is speaking to you, and he means every
-      word.</p>
+    <p class="hero-deck">He is the eternal Son of God, made man. On the cross he bore the wrath of
+      God in the place of sinners, and on the third day he rose from the dead. He is speaking to
+      you, and he means every word.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="#the-gospel">Hear the gospel</a>
     </div>
@@ -399,7 +398,7 @@ def build_page(page):
             canonical=canonical,
             site_url=SITE_URL,
             site_name=SITE_NAME,
-            og_image=page.get("og_image", "og-cover.png"),
+            og_image=page.get("og_image", "og-cover.png?v=2"),
             og_alt=html.escape(
                 page.get(
                     "og_alt",
@@ -414,7 +413,7 @@ def build_page(page):
     ]
 
     if page.get("hero"):
-        parts.append(render(HERO, version=APP_VERSION))
+        parts.append(HERO)
     elif page.get("logo"):
         parts.append(
             render(

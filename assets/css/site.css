@@ -673,6 +673,7 @@ blockquote { margin: 2rem 0; }
 }
 .hero-word .hero-deck { margin-inline: auto; }
 .hero-word .btn-row { justify-content: center; }
+.hero-word .btn { margin-inline: 0; }
 
 /* --------------------------------------------------------------------------
    9. Page header, for interior pages
