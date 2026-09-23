@@ -11,7 +11,7 @@ serves the `.html` files at the top of this repository exactly as they are.
 ## Editing the site
 
 There is one small build script so that the header, the footer, and all the page
-metadata live in a single place instead of being copied into seven files.
+metadata live in a single place instead of being copied into every page.
 
 **To change the words on a page**, edit the matching file in `content/`, then run:
 
@@ -35,6 +35,13 @@ files that are not there, duplicate section ids, and stray punctuation.
 ```
 python3 check.py
 ```
+
+Phone links must be written with digits only, like `tel:988`, or the checker will
+stop you. A number with dashes in it may not dial.
+
+The comfort page carries crisis phone numbers. Check them on the hotlines' own
+sites once a year, and change the date in the comment at the top of
+`content/comfort.html` when you do.
 
 ---
 

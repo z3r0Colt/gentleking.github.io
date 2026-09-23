@@ -4,7 +4,7 @@ Gentle King, site builder.
 
 Every page on this site is plain static HTML. This script exists so the header,
 the footer, and all of the <head> metadata live in exactly one place instead of
-seven. It reads a content fragment out of content/ and wraps it in the shell.
+in every page. It reads a content fragment out of content/ and wraps it in the shell.
 
     python3 build.py
 
@@ -51,9 +51,12 @@ SCRIPTURE_NOTICE = (
 
 COPYRIGHT_YEAR = "2026"
 
+# Eight items is the most the desktop nav holds on one line at 993px.
+# A ninth needs the 62rem breakpoint in site.css raised, or belongs in the footer.
 NAV = [
     ("index.html", "Home"),
     ("gospel.html", "The Gospel"),
+    ("comfort.html", "Comfort"),
     ("software.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
@@ -116,6 +119,19 @@ PAGES = [
             "the person and work of Christ, grace alone, repentance and faith, and justification."
         ),
         "toc": True,
+    },
+    {
+        "file": "comfort.html",
+        "content": "comfort.html",
+        "title": "Scripture for the Hard Hour",
+        "eyebrow": "Comfort",
+        "h1": "Scripture for the Hard Hour",
+        "deck": "For the day the hard news comes, and the long days after.",
+        "description": (
+            "Christ-centered Scripture for the hard hour. King James passages for grief, "
+            "the death of a spouse or child, serious illness, a breaking marriage, and danger at home."
+        ),
+        "toc": False,
     },
     {
         "file": "doctrine.html",
@@ -309,6 +325,7 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Read</p>
         <ul class="footer-links">
           <li><a href="gospel.html">The Gospel</a></li>
+          <li><a href="comfort.html">Comfort</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html">Apologetics</a></li>
           <li><a href="resources.html">Resources</a></li>

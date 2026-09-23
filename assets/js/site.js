@@ -233,12 +233,14 @@
     for (var c = 0; c < choosers.length; c++) {
       choosers[c].addEventListener('click', function (event) {
         var name = this.getAttribute('data-choose');
+        var href = this.getAttribute('href') || '';
+        var target = href.charAt(0) === '#' && halfOf(href.slice(1)) === name ? href.slice(1) : name;
         event.preventDefault();
-        if (name !== currentHalf && window.history && history.pushState) {
-          history.pushState(null, '', '#' + name);
+        if (hashId() !== target && window.history && history.pushState) {
+          history.pushState(null, '', '#' + target);
         }
         showHalf(name);
-        goTo(name, true, true);
+        goTo(target, true, true);
       });
     }
 
