@@ -296,20 +296,13 @@ em { font-style: italic; }
 
 /* Lists ------------------------------------------------------------------- */
 
-.list, .steps { margin: 0 0 1.3em; padding-left: 1.35rem; }
-.list { list-style: none; padding-left: 1.3rem; }
-.list > li { position: relative; margin-bottom: .55em; }
-.list > li::before {
-  content: "";
-  position: absolute;
-  left: -1.1rem;
-  top: .72em;
-  width: .3rem;
-  height: 1px;
-  background: var(--gold);
-}
 
-.steps { list-style: none; counter-reset: step; padding-left: 0; }
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0 0 1.3em;
+  padding-left: 0;
+}
 .steps > li {
   counter-increment: step;
   position: relative;
@@ -453,30 +446,6 @@ blockquote { margin: 2rem 0; }
   margin-bottom: .8em !important;
 }
 
-/* A card that is entirely a link. */
-.card-link { text-decoration: none; display: block; color: inherit; }
-.card-link:hover {
-  color: inherit;
-  border-color: var(--gold);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
-.card-link h3 { color: var(--ink); }
-.card-link .card-go {
-  font-family: var(--font-ui);
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  color: var(--gold);
-  margin-top: 1rem;
-  display: inline-block;
-}
-.card-link:hover .card-go::after { transform: translateX(3px); }
-.card-go::after {
-  content: " \2192";
-  display: inline-block;
-  transition: transform .2s var(--ease);
-}
 
 /* --------------------------------------------------------------------------
    6. Buttons and tags
@@ -518,43 +487,9 @@ blockquote { margin: 2rem 0; }
   border-color: var(--gold);
 }
 
-.btn-disabled,
-.btn[aria-disabled="true"] {
-  color: var(--ink-faint);
-  background: var(--paper-sunk);
-  border-color: var(--rule);
-  border-style: dashed;
-  cursor: not-allowed;
-  pointer-events: none;
-}
 
 .btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: .15rem; margin-top: 1.6rem; }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  padding: .24rem .62rem;
-  margin-right: .4rem;
-  font-family: var(--font-ui);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  border: 1px solid var(--rule);
-  border-radius: 100px;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-.tag-soon { color: var(--gold); border-color: var(--gold-soft); }
-.tag-soon::before {
-  content: "";
-  width: .38rem; height: .38rem;
-  border-radius: 50%;
-  background: var(--gold);
-}
-.tag-free { color: var(--ink-soft); border-color: var(--rule-strong); background: var(--gold-wash); }
 
 /* --------------------------------------------------------------------------
    7. Header and navigation
@@ -715,34 +650,6 @@ blockquote { margin: 2rem 0; }
   margin-top: 1.15rem;
   max-width: 30rem;
 }
-
-/* The abstract reading pane that stands in for the app. */
-.app-frame {
-  background: var(--paper-raised);
-  border: 1px solid var(--rule);
-  border-radius: 5px;
-  box-shadow: var(--shadow-lift);
-  overflow: hidden;
-}
-.app-frame-bar {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .7rem .9rem;
-  border-bottom: 1px solid var(--rule);
-  background: var(--paper-sunk);
-}
-.app-dot { width: .5rem; height: .5rem; border-radius: 50%; background: var(--rule-strong); }
-.app-frame-title {
-  font-family: var(--font-ui);
-  font-size: .7rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin-left: .35rem;
-}
-.app-frame-body { padding: 1.35rem 1.4rem 1.5rem; }
-.app-frame svg { width: 100%; height: auto; color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    9. Page header, for interior pages
@@ -906,80 +813,6 @@ blockquote { margin: 2rem 0; }
   .hero::before { display: none; }
 }
 
-/* --------------------------------------------------------------------------
-   14. The reading pane mock in the hero
-   -------------------------------------------------------------------------- */
-
-.mock {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 7.5rem;
-  gap: 1.15rem;
-  align-items: start;
-}
-@media (max-width: 26rem) {
-  .mock { grid-template-columns: minmax(0, 1fr); }
-  .mock-side { display: none; }
-}
-
-.mock-ref {
-  font-family: var(--font-ui);
-  font-size: .66rem;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 .85rem;
-  padding-bottom: .6rem;
-  border-bottom: 1px solid var(--rule);
-}
-.mock-verse {
-  font-family: var(--font-display);
-  font-size: .97rem;
-  line-height: 1.62;
-  color: var(--ink);
-  margin: 0 0 .7rem;
-  text-indent: 0;
-}
-.mock-verse:last-child { margin-bottom: 0; }
-.mock-num {
-  font-family: var(--font-ui);
-  font-size: .6rem;
-  font-weight: 600;
-  color: var(--gold);
-  vertical-align: .55em;
-  margin-right: .28rem;
-}
-
-.mock-side { border-left: 1px solid var(--rule); padding-left: 1.05rem; }
-.mock-side-head {
-  font-family: var(--font-ui);
-  font-size: .6rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-  margin: 0 0 .7rem;
-}
-.mock-line {
-  height: 5px;
-  margin: 0 0 .5rem;
-  border-radius: 3px;
-  background: var(--rule);
-}
-.mock-line.short { width: 62%; }
-.mock-chip {
-  display: inline-block;
-  margin: .5rem .3rem 0 0;
-  padding: .16rem .45rem;
-  font-family: var(--font-ui);
-  font-size: .58rem;
-  font-weight: 600;
-  letter-spacing: .07em;
-  color: var(--gold);
-  border: 1px solid var(--rule-strong);
-  border-radius: 100px;
-}
-
 .footer-fineprint {
   margin: .9rem 0 0;
   font-family: var(--font-ui);
@@ -1025,8 +858,6 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   main.has-toc > .toc a { font-size: .82rem; line-height: 1.4; display: inline-block; }
 }
 
-/* The reading column of the mock. Kept from spilling out of its grid track. */
-.mock-text { min-width: 0; }
 
 /* The ESV prints the covenant name of God in small capitals. So do we. */
 .sc {
