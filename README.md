@@ -11,7 +11,7 @@ serves the `.html` files at the top of this repository exactly as they are.
 ## Editing the site
 
 There is one small build script so that the header, the footer, and all the page
-metadata live in a single place instead of being copied into six files.
+metadata live in a single place instead of being copied into seven files.
 
 **To change the words on a page**, edit the matching file in `content/`, then run:
 

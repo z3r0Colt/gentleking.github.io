@@ -4,7 +4,7 @@ Gentle King, site builder.
 
 Every page on this site is plain static HTML. This script exists so the header,
 the footer, and all of the <head> metadata live in exactly one place instead of
-six. It reads a content fragment out of content/ and wraps it in the shell.
+seven. It reads a content fragment out of content/ and wraps it in the shell.
 
     python3 build.py
 
@@ -57,6 +57,7 @@ NAV = [
     ("software.html", "Sojourner"),
     ("gospel.html", "The Gospel"),
     ("doctrine.html", "Doctrine"),
+    ("apologetics.html", "Apologetics"),
     ("resources.html", "Resources"),
     ("about.html", "About"),
 ]
@@ -130,6 +131,23 @@ PAGES = [
         "description": (
             "A plain tour of Reformed doctrine held to the Westminster Confession of Faith. "
             "The solas, the doctrines of grace, covenant theology, and last things."
+        ),
+        "toc": True,
+    },
+    {
+        "file": "apologetics.html",
+        "content": "apologetics.html",
+        "title": "Apologetics",
+        "eyebrow": "Apologetics",
+        "h1": "A Reason for the Hope",
+        "deck": (
+            "Straight answers for the one who objects to the faith, and comfort for the "
+            "one who holds it with a shaking hand. Each has his own half of this page."
+        ),
+        "description": (
+            "Reformed apologetics in plain words. Honest answers to the common objections "
+            "to Christianity, and comfort from Scripture and the Westminster Confession for "
+            "the believer who doubts."
         ),
         "toc": True,
     },
@@ -304,6 +322,7 @@ FOOTER = """<footer class="site-footer">
         <ul class="footer-links">
           <li><a href="gospel.html">The Gospel</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
+          <li><a href="apologetics.html">Apologetics</a></li>
           <li><a href="resources.html">Resources</a></li>
         </ul>
       </div>
