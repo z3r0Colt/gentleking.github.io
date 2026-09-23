@@ -317,7 +317,6 @@ FOOTER = """<footer class="site-footer">
       <div>
         <p class="footer-head">Elsewhere</p>
         <ul class="footer-links">
-          <li><a href="{repo_url}" target="_blank" rel="noopener">The project on GitHub</a></li>
           <li><a href="https://thewestminsterstandard.org/the-westminster-confession/" target="_blank" rel="noopener">Westminster Confession</a></li>
           <li><a href="https://www.esv.org" target="_blank" rel="noopener">Read the ESV</a></li>
         </ul>
@@ -433,7 +432,7 @@ def build_page(page):
         parts.append('<nav data-toc></nav>\n')
     parts.append(body)
     parts.append("\n</main>\n\n")
-    parts.append(render(FOOTER, repo_url=REPO_URL, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE))
+    parts.append(render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE))
 
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
