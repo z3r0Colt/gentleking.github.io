@@ -1160,7 +1160,15 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
    the same rules the theme toggle uses everywhere else on the site.
    -------------------------------------------------------------------------- */
 
-.page-head-logo { padding-block: clamp(2.25rem, 6vw, 4rem) clamp(1.75rem, 4vw, 2.75rem); }
+.page-head-logo {
+  padding-block: clamp(2.25rem, 6vw, 4rem) clamp(1.75rem, 4vw, 2.75rem);
+  text-align: center;
+}
+.page-head-logo .page-deck { margin-inline: auto; }
+/* .page-head h1 is capped at 20ch to keep a typeset title from running long.
+   A mark is an image, not a line of text, so that cap has to come off or the
+   image centres inside a box that is itself off to the left. */
+.page-head-logo .brandmark { max-width: none; }
 
 .brandmark {
   margin: 0 0 clamp(1.25rem, 3vw, 1.9rem);
@@ -1169,6 +1177,7 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 .brandmark img {
   width: clamp(13rem, 26vw, 19rem);
   height: auto;
+  margin-inline: auto;
 }
 .brandmark-dark { display: none; }
 

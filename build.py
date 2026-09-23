@@ -43,7 +43,7 @@ APP_NAME = "Sojourner"
 APP_FULL = "Sojourner, Bible Study Companion"
 APP_VERSION = "0.2.7"
 APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
-APP_EMAIL = "colt@sojourner.com"
+APP_EMAIL = "sojourner@gentleking.org"
 
 SCRIPTURE_NOTICE = (
     "Scripture quotations are from the Authorized Version, the King James Bible "
