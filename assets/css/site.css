@@ -724,7 +724,11 @@ blockquote { margin: 2rem 0; }
   margin: 0 0 .75rem;
 }
 .toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
-@media (max-width: 40rem) { .toc ol { columns: 1; } }
+@media (max-width: 40rem) {
+  .toc ol { columns: 1; }
+  .toc li { margin-bottom: .2rem; }
+  .toc a { text-wrap: balance; }
+}
 /* The li carries the link's own size, so a wrapped entry does not sit a body
    line below itself and read as the next entry. */
 .toc li { margin-bottom: .38rem; break-inside: avoid; font-size: .85rem; line-height: 1.45; }
@@ -895,6 +899,12 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   main.has-toc > .toc li { margin-bottom: .55rem; font-size: .82rem; line-height: 1.4; }
   main.has-toc > .toc a { font-size: .82rem; line-height: 1.4; display: inline-block; }
 }
+/* On a short laptop screen the rail tightens, so its last entries stay in view. */
+@media (min-width: 78rem) and (max-height: 50rem) {
+  main.has-toc > .toc { top: 5.5rem; max-height: calc(100vh - 7rem); }
+  main.has-toc > .toc li { margin-bottom: .3rem; line-height: 1.3; }
+  main.has-toc > .toc a { line-height: 1.3; }
+}
 
 
 /* The ESV prints the covenant name of God in small capitals. So do we. */
@@ -926,7 +936,7 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   font-size: .78rem;
   line-height: 1.6;
   color: var(--ink-faint);
-  max-width: var(--measure);
+  max-width: min(var(--measure), 42em);
 }
 
 /* --------------------------------------------------------------------------
