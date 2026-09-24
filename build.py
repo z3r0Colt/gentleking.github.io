@@ -128,8 +128,9 @@ PAGES = [
         "h1": "Scripture for the Hard Hour",
         "deck": "For the day the hard news comes, and the long days after.",
         "description": (
-            "Christ-centered Scripture for the hard hour. King James passages for grief, "
-            "the death of a spouse or child, serious illness, a breaking marriage, and danger at home."
+            "Christ-centered Scripture for the hard hour. King James passages for grief, loss by "
+            "suicide, serious illness, a broken marriage, a wandering child, lost work, depression, "
+            "and danger at home."
         ),
         "toc": False,
     },
