@@ -601,7 +601,7 @@ blockquote { margin: 2rem 0; }
 
 .nav-toggle { display: none; }
 
-@media (max-width: 62rem) {
+@media (max-width: 64rem) {
   .nav-toggle { display: grid; }
   .nav {
     position: fixed;

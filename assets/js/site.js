@@ -71,7 +71,7 @@
       if (event.key === 'Escape') { closeNav(); }
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) { closeNav(); }
+      if (window.innerWidth > 1024) { closeNav(); }
     });
   }
 

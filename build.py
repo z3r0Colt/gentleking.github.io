@@ -52,11 +52,14 @@ SCRIPTURE_NOTICE = (
 
 COPYRIGHT_YEAR = "2026"
 
-# Eight items is the most the desktop nav holds on one line at 993px.
-# A ninth needs the 62rem breakpoint in site.css raised, or belongs in the footer.
+# Nine items is the most the desktop nav holds on one line at 1025px.
+# A tenth needs the 64rem breakpoint in site.css and the 1024 in site.js raised,
+# or belongs in the footer.
 NAV = [
     ("index.html", "Home"),
     ("gospel.html", "The Gospel"),
+    ("comfort.html", "Comfort"),
+    ("struggle.html", "Fighting Sin"),
     ("software.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
@@ -135,7 +138,6 @@ PAGES = [
         "toc": False,
     },
     {
-        # Kept out of NAV and the footer for now, like Comfort. Reached by link.
         "file": "struggle.html",
         "content": "struggle.html",
         "title": "Struggling With Sin",
@@ -344,6 +346,8 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Read</p>
         <ul class="footer-links">
           <li><a href="gospel.html">The Gospel</a></li>
+          <li><a href="comfort.html">Comfort</a></li>
+          <li><a href="struggle.html">Fighting Sin</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html">Apologetics</a></li>
           <li><a href="resources.html">Resources</a></li>
