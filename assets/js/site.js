@@ -203,7 +203,12 @@
     var el = doc.getElementById(id);
     if (!el) { return; }
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    el.scrollIntoView({ behavior: smooth && !reduce ? 'smooth' : 'auto', block: 'start' });
+    var jump = !smooth || reduce;
+    /* The stylesheet makes all scrolling smooth, and 'auto' obeys it, so a
+       shared link would glide down the whole page. Jump straight there. */
+    if (jump) { root.style.scrollBehavior = 'auto'; }
+    el.scrollIntoView({ behavior: jump ? 'auto' : 'smooth', block: 'start' });
+    if (jump) { root.style.scrollBehavior = ''; }
     if (moveFocus) {
       var heading = el.querySelector('h2') || el;
       heading.setAttribute('tabindex', '-1');

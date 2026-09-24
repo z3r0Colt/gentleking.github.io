@@ -1113,6 +1113,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
    usual spacing. */
 main:has(.sorrows) .section { scroll-margin-top: 0; }
 
+/* A phone number split across two lines is hard to read in a hurry. */
+a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
+
 @media print {
   .sorrows { display: none; }
   /* With any part open, including the friend's part, print that part and the
