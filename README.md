@@ -71,8 +71,9 @@ keeps working when you post a new build. After a release, update the version in
 heading, the Version row, the paragraph on what the version number means, and the
 closing download button. The installer size is written out twice, in the Get
 Sojourner block and in the warning about the large download. If the release adds
-translations, shelves, or reference works, the counts on the page and the one
-paragraph about Sojourner on the home page want updating too.
+translations, shelves, or reference works, the counts on the page, the description
+for `software.html` in `build.py`, and the one paragraph about Sojourner on the home
+page want updating too.
 
 Then run `python3 build.py`, check it, commit and push.
 

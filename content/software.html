@@ -3,8 +3,8 @@
   <h2>Scripture, and the Church Reading It With You</h2>
   <p class="lede">Sojourner is a Windows desktop application for reading the Bible beside the
     commentaries, confessions, and reference works the Reformed church has been handing down for
-    four hundred years, with the Hebrew and Greek underneath and the tools to prepare a sermon on
-    top. All of it sits on your own machine. None of it asks you to sign in.</p>
+    four hundred years. The Hebrew and Greek lie underneath, and the tools for preparing a sermon
+    sit on top. All of it is on your own machine. None of it asks you to sign in.</p>
   <figure class="shot">
     <a href="assets/img/sojourner-study.webp" aria-label="See the full size screenshot">
       <img src="assets/img/sojourner-study-1000.webp" width="1000" height="544" loading="lazy"
@@ -16,7 +16,7 @@
   </figure>
   <p>Most study software wants something from you first. An account. A subscription. A connection.
     A tier that hides the good commentaries until you pay. Sojourner wants none of it. You install
-    it, and everything is already there.</p>
+    it, and the Bibles, the commentaries, and the reference works are already there.</p>
   <p>The word sojourner is what the saints called themselves while they were still walking. You are
     passing through, and you need the road marked. That is the whole idea behind it.</p>
   <p>It is a servant, not a substitute. A program cannot preach to you, baptize you, or feed you at
@@ -30,9 +30,8 @@
   <div class="get">
     <h3>Sojourner 0.3.0</h3>
     <p class="get-meta">Free &middot; Windows 10 and 11, 64-bit &middot; About 608 MB</p>
-    <p>One installer with the Bibles, the commentaries, the lexicons, and the reference works
-      inside it. No account to make and nothing to buy. The book library comes as four shelves on
-      the same page, each its own download, so you take only the ones you want.</p>
+    <p>One installer with everything but the book library inside it. No account to make and
+      nothing to buy. The books come as four shelves on the same page, each its own download.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows</a>
       <a class="btn" href="#before-you-install">What to expect when you install</a>
@@ -43,15 +42,17 @@
     <dt>System</dt><dd>Windows 10 or 11, 64-bit. There is no Mac, Linux, or phone version.</dd>
     <dt>Install</dt><dd>Per user. No administrator rights needed.</dd>
     <dt>Network</dt><dd>None required, at install or after</dd>
-    <dt>Updates</dt><dd>By hand. Check in Settings, then About, and download the new installer.</dd>
+    <dt>Updates</dt><dd>By hand. Check on the About page in Settings, then download the new installer.</dd>
     <dt>Price</dt><dd>Free</dd>
     <dt>Built with</dt><dd>Tauri, Rust, and React</dd>
   </dl>
   <p>The installer bundles the Microsoft Edge WebView2 runtime that Sojourner draws with, so it
     installs on a machine that has never been online.</p>
   <p>If you already have an earlier version, run the new installer over the old one. Your notes,
-    highlights, sermons, prayers, bookmarks, and installed shelves are all kept. Make a backup first
-    all the same, from Settings, then Data and backups.</p>
+    highlights, sermons, prayers, bookmarks, and installed shelves are all kept. Even so, make a
+    backup first. You will find it in Settings, under Data and backups.</p>
+  <p>New to the program? A tutorial built into it walks through every feature. You will find it in
+    Settings, under Tutorial.</p>
 </section>
 
 <section class="section" id="before-you-install">
@@ -61,16 +62,15 @@
   <div class="callout">
     <p><strong>Windows will warn you.</strong> The installer is not code-signed, because a
       certificate costs money this work does not have. So SmartScreen shows a blue box the first
-      time you run it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. If that
-      makes you uneasy, that instinct is a good one, and you are welcome to pass on it. The release
-      page lists the installer&rsquo;s SHA-256 checksum, so you can confirm the file you have is the
-      one that was published.</p>
+      time you run it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. The
+      release page lists the installer&rsquo;s SHA-256 checksum, a kind of fingerprint for the file,
+      so anyone who knows how can confirm the file is the one that was published. If the warning
+      makes you uneasy, that instinct is a good one, and you are welcome to pass on it.</p>
   </div>
   <div class="callout">
-    <p><strong>It is a large download.</strong> About 608 MB, because the Bibles, the commentaries,
-      the lexicons, the reference works, and the reading voice are all inside it rather than fetched
-      from a server later. That is the trade. One long download once, and then it never needs the
-      network again.</p>
+    <p><strong>It is a large download.</strong> About 608 MB, because the texts and the reading voice
+      are all inside it rather than fetched from a server later. That is the trade. One long
+      download once, and then the program never needs the network again.</p>
   </div>
   <p>Version 0.3.0 means what it says. This is early, real, and in use, but it is not finished.
     Things will change and some of them will break. If something goes wrong, tell me and I will
@@ -86,21 +86,32 @@
     <article class="card">
       <h3>Fifteen translations</h3>
       <p class="card-meta">Public domain or free to share</p>
-      <p>Nine from the past, the King James of 1769, the American Standard of 1901, Young&rsquo;s
-        Literal, Darby, Webster&rsquo;s, the Geneva of 1599, Douay-Rheims, Tyndale, and Wycliffe. Six
-        modern ones whose makers let them be shared, the World English Bible, the Berean Standard
-        Bible, the Literal Standard Version, the Open English Bible, which has the New Testament and
-        part of the Old, and unfoldingWord&rsquo;s Literal and Simplified Texts. A translation you own
-        can be added from a Zefania XML file.</p>
+      <p>The nine older ones are the King James of 1769, the American Standard of 1901,
+        Young&rsquo;s Literal, Darby, Webster&rsquo;s, the Geneva of 1599, Douay-Rheims, Tyndale, and
+        Wycliffe. The six modern ones are free because their makers let them be shared. They are the
+        World English Bible, the Berean Standard Bible, the Literal Standard Version,
+        unfoldingWord&rsquo;s Literal and Simplified Texts, and the Open English Bible, which so far
+        has the New Testament and part of the Old.</p>
     </article>
     <article class="card">
       <h3>The original texts</h3>
       <p class="card-meta">Hebrew, Greek, and Latin</p>
-      <p>The Hebrew Old Testament from the Leningrad Codex, read right to left. Five editions of the
-        Greek New Testament, the Textus Receptus, the Byzantine text, the SBL Greek New Testament,
-        Westcott and Hort, and Tregelles. The Septuagint and the Clementine Vulgate as well. All of
-        them follow English chapter and verse numbering, so they line up with the English beside
-        them.</p>
+      <p>The Hebrew Old Testament from the Leningrad Codex, the oldest complete copy of the Hebrew
+        Bible, read right to left. Five editions of the Greek New Testament. The Textus Receptus is
+        the Greek text behind the King James. The Byzantine text follows the great number of later
+        copies, and the Westcott and Hort, Tregelles, and SBL editions weigh the oldest copies most
+        heavily. Also the Septuagint, the ancient Greek translation of the Old Testament, and the
+        Latin Vulgate in its Clementine edition. All of them follow English chapter and verse
+        numbering, so they line up with the English beside them.</p>
+    </article>
+    <article class="card">
+      <h3>The lexicons</h3>
+      <p class="card-meta">For readers with no Greek or Hebrew, and for those with some</p>
+      <p>A lexicon is a dictionary of the Hebrew or Greek words. Strong&rsquo;s and Thayer&rsquo;s
+        are the ones most readers start with. The full Brown, Driver, and Briggs is here for Hebrew,
+        with Abbott-Smith and Liddell, Scott, and Jones for Greek, and STEPBible&rsquo;s brief
+        lexicons for both. Double-click any word in the text for its entry. There is
+        <a href="#languages">more on this below</a>.</p>
     </article>
     <article class="card">
       <h3>Commentaries</h3>
@@ -121,14 +132,6 @@
       <p class="card-meta">Creeds and Continental standards</p>
       <p>The Apostles&rsquo;, Nicene, Athanasian, and Chalcedonian creeds, the Belgic Confession,
         the Heidelberg Catechism, and the Canons of Dort.</p>
-    </article>
-    <article class="card">
-      <h3>The lexicons</h3>
-      <p class="card-meta">From Strong&rsquo;s to the full Brown, Driver, and Briggs</p>
-      <p>Strong&rsquo;s and Thayer&rsquo;s. The full Brown, Driver, and Briggs for Hebrew, and
-        Abbott-Smith and Liddell, Scott, and Jones for Greek. STEPBible&rsquo;s brief lexicons for
-        both. Double-click any word in the text for its entry. There is
-        <a href="#languages">more on this below</a>.</p>
     </article>
     <article class="card">
       <h3>The Psalter</h3>
@@ -158,16 +161,51 @@
     <div class="stat"><span class="stat-value">4,275</span><span class="stat-label">People, places, and things in the Factbook, each with its own page</span></div>
     <div class="stat"><span class="stat-value">1,342</span><span class="stat-label">Atlas places, each with coordinates and every verse that names it</span></div>
     <div class="stat"><span class="stat-value">464</span><span class="stat-label">Events on the timeline, from the Creation to Paul in Rome</span></div>
-    <div class="stat"><span class="stat-value">270</span><span class="stat-label">Puritan and Reformed books on the library shelf</span></div>
+    <div class="stat"><span class="stat-value">270</span><span class="stat-label">Puritan and Reformed works on the Sojourner Library shelf</span></div>
     <div class="stat"><span class="stat-value">38</span><span class="stat-label">Volumes of the Church Fathers on a shelf of their own</span></div>
     <div class="stat"><span class="stat-value">39</span><span class="stat-label">Tunes for the 1650 Scottish Metrical Psalter, playable</span></div>
     <div class="stat"><span class="stat-value">14</span><span class="stat-label">Atlas journeys, from Abraham to Paul&rsquo;s voyage to Rome</span></div>
     <div class="stat"><span class="stat-value">5</span><span class="stat-label">Reading plans, including M&rsquo;Cheyne and a chronological year</span></div>
     <div class="stat"><span class="stat-value">2</span><span class="stat-label">Harmonies of the Gospels in four columns, Sutherland&rsquo;s of 2020 and Robertson&rsquo;s of 1922</span></div>
   </div>
-  <p>The books on the shelves are separate downloads, and there is <a href="#shelves">more on
-    them below</a>. Once installed, they are read, searched, and linked exactly like the books you
-    add yourself.</p>
+  <p>There is <a href="#shelves">more on the shelves below</a>. Once installed, their books are
+    read, searched, and linked exactly like the books you add yourself.</p>
+</section>
+
+<section class="section" id="shelves">
+  <p class="eyebrow">The book library</p>
+  <h2>Four Shelves, and Your Own</h2>
+  <p>The books come as four shelves, each a separate download on the release page, so you take only
+    the ones you want and leave the rest. To install one, open Settings, choose Book library, and
+    pick Install from file. Each shelf can be removed there too.</p>
+  <dl class="deflist">
+    <dt>The Sojourner Library</dt>
+    <dd>Two hundred and seventy Puritan and Reformed works.</dd>
+    <dt>The Church Fathers</dt>
+    <dd>The writers of the early church. The Ante-Nicene Fathers, from before the Council of Nicaea,
+      and both series of the Nicene and Post-Nicene Fathers, as Roberts, Donaldson, Schaff, and Wace
+      edited them, with Lightfoot&rsquo;s Apostolic Fathers. Thirty-eight volumes in all.</dd>
+    <dt>Ancient literature</dt>
+    <dd>The writers around the Bible. Josephus and Philo, 1 Enoch, and three Roman writers,
+      Tacitus on the reign of Tiberius, the letters of Pliny the Younger, and Suetonius&rsquo;s
+      Lives of the Twelve Caesars.</dd>
+    <dt>The nineteenth century</dt>
+    <dd>Schaff&rsquo;s History of the Christian Church and his Creeds of Christendom, and
+      Edersheim&rsquo;s Life and Times of Jesus the Messiah, with his books on the Temple and on
+      Jewish social life.</dd>
+  </dl>
+  <p>Inside the program, Resources sorts every book by shelf and by subject. Books of sermons,
+    theology, commentary, and the Christian life each sit together, and the Fathers are grouped by
+    series.</p>
+  <h3>Cited in your library</h3>
+  <p>Beside each verse, a small count shows how many books on your shelves cite it. Click it for
+    the list, and click a citation to open the book at that page. It is a quiet way to find out who
+    else has stood over the verse you are reading.</p>
+  <h3>Your own books and recordings</h3>
+  <p>Bring in your own EPUB, PDF, and MOBI books and your own audio and video. All of it goes into
+    the search box and is scanned for the verses it cites. You can group it by author, by date, or
+    by topic. Recordings play at the speed you choose, and a passage can link straight to the
+    moment in a recording where it is discussed.</p>
 </section>
 
 <section class="section" id="panes">
@@ -178,9 +216,10 @@
     dock it, stack tabs inside it, pick a ready-made arrangement, or save the whole layout as a named
     workspace that survives a reinstall.</p>
   <p>Then you link them. Click a verse in one pane and every linked pane turns to it. The
-    commentary, the cross references, the confession proofs, the encyclopedia article, the atlas
-    map, the people and places the verse names, the timeline, and the books on your shelves that
-    cite it all land on the same verse at once. You stop hunting and start reading.</p>
+    commentary, the cross references, the confession proofs, the encyclopedia article, and the atlas
+    map all land on the same verse at once. So do the people and places the verse names, its place
+    on the timeline, and the books on your shelves that cite it. You stop hunting and start
+    reading.</p>
   <p class="pull">One click, and the whole shelf opens to the same page.</p>
   <p>You can also set two translations side by side, or hold one verse up against every translation
     at once. Every Scripture reference anywhere in the program, in a commentary or a confession or
@@ -201,18 +240,17 @@
     </a>
     <figcaption>Genesis 1 with the interlinear on. The Hebrew sits under the English, pointed and parsed, and every word carries its Strong&rsquo;s number.</figcaption>
   </figure>
-  <p>Double-click any word, anywhere in the text, and its entry opens. Strong&rsquo;s and
-    Thayer&rsquo;s are there as they always were, and now the full Brown, Driver, and Briggs for the
-    Hebrew, and Abbott-Smith and Liddell, Scott, and Jones for the Greek. You can search the Greek
-    and Hebrew typed plainly, without accents or vowel points.</p>
+  <p>Double-click any word, anywhere in the text, and its entry opens in the lexicon you choose.
+    You can search the Greek and Hebrew without typing accents or vowel points.</p>
   <h3>Word study</h3>
-  <p>Pick any Hebrew or Greek word and Sojourner studies it for you. How often it occurs and where,
-    how the King James renders it, the forms it takes with their parsing, the words related to it,
-    and every place it stands.</p>
+  <p>Pick any Hebrew or Greek word and Sojourner lays out the facts about it. How often it occurs,
+    how the King James renders it, the forms it takes, the words related to it, and every place it
+    stands.</p>
   <h3>Search by grammar</h3>
-  <p>Find every word with a given parsing, such as every aorist imperative in Ephesians. You choose
-    from lists rather than typing code letters, so you do not need to know how the parsing is
-    written to use it.</p>
+  <p>Every Hebrew and Greek word is parsed, which means its grammar is labeled, such as its tense
+    or whether it is a command. Search by grammar finds every word of one kind, such as every
+    command in Ephesians. You choose from lists rather than typing code letters, so you do not need
+    to know how the labels are written.</p>
   <h3>Where the Greek editions differ</h3>
   <p>Set the five Greek editions side by side on a verse and see where they read differently. At
     1 John 5:7, the words about the three that bear record in heaven, known as the Comma Johanneum,
@@ -224,7 +262,7 @@
 
 <section class="section" id="maps">
   <p class="eyebrow">Who, where, and when</p>
-  <h2>The People, the Ground, and the Years</h2>
+  <h2>The People and the Ground They Walked</h2>
   <p>A page of text cannot easily show you who a man was, where something happened, or how it lines
     up with everything else happening at the time. The Factbook, the timeline, the atlas, and the
     harmonies are for that.</p>
@@ -273,13 +311,14 @@
     rules everywhere.</p>
   <p>Put an exact phrase in quotation marks. Ask for either of two words with OR, or leave a word
     out with a minus sign. Group words in parentheses, ask for words near each other, match the
-    start of a word, or use a regular expression. A plus sign asks for the exact form and its
-    capitals, so +LORD finds the covenant name as the King James prints it, without every Lord
-    beside it.</p>
-  <p>Filters for a book, a translation, a Strong&rsquo;s number, the words of Christ, or the verses
-    you have written notes on can be typed into the box itself, and they are saved with the search.
-    Older spellings match, so shew finds show. Results can be counted by book and by translation,
-    or lined up as a concordance with every hit set on its word.</p>
+    start of a word, or, for those who know them, use regular expressions. A plus sign asks for the
+    exact form and its capitals, so <em>+LORD</em> finds the covenant name as the King James prints
+    it, and skips the ordinary word <em>Lord</em>.</p>
+  <p>You can also narrow a search by typing a filter into the box itself. There are filters for a
+    book, a translation, a Strong&rsquo;s number, the words of Christ, and the verses you have notes
+    on, and they are saved with the search. Older spellings match, so <em>shew</em> finds
+    <em>show</em>. Results can be counted by book and by translation, or laid out like a printed
+    concordance, one line for each place the word appears.</p>
 </section>
 
 <section class="section" id="reading">
@@ -289,8 +328,7 @@
     that clears everything else away, and printing.</p>
   <p>Seven themes, including sepia, true black, and two built for high contrast. A font made for
     dyslexic readers, text you can size, and reduced motion for anyone who needs the screen to hold
-    still. A tutorial built into the program walks through every feature, from Settings, then
-    Tutorial.</p>
+    still.</p>
 </section>
 
 <section class="section" id="notes">
@@ -376,38 +414,13 @@
 
 </section>
 
-<section class="section" id="shelves">
-  <p class="eyebrow">The book library</p>
-  <h2>Four Shelves, and Your Own</h2>
-  <p>The books come as four shelves, each a separate download on the release page, so you take only
-    the ones you want and leave the rest. Install a shelf from inside the program, from Settings,
-    then Book library, and remove it the same way.</p>
-  <dl class="deflist">
-    <dt>The Puritan and Reformed library</dt>
-    <dd>Two hundred and seventy works of the Puritans and the Reformed.</dd>
-    <dt>The Church Fathers</dt>
-    <dd>The Ante-Nicene Fathers and both series of the Nicene and Post-Nicene Fathers, as Roberts,
-      Donaldson, Schaff, and Wace edited them, with Lightfoot&rsquo;s Apostolic Fathers. Thirty-eight
-      volumes in all.</dd>
-    <dt>Ancient literature</dt>
-    <dd>The writers around the Bible. Josephus and Philo, 1 Enoch, and the Roman historians who
-      mention Christ and the church, Tacitus, Pliny, and Suetonius.</dd>
-    <dt>The nineteenth century</dt>
-    <dd>Schaff&rsquo;s History of the Christian Church and his Creeds of Christendom, and
-      Edersheim&rsquo;s Life and Times of Jesus the Messiah, The Temple, and Sketches of Jewish
-      Social Life.</dd>
-  </dl>
-  <p>Resources sorts every book by shelf and by subject, so the sermons, the theology, the
-    commentary, the Christian life, and the Fathers by series each sit together.</p>
-  <h3>Cited in your library</h3>
-  <p>Beside each verse, a small count shows how many books on your shelves cite it. Click it for
-    the list, and click a citation to open the book at that page. It is a quiet way to find out who
-    else has stood over the verse you are reading.</p>
-  <h3>Your own books and recordings</h3>
-  <p>Bring in your own EPUB, PDF, and MOBI books and your own audio and video. All of it is indexed
-    for the same search box, scanned for the verses it cites, and can be grouped by author, by date,
-    or by topic. Recordings play at the speed you choose, and a passage can link straight to the
-    moment in a recording where it is discussed.</p>
+<section class="section" id="limits">
+  <h2>What It Does Not Have</h2>
+  <p>It runs on Windows only, and nothing syncs between computers. It does not update itself
+    either.</p>
+  <p>It cannot include the ESV, the NIV, or the NASB, because they are under copyright. The same is
+    true of BDAG and HALOT, the standard scholarly lexicons for Greek and Hebrew. If you own a
+    modern translation as a Zefania XML file, you can add it yourself.</p>
 </section>
 
 <section class="section" id="offline">
@@ -432,36 +445,24 @@
   <p>No program does that. But a good tool can keep you from setting the lamp down.</p>
 </section>
 
-<section class="section" id="limits">
-  <h2>What It Does Not Have</h2>
-  <p>It runs on Windows only. There is no Mac or phone version, and nothing syncs between
-    computers.</p>
-  <p>It cannot include the ESV, the NIV, or the NASB, or lexicons like BDAG and HALOT, because they
-    are under copyright. If you own a modern translation as a Zefania XML file, you can add it
-    yourself.</p>
-  <p>It does not update itself. Check for a new version in Settings, then About, and download the
-    new installer when there is one.</p>
-</section>
-
 <section class="section" id="credits">
   <h2>Where the Texts Came From</h2>
-  <p>Every text in Sojourner is in the public domain or used under an open license. Settings, then
-    About, lists each source and its terms, with every Creative Commons credit the licenses ask
+  <p>Every text in Sojourner is in the public domain or used under an open license. The About page
+    in Settings lists each source and its terms, with every Creative Commons credit the licenses ask
     for.</p>
   <p>The Hebrew and Greek texts, the lexicons, and the Factbook&rsquo;s people and places come from
-    STEPBible and Tyndale House, and the morphology and lexicon data from OpenScriptures. The modern
-    translations come from the Berean Bible, unfoldingWord, and the Literal Standard Version. The
-    timeline draws on the Theographic Bible Metadata, and the atlas on OpenBible.info, with
-    coastlines from Natural Earth. The books on the shelves come from the Christian Classics
-    Ethereal Library and Project Gutenberg. The OpenDyslexic font is under the SIL Open Font
-    License.</p>
-  <p>None of the texts or reference data in Sojourner was written by AI. Where a source came with
-    summaries written by AI, they were left out.</p>
+    STEPBible and Tyndale House, and the parsing and lexicon data from OpenScriptures. The Berean
+    Standard Bible, the Literal Standard Version, and unfoldingWord&rsquo;s two texts are used under
+    their makers&rsquo; open licenses. The timeline draws on the Theographic Bible Metadata, and the
+    atlas on OpenBible.info, with coastlines from Natural Earth. The books on the shelves come from
+    the Christian Classics Ethereal Library and Project Gutenberg. The OpenDyslexic font is under the
+    SIL Open Font License.</p>
   <p>The 2020 harmony of the Gospels is the work of <strong>Robert M. Sutherland</strong>, copyright 2020, reproduced here with acknowledgment of his authorship as his terms ask. The 1922 harmony is A. T. Robertson&rsquo;s and is public domain.</p>
+  <p>No text or reference data in Sojourner was written by AI. Where a source came with summaries
+    written by AI, they were left out.</p>
   <p>None of this is my work. It is the labour of Calvin, Henry, Spurgeon, Barnes, Orr, Easton,
-    Smith, Strong, Thayer, Brown, Driver, and Briggs, the Westminster divines, and the many people
-    who typed their books into machines and gave them away. Sojourner only puts them on one
-    shelf.</p>
+    Smith, Strong, Thayer, Brown, Driver, Briggs, the Westminster divines, and the many people who
+    typed their books into machines and gave them away. Sojourner only puts them on one shelf.</p>
 </section>
 
 <section class="section" id="feedback">

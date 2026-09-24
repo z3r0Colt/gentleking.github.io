@@ -102,9 +102,9 @@ PAGES = [
         ),
         "description": (
             "Sojourner is a free offline Bible study companion for Windows. Fifteen translations, "
-            "the Hebrew and Greek with full lexicons, Calvin and Henry and Spurgeon, the Westminster "
-            "Standards, a Factbook of 4,275 people and places, and a 9,349 article encyclopedia, "
-            "all on your own machine."
+            "the Hebrew and Greek with the great lexicons, Calvin and Henry and Spurgeon, the "
+            "Westminster Standards, a Factbook of 4,275 people, places, and things, and a 9,349 "
+            "article encyclopedia, all on your own machine."
         ),
         "toc": True,
     },
