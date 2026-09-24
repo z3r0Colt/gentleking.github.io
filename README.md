@@ -69,8 +69,10 @@ The download button points at the releases page, not at a specific file, so it
 keeps working when you post a new build. After a release, update the version in
 `content/software.html`. It is written out four times there, in the Get Sojourner
 heading, the Version row, the paragraph on what the version number means, and the
-closing download button. The installer size is written out in the Get Sojourner
-block too.
+closing download button. The installer size is written out twice, in the Get
+Sojourner block and in the warning about the large download. If the release adds
+translations, shelves, or reference works, the counts on the page and the one
+paragraph about Sojourner on the home page want updating too.
 
 Then run `python3 build.py`, check it, commit and push.
 

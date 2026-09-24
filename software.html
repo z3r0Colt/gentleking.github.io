@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sojourner · A Bible study companion for Windows</title>
-<meta name="description" content="Sojourner is a free offline Bible study companion for Windows. Ten translations, Calvin and Henry and Spurgeon, the Westminster Standards, a word-by-word interlinear in Hebrew and Greek, and a 9,349 article encyclopedia, all on your own machine.">
+<meta name="description" content="Sojourner is a free offline Bible study companion for Windows. Fifteen translations, the Hebrew and Greek with full lexicons, Calvin and Henry and Spurgeon, the Westminster Standards, a Factbook of 4,275 people and places, and a 9,349 article encyclopedia, all on your own machine.">
 <link rel="canonical" href="https://gentleking.org/software.html">
 <meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#151310" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gentle King">
 <meta property="og:title" content="Sojourner · A Bible study companion for Windows">
-<meta property="og:description" content="Sojourner is a free offline Bible study companion for Windows. Ten translations, Calvin and Henry and Spurgeon, the Westminster Standards, a word-by-word interlinear in Hebrew and Greek, and a 9,349 article encyclopedia, all on your own machine.">
+<meta property="og:description" content="Sojourner is a free offline Bible study companion for Windows. Fifteen translations, the Hebrew and Greek with full lexicons, Calvin and Henry and Spurgeon, the Westminster Standards, a Factbook of 4,275 people and places, and a 9,349 article encyclopedia, all on your own machine.">
 <meta property="og:url" content="https://gentleking.org/software.html">
 <meta property="og:image" content="https://gentleking.org/assets/img/og-sojourner.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="Sojourner, Bible Study Companion. A free, offline Bible study companion for Windows.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sojourner · A Bible study companion for Windows">
-<meta name="twitter:description" content="Sojourner is a free offline Bible study companion for Windows. Ten translations, Calvin and Henry and Spurgeon, the Westminster Standards, a word-by-word interlinear in Hebrew and Greek, and a 9,349 article encyclopedia, all on your own machine.">
+<meta name="twitter:description" content="Sojourner is a free offline Bible study companion for Windows. Fifteen translations, the Hebrew and Greek with full lexicons, Calvin and Henry and Spurgeon, the Westminster Standards, a Factbook of 4,275 people and places, and a 9,349 article encyclopedia, all on your own machine.">
 <meta name="twitter:image" content="https://gentleking.org/assets/img/og-sojourner.png">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/img/favicon.ico" sizes="any">
@@ -83,7 +83,8 @@ document.documentElement.classList.add('js');
   <h2>Scripture, and the Church Reading It With You</h2>
   <p class="lede">Sojourner is a Windows desktop application for reading the Bible beside the
     commentaries, confessions, and reference works the Reformed church has been handing down for
-    four hundred years. All of it sits on your own machine. None of it asks you to sign in.</p>
+    four hundred years, with the Hebrew and Greek underneath and the tools to prepare a sermon on
+    top. All of it sits on your own machine. None of it asks you to sign in.</p>
   <figure class="shot">
     <a href="assets/img/sojourner-study.webp" aria-label="See the full size screenshot">
       <img src="assets/img/sojourner-study-1000.webp" width="1000" height="544" loading="lazy"
@@ -107,25 +108,30 @@ document.documentElement.classList.add('js');
   <p class="eyebrow">Download</p>
   <h2>Get Sojourner</h2>
   <div class="get">
-    <h3>Sojourner 0.2.7</h3>
-    <p class="get-meta">Free &middot; Windows 10 and 11, 64-bit &middot; About 558 MB</p>
-    <p>One installer with everything inside it. No account to make and nothing to buy. The book
-      library is a second download on the same page, kept separate so the installer stays smaller.</p>
+    <h3>Sojourner 0.3.0</h3>
+    <p class="get-meta">Free &middot; Windows 10 and 11, 64-bit &middot; About 608 MB</p>
+    <p>One installer with the Bibles, the commentaries, the lexicons, and the reference works
+      inside it. No account to make and nothing to buy. The book library comes as four shelves on
+      the same page, each its own download, so you take only the ones you want.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows</a>
       <a class="btn" href="#before-you-install">What to expect when you install</a>
     </div>
   </div>
   <dl class="spec">
-    <dt>Version</dt><dd>0.2.7</dd>
+    <dt>Version</dt><dd>0.3.0</dd>
     <dt>System</dt><dd>Windows 10 or 11, 64-bit. There is no Mac, Linux, or phone version.</dd>
     <dt>Install</dt><dd>Per user. No administrator rights needed.</dd>
     <dt>Network</dt><dd>None required, at install or after</dd>
+    <dt>Updates</dt><dd>By hand. Check in Settings, then About, and download the new installer.</dd>
     <dt>Price</dt><dd>Free</dd>
     <dt>Built with</dt><dd>Tauri, Rust, and React</dd>
   </dl>
   <p>The installer bundles the Microsoft Edge WebView2 runtime that Sojourner draws with, so it
     installs on a machine that has never been online.</p>
+  <p>If you already have an earlier version, run the new installer over the old one. Your notes,
+    highlights, sermons, prayers, bookmarks, and installed shelves are all kept. Make a backup first
+    all the same, from Settings, then Data and backups.</p>
 </section>
 
 <section class="section" id="before-you-install">
@@ -136,14 +142,17 @@ document.documentElement.classList.add('js');
     <p><strong>Windows will warn you.</strong> The installer is not code-signed, because a
       certificate costs money this work does not have. So SmartScreen shows a blue box the first
       time you run it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. If that
-      makes you uneasy, that instinct is a good one, and you are welcome to pass on it.</p>
+      makes you uneasy, that instinct is a good one, and you are welcome to pass on it. The release
+      page lists the installer&rsquo;s SHA-256 checksum, so you can confirm the file you have is the
+      one that was published.</p>
   </div>
   <div class="callout">
-    <p><strong>It is a large download.</strong> About 558 MB, because the whole library is inside
-      it rather than fetched from a server later. That is the trade. One long download once, and
-      then it never needs the network again.</p>
+    <p><strong>It is a large download.</strong> About 608 MB, because the Bibles, the commentaries,
+      the lexicons, the reference works, and the reading voice are all inside it rather than fetched
+      from a server later. That is the trade. One long download once, and then it never needs the
+      network again.</p>
   </div>
-  <p>Version 0.2.7 means what it says. This is early, real, and in use, but it is not finished.
+  <p>Version 0.3.0 means what it says. This is early, real, and in use, but it is not finished.
     Things will change and some of them will break. If something goes wrong, tell me and I will
     fix it.</p>
 </section>
@@ -155,18 +164,30 @@ document.documentElement.classList.add('js');
     of it needs a connection to open.</p>
   <div class="grid grid-2">
     <article class="card">
-      <h3>Ten translations</h3>
-      <p class="card-meta">All public domain</p>
-      <p>King James of 1769, American Standard, Young&rsquo;s Literal, Darby, Webster&rsquo;s,
-        Geneva of 1599, Douay-Rheims, Tyndale, Wycliffe, and the World English Bible. If you own a
-        modern translation in Zefania XML you can import it, and commentaries in ThML as well.</p>
+      <h3>Fifteen translations</h3>
+      <p class="card-meta">Public domain or free to share</p>
+      <p>Nine from the past, the King James of 1769, the American Standard of 1901, Young&rsquo;s
+        Literal, Darby, Webster&rsquo;s, the Geneva of 1599, Douay-Rheims, Tyndale, and Wycliffe. Six
+        modern ones whose makers let them be shared, the World English Bible, the Berean Standard
+        Bible, the Literal Standard Version, the Open English Bible, which has the New Testament and
+        part of the Old, and unfoldingWord&rsquo;s Literal and Simplified Texts. A translation you own
+        can be added from a Zefania XML file.</p>
+    </article>
+    <article class="card">
+      <h3>The original texts</h3>
+      <p class="card-meta">Hebrew, Greek, and Latin</p>
+      <p>The Hebrew Old Testament from the Leningrad Codex, read right to left. Five editions of the
+        Greek New Testament, the Textus Receptus, the Byzantine text, the SBL Greek New Testament,
+        Westcott and Hort, and Tregelles. The Septuagint and the Clementine Vulgate as well. All of
+        them follow English chapter and verse numbering, so they line up with the English beside
+        them.</p>
     </article>
     <article class="card">
       <h3>Commentaries</h3>
       <p class="card-meta">Henry, Calvin, Jamieson, Barnes, Spurgeon</p>
-      <p>Matthew Henry&rsquo;s Concise, the forty-five volumes of Calvin, Jamieson, Fausset and
-        Brown, Barnes&rsquo; Notes on the New Testament, and Spurgeon&rsquo;s Treasury of David on
-        all one hundred and fifty Psalms.</p>
+      <p>Matthew Henry, the forty-five volumes of Calvin, Jamieson, Fausset and Brown,
+        Barnes&rsquo; Notes on the New Testament, and Spurgeon&rsquo;s Treasury of David on all one
+        hundred and fifty Psalms.</p>
     </article>
     <article class="card">
       <h3>The Westminster Standards</h3>
@@ -182,23 +203,25 @@ document.documentElement.classList.add('js');
         the Heidelberg Catechism, and the Canons of Dort.</p>
     </article>
     <article class="card">
+      <h3>The lexicons</h3>
+      <p class="card-meta">From Strong&rsquo;s to the full Brown, Driver, and Briggs</p>
+      <p>Strong&rsquo;s and Thayer&rsquo;s. The full Brown, Driver, and Briggs for Hebrew, and
+        Abbott-Smith and Liddell, Scott, and Jones for Greek. STEPBible&rsquo;s brief lexicons for
+        both. Double-click any word in the text for its entry. There is
+        <a href="#languages">more on this below</a>.</p>
+    </article>
+    <article class="card">
       <h3>The Psalter</h3>
       <p class="card-meta">1650, with tunes you can play</p>
       <p>The 1650 Scottish Metrical Psalter in full, with thirty-nine tunes that play in the
         program, so you can hear the line before you sing it.</p>
     </article>
     <article class="card">
-      <h3>The original languages</h3>
-      <p class="card-meta">For readers with no Greek or Hebrew</p>
-      <p>Strong&rsquo;s Hebrew and Greek, Thayer&rsquo;s Greek lexicon, and a word-by-word
-        interlinear through both testaments, Hebrew and Greek, parsed. Double-click any word in the
-        text for its entry. There is <a href="#languages">more on this below</a>.</p>
-    </article>
-    <article class="card">
       <h3>Read aloud</h3>
       <p class="card-meta">A voice that runs on your machine</p>
-      <p>A neural voice ships with the program and speaks with no connection. Words light up as it
-        reads, there is a sleep timer, and you can correct how it says a name.</p>
+      <p>A neural voice ships with the program and reads any chapter, commentary, or book aloud with
+        no connection. Words light up as it reads, there is a sleep timer, and you can correct how it
+        says a name.</p>
     </article>
   </div>
 </section>
@@ -212,15 +235,19 @@ document.documentElement.classList.add('js');
     <div class="stat"><span class="stat-value">9,349</span><span class="stat-label">Encyclopedia articles, the International Standard Bible Encyclopedia of 1915</span></div>
     <div class="stat"><span class="stat-value">5,998</span><span class="stat-label">Dictionary entries, Easton&rsquo;s and Smith&rsquo;s merged by headword</span></div>
     <div class="stat"><span class="stat-value">344,757</span><span class="stat-label">Cross references</span></div>
+    <div class="stat"><span class="stat-value">4,275</span><span class="stat-label">People, places, and things in the Factbook, each with its own page</span></div>
     <div class="stat"><span class="stat-value">1,342</span><span class="stat-label">Atlas places, each with coordinates and every verse that names it</span></div>
-    <div class="stat"><span class="stat-value">270</span><span class="stat-label">Puritan and Reformed books in the library pack</span></div>
+    <div class="stat"><span class="stat-value">464</span><span class="stat-label">Events on the timeline, from the Creation to Paul in Rome</span></div>
+    <div class="stat"><span class="stat-value">270</span><span class="stat-label">Puritan and Reformed books on the library shelf</span></div>
+    <div class="stat"><span class="stat-value">38</span><span class="stat-label">Volumes of the Church Fathers on a shelf of their own</span></div>
     <div class="stat"><span class="stat-value">39</span><span class="stat-label">Tunes for the 1650 Scottish Metrical Psalter, playable</span></div>
     <div class="stat"><span class="stat-value">14</span><span class="stat-label">Atlas journeys, from Abraham to Paul&rsquo;s voyage to Rome</span></div>
     <div class="stat"><span class="stat-value">5</span><span class="stat-label">Reading plans, including M&rsquo;Cheyne and a chronological year</span></div>
     <div class="stat"><span class="stat-value">2</span><span class="stat-label">Harmonies of the Gospels in four columns, Sutherland&rsquo;s of 2020 and Robertson&rsquo;s of 1922</span></div>
   </div>
-  <p>Once installed, those two hundred and seventy works are read, searched, tagged, and
-    linked exactly like the books you add yourself.</p>
+  <p>The books on the shelves are separate downloads, and there is <a href="#shelves">more on
+    them below</a>. Once installed, they are read, searched, and linked exactly like the books you
+    add yourself.</p>
 </section>
 
 <section class="section" id="panes">
@@ -228,11 +255,12 @@ document.documentElement.classList.add('js');
   <h2>Panes That Follow Each Other</h2>
   <p>This is the part worth understanding, because it is what the picture at the top of the page is
     showing. You can open up to eight panes and split the window however you like. Drag a pane to
-    dock it, stack tabs inside it, or save the whole arrangement as a named workspace that survives
-    a reinstall.</p>
+    dock it, stack tabs inside it, pick a ready-made arrangement, or save the whole layout as a named
+    workspace that survives a reinstall.</p>
   <p>Then you link them. Click a verse in one pane and every linked pane turns to it. The
-    commentary, the cross references, the confession proofs, the encyclopedia article, and the
-    atlas map all land on the same verse at once. You stop hunting and start reading.</p>
+    commentary, the cross references, the confession proofs, the encyclopedia article, the atlas
+    map, the people and places the verse names, the timeline, and the books on your shelves that
+    cite it all land on the same verse at once. You stop hunting and start reading.</p>
   <p class="pull">One click, and the whole shelf opens to the same page.</p>
   <p>You can also set two translations side by side, or hold one verse up against every translation
     at once. Every Scripture reference anywhere in the program, in a commentary or a confession or
@@ -253,18 +281,44 @@ document.documentElement.classList.add('js');
     </a>
     <figcaption>Genesis 1 with the interlinear on. The Hebrew sits under the English, pointed and parsed, and every word carries its Strong&rsquo;s number.</figcaption>
   </figure>
-  <p>Double-click any word, anywhere in the text, and its entry opens. Strong&rsquo;s for Hebrew and
-    Greek, and Thayer&rsquo;s for a fuller Greek treatment with the usages laid out.</p>
+  <p>Double-click any word, anywhere in the text, and its entry opens. Strong&rsquo;s and
+    Thayer&rsquo;s are there as they always were, and now the full Brown, Driver, and Briggs for the
+    Hebrew, and Abbott-Smith and Liddell, Scott, and Jones for the Greek. You can search the Greek
+    and Hebrew typed plainly, without accents or vowel points.</p>
+  <h3>Word study</h3>
+  <p>Pick any Hebrew or Greek word and Sojourner studies it for you. How often it occurs and where,
+    how the King James renders it, the forms it takes with their parsing, the words related to it,
+    and every place it stands.</p>
+  <h3>Search by grammar</h3>
+  <p>Find every word with a given parsing, such as every aorist imperative in Ephesians. You choose
+    from lists rather than typing code letters, so you do not need to know how the parsing is
+    written to use it.</p>
+  <h3>Where the Greek editions differ</h3>
+  <p>Set the five Greek editions side by side on a verse and see where they read differently. At
+    1 John 5:7, the words about the three that bear record in heaven, known as the Comma Johanneum,
+    stand only in the Textus Receptus.</p>
   <p>None of this asks you to have studied the languages. That is the point of it. A man with a
     concordance and some patience has been able to do real work in the text for two hundred years,
     and this only makes the same work quicker.</p>
 </section>
 
 <section class="section" id="maps">
-  <p class="eyebrow">Where and when</p>
-  <h2>The Ground It Happened On</h2>
-  <p>A page of text cannot easily show you where something happened, or how it lines up with
-    everything else happening at the time. The atlas and the harmonies are for that.</p>
+  <p class="eyebrow">Who, where, and when</p>
+  <h2>The People, the Ground, and the Years</h2>
+  <p>A page of text cannot easily show you who a man was, where something happened, or how it lines
+    up with everything else happening at the time. The Factbook, the timeline, the atlas, and the
+    harmonies are for that.</p>
+  <h3>The Factbook</h3>
+  <p>A page for each of four thousand two hundred and seventy five people, places, and things in
+    the Bible. The Bible has several men named Zechariah, and the Factbook tells them apart by the
+    verses that name them. Each one gets his family, every verse, and what the encyclopedia and the
+    dictionary say about him. Double-click a name in the text and it opens the person that verse
+    means.</p>
+  <h3>The timeline</h3>
+  <p>Four hundred and sixty four events, from the Creation to Paul in Rome, on a line you can zoom.
+    The eras are marked, the kings of Judah and Israel run side by side, and a strip beside the text
+    shows where the chapter you are reading falls. The dates are approximate, taken from a
+    traditional chronology.</p>
   <h3>The atlas</h3>
   <p>One thousand three hundred and forty two places, each with its coordinates, its modern
     identification where there is one, and every verse that names it. Fourteen journeys are traced
@@ -294,12 +348,18 @@ document.documentElement.classList.add('js');
 
 <section class="section" id="search">
   <h2>One Search Box</h2>
-  <p>One box searches Scripture, commentary, your notes, your prayers, your resources, the
-    confessions, the encyclopedia, your sermons, and your illustrations. You can ask for an exact
-    phrase, for either of two words, or for one word while excluding another.</p>
-  <p>Narrow it to one translation or search them all, to one commentary or all of them, to a
-    testament or a single book. Sort by relevance or in Bible order, match whole words only, and
-    see true totals with paging out to five hundred results. Searches you run often can be saved.</p>
+  <p>One box searches Scripture, the commentaries, the lexicons, the Factbook, the confessions, the
+    encyclopedia, your books, and your own notes, prayers, sermons, and illustrations, with the same
+    rules everywhere.</p>
+  <p>Put an exact phrase in quotation marks. Ask for either of two words with OR, or leave a word
+    out with a minus sign. Group words in parentheses, ask for words near each other, match the
+    start of a word, or use a regular expression. A plus sign asks for the exact form and its
+    capitals, so +LORD finds the covenant name as the King James prints it, without every Lord
+    beside it.</p>
+  <p>Filters for a book, a translation, a Strong&rsquo;s number, the words of Christ, or the verses
+    you have written notes on can be typed into the box itself, and they are saved with the search.
+    Older spellings match, so shew finds show. Results can be counted by book and by translation,
+    or lined up as a concordance with every hit set on its word.</p>
 </section>
 
 <section class="section" id="reading">
@@ -308,7 +368,9 @@ document.documentElement.classList.add('js');
     highlight colors and an underline, bookmarks, a find bar for the open chapter, a focus mode
     that clears everything else away, and printing.</p>
   <p>Seven themes, including sepia, true black, and two built for high contrast. A font made for
-    dyslexic readers. Reduced motion for anyone who needs the screen to hold still.</p>
+    dyslexic readers, text you can size, and reduced motion for anyone who needs the screen to hold
+    still. A tutorial built into the program walks through every feature, from Settings, then
+    Tutorial.</p>
 </section>
 
 <section class="section" id="notes">
@@ -345,10 +407,10 @@ document.documentElement.classList.add('js');
     </a>
     <figcaption>The manuscript on the left, the outline built from its own points on the right, each with a word count and a reading time. The footer counts the whole thing at your measured speaking rate.</figcaption>
   </figure>
-  <p>Every verse, commentary entry, confession section, lexicon entry, encyclopedia article, and
-    book selection carries a small microphone button. Press it and that text drops into the open
-    sermon with its source line already attached. You never lose track of where a quotation came
-    from.</p>
+  <p>Every verse, commentary entry, confession section, lexicon entry, word study, encyclopedia
+    article, and book selection carries a small microphone button. Press it and that text drops into
+    the open sermon with its source line already attached. You never lose track of where a quotation
+    came from.</p>
   <p>Illustrations go into a file of their own, each with where it came from and where you have
     used it. When you reach for one you have already told in this series, it says so before you
     put it in.</p>
@@ -394,12 +456,38 @@ document.documentElement.classList.add('js');
 
 </section>
 
-<section class="section" id="your-own">
-  <h2>Your Own Shelf</h2>
+<section class="section" id="shelves">
+  <p class="eyebrow">The book library</p>
+  <h2>Four Shelves, and Your Own</h2>
+  <p>The books come as four shelves, each a separate download on the release page, so you take only
+    the ones you want and leave the rest. Install a shelf from inside the program, from Settings,
+    then Book library, and remove it the same way.</p>
+  <dl class="deflist">
+    <dt>The Puritan and Reformed library</dt>
+    <dd>Two hundred and seventy works of the Puritans and the Reformed.</dd>
+    <dt>The Church Fathers</dt>
+    <dd>The Ante-Nicene Fathers and both series of the Nicene and Post-Nicene Fathers, as Roberts,
+      Donaldson, Schaff, and Wace edited them, with Lightfoot&rsquo;s Apostolic Fathers. Thirty-eight
+      volumes in all.</dd>
+    <dt>Ancient literature</dt>
+    <dd>The writers around the Bible. Josephus and Philo, 1 Enoch, and the Roman historians who
+      mention Christ and the church, Tacitus, Pliny, and Suetonius.</dd>
+    <dt>The nineteenth century</dt>
+    <dd>Schaff&rsquo;s History of the Christian Church and his Creeds of Christendom, and
+      Edersheim&rsquo;s Life and Times of Jesus the Messiah, The Temple, and Sketches of Jewish
+      Social Life.</dd>
+  </dl>
+  <p>Resources sorts every book by shelf and by subject, so the sermons, the theology, the
+    commentary, the Christian life, and the Fathers by series each sit together.</p>
+  <h3>Cited in your library</h3>
+  <p>Beside each verse, a small count shows how many books on your shelves cite it. Click it for
+    the list, and click a citation to open the book at that page. It is a quiet way to find out who
+    else has stood over the verse you are reading.</p>
+  <h3>Your own books and recordings</h3>
   <p>Bring in your own EPUB, PDF, and MOBI books and your own audio and video. All of it is indexed
-    for the same search box and can be grouped by author, by date, or by topic. Recordings play at
-    the speed you choose, and a passage can link straight to the moment in a recording where it is
-    discussed.</p>
+    for the same search box, scanned for the verses it cites, and can be grouped by author, by date,
+    or by topic. Recordings play at the speed you choose, and a passage can link straight to the
+    moment in a recording where it is discussed.</p>
 </section>
 
 <section class="section" id="offline">
@@ -408,11 +496,12 @@ document.documentElement.classList.add('js');
   <p>Sojourner uses the network for exactly one thing. You press a button on the About page to
     check whether a newer version exists. That is all. There is no account, no sync service,
     and no telemetry of any kind. Nothing you read, search, write, or pray is reported anywhere,
-    because there is nowhere for it to go.</p>
+    because there is nowhere for it to go. Even the book shelves install from files you download
+    yourself, so they can just as well arrive on a USB stick.</p>
   <p>Everything you write lives in one file on your machine. Snapshots and automatic backups run in
     the background. You can export the whole database and import it again, run an integrity check,
-    keep a copy in a synced folder if you want one, and look at your own reading statistics on a
-    heatmap. If the program ever crashes, the log stays on your computer.</p>
+    keep a copy in a OneDrive or Dropbox folder if you want one, and look at your own reading
+    statistics on a heatmap. If the program ever crashes, the log stays on your computer.</p>
   <p>This is not a marketing position. It is the only arrangement that makes sense for a book you
     are supposed to read for the rest of your life. Companies fold and services shut down. A file
     on your own disk does not.</p>
@@ -423,17 +512,36 @@ document.documentElement.classList.add('js');
   <p>No program does that. But a good tool can keep you from setting the lamp down.</p>
 </section>
 
+<section class="section" id="limits">
+  <h2>What It Does Not Have</h2>
+  <p>It runs on Windows only. There is no Mac or phone version, and nothing syncs between
+    computers.</p>
+  <p>It cannot include the ESV, the NIV, or the NASB, or lexicons like BDAG and HALOT, because they
+    are under copyright. If you own a modern translation as a Zefania XML file, you can add it
+    yourself.</p>
+  <p>It does not update itself. Check for a new version in Settings, then About, and download the
+    new installer when there is one.</p>
+</section>
+
 <section class="section" id="credits">
   <h2>Where the Texts Came From</h2>
-  <p>Everything bundled with Sojourner is either public domain or used under a license that asks
-    only for attribution. The Greek data comes from STEPBible under Creative Commons Attribution
-    4.0. The atlas place data comes from OpenBible.info under the same license, and the coastlines
-    from Natural Earth. The OpenDyslexic font is under the SIL Open Font License. The translations,
-    commentaries, confessions, lexicons, encyclopedia, and dictionaries are public domain.</p>
+  <p>Every text in Sojourner is in the public domain or used under an open license. Settings, then
+    About, lists each source and its terms, with every Creative Commons credit the licenses ask
+    for.</p>
+  <p>The Hebrew and Greek texts, the lexicons, and the Factbook&rsquo;s people and places come from
+    STEPBible and Tyndale House, and the morphology and lexicon data from OpenScriptures. The modern
+    translations come from the Berean Bible, unfoldingWord, and the Literal Standard Version. The
+    timeline draws on the Theographic Bible Metadata, and the atlas on OpenBible.info, with
+    coastlines from Natural Earth. The books on the shelves come from the Christian Classics
+    Ethereal Library and Project Gutenberg. The OpenDyslexic font is under the SIL Open Font
+    License.</p>
+  <p>None of the texts or reference data in Sojourner was written by AI. Where a source came with
+    summaries written by AI, they were left out.</p>
   <p>The 2020 harmony of the Gospels is the work of <strong>Robert M. Sutherland</strong>, copyright 2020, reproduced here with acknowledgment of his authorship as his terms ask. The 1922 harmony is A. T. Robertson&rsquo;s and is public domain.</p>
   <p>None of this is my work. It is the labour of Calvin, Henry, Spurgeon, Barnes, Orr, Easton,
-    Smith, Strong, Thayer, the Westminster divines, and the many people who typed their books into
-    machines and gave them away. Sojourner only puts them on one shelf.</p>
+    Smith, Strong, Thayer, Brown, Driver, and Briggs, the Westminster divines, and the many people
+    who typed their books into machines and gave them away. Sojourner only puts them on one
+    shelf.</p>
 </section>
 
 <section class="section" id="feedback">
@@ -443,7 +551,7 @@ document.documentElement.classList.add('js');
     and corrections to the texts most of all.</p>
   <p>Sojourner is published by gentleking.org and given away free. It always will be.</p>
   <div class="btn-row">
-    <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download Sojourner 0.2.7</a>
+    <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download Sojourner 0.3.0</a>
     <a class="btn" href="resources.html">Reading and study</a>
   </div>
 </section>
