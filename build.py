@@ -56,7 +56,6 @@ COPYRIGHT_YEAR = "2026"
 NAV = [
     ("index.html", "Home"),
     ("gospel.html", "The Gospel"),
-    ("comfort.html", "Comfort"),
     ("software.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
@@ -326,7 +325,6 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Read</p>
         <ul class="footer-links">
           <li><a href="gospel.html">The Gospel</a></li>
-          <li><a href="comfort.html">Comfort</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html">Apologetics</a></li>
           <li><a href="resources.html">Resources</a></li>
