@@ -135,6 +135,24 @@ PAGES = [
         "toc": False,
     },
     {
+        # Kept out of NAV and the footer for now, like Comfort. Reached by link.
+        "file": "struggle.html",
+        "content": "struggle.html",
+        "title": "Struggling With Sin",
+        "eyebrow": "Fighting Sin",
+        "h1": "A Greater Affection",
+        "deck": (
+            "For anyone worn down by a sin that will not let go. A heart gives up an old love "
+            "only for a stronger one, and Christ is the one love strong enough to drive the others out."
+        ),
+        "description": (
+            "Help from Scripture and the Westminster Standards for anyone struggling with sin. "
+            "A greater love for Christ, the daily work of putting sin to death by the Spirit, and "
+            "an assurance that rests on Christ and not on a winning streak."
+        ),
+        "toc": True,
+    },
+    {
         "file": "doctrine.html",
         "content": "doctrine.html",
         "title": "Doctrine",
