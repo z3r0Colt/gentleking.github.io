@@ -46,7 +46,8 @@ APP_EMAIL = "sojourner@gentleking.org"
 
 SCRIPTURE_NOTICE = (
     "Scripture quotations are from the Authorized Version, the King James Bible "
-    "of 1611, which is in the public domain."
+    "of 1611, which is in the public domain. If its older English is hard going, "
+    "read the same passages in a careful modern translation such as the ESV or the NASB."
 )
 
 COPYRIGHT_YEAR = "2026"
@@ -93,7 +94,7 @@ PAGES = [
         "og_alt": "Sojourner, Bible Study Companion. A free, offline Bible study companion for Windows.",
         "deck": (
             "Scripture beside the commentaries, confessions, and reference works of the "
-            "Reformed church. It runs on your own machine, it works with the network off, "
+            "Reformed church. It runs on your own Windows machine, it works with the network off, "
             "and it is free."
         ),
         "description": (

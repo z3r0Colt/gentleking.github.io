@@ -109,7 +109,10 @@ the site is relative, so nothing else has to change.
 
 Scripture quotations are from the Authorized Version, the King James Bible of
 1611, which is in the public domain. The site quotes it rather than a modern
-translation so that nothing here is under anyone's copyright.
+translation so that nothing here is under anyone's copyright. The footer points
+readers who find the older English hard to the ESV or the NASB, but the site
+itself quotes neither. That is also why there is no side-by-side modern text.
+Printing one would put the pages under a publisher's terms.
 
 Everything written here may be copied, printed, and shared freely. Please do not
 sell it and please do not alter it.
