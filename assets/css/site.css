@@ -930,6 +930,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 }
 .shot > a:hover { border-color: var(--gold); }
 .shot img { display: block; width: 100%; height: auto; }
+/* A picture as tall as it is wide, like two phones side by side, would fill
+   the whole screen at the column's width, so it is held narrower. */
+.shot-tall > a { max-width: 34rem; }
 .shot figcaption {
   margin-top: .8rem;
   font-family: var(--font-ui);
