@@ -71,15 +71,18 @@ keeps working when you post a new build. After a release, update the version in
 `content/software.html`. It is written out four times there, in the Get Sojourner
 heading, the Version row, the paragraph on what the version number means, and the
 closing download button. The installer size is written out twice, in the Get
-Sojourner block and in the warning about the large download. If the release adds
-translations, shelves, or reference works, the counts on the page, the description
-for `software.html` in `build.py`, and the one paragraph about Sojourner on the home
-page want updating too.
+Sojourner block and in the warning about the large download. If the release adds,
+removes, or renames translations, shelves, or reference works, the counts and names
+on the page, the description for `software.html` in `build.py`, and the one paragraph
+about Sojourner on the home page want updating too.
 
 Then run `python3 build.py`, check it, commit and push.
 
-The screenshot lives at `assets/img/sojourner-study.webp` with a 1000px copy beside
-it for the page itself. Replace both when the app looks meaningfully different.
+The screenshots live in `assets/img/` as `sojourner-*.webp`, each with a 1000px copy
+beside it for the page itself. Each one has alt text and a caption in
+`content/software.html` that describe what it shows. When the app looks meaningfully
+different, replace both copies and check that the alt text and the caption still
+match the picture.
 
 ---
 
