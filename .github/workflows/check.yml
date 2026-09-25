@@ -47,7 +47,7 @@ jobs:
 
       - name: Fail if the committed pages are out of date
         run: |
-          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt llms.txt CNAME content/dates.json)" ]; then
+          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json)" ]; then
             echo "The committed pages match a fresh build."
             exit 0
           fi
@@ -58,7 +58,7 @@ jobs:
           echo
           echo "    python3 build.py"
           echo
-          git status --short -- '*.html' sitemap.xml robots.txt llms.txt CNAME content/dates.json
+          git status --short -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json
           exit 1
 
       - name: Check the pages

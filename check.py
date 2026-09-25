@@ -156,10 +156,15 @@ def check(path):
 
     for href, _ in reader.internal:
         target, _, anchor = href.partition("#")
-        page = ROOT / target if target else path
+        if target:
+            # "/" and "./" mean the home page, and "/gospel.html" a page at the top.
+            t = target.lstrip("/")
+            page = ROOT / t / "index.html" if t in ("", ".", "./") or t.endswith("/") else ROOT / t
+        else:
+            page = path
         if target and not page.exists():
             found.append(f"link to {href} but that file is not in the repo")
-        elif anchor and page.exists():
+        elif anchor and page.is_file():
             if f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
                 found.append(f"link to {href} but nothing on that page has that id")
 
@@ -187,6 +192,24 @@ def check(path):
         for claim in ('"aggregateRating"', '"review"', '"reviewRating"'):
             if claim in flat:
                 found.append(f"structured data carries {claim}, and the site has no ratings or reviews")
+        # Graphs do not join up across pages, so every node a page points to
+        # must be spelled out on that same page.
+        nodes = json.loads(block)
+        defined, pointed = set(), set()
+
+        def walk(item):
+            if isinstance(item, dict):
+                if "@id" in item:
+                    (defined if len(item) > 1 else pointed).add(item["@id"])
+                for value in item.values():
+                    walk(value)
+            elif isinstance(item, list):
+                for value in item:
+                    walk(value)
+
+        walk(nodes)
+        for missing in sorted(pointed - defined):
+            found.append(f"structured data points to {missing} but never describes it")
 
     body = prose(source)
     for line in body.split("\n"):

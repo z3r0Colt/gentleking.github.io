@@ -21,6 +21,7 @@ import html
 import json
 import pathlib
 import re
+import shutil
 import subprocess
 import sys
 
@@ -132,8 +133,8 @@ PAGES = [
         "eyebrow": "The Gospel",
         "h1": "The Gospel of Jesus Christ",
         "deck": (
-            "The gospel is the good news that Jesus Christ, the Son of God, died for sinners and "
-            "rose again, and that everyone who trusts in him alone is forgiven and counted "
+            "The gospel is the good news that God sent his Son, Jesus Christ, who died for sinners "
+            "and rose again, and that everyone who trusts in him alone is forgiven and counted "
             "righteous before God. Read it slowly. Nothing matters more."
         ),
         "description": (
@@ -157,8 +158,7 @@ PAGES = [
         "h1": "Scripture for the Hard Hour",
         "deck": (
             "For the day the hard news comes, and the long days after. King James Scripture and "
-            "plain counsel for grief, loss by suicide, serious illness, a breaking marriage, a "
-            "wandering child, lost work, a mind gone dark, and danger at home."
+            "plain counsel, gathered by sorrow."
         ),
         "description": (
             "King James Bible verses and plain counsel for grief, the death of a spouse or child, "
@@ -170,6 +170,7 @@ PAGES = [
             "Serious illness", "A breaking marriage and divorce", "A child who turns from the Lord",
             "Loss of work or home", "Depression", "Safety from violence at home",
         ],
+        "cites": [{"@type": "CreativeWork", "name": "Canons of Dort"}],
         "toc": False,
     },
     {
@@ -191,6 +192,16 @@ PAGES = [
         "about": [
             "Struggling with sin", "Mortification of sin", "Love for Christ",
             "Assurance of salvation",
+        ],
+        "cites": [
+            {"@type": "Book", "name": "Of the Mortification of Sin in Believers",
+             "author": {"@type": "Person", "name": "John Owen"}},
+            {"@type": "Book", "name": "Indwelling Sin",
+             "author": {"@type": "Person", "name": "John Owen"}},
+            {"@type": "CreativeWork", "name": "The Expulsive Power of a New Affection",
+             "author": {"@type": "Person", "name": "Thomas Chalmers"}},
+            {"@type": "Book", "name": "The Bruised Reed",
+             "author": {"@type": "Person", "name": "Richard Sibbes"}},
         ],
         "toc": True,
     },
@@ -476,13 +487,16 @@ def fingerprint(page):
     """The words a reader sees on the page. The title and description are left
     out, so tuning them for search does not pretend the page was rewritten."""
     body = (CONTENT / page["content"]).read_text(encoding="utf-8")
-    shown = [str(page.get(key, "")) for key in ("h1", "deck")]
+    shown = [str(page.get(key, "")) for key in ("eyebrow", "h1", "deck")]
+    if page.get("hero"):
+        shown.append(HERO)
     return hashlib.sha256("\n".join(shown + [body]).encode("utf-8")).hexdigest()[:16]
 
 
 def git_date(page, first):
-    """The date of the first or the last commit that touched the page's words."""
-    args = ["git", "log", "--format=%cI"]
+    """The date of the first or the last commit that touched the page's words.
+    The author date, since a rebase moves the other one."""
+    args = ["git", "log", "--format=%aI"]
     if first:
         args += ["--diff-filter=A", "--follow"]
     args += ["--", f"content/{page['content']}"]
@@ -726,6 +740,21 @@ def structured_data(page, canonical, body, dates):
     if is_home:
         webpage["about"] = {"@id": ORG_ID}
         webpage["mentions"] = {"@id": APP_ID}
+        # Graphs do not join up across pages, so the home page names the app
+        # itself. The full description is on software.html.
+        graph.append({
+            "@type": "SoftwareApplication",
+            "@id": APP_ID,
+            "name": APP_NAME,
+            "alternateName": APP_FULL,
+            "url": f"{SITE_URL}/software.html",
+            "applicationCategory": "ReferenceApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+            "author": {"@id": PERSON_ID},
+            "publisher": {"@id": ORG_ID},
+        })
     elif kind == "Article":
         webpage["mainEntity"] = {"@id": f"{canonical}#article"}
         article = {
@@ -745,7 +774,7 @@ def structured_data(page, canonical, body, dates):
         }
         if page.get("about"):
             article["about"] = [{"@type": "Thing", "name": t} for t in page["about"]]
-        cites = citations(body)
+        cites = citations(body) + page.get("cites", [])
         if cites:
             article["citation"] = cites
         graph.append(article)
@@ -777,7 +806,9 @@ def nav_links(current):
 
 
 def sections(body):
-    """Each top level section of a page that has an h2, as (id, heading text)."""
+    """Each top level section of a page that has an h2, as (id, heading). The
+    heading keeps its HTML entities, so it can go straight back into a page.
+    Run it through plain() for anything that is not HTML."""
     found = []
     for sid, inner in re.findall(r'(?s)<section class="section" id="([^"]+)"[^>]*>(.*?)</section>', body):
         h2 = re.search(r"(?s)<h2[^>]*>(.*?)</h2>", inner)
@@ -879,6 +910,9 @@ def build_cname():
 # tools that read the web on someone's behalf. They share one group with *,
 # because a crawler that finds its own name obeys only that group, and one
 # shared group means the Disallow lines can never be left off for any of them.
+# To shut one of them out, take its name off this list and give it a group of
+# its own. A second group for a name still on this list gets merged with this
+# one, and the block would quietly do nothing.
 WELCOME_CRAWLERS = [
     "Googlebot", "Google-Extended", "bingbot", "Applebot", "Applebot-Extended",
     "DuckDuckBot", "DuckAssistBot", "OAI-SearchBot", "ChatGPT-User", "GPTBot",
@@ -890,7 +924,7 @@ WELCOME_CRAWLERS = [
 # Pages serves this repository as it stands, so the files that build the site
 # sit next to it. A raw content fragment is half a page, and the README is
 # notes for whoever edits the site, so keep crawlers on the pages themselves.
-NOT_PAGES = ["/content/", "/.github/", "/README.md", "/build.py", "/check.py"]
+NOT_PAGES = ["/content/", "/.github/", "/README.md", "/brand/README.md", "/build.py", "/check.py"]
 
 
 def build_sitemap(dates):
@@ -914,7 +948,6 @@ def build_sitemap(dates):
         "",
         "User-agent: *",
         *[f"User-agent: {name}" for name in WELCOME_CRAWLERS],
-        "Allow: /",
         *[f"Disallow: {path}" for path in NOT_PAGES],
         "",
         f"Sitemap: {SITE_URL}/sitemap.xml",
@@ -937,17 +970,21 @@ LLMS_GROUPS = [
 def build_llms_txt():
     """A plain map of the site for AI assistants, in the llms.txt format
     (https://llmstxt.org). Written from PAGES and from each page's own section
-    headings, so it can never disagree with the pages."""
+    headings, so it can never disagree with the pages. Each page is listed once,
+    since a tool that follows the list fetches every link in it. Its sections
+    go in the note, where a reader can still follow them."""
     by_file = {p["file"]: p for p in PAGES}
     app_body = (CONTENT / "software.html").read_text(encoding="utf-8")
     version, size_mb = app_facts(app_body)
 
-    def entry(page):
+    def entry(page, label=None):
         url = page_url(page)
-        out = [f"- [{page['h1'] if page.get('h1') else page['title']}]({url}): {page['description']}"]
         body = (CONTENT / page["content"]).read_text(encoding="utf-8")
-        out += [f"- [{text}]({url}#{sid})" for sid, text in sections(body)]
-        return out
+        parts = [f"[{plain(text)}]({url}#{sid})" for sid, text in sections(body)]
+        note = page["description"]
+        if parts:
+            note += " Its parts are " + ", ".join(parts[:-1]) + ", and " + parts[-1] + "."
+        return [f"- [{label or page.get('h1') or page['title']}]({url}): {note}"]
 
     lines = [
         f"# {SITE_NAME}",
@@ -965,9 +1002,15 @@ def build_llms_txt():
         "Commons Attribution-NonCommercial-NoDerivatives 4.0 license. Please do not sell it, and "
         "please do not change the words and keep the name on it.",
         "",
+        f"{APP_NAME} {version} is free Bible study software for Windows 10 and 11, 64-bit, made "
+        "by the same writer and given away free. It needs no account, works with the network "
+        f"off, and sends no telemetry. The installer is about {size_mb} MB.",
+        "",
         "Anyone in danger or thinking of ending their life can call 911, or call or text 988, in "
-        "the United States. Outside the United States, call the local emergency number. The "
-        "comfort page gives these numbers and more.",
+        "the United States. Anyone being hurt at home can call the National Domestic Violence "
+        "Hotline at 1-800-799-7233, or text START to 88788. If a child is being hurt, call 911. "
+        "Outside the United States, call the local emergency number. The comfort page gives "
+        "these numbers and more.",
         "",
     ]
     for heading, files in LLMS_GROUPS:
@@ -976,27 +1019,22 @@ def build_llms_txt():
             lines += entry(by_file[name])
         lines.append("")
 
-    app = by_file["software.html"]
-    lines += [
-        f"## {APP_NAME}, a free Bible study app",
-        "",
-        f"{APP_NAME} {version} is free Bible study software for Windows 10 and 11, 64-bit. "
-        f"It needs no account, works with the network off, and sends no telemetry. The "
-        f"installer is about {size_mb} MB. It is made by the same writer and given away free.",
-        "",
-    ]
-    lines += entry(app)
+    lines += [f"## {APP_NAME}, a free Bible study app", ""]
+    lines += entry(by_file["software.html"], APP_NAME)
     lines += [
         f"- [Download {APP_NAME}]({APP_RELEASES}): The Windows installer and the four optional "
         "book shelves, on GitHub",
+        "",
+        "## About the site",
+        "",
+    ]
+    lines += entry(by_file["about.html"])
+    lines += [
         "",
         "## Optional",
         "",
         f"- [Home]({SITE_URL}/): The gospel in brief, why the site is called Gentle King, "
         "and what it holds",
-    ]
-    lines += entry(by_file["about.html"])
-    lines += [
         f"- [License]({REPO_URL}/blob/main/LICENSE): The terms for the writing and the site code",
         "",
     ]
@@ -1012,6 +1050,8 @@ def main():
         print(f"  {name:<18} {words:>6,} words")
     build_sitemap(dates)
     build_llms_txt()
+    # Some tools ask for the icon at the root without reading the page's links.
+    shutil.copyfile(ROOT / "assets" / "img" / "favicon.ico", ROOT / "favicon.ico")
     host = build_cname()
     print(f"  {'sitemap.xml':<18} {'':>6}")
     print(f"  {'robots.txt':<18} {'':>6}")

@@ -5,7 +5,9 @@
 #
 # The key is not a secret. It must match the file of the same name at the top
 # of the repo, which is how the search engines know the ping came from us.
-# If you ever change the key, rename that file to match.
+# If you ever change the key, rename that file to match. The site's address
+# comes from CNAME, which build.py writes from SITE_URL, so moving the site
+# needs no change here.
 
 name: IndexNow
 
@@ -18,22 +20,27 @@ on:
 permissions:
   contents: read
 
+# One run per push, so a push that lands while another waits is never dropped.
 concurrency:
-  group: indexnow
+  group: indexnow-${{ github.sha }}
   cancel-in-progress: false
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     env:
-      SITE: https://gentleking.org
-      HOST: gentleking.org
       KEY: f64863accd38bb658343a494584a7fbc
     steps:
       - name: Check out the repository with its history
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Read the site's address from CNAME
+        run: |
+          host=$(tr -d '[:space:]' < CNAME)
+          echo "HOST=$host" >> "$GITHUB_ENV"
+          echo "SITE=https://$host" >> "$GITHUB_ENV"
 
       - name: List the pages this push changed
         id: pages
@@ -62,12 +69,16 @@ jobs:
         env:
           FILES: ${{ steps.pages.outputs.files }}
         run: |
+          # A page counts as live when it matches this push, or a newer push to
+          # main that changed it again and went live first.
           for try in $(seq 1 30); do
+            git fetch -q origin main || true
             stale=0
             for f in $FILES; do
               path="${f#index.html}"
               curl -fsS "$SITE/$path?deploy=${GITHUB_SHA}-$try" -o live.html || { stale=1; break; }
-              cmp -s live.html "$f" || { stale=1; break; }
+              git show "origin/main:$f" > newest.html 2>/dev/null || cp "$f" newest.html
+              cmp -s live.html "$f" || cmp -s live.html newest.html || { stale=1; break; }
             done
             if [ "$stale" = 0 ]; then echo "Live."; exit 0; fi
             sleep 20

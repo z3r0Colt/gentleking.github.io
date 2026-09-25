@@ -25,10 +25,10 @@ User-agent: Amzn-SearchBot
 User-agent: Amzn-User
 User-agent: Amazonbot
 User-agent: CCBot
-Allow: /
 Disallow: /content/
 Disallow: /.github/
 Disallow: /README.md
+Disallow: /brand/README.md
 Disallow: /build.py
 Disallow: /check.py
 
