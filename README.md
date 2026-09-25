@@ -138,8 +138,7 @@ Search engines and AI tools read the site from the same pages readers see.
   change, not its title. The sitemap and the structured data read it.
 - **robots.txt** lets every search engine and AI tool in by name, and keeps them
   out of the files that build the site. To shut one of them out, take its name
-  off `WELCOME_CRAWLERS` in `build.py` and give it a group of its own. Adding a
-  second group for a name still on the list does nothing.
+  off `WELCOME_CRAWLERS` in `build.py` and give it a group of its own.
 - **llms.txt** is a plain map of the site for AI tools, written from the pages.
 - **IndexNow.** After a push to `main` changes a page, a workflow waits until
   the page is live and then tells Bing and the engines that share with it. The

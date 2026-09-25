@@ -911,8 +911,7 @@ def build_cname():
 # because a crawler that finds its own name obeys only that group, and one
 # shared group means the Disallow lines can never be left off for any of them.
 # To shut one of them out, take its name off this list and give it a group of
-# its own. A second group for a name still on this list gets merged with this
-# one, and the block would quietly do nothing.
+# its own.
 WELCOME_CRAWLERS = [
     "Googlebot", "Google-Extended", "bingbot", "Applebot", "Applebot-Extended",
     "DuckDuckBot", "DuckAssistBot", "OAI-SearchBot", "ChatGPT-User", "GPTBot",
@@ -982,7 +981,11 @@ def build_llms_txt():
         body = (CONTENT / page["content"]).read_text(encoding="utf-8")
         parts = [f"[{plain(text)}]({url}#{sid})" for sid, text in sections(body)]
         note = page["description"]
-        if parts:
+        if len(parts) == 1:
+            note += f" Its one part is {parts[0]}."
+        elif len(parts) == 2:
+            note += f" Its parts are {parts[0]} and {parts[1]}."
+        elif parts:
             note += " Its parts are " + ", ".join(parts[:-1]) + ", and " + parts[-1] + "."
         return [f"- [{label or page.get('h1') or page['title']}]({url}): {note}"]
 
