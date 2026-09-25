@@ -2,47 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gentleking.org/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-25T21:14:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/software.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-25T21:14:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/gospel.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-25T21:14:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/comfort.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-25T21:14:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/struggle.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-25T20:11:25+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/doctrine.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-24T04:06:34+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/apologetics.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-24T17:16:32+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/resources.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-24T17:16:32+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-24T03:58:08+00:00</lastmod>
   </url>
 </urlset>

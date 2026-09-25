@@ -16,6 +16,10 @@ What it looks for.
   Stray classes        a class name the stylesheet does not define
   Punctuation          em dashes, semicolons, and colons in ordinary prose
   Phone links          a tel or sms link with anything but digits in it
+  Search snippets      a meta description too long to show whole, or with the
+                       punctuation the prose avoids
+  Structured data      JSON-LD that does not parse, or that claims ratings or
+                       reviews the site does not have
 
 Quoted Scripture is skipped on the punctuation check. The Authorized Version
 uses colons and semicolons far more than we do, and nothing here should
@@ -27,6 +31,7 @@ An exit code of 0 means everything passed.
 import collections
 import html
 import html.parser
+import json
 import pathlib
 import re
 import sys
@@ -161,6 +166,27 @@ def check(path):
     for href, attr in reader.external:
         if attr.get("target") != "_blank" or "noopener" not in (attr.get("rel") or ""):
             found.append(f'outside link needs target="_blank" rel="noopener": {href}')
+
+    # Search results show about 160 characters of the description, and it is
+    # prose like any other, so it keeps the same punctuation.
+    m = re.search(r'<meta name="description" content="([^"]*)"', source)
+    if m:
+        desc = html.unescape(m.group(1))
+        if len(desc) > 160:
+            found.append(f"description is {len(desc)} characters, keep it to 160: {desc[:60]}")
+        if re.search(r"[;—]|[^\d\s]:(?!\d)", desc):
+            found.append(f"punctuation in description: {desc[:80]}")
+
+    # Structured data must parse, and must never claim what the site does not have.
+    for block in re.findall(r'(?s)<script type="application/ld\+json">(.*?)</script>', source):
+        try:
+            flat = json.dumps(json.loads(block))
+        except ValueError as err:
+            found.append(f"structured data is not valid JSON: {err}")
+            continue
+        for claim in ('"aggregateRating"', '"review"', '"reviewRating"'):
+            if claim in flat:
+                found.append(f"structured data carries {claim}, and the site has no ratings or reviews")
 
     body = prose(source)
     for line in body.split("\n"):

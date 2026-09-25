@@ -11,8 +11,13 @@
 # build.py wrote that was never committed.
 #
 # It also runs check.py, which catches broken HTML, links pointing at files
-# that are not here, anchors pointing at ids no page has, and stray em dashes,
-# semicolons, and colons in prose.
+# that are not here, anchors pointing at ids no page has, stray em dashes,
+# semicolons, and colons in prose, overlong search descriptions, and broken
+# structured data.
+#
+# content/dates.json is part of the build. It holds when each page last really
+# changed, for the sitemap, and build.py moves a date only when a page's words
+# change. So a fresh build of the same commit writes the same files here.
 
 name: Build and check
 
@@ -42,7 +47,7 @@ jobs:
 
       - name: Fail if the committed pages are out of date
         run: |
-          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt CNAME)" ]; then
+          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt llms.txt CNAME content/dates.json)" ]; then
             echo "The committed pages match a fresh build."
             exit 0
           fi
@@ -53,7 +58,7 @@ jobs:
           echo
           echo "    python3 build.py"
           echo
-          git status --short -- '*.html' sitemap.xml robots.txt CNAME
+          git status --short -- '*.html' sitemap.xml robots.txt llms.txt CNAME content/dates.json
           exit 1
 
       - name: Check the pages

@@ -1,0 +1,91 @@
+# Tells Bing, Yandex, Naver, Seznam, and Yep which pages changed, once GitHub
+# Pages is actually serving them. They share every ping through IndexNow, and
+# Bing is where Copilot, DuckDuckGo, and ChatGPT search get much of what they
+# know. Google does not take part. It reads sitemap.xml instead.
+#
+# The key is not a secret. It must match the file of the same name at the top
+# of the repo, which is how the search engines know the ping came from us.
+# If you ever change the key, rename that file to match.
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths: ['*.html']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://gentleking.org
+      HOST: gentleking.org
+      KEY: f64863accd38bb658343a494584a7fbc
+    steps:
+      - name: Check out the repository with its history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: List the pages this push changed
+        id: pages
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          b="$BEFORE"
+          if [ -z "$b" ] || ! git cat-file -e "$b^{commit}" 2>/dev/null; then b=HEAD~1; fi
+          urls=""
+          files=""
+          for f in $(git diff --name-only "$b" HEAD -- '*.html'); do
+            case "$f" in */*|404.html) continue ;; esac
+            [ -f "$f" ] || continue
+            u="$SITE/${f#index.html}"
+            if grep -q "<loc>$u</loc>" sitemap.xml; then
+              urls="$urls $u"
+              files="$files $f"
+            fi
+          done
+          echo "urls=$urls" >> "$GITHUB_OUTPUT"
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Changed pages:${urls:- none}"
+
+      - name: Wait until GitHub Pages serves the new pages
+        if: steps.pages.outputs.urls != ''
+        env:
+          FILES: ${{ steps.pages.outputs.files }}
+        run: |
+          for try in $(seq 1 30); do
+            stale=0
+            for f in $FILES; do
+              path="${f#index.html}"
+              curl -fsS "$SITE/$path?deploy=${GITHUB_SHA}-$try" -o live.html || { stale=1; break; }
+              cmp -s live.html "$f" || { stale=1; break; }
+            done
+            if [ "$stale" = 0 ]; then echo "Live."; exit 0; fi
+            sleep 20
+          done
+          echo "Pages did not go live in 10 minutes, so nothing was sent."
+          exit 1
+
+      - name: Send the changed pages to IndexNow
+        if: steps.pages.outputs.urls != ''
+        env:
+          URLS: ${{ steps.pages.outputs.urls }}
+        run: |
+          body=$(jq -nc --arg host "$HOST" --arg key "$KEY" \
+            '{host: $host, key: $key, keyLocation: ("https://" + $host + "/" + $key + ".txt"), urlList: $ARGS.positional}' \
+            --args $URLS)
+          echo "$body"
+          code=$(curl -sS -o reply.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data "$body")
+          echo "IndexNow answered $code"
+          cat reply.txt || true
+          case "$code" in 200|202) exit 0 ;; *) exit 1 ;; esac
