@@ -16,6 +16,8 @@ The same list, with every detail, is in `catalog.json`.
 - **The Holy Bible (King James Version, the Cambridge Printing of 1668, with the Apocrypha)**, Various (the King James translators) (1611). [The Holy Bible](bibles/king-james-version-1668-cambridge.epub), [The Translators to the Reader, scan](https://archive.org/details/holybibleexactre00oxfouoft)
 - **The Holy Bible (King James Version, Standard 1769 Text)**, Various (the King James translators) (1769). [EPUB](bibles/king-james-version-1769.epub)
 - **The Holy Bible (American Standard Version)**, Various (the American Revision Committee) (1901). [EPUB](bibles/american-standard-version-1901.epub)
+- **The Holy Bible: Berean Literal Bible**, The Berean Bible Translation Committee (2016). [EPUB](bibles/berean-literal-bible.epub)
+- **The Holy Bible: Berean Standard Bible**, The Berean Bible Translation Committee (2016). [EPUB](bibles/berean-standard-bible.epub)
 
 ## Study Bibles
 

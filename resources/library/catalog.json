@@ -2,7 +2,7 @@
  "name": "The Gentle King Library",
  "description": "Public domain Puritan and confessionally Reformed works, gathered for gentleking.org.",
  "generated": "2026-09-27",
- "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. Project Gutenberg books keep the Gutenberg license inside them. Standard Ebooks books are dedicated to the public domain.",
+ "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. The Berean Bibles were dedicated to the public domain by their translators in 2023. Project Gutenberg books keep the Gutenberg license inside them. Standard Ebooks books are dedicated to the public domain.",
  "paths": "Every path is relative to this file's folder.",
  "categories": [
   "Bibles",
@@ -29,6 +29,7 @@
   "English Puritan",
   "English Reformation",
   "Evangelical Calvinist",
+  "Modern Evangelical",
   "New England Puritan",
   "Particular Baptist",
   "Scottish Episcopalian (Restoration)",
@@ -19817,6 +19818,58 @@
    "links": [],
    "notes": "",
    "source": "Text Creation Partnership"
+  },
+  {
+   "id": "berean-standard-bible",
+   "title": "The Holy Bible: Berean Standard Bible",
+   "author": "The Berean Bible Translation Committee",
+   "author_sort": "Berean Bible Translation Committee",
+   "author_dates": "",
+   "tradition": "Modern Evangelical",
+   "category": "Bibles",
+   "tier": "standard",
+   "first_published": 2016,
+   "edition": "The Berean Standard Bible, with its section headings, parallel references, and notes, as published by eBible.org (engbsb).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Genesis to Revelation (66 books)",
+     "format": "epub",
+     "path": "bibles/berean-standard-bible.epub",
+     "size_bytes": 2505332,
+     "source": "https://ebible.org/find/details.php?id=engbsb"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "berean-literal-bible",
+   "title": "The Holy Bible: Berean Literal Bible",
+   "author": "The Berean Bible Translation Committee",
+   "author_sort": "Berean Bible Translation Committee",
+   "author_dates": "",
+   "tradition": "Modern Evangelical",
+   "category": "Bibles",
+   "tier": "standard",
+   "first_published": 2016,
+   "edition": "The Berean Literal Bible as published at LiteralBible.com, made into an EPUB by Gentle King with the words unchanged. Its translators mark it an early draft.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Genesis to Revelation (66 books)",
+     "format": "epub",
+     "path": "bibles/berean-literal-bible.epub",
+     "size_bytes": 1452882,
+     "source": "https://literalbible.com/"
+    }
+   ],
+   "links": [],
+   "notes": "Its translators call it an early draft that will be updated, most of all in the Old Testament. Words in square brackets are supplied for sense.",
+   "source": "the Berean Bible (LiteralBible.com)"
   }
  ],
  "not_found": [

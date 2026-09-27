@@ -16,7 +16,7 @@ To add a file, open this folder on GitHub, choose **Add file**, then
 
 The `library` folder is a free library of Puritan and confessionally Reformed
 books, all in the public domain, with Bibles, study Bibles, and commentaries among
-them. It holds 515 works in 913 files, about 566 MB in all, and its catalog
+them. It holds 517 works in 915 files, about 570 MB in all, and its catalog
 points to 61 more that stay as scans at the Internet Archive. Open the `library`
 folder and scroll down to see every book in it.
 
@@ -55,10 +55,12 @@ or word that could not be read in the copy transcribed. Notes printed beside or
 below the text, like Poole's annotations or the Geneva notes, follow the verse they
 belong to, and a tap on the letter in the text opens them.
 
-The King James, the 1599 Geneva, the American Standard Version, the Hebrew Old
-Testament, and the Greek New Testament are the public domain editions published by
-eBible.org. A few other books come from Project Gutenberg, which keeps its license
-inside each of its books.
+The King James, the 1599 Geneva, the American Standard Version, the Berean Standard
+Bible, the Hebrew Old Testament, and the Greek New Testament are the public domain
+editions published by eBible.org. The Berean Literal Bible comes from LiteralBible.com,
+made into an EPUB here with its words unchanged. The translators of both Berean Bibles
+gave them to the public domain in 2023. A few other books come from Project
+Gutenberg, which keeps its license inside each of its books.
 
 **Why so few PDFs.** GitHub Pages serves this whole site from one repository, and a
 site there may take up to 1 GB. A scanned PDF of a single volume often runs 30 to 60
