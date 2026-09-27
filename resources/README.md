@@ -68,6 +68,25 @@ MB, so the library is kept as EPUB, which runs under a megabyte a volume. The fe
 PDFs here are small ones. Keep the total for the whole site under 1 GB when adding
 to it.
 
-**Reading an EPUB.** On a phone, Apple Books and Google Play Books open them. On a
-computer, Calibre, Thorium Reader, or Apple Books. Sojourner can add them to its
-library too.
+**Reading an EPUB.** The Resources page on the site lists every book, with a Read
+button that opens it right in the browser and a Download button for a reading app.
+On a phone, Apple Books, ReadEra, and Google Play Books open them. On a computer,
+Thorium Reader, Calibre, Foliate on Linux, or Apple Books on a Mac. Sojourner can
+add them to its library too.
+
+---
+
+## The reader
+
+`read.html` is the page that opens a book in the browser, as
+`resources/read.html?book=library/john-owen/communion-with-god.epub`. It takes only
+a book from the library, and it keeps each reader's place and settings on that
+reader's own device. The files that run it are in `reader`. The book itself is
+drawn by foliate-js, by John Factotum, under the MIT license, in `reader/foliate`,
+where `NOTICE.md` says which version it is and how to update it.
+
+The Resources page is built from `library/catalog.json` by `build.py` at the top of
+the repository. To add a book, put its file in the library, add it to the catalog,
+and run `python3 build.py`. Each work in the catalog can carry `topics`, `scripture`
+(the books of the Bible it expounds), `passage`, and a one-sentence `blurb`, and the
+page's search and filters use them.

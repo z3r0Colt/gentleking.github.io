@@ -23,7 +23,8 @@ What it looks for.
 
 Quoted Scripture is skipped on the punctuation check. The Authorized Version
 uses colons and semicolons far more than we do, and nothing here should
-change it.
+change it. So is the library list on the Resources page, for the titles of
+old books.
 
 An exit code of 0 means everything passed.
 """
@@ -126,6 +127,9 @@ def prose(source):
     text = re.sub(r'(?s)<blockquote class="scripture">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<blockquote class="confession">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<p class="(footer-verse|mock-verse|verse)">.*?</p>', " ", text)
+    # The library list carries the old books' own titles, which are full of
+    # colons and semicolons, and nothing here should change them either.
+    text = re.sub(r'(?s)<div class="lib-shelves" id="lib-shelves">.*?<p class="lib-empty"', " <p ", text)
     text = re.sub(r"<[^>]+>", "\n", text)
     return html.unescape(text)
 
@@ -156,6 +160,12 @@ def check(path):
 
     for href, _ in reader.internal:
         target, _, anchor = href.partition("#")
+        target, _, query = target.partition("?")
+        # The reader page takes the book to open in its address. Make sure
+        # that book is really in the library.
+        book = re.fullmatch(r"book=(library/[^&]+)", query)
+        if book and not (ROOT / pathlib.PurePosixPath(target).parent / book.group(1)).is_file():
+            found.append(f"link to {href} but that book is not in the library")
         if target:
             # "/" and "./" mean the home page, and "/gospel.html" a page at the top.
             t = target.lstrip("/")

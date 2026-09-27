@@ -15,9 +15,12 @@ To change the wording of a page, edit the matching file in content/ and run the
 script again. To change the header, the footer, or the metadata, edit this file.
 """
 
+import collections
 import datetime
+import functools
 import hashlib
 import html
+import itertools
 import json
 import pathlib
 import re
@@ -258,22 +261,25 @@ PAGES = [
         "file": "resources.html",
         "content": "resources.html",
         "title": "Resources",
-        "full_title": "Reformed and Puritan Books, Where to Begin \u00b7 Gentle King",
+        "full_title": "Free Puritan and Reformed Library, Read Online or Download \u00b7 Gentle King",
         "eyebrow": "Reading and Study",
-        "h1": "Where to Begin, and Where to Go Next",
+        "h1": "A Free Puritan and Reformed Library",
         "deck": (
-            "The confessions, the books worth your first year, the books worth the rest "
-            "of your life, and the free tools that will help you read better."
+            "Hundreds of old books and the Bibles of the Reformation, free to read here or to "
+            "take with you. After them come the newer books, the tools, and the preachers worth "
+            "knowing, and where to begin."
         ),
         "description": (
-            "Reformed and Puritan books for beginners and for going deeper, the Westminster "
-            "Standards, free Bible study tools, and faithful preachers worth hearing."
+            "Read hundreds of Puritan and Reformed books and Reformation Bibles free in your "
+            "browser, or download them. Plus where to begin, free tools, and good preaching."
         ),
         "schema": "CollectionPage",
         "about": [
-            "Reformed books", "Puritan books", "Bible study tools", "Reformed preaching",
+            "Puritan books", "Reformed books", "Public domain Christian books", "Reformation Bibles",
+            "Westminster Standards", "Bible commentaries", "Reformed preaching",
         ],
         "toc": True,
+        "scripts": ["assets/js/library.js"],
     },
     {
         "file": "about.html",
@@ -488,10 +494,19 @@ def render(template, **fields):
 DATES = CONTENT / "dates.json"
 
 
+def fragment(page):
+    """A page's words, as content/ holds them, with the library list written in
+    where the fragment asks for it."""
+    body = (CONTENT / page["content"]).read_text(encoding="utf-8")
+    if LIBRARY_MARK in body:
+        body = body.replace(LIBRARY_MARK, library_html())
+    return body
+
+
 def fingerprint(page):
     """The words a reader sees on the page. The title and description are left
     out, so tuning them for search does not pretend the page was rewritten."""
-    body = (CONTENT / page["content"]).read_text(encoding="utf-8")
+    body = fragment(page)
     shown = [str(page.get(key, "")) for key in ("eyebrow", "h1", "deck")]
     if page.get("hero"):
         shown.append(HERO)
@@ -793,6 +808,19 @@ def structured_data(page, canonical, body, dates):
             webpage["mainEntity"] = {"@id": ORG_ID}
         elif page.get("about"):
             webpage["about"] = [{"@type": "Thing", "name": t} for t in page["about"]]
+        if 'id="lib-shelves"' in body:
+            count, _ = library_counts()
+            webpage["mainEntity"] = {
+                "@type": "ItemList",
+                "@id": f"{canonical}#library",
+                "name": "The Gentle King Library",
+                "description": (
+                    "Public domain Puritan and Reformed books, Reformation Bibles, and confessions, "
+                    "free to read in the browser or to download as EPUB."
+                ),
+                "numberOfItems": count,
+                "url": f"{canonical}#library",
+            }
 
     text = json.dumps({"@context": "https://schema.org", "@graph": graph},
                       ensure_ascii=False, separators=(",", ":"))
@@ -838,11 +866,296 @@ def toc_html(body):
     )
 
 
+# --------------------------------------------------------------------------
+# The library on the Resources page
+#
+# resources/library/catalog.json lists every book in the free library. The
+# Resources page carries the whole list, written into the HTML here, so a reader
+# with scripts off, a search engine, or an AI tool sees every book, with its
+# links. assets/js/library.js then adds the search box and the filters, working
+# from what each book shows. To add a book, add it to the catalog and rebuild.
+# The content fragment marks where the list goes with <!-- library -->.
+# --------------------------------------------------------------------------
+
+LIBRARY = ROOT / "resources" / "library"
+LIBRARY_MARK = "<!-- library -->"
+READER = "resources/read.html"
+
+# The shelves in the order they stand, each with a line to say what is on it.
+# A category the catalog has and this list lacks still shows, at the end.
+SHELVES = {
+    "Bibles": "The English Bibles of the Reformation and after, with the Hebrew and Greek.",
+    "Study Bibles": "Bibles printed with notes, and notes on the whole Bible to read beside it.",
+    "Confessions & Catechisms": "The Westminster Standards, the Three Forms of Unity, the confessions that stand beside them, and the books that open them.",
+    "Systematic Theology": "The whole body of divinity set out in order.",
+    "Doctrine": "Treatises that take one doctrine at a time and go deep.",
+    "Christian Life": "Practical books for the life of faith, for holiness and comfort and the fight with sin.",
+    "Sermons": "Sermons first preached and then printed.",
+    "Commentaries": "Expositions of the books of the Bible, set in the order of the Bible.",
+    "Worship & Prayer": "Public and family worship, prayer, the Lord's Day, and the sacraments.",
+    "Church & Ministry": "The government of the church, the work of the pastor, and preaching.",
+    "History & Biography": "The story of the Reformation and the lives of those God used in it.",
+    "Letters & Diaries": "Letters and private journals, where the old saints speak plainly.",
+    "Poetry & Allegory": "Psalms, hymns, poems, and the allegories.",
+    "Apologetics & Controversy": "The faith defended, and the debates the Reformed churches fought through.",
+    "Collected Works": "The works of one author gathered in many volumes.",
+}
+
+BIBLE_BOOKS = [
+    "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth",
+    "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra",
+    "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon",
+    "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos",
+    "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah",
+    "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians",
+    "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians",
+    "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James",
+    "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation",
+]
+WHOLE = ["Whole Bible", "Old Testament", "New Testament"]
+BOOK_ALIASES = {"Psalm": "Psalms", "Song of Songs": "Song of Solomon", "Canticles": "Song of Solomon",
+                "Revelations": "Revelation", "Apocalypse": "Revelation"}
+
+# Where a book came from decides a word or two the reader should know.
+OLD_SPELLING = "Text Creation Partnership"
+
+
+def display_name(category):
+    return category.replace(" & ", " and ")
+
+
+def slug(text):
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+def size_label(size):
+    mb = size / 1048576
+    return f"{mb:.1f} MB" if mb >= 0.95 else f"{max(1, round(size / 1024))} KB"
+
+
+def scripture_of(work):
+    found = []
+    for name in work.get("scripture") or []:
+        name = BOOK_ALIASES.get(name.strip(), name.strip())
+        if (name in BIBLE_BOOKS or name in WHOLE) and name not in found:
+            found.append(name)
+    return found
+
+
+@functools.lru_cache(maxsize=None)
+def library_catalog():
+    catalog = json.loads((LIBRARY / "catalog.json").read_text(encoding="utf-8"))
+    for work in catalog["works"]:
+        for f in work["files"]:
+            if f["format"] == "epub" and not re.fullmatch(r"[a-z0-9][a-z0-9\-/]*\.epub", f["path"]):
+                raise SystemExit(f"library path the reader will refuse: {f['path']}")
+            if not (LIBRARY / f["path"]).exists():
+                raise SystemExit(f"catalog lists a file that is not there: {f['path']}")
+    return catalog
+
+
+def library_counts():
+    works = library_catalog()["works"]
+    files = sum(len(w["files"]) for w in works)
+    return len(works), files
+
+
+def read_href(path):
+    if path.endswith(".pdf"):
+        return f"resources/library/{path}"
+    return f"{READER}?book=library/{path}"
+
+
+def file_links(f, described_by):
+    """The Read and Download links for one file. A screen reader hears the
+    book's title with each, from the ids given, since a page of links all
+    called Read tells it nothing."""
+    e = html.escape
+    kind = f["format"].upper()
+    read_word = "Open PDF" if f["format"] == "pdf" else "Read"
+    return (
+        f'<a class="lib-read" href="{e(read_href(f["path"]))}" aria-describedby="{described_by}">{read_word}</a>'
+        f'<a class="lib-dl" href="resources/library/{e(f["path"])}" download aria-describedby="{described_by}">'
+        f'Download {kind} <span>{size_label(f["size_bytes"])}</span></a>'
+    )
+
+
+def library_item(work, by_id, n):
+    """One book. The finder in library.js reads what it filters on from here,
+    the shelf from the details around it, the topics from their line, and the
+    books of the Bible from data-books, which is the one thing not shown."""
+    e = html.escape
+    title = work["title"]
+    books = scripture_of(work)
+    topics = work.get("topics") or []
+    tid = f"t{n}"
+    attrs = f' data-books="{e("|".join(books))}"' if books else ""
+    out = [f'<li class="lib-item" id="book-{e(work["id"])}"{attrs}>']
+
+    marks = []
+    if work["tier"] == "core":
+        marks.append('<span class="lib-mark lib-start">A good place to start</span>')
+    if work.get("source") == OLD_SPELLING:
+        marks.append('<span class="lib-mark">Old spelling</span>')
+    out.append(f'<p class="lib-title"><span id="{tid}">{e(title)}</span>{"".join(marks)}</p>')
+
+    by = e(work["author"])
+    if work.get("author_dates"):
+        by += f' <span class="lib-dates">({e(work["author_dates"])})</span>'
+    # A Bible belongs to no one tradition, so it carries none, and a year
+    # before printing is the year of a manuscript, which its dates already give.
+    bible = work["category"] == "Bibles"
+    trad = "" if bible else f'<span class="lib-trad">{e(work["tradition"])}</span>'
+    year = work.get("first_published")
+    year = f'<span class="lib-year">first published {year}</span>' if year and year >= 1450 else ""
+    out.append(f'<p class="lib-by">{by}{trad}{year}</p>')
+
+    if work.get("blurb"):
+        out.append(f'<p class="lib-blurb">{e(work["blurb"])}</p>')
+    if work.get("passage") and work["category"] in ("Commentaries", "Sermons", "Study Bibles"):
+        out.append(f'<p class="lib-passage">On {e(work["passage"])}</p>')
+    if work.get("notes"):
+        out.append(f'<p class="lib-note">{e(work["notes"])}</p>')
+
+    files = work["files"]
+    if len(files) == 1:
+        out.append(f'<p class="lib-actions">{file_links(files[0], tid)}</p>')
+    elif files:
+        rows = []
+        for i, f in enumerate(files, 1):
+            label = f["label"] or f"Volume {f['volume']}"
+            vid = f"{tid}v{i}"
+            contents = f' <span class="lib-vol-contents">{e(f["contents"])}</span>' if f["contents"] else ""
+            rows.append(
+                f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>{contents}'
+                f'<span class="lib-actions">{file_links(f, tid + " " + vid)}</span></li>'
+            )
+        vols = f'<ol class="lib-vols">{"".join(rows)}</ol>'
+        if len(files) > 4:
+            vols = f'<details class="lib-more"><summary>{len(files)} volumes</summary>{vols}</details>'
+        out.append(vols)
+
+    parent = work.get("found_in")
+    if not files and parent and parent.get("id") in by_id:
+        vols = parent.get("volumes") or []
+        where = ""
+        if len(vols) == 1:
+            where = f", volume {vols[0]}"
+        elif vols:
+            where = ", volumes " + " and ".join(str(v) for v in vols)
+        out.append(
+            f'<p class="lib-in">Printed in <a href="#book-{e(parent["id"])}">{e(parent["title"])}</a>{where}.</p>'
+        )
+        parent_files = {f["path"]: f for f in by_id[parent["id"]]["files"]}
+        first = [parent_files[p] for p in parent.get("paths", []) if p in parent_files][:1]
+        if first:
+            out.append(f'<p class="lib-actions">{file_links(first[0], tid)}</p>')
+
+    links = work["links"] if not files else []
+    if len(links) == 1:
+        out.append(
+            '<p class="lib-scan">Only a scan of an old printing is online for now. '
+            f'<a class="lib-ext" href="{e(links[0]["url"])}" target="_blank" rel="noopener" '
+            f'aria-describedby="{tid}">Read the scan at the Internet Archive</a></p>'
+        )
+    elif links:
+        rows = []
+        for i, link in enumerate(links, 1):
+            label = link["label"] or f"Part {i}"
+            vid = f"{tid}s{i}"
+            rows.append(
+                f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>'
+                f'<span class="lib-actions"><a class="lib-dl" href="{e(link["url"])}" target="_blank" '
+                f'rel="noopener" aria-describedby="{tid} {vid}">Scan at the Internet Archive</a></span></li>'
+            )
+        scans = f'<ol class="lib-vols">{"".join(rows)}</ol>'
+        if len(links) > 4:
+            scans = f'<details class="lib-more"><summary>{len(links)} volumes</summary>{scans}</details>'
+        out.append('<p class="lib-scan">Only scans of an old printing are online for now.</p>' + scans)
+
+    if topics:
+        out.append(f'<p class="lib-tags">{" · ".join(e(t) for t in topics)}</p>')
+    out.append("</li>")
+    return "".join(out)
+
+
+def shelf_order(category, works):
+    if category in ("Bibles", "Study Bibles"):
+        return sorted(works, key=lambda w: (w.get("first_published") or 9999, w["title"]))
+    if category == "Commentaries":
+        def place(w):
+            books = scripture_of(w)
+            first = min((BIBLE_BOOKS.index(b) for b in books if b in BIBLE_BOOKS), default=None)
+            if first is None:
+                first = -3 + WHOLE.index(books[0]) if books and books[0] in WHOLE else 999
+            return (first, w.get("first_published") or 9999, w["author_sort"])
+        return sorted(works, key=place)
+    tier = {"core": 0, "standard": 1, "further": 2}
+    return sorted(works, key=lambda w: (tier.get(w["tier"], 3), w["author_sort"], w.get("first_published") or 0))
+
+
+@functools.lru_cache(maxsize=None)
+def library_html():
+    e = html.escape
+    catalog = library_catalog()
+    works = catalog["works"]
+    by_id = {w["id"]: w for w in works}
+    order = list(SHELVES) + [c for c in catalog["categories"] if c not in SHELVES]
+    shelves = {c: [w for w in works if w["category"] == c] for c in order}
+
+    topics = collections.Counter(t for w in works for t in (w.get("topics") or []))
+    books_used = {b for w in works for b in scripture_of(w)}
+    traditions = sorted({w["tradition"] for w in works if w["category"] != "Bibles"})
+
+    def options(values, every, counts=None):
+        opts = [f'<option value="">{every}</option>']
+        for v in values:
+            label = display_name(v) + (f" ({counts[v]})" if counts else "")
+            opts.append(f'<option value="{e(v)}">{e(label)}</option>')
+        return "".join(opts)
+
+    cat_counts = {c: len(ws) for c, ws in shelves.items() if ws}
+    book_values = [b for b in BIBLE_BOOKS if b in books_used]
+    finder = f"""<div class="lib-finder" id="lib-finder" role="search" aria-label="Search the library">
+  <label class="visually-hidden" for="lib-q">Search the library</label>
+  <input class="lib-q" id="lib-q" type="search" placeholder="Search by title, author, or subject" autocomplete="off" enterkeyhint="search">
+  <div class="lib-filters">
+    <label class="lib-field"><span>Kind of book</span><select id="lib-cat">{options([c for c in order if cat_counts.get(c)], "Every kind", cat_counts)}</select></label>
+    <label class="lib-field"><span>Book of the Bible</span><select id="lib-book">{options(book_values, "Any book")}</select></label>
+    <label class="lib-field"><span>Tradition</span><select id="lib-trad">{options(traditions, "Every tradition")}</select></label>
+  </div>
+  <label class="lib-check"><input type="checkbox" id="lib-start"> Only the best places to start</label>
+  <details class="lib-topics" id="lib-topics"><summary>Browse by topic</summary>
+    <div class="lib-topic-list" role="group" aria-label="Topics">{"".join(f'<button type="button" class="lib-topic" data-topic="{e(t)}" aria-pressed="false">{e(t)} <span>{n}</span></button>' for t, n in sorted(topics.items(), key=lambda tn: tn[0].removeprefix("The ")))}</div>
+  </details>
+  <p class="lib-status"><span id="lib-count" aria-live="polite"></span><button type="button" class="lib-clear" id="lib-clear" hidden>Clear the search</button></p>
+</div>
+"""
+    counter = itertools.count(1)
+    out = ['<div class="lib-recent" id="lib-recent" hidden></div>', finder, '<div class="lib-shelves" id="lib-shelves">']
+    for category in order:
+        items = shelves.get(category) or []
+        if not items:
+            continue
+        note = SHELVES.get(category, "")
+        out.append(
+            f'<details class="lib-shelf" id="shelf-{slug(category)}" data-cat="{e(category)}">'
+            f'<summary><h3 class="lib-shelf-name">{e(display_name(category))}</h3>'
+            f'<span class="lib-shelf-count" data-total="{len(items)}">{len(items)}</span></summary>'
+            + (f'<p class="lib-shelf-note">{e(note)}</p>' if note else "")
+            + '<ol class="lib-list">'
+            + "".join(library_item(w, by_id, next(counter)) for w in shelf_order(category, items))
+            + "</ol></details>"
+        )
+    out.append('</div>\n<p class="lib-empty" id="lib-empty" hidden>No book matches all of that. Try fewer words, or clear the search.</p>')
+    return "\n".join(out)
+
+
 def build_page(page, dates):
     fragment_path = CONTENT / page["content"]
     if not fragment_path.exists():
         raise SystemExit(f"missing content fragment: {fragment_path}")
-    body = fragment_path.read_text(encoding="utf-8").strip()
+    body = fragment(page).strip()
 
     canonical = page_url(page)
     full_title = page_title(page)
@@ -897,8 +1210,14 @@ def build_page(page, dates):
         parts.append(toc_html(body))
     parts.append(body)
     parts.append("\n</main>\n\n")
-    parts.append(render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
-                        donate_url=DONATE_URL))
+    footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
+                    donate_url=DONATE_URL)
+    for script in page.get("scripts", []):
+        footer = footer.replace(
+            '<script src="assets/js/site.js" defer></script>\n',
+            f'<script src="assets/js/site.js" defer></script>\n<script src="{script}" defer></script>\n',
+        )
+    parts.append(footer)
 
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
@@ -987,7 +1306,7 @@ def build_llms_txt():
 
     def entry(page, label=None):
         url = page_url(page)
-        body = (CONTENT / page["content"]).read_text(encoding="utf-8")
+        body = fragment(page)
         parts = [f"[{plain(text)}]({url}#{sid})" for sid, text in sections(body)]
         note = page["description"]
         if len(parts) == 1:
@@ -1029,6 +1348,14 @@ def build_llms_txt():
         lines += [f"## {heading}", ""]
         for name in files:
             lines += entry(by_file[name])
+            if name == "resources.html":
+                count, files_n = library_counts()
+                lines.append(
+                    f"- [The library catalog]({SITE_URL}/resources/library/catalog.json): All {count} "
+                    "works in the free library as JSON, each with its author, dates, category, "
+                    f"topics, and the paths of its {files_n} EPUB and PDF files, which sit beside it "
+                    f"under {SITE_URL}/resources/library/. Every one is in the public domain."
+                )
         lines.append("")
 
     lines += [f"## {APP_NAME}, a free Bible study app", ""]
