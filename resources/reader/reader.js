@@ -41,8 +41,10 @@ const bookCSS = () => {
     @namespace epub "http://www.idpf.org/2007/ops";
     html { color-scheme: ${settings.theme === 'dark' ? 'dark' : 'light'}; }
     html, body { background: ${c.bg} !important; color: ${c.fg} !important; }
-    body { font-size: ${settings.size}% !important; }
+    body { font-size: ${settings.size}% !important; line-height: 1.6 !important; }
     p, li, blockquote, dd { line-height: 1.6; hanging-punctuation: allow-end last; widows: 2; orphans: 2; }
+    /* the chapter buttons at the head of each book in the eBible.org Bibles */
+    ul.tnav a { border: 1px solid ${c.faint} !important; background: transparent !important; color: ${c.link} !important; border-radius: 4px !important; }
     a:link, a:visited { color: ${c.link} !important; }
     img { max-width: 100%; height: auto; }
     pre { white-space: pre-wrap !important; }
