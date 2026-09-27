@@ -2,9 +2,11 @@
  "name": "The Gentle King Library",
  "description": "Public domain Puritan and confessionally Reformed works, gathered for gentleking.org.",
  "generated": "2026-09-27",
- "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Project Gutenberg books keep the Gutenberg license inside them. Standard Ebooks books are dedicated to the public domain.",
+ "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. Project Gutenberg books keep the Gutenberg license inside them. Standard Ebooks books are dedicated to the public domain.",
  "paths": "Every path is relative to this file's folder.",
  "categories": [
+  "Bibles",
+  "Study Bibles",
   "Confessions & Catechisms",
   "Systematic Theology",
   "Doctrine",
@@ -3159,21 +3161,49 @@
    "category": "Christian Life",
    "tier": "core",
    "first_published": 1648,
-   "edition": "The Rare Jewel of Christian Contentment. London: W. Bentley for L. Sadler and R. Beaumont, 1651.",
+   "edition": "London: Printed for Peter Cole, 1649.",
    "files": [
     {
      "volume": null,
      "label": "",
      "contents": "",
-     "format": "pdf",
-     "path": "jeremiah-burroughs/rare-jewel-of-christian-contentment.pdf",
-     "size_bytes": 15444544,
-     "source": "https://archive.org/details/rarejewelchrist00burrgoog"
+     "format": "epub",
+     "path": "jeremiah-burroughs/rare-jewel-of-christian-contentment.epub",
+     "size_bytes": 207935,
+     "source": "https://github.com/textcreationpartnership/A30598",
+     "text_quality": 1.0
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "burroughs-the-evil-of-evils-or-the-exceeding-sinfulness-of-sin",
+   "title": "The Evil of Evils, or The Exceeding Sinfulness of Sin",
+   "author": "Jeremiah Burroughs",
+   "author_sort": "Burroughs, Jeremiah",
+   "author_dates": "c. 1600–1646",
+   "tradition": "English Puritan",
+   "category": "Christian Life",
+   "tier": "standard",
+   "first_published": 1654,
+   "edition": "London: Printed by Peter Cole, 1654.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "",
+     "format": "epub",
+     "path": "jeremiah-burroughs/evil-of-evils.epub",
+     "size_bytes": 241139,
+     "source": "https://github.com/textcreationpartnership/A77976",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
   },
   {
    "id": "burroughs-gospel-worship",
@@ -4671,81 +4701,137 @@
    "author_sort": "Poole, Matthew",
    "author_dates": "1624–1679",
    "tradition": "English Puritan",
-   "category": "Commentaries",
-   "tier": "standard",
+   "category": "Study Bibles",
+   "tier": "core",
    "first_published": 1683,
-   "edition": "First edition. London: printed for Thomas Parkhurst and others, 1683–85, 2 vols folio (vol. 2 completed by other divines after Poole's death).",
-   "files": [],
-   "links": [
+   "edition": "London: Printed by John Richardson for Thomas Parkhurst and others, 1683 (vol. I) and 1685 (vol. II), 2 vols.",
+   "files": [
     {
      "volume": 1,
-     "label": "Volume 1 (Genesis to Isaiah)",
+     "label": "Volume 1",
      "contents": "Genesis to Isaiah",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_annotations-upon-the-hol_poole-matthew_1683",
-     "why": "old printing, kept at archive.org"
+     "format": "epub",
+     "path": "matthew-poole/annotations-upon-the-holy-bible-vol-01.epub",
+     "size_bytes": 5191138,
+     "source": "https://github.com/textcreationpartnership/A55363",
+     "text_quality": 0.994
     },
     {
      "volume": 2,
-     "label": "Volume 2 (Jeremiah to Revelation)",
+     "label": "Volume 2",
      "contents": "Jeremiah to Revelation",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_annotations-upon-the-hol_poole-matthew_1685",
-     "why": "old printing, kept at archive.org"
+     "format": "epub",
+     "path": "matthew-poole/annotations-upon-the-holy-bible-vol-02.epub",
+     "size_bytes": 5591205,
+     "source": "https://github.com/textcreationpartnership/A55368",
+     "text_quality": 0.994
     }
    ],
-   "notes": "",
-   "source": "Internet Archive"
+   "links": [],
+   "notes": "The copy transcribed for volume 1 lacks the pages from Leviticus 10:12 to 11:24.",
+   "source": "Text Creation Partnership"
   },
   {
    "id": "trapp-a-commentary-on-the-old-and-new-testaments",
-   "title": "A Commentary on the Old and New Testaments",
+   "title": "A Commentary or Exposition upon the Old and New Testaments",
    "author": "John Trapp",
    "author_sort": "Trapp, John",
    "author_dates": "1601–1669",
    "tradition": "English Puritan",
    "category": "Commentaries",
    "tier": "standard",
-   "first_published": 1654,
-   "edition": "The original folio printings, London, 1654–62, 5 vols (Genesis–2 Chronicles 1662; Ezra–Psalms 1657; Proverbs–Daniel 1660; Minor Prophets 1654; New Testament 1656). Early English Books microfilm scans.",
-   "files": [],
-   "links": [
+   "first_published": 1647,
+   "edition": "London: various printers, 1646–1662, 9 parts: the first separate printings as keyed by TCP, with Joshua–2 Chronicles (1662 folio) and Acts (1656 folio) as scan links.",
+   "files": [
     {
      "volume": 1,
-     "label": "Volume 1: Genesis to 2 Chronicles",
-     "contents": "Genesis to 2 Chronicles (general title page: Annotations upon the Old and New Testament, in five distinct volumes)",
+     "label": "Genesis to Deuteronomy",
+     "contents": "A Clavis to the Bible, or a New Comment upon the Pentateuch: Genesis, Exodus, Leviticus, Numbers, Deuteronomy",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-01.epub",
+     "size_bytes": 858186,
+     "source": "https://github.com/textcreationpartnership/A94797",
+     "text_quality": 0.994
+    },
+    {
+     "volume": 3,
+     "label": "Ezra to Psalms",
+     "contents": "Ezra, Nehemiah, Esther, Job, Psalms",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-03.epub",
+     "size_bytes": 1899967,
+     "source": "https://github.com/textcreationpartnership/A63066",
+     "text_quality": 0.993
+    },
+    {
+     "volume": 4,
+     "label": "Proverbs to Daniel",
+     "contents": "Proverbs, Ecclesiastes, Song of Songs, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-04.epub",
+     "size_bytes": 1971616,
+     "source": "https://github.com/textcreationpartnership/A63069",
+     "text_quality": 0.997
+    },
+    {
+     "volume": 5,
+     "label": "Hosea to Malachi",
+     "contents": "The Twelve Minor Prophets, with the treatise The Righteous Man's Recompence",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-05.epub",
+     "size_bytes": 1920199,
+     "source": "https://github.com/textcreationpartnership/A63068",
+     "text_quality": 0.995
+    },
+    {
+     "volume": 6,
+     "label": "Matthew to Luke",
+     "contents": "Matthew, Mark, Luke",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-06.epub",
+     "size_bytes": 1092815,
+     "source": "https://github.com/textcreationpartnership/A63067",
+     "text_quality": 0.96
+    },
+    {
+     "volume": 7,
+     "label": "John",
+     "contents": "A Brief Commentary upon the Gospel according to St John",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-07.epub",
+     "size_bytes": 201410,
+     "source": "https://github.com/textcreationpartnership/A94796",
+     "text_quality": 0.992
+    },
+    {
+     "volume": 9,
+     "label": "Romans to Revelation",
+     "contents": "All the Epistles and Revelation, with Mellificium Theologicum, or the Marrow of Many Good Authors (a decad of common-places)",
+     "format": "epub",
+     "path": "john-trapp/commentary-on-the-old-and-new-testaments-vol-09.epub",
+     "size_bytes": 837671,
+     "source": "https://github.com/textcreationpartnership/A63065",
+     "text_quality": 0.988
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Joshua to 2 Chronicles",
+     "contents": "Joshua, Judges, Ruth, 1–2 Samuel, 1–2 Kings, 1–2 Chronicles (from vol. 1 of the folio Annotations upon the Old and New Testament)",
      "url": "https://archive.org/details/bim_early-english-books-1641-1700_annotations-upon-the-old_trapp-john_1662",
      "why": "old printing, kept at archive.org"
     },
     {
-     "volume": 2,
-     "label": "Volume 2: Ezra to Psalms",
-     "contents": "Ezra, Nehemiah, Esther, Job, Psalms",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_a-commentary-or-expositi_trapp-john_1657",
-     "why": "old printing, kept at archive.org"
-    },
-    {
-     "volume": 3,
-     "label": "Volume 3: Proverbs to Daniel",
-     "contents": "Proverbs, Ecclesiastes, Song of Songs, Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_a-commentary-or-expositi_trapp-john_1660",
-     "why": "old printing, kept at archive.org"
-    },
-    {
-     "volume": 4,
-     "label": "Volume 4: Minor Prophets",
-     "contents": "The twelve Minor Prophets",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_a-commentary-or-exposi_trapp-john_1654",
-     "why": "old printing, kept at archive.org"
-    },
-    {
-     "volume": 5,
-     "label": "Volume 5: New Testament",
-     "contents": "The whole New Testament",
+     "volume": 8,
+     "label": "Acts",
+     "contents": "The Acts of the Apostles (from the second, enlarged edition of the New Testament commentary)",
      "url": "https://archive.org/details/bim_early-english-books-1641-1700_a-commentary-or-expositi_trapp-john_1656",
      "why": "old printing, kept at archive.org"
     }
    ],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "marshall-the-gospel-mystery-of-sanctification",
@@ -4835,21 +4921,22 @@
    "category": "Christian Life",
    "tier": "further",
    "first_published": 1671,
-   "edition": "Boston, in New-England: Printed and sold by Thomas and John Fleet, 1781",
+   "edition": "London: Printed for Dorman Newman, 1676.",
    "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "A Token for Children, Parts I and II complete: the epistle to parents, schoolmasters and schoolmistresses; the Preface containing Directions to Children; the examples of the First Part; the preface to the Christian Reader and the examples of the Second Part. Cotton Mather's A Token for the Children of New-England is added at the end.",
-     "format": "pdf",
-     "path": "james-janeway/token-for-children.pdf",
-     "size_bytes": 8209492,
-     "source": "https://archive.org/details/tokenforchild00janeiala"
+     "contents": "",
+     "format": "epub",
+     "path": "james-janeway/token-for-children.epub",
+     "size_bytes": 62817,
+     "source": "https://github.com/textcreationpartnership/A46669",
+     "text_quality": 1.0
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "love-the-combat-between-the-flesh-and-spirit",
@@ -5864,21 +5951,22 @@
    "category": "Confessions & Catechisms",
    "tier": "further",
    "first_published": 1646,
-   "edition": "London: J. Coe for Henry Overton, 1646 (first edition; PDF facsimile).",
+   "edition": "London: Printed by J. Coe for Henry Overton, 1646.",
    "files": [
     {
      "volume": null,
      "label": "",
      "contents": "",
-     "format": "pdf",
-     "path": "john-cotton/milk-for-babes-drawn-out-of-the-breasts-of-both-testaments.pdf",
-     "size_bytes": 14861930,
-     "source": "https://archive.org/details/bim_early-english-books-1641-1700_milk-for-babs-_cotton-john-1585-1652_1646"
+     "format": "epub",
+     "path": "john-cotton/milk-for-babes-drawn-out-of-the-breasts-of-both-testaments.epub",
+     "size_bytes": 10742,
+     "source": "https://github.com/textcreationpartnership/A80625",
+     "text_quality": 0.997
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "hooker-the-application-of-redemption",
@@ -6410,27 +6498,30 @@
   },
   {
    "id": "durham-a-commentary-upon-the-book-of-the-revelation",
-   "title": "A Commentary upon the Book of the Revelation",
+   "title": "A Commentarie upon the Book of the Revelation",
    "author": "James Durham",
    "author_sort": "Durham, James",
    "author_dates": "1622–1658",
    "tradition": "Scottish Reformation & Covenanters",
    "category": "Commentaries",
-   "tier": "standard",
+   "tier": "core",
    "first_published": 1658,
-   "edition": "Glasgow: Robert Sanders, 1680 (scan linked only).",
-   "files": [],
-   "links": [
+   "edition": "Edinburgh: Printed by Christopher Higgins, 1658.",
+   "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "",
-     "url": "https://archive.org/details/commentarieuponb00durh",
-     "why": "old printing, kept at archive.org"
+     "contents": "Revelation 1–22, with the prefaces, index of questions, errata, a brief view of the series of the whole book, and the alphabetical table",
+     "format": "epub",
+     "path": "james-durham/commentarie-upon-the-book-of-the-revelation.epub",
+     "size_bytes": 1372733,
+     "source": "https://github.com/textcreationpartnership/A37035",
+     "text_quality": 0.998
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "durham-clavis-cantici-or-an-exposition-of-the-song-of-solomon",
@@ -6442,19 +6533,22 @@
    "category": "Commentaries",
    "tier": "standard",
    "first_published": 1668,
-   "edition": "Edinburgh: Thomas Lumisden, 1723 (scan linked only).",
-   "files": [],
-   "links": [
+   "edition": "Edinburgh: Printed by George Swintoun and James Glen, 1668.",
+   "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "",
-     "url": "https://archive.org/details/claviscant00durh",
-     "why": "old printing, kept at archive.org"
+     "contents": "The Key of the Song and the exposition of Song of Solomon 1–8",
+     "format": "epub",
+     "path": "james-durham/clavis-cantici.epub",
+     "size_bytes": 389478,
+     "source": "https://github.com/textcreationpartnership/A37032",
+     "text_quality": 0.999
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "durham-the-law-unsealed-or-a-practical-exposition-of-the-ten-commandments",
@@ -6490,26 +6584,22 @@
    "category": "Sermons",
    "tier": "standard",
    "first_published": 1683,
-   "edition": "Glasgow: Printed by Alex. Adam for John Johnston, 1792, 2 vols.",
-   "files": [],
-   "links": [
+   "edition": "Edinburgh: Printed by the heir of Andrew Anderson, 1683.",
+   "files": [
     {
-     "volume": 1,
-     "label": "Volume 1",
-     "contents": "Sermons 1–34",
-     "url": "https://archive.org/details/christcrucifiedo01durh",
-     "why": "old printing, kept at archive.org"
-    },
-    {
-     "volume": 2,
-     "label": "Volume 2",
-     "contents": "Sermons 35–72",
-     "url": "https://archive.org/details/christcrucifiedo02durh",
-     "why": "old printing, kept at archive.org"
+     "volume": null,
+     "label": "",
+     "contents": "Dedication, To the Readers, and the 72 sermons on Isaiah 53",
+     "format": "epub",
+     "path": "james-durham/christ-crucified.epub",
+     "size_bytes": 806104,
+     "source": "https://github.com/textcreationpartnership/A81890",
+     "text_quality": 0.995
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "durham-the-dying-man-s-testament-to-the-church-of-scotland-or-a-treatise-concerning-scandal",
@@ -6545,37 +6635,42 @@
    "category": "Commentaries",
    "tier": "standard",
    "first_published": 1653,
-   "edition": "Glasgow: John Dow, 1834, 2 vols. (only vol. 1 is online). Psalms 78–150 are supplied from the first edition, London: Ralph Smith, 1653–54.",
+   "edition": "London: Printed for Thomas Johnson and Ralph Smith, 1653–1655, 3 parts.",
    "files": [
     {
      "volume": 1,
-     "label": "Volume 1 (Psalms 1–77)",
-     "contents": "All the original dedications and prefaces; Psalms 1–77",
+     "label": "Part 1",
+     "contents": "Psalms 1–50",
      "format": "epub",
      "path": "david-dickson/brief-explication-of-the-psalms-vol-01.epub",
-     "size_bytes": 471804,
-     "source": "https://archive.org/details/ABriefExplicationOfThePsalmsV1",
-     "text_quality": 0.989
-    }
-   ],
-   "links": [
+     "size_bytes": 260396,
+     "source": "https://github.com/textcreationpartnership/A35941",
+     "text_quality": 0.998
+    },
     {
      "volume": 2,
-     "label": "Psalms 50–100 (1653 printing)",
-     "contents": "Psalms 50–100; read from Psalm 78 on to follow volume 1",
-     "url": "https://archive.org/details/brief01dick",
-     "why": "old printing, kept at archive.org"
+     "label": "Part 2",
+     "contents": "Psalms 51–100",
+     "format": "epub",
+     "path": "david-dickson/brief-explication-of-the-psalms-vol-02.epub",
+     "size_bytes": 330751,
+     "source": "https://github.com/textcreationpartnership/A35945",
+     "text_quality": 0.987
     },
     {
      "volume": 3,
-     "label": "Psalms 101–150 (1654 printing)",
+     "label": "Part 3",
      "contents": "Psalms 101–150",
-     "url": "https://archive.org/details/briefe02dick",
-     "why": "old printing, kept at archive.org"
+     "format": "epub",
+     "path": "david-dickson/brief-explication-of-the-psalms-vol-03.epub",
+     "size_bytes": 273666,
+     "source": "https://github.com/textcreationpartnership/A35943",
+     "text_quality": 0.997
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "dickson-truth-s-victory-over-error",
@@ -6715,27 +6810,77 @@
   },
   {
    "id": "hutcheson-a-brief-exposition-on-the-twelve-small-prophets",
-   "title": "A Brief Exposition on the Twelve Small Prophets",
+   "title": "A Brief Exposition on the XII Small Prophets",
    "author": "George Hutcheson",
    "author_sort": "Hutcheson, George",
    "author_dates": "1615–1674",
    "tradition": "Scottish Reformation & Covenanters",
    "category": "Commentaries",
-   "tier": "further",
+   "tier": "standard",
    "first_published": 1654,
-   "edition": "A Brief Exposition on the XII Small Prophets. London: Printed for Ralph Smith, 1657.",
-   "files": [],
-   "links": [
+   "edition": "London: Printed [by T.R. and E.M.] for Ralph Smith, 1654–1655, 3 vols.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Volume 1",
+     "contents": "Hosea, Joel, Amos",
+     "format": "epub",
+     "path": "george-hutcheson/brief-exposition-on-the-xii-small-prophets-vol-01.epub",
+     "size_bytes": 447752,
+     "source": "https://github.com/textcreationpartnership/A86936",
+     "text_quality": 0.999
+    },
+    {
+     "volume": 2,
+     "label": "Volume 2",
+     "contents": "Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah",
+     "format": "epub",
+     "path": "george-hutcheson/brief-exposition-on-the-xii-small-prophets-vol-02.epub",
+     "size_bytes": 298460,
+     "source": "https://github.com/textcreationpartnership/A86934",
+     "text_quality": 0.999
+    },
+    {
+     "volume": 3,
+     "label": "Volume 3",
+     "contents": "Haggai, Zechariah, Malachi",
+     "format": "epub",
+     "path": "george-hutcheson/brief-exposition-on-the-xii-small-prophets-vol-03.epub",
+     "size_bytes": 249092,
+     "source": "https://github.com/textcreationpartnership/A86932",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "hutcheson-an-exposition-of-the-gospel-according-to-john",
+   "title": "An Exposition of the Gospel of Jesus Christ according to John",
+   "author": "George Hutcheson",
+   "author_sort": "Hutcheson, George",
+   "author_dates": "1615–1674",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1657,
+   "edition": "London: Printed for Ralph Smith, 1657.",
+   "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "",
-     "url": "https://archive.org/details/expositiononsmal0000hutc",
-     "why": "old printing, kept at archive.org"
+     "contents": "John 1–21, with the Argument, dedication and To the Reader",
+     "format": "epub",
+     "path": "george-hutcheson/exposition-of-the-gospel-of-jesus-christ-according-to-john.epub",
+     "size_bytes": 923243,
+     "source": "https://github.com/textcreationpartnership/A45241",
+     "text_quality": 0.998
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "shields-a-hind-let-loose",
@@ -12688,21 +12833,22 @@
    "category": "Doctrine",
    "tier": "further",
    "first_published": 1677,
-   "edition": "Christ the Way, and the Truth, and the Life. Glasgow: Robert Sanders, 1678.",
+   "edition": "Rotterdam: Printed by H. G. for John Cairns, 1677.",
    "files": [
     {
      "volume": null,
      "label": "",
      "contents": "",
-     "format": "pdf",
-     "path": "john-brown-of-wamphray/christ-the-way-and-the-truth-and-the-life.pdf",
-     "size_bytes": 13504674,
-     "source": "https://archive.org/details/christwaytruthli00brow"
+     "format": "epub",
+     "path": "john-brown-of-wamphray/christ-the-way-and-the-truth-and-the-life.epub",
+     "size_bytes": 285791,
+     "source": "https://github.com/textcreationpartnership/A29748",
+     "text_quality": 0.994
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "brown-an-apologetical-relation-of-the-particular-sufferings-of-the-faithful-ministers-and-",
@@ -13646,7 +13792,7 @@
    "author_sort": "Brown, John (of Haddington)",
    "author_dates": "1722–1787",
    "tradition": "Scottish Presbyterian",
-   "category": "Commentaries",
+   "category": "Study Bibles",
    "tier": "further",
    "first_published": 1778,
    "edition": "The Self-Interpreting Bible, with an evangelical commentary by the late Rev. John Brown of Haddington. London, 1814.",
@@ -13998,26 +14144,121 @@
    "category": "Commentaries",
    "tier": "further",
    "first_published": 1643,
-   "edition": "London: Samuel Simmons, 1676–77, 2 vols folio.",
-   "files": [],
-   "links": [
+   "edition": "London: M. Simmons and others, 1643–1670, the 12 quarto parts (8 keyed by TCP, 4 as scan links).",
+   "files": [
     {
      "volume": 1,
-     "label": "Volume 1 (Job 1–22)",
-     "contents": "Job chapters 1–22, with scripture index",
-     "url": "https://archive.org/details/expositionwithpr0001jose",
-     "why": "old printing, kept at archive.org"
+     "label": "Part 1",
+     "contents": "Job chapters 1–3",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-01.epub",
+     "size_bytes": 490991,
+     "source": "https://github.com/textcreationpartnership/A35389",
+     "text_quality": 0.998
     },
     {
      "volume": 2,
-     "label": "Volume 2 (Job 23–42)",
-     "contents": "Job chapters 23–42 (this microfilm item holds both folio volumes; Volume 2 begins about halfway, at its own 1677 title page)",
-     "url": "https://archive.org/details/bim_early-english-books-1641-1700_an-exposition-with-prac_caryll-joseph_1677",
+     "label": "Part 2",
+     "contents": "Job chapters 4–7",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-02.epub",
+     "size_bytes": 780780,
+     "source": "https://github.com/textcreationpartnership/A35438",
+     "text_quality": 0.996
+    },
+    {
+     "volume": 3,
+     "label": "Part 3",
+     "contents": "Job chapters 8–10",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-03.epub",
+     "size_bytes": 616215,
+     "source": "https://github.com/textcreationpartnership/A35439",
+     "text_quality": 0.997
+    },
+    {
+     "volume": 5,
+     "label": "Part 5",
+     "contents": "Job chapters 15–17",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-05.epub",
+     "size_bytes": 528305,
+     "source": "https://github.com/textcreationpartnership/A35473",
+     "text_quality": 0.998
+    },
+    {
+     "volume": 7,
+     "label": "Part 7",
+     "contents": "Job chapters 22–26",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-07.epub",
+     "size_bytes": 784404,
+     "source": "https://github.com/textcreationpartnership/A81199",
+     "text_quality": 0.998
+    },
+    {
+     "volume": 10,
+     "label": "Part 10",
+     "contents": "Job chapters 32–34",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-10.epub",
+     "size_bytes": 815614,
+     "source": "https://github.com/textcreationpartnership/A35535",
+     "text_quality": 0.998
+    },
+    {
+     "volume": 11,
+     "label": "Part 11",
+     "contents": "Job chapters 35–37",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-11.epub",
+     "size_bytes": 627279,
+     "source": "https://github.com/textcreationpartnership/A35537",
+     "text_quality": 0.989
+    },
+    {
+     "volume": 12,
+     "label": "Part 12",
+     "contents": "Job chapters 38–42",
+     "format": "epub",
+     "path": "joseph-caryl/exposition-with-practical-observations-upon-the-book-of-job-vol-12.epub",
+     "size_bytes": 962420,
+     "source": "https://github.com/textcreationpartnership/A35538",
+     "text_quality": 0.997
+    }
+   ],
+   "links": [
+    {
+     "volume": 4,
+     "label": "Part 4",
+     "contents": "Job chapters 11–14",
+     "url": "https://archive.org/details/bim_early-english-books-1641-1700_an-exposition-with-pract_caryll-joseph_1649",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 6,
+     "label": "Part 6",
+     "contents": "Job chapters 18–21",
+     "url": "https://archive.org/details/bim_early-english-books-1641-1700_an-exposition-twenty-_caryll-joseph_1653",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 8,
+     "label": "Part 8",
+     "contents": "Job chapters 27–29",
+     "url": "https://archive.org/details/bim_early-english-books-1641-1700_an-exposition-_caryll-joseph_1670",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 9,
+     "label": "Part 9",
+     "contents": "Job chapters 30–31",
+     "url": "https://archive.org/details/joseph-caryl-job-09",
      "why": "old printing, kept at archive.org"
     }
    ],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "brooks-heaven-on-earth-a-treatise-on-christian-assurance",
@@ -14482,21 +14723,22 @@
    "category": "History & Biography",
    "tier": "further",
    "first_published": 1667,
-   "edition": "London: James Nisbet, reprint of the fifth edition, corrected (London: George Calvert, 1667); undated, catalogued as 1832",
+   "edition": "London: printed in the year 1667.",
    "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "The complete work. It has the epistle 'To all such of the City who have seen the desolations of London', then Part I, the sound of the voice: the narration of the plague and of the fire. Part II is the interpretation of the voice: the causes of the judgments (the sins of London) and the uses and applications. It closes on p. 236 with 'Finis. Soli Deo Gloria.'",
-     "format": "pdf",
-     "path": "thomas-vincent/gods-terrible-voice-in-the-city.pdf",
-     "size_bytes": 8759631,
-     "source": "https://archive.org/details/godsterriblevoi00vincgoog"
+     "contents": "",
+     "format": "epub",
+     "path": "thomas-vincent/gods-terrible-voice-in-the-city.epub",
+     "size_bytes": 145427,
+     "source": "https://github.com/textcreationpartnership/A64990",
+     "text_quality": 1.0
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "sedgwick-the-doubting-believer",
@@ -14849,7 +15091,7 @@
    "author_sort": "Downame, John",
    "author_dates": "d. 1652",
    "tradition": "English Puritan",
-   "category": "Commentaries",
+   "category": "Study Bibles",
    "tier": "further",
    "first_published": 1645,
    "edition": "London: John Legatt and John Raworth, 1645 (first edition; Boston Public Library copy, bound in two interleaved volumes).",
@@ -15317,12 +15559,12 @@
   },
   {
    "id": "various-the-geneva-bible-with-the-annotations",
-   "title": "The Geneva Bible, with the Annotations",
+   "title": "The Geneva Bible, with the Annotations (1615 Printing, with Tomson's New Testament and Junius on the Revelation)",
    "author": "Various",
    "author_sort": "Various",
    "author_dates": "",
    "tradition": "English Reformation",
-   "category": "Commentaries",
+   "category": "Study Bibles",
    "tier": "standard",
    "first_published": 1560,
    "edition": "The Bible, that is, the Holy Scriptures (Geneva version, with the annotations, Tomson's New Testament and Junius on Revelation). London: Robert Barker, 1615.",
@@ -15495,21 +15737,24 @@
    "author_dates": "1509–1564",
    "tradition": "Continental Reformation",
    "category": "Sermons",
-   "tier": "further",
+   "tier": "standard",
    "first_published": 1563,
-   "edition": "Sermons of Master John Calvin upon the Book of Job, translated out of French by Arthur Golding. London: Lucas Harison and George Bishop, 1574.",
-   "files": [],
-   "links": [
+   "edition": "London: Imprinted by [Henry Bynneman for] Lucas Harison and George Byshop, [1574]. Translated out of French by Arthur Golding.",
+   "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "",
-     "url": "https://archive.org/details/sermonsofmasteri00calv",
-     "why": "old printing, kept at archive.org"
+     "contents": "All 159 sermons on Job 1–42, with Golding's dedication to the Earl of Leicester, the address to the reader, the tables of Scripture places and of principal matters, and Calvin's usual prayers before and after the sermon",
+     "format": "epub",
+     "path": "john-calvin/sermons-upon-the-book-of-job.epub",
+     "size_bytes": 2065269,
+     "source": "https://github.com/textcreationpartnership/A69056",
+     "text_quality": 0.999
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "calvin-sermons-upon-the-epistle-of-st-paul-to-the-ephesians",
@@ -15519,21 +15764,24 @@
    "author_dates": "1509–1564",
    "tradition": "Continental Reformation",
    "category": "Sermons",
-   "tier": "further",
+   "tier": "standard",
    "first_published": 1562,
-   "edition": "Translated by Arthur Golding. London: Lucas Harison and George Bishop, 1577 (black-letter scan, linked only).",
-   "files": [],
-   "links": [
+   "edition": "London: Imprinted [by Thomas Dawson] for Lucas Harison and George Byshop, 1577. Translated out of French into English by Arthur Golding.",
+   "files": [
     {
      "volume": null,
      "label": "",
-     "contents": "",
-     "url": "https://archive.org/details/calvingoldingephesians",
-     "why": "old printing, kept at archive.org"
+     "contents": "All 48 sermons on Ephesians 1–6, with Golding's dedication to Archbishop Edmund Grindal, the address to the reader, and the Argument of the Epistle",
+     "format": "epub",
+     "path": "john-calvin/sermons-upon-the-epistle-of-st-paul-to-the-ephesians.epub",
+     "size_bytes": 675857,
+     "source": "https://github.com/textcreationpartnership/A17705",
+     "text_quality": 0.992
     }
    ],
+   "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "olevianus-an-exposition-of-the-symbol-of-the-apostles",
@@ -15877,7 +16125,7 @@
    "author_sort": "Haak, Theodore",
    "author_dates": "1605–1690",
    "tradition": "Continental Reformed Orthodoxy",
-   "category": "Commentaries",
+   "category": "Study Bibles",
    "tier": "further",
    "first_published": 1637,
    "edition": "Translated by Theodore Haak. London: Henry Hills for John Rothwell, Joshua Kirton, and Richard Tomlins, 1657, 2 folio vols (microfilm scan of the original).",
@@ -16084,21 +16332,22 @@
    "category": "Worship & Prayer",
    "tier": "further",
    "first_published": 1640,
-   "edition": "A Literal Reprint of the Bay Psalm Book (1640). Cambridge [Mass.]: Printed for Charles B. Richardson, New York, 1862.",
+   "edition": "Cambridge, Mass.: Stephen Daye, 1640.",
    "files": [
     {
      "volume": null,
      "label": "",
      "contents": "",
-     "format": "pdf",
-     "path": "various/bay-psalm-book.pdf",
-     "size_bytes": 7838871,
-     "source": "https://archive.org/details/literalreprintof00camb"
+     "format": "epub",
+     "path": "various/bay-psalm-book.epub",
+     "size_bytes": 137958,
+     "source": "https://github.com/textcreationpartnership/N00001",
+     "text_quality": 0.982
     }
    ],
    "links": [],
    "notes": "",
-   "source": "Internet Archive"
+   "source": "Text Creation Partnership"
   },
   {
    "id": "edwards-the-great-christian-doctrine-of-original-sin-defended",
@@ -17101,7 +17350,7 @@
    "author_sort": "Scott, Thomas",
    "author_dates": "1747–1821",
    "tradition": "Evangelical Calvinist",
-   "category": "Commentaries",
+   "category": "Study Bibles",
    "tier": "further",
    "first_published": 1788,
    "edition": "Stereotype edition from the fifth London edition, with the author's last corrections. Boston: Samuel T. Armstrong and Crocker & Brewster, 1824, 6 vols (vols 4–5 from the 1853 Crocker & Brewster impression of the same plates).",
@@ -17658,17 +17907,1919 @@
    "links": [],
    "notes": "",
    "source": "Internet Archive"
+  },
+  {
+   "id": "king-james-version-1769",
+   "title": "The Holy Bible (King James Version, Standard 1769 Text)",
+   "author": "Various (the King James translators)",
+   "author_sort": "Various",
+   "author_dates": "fl. 1604–1611",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "core",
+   "first_published": 1769,
+   "edition": "The Authorized (King James) Version in the standard 1769 text (Blayney), Old and New Testaments without the Apocrypha, from the CrossWire Bible Society text as published by eBible.org (eng-kjv2006).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Genesis to Revelation (66 books, without the Apocrypha)",
+     "format": "epub",
+     "path": "bibles/king-james-version-1769.epub",
+     "size_bytes": 2418520,
+     "source": "https://ebible.org/find/details.php?id=eng-kjv2006"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "geneva-bible-1599",
+   "title": "The Geneva Bible (1599 Text)",
+   "author": "William Whittingham and others (the Geneva translators)",
+   "author_sort": "Whittingham, William",
+   "author_dates": "c. 1524–1579",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "core",
+   "first_published": 1599,
+   "edition": "The 1599 Geneva text (London: Deputies of Christopher Barker, 1599; New Testament in Tomson's revision) in its original spelling, text only, as published by eBible.org (enggnv).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Genesis to Revelation (66 books; text only, without the annotations or the Apocrypha)",
+     "format": "epub",
+     "path": "bibles/geneva-bible-1599.epub",
+     "size_bytes": 2181375,
+     "source": "https://ebible.org/find/details.php?id=enggnv"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "geneva-bible-1560-with-annotations",
+   "title": "The Bible and Holy Scriptures Conteyned in the Olde and Newe Testament (Geneva Bible, 1560 Text, with the Annotations)",
+   "author": "William Whittingham, Anthony Gilby, and others (the Geneva translators)",
+   "author_sort": "Whittingham, William",
+   "author_dates": "c. 1524–1579",
+   "tradition": "English Reformation",
+   "category": "Study Bibles",
+   "tier": "core",
+   "first_published": 1560,
+   "edition": "Geneva: [Rowland Hall], 1562 [i.e. 1561], folio (STC 2095), the first folio printing of the 1560 Geneva text with its annotations.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole Bible with the 1560 arguments and marginal annotations: dedication to Queen Elizabeth, epistle to the brethren, Old Testament (39 books), Apocrypha (13 books), New Testament (27 books), description of the Holy Land, table of proper names, table of principal things, and chronology",
+     "format": "epub",
+     "path": "bibles/geneva-bible-1560-with-annotations.epub",
+     "size_bytes": 3436097,
+     "source": "https://github.com/textcreationpartnership/A10675",
+     "text_quality": 0.978
+    }
+   ],
+   "links": [],
+   "notes": "About one word in twelve of the marginal notes could not be read in the copy transcribed. The Bible text itself is nearly whole.",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "luther-a-commentary-upon-the-epistle-to-the-galatians",
+   "title": "A Commentary upon the Epistle of St. Paul to the Galatians",
+   "author": "Martin Luther",
+   "author_sort": "Luther, Martin",
+   "author_dates": "1483–1546",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "core",
+   "first_published": 1535,
+   "edition": "London: Thomas Vautroullier, 1575.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole commentary: prefaces (To the Reader; To all afflicted consciences; Luther's preface), the Argument, and chapters 1–6 (with 'The forme of a Monkish absolution' quoted in chapter 2)",
+     "format": "epub",
+     "path": "martin-luther/commentary-upon-the-epistle-of-st-paul-to-the-galatians.epub",
+     "size_bytes": 617981,
+     "source": "https://github.com/textcreationpartnership/A06492",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "ainsworth-annotations-upon-the-five-books-of-moses-the-psalms-and-the-song-of-songs",
+   "title": "Annotations upon the Five Books of Moses, the Book of the Psalms, and the Song of Songs",
+   "author": "Henry Ainsworth",
+   "author_sort": "Ainsworth, Henry",
+   "author_dates": "1571–1622",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1627,
+   "edition": "London: Printed [by M. Flesher and J. Haviland] for John Bellamy, 1627.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Genesis to Song of Songs",
+     "contents": "Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Psalms and Song of Songs, with Ainsworth's prefaces, tables, the Advertisement to the Reader, and his observations on the Psalms (the 1627 folio; Leviticus 27:2–8 and parts of Psalms 137–139 and 143–146 are lost from this copy)",
+     "format": "epub",
+     "path": "henry-ainsworth/annotations-upon-the-five-books-of-moses-the-book-of-the-vol-01.epub",
+     "size_bytes": 2591511,
+     "source": "https://github.com/textcreationpartnership/A11649",
+     "text_quality": 0.994
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Missing pages: Leviticus 27",
+     "contents": "Leviticus 27:2–8, the two pages lost from the 1627 copy, read in the Glasgow 1843 reprint, vol. 1 (printed pp. 682–685)",
+     "url": "https://archive.org/details/annotationsonpen01ains",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 3,
+     "label": "Missing pages: Psalms 137–139 and 143–146",
+     "contents": "Psalms 137, 138 and 139:1–7, and Psalm 143:11 to Psalm 146, lost from the 1627 copy, read in the Glasgow 1843 reprint, vol. 2 (printed pp. 663–675)",
+     "url": "https://archive.org/details/annotationsonpen02ains",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "The copy transcribed lacks Leviticus 27:2 to 8 and parts of Psalms 137 to 139 and 143 to 146. The links point to those pages in the Glasgow reprint of 1843.",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "diodati-pious-annotations-upon-the-holy-bible",
+   "title": "Pious Annotations upon the Holy Bible, Expounding the Difficult Places Thereof Learnedly and Plainly",
+   "author": "Giovanni Diodati",
+   "author_sort": "Diodati, Giovanni",
+   "author_dates": "1576–1649",
+   "tradition": "Continental Reformed Orthodoxy",
+   "category": "Study Bibles",
+   "tier": "standard",
+   "first_published": 1607,
+   "edition": "London: Printed by T.B. for Nicholas Fussell, 1643.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Annotations on all 66 books, Genesis to Revelation, with the brief 'Advertisement concerning the Books which are called Apocrypha' between Malachi and Matthew",
+     "format": "epub",
+     "path": "giovanni-diodati/pious-annotations-upon-the-holy-bible-expounding-the.epub",
+     "size_bytes": 1716451,
+     "source": "https://github.com/textcreationpartnership/A36033",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "dickson-an-exposition-of-all-st-pauls-epistles",
+   "title": "An Exposition of All St. Paul's Epistles, together with an Explanation of the Other Epistles of James, Peter, John and Jude",
+   "author": "David Dickson",
+   "author_sort": "Dickson, David",
+   "author_dates": "c. 1583–1663",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1645,
+   "edition": "London: Printed by R.I. for Francis Eglesfield, 1659.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Romans to Jude, with Dickson's separate 'Epistle of Paul to the Hebrews, with Observations' bound in",
+     "format": "epub",
+     "path": "david-dickson/exposition-of-all-st-pauls-epistles-together-with-an.epub",
+     "size_bytes": 810264,
+     "source": "https://github.com/textcreationpartnership/A35951",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "dickson-a-brief-exposition-of-the-evangel-according-to-matthew",
+   "title": "A Brief Exposition of the Evangel of Jesus Christ according to Matthew",
+   "author": "David Dickson",
+   "author_sort": "Dickson, David",
+   "author_dates": "c. 1583–1663",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1647,
+   "edition": "London: Printed for Ralph Smith, 1651.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Matthew 1–28, with the dedication to the Earl of Loudoun and 'To the honest-hearted Reader'",
+     "format": "epub",
+     "path": "david-dickson/brief-exposition-of-the-evangel-of-jesus-christ-according.epub",
+     "size_bytes": 315353,
+     "source": "https://github.com/textcreationpartnership/A35949",
+     "text_quality": 0.996
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "hutcheson-an-exposition-of-the-book-of-job",
+   "title": "An Exposition of the Book of Job, being the Sum of CCCXVI Lectures Preached in the City of Edinburgh",
+   "author": "George Hutcheson",
+   "author_sort": "Hutcheson, George",
+   "author_dates": "1615–1674",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1669,
+   "edition": "London: Printed for Ralph Smith, 1669.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Job 1–42, with the Argument and To the Reader",
+     "format": "epub",
+     "path": "george-hutcheson/exposition-of-the-book-of-job-being-the-sum-of-cccxvi.epub",
+     "size_bytes": 1425747,
+     "source": "https://github.com/textcreationpartnership/A45240",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "tyndale-new-testament-1534",
+   "title": "The Newe Testament (Tyndale's 1534 Revision)",
+   "author": "William Tyndale",
+   "author_sort": "Tyndale, William",
+   "author_dates": "c. 1494–1536",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "standard",
+   "first_published": 1534,
+   "edition": "Antwerp: Marten Emperowr, November 1534 (STC 2826).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Matthew to Revelation, with 'W. T. unto the Reader', the prologue to the four evangelists, the epistle prologues, marginal glosses, and the Epistles of the Old Testament",
+     "format": "epub",
+     "path": "bibles/tyndale-new-testament-1534.epub",
+     "size_bytes": 529460,
+     "source": "https://github.com/textcreationpartnership/A68940",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "westminster-leningrad-codex-hebrew-bible",
+   "title": "תורה נביאים וכתובים: The Hebrew Old Testament (Westminster Leningrad Codex)",
+   "author": "Westminster Hebrew Institute (ed.), after the Leningrad Codex",
+   "author_sort": "Westminster Hebrew Institute",
+   "author_dates": "codex AD 1008; electronic text 1990s–2025",
+   "tradition": "American Presbyterian",
+   "category": "Bibles",
+   "tier": "standard",
+   "first_published": 1008,
+   "edition": "The Westminster Leningrad Codex (Westminster Hebrew Institute, Philadelphia), with vowel points and accents, as published by eBible.org (hebwlc, source dated 3 May 2025).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Genesis to Malachi (39 books, in the English order, with Hebrew chapter and verse numbering)",
+     "format": "epub",
+     "path": "bibles/hebrew-old-testament-westminster-leningrad-codex.epub",
+     "size_bytes": 5346981,
+     "source": "https://ebible.org/find/details.php?id=hebwlc"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "textus-receptus-greek-new-testament",
+   "title": "Ἡ Καινὴ Διαθήκη: The Greek New Testament according to the Textus Receptus",
+   "author": "Robert Adam Boyd (ed.)",
+   "author_sort": "Boyd, Robert Adam",
+   "author_dates": "",
+   "tradition": "Continental Reformation",
+   "category": "Bibles",
+   "tier": "standard",
+   "first_published": 1550,
+   "edition": "The Textus Receptus as edited by Robert Adam Boyd (2022) from Stephanus 1550, Elzevir 1624, and Scrivener 1881, with the readings of the others footnoted, as published by eBible.org (grctr).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Matthew to Revelation in accented Greek, with Boyd's introduction and 343 footnotes giving the Stephanus (ST), Elzevir (ELZ) and Scrivener (SCR) variants",
+     "format": "epub",
+     "path": "bibles/greek-new-testament-textus-receptus.epub",
+     "size_bytes": 1177597,
+     "source": "https://ebible.org/find/details.php?id=grctr"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "calvin-sermons-upon-the-epistle-to-the-galatians",
+   "title": "Sermons upon the Epistle of Saint Paul to the Galatians",
+   "author": "John Calvin",
+   "author_sort": "Calvin, John",
+   "author_dates": "1509–1564",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1563,
+   "edition": "London: Imprinted by [Henrie Bynneman, for] Lucas Harison and George Bishop, 1574. Translated by Arthur Golding.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "All 43 sermons on Galatians 1–6, with the dedication to Sir William Cecil, Lord Burghley, the Argument of the Epistle, and the table",
+     "format": "epub",
+     "path": "john-calvin/sermons-upon-the-epistle-of-saint-paul-to-the-galatians.epub",
+     "size_bytes": 606123,
+     "source": "https://github.com/textcreationpartnership/A17706",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "perkins-a-commentarie-upon-the-five-first-chapters-of-galatians",
+   "title": "A Commentarie or Exposition upon the Five First Chapters of the Epistle to the Galatians",
+   "author": "William Perkins",
+   "author_sort": "Perkins, William",
+   "author_dates": "1558–1602",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1604,
+   "edition": "Cambridge: Printed by John Legat, printer to the University of Cambridge, 1604. Chapters 1–5 by William Perkins; supplement on chapter 6 by Ralph Cudworth.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Perkins on Galatians 1–5, with the dedication to Robert, Lord Rich, the address to the reader and the errata; then Cudworth's supplement on chapter 6 (with its own title page and dedication to Sir Bassingbourne Gawdy) and the Conclusion; then the list of common places, the table of Scripture places and the index",
+     "format": "epub",
+     "path": "william-perkins/commentary-upon-the-five-first-chapters-of-galatians.epub",
+     "size_bytes": 603151,
+     "source": "https://github.com/textcreationpartnership/A09383",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "perkins-a-godly-and-learned-exposition-of-christs-sermon-in-the-mount",
+   "title": "A Godly and Learned Exposition of Christ's Sermon in the Mount",
+   "author": "William Perkins",
+   "author_sort": "Perkins, William",
+   "author_dates": "1558–1602",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1608,
+   "edition": "Cambridge: Printed by Thomas Brooke and Cantrell Legge, printers to the University of Cambridge, 1608. Published by Thomas Pierson.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The exposition of Matthew 5, 6 and 7, verse by verse, with Pierson's dedication to Oliver, Lord St. John of Bletso, the table of chief points, the table of Scripture places, and the errata",
+     "format": "epub",
+     "path": "william-perkins/godly-and-learned-exposition-of-christs-sermon-in-the-mount.epub",
+     "size_bytes": 675426,
+     "source": "https://github.com/textcreationpartnership/A09432",
+     "text_quality": 0.994
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "vermigli-commentaries-upon-the-epistle-to-the-romans",
+   "title": "Most Learned and Fruitful Commentaries upon the Epistle of S. Paul to the Romans",
+   "author": "Peter Martyr Vermigli",
+   "author_sort": "Vermigli, Peter Martyr",
+   "author_dates": "1499–1562",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1558,
+   "edition": "London: John Day, 1568. Translated by Sir Henry Billingsley.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The commentary on Romans 1–16 (with the loci on justification, predestination and others), with the dedication to Sir Anthony Cooke, the Preface, the list of Scripture places expounded, the index, and the errata",
+     "format": "epub",
+     "path": "peter-martyr-vermigli/most-learned-and-fruitful-commentaries-upon-the-epistle-of.epub",
+     "size_bytes": 1606730,
+     "source": "https://github.com/textcreationpartnership/A14353",
+     "text_quality": 0.997
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "pareus-a-commentary-upon-the-divine-revelation",
+   "title": "A Commentary upon the Divine Revelation of the Apostle and Evangelist John",
+   "author": "David Pareus",
+   "author_sort": "Pareus, David",
+   "author_dates": "1548–1622",
+   "tradition": "Continental Reformed Orthodoxy",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1618,
+   "edition": "Amsterdam: Printed by C. P., 1644. Translated out of the Latin by Elias Arnold.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The commentary on Revelation 1–22, arranged by the seven visions, with the notes against the Millenaries at chapter 20. Front matter: the address to the Christian reader, the Author's Advertisement, the Author's Preface in eleven chapters, the 'Apparitions and Persons' of the prophetical drama, and the table of questions. At the back: the table of matters and the errata",
+     "format": "epub",
+     "path": "david-pareus/commentary-upon-the-divine-revelation-of-the-apostle-and.epub",
+     "size_bytes": 1040744,
+     "source": "https://github.com/textcreationpartnership/A55917",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "nisbet-an-exposition-of-the-book-of-ecclesiastes",
+   "title": "An Exposition with Practical Observations upon the Book of Ecclesiastes",
+   "author": "Alexander Nisbet",
+   "author_sort": "Nisbet, Alexander",
+   "author_dates": "1623–1669",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1694,
+   "edition": "Edinburgh: Printed by George Mosman, 1694.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Dedication to William Nisbet of Dirleton, To the Reader, and the exposition of Ecclesiastes 1–12",
+     "format": "epub",
+     "path": "alexander-nisbet/exposition-with-practical-observations-upon-the-book-of.epub",
+     "size_bytes": 428269,
+     "source": "https://github.com/textcreationpartnership/A52356",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "nisbet-a-brief-exposition-of-the-first-and-second-epistles-of-peter",
+   "title": "A Brief Exposition of the First and Second Epistles General of Peter",
+   "author": "Alexander Nisbet",
+   "author_sort": "Nisbet, Alexander",
+   "author_dates": "1623–1669",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1658,
+   "edition": "Edinburgh: Printed by Christopher Higgins, 1658.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "To the Reader (incomplete); 1 Peter 1–5; 2 Peter 1–3",
+     "format": "epub",
+     "path": "alexander-nisbet/brief-exposition-of-the-first-and-second-epistles-general.epub",
+     "size_bytes": 246490,
+     "source": "https://github.com/textcreationpartnership/A52355",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "rogers-a-commentary-upon-the-whole-book-of-judges",
+   "title": "A Commentary upon the Whole Book of Judges",
+   "author": "Richard Rogers",
+   "author_sort": "Rogers, Richard",
+   "author_dates": "c.1550–1618",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1615,
+   "edition": "London: Imprinted by Felix Kyngston for Thomas Man, 1615.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Part 1",
+     "contents": "Dedication to Sir Edward Coke; Sermons 1–90 and the first part of Sermon 91 (Judges 1:1–17:8), pp. 1–807",
+     "format": "epub",
+     "path": "richard-rogers/commentary-upon-the-whole-book-of-judges-vol-01.epub",
+     "size_bytes": 1190862,
+     "source": "https://github.com/textcreationpartnership/A10933",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Part 2",
+     "contents": "Rest of Sermon 91 through Sermon 103 (Judges 17:8–21:25), pp. 808–970, with the errata leaf (scan only)",
+     "url": "https://archive.org/details/bim_early-english-books-1475-1640_a-commentary-upon-the-wh_rogers-richard_1615",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "brown-an-analytical-exposition-of-the-epistle-to-the-romans",
+   "title": "Analytical Exposition of the Epistle of Paul the Apostle to the Romans",
+   "author": "John Brown of Edinburgh",
+   "author_sort": "Brown, John (of Edinburgh)",
+   "author_dates": "1784–1858",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1857,
+   "edition": "New York: Robert Carter and Brothers, 1857.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole work: Preliminary Remarks; Part I Introductory (Rom. 1:1-17); Part II Doctrinal (1:18-11:36); Part III Practical (12:1-15:13); Part IV Concluding (15:14-16:27); Indexes; Errata",
+     "format": "epub",
+     "path": "john-brown-of-edinburgh/analytical-exposition-of-the-epistle-of-paul-the-apostle-to.epub",
+     "size_bytes": 531182,
+     "source": "https://archive.org/details/analyticalexposi00brow",
+     "text_quality": 0.984
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "brown-an-exposition-of-the-epistle-to-the-galatians",
+   "title": "An Exposition of the Epistle of Paul the Apostle to the Galatians",
+   "author": "John Brown of Edinburgh",
+   "author_sort": "Brown, John (of Edinburgh)",
+   "author_dates": "1784–1858",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1853,
+   "edition": "Edinburgh: William Oliphant and Sons; London: Hamilton, Adams and Co.; New York: Carter and Brothers, 1853.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole work: Preface; Introduction (Sections I-VIII); Parts I-VII on Galatians 1-6 (through the Postscript, 6:11-18); Appendix Notes A-H; Indexes of matters, Hebrew and Greek words, authors and texts",
+     "format": "epub",
+     "path": "john-brown-of-edinburgh/exposition-of-the-epistle-of-paul-the-apostle-to-the.epub",
+     "size_bytes": 474919,
+     "source": "https://archive.org/details/expositionofepis00brow",
+     "text_quality": 0.959
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "candlish-the-book-of-genesis-expounded",
+   "title": "The Book of Genesis Expounded in a Series of Discourses",
+   "author": "Robert S. Candlish",
+   "author_sort": "Candlish, Robert Smith",
+   "author_dates": "1806–1873",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1868,
+   "edition": "New edition, carefully revised. Edinburgh: Adam and Charles Black, 1868, 2 vols.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Volume 1",
+     "contents": "Genesis 1-27 (Discourses I-XXXVII, Creation to the Transmission of the Birthright-Blessing)",
+     "format": "epub",
+     "path": "robert-smith-candlish/book-of-genesis-expounded-in-a-series-of-discourses-vol-01.epub",
+     "size_bytes": 363555,
+     "source": "https://archive.org/details/bookofgenesisexp01cand",
+     "text_quality": 0.991
+    },
+    {
+     "volume": 2,
+     "label": "Volume 2",
+     "contents": "Genesis 27:41-50:26 (Discourses XXXVIII-LXXII), with Appendix I (Structure of Genesis) and Appendix II (Supplement to Discourse XXI)",
+     "format": "epub",
+     "path": "robert-smith-candlish/book-of-genesis-expounded-in-a-series-of-discourses-vol-02.epub",
+     "size_bytes": 284321,
+     "source": "https://archive.org/details/bookofgenesisexp02cand",
+     "text_quality": 0.992
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "fairbairn-ezekiel-and-the-book-of-his-prophecy",
+   "title": "Ezekiel and the Book of His Prophecy: An Exposition",
+   "author": "Patrick Fairbairn",
+   "author_sort": "Fairbairn, Patrick",
+   "author_dates": "1805–1874",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1851,
+   "edition": "Second edition. Edinburgh: T. and T. Clark, 1855.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole work: Preface to the Second Edition; Introduction; exposition of Ezekiel 1-48, with the Preliminary Remarks on the temple vision (chs. 40-48); Index of leading topics",
+     "format": "epub",
+     "path": "patrick-fairbairn/ezekiel-and-the-book-of-his-prophecy.epub",
+     "size_bytes": 549854,
+     "source": "https://archive.org/details/ezekielbookofhis00fairrich",
+     "text_quality": 0.992
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "willet-hexapla-in-danielem",
+   "title": "Hexapla in Danielem: A Six-fold Commentary upon the Most Divine Prophecy of Daniel",
+   "author": "Andrew Willet",
+   "author_sort": "Willet, Andrew",
+   "author_dates": "1562–1621",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1610,
+   "edition": "[Cambridge]: Printed by Cantrell Legge, printer to the University of Cambridge, 1610.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Dedication to King James, Preface, general observations, Daniel 1–6; second book (title page and dedication to Prince Henry), Daniel 7–12; Appendix; tables of questions and controversies; errata",
+     "format": "epub",
+     "path": "andrew-willet/hexapla-in-danielem.epub",
+     "size_bytes": 916629,
+     "source": "https://github.com/textcreationpartnership/A15415",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "taylor-a-commentary-upon-the-epistle-to-titus",
+   "title": "A Commentary upon the Epistle of St. Paul Written to Titus",
+   "author": "Thomas Taylor",
+   "author_sort": "Taylor, Thomas",
+   "author_dates": "1576–1632",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1612,
+   "edition": "[Cambridge]: Printed by Cantrell Legge for Leonard Greene, 1612.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Dedication to Robert Lord Rich, To the Christian Reader, the commentary on Titus 1–3, three tables (doctrines, observations, questions), errata",
+     "format": "epub",
+     "path": "thomas-taylor/commentary-upon-the-epistle-of-st-paul-written-to-titus.epub",
+     "size_bytes": 917605,
+     "source": "https://github.com/textcreationpartnership/A13535",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "rollock-lectures-upon-the-epistles-to-the-thessalonians",
+   "title": "Lectures upon the First and Second Epistles of Paul to the Thessalonians",
+   "author": "Robert Rollock",
+   "author_sort": "Rollock, Robert",
+   "author_dates": "c. 1555–1599",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1606,
+   "edition": "Edinburgh: Printed by Robert Charteris, 1606.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Editors' dedication and To the Reader; 27 lectures on 1 Thessalonians; second title page and 14 lectures on 2 Thessalonians",
+     "format": "epub",
+     "path": "robert-rollock/lectures-upon-the-first-and-second-epistles-of-paul-to-the.epub",
+     "size_bytes": 449658,
+     "source": "https://github.com/textcreationpartnership/A11010",
+     "text_quality": 0.996
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "mcrie-lectures-on-the-book-of-esther",
+   "title": "Lectures on the Book of Esther",
+   "author": "Thomas M'Crie",
+   "author_sort": "M'Crie, Thomas (the elder)",
+   "author_dates": "1772–1835",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1838,
+   "edition": "New York: Robert Carter, 1838.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole work: contents and Lectures I-XVIII on Esther 1-10",
+     "format": "epub",
+     "path": "thomas-mcrie/lectures-on-the-book-of-esther.epub",
+     "size_bytes": 144865,
+     "source": "https://archive.org/details/lecturesonbookof00mcri",
+     "text_quality": 0.988
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "bridges-an-exposition-of-the-book-of-ecclesiastes",
+   "title": "An Exposition of the Book of Ecclesiastes",
+   "author": "Charles Bridges",
+   "author_sort": "Bridges, Charles",
+   "author_dates": "1794–1869",
+   "tradition": "Evangelical Calvinist",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1860,
+   "edition": "New York: Robert Carter & Brothers, 1860.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface, Exposition of Ecclesiastes chapters 1–12, and Index",
+     "format": "epub",
+     "path": "charles-bridges/exposition-of-the-book-of-ecclesiastes.epub",
+     "size_bytes": 275337,
+     "source": "https://archive.org/details/expositionofbook00brid_0",
+     "text_quality": 0.991
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "moore-the-prophets-of-the-restoration",
+   "title": "The Prophets of the Restoration; or, Haggai, Zechariah, and Malachi: A New Translation, with Notes",
+   "author": "Thomas Verner Moore",
+   "author_sort": "Moore, Thomas Verner",
+   "author_dates": "1818–1871",
+   "tradition": "American Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1856,
+   "edition": "New York: Robert Carter & Brothers, 1856.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface, Introduction, Haggai, Zechariah, and Malachi (translation and notes)",
+     "format": "epub",
+     "path": "thomas-verner-moore/prophets-of-the-restoration.epub",
+     "size_bytes": 251502,
+     "source": "https://archive.org/details/prophetsofrestor00moorrich",
+     "text_quality": 0.995
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "martin-the-prophet-jonah",
+   "title": "The Prophet Jonah: His Character and Mission to Nineveh",
+   "author": "Hugh Martin",
+   "author_sort": "Martin, Hugh",
+   "author_dates": "1822–1885",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1866,
+   "edition": "Edinburgh: James Gemmell, 1889 (third edition). First published Edinburgh: Johnstone, Hunter & Co., 1866.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Prefatory note to the first edition, Contents, and Lectures I–XXII (Introductory; Part First, The Commission Issued and Refused; Part Second, The Commission Re-issued and Fulfilled; Conclusion)",
+     "format": "epub",
+     "path": "hugh-martin/prophet-jonah.epub",
+     "size_bytes": 270394,
+     "source": "https://archive.org/details/prophetjonahhisc00mart",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "blaikie-the-first-and-second-books-of-samuel",
+   "title": "The First Book of Samuel; The Second Book of Samuel (The Expositor's Bible)",
+   "author": "William Garden Blaikie",
+   "author_sort": "Blaikie, William Garden",
+   "author_dates": "1820–1899",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1887,
+   "edition": "The Expositor's Bible: Toronto: Willard Tract Depository and Bible Depot, 1888 (First Book of Samuel); New York: A. C. Armstrong and Son, 1898 (Second Book of Samuel), 2 vols. First published London: Hodder and Stoughton, 1887–88.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Volume 1",
+     "contents": "The First Book of Samuel (Chapters I–XXXVI, Hannah's Trial and Trust to The Death of Saul)",
+     "format": "epub",
+     "path": "william-garden-blaikie/books-of-samuel-vol-01.epub",
+     "size_bytes": 405132,
+     "source": "https://www.gutenberg.org/ebooks/39394"
+    },
+    {
+     "volume": 2,
+     "label": "Volume 2",
+     "contents": "The Second Book of Samuel (Chapters I–XXXIII, David's Lament for Saul and Jonathan to The Two Books of Samuel)",
+     "format": "epub",
+     "path": "william-garden-blaikie/books-of-samuel-vol-02.epub",
+     "size_bytes": 330126,
+     "source": "https://www.gutenberg.org/ebooks/44619"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Project Gutenberg"
+  },
+  {
+   "id": "alexander-the-gospel-according-to-mark-explained",
+   "title": "The Gospel According to Mark Explained",
+   "author": "Joseph Addison Alexander",
+   "author_sort": "Alexander, Joseph Addison",
+   "author_dates": "1809–1860",
+   "tradition": "American Presbyterian",
+   "category": "Commentaries",
+   "tier": "standard",
+   "first_published": 1858,
+   "edition": "New York: Charles Scribner, 1858.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface, Introduction, and exposition of Mark 1–16",
+     "format": "epub",
+     "path": "joseph-addison-alexander/gospel-according-to-mark-explained.epub",
+     "size_bytes": 549015,
+     "source": "https://archive.org/details/gospelaccord00alex",
+     "text_quality": 0.983
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "bullinger-a-hundred-sermons-upon-the-apocalypse",
+   "title": "A Hundred Sermons upon the Apocalypse of Jesus Christ",
+   "author": "Heinrich Bullinger",
+   "author_sort": "Bullinger, Heinrich",
+   "author_dates": "1504–1575",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1557,
+   "edition": "London: Imprinted by John Day, 1561.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Translator's dedication to Lord Wentworth, verses, Bullinger's Preface, index, Latin rhymes; the 101 sermons on Revelation 1–22; colophon",
+     "format": "epub",
+     "path": "heinrich-bullinger/hundred-sermons-upon-the-apocalypse-of-jesus-christ.epub",
+     "size_bytes": 709770,
+     "source": "https://github.com/textcreationpartnership/B11837",
+     "text_quality": 0.995
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "burgess-cxlv-expository-sermons-upon-john-17",
+   "title": "CXLV Expository Sermons upon the Whole 17th Chapter of the Gospel according to St. John, or, Christ's Prayer before His Passion Explicated",
+   "author": "Anthony Burgess",
+   "author_sort": "Burgess, Anthony",
+   "author_dates": "d. 1664",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1656,
+   "edition": "London: Printed by Abraham Miller for Thomas Underhill, 1656.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Sermons I–CXLV on the whole of John 17, with To the Christian Reader, errata, contents, the alphabetical table, the publisher's catalogue and the table of texts",
+     "format": "epub",
+     "path": "anthony-burgess/cxlv-expository-sermons-upon-the-whole-17th-chapter-of-the.epub",
+     "size_bytes": 1026702,
+     "source": "https://github.com/textcreationpartnership/A30241",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "hildersham-clii-lectures-upon-psalm-51",
+   "title": "CLII Lectures upon Psalm LI",
+   "author": "Arthur Hildersham",
+   "author_sort": "Hildersham, Arthur",
+   "author_dates": "1563–1632",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1635,
+   "edition": "London: Printed by George Miller for Edward Brewster, 1635.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Lectures I–CLII on Psalm 51 (the title and verses 1–7), with the dedication, contents, places of Scripture, errata and alphabetical index",
+     "format": "epub",
+     "path": "arthur-hildersham/clii-lectures-upon-psalm-li.epub",
+     "size_bytes": 1265377,
+     "source": "https://github.com/textcreationpartnership/A03343",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "hildersham-cviii-lectures-upon-the-fourth-of-john",
+   "title": "CVIII Lectures upon the Fourth of John",
+   "author": "Arthur Hildersham",
+   "author_sort": "Hildersham, Arthur",
+   "author_dates": "1563–1632",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1629,
+   "edition": "London: Printed by George Miller for Edward Brewster, 1632 (the second edition, corrected and much enlarged by the author).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Lectures I–CVIII on John 4:10–53 (preached 1608–1611), with the dedication, John Cotton's To the Godly Reader, the table of points and the index of Scripture places",
+     "format": "epub",
+     "path": "arthur-hildersham/cviii-lectures-upon-the-fourth-of-john.epub",
+     "size_bytes": 739253,
+     "source": "https://github.com/textcreationpartnership/A03342",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "cotton-a-practical-commentary-upon-the-first-epistle-of-john",
+   "title": "A Practical Commentary, or an Exposition with Observations, Reasons, and Uses upon the First Epistle General of John",
+   "author": "John Cotton",
+   "author_sort": "Cotton, John",
+   "author_dates": "1585–1652",
+   "tradition": "New England Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1656,
+   "edition": "London: Printed by M. S. for Thomas Parkhurst, 1658 (the second edition, much corrected and enlarged).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Commentary on 1 John 1–5, with the epistles of Roger Drake and Christopher Scott, Edmund Calamy's approbation, and the alphabetical table",
+     "format": "epub",
+     "path": "john-cotton/practical-commentary-upon-the-first-epistle-of-john.epub",
+     "size_bytes": 606285,
+     "source": "https://github.com/textcreationpartnership/A34689",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "perkins-a-cloud-of-faithful-witnesses",
+   "title": "A Cloud of Faithful Witnesses, or, A Commentary upon the Eleventh Chapter to the Hebrews",
+   "author": "William Perkins",
+   "author_sort": "Perkins, William",
+   "author_dates": "1558–1602",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1607,
+   "edition": "At London: Printed by Humfrey Lownes, for Leonard Greene, 1607.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "The commentary",
+     "contents": "Hebrews 11 and part of Hebrews 12, with the dedication and the printer's advertisement (pages 213-220 are missing from the copy transcribed)",
+     "format": "epub",
+     "path": "william-perkins/cloud-of-faithful-witnesses-vol-01.epub",
+     "size_bytes": 446380,
+     "source": "https://github.com/textcreationpartnership/A09376",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Pages 213–220 (scan of the 1608 printing)",
+     "contents": "Pages 213–220 on Hebrews 11:8–10 (Abraham's faith), which are missing from the transcription. They are on leaves 236–243 of the scan (archive.org page n236 to n243).",
+     "url": "https://archive.org/details/bim_early-english-books-1475-1640_a-cloud-of-faithfull-wit_perkins-william_1602",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "perkins-lectures-upon-the-three-first-chapters-of-the-revelation",
+   "title": "Lectures upon the Three First Chapters of the Revelation",
+   "author": "William Perkins",
+   "author_sort": "Perkins, William",
+   "author_dates": "1558–1602",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1604,
+   "edition": "London: Printed by Adam Islip for Cuthbert Burby, 1606 (the second edition, revised and enlarged after a more perfect copy by Thomas Pierson).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Exposition of Revelation 1–3, with the two dedications, Pierson's To the Reader, the General Analysis of the Vision, the errata, and the tables of Scripture places and special points",
+     "format": "epub",
+     "path": "william-perkins/lectures-upon-the-three-first-chapters-of-the-revelation.epub",
+     "size_bytes": 384566,
+     "source": "https://github.com/textcreationpartnership/A09443",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "dickson-a-short-explanation-of-the-epistle-of-paul-to-the-hebrews",
+   "title": "A Short Explanation of the Epistle of Paul to the Hebrews",
+   "author": "David Dickson",
+   "author_sort": "Dickson, David",
+   "author_dates": "c. 1583–1663",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1635,
+   "edition": "Aberdeen: Imprinted by Edward Raban, 1635.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The Sum of the Epistle, the doctrine of Hebrews 1–13 chapter by chapter, and the Postscript, with the title and To the Reader",
+     "format": "epub",
+     "path": "david-dickson/short-explanation-of-the-epistle-of-paul-to-the-hebrews.epub",
+     "size_bytes": 176310,
+     "source": "https://github.com/textcreationpartnership/A20414",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "vermigli-commentaries-upon-the-book-of-judges",
+   "title": "Most Fruitful and Learned Commentaries upon the Book of Judges",
+   "author": "Peter Martyr Vermigli",
+   "author_sort": "Vermigli, Peter Martyr",
+   "author_dates": "1499–1562",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1561,
+   "edition": "London: John Day, dwelling over Aldersgate, [28 Sept.] 1564.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Two dedications, the table of Scripture places, the list of common places, errata, the commentary on Judges 1–21, and the index",
+     "format": "epub",
+     "path": "peter-martyr-vermigli/most-fruitful-and-learned-commentaries-upon-the-book-of.epub",
+     "size_bytes": 1013864,
+     "source": "https://github.com/textcreationpartnership/A68840",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "calvin-sermons-upon-deuteronomy",
+   "title": "The Sermons of M. John Calvin upon the Fifth Book of Moses Called Deuteronomy",
+   "author": "John Calvin",
+   "author_sort": "Calvin, John",
+   "author_dates": "1509–1564",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1567,
+   "edition": "London: Printed by Henry Middleton for George Bishop, 1583.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Transcription",
+     "contents": "The dedication to Sir Thomas Bromley, the prefaces of the Geneva ministers and deacons, the 200 sermons on Deuteronomy (20 March 1555 to July 1556), and the two tables (doctrines, and places of Scripture)",
+     "format": "epub",
+     "path": "john-calvin/sermons-of-m-john-calvin-upon-the-fifth-book-of-moses-vol-01.epub",
+     "size_bytes": 3007346,
+     "source": "https://github.com/textcreationpartnership/A17698",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Scan of a complete copy",
+     "contents": "The whole 1583 edition, for readers looking for the 28 leaves missing from the transcription",
+     "url": "https://archive.org/details/sermonsofmiohnca1583calv",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "calvin-two-and-twenty-sermons-upon-psalm-119",
+   "title": "Two and Twenty Sermons upon the Hundred and Nineteenth Psalm",
+   "author": "John Calvin",
+   "author_sort": "Calvin, John",
+   "author_dates": "1509–1564",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1554,
+   "edition": "London: [Thomas Dawson] for John Harrison and Thomas Man, 1580.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The dedication to Sir Robert Jermyn, 'To all faithfull Readers', the 22 sermons on Psalm 119 (one for each Hebrew letter, Aleph to Tau), and the colophon",
+     "format": "epub",
+     "path": "john-calvin/two-and-twenty-sermons-upon-the-hundred-and-nineteenth-psalm.epub",
+     "size_bytes": 271582,
+     "source": "https://github.com/textcreationpartnership/A17724",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "king-james-version-1668-cambridge",
+   "title": "The Holy Bible (King James Version, the Cambridge Printing of 1668, with the Apocrypha)",
+   "author": "Various (the King James translators)",
+   "author_sort": "Various",
+   "author_dates": "fl. 1604–1611",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1611,
+   "edition": "Cambridge: Printed by John Field, Printer to the University, 1668 (the New Testament title page is dated 1666). This is the 1668 Field printing, not the 1611 first edition.",
+   "files": [
+    {
+     "volume": 2,
+     "label": "The Holy Bible",
+     "contents": "Engraved title, dedication to King James, list of books, Old Testament (39 books), Apocrypha (14 books), New Testament title page (1666) and New Testament (27 books), with about 14,760 marginal notes and references",
+     "format": "epub",
+     "path": "bibles/king-james-version-1668-cambridge.epub",
+     "size_bytes": 2370534,
+     "source": "https://github.com/textcreationpartnership/A97378",
+     "text_quality": 0.996
+    }
+   ],
+   "links": [
+    {
+     "volume": 1,
+     "label": "The Translators to the Reader",
+     "contents": "'The Translators to the Reader' in the 1611 text, which the 1668 printing omits (scan link to the 1833 Oxford page-for-page reprint of 1611)",
+     "url": "https://archive.org/details/holybibleexactre00oxfouoft",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "bishops-bible-1568",
+   "title": "The Holie Bible Conteynyng the Olde Testament and the Newe (The Bishops' Bible)",
+   "author": "Matthew Parker and the bishops",
+   "author_sort": "Parker, Matthew",
+   "author_dates": "1504–1575",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1568,
+   "edition": "London: In Powles Churchyarde by Richarde Jugge, printer to the Queenes Maiestie, [1568].",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Transcription",
+     "contents": "Calendar and tables, the summe of Scripture, genealogies, Parker's preface, Cranmer's prologue, the Old Testament in three parts, the Apocrypha, the map, and the New Testament with its preface, the table of epistles and gospels, and the colophon",
+     "format": "epub",
+     "path": "bibles/bishops-bible-1568.epub",
+     "size_bytes": 2610907,
+     "source": "https://github.com/textcreationpartnership/A10708",
+     "text_quality": 0.994
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Scan of a 1568 copy",
+     "contents": "The whole 1568 Bishops' Bible, for readers looking for the 15 leaves missing from the transcription (Deuteronomy to 1 Kings)",
+     "url": "https://archive.org/details/holiebiblecontey00lond",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "The copy transcribed lacks 15 leaves, in Deuteronomy, Joshua, Judges, 1 Samuel, and 1 Kings. The linked scan of a 1568 copy has them.",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "coverdale-bible-1535",
+   "title": "Biblia: The Byble, That Is, the Holy Scrypture of the Olde and New Testament (Coverdale Bible)",
+   "author": "Miles Coverdale",
+   "author_sort": "Coverdale, Miles",
+   "author_dates": "c. 1488–1569",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1535,
+   "edition": "[Southwark?]: J. Nycolson, 1535 (colophon: 'fynished the fourth daye of October'), STC 2063.3.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Transcription",
+     "contents": "The prayer, the dedication to Henry VIII, Coverdale's prologue to the Christian reader, the table of books, the Old Testament (with Baruch after Lamentations), the Apocrypha with the translator's note, the New Testament, errata and colophon (this copy lacks Genesis 1:1–2:17, Judges 12:10–15:8 and Psalms 107–111:5; Psalms 118:12–132:5 are on leaves from another edition in place of its own Psalms 119:9–128:1)",
+     "format": "epub",
+     "path": "bibles/coverdale-bible-1535.epub",
+     "size_bytes": 2098152,
+     "source": "https://github.com/textcreationpartnership/A10349",
+     "text_quality": 0.99
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Scan of Bagster's 1838 reprint",
+     "contents": "A complete page-for-page reprint of the 1535 Bible, for readers looking for the passages missing from the transcription",
+     "url": "https://archive.org/details/holyscriptures00cove",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "The copy transcribed lacks some leaves: Genesis 1:1 to 2:16, Judges 12:10 to 15:8, Job 31:3 to 34:9, Psalms 50 to 56 and 106:48 to 111:5, part of 2 Maccabees, and Revelation 8:2 to 11:15. The linked scan of Bagster's 1838 page-for-page reprint has them.",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "tyndale-pentateuch-1530",
+   "title": "The Pentateuch (Tyndale's Five Books of Moses)",
+   "author": "William Tyndale",
+   "author_sort": "Tyndale, William",
+   "author_dates": "c. 1494–1536",
+   "tradition": "English Reformation",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1530,
+   "edition": "'Malborow in the lande of Hesse' [i.e. Antwerp]: 'Hans Luft' [i.e. Johannes Hoochstraten], 17 January 1530.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "'W. T. to the Reader', 'A prologe shewinge the vse of the scripture', Genesis with its table of words and colophon, then Exodus, Leviticus, Numbers and Deuteronomy, each with Tyndale's prologue, and the tables expounding words",
+     "format": "epub",
+     "path": "bibles/tyndale-pentateuch-1530.epub",
+     "size_bytes": 310323,
+     "source": "https://github.com/textcreationpartnership/A13203",
+     "text_quality": 0.995
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "american-standard-version-1901",
+   "title": "The Holy Bible (American Standard Version)",
+   "author": "Various (the American Revision Committee)",
+   "author_sort": "Various",
+   "author_dates": "fl. 1872–1901",
+   "tradition": "American Presbyterian",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1901,
+   "edition": "New York: Thomas Nelson & Sons, 1901, the American Standard Edition of the Revised Version, without the Apocrypha, as published by eBible.org (eng-asv).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Title page and the 1901 Preface, then Genesis to Revelation (66 books)",
+     "format": "epub",
+     "path": "bibles/american-standard-version-1901.epub",
+     "size_bytes": 2132671,
+     "source": "https://ebible.org/find/details.php?id=eng-asv"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "eBible.org"
+  },
+  {
+   "id": "tremellius-junius-beza-latin-bible",
+   "title": "Testamenti Veteris Biblia Sacra (The Junius–Tremellius–Beza Latin Bible)",
+   "author": "Immanuel Tremellius and Franciscus Junius (Old Testament and Apocrypha); Theodore Beza (New Testament)",
+   "author_sort": "Tremellius, Immanuel",
+   "author_dates": "1510–1580",
+   "tradition": "Continental Reformation",
+   "category": "Bibles",
+   "tier": "further",
+   "first_published": 1579,
+   "edition": "Hanau [Hanoviae]: typis Wechelianis, apud Claudium Marnium & heredes Ioannis Aubrii, 1603, folio (Old and New Testaments); the Apocrypha from London: [the Queen's printers], 1592–93.",
+   "files": [],
+   "links": [
+    {
+     "volume": 1,
+     "label": "Old Testament",
+     "contents": "Testamenti Veteris Biblia Sacra, parts 1–4 (Law, Historical, Poetical and Prophetic books), Latin of Tremellius and Junius with their scholia, and the dedications and preface",
+     "url": "https://archive.org/details/testamentiveteri00trem",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 2,
+     "label": "Apocrypha",
+     "contents": "Libri Apocryphi, sive Appendix Testamenti Veteris, translated from the Greek with notes by Franciscus Junius",
+     "url": "https://archive.org/details/bim_early-english-books-1475-1640_testamenti-veteris-bibli_bible-latin_1593_0",
+     "why": "old printing, kept at archive.org"
+    },
+    {
+     "volume": 3,
+     "label": "New Testament",
+     "contents": "D.N. Jesu Christi Testamentum Novum: Beza's Latin from the Greek with Tremellius's Latin from the Syriac in parallel, with Junius's notes, and the indexes",
+     "url": "https://archive.org/details/testamentiveteri00trem",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "calvin-sermons-on-the-epistles-to-timothy-and-titus",
+   "title": "Sermons on the Epistles of S. Paul to Timothy and Titus",
+   "author": "John Calvin",
+   "author_sort": "Calvin, John",
+   "author_dates": "1509–1564",
+   "tradition": "Continental Reformation",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1561,
+   "edition": "London: for G. Bishop and T. Woodcoke, 1579, black-letter folio, translated by L. T. [Laurence Tomson].",
+   "files": [],
+   "links": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Sermons on 1 Timothy, 2 Timothy and Titus (the Titus sermons begin about leaf 1066)",
+     "url": "https://archive.org/details/bim_early-english-books-1475-1640_sermons-on-the-epistles-_calvin-john_1579",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "white-a-commentary-upon-the-first-three-chapters-of-genesis",
+   "title": "A Commentary upon the Three First Chapters of the First Book of Moses Called Genesis",
+   "author": "John White",
+   "author_sort": "White, John",
+   "author_dates": "1575–1648",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1656,
+   "edition": "London: Printed by John Streater, and are to be sold by George Calvert and John Nevill, 1656.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The dedication to Denzel Hollis, Stephen Marshall's letter of commendation, 'To the Reader', the commentary on Genesis 1, 2 and 3, and the table of observations",
+     "format": "epub",
+     "path": "john-white/commentary-upon-the-three-first-chapters-of-the-first-book.epub",
+     "size_bytes": 540832,
+     "source": "https://github.com/textcreationpartnership/A65748",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "udall-a-commentary-upon-the-lamentations-of-jeremiah",
+   "title": "A Commentary upon the Lamentations of Jeremiah",
+   "author": "John Udall",
+   "author_sort": "Udall, John",
+   "author_dates": "c.1560–1592",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1593,
+   "edition": "London: Printed by the Widow Orwin for Thomas Man, 1593.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole commentary: the address to the reader, the table of the book, the argument, and chapters 1 to 5",
+     "format": "epub",
+     "path": "john-udall/commentary-upon-the-lamentations-of-jeremiah.epub",
+     "size_bytes": 170866,
+     "source": "https://github.com/textcreationpartnership/A14178",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "marbury-commentaries-upon-obadiah-and-habakkuk",
+   "title": "A Commentary or Exposition upon the Prophecies of Obadiah and Habakkuk",
+   "author": "Edward Marbury",
+   "author_sort": "Marbury, Edward",
+   "author_dates": "1581–c.1655",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1650,
+   "edition": "Obadiah: London: Printed by T.R. and E.M. for George Calvert, 1649 [i.e. 1650]. Habakkuk: London: Printed by T.R. and E.M. for Octavian Pullen, 1650. 2 vols.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "Obadiah",
+     "contents": "Verses 1 to 21, with the epistle dedicatory",
+     "format": "epub",
+     "path": "edward-marbury/commentaries-upon-obadiah-and-habakkuk-vol-01.epub",
+     "size_bytes": 180504,
+     "source": "https://github.com/textcreationpartnership/A89517",
+     "text_quality": 0.998
+    },
+    {
+     "volume": 2,
+     "label": "Habakkuk",
+     "contents": "chapters 1 to 3, with the dedication and the alphabetical table of heads",
+     "format": "epub",
+     "path": "edward-marbury/commentaries-upon-obadiah-and-habakkuk-vol-02.epub",
+     "size_bytes": 512852,
+     "source": "https://github.com/textcreationpartnership/A51907",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "cotton-a-brief-exposition-of-the-whole-book-of-canticles",
+   "title": "A Brief Exposition of the Whole Book of Canticles, or Song of Solomon",
+   "author": "John Cotton",
+   "author_sort": "Cotton, John",
+   "author_dates": "1585–1652",
+   "tradition": "New England Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1642,
+   "edition": "London: Printed for Philip Nevil, 1642.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The whole exposition, Canticles chapters 1 to 8",
+     "format": "epub",
+     "path": "john-cotton/brief-exposition-of-the-whole-book-of-canticles.epub",
+     "size_bytes": 123651,
+     "source": "https://github.com/textcreationpartnership/A34663",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "lawson-expositions-of-ruth-and-esther",
+   "title": "Practical Expositions of the Whole Books of Ruth and Esther",
+   "author": "George Lawson",
+   "author_sort": "Lawson, George",
+   "author_dates": "1749–1820",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1805,
+   "edition": "Philadelphia: Wm. S. Rentoul, 1870.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "The publisher's preface, Belfrage's memoir of Lawson, twelve lectures on Ruth, sixteen discourses on Esther, and three sermons on the duty of parents to their children (Eph. 6:4)",
+     "format": "epub",
+     "path": "george-lawson/practical-expositions-of-the-whole-books-of-ruth-and-esther.epub",
+     "size_bytes": 398403,
+     "source": "https://archive.org/details/practicalexposit00laws",
+     "text_quality": 0.99
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "green-the-argument-of-the-book-of-job-unfolded",
+   "title": "The Argument of the Book of Job Unfolded",
+   "author": "William Henry Green",
+   "author_sort": "Green, William Henry",
+   "author_dates": "1825–1900",
+   "tradition": "American Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1874,
+   "edition": "New York: Robert Carter and Brothers, 1874.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface; chapters I-X (Job's Happy Estate to The Place of the Book of Job in the Scheme of Holy Scripture); Explanatory Note on the Doctrine of Immortality; Analysis of the Book of Job",
+     "format": "epub",
+     "path": "william-henry-green/argument-of-the-book-of-job-unfolded.epub",
+     "size_bytes": 149152,
+     "source": "https://archive.org/details/argumentofbookof00gree",
+     "text_quality": 0.995
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "blaikie-the-book-of-joshua",
+   "title": "The Book of Joshua (The Expositor's Bible)",
+   "author": "William Garden Blaikie",
+   "author_sort": "Blaikie, William Garden",
+   "author_dates": "1820–1899",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1893,
+   "edition": "London: Hodder and Stoughton, 1893 (The Expositor's Bible, ed. W. Robertson Nicoll).",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "",
+     "format": "epub",
+     "path": "william-garden-blaikie/book-of-joshua.epub",
+     "size_bytes": 379968,
+     "source": "https://www.gutenberg.org/ebooks/42319"
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Project Gutenberg"
+  },
+  {
+   "id": "alexander-the-gospel-according-to-matthew-explained",
+   "title": "The Gospel According to Matthew Explained",
+   "author": "Joseph Addison Alexander",
+   "author_sort": "Alexander, Joseph Addison",
+   "author_dates": "1809–1860",
+   "tradition": "American Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1861,
+   "edition": "New York: Charles Scribner, 1861.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface (S. D. A., December 1860); full commentary on Matthew 1-16; the author's analysis of chapters 17-28",
+     "format": "epub",
+     "path": "joseph-addison-alexander/gospel-according-to-matthew-explained.epub",
+     "size_bytes": 541148,
+     "source": "https://archive.org/details/gospelaccordin00alex",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "eadie-a-commentary-on-the-greek-text-of-the-epistle-to-the-galatians",
+   "title": "A Commentary on the Greek Text of the Epistle of Paul to the Galatians",
+   "author": "John Eadie",
+   "author_sort": "Eadie, John",
+   "author_dates": "1810–1876",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1869,
+   "edition": "Edinburgh: T. & T. Clark, 1869.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface; contents; Introduction (Galatia, the churches, the epistle, commentators); commentary on Galatians 1-6 with the separate essays and dissertations; translation of the epistle",
+     "format": "epub",
+     "path": "john-eadie/commentary-on-the-greek-text-of-the-epistle-of-paul-to-the-galatians.epub",
+     "size_bytes": 557310,
+     "source": "https://archive.org/details/commentaryongree00eadi",
+     "text_quality": 0.973
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "brown-the-resurrection-of-life",
+   "title": "The Resurrection of Life: An Exposition of First Corinthians XV",
+   "author": "John Brown of Edinburgh",
+   "author_sort": "Brown, John (of Edinburgh)",
+   "author_dates": "1784–1858",
+   "tradition": "Scottish Presbyterian",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1852,
+   "edition": "Edinburgh: William Oliphant and Co., 1866, second edition.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Preface (Dec. 1851); publishers' note to the second edition (March 1866); exposition of 1 Corinthians 15 in seven parts; Discourse on our Lord's Resurrection; Appendix nos. I-VII; four indexes",
+     "format": "epub",
+     "path": "john-brown-of-edinburgh/resurrection-of-life.epub",
+     "size_bytes": 314625,
+     "source": "https://archive.org/details/resurrectionofli00brow",
+     "text_quality": 0.977
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Internet Archive"
+  },
+  {
+   "id": "rollock-five-and-twenty-lectures-upon-the-last-sermon-of-christ",
+   "title": "Five and Twenty Lectures upon the Last Sermon and Conference of Our Lord Jesus Christ with His Disciples (John XIV–XVII)",
+   "author": "Robert Rollock",
+   "author_sort": "Rollock, Robert",
+   "author_dates": "c. 1555–1599",
+   "tradition": "Scottish Reformation & Covenanters",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1619,
+   "edition": "Edinburgh: Printed by Andro Hart, 1619.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Lectures 1 to 25 on John 14 to 17, with the epistle to Sir William Scot",
+     "format": "epub",
+     "path": "robert-rollock/five-and-twenty-lectures-upon-the-last-sermon-and.epub",
+     "size_bytes": 238246,
+     "source": "https://github.com/textcreationpartnership/A11006",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "arrowsmith-theanthropos-or-god-man",
+   "title": "Theanthropos, or, God-Man: Being an Exposition upon the First Eighteen Verses of the First Chapter of the Gospel according to St John",
+   "author": "John Arrowsmith",
+   "author_sort": "Arrowsmith, John",
+   "author_dates": "1602–1659",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1660,
+   "edition": "London: Printed for Humphrey Moseley and William Wilson, 1660.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "Exposition of John 1:1–18, with the address to the reader",
+     "format": "epub",
+     "path": "john-arrowsmith/theanthropos.epub",
+     "size_bytes": 286189,
+     "source": "https://github.com/textcreationpartnership/A75620",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "ames-an-analytical-exposition-of-both-the-epistles-of-peter",
+   "title": "An Analytical Exposition of Both the Epistles of the Apostle Peter",
+   "author": "William Ames",
+   "author_sort": "Ames, William",
+   "author_dates": "1576–1633",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1635,
+   "edition": "London: Printed by E.G. for John Rothwell, 1641.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "1 Peter chapters 1 to 5 and 2 Peter chapters 1 to 3",
+     "format": "epub",
+     "path": "william-ames/analytical-exposition-of-both-the-epistles-of-the-apostle.epub",
+     "size_bytes": 170727,
+     "source": "https://github.com/textcreationpartnership/A25280",
+     "text_quality": 0.998
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "leigh-annotations-upon-all-the-new-testament",
+   "title": "Annotations upon All the New Testament, Philological and Theological",
+   "author": "Edward Leigh",
+   "author_sort": "Leigh, Edward",
+   "author_dates": "1603–1671",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1650,
+   "edition": "London: Printed by W.W. and E.G. for William Lee, 1650.",
+   "files": [
+    {
+     "volume": 1,
+     "label": "",
+     "contents": "Annotations on Matthew to Revelation, with the dedication to Oxford, the address to the reader, the Review of the whole work, the alphabetical table, the catalogue of Greek words and the errata",
+     "format": "epub",
+     "path": "edward-leigh/annotations-upon-all-the-new-testament-philological-and-vol-01.epub",
+     "size_bytes": 935825,
+     "source": "https://github.com/textcreationpartnership/A50050",
+     "text_quality": 0.993
+    }
+   ],
+   "links": [
+    {
+     "volume": 2,
+     "label": "Page images of the 1650 printing",
+     "contents": "Scan of the same 1650 folio, for checking the Greek left out of the transcription and three missing pages",
+     "url": "https://archive.org/details/bim_early-english-books-1641-1700_annotations-upon-all-the_leigh-edward_1650",
+     "why": "old printing, kept at archive.org"
+    }
+   ],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "dyke-a-fruitful-exposition-upon-philemon",
+   "title": "Two Treatises: The One, A Most Fruitful Exposition upon Philemon; The Other, The School of Affliction",
+   "author": "Daniel Dyke",
+   "author_sort": "Dyke, Daniel",
+   "author_dates": "d. 1614",
+   "tradition": "English Puritan",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1618,
+   "edition": "London: Printed by G. Purslowe and W. Stansby for Robert Mylbourne, 1618.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "A Commentary upon the Epistle to Philemon (verses 1–25), with the dedication to Lucy, Countess of Bedford; and The School of Affliction (Psalm 94:12)",
+     "format": "epub",
+     "path": "daniel-dyke/two-treatises-philemon-and-the-schoole-of-affliction.epub",
+     "size_bytes": 228148,
+     "source": "https://github.com/textcreationpartnership/A21041",
+     "text_quality": 1.0
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
+  },
+  {
+   "id": "daille-sermons-upon-the-epistle-to-the-colossians",
+   "title": "XLIX Sermons upon the Whole Epistle of the Apostle St. Paul to the Colossians",
+   "author": "Jean Daillé",
+   "author_sort": "Daillé, Jean",
+   "author_dates": "1594–1670",
+   "tradition": "Continental Reformed Orthodoxy",
+   "category": "Commentaries",
+   "tier": "further",
+   "first_published": 1672,
+   "edition": "Translated by F.S. London: Printed by R. White for Thomas Parkhurst, 1672.",
+   "files": [
+    {
+     "volume": null,
+     "label": "",
+     "contents": "All 49 sermons in three parts: Part 1, chapter 1 (Sermons 1–15); Part 2, chapter 2 (Sermons 16–31); Part 3, chapters 3–4 (Sermons 32–49), each with its own title page and dedication",
+     "format": "epub",
+     "path": "jean-daill/xlix-sermons-upon-the-whole-epistle-of-the-apostle-st-paul.epub",
+     "size_bytes": 760056,
+     "source": "https://github.com/textcreationpartnership/A35753",
+     "text_quality": 0.999
+    }
+   ],
+   "links": [],
+   "notes": "",
+   "source": "Text Creation Partnership"
   }
  ],
  "not_found": [
-  {
-   "id": "burroughs-the-evil-of-evils-or-the-exceeding-sinfulness-of-sin",
-   "note": "No printing from before 1931 is scanned on archive.org, including EEBO. None was found by title, by the 'Eighth Book of "
-  },
-  {
-   "id": "hutcheson-an-exposition-of-the-gospel-according-to-john",
-   "note": "The auto pick was the wrong work (the Small Prophets). No public domain printing is on archive.org, Gutenberg or Standar"
-  },
   {
    "id": "ryle-thoughts-for-young-men",
    "note": "The auto pick (Expository Thoughts on the Gospels) was wrong. The work was first issued as the tract 'Young Men Exhorted"
