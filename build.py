@@ -43,6 +43,9 @@ SITE_URL = "https://gentleking.org"
 
 REPO_URL = "https://github.com/z3r0Colt/gentleking.github.io"
 
+# Where the Donate button in the footer goes.
+DONATE_URL = "https://buymeacoffee.com/gentlekingministry"
+
 # The Bible study software.
 APP_NAME = "Sojourner"
 APP_FULL = "Sojourner, Bible Study Companion"
@@ -432,6 +435,8 @@ FOOTER = """<footer class="site-footer">
           <li><a href="software.html">Sojourner</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
+        <p class="footer-head footer-give">Give</p>
+        <a class="btn btn-primary" href="{donate_url}" target="_blank" rel="noopener">Donate</a>
       </div>
       <div>
         <p class="footer-head">Elsewhere</p>
@@ -892,7 +897,8 @@ def build_page(page, dates):
         parts.append(toc_html(body))
     parts.append(body)
     parts.append("\n</main>\n\n")
-    parts.append(render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE))
+    parts.append(render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
+                        donate_url=DONATE_URL))
 
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())

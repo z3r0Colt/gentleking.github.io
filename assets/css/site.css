@@ -794,6 +794,7 @@ blockquote { margin: 2rem 0; }
   text-decoration: none;
 }
 .footer-links a:hover { color: var(--gold); }
+.footer-give { margin-top: 1.7rem; }
 
 .footer-base {
   display: flex;
