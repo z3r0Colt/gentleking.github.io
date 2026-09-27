@@ -929,7 +929,10 @@ WELCOME_CRAWLERS = [
 # Pages serves this repository as it stands, so the files that build the site
 # sit next to it. A raw content fragment is half a page, and the README is
 # notes for whoever edits the site, so keep crawlers on the pages themselves.
-NOT_PAGES = ["/content/", "/.github/", "/README.md", "/brand/README.md", "/build.py", "/check.py"]
+NOT_PAGES = [
+    "/content/", "/.github/", "/README.md", "/brand/README.md", "/resources/README.md",
+    "/build.py", "/check.py",
+]
 
 
 def build_sitemap(dates):

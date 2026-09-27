@@ -29,6 +29,7 @@ Disallow: /content/
 Disallow: /.github/
 Disallow: /README.md
 Disallow: /brand/README.md
+Disallow: /resources/README.md
 Disallow: /build.py
 Disallow: /check.py
 
