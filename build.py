@@ -966,17 +966,32 @@ def read_href(path):
     return f"{READER}?book=library/{path}"
 
 
-def file_links(f, described_by):
+# A book made by machine from a scan can come out jumbled where a page has two
+# columns, side notes, or footnotes. For those, Read opens the scanned pages
+# themselves at the Internet Archive, and the EPUB is offered as a download
+# that says what it is. The reader here is kept for the clean texts.
+SCANNED = "Internet Archive"
+
+
+def file_links(f, described_by, scanned=False):
     """The Read and Download links for one file. A screen reader hears the
     book's title with each, from the ids given, since a page of links all
     called Read tells it nothing."""
     e = html.escape
     kind = f["format"].upper()
+    size = size_label(f["size_bytes"])
+    if scanned and f.get("source"):
+        return (
+            f'<a class="lib-read" href="{e(f["source"])}" target="_blank" rel="noopener" '
+            f'aria-describedby="{described_by}">Read the scan</a>'
+            f'<a class="lib-dl" href="resources/library/{e(f["path"])}" download aria-describedby="{described_by}">'
+            f'Download {kind} <span>made by machine, {size}</span></a>'
+        )
     read_word = "Open PDF" if f["format"] == "pdf" else "Read"
     return (
         f'<a class="lib-read" href="{e(read_href(f["path"]))}" aria-describedby="{described_by}">{read_word}</a>'
         f'<a class="lib-dl" href="resources/library/{e(f["path"])}" download aria-describedby="{described_by}">'
-        f'Download {kind} <span>{size_label(f["size_bytes"])}</span></a>'
+        f'Download {kind} <span>{size}</span></a>'
     )
 
 
@@ -988,7 +1003,7 @@ def scan_link(link, described_by, text="Scan at the Internet Archive"):
     )
 
 
-def volume_rows(entries, tid):
+def volume_rows(entries, tid, scanned=False):
     """A list of volumes, each a file to read or a scan kept at the Internet
     Archive, in volume order. Past four it folds away behind a summary."""
     e = html.escape
@@ -997,7 +1012,7 @@ def volume_rows(entries, tid):
         label = item["label"] or (f"Volume {item['volume']}" if item.get("volume") else "The book")
         vid = f"{tid}v{i}"
         contents = f' <span class="lib-vol-contents">{e(item["contents"])}</span>' if item.get("contents") else ""
-        action = file_links(item, f"{tid} {vid}") if kind == "file" else scan_link(item, f"{tid} {vid}")
+        action = file_links(item, f"{tid} {vid}", scanned) if kind == "file" else scan_link(item, f"{tid} {vid}")
         rows.append(
             f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>{contents}'
             f'<span class="lib-actions">{action}</span></li>'
@@ -1046,14 +1061,15 @@ def library_item(work, by_id, n):
         out.append(f'<p class="lib-note">{e(work["notes"])}</p>')
 
     files, links = work["files"], work["links"]
+    scanned = work.get("source") == SCANNED
     if len(files) == 1 and not links:
-        out.append(f'<p class="lib-actions">{file_links(files[0], tid)}</p>')
+        out.append(f'<p class="lib-actions">{file_links(files[0], tid, scanned)}</p>')
     elif files:
         # A volume or some pages kept only as a scan sit among the files,
         # in volume order, so a missing part is found where it belongs.
         entries = [("file", f) for f in files] + [("scan", l) for l in links]
         entries.sort(key=lambda kv: kv[1].get("volume") or 0)
-        out.append(volume_rows(entries, tid))
+        out.append(volume_rows(entries, tid, scanned))
     elif len(links) == 1:
         out.append(
             '<p class="lib-scan">Only a scan of an old printing is online for now. '
@@ -1074,12 +1090,14 @@ def library_item(work, by_id, n):
         out.append(
             f'<p class="lib-in">Printed in <a href="#book-{e(parent["id"])}">{e(parent["title"])}</a>{where}.</p>'
         )
-        parent_files = {f["path"]: f for f in by_id[parent["id"]]["files"]}
+        host = by_id[parent["id"]]
+        host_scanned = host.get("source") == SCANNED
+        parent_files = {f["path"]: f for f in host["files"]}
         found = [parent_files[p] for p in parent.get("paths", []) if p in parent_files]
         if len(found) == 1:
-            out.append(f'<p class="lib-actions">{file_links(found[0], tid)}</p>')
+            out.append(f'<p class="lib-actions">{file_links(found[0], tid, host_scanned)}</p>')
         elif found:
-            out.append(volume_rows([("file", f) for f in found], tid))
+            out.append(volume_rows([("file", f) for f in found], tid, host_scanned))
 
     if topics:
         out.append(f'<p class="lib-tags">{" · ".join(e(t) for t in topics)}</p>')

@@ -68,8 +68,11 @@ MB, so the library is kept as EPUB, which runs under a megabyte a volume. The fe
 PDFs here are small ones. Keep the total for the whole site under 1 GB when adding
 to it.
 
-**Reading an EPUB.** The Resources page on the site lists every book, with a Read
-button that opens it right in the browser and a Download button for a reading app.
+**Reading an EPUB.** The Resources page on the site lists every book. For the books
+made by machine from scans, Read opens the scanned pages at the Internet Archive,
+because the machine-read text can come out jumbled where a page has two columns,
+side notes, or footnotes. For the clean texts, Read opens the book right in the
+browser. Every book has a Download button for a reading app.
 On a phone, Apple Books, ReadEra, and Google Play Books open them. On a computer,
 Thorium Reader, Calibre, Foliate on Linux, or Apple Books on a Mac. Sojourner can
 add them to its library too.
