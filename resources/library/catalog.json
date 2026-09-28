@@ -2,7 +2,7 @@
  "name": "The Gentle King Library",
  "description": "Public domain Puritan and confessionally Reformed works, gathered for gentleking.org.",
  "generated": "2026-09-28",
- "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. The Berean Bibles were dedicated to the public domain by their translators in 2023. Project Gutenberg books keep the Gutenberg license inside them.",
+ "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from CCEL are the typed texts of the Christian Classics Ethereal Library (ccel.org), shared here by its permission. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. The Berean Bibles were dedicated to the public domain by their translators in 2023. Project Gutenberg books keep the Gutenberg license inside them.",
  "paths": "Every path is relative to this file's folder.",
  "categories": [
   "Bibles",
@@ -126,9 +126,8 @@
      "contents": "The history of creeds: a doctrinal history of the Church as set out in its public standards. It covers the ecumenical creeds, the Greek and Roman creeds (with the Vatican Council and papal infallibility), the Lutheran and Reformed (Zwinglian and Calvinistic) confessions, the Anglican articles, the Westminster Assembly and Standards, and later Protestant creeds. Index to vol. I.",
      "format": "epub",
      "path": "philip-schaff/creeds-of-christendom-volume-1.epub",
-     "size_bytes": 1167521,
-     "source": "https://archive.org/details/creedsofchriste01scha",
-     "text_quality": 0.947
+     "size_bytes": 1975392,
+     "source": "https://ccel.org/ccel/schaff/creeds1"
     }
    ],
    "links": [],
@@ -141,7 +140,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Schaff's doctrinal history of the church's creeds, from the ancient ecumenical symbols through Roman, Lutheran, Reformed, and later Protestant confessions.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "schaff-creeds-3",
@@ -161,9 +160,8 @@
      "contents": "The Evangelical Protestant creeds in their original languages, with English translations. Lutheran: Augsburg Confession, Luther's Small Catechism, Formula of Concord, Saxon Visitation Articles. Reformed: Zwingli's Sixty-seven Articles, Ten Theses of Berne, First and Second Helvetic Confessions, Heidelberg Catechism, Gallican and Belgic Confessions, First and Second Scotch Confessions, Thirty-Nine Articles, Anglican Catechism, Lambeth and Irish Articles, Arminian Articles, Canons of Dort, Westminster Confession and Shorter Catechism. Modern Protestant creeds: Savoy Declaration, Baptist Confession of 1688, Waldensian Confession, Methodist Articles, Evangelical Alliance, and others. Index.",
      "format": "epub",
      "path": "philip-schaff/creeds-of-christendom-volume-3.epub",
-     "size_bytes": 890257,
-     "source": "https://archive.org/details/creedsofchriste03scha",
-     "text_quality": 0.832
+     "size_bytes": 2615475,
+     "source": "https://ccel.org/ccel/schaff/creeds3"
     }
    ],
    "links": [],
@@ -176,7 +174,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "The Protestant confessions from Augsburg and Heidelberg to Dort and Westminster, in their original languages with English translations.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "heidelberg-catechism",
@@ -843,9 +841,8 @@
      "contents": "Genesis 1–23 (tr. John King)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-01.epub",
-     "size_bytes": 532562,
-     "source": "https://archive.org/details/commentariesonfi01calvuoft",
-     "text_quality": 0.973
+     "size_bytes": 1016529,
+     "source": "https://ccel.org/ccel/calvin/calcom01"
     },
     {
      "volume": 2,
@@ -853,9 +850,8 @@
      "contents": "Genesis 24–50",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-02.epub",
-     "size_bytes": 523624,
-     "source": "https://archive.org/details/commentariesonfi02calvuoft",
-     "text_quality": 0.966
+     "size_bytes": 825306,
+     "source": "https://ccel.org/ccel/calvin/calcom02"
     },
     {
      "volume": 3,
@@ -863,9 +859,8 @@
      "contents": "Commentaries on the four last books of Moses arranged as a harmony, part 1 (tr. C. W. Bingham)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-03.epub",
-     "size_bytes": 487476,
-     "source": "https://archive.org/details/fourbooksofmoses01calvuoft",
-     "text_quality": 0.967
+     "size_bytes": 1003785,
+     "source": "https://ccel.org/ccel/calvin/calcom03"
     },
     {
      "volume": 4,
@@ -873,9 +868,8 @@
      "contents": "Four last books of Moses in harmony, part 2",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-04.epub",
-     "size_bytes": 441121,
-     "source": "https://archive.org/details/fourbooksofmoses02calvuoft",
-     "text_quality": 0.944
+     "size_bytes": 988618,
+     "source": "https://ccel.org/ccel/calvin/calcom04"
     },
     {
      "volume": 5,
@@ -883,9 +877,8 @@
      "contents": "Four last books of Moses in harmony, part 3",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-05.epub",
-     "size_bytes": 437654,
-     "source": "https://archive.org/details/fourbooksofmoses03calvuoft",
-     "text_quality": 0.948
+     "size_bytes": 970479,
+     "source": "https://ccel.org/ccel/calvin/calcom05"
     },
     {
      "volume": 6,
@@ -893,19 +886,17 @@
      "contents": "Four last books of Moses in harmony, part 4",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-06.epub",
-     "size_bytes": 420060,
-     "source": "https://archive.org/details/commentariesonf04calv",
-     "text_quality": 0.953
+     "size_bytes": 765893,
+     "source": "https://ccel.org/ccel/calvin/calcom06"
     },
     {
      "volume": 7,
      "label": "Joshua",
-     "contents": "Joshua (tr. Henry Beveridge), with Tholuck's dissertation",
+     "contents": "Joshua (tr. Henry Beveridge)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-07.epub",
-     "size_bytes": 497307,
-     "source": "https://archive.org/details/commentariesjosh00calvuoft",
-     "text_quality": 0.947
+     "size_bytes": 704394,
+     "source": "https://ccel.org/ccel/calvin/calcom07"
     },
     {
      "volume": 8,
@@ -913,9 +904,8 @@
      "contents": "Psalms 1–35 (tr. James Anderson)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-08.epub",
-     "size_bytes": 581582,
-     "source": "https://archive.org/details/commentaryonbook01calvuoft",
-     "text_quality": 0.988
+     "size_bytes": 1421443,
+     "source": "https://ccel.org/ccel/calvin/calcom08"
     },
     {
      "volume": 9,
@@ -923,9 +913,8 @@
      "contents": "Psalms 36–66",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-09.epub",
-     "size_bytes": 438068,
-     "source": "https://archive.org/details/commentaryonbook02calvuoft",
-     "text_quality": 0.99
+     "size_bytes": 967177,
+     "source": "https://ccel.org/ccel/calvin/calcom09"
     },
     {
      "volume": 10,
@@ -933,9 +922,8 @@
      "contents": "Psalms 67–92",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-10.epub",
-     "size_bytes": 485994,
-     "source": "https://archive.org/details/gtu_A32400006316545B_10",
-     "text_quality": 0.99
+     "size_bytes": 1008717,
+     "source": "https://ccel.org/ccel/calvin/calcom10"
     },
     {
      "volume": 11,
@@ -943,9 +931,8 @@
      "contents": "Psalms 93–119",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-11.epub",
-     "size_bytes": 462843,
-     "source": "https://archive.org/details/calvinscommentar0011calv",
-     "text_quality": 0.992
+     "size_bytes": 982260,
+     "source": "https://ccel.org/ccel/calvin/calcom11"
     },
     {
      "volume": 12,
@@ -953,9 +940,8 @@
      "contents": "Psalms 119 (continued)–150",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-12.epub",
-     "size_bytes": 516864,
-     "source": "https://archive.org/details/calvinscommentar0012calv",
-     "text_quality": 0.99
+     "size_bytes": 1054933,
+     "source": "https://ccel.org/ccel/calvin/calcom12"
     },
     {
      "volume": 13,
@@ -963,9 +949,8 @@
      "contents": "Isaiah 1–16 (tr. William Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-13.epub",
-     "size_bytes": 432153,
-     "source": "https://archive.org/details/commentaryonisai01calvuoft",
-     "text_quality": 0.982
+     "size_bytes": 821053,
+     "source": "https://ccel.org/ccel/calvin/calcom13"
     },
     {
      "volume": 14,
@@ -973,9 +958,8 @@
      "contents": "Isaiah 17–32 (the society's ninth annual report is bound in at the front)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-14.epub",
-     "size_bytes": 430918,
-     "source": "https://archive.org/details/9thcommentaryonbo02calv",
-     "text_quality": 0.981
+     "size_bytes": 796881,
+     "source": "https://ccel.org/ccel/calvin/calcom14"
     },
     {
      "volume": 15,
@@ -983,9 +967,8 @@
      "contents": "Isaiah 33–48",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-15.epub",
-     "size_bytes": 458920,
-     "source": "https://archive.org/details/commentaryonisai03calvuoft",
-     "text_quality": 0.982
+     "size_bytes": 815562,
+     "source": "https://ccel.org/ccel/calvin/calcom15"
     },
     {
      "volume": 16,
@@ -993,9 +976,8 @@
      "contents": "Isaiah 49–66",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-16.epub",
-     "size_bytes": 464167,
-     "source": "https://archive.org/details/commentaryonbook04calvuoft",
-     "text_quality": 0.98
+     "size_bytes": 765129,
+     "source": "https://ccel.org/ccel/calvin/calcom16"
     },
     {
      "volume": 17,
@@ -1003,9 +985,8 @@
      "contents": "Jeremiah 1–9 (tr. John Owen)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-17.epub",
-     "size_bytes": 479461,
-     "source": "https://archive.org/details/commentariesonbo01calvuoft",
-     "text_quality": 0.98
+     "size_bytes": 1392960,
+     "source": "https://ccel.org/ccel/calvin/calcom17"
     },
     {
      "volume": 18,
@@ -1013,9 +994,8 @@
      "contents": "Jeremiah 10–19",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-18.epub",
-     "size_bytes": 439888,
-     "source": "https://archive.org/details/commentariesonbo02calvuoft",
-     "text_quality": 0.984
+     "size_bytes": 1059636,
+     "source": "https://ccel.org/ccel/calvin/calcom18"
     },
     {
      "volume": 19,
@@ -1023,9 +1003,8 @@
      "contents": "Jeremiah 20–29",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-19.epub",
-     "size_bytes": 432283,
-     "source": "https://archive.org/details/commentariesonbo03calvuoft",
-     "text_quality": 0.981
+     "size_bytes": 1080196,
+     "source": "https://ccel.org/ccel/calvin/calcom19"
     },
     {
      "volume": 20,
@@ -1033,9 +1012,8 @@
      "contents": "Jeremiah 30–47",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-20.epub",
-     "size_bytes": 558497,
-     "source": "https://archive.org/details/calvinscommentar0004calv",
-     "text_quality": 0.979
+     "size_bytes": 1361236,
+     "source": "https://ccel.org/ccel/calvin/calcom20"
     },
     {
      "volume": 21,
@@ -1043,9 +1021,8 @@
      "contents": "Jeremiah 48–52; Lamentations",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-21.epub",
-     "size_bytes": 492283,
-     "source": "https://archive.org/details/commentariesonbo05calvuoft",
-     "text_quality": 0.978
+     "size_bytes": 1341607,
+     "source": "https://ccel.org/ccel/calvin/calcom21"
     },
     {
      "volume": 22,
@@ -1053,9 +1030,8 @@
      "contents": "Ezekiel 1–12 (tr. Thomas Myers)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-22.epub",
-     "size_bytes": 368717,
-     "source": "https://archive.org/details/commentariesonez01calvuoft",
-     "text_quality": 0.98
+     "size_bytes": 948828,
+     "source": "https://ccel.org/ccel/calvin/calcom22"
     },
     {
      "volume": 23,
@@ -1063,9 +1039,8 @@
      "contents": "Ezekiel 13–20",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-23.epub",
-     "size_bytes": 399031,
-     "source": "https://archive.org/details/commentariesonez02calvuoft",
-     "text_quality": 0.98
+     "size_bytes": 1029491,
+     "source": "https://ccel.org/ccel/calvin/calcom23"
     },
     {
      "volume": 24,
@@ -1073,9 +1048,8 @@
      "contents": "Daniel 1–6 (tr. Thomas Myers)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-24.epub",
-     "size_bytes": 412414,
-     "source": "https://archive.org/details/commentariesonda01calvuoft",
-     "text_quality": 0.979
+     "size_bytes": 961879,
+     "source": "https://ccel.org/ccel/calvin/calcom24"
     },
     {
      "volume": 25,
@@ -1083,9 +1057,8 @@
      "contents": "Daniel 7–12",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-25.epub",
-     "size_bytes": 460621,
-     "source": "https://archive.org/details/commentariesonda02calvuoft",
-     "text_quality": 0.98
+     "size_bytes": 999852,
+     "source": "https://ccel.org/ccel/calvin/calcom25"
     },
     {
      "volume": 26,
@@ -1093,9 +1066,8 @@
      "contents": "Hosea (tr. John Owen)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-26.epub",
-     "size_bytes": 476601,
-     "source": "https://archive.org/details/commentariesontw01calvuoft",
-     "text_quality": 0.985
+     "size_bytes": 1045376,
+     "source": "https://ccel.org/ccel/calvin/calcom26"
     },
     {
      "volume": 27,
@@ -1103,9 +1075,8 @@
      "contents": "Joel, Amos, Obadiah",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-27.epub",
-     "size_bytes": 434055,
-     "source": "https://archive.org/details/commentariesontw02calvuoft",
-     "text_quality": 0.982
+     "size_bytes": 1020662,
+     "source": "https://ccel.org/ccel/calvin/calcom27"
     },
     {
      "volume": 28,
@@ -1113,9 +1084,8 @@
      "contents": "Jonah, Micah, Nahum",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-28.epub",
-     "size_bytes": 466115,
-     "source": "https://archive.org/details/commentariesont03calv",
-     "text_quality": 0.981
+     "size_bytes": 1076809,
+     "source": "https://ccel.org/ccel/calvin/calcom28"
     },
     {
      "volume": 29,
@@ -1123,9 +1093,8 @@
      "contents": "Habakkuk, Zephaniah, Haggai",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-29.epub",
-     "size_bytes": 341274,
-     "source": "https://archive.org/details/commentariesontw04calvuoft",
-     "text_quality": 0.984
+     "size_bytes": 880440,
+     "source": "https://ccel.org/ccel/calvin/calcom29"
     },
     {
      "volume": 30,
@@ -1133,9 +1102,8 @@
      "contents": "Zechariah, Malachi",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-30.epub",
-     "size_bytes": 622912,
-     "source": "https://archive.org/details/commentariesontw05calvuoft",
-     "text_quality": 0.985
+     "size_bytes": 1301017,
+     "source": "https://ccel.org/ccel/calvin/calcom30"
     },
     {
      "volume": 31,
@@ -1143,9 +1111,8 @@
      "contents": "Harmony of Matthew, Mark and Luke, part 1 (tr. William Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-31.epub",
-     "size_bytes": 437205,
-     "source": "https://archive.org/details/harmonyrevelatio01calvuoft",
-     "text_quality": 0.989
+     "size_bytes": 1220244,
+     "source": "https://ccel.org/ccel/calvin/calcom31"
     },
     {
      "volume": 32,
@@ -1153,9 +1120,8 @@
      "contents": "Harmony of Matthew, Mark and Luke, part 2",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-32.epub",
-     "size_bytes": 395748,
-     "source": "https://archive.org/details/harmonyrevelatio02calvuoft",
-     "text_quality": 0.99
+     "size_bytes": 896048,
+     "source": "https://ccel.org/ccel/calvin/calcom32"
     },
     {
      "volume": 33,
@@ -1163,9 +1129,8 @@
      "contents": "Harmony of Matthew, Mark and Luke, part 3",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-33.epub",
-     "size_bytes": 364284,
-     "source": "https://archive.org/details/harmonyofevangel03calvuoft",
-     "text_quality": 0.993
+     "size_bytes": 746533,
+     "source": "https://ccel.org/ccel/calvin/calcom33"
     },
     {
      "volume": 34,
@@ -1173,9 +1138,8 @@
      "contents": "John 1–11 (tr. William Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-34.epub",
-     "size_bytes": 381251,
-     "source": "https://archive.org/details/commentaryongosp01calvuoft",
-     "text_quality": 0.994
+     "size_bytes": 833389,
+     "source": "https://ccel.org/ccel/calvin/calcom34"
     },
     {
      "volume": 35,
@@ -1183,9 +1147,8 @@
      "contents": "John 12–21",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-35.epub",
-     "size_bytes": 290241,
-     "source": "https://archive.org/details/commentaryongosp02calvuoft",
-     "text_quality": 0.993
+     "size_bytes": 635711,
+     "source": "https://ccel.org/ccel/calvin/calcom35"
     },
     {
      "volume": 36,
@@ -1193,9 +1156,8 @@
      "contents": "Acts 1–13 (Fetherstone's translation, ed. Henry Beveridge)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-36.epub",
-     "size_bytes": 452910,
-     "source": "https://archive.org/details/commentaryuponth01calvuoft",
-     "text_quality": 0.983
+     "size_bytes": 905154,
+     "source": "https://ccel.org/ccel/calvin/calcom36"
     },
     {
      "volume": 37,
@@ -1203,9 +1165,8 @@
      "contents": "Acts 14–28",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-37.epub",
-     "size_bytes": 367843,
-     "source": "https://archive.org/details/commentaryuponth02calvuoft",
-     "text_quality": 0.985
+     "size_bytes": 760586,
+     "source": "https://ccel.org/ccel/calvin/calcom37"
     },
     {
      "volume": 38,
@@ -1213,9 +1174,8 @@
      "contents": "Romans (tr. John Owen)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-38.epub",
-     "size_bytes": 575308,
-     "source": "https://archive.org/details/commentariesonth00calvuoft",
-     "text_quality": 0.982
+     "size_bytes": 1127339,
+     "source": "https://ccel.org/ccel/calvin/calcom38"
     },
     {
      "volume": 39,
@@ -1223,9 +1183,8 @@
      "contents": "1 Corinthians 1–14 (tr. John Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-39.epub",
-     "size_bytes": 435436,
-     "source": "https://archive.org/details/commentaryonepis01calvuoft",
-     "text_quality": 0.974
+     "size_bytes": 1049109,
+     "source": "https://ccel.org/ccel/calvin/calcom39"
     },
     {
      "volume": 40,
@@ -1233,9 +1192,8 @@
      "contents": "1 Corinthians 15–16; 2 Corinthians",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-40.epub",
-     "size_bytes": 444965,
-     "source": "https://archive.org/details/commentaryonepis02calv",
-     "text_quality": 0.964
+     "size_bytes": 875654,
+     "source": "https://ccel.org/ccel/calvin/calcom40"
     },
     {
      "volume": 41,
@@ -1243,19 +1201,17 @@
      "contents": "Galatians, Ephesians (tr. William Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-41.epub",
-     "size_bytes": 360023,
-     "source": "https://archive.org/details/commentariesonga00calvuoft",
-     "text_quality": 0.979
+     "size_bytes": 765523,
+     "source": "https://ccel.org/ccel/calvin/calcom41"
     },
     {
      "volume": 42,
      "label": "Philippians, Colossians and Thessalonians",
-     "contents": "Philippians, Colossians, 1–2 Thessalonians (tr. John Pringle); with Calvin's Four Sermons and a commentary on Psalm 87 (tr. Henry Beveridge)",
+     "contents": "Philippians, Colossians, 1–2 Thessalonians (tr. John Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-42.epub",
-     "size_bytes": 435814,
-     "source": "https://archive.org/details/commentariesonph00calvuoft",
-     "text_quality": 0.977
+     "size_bytes": 836148,
+     "source": "https://ccel.org/ccel/calvin/calcom42"
     },
     {
      "volume": 43,
@@ -1263,9 +1219,8 @@
      "contents": "1–2 Timothy, Titus, Philemon (tr. William Pringle)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-43.epub",
-     "size_bytes": 355766,
-     "source": "https://archive.org/details/commentariesonep00calvuoft",
-     "text_quality": 0.985
+     "size_bytes": 772590,
+     "source": "https://ccel.org/ccel/calvin/calcom43"
     },
     {
      "volume": 44,
@@ -1273,9 +1228,8 @@
      "contents": "Hebrews (tr. John Owen)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-44.epub",
-     "size_bytes": 430904,
-     "source": "https://archive.org/details/commentariesowentran00calv",
-     "text_quality": 0.977
+     "size_bytes": 873854,
+     "source": "https://ccel.org/ccel/calvin/calcom44"
     },
     {
      "volume": 45,
@@ -1283,12 +1237,26 @@
      "contents": "1 Peter, 1 John, James, 2 Peter, Jude (tr. John Owen)",
      "format": "epub",
      "path": "john-calvin/commentaries-vol-45.epub",
-     "size_bytes": 479340,
-     "source": "https://archive.org/details/commentariesonca00calvuoft",
-     "text_quality": 0.965
+     "size_bytes": 949030,
+     "source": "https://ccel.org/ccel/calvin/calcom45"
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "volume": 7,
+     "label": "Joshua, the added pieces",
+     "contents": "Tholuck's dissertation on Calvin as an interpreter, with the testimonies to Calvin and the list of his works, as bound in this volume",
+     "url": "https://archive.org/details/commentariesjosh00calvuoft",
+     "why": "not in the CCEL text, kept at archive.org"
+    },
+    {
+     "volume": 42,
+     "label": "Four Sermons and Psalm 87",
+     "contents": "Calvin's Four Sermons and his commentary on Psalm 87 (tr. Henry Beveridge), as bound in this volume",
+     "url": "https://archive.org/details/commentariesonph00calvuoft",
+     "why": "not in the CCEL text, kept at archive.org"
+    }
+   ],
    "notes": "",
    "start": false,
    "topics": [
@@ -1330,7 +1298,7 @@
    ],
    "passage": "the Law, Joshua, Psalms, the Prophets, the Gospels, Acts, Romans, and Corinthians",
    "blurb": "Calvin's careful verse by verse exposition of much of the Bible, a trusted guide for pastors and serious Bible readers.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "calvin-tracts-relating-to-the-reformation",
@@ -3517,9 +3485,8 @@
      "contents": "Of the Mortification of Sin in Believers (1656): W. H. Goold's prefatory note, Owen's preface, and chapters I-XIV, pp. 141-306 of the combined volume. The first part of the volume, Of Temptation, is left out.",
      "format": "epub",
      "path": "john-owen/of-the-mortification-of-sin-in-believers.epub",
-     "size_bytes": 108598,
-     "source": "https://archive.org/details/ontemptationmort00owen",
-     "text_quality": 0.992
+     "size_bytes": 391039,
+     "source": "https://ccel.org/ccel/owen/mort"
     }
    ],
    "links": [],
@@ -3533,7 +3500,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen's searching guide to putting indwelling sin to death by the power of the Spirit, pointing weary believers to Christ.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-the-death-of-death-in-the-death-of-christ",
@@ -3553,9 +3520,8 @@
      "contents": "The Death of Death in the Death of Christ, complete in four books, with the dedication to the Earl of Warwick, the two attestations, To the Reader, A Few Testimonies of the Ancients, the appendix on errors published by Joshua Sprigge, and the Vindication from the exceptions and objections of Richard Baxter (Of the Death of Christ, 1650); indexes",
      "format": "epub",
      "path": "john-owen/death-of-death-in-the-death-of-christ.epub",
-     "size_bytes": 411992,
-     "source": "https://archive.org/details/saluselectorumsa00owen",
-     "text_quality": 0.986
+     "size_bytes": 880198,
+     "source": "https://ccel.org/ccel/owen/deathofdeath"
     }
    ],
    "links": [],
@@ -3569,7 +3535,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen's careful defense of particular redemption, arguing from Scripture that Christ's death actually saves all for whom he died.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-communion-with-god",
@@ -3589,9 +3555,8 @@
      "contents": "Of Communion with God the Father, Son, and Holy Ghost: title page, Goold's prefatory note, Owen's preface and To the Reader, Parts I–III (Works vol. 2, pp. 1–274)",
      "format": "epub",
      "path": "john-owen/communion-with-god.epub",
-     "size_bytes": 323154,
-     "source": "https://archive.org/details/worksofjohnowe185002owen",
-     "text_quality": 0.976
+     "size_bytes": 850621,
+     "source": "https://ccel.org/ccel/owen/communion"
     }
    ],
    "links": [],
@@ -3605,7 +3570,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen shows how believers enjoy distinct fellowship with the Father in love, the Son in grace, and the Spirit in comfort.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-the-glory-of-christ",
@@ -3625,9 +3590,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-owen/glory-of-christ.epub",
-     "size_bytes": 505235,
-     "source": "https://archive.org/details/gloriousmysteryo00owen",
-     "text_quality": 0.99
+     "size_bytes": 624594,
+     "source": "https://ccel.org/ccel/owen/glory"
     }
    ],
    "links": [],
@@ -3641,7 +3605,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen's last meditations, written as he neared death, on beholding Christ's glory by faith now and by sight in heaven.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "goodwin-the-works-of-thomas-goodwin",
@@ -4599,9 +4563,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-flavel/keeping-the-heart.epub",
-     "size_bytes": 115372,
-     "source": "https://archive.org/details/keepingheartorsa00flav",
-     "text_quality": 0.991
+     "size_bytes": 419949,
+     "source": "https://ccel.org/ccel/flavel/saintindeed"
     }
    ],
    "links": [],
@@ -4615,7 +4578,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Flavel's practical guide to guarding the heart before God in prosperity, affliction, danger, temptation, and times of spiritual darkness.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "baxter-the-practical-works-of-richard-baxter",
@@ -4701,9 +4664,8 @@
      "contents": "",
      "format": "epub",
      "path": "richard-baxter/saints-everlasting-rest.epub",
-     "size_bytes": 269257,
-     "source": "https://archive.org/details/saintseverlastin00bax",
-     "text_quality": 0.991
+     "size_bytes": 448577,
+     "source": "https://ccel.org/ccel/baxter/saints_rest"
     }
    ],
    "links": [],
@@ -4716,7 +4678,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Baxter's call to set the heart on heaven, with directions for regular heavenly meditation that strengthens faith in trials and dying.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "baxter-the-reformed-pastor",
@@ -4736,9 +4698,8 @@
      "contents": "",
      "format": "epub",
      "path": "richard-baxter/reformed-pastor.epub",
-     "size_bytes": 229490,
-     "source": "https://archive.org/details/reformedpastoror00baxt",
-     "text_quality": 0.995
+     "size_bytes": 350272,
+     "source": "https://ccel.org/ccel/baxter/pastor"
     }
    ],
    "links": [],
@@ -4751,7 +4712,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Baxter's searching charge to ministers to watch over their own souls and to catechize and care for every family in their flock.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "baxter-a-call-to-the-unconverted",
@@ -4771,9 +4732,8 @@
      "contents": "",
      "format": "epub",
      "path": "richard-baxter/call-to-the-unconverted.epub",
-     "size_bytes": 283843,
-     "source": "https://archive.org/details/calltounconverte00bax",
-     "text_quality": 0.988
+     "size_bytes": 368761,
+     "source": "https://ccel.org/ccel/baxter/unconverted"
     }
    ],
    "links": [],
@@ -4787,7 +4747,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Baxter's earnest plea, from Ezekiel 33, for sinners to turn and live, pressing God's willingness to save and the danger of delay.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "baxter-reliquiae-baxterianae-autobiography",
@@ -5374,9 +5334,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-bunyan/pilgrims-progress.epub",
-     "size_bytes": 312399,
-     "source": "https://archive.org/details/pilgrimsprogress028095mbp",
-     "text_quality": 0.991
+     "size_bytes": 699657,
+     "source": "https://ccel.org/ccel/bunyan/pilgrim"
     }
    ],
    "links": [],
@@ -5390,7 +5349,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Bunyan's allegory of Christian's journey from the City of Destruction to the Celestial City, loved by readers young and old for centuries.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "bunyan-grace-abounding-to-the-chief-of-sinners",
@@ -5445,9 +5404,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-bunyan/holy-war.epub",
-     "size_bytes": 375596,
-     "source": "https://archive.org/details/lifedeathofmrbad00bunyiala",
-     "text_quality": 0.977
+     "size_bytes": 444280,
+     "source": "https://ccel.org/ccel/bunyan/holy_war"
     }
    ],
    "links": [],
@@ -5460,7 +5418,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Bunyan's allegory of the town of Mansoul, seized by Diabolus and won back by Prince Emmanuel, picturing the soul's conversion and warfare.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "bunyan-the-life-and-death-of-mr-badman",
@@ -5480,9 +5438,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-bunyan/life-and-death-of-mr-badman.epub",
-     "size_bytes": 183671,
-     "source": "https://archive.org/details/lifedeathofmrbadm1900buny",
-     "text_quality": 0.994
+     "size_bytes": 773195,
+     "source": "https://ccel.org/ccel/bunyan/badman"
     }
    ],
    "links": [],
@@ -5495,7 +5452,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Bunyan's dialogue tracing a wicked man's life from boyhood to an unrepentant death, a sober warning against sin and hardness of heart.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "henry-an-exposition-of-the-old-and-new-testament-matthew-henry-s-commentary",
@@ -5515,9 +5472,8 @@
      "contents": "Life of Henry by Samuel Palmer; preface by Archibald Alexander; Genesis to Deuteronomy",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-01.epub",
-     "size_bytes": 2233857,
-     "source": "https://archive.org/details/expositionofoldn01henr",
-     "text_quality": 0.979
+     "size_bytes": 2752272,
+     "source": "https://ccel.org/ccel/henry/mhc1"
     },
     {
      "volume": 2,
@@ -5525,9 +5481,8 @@
      "contents": "Joshua to Esther",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-02.epub",
-     "size_bytes": 2426337,
-     "source": "https://archive.org/details/expositionofoldn02henr",
-     "text_quality": 0.988
+     "size_bytes": 3432046,
+     "source": "https://ccel.org/ccel/henry/mhc2"
     },
     {
      "volume": 3,
@@ -5535,9 +5490,8 @@
      "contents": "Job to the Song of Solomon",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-03.epub",
-     "size_bytes": 2466043,
-     "source": "https://archive.org/details/expositionofoldn03henr",
-     "text_quality": 0.981
+     "size_bytes": 3510292,
+     "source": "https://ccel.org/ccel/henry/mhc3"
     },
     {
      "volume": 4,
@@ -5545,9 +5499,8 @@
      "contents": "Isaiah to Malachi",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-04.epub",
-     "size_bytes": 3097136,
-     "source": "https://archive.org/details/expositionofoldn04henr",
-     "text_quality": 0.991
+     "size_bytes": 4338899,
+     "source": "https://ccel.org/ccel/henry/mhc4"
     },
     {
      "volume": 5,
@@ -5555,9 +5508,8 @@
      "contents": "Matthew to John",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-05.epub",
-     "size_bytes": 2899077,
-     "source": "https://archive.org/details/expositionofoldn05henr",
-     "text_quality": 0.958
+     "size_bytes": 3488213,
+     "source": "https://ccel.org/ccel/henry/mhc5"
     },
     {
      "volume": 6,
@@ -5565,9 +5517,8 @@
      "contents": "Acts to Revelation",
      "format": "epub",
      "path": "matthew-henry/exposition-of-the-old-and-new-testament-vol-06.epub",
-     "size_bytes": 2426354,
-     "source": "https://archive.org/details/expositionofoldn06henr",
-     "text_quality": 0.989
+     "size_bytes": 3374894,
+     "source": "https://ccel.org/ccel/henry/mhc6"
     }
    ],
    "links": [],
@@ -5581,7 +5532,7 @@
    ],
    "passage": "the whole Bible",
    "blurb": "Henry's warm, practical commentary on the whole Bible for everyday readers, finished from Romans onward by fellow ministers after his death.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "henry-a-method-for-prayer",
@@ -5899,9 +5850,8 @@
      "contents": "",
      "format": "epub",
      "path": "edward-fisher/marrow-of-modern-divinity.epub",
-     "size_bytes": 375828,
-     "source": "https://archive.org/details/marrowofmode00fish",
-     "text_quality": 0.992
+     "size_bytes": 757350,
+     "source": "https://ccel.org/ccel/fisher_e/marrow"
     }
    ],
    "links": [],
@@ -5915,7 +5865,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Fisher's dialogue on law, gospel, and the covenants of works and grace, with Boston's notes, central to Scotland's Marrow controversy.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "case-correction-instruction-or-the-rod-and-the-word",
@@ -6715,9 +6665,8 @@
      "contents": "",
      "format": "epub",
      "path": "henry-scougal/life-of-god-in-the-soul-of-man.epub",
-     "size_bytes": 58471,
-     "source": "https://archive.org/details/lifegodinsoulma00scougoog",
-     "text_quality": 0.99
+     "size_bytes": 389544,
+     "source": "https://ccel.org/ccel/scougal/life"
     }
    ],
    "links": [],
@@ -6731,7 +6680,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "A short letter to a friend explaining true religion as the union of the soul with God, which helped awaken George Whitefield.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "wilcox-a-choice-drop-of-honey-from-the-rock-christ",
@@ -7025,9 +6974,8 @@
      "contents": "",
      "format": "epub",
      "path": "jonathan-edwards/treatise-concerning-religious-affections.epub",
-     "size_bytes": 246060,
-     "source": "https://archive.org/details/treatiseconcerni00edwa_0",
-     "text_quality": 0.991
+     "size_bytes": 915003,
+     "source": "https://ccel.org/ccel/edwards/affections"
     }
    ],
    "links": [],
@@ -7041,7 +6989,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Edwards's searching study, written after the Great Awakening, of which signs truly mark saving grace and which do not.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "edwards-a-careful-and-strict-enquiry-into-the-freedom-of-the-will",
@@ -7804,9 +7752,8 @@
      "contents": "",
      "format": "epub",
      "path": "samuel-rutherford/trial-and-triumph-of-faith.epub",
-     "size_bytes": 300939,
-     "source": "https://archive.org/details/trialtrium00ruth",
-     "text_quality": 0.988
+     "size_bytes": 559177,
+     "source": "https://ccel.org/ccel/rutherford/triumph"
     }
    ],
    "links": [],
@@ -7822,7 +7769,7 @@
    ],
    "passage": "Matthew 15:21–28",
    "blurb": "Rutherford's sermons on the Canaanite woman who would not let Christ go, showing how faith endures silence, delay and seeming refusal.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "rutherford-christ-dying-and-drawing-sinners-to-himself",
@@ -8909,9 +8856,8 @@
      "contents": "",
      "format": "epub",
      "path": "thomas-boston/crook-in-the-lot.epub",
-     "size_bytes": 103791,
-     "source": "https://archive.org/details/crookinlotordisp00bost",
-     "text_quality": 0.991
+     "size_bytes": 411536,
+     "source": "https://ccel.org/ccel/boston/crook"
     }
    ],
    "links": [],
@@ -8924,7 +8870,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Boston shows that the hardships in every life are ordered by God, and teaches how to bear them humbly and well.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "boston-memoirs-of-the-life-time-and-writings-of-thomas-boston",
@@ -9558,9 +9504,8 @@
      "contents": "",
      "format": "epub",
      "path": "horatius-bonar/gods-way-of-peace.epub",
-     "size_bytes": 86113,
-     "source": "https://archive.org/details/godswayofpeaceboa00bona",
-     "text_quality": 0.994
+     "size_bytes": 274275,
+     "source": "https://ccel.org/ccel/bonar/peace"
     }
    ],
    "links": [],
@@ -9574,7 +9519,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Horatius Bonar writes to the anxious seeker, pointing away from feelings and efforts to Christ's finished work as the ground of peace.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "bonar-the-everlasting-righteousness",
@@ -10721,9 +10666,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-newton/olney-hymns.epub",
-     "size_bytes": 198493,
-     "source": "https://archive.org/details/olneyhymnsbyjne01cowpgoog",
-     "text_quality": 0.99
+     "size_bytes": 786160,
+     "source": "https://ccel.org/ccel/newton/olneyhymns"
     }
    ],
    "links": [],
@@ -10735,7 +10679,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "The hymns Newton and William Cowper wrote for their Olney congregation, including Amazing Grace and God Moves in a Mysterious Way.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "newton-an-authentic-narrative",
@@ -10931,9 +10875,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-charles-ryle/holiness.epub",
-     "size_bytes": 366356,
-     "source": "https://archive.org/details/HolinessJ.C.Ryle1887",
-     "text_quality": 0.996
+     "size_bytes": 720319,
+     "source": "https://ccel.org/ccel/ryle/holiness"
     }
    ],
    "links": [],
@@ -10946,7 +10889,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Ryle's plain, searching papers on sanctification, sin, the fight of faith and growth in grace, for every Christian seeking to be holy.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "ryle-expository-thoughts-on-the-gospels",
@@ -11351,23 +11294,21 @@
    "files": [
     {
      "volume": 1,
-     "label": "Volume 1",
-     "contents": "Doctrinal divinity, Books I to V (God and his attributes, his decrees and works, the fall, the covenant of grace, the person and offices of Christ)",
+     "label": "Doctrinal divinity",
+     "contents": "Books I to VII",
      "format": "epub",
      "path": "john-gill/body-of-doctrinal-and-practical-divinity-vol-01.epub",
-     "size_bytes": 781871,
-     "source": "https://archive.org/details/completebodyofdo01gill",
-     "text_quality": 0.993
+     "size_bytes": 1707075,
+     "source": "https://ccel.org/ccel/gill/doctrinal"
     },
     {
      "volume": 2,
-     "label": "Volume 2",
-     "contents": "Doctrinal divinity, Books VI and VII (the blessings of grace, the last things); Practical divinity (worship, church, ordinances, relative duties); Dissertation on the baptism of Jewish proselytes",
+     "label": "Practical divinity",
+     "contents": "Books I to V",
      "format": "epub",
      "path": "john-gill/body-of-doctrinal-and-practical-divinity-vol-02.epub",
-     "size_bytes": 917743,
-     "source": "https://archive.org/details/completebodyofdo02gill",
-     "text_quality": 0.993
+     "size_bytes": 954356,
+     "source": "https://ccel.org/ccel/gill/practical"
     }
    ],
    "links": [],
@@ -11381,7 +11322,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Gill's full system of Baptist Calvinist theology, covering God, his decrees, the covenant of grace, Christ, and Christian duty.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "gill-the-cause-of-god-and-truth",
@@ -11931,9 +11872,8 @@
      "contents": "",
      "format": "epub",
      "path": "charles-haddon-spurgeon/all-of-grace.epub",
-     "size_bytes": 77376,
-     "source": "https://archive.org/details/allofgraceearnes00spur",
-     "text_quality": 0.994
+     "size_bytes": 352851,
+     "source": "https://ccel.org/ccel/spurgeon/grace"
     }
    ],
    "links": [],
@@ -11946,7 +11886,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Spurgeon's short, earnest appeal to the unconverted, showing how a sinner is saved by grace through faith in Christ alone.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "spurgeon-morning-and-evening",
@@ -12213,9 +12153,8 @@
      "contents": "",
      "format": "epub",
      "path": "james-petigru-boyce/abstract-of-systematic-theology.epub",
-     "size_bytes": 466133,
-     "source": "https://archive.org/details/abstractofsystem00boyc_0",
-     "text_quality": 0.996
+     "size_bytes": 740632,
+     "source": "https://ccel.org/ccel/boyce/theology"
     }
    ],
    "links": [],
@@ -12229,7 +12168,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Boyce's clear, compact Baptist systematic theology, written for seminary students, strong on God's attributes, election and the work of Christ.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "dagg-manual-of-theology",
@@ -12285,9 +12224,8 @@
      "contents": "",
      "format": "epub",
      "path": "arthur-walkington-pink/sovereignty-of-god.epub",
-     "size_bytes": 208790,
-     "source": "https://archive.org/details/sovereigntyofgod00pink_0",
-     "text_quality": 0.995
+     "size_bytes": 532175,
+     "source": "https://ccel.org/ccel/pink/sovereignty"
     }
    ],
    "links": [],
@@ -12301,7 +12239,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Pink's forceful study of God's rule over all things, in creation, providence and salvation, and of the comfort it brings believers.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "alexander-thoughts-on-religious-experience",
@@ -12497,9 +12435,8 @@
      "contents": "Introduction; Part I, Theology Proper",
      "format": "epub",
      "path": "charles-hodge/systematic-theology-vol-01.epub",
-     "size_bytes": 667742,
-     "source": "https://archive.org/details/systematictheolo01hodg",
-     "text_quality": 0.978
+     "size_bytes": 961895,
+     "source": "https://ccel.org/ccel/hodge/theology1"
     },
     {
      "volume": 2,
@@ -12507,9 +12444,8 @@
      "contents": "Part II, Anthropology; Part III, Soteriology (begun)",
      "format": "epub",
      "path": "charles-hodge/systematic-theology-vol-02.epub",
-     "size_bytes": 826199,
-     "source": "https://archive.org/details/systematictheolo02hodg",
-     "text_quality": 0.976
+     "size_bytes": 1085833,
+     "source": "https://ccel.org/ccel/hodge/theology2"
     },
     {
      "volume": 3,
@@ -12517,9 +12453,8 @@
      "contents": "Part III, Soteriology concluded (regeneration, faith, justification, sanctification, the law, the means of grace); Part IV, Eschatology; index to the whole work",
      "format": "epub",
      "path": "charles-hodge/systematic-theology-vol-03.epub",
-     "size_bytes": 1019914,
-     "source": "https://archive.org/details/systematictheol187303hodg",
-     "text_quality": 0.969
+     "size_bytes": 1246014,
+     "source": "https://ccel.org/ccel/hodge/theology3"
     },
     {
      "volume": 4,
@@ -12527,9 +12462,8 @@
      "contents": "Index to Systematic Theology",
      "format": "epub",
      "path": "charles-hodge/systematic-theology-vol-04.epub",
-     "size_bytes": 89589,
-     "source": "https://archive.org/details/indextosystema00hodg",
-     "text_quality": 0.977
+     "size_bytes": 220724,
+     "source": "https://ccel.org/ccel/hodge/theology4"
     }
    ],
    "links": [],
@@ -12543,7 +12477,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Charles Hodge's standard Princeton theology in three volumes, covering God, man, salvation and the last things with careful argument.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "hodge-a-commentary-on-the-epistle-to-the-romans",
@@ -12600,9 +12534,8 @@
      "contents": "",
      "format": "epub",
      "path": "charles-hodge/commentary-on-the-epistle-to-the-ephesians.epub",
-     "size_bytes": 257344,
-     "source": "https://archive.org/details/acommentaryonep03hodggoog",
-     "text_quality": 0.956
+     "size_bytes": 603593,
+     "source": "https://ccel.org/ccel/hodge/ephesians"
     }
    ],
    "links": [],
@@ -12617,7 +12550,7 @@
    ],
    "passage": "Ephesians",
    "blurb": "Charles Hodge's clear exposition of Paul's letter on God's electing grace, union with Christ and the life of the church.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "hodge-an-exposition-of-the-first-epistle-to-the-corinthians",
@@ -14584,9 +14517,8 @@
      "contents": "",
      "format": "epub",
      "path": "abraham-kuyper/work-of-the-holy-spirit.epub",
-     "size_bytes": 583842,
-     "source": "https://archive.org/details/workholyspirit00vriegoog",
-     "text_quality": 0.994
+     "size_bytes": 966365,
+     "source": "https://ccel.org/ccel/kuyper/holy_spirit"
     }
    ],
    "links": [],
@@ -14598,7 +14530,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Kuyper's large study of the Spirit's work in creation, Scripture, the incarnation, the church, and the salvation of each believer.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "kuyper-to-be-near-unto-god",
@@ -14618,9 +14550,8 @@
      "contents": "",
      "format": "epub",
      "path": "abraham-kuyper/to-be-near-unto-god.epub",
-     "size_bytes": 426624,
-     "source": "https://archive.org/details/tobenearuntogod0000kuyp",
-     "text_quality": 0.997
+     "size_bytes": 716838,
+     "source": "https://ccel.org/ccel/kuyper/near"
     }
    ],
    "links": [],
@@ -14633,7 +14564,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Short meditations by Kuyper on communion with God, drawing the reader into closer fellowship with him through Scripture.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "kuyper-encyclopedia-of-sacred-theology-its-principles",
@@ -14688,9 +14619,8 @@
      "contents": "",
      "format": "epub",
      "path": "herman-bavinck/philosophy-of-revelation.epub",
-     "size_bytes": 236219,
-     "source": "https://archive.org/details/philosophyofreve00bavi",
-     "text_quality": 0.987
+     "size_bytes": 478054,
+     "source": "https://ccel.org/ccel/bavinck/revelation"
     }
    ],
    "links": [],
@@ -14703,7 +14633,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Bavinck's Stone Lectures arguing that God's revelation is the key to understanding nature, history, religion, culture, and human experience.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "westminster-assembly-the-directory-for-family-worship",
@@ -17277,9 +17207,8 @@
      "contents": "The Art of Divine Contentment (Phil. 4:11), complete: chapters I–XV, from 'The Introduction to the Text' to Chap. XV, 'Use VI. Of Consolation to the Contented Christian'. Printed pp. 609–654 of the 1859 Blackie edition of A Body of Practical Divinity.",
      "format": "epub",
      "path": "thomas-watson/art-of-divine-contentment.epub",
-     "size_bytes": 90413,
-     "source": "https://archive.org/details/bodyofpracticald00watsuoft",
-     "text_quality": 0.99
+     "size_bytes": 336661,
+     "source": "https://ccel.org/ccel/watson/contentment"
     }
    ],
    "links": [],
@@ -17292,7 +17221,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Watson opens Paul's secret of being content in every condition, with practical helps against murmuring and discontent.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "watson-heaven-taken-by-storm",
@@ -17894,9 +17823,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-flavel/fountain-of-life-opened.epub",
-     "size_bytes": 451444,
-     "source": "https://archive.org/details/fountainoflifeor00flavrich",
-     "text_quality": 0.992
+     "size_bytes": 830378,
+     "source": "https://ccel.org/ccel/flavel/fountain"
     }
    ],
    "links": [],
@@ -17908,7 +17836,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Flavel's sermons opening the person, offices, humiliation, and exaltation of Christ, warmly applied to the believer's heart.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "flavel-the-method-of-grace-in-the-holy-spirit-s-applying-to-the-souls-of-men-the-eternal-r",
@@ -17928,9 +17856,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-flavel/method-of-grace-in-the-holy-spirits-applying-to-the-souls.epub",
-     "size_bytes": 437221,
-     "source": "https://archive.org/details/methodofgraceinh00flavrich",
-     "text_quality": 0.995
+     "size_bytes": 924150,
+     "source": "https://ccel.org/ccel/flavel/grace"
     }
    ],
    "links": [],
@@ -17943,7 +17870,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Flavel shows how the Spirit applies Christ's redemption through union with him, with searching appeals to the unconverted.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "flavel-a-token-for-mourners",
@@ -18033,9 +17960,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-owen/doctrine-of-justification-by-faith.epub",
-     "size_bytes": 417406,
-     "source": "https://archive.org/details/doctrineofjustif184100owen",
-     "text_quality": 0.983
+     "size_bytes": 783690,
+     "source": "https://ccel.org/ccel/owen/just"
     }
    ],
    "links": [],
@@ -18047,7 +17973,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen's thorough defence of being justified by faith alone through Christ's imputed righteousness, answering Roman and Socinian errors.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-the-grace-and-duty-of-being-spiritually-minded",
@@ -18067,9 +17993,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-owen/grace-and-duty-of-being-spiritually-minded.epub",
-     "size_bytes": 280350,
-     "source": "https://archive.org/details/gracedutyofbei00owen",
-     "text_quality": 0.996
+     "size_bytes": 541003,
+     "source": "https://ccel.org/ccel/owen/spirituallyminded"
     }
    ],
    "links": [],
@@ -18082,7 +18007,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen shows what it is to set the mind on things above, with searching help for believers whose affections have grown cold.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-the-nature-power-deceit-and-prevalency-of-indwelling-sin-in-believers",
@@ -18102,9 +18027,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-owen/nature-power-deceit-and-prevalency-of-indwelling-sin-in.epub",
-     "size_bytes": 196087,
-     "source": "https://archive.org/details/naturepowerdecei00owen_0",
-     "text_quality": 0.995
+     "size_bytes": 463669,
+     "source": "https://ccel.org/ccel/owen/indwellingsin"
     }
    ],
    "links": [],
@@ -18117,7 +18041,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen exposes the power and deceitfulness of the sin that remains in believers, helping them understand and resist it.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "owen-of-temptation-the-nature-and-power-of-it",
@@ -18137,9 +18061,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-owen/of-temptation.epub",
-     "size_bytes": 190152,
-     "source": "https://archive.org/details/ontemptationmort00owen",
-     "text_quality": 0.993
+     "size_bytes": 309991,
+     "source": "https://ccel.org/ccel/owen/temptation"
     }
    ],
    "links": [],
@@ -18151,7 +18074,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Owen explains how temptation works and how believers may watch and pray so as not to enter into it.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "burroughs-the-saints-happiness-lectures-on-the-beatitudes",
@@ -18274,9 +18197,8 @@
      "contents": "",
      "format": "epub",
      "path": "matthew-mead/almost-christian-discovered.epub",
-     "size_bytes": 137908,
-     "source": "https://archive.org/details/almostchristiand00mead",
-     "text_quality": 0.992
+     "size_bytes": 470656,
+     "source": "https://ccel.org/ccel/mead_matthew/almost"
     }
    ],
    "links": [],
@@ -18289,7 +18211,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Mead shows how far a person may go in religion and still be lost, urging readers to examine themselves honestly.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "coles-a-practical-discourse-of-god-s-sovereignty",
@@ -19166,9 +19088,8 @@
      "contents": "",
      "format": "epub",
      "path": "philip-doddridge/rise-and-progress-of-religion-in-the-soul.epub",
-     "size_bytes": 288191,
-     "source": "https://archive.org/details/riseprogressofre00dodd",
-     "text_quality": 0.994
+     "size_bytes": 566302,
+     "source": "https://ccel.org/ccel/doddridge/rise"
     }
    ],
    "links": [],
@@ -19182,7 +19103,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Doddridge's guide that leads a reader from careless indifference through conversion to a mature Christian life, with prayers for each stage.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "ridley-the-works-of-nicholas-ridley",
@@ -20303,9 +20224,8 @@
      "contents": "",
      "format": "epub",
      "path": "john-cotton/keys-of-the-kingdom-of-heaven.epub",
-     "size_bytes": 69773,
-     "source": "https://archive.org/details/keyesofkingdomof00cott",
-     "text_quality": 0.957
+     "size_bytes": 365251,
+     "source": "https://ccel.org/ccel/cotton_john/keyes"
     }
    ],
    "links": [],
@@ -20317,7 +20237,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Cotton's outline of church power, showing how Christ gives authority to both elders and congregation, a founding text of Congregational polity.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "norton-the-orthodox-evangelist",
@@ -21322,9 +21242,8 @@
      "contents": "",
      "format": "epub",
      "path": "charles-haddon-spurgeon/till-he-come.epub",
-     "size_bytes": 208897,
-     "source": "https://archive.org/details/tillhecome00spuruoft",
-     "text_quality": 0.996
+     "size_bytes": 418624,
+     "source": "https://ccel.org/ccel/spurgeon/till_he_come"
     }
    ],
    "links": [],
@@ -21338,7 +21257,7 @@
    "scripture": [],
    "passage": "",
    "blurb": "Spurgeon's addresses and meditations given at the Lord's Table, drawing communicants to delight in Christ and his death.",
-   "source": "Internet Archive"
+   "source": "CCEL"
   },
   {
    "id": "spurgeon-the-gospel-of-the-kingdom-a-popular-exposition-of-the-gospel-according-to-matthew",

@@ -16,7 +16,7 @@ To add a file, open this folder on GitHub, choose **Add file**, then
 
 The `library` folder is a free library of Puritan and confessionally Reformed
 books, all in the public domain, with Bibles, study Bibles, and commentaries among
-them. It holds 517 works in 915 files, about 570 MB in all, and its catalog
+them. It holds 517 works in 915 files, about 610 MB in all, and its catalog
 points to 61 more that stay as scans at the Internet Archive. Open the `library`
 folder and scroll down to see every book in it.
 
@@ -39,13 +39,18 @@ transcription links to a scan of that part. A few works appear only inside a lar
 book, such as Owen's *Pneumatologia* in volumes 3 and 4 of his Works, and those say
 so under `found_in`.
 
-**Where the books came from.** Nothing here came from the Christian Classics
-Ethereal Library. The books come from five places.
+**Where the books came from.** The books come from six places.
 
 Most were made by Gentle King from scans of printings dated 1930 or earlier, kept by
 the Internet Archive and the libraries that lent them. The text was read from the
 scan by machine, so expect a misread word now and then, and Greek and Hebrew rarely
 come through. The first page of each book names the printing and links to the scan.
+
+Where the Christian Classics Ethereal Library (ccel.org) has the same work whole,
+its typed text stands in place of the one read by machine. The library gave Gentle
+King permission to share its books here, to read and to download, and a page near the
+front of each one says so. Gentle King added that page and set the title and author a
+reading app shows to match this library, and changed nothing else.
 
 The books of the 1500s and 1600s were made by Gentle King from the typed
 transcriptions of the Text Creation Partnership, which gave them to the public domain
