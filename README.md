@@ -74,22 +74,22 @@ favicon.ico             a copy of the tab icon, for tools that only look at the 
 
 The download button points at the releases page, not at a specific file, so it
 keeps working when you post a new build. After a release, update the version in
-`content/software.html`. It is written out four times there, in the Get Sojourner
+`content/sojourner.html`. It is written out four times there, in the Get Sojourner
 heading, the Version row, the paragraph on what the version number means, and the
 closing download button. The installer size is written out twice, in the Get
 Sojourner block and in the warning about the large download. If the release adds,
 removes, or renames translations, shelves, or reference works, the counts and names
-on the page, the description for `software.html` in `build.py`, and the one paragraph
+on the page, the description for `sojourner.html` in `build.py`, and the one paragraph
 about Sojourner on the home page want updating too. If it adds or drops a whole kind
 of feature, look over `APP_FEATURES` in `build.py` too. The version, the size, and
-the screenshots in the structured data are read from `content/software.html` on
+the screenshots in the structured data are read from `content/sojourner.html` on
 their own, and the build stops if the Get Sojourner heading or size line changes shape.
 
 Then run `python3 build.py`, check it, commit and push.
 
 The screenshots live in `assets/img/` as `sojourner-*.webp`, each with a 1000px copy
 beside it for the page itself. Each one has alt text and a caption in
-`content/software.html` that describe what it shows. When the app looks meaningfully
+`content/sojourner.html` that describe what it shows. When the app looks meaningfully
 different, replace both copies and check that the alt text and the caption still
 match the picture.
 

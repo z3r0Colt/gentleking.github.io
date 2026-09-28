@@ -84,7 +84,7 @@ NAV = [
     ("gospel.html", "The Gospel"),
     ("comfort.html", "Comfort"),
     ("struggle.html", "Fighting Sin"),
-    ("software.html", "Sojourner"),
+    ("sojourner.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
     ("about.html", "About"),
@@ -108,10 +108,10 @@ PAGES = [
         "toc": False,
     },
     {
-        "file": "software.html",
-        "content": "software.html",
+        "file": "sojourner.html",
+        "content": "sojourner.html",
         "title": "Sojourner",
-        "full_title": "Sojourner \u00b7 Free Offline Bible Study Software for Windows",
+        "full_title": "Sojourner Bible Study Software \u00b7 Free and Offline for Windows",
         "eyebrow": "Bible Study Companion",
         "h1": "Sojourner",
         "logo": "sojourner-logo",
@@ -124,8 +124,8 @@ PAGES = [
             "and it is free."
         ),
         "description": (
-            "Free offline Bible study software for Windows. Thirteen translations, the Hebrew and "
-            "Greek, Matthew Henry, Calvin, Spurgeon, and the Westminster Standards."
+            "Sojourner is free, offline Bible study software for Windows. Thirteen translations, "
+            "the Hebrew and Greek, Matthew Henry, Calvin, and the Westminster Standards."
         ),
         "schema": "ItemPage",
         "toc": True,
@@ -442,7 +442,7 @@ FOOTER = """<footer class="site-footer">
       <div>
         <p class="footer-head">Get</p>
         <ul class="footer-links">
-          <li><a href="software.html">Sojourner</a></li>
+          <li><a href="sojourner.html">Sojourner</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
         <p class="footer-head footer-give">Give</p>
@@ -562,14 +562,14 @@ def page_dates():
 # publishes the site, who writes it, what each page is, and what Sojourner is.
 # Say nothing here the pages do not say. No ratings, no reviews, no guessed
 # dates. The Sojourner version, size, and screenshots are read from
-# content/software.html, so they cannot drift from the page. The email
+# content/sojourner.html, so they cannot drift from the page. The email
 # addresses are left out on purpose, since the pages keep them from harvesters.
 # --------------------------------------------------------------------------
 
 ORG_ID = f"{SITE_URL}/#organization"
 SITE_ID = f"{SITE_URL}/#website"
 PERSON_ID = f"{SITE_URL}/#colt"
-APP_ID = f"{SITE_URL}/software.html#app"
+APP_ID = f"{SITE_URL}/sojourner.html#app"
 LOGO_URL = f"{SITE_URL}/brand/gentle-king-icon-512.png"
 
 ORG_DESCRIPTION = (
@@ -580,7 +580,7 @@ ORG_DESCRIPTION = (
     "and is not a church."
 )
 
-# Each line must match something software.html says. No counts here, so a
+# Each line must match something sojourner.html says. No counts here, so a
 # release that changes a number only has to change the page.
 APP_FEATURES = [
     "Works offline, with no account, no subscription, and no telemetry",
@@ -627,7 +627,7 @@ def app_facts(body):
     version = re.search(r"<h3>Sojourner ([0-9][0-9.]*)</h3>", body)
     size = re.search(r'class="get-meta">[^<]*?About ([0-9,]+) MB', body)
     if not version or not size:
-        raise SystemExit("software.html no longer shows the version and size where build.py looks")
+        raise SystemExit("sojourner.html no longer shows the version and size where build.py looks")
     return version.group(1), size.group(1).replace(",", "")
 
 
@@ -702,7 +702,8 @@ def software_node(page, canonical, body):
         "@type": "SoftwareApplication",
         "@id": APP_ID,
         "name": APP_NAME,
-        "alternateName": APP_FULL,
+        "alternateName": [APP_FULL, "Sojourner Bible Study Software", "Sojourner Bible app"],
+        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
         "description": page["description"],
         "url": canonical,
         "mainEntityOfPage": {"@id": f"{canonical}#webpage"},
@@ -765,13 +766,14 @@ def structured_data(page, canonical, body, dates):
         webpage["about"] = {"@id": ORG_ID}
         webpage["mentions"] = {"@id": APP_ID}
         # Graphs do not join up across pages, so the home page names the app
-        # itself. The full description is on software.html.
+        # itself. The full description is on sojourner.html.
         graph.append({
             "@type": "SoftwareApplication",
             "@id": APP_ID,
             "name": APP_NAME,
-            "alternateName": APP_FULL,
-            "url": f"{SITE_URL}/software.html",
+            "alternateName": [APP_FULL, "Sojourner Bible Study Software", "Sojourner Bible app"],
+        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
+            "url": f"{SITE_URL}/sojourner.html",
             "applicationCategory": "ReferenceApplication",
             "operatingSystem": "Windows 10, Windows 11",
             "isAccessibleForFree": True,
@@ -1346,7 +1348,7 @@ def build_llms_txt():
     since a tool that follows the list fetches every link in it. Its sections
     go in the note, where a reader can still follow them."""
     by_file = {p["file"]: p for p in PAGES}
-    app_body = (CONTENT / "software.html").read_text(encoding="utf-8")
+    app_body = (CONTENT / "sojourner.html").read_text(encoding="utf-8")
     version, size_mb = app_facts(app_body)
 
     def entry(page, label=None):
@@ -1404,7 +1406,7 @@ def build_llms_txt():
         lines.append("")
 
     lines += [f"## {APP_NAME}, a free Bible study app", ""]
-    lines += entry(by_file["software.html"], APP_NAME)
+    lines += entry(by_file["sojourner.html"], APP_NAME)
     lines += [
         f"- [Download {APP_NAME}]({APP_RELEASES}): The Windows installer and the four optional "
         "book shelves, on GitHub",
