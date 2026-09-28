@@ -264,13 +264,13 @@ PAGES = [
         "eyebrow": "Reading and Study",
         "h1": "A Free Puritan and Reformed Library",
         "deck": (
-            "Hundreds of old books and the Bibles of the Reformation, free to read here or to "
+            "The Puritan and Reformed classics worth reading today, free to read here or to "
             "take with you. After them come the newer books, the tools, and the preachers worth "
             "knowing, and where to begin."
         ),
         "description": (
-            "Read hundreds of Puritan and Reformed books and Reformation Bibles free in your "
-            "browser, or download them. Plus where to begin, free tools, and good preaching."
+            "Read Puritan and Reformed classics by Owen, Bunyan, and Calvin free in "
+            "your browser, or download them. Plus where to begin, free tools, and good preaching."
         ),
         "schema": "CollectionPage",
         "about": [
@@ -819,8 +819,8 @@ def structured_data(page, canonical, body, dates):
                 "@id": f"{canonical}#library",
                 "name": "The Gentle King Library",
                 "description": (
-                    "Public domain Puritan and Reformed books, Reformation Bibles, and confessions, "
-                    "free to read in the browser or to download as EPUB."
+                    "Public domain Puritan and Reformed classics in clean text, with the King James "
+                    "and the Berean Standard Bible, free to read in the browser or to download as EPUB."
                 ),
                 "numberOfItems": count,
                 "url": f"{canonical}#library",
@@ -888,7 +888,7 @@ READER = "resources/read.html"
 # The shelves in the order they stand, each with a line to say what is on it.
 # A category the catalog has and this list lacks still shows, at the end.
 SHELVES = {
-    "Bibles": "The English Bibles of the Reformation and after, with the Hebrew, the Greek, and the Reformed Latin.",
+    "Bibles": "The King James Version, and the Berean Standard Bible for a modern English translation.",
     "Study Bibles": "Bibles printed with notes, and notes on the whole Bible to read beside it.",
     "Confessions & Catechisms": "The Westminster Standards, the Three Forms of Unity, the confessions that stand beside them, and the books that open them.",
     "Systematic Theology": "The whole body of divinity set out in order.",
