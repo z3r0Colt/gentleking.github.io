@@ -970,10 +970,10 @@ def read_href(path):
     return f"{READER}?book=library/{path}"
 
 
-# A book made by machine from a scan can come out jumbled where a page has two
-# columns, side notes, or footnotes. For those, Read opens the scanned pages
-# themselves at the Internet Archive, and the EPUB is offered as a download
-# that says what it is. The reader here is kept for the clean texts.
+# A book made by machine from a scan comes out jumbled and misread too often to
+# hand out. For those, Read opens the scanned pages themselves at the Internet
+# Archive, and no download is offered. The reader and the downloads are kept for
+# the clean texts.
 SCANNED = "Internet Archive"
 
 
@@ -988,8 +988,6 @@ def file_links(f, described_by, scanned=False):
         return (
             f'<a class="lib-read" href="{e(f["source"])}" target="_blank" rel="noopener" '
             f'aria-describedby="{described_by}">Read the scan</a>'
-            f'<a class="lib-dl" href="resources/library/{e(f["path"])}" download aria-describedby="{described_by}">'
-            f'Download {kind} <span>made by machine, {size}</span></a>'
         )
     read_word = "Open PDF" if f["format"] == "pdf" else "Read"
     return (
