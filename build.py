@@ -87,7 +87,6 @@ NAV = [
     ("software.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
-    ("resources.html", "Resources"),
     ("about.html", "About"),
 ]
 
@@ -280,6 +279,12 @@ PAGES = [
         ],
         "toc": True,
         "scripts": ["assets/js/library.js"],
+        # Hidden for now. The page is still built and can be opened by its
+        # address, but no menu, footer, or other page links to it, and search
+        # engines are asked to leave it out. To bring it back, delete this
+        # line, put it back in NAV and the footer, and restore the links in
+        # content/ (see the git history of the commit that hid it).
+        "hidden": True,
     },
     {
         "file": "about.html",
@@ -321,7 +326,7 @@ HEAD = """<!DOCTYPE html>
 <title>{full_title}</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
-<meta name="robots" content="max-image-preview:large">
+<meta name="robots" content="{robots}">
 <meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#151310" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
@@ -432,7 +437,6 @@ FOOTER = """<footer class="site-footer">
           <li><a href="struggle.html">Fighting Sin</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html">Apologetics</a></li>
-          <li><a href="resources.html">Resources</a></li>
         </ul>
       </div>
       <div>
@@ -571,7 +575,7 @@ LOGO_URL = f"{SITE_URL}/brand/gentle-king-icon-512.png"
 ORG_DESCRIPTION = (
     "A confessionally Reformed and Presbyterian ministry website. It sets out the gospel of "
     "Jesus Christ, Scripture for hard hours, help in the fight against sin, Reformed doctrine "
-    "held to the Westminster Confession of Faith, apologetics, and reading resources, and it "
+    "held to the Westminster Confession of Faith, and apologetics, and it "
     "gives away Sojourner, a free Bible study app for Windows. It is the work of one layman "
     "and is not a church."
 )
@@ -1220,6 +1224,7 @@ def build_page(page, dates):
                 quote=True,
             ),
             structured_data=structured_data(page, canonical, body, dates),
+            robots="noindex" if page.get("hidden") else "max-image-preview:large",
         ),
         render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"])),
     ]
@@ -1298,6 +1303,8 @@ NOT_PAGES = [
 def build_sitemap(dates):
     urls = []
     for page in PAGES:
+        if page.get("hidden"):
+            continue
         urls.append(
             f"  <url>\n    <loc>{page_url(page)}</loc>\n"
             f"    <lastmod>{dates[page['file']]['modified']}</lastmod>\n  </url>"
@@ -1331,7 +1338,6 @@ LLMS_GROUPS = [
     ("Fighting sin", ["struggle.html"]),
     ("Doctrine", ["doctrine.html"]),
     ("Apologetics", ["apologetics.html"]),
-    ("Reading and study", ["resources.html"]),
 ]
 
 
