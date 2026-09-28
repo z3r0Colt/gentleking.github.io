@@ -586,16 +586,16 @@ APP_FEATURES = [
     "Works offline, with no account, no subscription, and no telemetry",
     "English Bible translations that are public domain or free to share, among them the King James of 1769 and the Geneva of 1599",
     "The Hebrew Old Testament, five editions of the Greek New Testament, the Septuagint, and the Vulgate",
-    "Hebrew and Greek lexicons, an interlinear, word studies, and search by grammar",
+    "Hebrew and Greek lexicons, an interlinear with the grammar of every word in plain English, word studies, and search by grammar",
     "Commentaries by Matthew Henry and John Calvin, and Spurgeon's Treasury of David",
     "The Westminster Confession and Catechisms with their Scripture proofs, and the Three Forms of Unity",
-    "An encyclopedia, a Bible dictionary, cross references, a Factbook, an atlas, and a timeline",
+    "An encyclopedia, a Bible dictionary, Webster's dictionary of 1828, cross references, a Factbook, an atlas, and a timeline with the history of the church",
     "Optional book shelves of Puritan and Reformed works, the Church Fathers, and more",
     "Linked panes that turn to the same verse together, and one search box for everything",
     "Notes, highlights, a prayer journal, reading plans, and Scripture and catechism memory",
     "A sermon editor with templates, a preaching mode, slides, handouts, and a podium file for phones",
     "A guided family worship page with a reading, a psalm, a catechism question, and prayer",
-    "The 1650 Scottish Metrical Psalter with tunes that play",
+    "The 1650 Scottish Metrical Psalter on a page of its own, with tunes that play",
 ]
 
 CONFESSION_WORKS = [

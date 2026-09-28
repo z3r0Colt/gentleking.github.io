@@ -4,7 +4,7 @@
 
 The site is written by Colt, a layman in the Reformed Presbyterian tradition. He is not a pastor or an elder, and the site is no substitute for a local church. Scripture is quoted from the King James Version. The Westminster Standards are quoted from the text of 1647. The writing may be copied and shared freely under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 license. Please do not sell it, and please do not change the words and keep the name on it.
 
-Sojourner 0.3.3 is free Bible study software for Windows 10 and 11, 64-bit, made by the same writer and given away free. It needs no account, works with the network off, and sends no telemetry. The installer is about 572 MB.
+Sojourner 0.3.4 is free Bible study software for Windows 10 and 11, 64-bit, made by the same writer and given away free. It needs no account, works with the network off, and sends no telemetry. The installer is about 584 MB.
 
 Anyone in danger or thinking of ending their life can call 911, or call or text 988, in the United States. Anyone being hurt at home can call the National Domestic Violence Hotline at 1-800-799-7233, or text START to 88788. If a child is being hurt, call 911. Outside the United States, call the local emergency number. The comfort page gives these numbers and more.
 
