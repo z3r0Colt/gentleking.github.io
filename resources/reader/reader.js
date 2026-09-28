@@ -107,7 +107,8 @@ async function openBook() {
   // A book in Hebrew that does not name its page direction still reads from
   // right to left, so the arrows, taps, and slider should turn that way.
   if (!book.dir && view.language?.direction === 'rtl') book.dir = 'rtl'
-  const title = langText(book.metadata?.title) || 'Untitled'
+  // Project Gutenberg writes a long subtitle after a slash, too long for the bar
+  const title = (langText(book.metadata?.title) || 'Untitled').split(' / ')[0]
   const author = contributor(book.metadata?.author)
   document.title = `${title} · Gentle King`
   $('#book-title').textContent = title
