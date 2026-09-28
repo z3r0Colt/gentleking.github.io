@@ -422,6 +422,7 @@ function reflectSettings() {
 function changed() {
   saveSettings()
   reflectSettings()
+  rovingRadios()
   if (view?.renderer) { applyLayout(); view.renderer.setStyles?.(bookCSS()) }
 }
 $('#size-down').addEventListener('click', () => { settings.size = Math.max(70, settings.size - 10); changed() })
@@ -430,6 +431,29 @@ document.querySelectorAll('[data-theme-choice]').forEach(b => b.addEventListener
 document.querySelectorAll('[data-flow-choice]').forEach(b => b.addEventListener('click', () => { settings.flow = b.dataset.flowChoice; changed() }))
 document.querySelectorAll('[data-notes-choice]').forEach(b => b.addEventListener('click', () => { settings.notes = b.dataset.notesChoice; changed() }))
 reflectSettings()
+
+// Each row of choices is one stop for the Tab key, and the arrow keys move
+// along it and choose, the way a group of radio buttons works.
+function rovingRadios() {
+  for (const group of document.querySelectorAll('[role="radiogroup"]')) {
+    const radios = [...group.querySelectorAll('[role="radio"]')]
+    radios.forEach(r => { r.tabIndex = r.getAttribute('aria-checked') === 'true' ? 0 : -1 })
+  }
+}
+for (const group of document.querySelectorAll('[role="radiogroup"]')) {
+  group.addEventListener('keydown', e => {
+    const radios = [...group.querySelectorAll('[role="radio"]')]
+    const at = radios.indexOf(document.activeElement)
+    if (at === -1) return
+    const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key]
+    if (!step) return
+    e.preventDefault()
+    const next = radios[(at + step + radios.length) % radios.length]
+    next.click()
+    next.focus()
+  })
+}
+rovingRadios()
 
 // ------------------------------------------------------------ navigation
 function onKey(e) {
@@ -442,9 +466,10 @@ function onKey(e) {
   // Keys belong to a note, a panel, or a box being typed in while one is open.
   if ($('#note-dialog').open) return
   const t = e.target
-  if (t.closest?.('input, textarea, select, .panel, dialog')) return
-  // Space presses a focused button, as it always does.
-  if (e.key === ' ' && t.closest?.('button, a, summary')) return
+  if (anyPanelOpen() || t.closest?.('input, textarea, select, .panel, dialog')) return
+  // Space presses a focused button, as it always does. On a link it does
+  // nothing, so there it still turns the page.
+  if (e.key === ' ' && t.closest?.('button, summary')) return
   const scrolled = settings.flow === 'scrolled'
   if (e.key === 'ArrowLeft') { e.preventDefault(); view?.goLeft() }
   else if (e.key === 'ArrowRight') { e.preventDefault(); view?.goRight() }

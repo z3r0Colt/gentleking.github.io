@@ -6201,7 +6201,7 @@
     {
      "volume": 1,
      "label": "Volume 1",
-     "contents": "The Morning Exercise at Cripplegate (cases of conscience, first preached 1661). The 1844 volume also holds Supplement sermons I–IV; see notes",
+     "contents": "The Morning Exercise at Cripplegate (cases of conscience, first preached 1661). The 1844 volume also holds Supplement sermons I–IV",
      "url": "https://archive.org/details/morningexercise00annegoog",
      "why": "old printing, kept at archive.org"
     },
@@ -6215,7 +6215,7 @@
     {
      "volume": 5,
      "label": "Volume 5",
-     "contents": "The Morning Exercise Methodized (St Giles in the Fields, 1659). The 1844 volume also holds sermons I–VI of The Morning Exercise against Popery; see notes",
+     "contents": "The Morning Exercise Methodized (St Giles in the Fields, 1659). The 1844 volume also holds sermons I–VI of The Morning Exercise against Popery",
      "url": "https://archive.org/details/morni00case",
      "why": "old printing, kept at archive.org"
     }
@@ -22825,7 +22825,7 @@
    "title": "תורה נביאים וכתובים: The Hebrew Old Testament (Westminster Leningrad Codex)",
    "author": "Westminster Hebrew Institute (ed.), after the Leningrad Codex",
    "author_sort": "Westminster Hebrew Institute",
-   "author_dates": "codex AD 1008; electronic text 1990s–2025",
+   "author_dates": "codex AD 1008, electronic text 1990s–2025",
    "tradition": "American Presbyterian",
    "category": "Bibles",
    "tier": "standard",
@@ -24322,7 +24322,7 @@
   {
    "id": "tremellius-junius-beza-latin-bible",
    "title": "Testamenti Veteris Biblia Sacra (The Junius–Tremellius–Beza Latin Bible)",
-   "author": "Immanuel Tremellius and Franciscus Junius (Old Testament and Apocrypha); Theodore Beza (New Testament)",
+   "author": "Immanuel Tremellius and Franciscus Junius (Old Testament and Apocrypha), with Theodore Beza (New Testament)",
    "author_sort": "Tremellius, Immanuel",
    "author_dates": "1510–1580",
    "tradition": "Continental Reformation",
@@ -24907,7 +24907,7 @@
    "files": [
     {
      "volume": 1,
-     "label": "",
+     "label": "Transcription",
      "contents": "Annotations on Matthew to Revelation, with the dedication to Oxford, the address to the reader, the Review of the whole work, the alphabetical table, the catalogue of Greek words and the errata",
      "format": "epub",
      "path": "edward-leigh/annotations-upon-all-the-new-testament-philological-and-vol-01.epub",
