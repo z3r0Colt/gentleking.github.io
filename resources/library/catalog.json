@@ -1,8 +1,8 @@
 {
  "name": "The Gentle King Library",
  "description": "Public domain Puritan and confessionally Reformed works, gathered for gentleking.org.",
- "generated": "2026-09-27",
- "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. The Berean Bibles were dedicated to the public domain by their translators in 2023. Project Gutenberg books keep the Gutenberg license inside them. Standard Ebooks books are dedicated to the public domain.",
+ "generated": "2026-09-28",
+ "rights": "Every work here is in the public domain in the United States. The EPUBs marked as from the Internet Archive were made by Gentle King from the scanned text of the printing named, read by machine, so they may contain misread words. Those marked as from the Text Creation Partnership were made by Gentle King from the Partnership's typed transcriptions of early printed books, which it dedicated to the public domain (CC0), in their original spelling. Bibles from eBible.org are public domain texts published there. The Berean Bibles were dedicated to the public domain by their translators in 2023. Project Gutenberg books keep the Gutenberg license inside them.",
  "paths": "Every path is relative to this file's folder.",
  "categories": [
   "Bibles",
@@ -62,6 +62,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Covenant Theology",
     "Worship and the Sabbath",
@@ -69,7 +70,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "The Westminster Assembly's confession and catechisms with full proof texts, plus its directories for worship and church government.",
+   "blurb": "The Westminster Confession and both Catechisms with full proof texts, plus the directories for worship and the form of church government.",
    "source": "Internet Archive"
   },
   {
@@ -97,6 +98,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -131,6 +133,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -165,6 +168,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -199,6 +203,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work",
@@ -234,6 +239,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Christ and His Work",
@@ -269,6 +275,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath"
@@ -305,6 +312,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Preaching and Pastoral Ministry",
@@ -340,6 +348,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Church History"
@@ -374,6 +383,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Baptism and the Lord's Supper"
@@ -408,6 +418,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Justification by Faith"
@@ -442,6 +453,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -466,6 +478,7 @@
    "files": [],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Holiness and Mortification"
@@ -499,6 +512,7 @@
    "files": [],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Prayer"
    ],
@@ -542,6 +556,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "God and the Trinity"
@@ -576,6 +591,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work",
@@ -611,6 +627,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "The Gospel and Conversion",
@@ -646,6 +663,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "God and the Trinity",
     "Covenant Theology",
@@ -681,6 +699,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Covenant Theology",
@@ -716,6 +735,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -751,6 +771,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "The Gospel and Conversion"
@@ -793,6 +814,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Justification by Faith",
@@ -1268,6 +1290,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -1354,6 +1377,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Church History",
@@ -1419,6 +1443,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -1453,6 +1478,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Worship and the Sabbath",
@@ -1518,6 +1544,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "God and the Trinity",
@@ -1573,6 +1600,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Apologetics and Controversy",
@@ -1608,6 +1636,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Apologetics and Controversy"
@@ -1642,6 +1671,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -1673,6 +1703,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Justification by Faith",
@@ -1743,6 +1774,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -1846,12 +1878,13 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "D'Aubigné's sequel tracing the Reformation in Geneva, France, England, Scotland, and further afield through Calvin's lifetime, in eight readable volumes.",
+   "blurb": "D'Aubigné's sequel following the Reformation in Geneva, France, England, Scotland, and beyond in Calvin's day, in eight readable volumes.",
    "source": "Internet Archive"
   },
   {
@@ -1899,6 +1932,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "Christ and His Work",
@@ -1944,6 +1978,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work"
@@ -1978,6 +2013,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Prayer"
    ],
@@ -2010,6 +2046,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "The Law of God"
@@ -2043,6 +2080,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "The Holy Spirit"
@@ -2077,6 +2115,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -2142,6 +2181,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Apologetics and Controversy",
@@ -2177,6 +2217,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Justification by Faith"
@@ -2211,6 +2252,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -2248,6 +2290,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Scripture",
@@ -2293,6 +2336,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Preaching and Pastoral Ministry",
@@ -2338,6 +2382,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Suffering and Comfort",
@@ -2383,6 +2428,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Law of God",
@@ -2392,8 +2438,8 @@
     "Psalms",
     "Jonah"
    ],
-   "passage": "Jonah, and Psalms 23, 62, 73, and 77",
-   "blurb": "The English Reformer and martyr on Christ's office, the Ten Commandments, and the Lord's Supper, with sermons on Jonah and his letters.",
+   "passage": "Jonah and Psalms 23, 62, 73 and 77",
+   "blurb": "Hooper's Reformation writings on Christ's office, the Ten Commandments, and the Lord's Supper, with sermons on Jonah, Psalm expositions, and letters.",
    "source": "Internet Archive"
   },
   {
@@ -2421,6 +2467,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "The Church"
@@ -2455,6 +2502,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Apologetics and Controversy"
@@ -2559,6 +2607,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Suffering and Comfort",
@@ -2591,6 +2640,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "The Gospel and Conversion"
@@ -2622,6 +2672,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "Scripture"
@@ -2667,6 +2718,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Assurance and Doubt",
@@ -2676,9 +2728,10 @@
     "Matthew",
     "Galatians",
     "Hebrews",
-    "Jude"
+    "Jude",
+    "Revelation"
    ],
-   "passage": "Galatians, Matthew 5 to 7, Hebrews 11, and Jude",
+   "passage": "Galatians, Matthew 5 to 7, Hebrews 11, Jude, and Revelation 1 to 3",
    "blurb": "Perkins's collected writings on salvation, conscience, and preaching, with his expositions of Galatians, the Sermon on the Mount, and Jude.",
    "source": "Internet Archive"
   },
@@ -2704,14 +2757,17 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Assurance and Doubt",
     "Worship and the Sabbath"
    ],
-   "scripture": [],
-   "passage": "",
-   "blurb": "Greenham's gathered sermons and treatises, prized for wise counsel to troubled consciences, including his teaching on the Sabbath and godly living.",
+   "scripture": [
+    "Psalms"
+   ],
+   "passage": "Psalm 119",
+   "blurb": "Greenham's gathered sermons, counsels, and treatises, prized for wise help to troubled consciences, with his Sabbath treatise and exposition of Psalm 119.",
    "source": "Internet Archive"
   },
   {
@@ -2799,6 +2855,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Suffering and Comfort",
@@ -2839,6 +2896,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Christ and His Work",
     "Suffering and Comfort",
@@ -2871,8 +2929,10 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
+    "The Gospel and Conversion",
     "Holiness and Mortification"
    ],
    "scripture": [],
@@ -2902,6 +2962,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Prayer"
    ],
@@ -2932,6 +2993,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Covenant Theology",
@@ -2964,6 +3026,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Assurance and Doubt",
@@ -2996,6 +3059,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Assurance and Doubt"
@@ -3050,6 +3114,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Holiness and Mortification",
@@ -3057,7 +3122,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Vivid, witty sermons by the preacher called the prose Shakespeare of the Puritans, full of pointed warnings against sin and worldliness.",
+   "blurb": "Vivid, witty sermons by the preacher Southey called the prose Shakespeare of Puritan theologians, full of warnings against sin and worldliness.",
    "source": "Internet Archive"
   },
   {
@@ -3105,6 +3170,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Covenant Theology"
@@ -3138,6 +3204,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children"
    ],
@@ -3168,6 +3235,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Prayer",
@@ -3353,15 +3421,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Holy Spirit",
     "Holiness and Mortification"
    ],
-   "scripture": [
-    "Psalms"
-   ],
-   "passage": "Psalm 130",
+   "scripture": [],
+   "passage": "",
    "blurb": "Sixteen volumes of Owen's doctrinal and practical writings on Christ, the Spirit, justification, sin, and the church, in Goold's standard edition.",
    "source": "Internet Archive"
   },
@@ -3420,6 +3487,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Covenant Theology"
@@ -3456,6 +3524,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Sin and Repentance",
@@ -3491,6 +3560,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Election and Predestination",
@@ -3526,6 +3596,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Meditation and Devotion",
@@ -3561,6 +3632,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion",
@@ -3706,6 +3778,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Justification by Faith",
@@ -3744,6 +3817,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Christ and His Work",
     "Assurance and Doubt"
@@ -3778,6 +3852,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence",
@@ -3813,12 +3888,13 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Burroughs shows that the least sin holds more evil than the greatest affliction, to teach readers to hate sin and prize Christ.",
+   "blurb": "Burroughs shows from Scripture that sin is worse than any affliction, even hell itself, to make readers hate sin and prize Christ.",
    "source": "Text Creation Partnership"
   },
   {
@@ -3843,6 +3919,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Worship and the Sabbath",
     "Prayer",
@@ -3878,6 +3955,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
@@ -3963,6 +4041,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Assurance and Doubt",
@@ -3998,6 +4077,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Holiness and Mortification",
     "Sin and Repentance",
@@ -4243,6 +4323,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Christ and His Work",
@@ -4258,6 +4339,7 @@
     "2 Corinthians",
     "Ephesians",
     "Philippians",
+    "Colossians",
     "2 Thessalonians",
     "Hebrews",
     "James",
@@ -4333,9 +4415,10 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
-    "Providence",
+    "Christ and His Work",
     "The Gospel and Conversion"
    ],
    "scripture": [],
@@ -4367,6 +4450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity"
    ],
@@ -4450,6 +4534,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion",
@@ -4485,6 +4570,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Providence",
     "Suffering and Comfort",
@@ -4520,6 +4606,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Holiness and Mortification",
     "Meditation and Devotion",
@@ -4585,6 +4672,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "The Gospel and Conversion",
@@ -4592,7 +4680,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Baxter's practical writings in four large volumes, including the Christian Directory, the Saints' Rest, the Call, and the Reformed Pastor.",
+   "blurb": "Four large volumes of Baxter's practical writings, including his Christian Directory, Saints' Rest, Call to the Unconverted, and Reformed Pastor.",
    "source": "Internet Archive"
   },
   {
@@ -4620,6 +4708,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Meditation and Devotion"
@@ -4654,6 +4743,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "The Church"
@@ -4688,6 +4778,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance",
@@ -4723,6 +4814,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -4807,6 +4899,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Death and the Last Things",
@@ -4870,6 +4963,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "God and the Trinity",
@@ -4945,6 +5039,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "The Gospel and Conversion",
@@ -5000,6 +5095,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -5035,6 +5131,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Prayer"
@@ -5071,6 +5168,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion"
@@ -5120,6 +5218,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Holiness and Mortification",
@@ -5155,6 +5254,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance",
@@ -5190,6 +5290,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "Assurance and Doubt"
@@ -5244,6 +5345,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -5279,6 +5381,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Holiness and Mortification",
@@ -5313,6 +5416,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Biography and Letters",
     "The Gospel and Conversion",
@@ -5348,6 +5452,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Holiness and Mortification"
@@ -5382,6 +5487,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Death and the Last Things"
@@ -5466,6 +5572,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -5473,7 +5580,7 @@
     "Whole Bible"
    ],
    "passage": "the whole Bible",
-   "blurb": "Henry's warm, practical commentary on the whole Bible, finished after his death by fellow ministers, long used for family worship.",
+   "blurb": "Henry's warm, practical commentary on the whole Bible for everyday readers, finished from Romans onward by fellow ministers after his death.",
    "source": "Internet Archive"
   },
   {
@@ -5501,6 +5608,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Prayer"
    ],
@@ -5534,6 +5642,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Family and Children",
@@ -5569,6 +5678,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Family and Children"
@@ -5613,6 +5723,7 @@
    ],
    "links": [],
    "notes": "The copy transcribed for volume 1 lacks the pages from Leviticus 10:12 to 11:24.",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -5723,6 +5834,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -5758,6 +5870,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Justification by Faith",
@@ -5793,6 +5906,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Law of God",
@@ -5825,6 +5939,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -5859,6 +5974,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "The Gospel and Conversion",
@@ -5891,6 +6007,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Assurance and Doubt",
@@ -5923,6 +6040,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
@@ -5953,6 +6071,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Worship and the Sabbath"
@@ -5984,6 +6103,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Justification by Faith",
@@ -6023,6 +6143,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Sin and Repentance",
@@ -6100,6 +6221,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Apologetics and Controversy",
@@ -6135,6 +6257,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -6180,6 +6303,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification"
@@ -6246,6 +6370,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification",
@@ -6285,6 +6410,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Holiness and Mortification"
@@ -6321,6 +6447,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Holiness and Mortification"
@@ -6357,6 +6484,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -6392,6 +6520,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Christ and His Work",
@@ -6449,6 +6578,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -6502,6 +6632,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -6556,6 +6687,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -6590,6 +6722,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Holiness and Mortification",
     "The Gospel and Conversion",
@@ -6625,6 +6758,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -6660,14 +6794,15 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
-    "Scripture",
+    "Election and Predestination",
     "Providence"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Arrowsmith's unfinished body of divinity, opening man's true happiness in God, Scripture, God's being and attributes, and his providence.",
+   "blurb": "Arrowsmith's unfinished body of divinity, opening man's happiness in God, Scripture, God's being and attributes, election, and providence.",
    "source": "Internet Archive"
   },
   {
@@ -6715,6 +6850,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Assurance and Doubt",
@@ -6723,7 +6859,7 @@
    "scripture": [
     "Matthew"
    ],
-   "passage": "Matthew 25",
+   "passage": "Matthew 25:1–13",
    "blurb": "Shepard's collected writings on conversion and true faith, including The Sincere Convert, The Sound Believer, the Ten Virgins, and his Sabbath theses.",
    "source": "Internet Archive"
   },
@@ -6752,6 +6888,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "The Gospel and Conversion",
@@ -6760,7 +6897,7 @@
    "scripture": [
     "Matthew"
    ],
-   "passage": "Matthew 25",
+   "passage": "Matthew 25:1–13",
    "blurb": "Shepard's searching sermons on the wise and foolish virgins, distinguishing true saving grace from its counterfeits in professing Christians.",
    "source": "Internet Archive"
   },
@@ -6859,6 +6996,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Revival",
     "Election and Predestination",
@@ -6894,6 +7032,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Holiness and Mortification",
@@ -6929,6 +7068,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Apologetics and Controversy",
@@ -6936,7 +7076,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Edwards's careful answer to Arminian views of free will, showing that human choice and God's sovereign grace stand together.",
+   "blurb": "Edwards's closely reasoned answer to Arminian ideas of free will, showing that God's sovereign rule and real human responsibility stand together.",
    "source": "Internet Archive"
   },
   {
@@ -6964,6 +7104,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Providence",
@@ -6999,6 +7140,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification"
    ],
@@ -7033,6 +7175,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Death and the Last Things"
@@ -7067,6 +7210,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Missions and Evangelism",
     "Biography and Letters",
@@ -7099,6 +7243,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance",
@@ -7134,6 +7279,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "The Gospel and Conversion"
@@ -7165,6 +7311,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance",
@@ -7200,6 +7347,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Church History"
@@ -7244,6 +7392,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
@@ -7278,6 +7427,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Family and Children"
@@ -7309,6 +7459,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -7364,6 +7515,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance",
@@ -7399,6 +7551,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Revival",
@@ -7431,6 +7584,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival",
@@ -7516,6 +7670,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Apologetics and Controversy",
@@ -7551,6 +7706,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -7584,6 +7740,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Suffering and Comfort",
     "Biography and Letters",
@@ -7619,6 +7776,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Apologetics and Controversy"
@@ -7653,6 +7811,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Prayer",
@@ -7687,6 +7846,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion",
@@ -7724,6 +7884,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance"
@@ -7786,10 +7947,11 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Worship and the Sabbath",
-    "Church History"
+    "Apologetics and Controversy"
    ],
    "scripture": [],
    "passage": "",
@@ -7821,6 +7983,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "The Church"
@@ -7857,6 +8020,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Christ and His Work",
@@ -7891,6 +8055,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Holiness and Mortification",
@@ -7926,6 +8091,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion"
@@ -7959,6 +8125,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Preaching and Pastoral Ministry"
@@ -8013,6 +8180,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns"
    ],
@@ -8045,6 +8213,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "God and the Trinity"
@@ -8079,6 +8248,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Assurance and Doubt",
     "The Gospel and Conversion"
@@ -8133,6 +8303,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Holiness and Mortification",
@@ -8182,6 +8353,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
@@ -8236,6 +8408,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -8282,6 +8455,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion"
@@ -8317,6 +8491,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Church History",
@@ -8352,13 +8527,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Howie's lives of Scottish reformers, ministers and Covenanter martyrs from Patrick Hamilton to James Renwick, long loved in Scottish homes.",
+   "blurb": "Howie's lives of Scottish reformers, ministers, nobles and Covenanters, from Patrick Hamilton to the Revolution of 1688, long loved in Scottish homes.",
    "source": "Internet Archive"
   },
   {
@@ -8416,6 +8592,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -8449,6 +8626,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "The Gospel and Conversion",
@@ -8484,6 +8662,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "The Gospel and Conversion",
@@ -8519,6 +8698,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Apologetics and Controversy",
@@ -8664,6 +8844,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Gospel and Conversion",
@@ -8699,6 +8880,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Sin and Repentance",
     "The Gospel and Conversion",
@@ -8734,6 +8916,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Suffering and Comfort"
@@ -8768,6 +8951,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Preaching and Pastoral Ministry"
@@ -8822,6 +9006,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion"
@@ -8916,6 +9101,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work",
@@ -8951,6 +9137,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "The Gospel and Conversion"
@@ -8985,6 +9172,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Worship and the Sabbath",
@@ -9020,6 +9208,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -9054,6 +9243,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History",
@@ -9089,6 +9279,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -9123,6 +9314,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church",
@@ -9158,6 +9350,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -9192,6 +9385,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Biography and Letters",
     "Holiness and Mortification",
@@ -9227,6 +9421,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work"
@@ -9261,6 +9456,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -9296,6 +9492,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Christ and His Work"
@@ -9332,6 +9529,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Prayer",
@@ -9367,6 +9565,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Assurance and Doubt",
@@ -9402,6 +9601,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Justification by Faith",
     "Christ and His Work"
@@ -9436,6 +9636,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "Missions and Evangelism"
@@ -9470,6 +9671,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Meditation and Devotion"
@@ -9504,6 +9706,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -9538,6 +9741,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "The Gospel and Conversion"
@@ -9582,6 +9786,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Sin and Repentance",
@@ -9627,13 +9832,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Apologetics and Controversy"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Cunningham traces the church's great doctrinal controversies from the early councils through the Reformation, weighing each by Scripture.",
+   "blurb": "Cunningham reviews the church's chief doctrinal controversies, from the early heresies through the Reformation to the Arminian debates, weighing each by Scripture.",
    "source": "Internet Archive"
   },
   {
@@ -9661,6 +9867,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Election and Predestination",
@@ -9696,6 +9903,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Church History"
@@ -9730,6 +9938,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Holy Spirit",
     "The Gospel and Conversion"
@@ -9774,9 +9983,11 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
-    "Baptism and the Lord's Supper"
+    "Baptism and the Lord's Supper",
+    "Christ's Kingship and the Nations"
    ],
    "scripture": [],
    "passage": "",
@@ -9808,6 +10019,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -9841,6 +10053,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -9874,6 +10087,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Holy Spirit",
     "God and the Trinity"
@@ -9908,6 +10122,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters",
@@ -9963,6 +10178,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -10020,6 +10236,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification"
@@ -10066,6 +10283,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Covenant Theology"
@@ -10102,6 +10320,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Covenant Theology",
@@ -10137,6 +10356,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Election and Predestination"
@@ -10145,7 +10365,7 @@
     "Romans"
    ],
    "passage": "Romans",
-   "blurb": "Haldane's verse by verse exposition of Romans, grown from his Geneva Bible studies, defending justification by faith and sovereign grace.",
+   "blurb": "Haldane's verse by verse exposition of Romans, grown from his teaching of students in Geneva, defending justification by faith and sovereign grace.",
    "source": "Internet Archive"
   },
   {
@@ -10183,6 +10403,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Christ and His Work",
@@ -10228,6 +10449,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt"
    ],
@@ -10313,6 +10535,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Apologetics and Controversy",
@@ -10348,6 +10571,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "God and the Trinity"
@@ -10432,6 +10656,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Preaching and Pastoral Ministry",
@@ -10467,6 +10692,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Biography and Letters",
     "Holiness and Mortification",
@@ -10502,6 +10728,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Psalms and Hymns"
    ],
@@ -10535,6 +10762,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "The Gospel and Conversion",
@@ -10570,6 +10798,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Holiness and Mortification",
@@ -10605,6 +10834,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Apologetics and Controversy"
@@ -10639,6 +10869,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Death and the Last Things"
@@ -10672,6 +10903,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Biography and Letters"
@@ -10706,6 +10938,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Holiness and Mortification",
     "Sin and Repentance"
@@ -10800,6 +11033,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion"
@@ -10811,7 +11045,7 @@
     "John"
    ],
    "passage": "the four Gospels",
-   "blurb": "Ryle's short devotional readings through Matthew, Mark, Luke and John, plain and practical, ideal for family worship and personal study.",
+   "blurb": "Ryle's plain, practical expositions of Matthew, Mark, Luke and John in short passages, written for family prayers and private reading.",
    "source": "Internet Archive"
   },
   {
@@ -10839,6 +11073,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Baptism and the Lord's Supper",
@@ -10874,6 +11109,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -10909,6 +11145,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Holiness and Mortification",
     "Prayer",
@@ -10944,6 +11181,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival",
@@ -10979,6 +11217,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
@@ -11013,6 +11252,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Revival",
     "Church History",
@@ -11048,6 +11288,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work"
@@ -11086,6 +11327,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Christ and His Work"
@@ -11130,6 +11372,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Covenant Theology",
@@ -11165,6 +11408,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Apologetics and Controversy"
@@ -11252,6 +11496,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -11287,6 +11532,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -11342,6 +11588,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Missions and Evangelism",
@@ -11505,6 +11752,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work"
@@ -11599,6 +11847,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Meditation and Devotion"
@@ -11655,6 +11904,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -11688,6 +11938,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith"
@@ -11732,6 +11983,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Meditation and Devotion"
    ],
@@ -11765,6 +12017,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion"
    ],
@@ -11798,6 +12051,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Missions and Evangelism",
     "Preaching and Pastoral Ministry"
@@ -11832,13 +12086,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Preaching and Pastoral Ministry"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Spurgeon's two lectures to students on using commentaries, with his candid notes on the older works for every book of Scripture.",
+   "blurb": "Spurgeon's two lectures to students on using commentaries, with his candid, often witty verdicts on commentaries for every book of Scripture.",
    "source": "Internet Archive"
   },
   {
@@ -11896,6 +12151,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters"
    ],
@@ -11929,6 +12185,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Family and Children"
@@ -11963,6 +12220,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Election and Predestination",
@@ -11998,6 +12256,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -12033,6 +12292,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Election and Predestination",
     "Providence",
@@ -12068,9 +12328,10 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
-    "Assurance and Doubt",
     "The Gospel and Conversion",
+    "Assurance and Doubt",
     "Holiness and Mortification"
    ],
    "scripture": [],
@@ -12103,6 +12364,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -12137,6 +12399,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival",
@@ -12172,6 +12435,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Preaching and Pastoral Ministry"
@@ -12206,6 +12470,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -12269,6 +12534,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -12304,6 +12570,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Election and Predestination"
@@ -12340,6 +12607,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Election and Predestination"
@@ -12376,6 +12644,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -12411,6 +12680,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "Suffering and Comfort"
@@ -12447,6 +12717,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -12482,6 +12753,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -12525,6 +12797,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "The Church"
@@ -12559,6 +12832,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -12594,6 +12868,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -12627,6 +12902,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -12672,6 +12948,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -12727,6 +13004,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Scripture"
@@ -12773,6 +13051,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Missions and Evangelism"
@@ -12809,6 +13088,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -12842,6 +13122,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Death and the Last Things"
@@ -12876,6 +13157,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Family and Children",
     "Worship and the Sabbath",
@@ -12931,6 +13213,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -12976,6 +13259,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -13009,6 +13293,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Apologetics and Controversy"
@@ -13043,6 +13328,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Election and Predestination",
     "The Gospel and Conversion",
@@ -13078,6 +13364,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "God and the Trinity"
@@ -13112,6 +13399,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "The Holy Spirit"
@@ -13146,6 +13434,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work"
@@ -13180,13 +13469,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "The Gospel and Conversion"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Warfield's sermons from the Princeton seminary chapel on Christ's person and saving work, simple, warm and doctrinally rich.",
+   "blurb": "Warfield's sermons from the Princeton seminary chapel on Christ's person and saving work, warm and doctrinally rich.",
    "source": "Internet Archive"
   },
   {
@@ -13214,6 +13504,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Holiness and Mortification"
@@ -13248,6 +13539,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -13282,6 +13574,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -13317,6 +13610,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Apologetics and Controversy"
@@ -13351,6 +13645,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "God and the Trinity"
@@ -13385,6 +13680,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy"
    ],
@@ -13418,6 +13714,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Election and Predestination"
@@ -13452,6 +13749,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Apologetics and Controversy",
     "The Gospel and Conversion"
@@ -13486,6 +13784,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Christ and His Work"
@@ -13520,6 +13819,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Justification by Faith",
     "Apologetics and Controversy",
@@ -13555,6 +13855,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -13588,6 +13889,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Apologetics and Controversy"
@@ -13622,6 +13924,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Christ and His Work"
@@ -13656,6 +13959,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Apologetics and Controversy"
@@ -13690,6 +13994,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Death and the Last Things",
@@ -13725,6 +14030,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Christ and His Work"
@@ -13759,6 +14065,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -13795,6 +14102,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -13859,6 +14167,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Covenant Theology",
@@ -13894,6 +14203,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -13929,6 +14239,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -13962,6 +14273,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Apologetics and Controversy"
@@ -13996,6 +14308,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Justification by Faith",
@@ -14031,6 +14344,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Worship and the Sabbath",
     "Apologetics and Controversy"
@@ -14065,6 +14379,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Prayer",
     "God and the Trinity"
@@ -14099,13 +14414,15 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
+    "The Gospel and Conversion",
     "Holiness and Mortification",
-    "Meditation and Devotion"
+    "Assurance and Doubt"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Plumer's practical treatise on true inward religion, covering faith, repentance, love, humility and the other graces of the Christian life.",
+   "blurb": "Plumer's guide to true religious experience, from conviction and conversion through spiritual darkness to faith, repentance, love, and the other graces.",
    "source": "Internet Archive"
   },
   {
@@ -14133,6 +14450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Psalms and Hymns"
@@ -14169,6 +14487,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -14202,13 +14521,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Covenant Theology"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Robinson argues that the church is part of the gospel itself, tracing it through the covenants and defending its spiritual power.",
+   "blurb": "Robinson argues the church belongs to the gospel itself, tracing it through the covenants and setting out its spiritual nature and government.",
    "source": "Internet Archive"
   },
   {
@@ -14236,6 +14556,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Apologetics and Controversy"
@@ -14270,6 +14591,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Holy Spirit"
    ],
@@ -14303,6 +14625,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Prayer"
@@ -14337,6 +14660,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -14371,6 +14695,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Scripture"
@@ -14383,10 +14708,10 @@
   {
    "id": "westminster-assembly-the-directory-for-family-worship",
    "title": "The Directory for Family Worship",
-   "author": "Westminster Assembly",
-   "author_sort": "Westminster Assembly",
-   "author_dates": "1643–1653",
-   "tradition": "English Puritan",
+   "author": "General Assembly of the Church of Scotland",
+   "author_sort": "Church of Scotland, General Assembly",
+   "author_dates": "",
+   "tradition": "Scottish Reformation & Covenanters",
    "category": "Worship & Prayer",
    "tier": "standard",
    "first_published": 1647,
@@ -14394,6 +14719,7 @@
    "files": [],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "Worship and the Sabbath",
@@ -14437,6 +14763,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Election and Predestination",
@@ -14472,6 +14799,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Church History"
@@ -14510,6 +14838,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Church History"
@@ -14544,6 +14873,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "The Law of God",
@@ -14579,6 +14909,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Worship and the Sabbath",
     "The Church",
@@ -14613,14 +14944,13 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath"
    ],
-   "scripture": [
-    "Psalms"
-   ],
-   "passage": "the Psalms in metre",
+   "scripture": [],
+   "passage": "",
    "blurb": "The metrical psalter prepared jointly by several Presbyterian and Reformed churches, setting every psalm to music for congregational and family singing.",
    "source": "Internet Archive"
   },
@@ -14649,8 +14979,10 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
+    "Church History",
     "Revival"
    ],
    "scripture": [],
@@ -14683,6 +15015,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "Baptism and the Lord's Supper"
@@ -14717,6 +15050,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "The Law of God",
@@ -14752,6 +15086,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Scripture",
@@ -14787,6 +15122,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Christ and His Work"
@@ -14821,6 +15157,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -14854,6 +15191,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "The Church",
@@ -14889,6 +15227,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Church History",
@@ -14924,13 +15263,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "The Church"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Wylie's Covenanter case for the distinct callings of civil magistrate and minister, explaining Reformed Presbyterian dissent from the American Constitution.",
+   "blurb": "Wylie sets out the scriptural qualifications for civil rulers and ministers, explaining why Covenanters refused allegiance to the American Constitution.",
    "source": "Internet Archive"
   },
   {
@@ -14958,6 +15298,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Christ's Kingship and the Nations"
@@ -14992,14 +15333,15 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
-    "Suffering and Comfort",
+    "The Gospel and Conversion",
     "Christ's Kingship and the Nations",
-    "The Gospel and Conversion"
+    "Suffering and Comfort"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Field sermons by Cameron, Cargill, Renwick, and other Covenanter preachers, many taken down by hearers during the years of persecution.",
+   "blurb": "Sermons by William Guthrie, Cameron, Cargill, Peden, and other Covenanter preachers, first gathered by John Howie from manuscripts of the persecution years.",
    "source": "Internet Archive"
   },
   {
@@ -15027,6 +15369,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Suffering and Comfort",
@@ -15072,6 +15415,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -15106,6 +15450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters",
@@ -15151,6 +15496,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -15184,6 +15530,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -15217,13 +15564,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Glasgow's history of the Covenanter church in America, with its congregations, synods, and biographical sketches of its ministers.",
+   "blurb": "Glasgow's history of the Covenanter church in America, with sketches of all its ministers, congregations, missions, and institutions.",
    "source": "Internet Archive"
   },
   {
@@ -15271,6 +15619,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Missions and Evangelism",
     "Biography and Letters",
@@ -15303,6 +15652,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Christ's Kingship and the Nations"
@@ -15334,6 +15684,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Suffering and Comfort",
@@ -15369,6 +15720,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath",
@@ -15406,6 +15758,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath",
@@ -15441,6 +15794,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Prayer"
@@ -15475,6 +15829,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Christ and His Work"
@@ -15519,6 +15874,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Gospel and Conversion",
@@ -15554,6 +15910,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Prayer",
@@ -15599,16 +15956,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Prayer",
     "Christ and His Work"
    ],
-   "scripture": [
-    "Hebrews",
-    "1 Peter"
-   ],
-   "passage": "Hebrews 4 and 10, 1 Peter 1",
+   "scripture": [],
+   "passage": "",
    "blurb": "Traill's sermons on the throne of grace, Christ's prayer in John 17, and holding fast our profession, with his defense of justification.",
    "source": "Internet Archive"
   },
@@ -15637,6 +15992,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Holiness and Mortification"
@@ -15671,6 +16027,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Christ's Kingship and the Nations",
@@ -15710,6 +16067,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "Christ and His Work"
@@ -15744,6 +16102,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Baptism and the Lord's Supper"
@@ -15775,6 +16134,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology"
    ],
@@ -15805,6 +16165,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy"
@@ -15836,6 +16197,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Christ's Kingship and the Nations"
@@ -15867,6 +16229,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Assurance and Doubt",
@@ -15902,6 +16265,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -15946,6 +16310,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Church History",
@@ -16051,6 +16416,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -16084,6 +16450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -16128,6 +16495,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -16172,6 +16540,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -16206,6 +16575,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "The Gospel and Conversion",
@@ -16241,6 +16611,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
@@ -16284,6 +16655,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -16319,6 +16691,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Covenant Theology"
@@ -16353,12 +16726,13 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Lectures surveying how older Scottish divines taught key doctrines, a readable guide to the theology of the Covenanting era.",
+   "blurb": "Walker's lectures on how Scottish divines from Knox to the Seceders taught the atonement, predestination, the church, and Christ's headship.",
    "source": "Internet Archive"
   },
   {
@@ -16386,6 +16760,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy"
@@ -16420,6 +16795,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Worship and the Sabbath",
     "The Law of God"
@@ -16453,6 +16829,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -16506,6 +16883,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -16539,6 +16917,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -16572,6 +16951,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy",
@@ -16607,6 +16987,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -16640,6 +17021,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival",
@@ -16675,6 +17057,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Covenant Theology"
@@ -16709,6 +17092,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "The Church"
@@ -16719,7 +17103,7 @@
     "Titus"
    ],
    "passage": "1 and 2 Timothy and Titus",
-   "blurb": "Fairbairn's commentary on Paul's letters to Timothy and Titus, with a translation, notes, and essays on church order and ministry.",
+   "blurb": "Fairbairn's commentary on Paul's letters to Timothy and Titus, giving the Greek text, a translation, and careful expository notes.",
    "source": "Internet Archive"
   },
   {
@@ -16747,6 +17131,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -16792,6 +17177,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -16827,6 +17213,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -16862,6 +17249,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Providence",
     "Suffering and Comfort"
@@ -16896,6 +17284,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -16930,6 +17319,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Meditation and Devotion"
@@ -16961,6 +17351,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Assurance and Doubt"
@@ -16992,6 +17383,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
@@ -17022,6 +17414,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification"
    ],
@@ -17057,6 +17450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Assurance and Doubt"
@@ -17088,6 +17482,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "God and the Trinity"
@@ -17122,6 +17517,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Assurance and Doubt"
@@ -17196,10 +17592,11 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Assurance and Doubt",
-    "Covenant Theology"
+    "Christ and His Work"
    ],
    "scripture": [],
    "passage": "",
@@ -17228,6 +17625,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Covenant Theology",
@@ -17362,6 +17760,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -17387,6 +17786,7 @@
    "files": [],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt"
    ],
@@ -17430,6 +17830,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -17464,6 +17865,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "Holiness and Mortification",
@@ -17499,6 +17901,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -17532,6 +17935,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "The Holy Spirit"
@@ -17566,6 +17970,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Death and the Last Things"
@@ -17589,6 +17994,7 @@
    "files": [],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Holy Spirit"
    ],
@@ -17634,6 +18040,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith"
    ],
@@ -17667,6 +18074,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Holiness and Mortification"
@@ -17701,6 +18109,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification",
     "Sin and Repentance"
@@ -17735,6 +18144,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification"
    ],
@@ -17768,6 +18178,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Holiness and Mortification"
    ],
@@ -17800,6 +18211,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -17833,6 +18245,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Holiness and Mortification",
@@ -17868,6 +18281,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Assurance and Doubt"
@@ -17902,13 +18316,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
-    "Providence"
+    "God and the Trinity"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Coles's plain and practical treatment of God's sovereign grace in election, redemption, calling and perseverance, written to comfort believers.",
+   "blurb": "Coles's plain and practical treatment of God's sovereign grace in election, redemption, effectual calling and perseverance, long loved by ordinary believers.",
    "source": "Internet Archive"
   },
   {
@@ -17933,6 +18348,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion"
@@ -17967,6 +18383,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Sin and Repentance",
@@ -17999,6 +18416,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Suffering and Comfort"
@@ -18083,6 +18501,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Sin and Repentance",
@@ -18132,6 +18551,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Holiness and Mortification"
@@ -18163,6 +18583,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Law of God"
@@ -18194,6 +18615,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Scripture",
@@ -18226,6 +18648,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Law of God"
@@ -18286,6 +18709,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -18321,6 +18745,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -18356,6 +18781,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -18391,6 +18817,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -18430,6 +18857,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -18495,6 +18923,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -18556,6 +18985,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Sin and Repentance",
@@ -18591,6 +19021,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance"
@@ -18625,6 +19056,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Christ and His Work",
@@ -18660,6 +19092,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Covenant Theology",
     "The Law of God",
@@ -18703,6 +19136,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath"
@@ -18739,6 +19173,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Holiness and Mortification",
@@ -18774,6 +19209,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Apologetics and Controversy",
@@ -18829,6 +19265,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Prayer",
     "Meditation and Devotion",
@@ -18864,6 +19301,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Apologetics and Controversy",
@@ -18909,6 +19347,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Scripture",
@@ -18974,6 +19413,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
@@ -19005,6 +19445,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -19050,6 +19491,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -19095,6 +19537,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Apologetics and Controversy"
@@ -19139,6 +19582,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Scripture"
@@ -19189,6 +19633,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Providence",
@@ -19224,6 +19669,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Suffering and Comfort"
@@ -19260,8 +19706,8 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
-    "Scripture",
     "Election and Predestination",
     "The Church"
    ],
@@ -19294,6 +19740,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -19326,6 +19773,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Justification by Faith",
@@ -19361,6 +19809,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ's Kingship and the Nations",
     "Apologetics and Controversy"
@@ -19395,6 +19844,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -19439,6 +19889,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History"
    ],
@@ -19472,6 +19923,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -19506,6 +19958,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Apologetics and Controversy"
@@ -19540,6 +19993,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -19572,6 +20026,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work"
@@ -19606,6 +20061,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Covenant Theology",
@@ -19641,6 +20097,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "Church History",
@@ -19686,13 +20143,14 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "God and the Trinity"
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Preaching of the eloquent Huguenot refugee at The Hague, searching the conscience on God's perfections, repentance and Christian duty.",
+   "blurb": "Saurin's eloquent sermons to the Huguenot refugees at The Hague, searching the conscience on God's perfections, repentance and Christian duty.",
    "source": "Internet Archive"
   },
   {
@@ -19717,6 +20175,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -19752,6 +20211,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "The Gospel and Conversion"
@@ -19783,6 +20243,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Sin and Repentance"
@@ -19814,6 +20275,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy"
@@ -19848,6 +20310,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church"
    ],
@@ -19878,6 +20341,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -19913,6 +20377,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Sin and Repentance"
@@ -19947,6 +20412,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Family and Children"
@@ -19981,6 +20447,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Worship and the Sabbath"
@@ -20017,6 +20484,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Apologetics and Controversy"
@@ -20051,6 +20519,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival",
@@ -20086,6 +20555,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy"
@@ -20120,6 +20590,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Christ and His Work",
@@ -20155,6 +20626,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -20209,6 +20681,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Apologetics and Controversy",
     "The Church",
@@ -20244,6 +20717,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -20278,6 +20752,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -20312,6 +20787,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Church History"
@@ -20356,6 +20832,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "Christ and His Work",
@@ -20363,7 +20840,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Breckinridge's two volume systematic theology, treating God and redemption as revealed and then as known in the believer's experience.",
+   "blurb": "Breckinridge's two volume systematic theology, treating man, Christ and God, and then the covenant of grace, salvation applied and the church.",
    "source": "Internet Archive"
   },
   {
@@ -20401,6 +20878,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "God and the Trinity",
     "The Law of God",
@@ -20526,6 +21004,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Apologetics and Controversy",
@@ -20571,6 +21050,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Preaching and Pastoral Ministry",
@@ -20606,6 +21086,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -20640,9 +21121,9 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
-    "Church History",
-    "Biography and Letters"
+    "Church History"
    ],
    "scripture": [],
    "passage": "",
@@ -20684,6 +21165,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Justification by Faith",
@@ -20740,6 +21222,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -20775,6 +21258,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Election and Predestination",
     "Justification by Faith",
@@ -20810,6 +21294,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Assurance and Doubt"
@@ -20844,6 +21329,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Baptism and the Lord's Supper",
     "Christ and His Work",
@@ -20879,6 +21365,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -20886,7 +21373,7 @@
     "Matthew"
    ],
    "passage": "Matthew",
-   "blurb": "Spurgeon's last work, a plain running commentary on Matthew presenting Jesus as the King, suited to family reading.",
+   "blurb": "Spurgeon's last work, a plain running commentary on Matthew that presents Jesus throughout as the King, written for ordinary readers.",
    "source": "Internet Archive"
   },
   {
@@ -20914,6 +21401,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "Scripture",
@@ -20949,6 +21437,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -20982,6 +21471,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -21017,6 +21507,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Missions and Evangelism"
    ],
@@ -21050,6 +21541,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith"
@@ -21114,6 +21606,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Church History",
     "Biography and Letters"
@@ -21148,6 +21641,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Baptism and the Lord's Supper"
@@ -21192,6 +21686,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "Meditation and Devotion",
@@ -21277,6 +21772,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -21312,6 +21808,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Biography and Letters"
@@ -21346,6 +21843,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry"
    ],
@@ -21379,6 +21877,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -21414,6 +21913,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Meditation and Devotion"
@@ -21480,6 +21980,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Scripture"
@@ -21520,6 +22021,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Revival",
     "Sin and Repentance",
@@ -21527,7 +22029,7 @@
    ],
    "scripture": [],
    "passage": "",
-   "blurb": "Winslow traces how a believer's love and prayer quietly decline, and shows the way back to fresh life in Christ.",
+   "blurb": "Winslow traces how a believer's love, faith and prayer quietly decline, and shows the way back to fresh life in Christ.",
    "source": "Internet Archive"
   },
   {
@@ -21555,6 +22057,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Holy Spirit",
     "The Gospel and Conversion"
@@ -21589,6 +22092,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion"
@@ -21623,6 +22127,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Psalms and Hymns",
     "The Gospel and Conversion"
@@ -21657,6 +22162,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Justification by Faith",
@@ -21692,6 +22198,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival"
@@ -21725,6 +22232,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Biography and Letters",
     "Revival"
@@ -21759,6 +22267,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Meditation and Devotion"
@@ -21793,6 +22302,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Meditation and Devotion",
     "Christ and His Work"
@@ -21827,6 +22337,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Family and Children",
     "Meditation and Devotion"
@@ -21861,6 +22372,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Suffering and Comfort",
@@ -21896,6 +22408,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Suffering and Comfort"
@@ -21929,6 +22442,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Scripture"
    ],
@@ -21963,6 +22477,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -21998,6 +22513,7 @@
    ],
    "links": [],
    "notes": "About one word in twelve of the marginal notes could not be read in the copy transcribed. The Bible text itself is nearly whole.",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22033,6 +22549,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Law of God",
@@ -22071,20 +22588,21 @@
    "links": [
     {
      "volume": 2,
-     "label": "Missing pages: Leviticus 27",
+     "label": "Missing pages, Leviticus 27",
      "contents": "Leviticus 27:2–8, the two pages lost from the 1627 copy, read in the Glasgow 1843 reprint, vol. 1 (printed pp. 682–685)",
      "url": "https://archive.org/details/annotationsonpen01ains",
      "why": "old printing, kept at archive.org"
     },
     {
      "volume": 3,
-     "label": "Missing pages: Psalms 137–139 and 143–146",
+     "label": "Missing pages, Psalms 137–139 and 143–146",
      "contents": "Psalms 137, 138 and 139:1–7, and Psalm 143:11 to Psalm 146, lost from the 1627 copy, read in the Glasgow 1843 reprint, vol. 2 (printed pp. 663–675)",
      "url": "https://archive.org/details/annotationsonpen02ains",
      "why": "old printing, kept at archive.org"
     }
    ],
    "notes": "The copy transcribed lacks Leviticus 27:2 to 8 and parts of Psalms 137 to 139 and 143 to 146. The links point to those pages in the Glasgow reprint of 1843.",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22126,6 +22644,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22161,6 +22680,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22216,6 +22736,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -22251,6 +22772,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -22287,6 +22809,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22321,6 +22844,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22355,6 +22879,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22362,7 +22887,7 @@
     "New Testament"
    ],
    "passage": "the New Testament",
-   "blurb": "The Greek text behind the Reformation Bibles, based on Stephanus 1550 with Elzevir and Scrivener readings noted, for students of Greek.",
+   "blurb": "The Greek text behind the Reformation Bibles, for students of Greek, collated from Stephanus, Elzevir and Scrivener with their differences footnoted.",
    "source": "eBible.org"
   },
   {
@@ -22390,6 +22915,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Law of God"
@@ -22426,6 +22952,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Law of God"
@@ -22462,6 +22989,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Holiness and Mortification",
@@ -22499,6 +23027,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "Election and Predestination"
@@ -22535,6 +23064,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "The Church"
@@ -22571,6 +23101,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22606,6 +23137,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification"
@@ -22651,6 +23183,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22686,6 +23219,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Gospel and Conversion"
@@ -22722,6 +23256,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Law of God"
@@ -22768,6 +23303,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Covenant Theology"
@@ -22804,6 +23340,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -22839,6 +23376,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Apologetics and Controversy"
@@ -22875,6 +23413,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "Holiness and Mortification"
@@ -22911,6 +23450,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Holiness and Mortification"
@@ -22948,6 +23488,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence"
    ],
@@ -22983,6 +23524,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23018,6 +23560,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23055,6 +23598,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance",
     "Missions and Evangelism"
@@ -23099,6 +23643,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23135,6 +23680,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -23142,7 +23688,7 @@
     "Mark"
    ],
    "passage": "Mark",
-   "blurb": "A clear, concise explanation of Mark by a Princeton scholar, following the Gospel's vivid account of Christ's ministry, death and resurrection.",
+   "blurb": "A clear, careful explanation of Mark by a Princeton scholar, following the Gospel's vivid account of Christ's ministry, death and resurrection.",
    "source": "Internet Archive"
   },
   {
@@ -23170,6 +23716,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Suffering and Comfort"
@@ -23206,6 +23753,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Prayer"
@@ -23242,6 +23790,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Sin and Repentance"
    ],
@@ -23277,6 +23826,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Gospel and Conversion",
     "Worship and the Sabbath"
@@ -23285,7 +23835,7 @@
     "John"
    ],
    "passage": "John 4",
-   "blurb": "Hildersham's lectures on Christ and the woman of Samaria and the nobleman's son, rich on the living water, true worship, and faith.",
+   "blurb": "Hildersham's lectures on Christ with the woman of Samaria and the nobleman's son, teaching on the living water, true worship and faith.",
    "source": "Text Creation Partnership"
   },
   {
@@ -23313,6 +23863,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Assurance and Doubt",
     "Holiness and Mortification"
@@ -23357,6 +23908,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification"
@@ -23393,6 +23945,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Christ and His Work"
@@ -23401,7 +23954,7 @@
     "Revelation"
    ],
    "passage": "Revelation 1–3",
-   "blurb": "Perkins expounds the vision of Christ and His letters to the seven churches, applying their warnings and promises to Christians today.",
+   "blurb": "Perkins expounds the vision of Christ and His letters to the seven churches, applying their warnings and promises to every believer.",
    "source": "Text Creation Partnership"
   },
   {
@@ -23429,6 +23982,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Covenant Theology"
@@ -23465,6 +24019,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23508,6 +24063,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "The Law of God",
     "Covenant Theology"
@@ -23544,6 +24100,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "The Law of God"
@@ -23588,6 +24145,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23631,6 +24189,7 @@
     }
    ],
    "notes": "The copy transcribed lacks 15 leaves, in Deuteronomy, Joshua, Judges, 1 Samuel, and 1 Kings. The linked scan of a 1568 copy has them.",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23673,7 +24232,8 @@
      "why": "old printing, kept at archive.org"
     }
    ],
-   "notes": "The copy transcribed lacks some leaves: Genesis 1:1 to 2:16, Judges 12:10 to 15:8, Job 31:3 to 34:9, Psalms 50 to 56 and 106:48 to 111:5, part of 2 Maccabees, and Revelation 8:2 to 11:15. The linked scan of Bagster's 1838 page-for-page reprint has them.",
+   "notes": "The copy transcribed lacks some leaves, at Genesis 1:1 to 2:16, Judges 12:10 to 15:8, Job 31:3 to 34:9, Psalms 50 to 56 and 106:48 to 111:5, part of 2 Maccabees, and Revelation 8:2 to 11:15. The linked scan of Bagster's 1838 page-for-page reprint has them.",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23709,6 +24269,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23747,6 +24308,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23793,6 +24355,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23800,7 +24363,7 @@
     "Whole Bible"
    ],
    "passage": "the whole Bible",
-   "blurb": "The Latin Bible most used by Reformed divines, translated from Hebrew, Greek and Syriac by Tremellius, Junius and Beza, with notes.",
+   "blurb": "The Latin Bible widely used by Reformed divines, translated from Hebrew, Greek and Syriac by Tremellius, Junius and Beza, with notes.",
    "source": "Internet Archive"
   },
   {
@@ -23825,6 +24388,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Preaching and Pastoral Ministry",
     "The Church"
@@ -23863,6 +24427,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -23898,6 +24463,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Sin and Repentance"
@@ -23944,6 +24510,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture",
     "Providence"
@@ -23981,6 +24548,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "The Church",
     "Christ and His Work"
@@ -24017,6 +24585,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Providence",
     "Family and Children"
@@ -24054,6 +24623,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Providence"
@@ -24089,6 +24659,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -24124,6 +24695,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work"
    ],
@@ -24159,6 +24731,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Justification by Faith",
     "The Law of God"
@@ -24195,6 +24768,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Death and the Last Things",
     "Christ and His Work"
@@ -24231,6 +24805,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Suffering and Comfort",
@@ -24268,6 +24843,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "God and the Trinity"
@@ -24304,6 +24880,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Holiness and Mortification"
@@ -24349,6 +24926,7 @@
     }
    ],
    "notes": "",
+   "start": false,
    "topics": [
     "Scripture"
    ],
@@ -24384,6 +24962,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Suffering and Comfort",
     "Scripture"
@@ -24420,6 +24999,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": false,
    "topics": [
     "Christ and His Work",
     "Holiness and Mortification"
@@ -24455,6 +25035,7 @@
    ],
    "links": [],
    "notes": "",
+   "start": true,
    "topics": [
     "Scripture"
    ],
@@ -24489,6 +25070,7 @@
    ],
    "links": [],
    "notes": "Its translators call it an early draft that will be updated, most of all in the Old Testament. Words in square brackets are supplied for sense.",
+   "start": false,
    "topics": [
     "Scripture"
    ],

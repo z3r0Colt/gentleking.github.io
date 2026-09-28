@@ -40,7 +40,7 @@ book, such as Owen's *Pneumatologia* in volumes 3 and 4 of his Works, and those 
 so under `found_in`.
 
 **Where the books came from.** Nothing here came from the Christian Classics
-Ethereal Library. The books come from four places.
+Ethereal Library. The books come from five places.
 
 Most were made by Gentle King from scans of printings dated 1930 or earlier, kept by
 the Internet Archive and the libraries that lent them. The text was read from the
@@ -49,7 +49,7 @@ come through. The first page of each book names the printing and links to the sc
 
 The books of the 1500s and 1600s were made by Gentle King from the typed
 transcriptions of the Text Creation Partnership, which gave them to the public domain
-(CC0). Their spelling is as first printed, *vnto* and *haue* and all, except that
+(CC0). Their spelling is that of the old printing transcribed, *vnto* and *haue* and all, except that
 the long s is given as a plain s. A dot or a diamond in angle brackets marks a letter
 or word that could not be read in the copy transcribed. Notes printed beside or
 below the text, like Poole's annotations or the Geneva notes, follow the verse they
@@ -89,4 +89,5 @@ The Resources page is built from `library/catalog.json` by `build.py` at the top
 the repository. To add a book, put its file in the library, add it to the catalog,
 and run `python3 build.py`. Each work in the catalog can carry `topics`, `scripture`
 (the books of the Bible it expounds), `passage`, and a one-sentence `blurb`, and the
-page's search and filters use them.
+page's search and filters use them. A work marked `start` is one of the few a newcomer
+can pick up first, and the page marks it as a good place to start.

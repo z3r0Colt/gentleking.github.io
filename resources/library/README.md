@@ -295,7 +295,7 @@ The same list, with every detail, is in `catalog.json`.
 ## Commentaries
 
 - **An Exposition upon the Second Epistle General of St. Peter**, Thomas Adams (1633). [EPUB](thomas-adams/exposition-upon-the-second-epistle-general-of-st-peter.epub)
-- **Annotations upon the Five Books of Moses, the Book of the Psalms, and the Song of Songs**, Henry Ainsworth (1627). [Genesis to Song of Songs](henry-ainsworth/annotations-upon-the-five-books-of-moses-the-book-of-the-vol-01.epub), [Missing pages: Leviticus 27, scan](https://archive.org/details/annotationsonpen01ains), [Missing pages: Psalms 137–139 and 143–146, scan](https://archive.org/details/annotationsonpen02ains)
+- **Annotations upon the Five Books of Moses, the Book of the Psalms, and the Song of Songs**, Henry Ainsworth (1627). [Genesis to Song of Songs](henry-ainsworth/annotations-upon-the-five-books-of-moses-the-book-of-the-vol-01.epub), [Missing pages, Leviticus 27, scan](https://archive.org/details/annotationsonpen01ains), [Missing pages, Psalms 137–139 and 143–146, scan](https://archive.org/details/annotationsonpen02ains)
 - **Lectures upon the Whole Epistle of St. Paul to the Philippians**, Henry Airay (1618). [EPUB](henry-airay/lectures-upon-the-whole-epistle-of-st-paul-to-the.epub)
 - **The Prophecies of Isaiah**, Joseph Addison Alexander (1846). [The Earlier Prophecies of Isaiah](joseph-addison-alexander/prophecies-of-isaiah-vol-01.epub), [The Later Prophecies of Isaiah](joseph-addison-alexander/prophecies-of-isaiah-vol-02.epub)
 - **The Psalms Translated and Explained**, Joseph Addison Alexander (1850). [Volume 1](joseph-addison-alexander/psalms-translated-and-explained-vol-01.epub), [Volume 2](joseph-addison-alexander/psalms-translated-and-explained-vol-02.epub), [Volume 3](joseph-addison-alexander/psalms-translated-and-explained-vol-03.epub)
@@ -405,6 +405,7 @@ The same list, with every detail, is in `catalog.json`.
 - **Thoughts on Family Worship**, James W. Alexander (1847). [EPUB](james-waddel-alexander/thoughts-on-family-worship.epub)
 - **The Psalms: Their History, Teachings, and Use**, William Binnie (1870). [EPUB](william-binnie/psalms.epub)
 - **Gospel Worship**, Jeremiah Burroughs (1648). [scan](https://archive.org/details/bim_early-english-books-1641-1700_gospel-worship_burroughes-jeremiah_1653)
+- **The Directory for Family Worship**, General Assembly of the Church of Scotland (1647). inside [*The Confession of Faith, the Larger and Shorter Catechisms, with the Scripture Proofs at Large, the Directory for Public Worship, the Form of Presbyterial Church Government, and the Sum of Saving Knowledge*](westminster-assembly/confession-of-faith-the-larger-and-shorter-catechisms-with.epub)
 - **A Treatise Concerning the Lord's Supper**, Thomas Doolittle (1665). [scan](https://archive.org/details/bim_eighteenth-century_a-treatise-concerning-th_doolittle-thomas_1786)
 - **Instrumental Music in the Public Worship of the Church**, John L. Girardeau (1888). [EPUB](john-lafayette-girardeau/instrumental-music-in-the-public-worship-of-the-church.epub)
 - **A Method for Prayer**, Matthew Henry (1710). [EPUB](matthew-henry/method-for-prayer.epub)
@@ -420,7 +421,6 @@ The same list, with every detail, is in `catalog.json`.
 - **The Scottish Metrical Psalter of 1650**, Various (1650). [EPUB](various/scottish-metrical-psalter-of-1650.epub)
 - **The Psalter (1912)**, Various (1912). [PDF](various/psalter.pdf)
 - **The Lord's Prayer**, Thomas Watson (1692). inside [*A Body of Practical Divinity*](thomas-watson/body-of-practical-divinity.epub)
-- **The Directory for Family Worship**, Westminster Assembly (1647). inside [*The Confession of Faith, the Larger and Shorter Catechisms, with the Scripture Proofs at Large, the Directory for Public Worship, the Form of Presbyterial Church Government, and the Sum of Saving Knowledge*](westminster-assembly/confession-of-faith-the-larger-and-shorter-catechisms-with.epub)
 - **Sacred Dissertations on the Lord's Prayer**, Herman Witsius (1689). [EPUB](herman-witsius/sacred-dissertations-on-the-lords-prayer.epub)
 
 ## Church & Ministry

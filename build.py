@@ -884,7 +884,7 @@ READER = "resources/read.html"
 # The shelves in the order they stand, each with a line to say what is on it.
 # A category the catalog has and this list lacks still shows, at the end.
 SHELVES = {
-    "Bibles": "The English Bibles of the Reformation and after, with the Hebrew and Greek.",
+    "Bibles": "The English Bibles of the Reformation and after, with the Hebrew, the Greek, and the Reformed Latin.",
     "Study Bibles": "Bibles printed with notes, and notes on the whole Bible to read beside it.",
     "Confessions & Catechisms": "The Westminster Standards, the Three Forms of Unity, the confessions that stand beside them, and the books that open them.",
     "Systematic Theology": "The whole body of divinity set out in order.",
@@ -898,7 +898,7 @@ SHELVES = {
     "Letters & Diaries": "Letters and private journals, where the old saints speak plainly.",
     "Poetry & Allegory": "Psalms, hymns, poems, and the allegories.",
     "Apologetics & Controversy": "The faith defended, and the debates the Reformed churches fought through.",
-    "Collected Works": "The works of one author gathered in many volumes.",
+    "Collected Works": "The works of one author gathered together, most of them in several volumes.",
 }
 
 BIBLE_BOOKS = [
@@ -980,6 +980,34 @@ def file_links(f, described_by):
     )
 
 
+def scan_link(link, described_by, text="Scan at the Internet Archive"):
+    e = html.escape
+    return (
+        f'<a class="lib-dl" href="{e(link["url"])}" target="_blank" rel="noopener" '
+        f'aria-describedby="{described_by}">{text}</a>'
+    )
+
+
+def volume_rows(entries, tid):
+    """A list of volumes, each a file to read or a scan kept at the Internet
+    Archive, in volume order. Past four it folds away behind a summary."""
+    e = html.escape
+    rows = []
+    for i, (kind, item) in enumerate(entries, 1):
+        label = item["label"] or (f"Volume {item['volume']}" if item.get("volume") else "The book")
+        vid = f"{tid}v{i}"
+        contents = f' <span class="lib-vol-contents">{e(item["contents"])}</span>' if item.get("contents") else ""
+        action = file_links(item, f"{tid} {vid}") if kind == "file" else scan_link(item, f"{tid} {vid}")
+        rows.append(
+            f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>{contents}'
+            f'<span class="lib-actions">{action}</span></li>'
+        )
+    vols = f'<ol class="lib-vols">{"".join(rows)}</ol>'
+    if len(entries) > 4:
+        vols = f'<details class="lib-more"><summary>{len(entries)} volumes</summary>{vols}</details>'
+    return vols
+
+
 def library_item(work, by_id, n):
     """One book. The finder in library.js reads what it filters on from here,
     the shelf from the details around it, the topics from their line, and the
@@ -993,7 +1021,7 @@ def library_item(work, by_id, n):
     out = [f'<li class="lib-item" id="book-{e(work["id"])}"{attrs}>']
 
     marks = []
-    if work["tier"] == "core":
+    if work.get("start"):
         marks.append('<span class="lib-mark lib-start">A good place to start</span>')
     if work.get("source") == OLD_SPELLING:
         marks.append('<span class="lib-mark">Old spelling</span>')
@@ -1001,7 +1029,7 @@ def library_item(work, by_id, n):
 
     by = e(work["author"])
     if work.get("author_dates"):
-        by += f' <span class="lib-dates">({e(work["author_dates"])})</span>'
+        by += f' ({e(work["author_dates"])})'
     # A Bible belongs to no one tradition, so it carries none, and a year
     # before printing is the year of a manuscript, which its dates already give.
     bible = work["category"] == "Bibles"
@@ -1017,23 +1045,23 @@ def library_item(work, by_id, n):
     if work.get("notes"):
         out.append(f'<p class="lib-note">{e(work["notes"])}</p>')
 
-    files = work["files"]
-    if len(files) == 1:
+    files, links = work["files"], work["links"]
+    if len(files) == 1 and not links:
         out.append(f'<p class="lib-actions">{file_links(files[0], tid)}</p>')
     elif files:
-        rows = []
-        for i, f in enumerate(files, 1):
-            label = f["label"] or f"Volume {f['volume']}"
-            vid = f"{tid}v{i}"
-            contents = f' <span class="lib-vol-contents">{e(f["contents"])}</span>' if f["contents"] else ""
-            rows.append(
-                f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>{contents}'
-                f'<span class="lib-actions">{file_links(f, tid + " " + vid)}</span></li>'
-            )
-        vols = f'<ol class="lib-vols">{"".join(rows)}</ol>'
-        if len(files) > 4:
-            vols = f'<details class="lib-more"><summary>{len(files)} volumes</summary>{vols}</details>'
-        out.append(vols)
+        # A volume or some pages kept only as a scan sit among the files,
+        # in volume order, so a missing part is found where it belongs.
+        entries = [("file", f) for f in files] + [("scan", l) for l in links]
+        entries.sort(key=lambda kv: kv[1].get("volume") or 0)
+        out.append(volume_rows(entries, tid))
+    elif len(links) == 1:
+        out.append(
+            '<p class="lib-scan">Only a scan of an old printing is online for now. '
+            + scan_link(links[0], tid, "Read the scan at the Internet Archive") + "</p>"
+        )
+    elif links:
+        out.append('<p class="lib-scan">Only scans of an old printing are online for now.</p>'
+                   + volume_rows([("scan", l) for l in links], tid))
 
     parent = work.get("found_in")
     if not files and parent and parent.get("id") in by_id:
@@ -1047,31 +1075,11 @@ def library_item(work, by_id, n):
             f'<p class="lib-in">Printed in <a href="#book-{e(parent["id"])}">{e(parent["title"])}</a>{where}.</p>'
         )
         parent_files = {f["path"]: f for f in by_id[parent["id"]]["files"]}
-        first = [parent_files[p] for p in parent.get("paths", []) if p in parent_files][:1]
-        if first:
-            out.append(f'<p class="lib-actions">{file_links(first[0], tid)}</p>')
-
-    links = work["links"] if not files else []
-    if len(links) == 1:
-        out.append(
-            '<p class="lib-scan">Only a scan of an old printing is online for now. '
-            f'<a class="lib-ext" href="{e(links[0]["url"])}" target="_blank" rel="noopener" '
-            f'aria-describedby="{tid}">Read the scan at the Internet Archive</a></p>'
-        )
-    elif links:
-        rows = []
-        for i, link in enumerate(links, 1):
-            label = link["label"] or f"Part {i}"
-            vid = f"{tid}s{i}"
-            rows.append(
-                f'<li class="lib-vol"><span class="lib-vol-name" id="{vid}">{e(label)}</span>'
-                f'<span class="lib-actions"><a class="lib-dl" href="{e(link["url"])}" target="_blank" '
-                f'rel="noopener" aria-describedby="{tid} {vid}">Scan at the Internet Archive</a></span></li>'
-            )
-        scans = f'<ol class="lib-vols">{"".join(rows)}</ol>'
-        if len(links) > 4:
-            scans = f'<details class="lib-more"><summary>{len(links)} volumes</summary>{scans}</details>'
-        out.append('<p class="lib-scan">Only scans of an old printing are online for now.</p>' + scans)
+        found = [parent_files[p] for p in parent.get("paths", []) if p in parent_files]
+        if len(found) == 1:
+            out.append(f'<p class="lib-actions">{file_links(found[0], tid)}</p>')
+        elif found:
+            out.append(volume_rows([("file", f) for f in found], tid))
 
     if topics:
         out.append(f'<p class="lib-tags">{" · ".join(e(t) for t in topics)}</p>')
@@ -1091,7 +1099,8 @@ def shelf_order(category, works):
             return (first, w.get("first_published") or 9999, w["author_sort"])
         return sorted(works, key=place)
     tier = {"core": 0, "standard": 1, "further": 2}
-    return sorted(works, key=lambda w: (tier.get(w["tier"], 3), w["author_sort"], w.get("first_published") or 0))
+    return sorted(works, key=lambda w: (not w.get("start"), tier.get(w["tier"], 3), w["author_sort"],
+                                        w.get("first_published") or 0))
 
 
 @functools.lru_cache(maxsize=None)
@@ -1100,11 +1109,25 @@ def library_html():
     catalog = library_catalog()
     works = catalog["works"]
     by_id = {w["id"]: w for w in works}
-    order = list(SHELVES) + [c for c in catalog["categories"] if c not in SHELVES]
+    order = list(SHELVES) + [c for c in dict.fromkeys(catalog["categories"] + [w["category"] for w in works])
+                             if c not in SHELVES]
     shelves = {c: [w for w in works if w["category"] == c] for c in order}
 
     topics = collections.Counter(t for w in works for t in (w.get("topics") or []))
-    books_used = {b for w in works for b in scripture_of(w)}
+    # A book of the Bible is offered when some work speaks to it, directly or
+    # as part of a work on the whole Bible or a whole Testament, the same rule
+    # library.js filters by. The Bibles themselves are left out of that.
+    books_used = set()
+    for w in works:
+        named = scripture_of(w)
+        books_used.update(b for b in named if b in BIBLE_BOOKS)
+        if w["category"] != "Bibles":
+            if "Whole Bible" in named:
+                books_used.update(BIBLE_BOOKS)
+            if "Old Testament" in named:
+                books_used.update(BIBLE_BOOKS[:39])
+            if "New Testament" in named:
+                books_used.update(BIBLE_BOOKS[39:])
     traditions = sorted({w["tradition"] for w in works if w["category"] != "Bibles"})
 
     def options(values, every, counts=None):

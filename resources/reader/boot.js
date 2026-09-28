@@ -12,3 +12,20 @@
   }
   document.documentElement.setAttribute('data-theme', theme);
 })();
+
+/* The reader's book engine groups things with Object.groupBy and Map.groupBy,
+   which Safari gained only in 17.4. These stand in for them on older phones. */
+if (!Object.groupBy) {
+  Object.groupBy = function (items, fn) {
+    var out = Object.create(null), i = 0;
+    for (var x of items) { var k = fn(x, i++); (out[k] || (out[k] = [])).push(x); }
+    return out;
+  };
+}
+if (!Map.groupBy) {
+  Map.groupBy = function (items, fn) {
+    var out = new Map(), i = 0;
+    for (var x of items) { var k = fn(x, i++); if (!out.has(k)) { out.set(k, []); } out.get(k).push(x); }
+    return out;
+  };
+}

@@ -26,9 +26,9 @@
   --paper-raised: #f8f1e0;
   --ink: #3b2f1e;
   --ink-soft: #5b4a33;
-  --ink-faint: #7d6a50;
+  --ink-faint: #6f5d45;
   --rule: #e2d5b8;
-  --gold: #8a5a24;
+  --gold: #84561f;
   --gold-wash: #ecdfc2;
 }
 :root[data-theme="dark"] {
@@ -90,7 +90,7 @@ svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-
   border: 0; background: transparent; color: var(--ink-soft); cursor: pointer; text-decoration: none;
 }
 .tool:hover, .turn:hover, .tool:focus-visible, .turn:focus-visible { background: var(--gold-wash); color: var(--ink); }
-.tool:disabled, .turn:disabled { opacity: .35; cursor: default; background: transparent; }
+.tool:disabled, .turn:disabled, a.tool:not([href]) { opacity: .35; cursor: default; background: transparent; }
 .tool[aria-expanded="true"] { background: var(--gold-wash); color: var(--gold); }
 .aa { font-family: var(--font-display); font-size: 1.15rem; line-height: 1; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
@@ -124,6 +124,7 @@ foliate-view { display: block; width: 100%; height: 100%; }
 .scrim[hidden] { display: none; }
 .panel {
   position: fixed; top: 0; bottom: 0; z-index: 30;
+  overflow-y: auto; overscroll-behavior: contain;
   width: min(24rem, 90vw);
   background: var(--paper-raised); color: var(--ink);
   box-shadow: var(--shadow);
@@ -144,22 +145,24 @@ foliate-view { display: block; width: 100%; height: 100%; }
 
 .toc { overflow: auto; flex: 1; margin: 0 -.4rem; padding: 0 .4rem; font-size: .92rem; }
 .toc ol { list-style: none; margin: 0; padding: 0; }
-.toc ol ol { padding-left: .9rem; border-left: 1px solid var(--rule); margin-left: .45rem; }
+.toc ol ol { padding-left: .9rem; border-left: 1px solid var(--rule); margin-left: .75rem; }
+.toc ol[hidden] { display: none; }
 .toc li { margin: 0; }
-.toc a, .toc summary {
-  display: block; padding: .38rem .5rem; border-radius: 6px;
-  color: var(--ink); text-decoration: none; line-height: 1.35; cursor: pointer;
-}
-.toc summary { list-style: none; position: relative; padding-left: 1.3rem; }
-.toc summary::-webkit-details-marker { display: none; }
-.toc summary::before {
-  content: ""; position: absolute; left: .45rem; top: .78rem;
-  border: 4px solid transparent; border-left-color: var(--ink-faint); border-right-width: 0;
+.toc-row { display: flex; align-items: flex-start; }
+.toc-toggle, .toc-spacer { flex: none; width: 1.5rem; height: 2.05rem; }
+.toc-toggle { position: relative; border: 0; background: transparent; border-radius: 6px; cursor: pointer; color: var(--ink-faint); }
+.toc-toggle::before {
+  content: ""; position: absolute; left: .55rem; top: .75rem;
+  border: 4px solid transparent; border-left-color: currentColor; border-right-width: 0;
   transition: transform 120ms;
 }
-.toc details[open] > summary::before { transform: rotate(90deg); }
-.toc summary a { display: inline; padding: 0; }
-.toc a:hover, .toc summary:hover { background: var(--gold-wash); }
+.toc-toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+.toc-toggle:hover { background: var(--gold-wash); color: var(--ink); }
+.toc a {
+  flex: 1; min-width: 0; display: block; padding: .38rem .5rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; line-height: 1.35;
+}
+.toc a:hover { background: var(--gold-wash); }
 .toc a[aria-current="true"] { color: var(--gold); font-weight: 600; }
 .toc .hidden { display: none; }
 
@@ -204,4 +207,9 @@ foliate-view { display: block; width: 100%; height: 100%; }
   .back span { display: none; }
   .book-title { font-size: 1rem; }
   .tool { width: 2.3rem; }
+}
+
+/* In a high contrast mode the chosen setting still has to show as chosen. */
+@media (forced-colors: active) {
+  .pill[aria-checked="true"] { forced-color-adjust: none; color: HighlightText; background: Highlight; border-color: Highlight; }
 }

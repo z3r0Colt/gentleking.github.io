@@ -55,7 +55,7 @@
           b.className = 'lib-tag';
           b.textContent = t;
           b.setAttribute('aria-label', 'Show every book on ' + t);
-          b.addEventListener('click', function () { chooseTopic(t, true); });
+          b.addEventListener('click', function () { chooseTopic(t, true, true); });
           tagLine.appendChild(b);
         });
       }
@@ -67,8 +67,15 @@
         books: (li.getAttribute('data-books') || '').split('|').filter(Boolean),
         trad: text(li, '.lib-trad'),
         start: !!li.querySelector('.lib-start'),
-        words: fold([text(li, '.lib-title'), text(li, '.lib-by'), text(li, '.lib-blurb'),
-          text(li, '.lib-passage'), topics.join(' '), text(li, '.lib-vols')].join(' '))
+        // the title without its badges, and what the volumes hold without the
+        // words on their buttons, so a search for "read" or "start" finds books
+        // that are about those things
+        words: fold([text(li, '.lib-title > span'), text(li, '.lib-by'), text(li, '.lib-blurb'),
+          text(li, '.lib-passage'), topics.join(' '),
+          Array.prototype.map.call(li.querySelectorAll('.lib-vol-name, .lib-vol-contents'),
+            function (n) { return n.textContent; }).join(' ')].join(' ')),
+        list: li.parentNode,
+        index: items.length
       });
     });
   });
@@ -80,8 +87,13 @@
   var PARAMS = { q: 'q', topic: 'topic', cat: 'kind', book: 'bible', trad: 'tradition', start: 'start' };
   var userOpen = [];
 
+  // one letter matches nearly every book, so a search starts at two
+  function query() {
+    return state.q.length >= 2 ? state.q : '';
+  }
+
   function active() {
-    return !!(state.q || state.topic || state.cat || state.book || state.trad || state.start);
+    return !!(query() || state.topic || state.cat || state.book || state.trad || state.start);
   }
 
   function matchesBook(item, book) {
@@ -105,7 +117,7 @@
   }
 
   function apply(fromUser) {
-    var words = fold(state.q).split(/\s+/).filter(Boolean);
+    var words = fold(query()).split(/\s+/).filter(Boolean);
     var filtering = active();
     var shown = 0;
     var perShelf = new Map();
@@ -113,14 +125,13 @@
     items.forEach(function (item) {
       var ok = !filtering || matches(item, words);
       item.el.hidden = !ok;
-      // with a book of the Bible chosen, the books on that book itself come
-      // before the ones on the whole Bible
-      item.el.style.order = state.book && ok && item.books.indexOf(state.book) !== -1 ? '-1' : '';
       if (ok) {
         shown++;
         perShelf.set(item.shelf, (perShelf.get(item.shelf) || 0) + 1);
       }
     });
+
+    arrange();
 
     shelves.forEach(function (shelf) {
       var n = perShelf.get(shelf) || 0;
@@ -175,11 +186,31 @@
     startBox.checked = state.start;
   }
 
-  function chooseTopic(topic, scroll) {
-    state.topic = state.topic === topic ? '' : topic;
+  // With a book of the Bible chosen, the books on that book itself come before
+  // the ones on the whole Bible. The list itself is put in that order, not
+  // only drawn so, so the keyboard and a screen reader meet them in it too.
+  var arranged = false;
+  function arrange() {
+    if (!state.book && !arranged) { return; }
+    var first = [], rest = [];
+    items.forEach(function (item) {
+      (state.book && item.books.indexOf(state.book) !== -1 ? first : rest).push(item);
+    });
+    first.concat(rest).forEach(function (item) { item.list.appendChild(item.el); });
+    arranged = !!state.book;
+  }
+
+  // A chip turns its topic on and off. A topic on a book always turns it on,
+  // and brings the reader up to the chip, so it can be seen and turned off.
+  function chooseTopic(topic, fromBook, set) {
+    state.topic = set || state.topic !== topic ? topic : '';
     if (state.topic) { topicsBox.open = true; }
     apply(true);
-    if (scroll) { finder.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
+    if (fromBook) {
+      finder.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      var chip = chips.filter(function (c) { return c.getAttribute('data-topic') === topic; })[0];
+      if (chip) { chip.focus({ preventScroll: true }); }
+    }
   }
 
   var typing = null;

@@ -1171,6 +1171,7 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   border-radius: var(--radius);
 }
 .lib-q:focus { outline: 2px solid var(--gold); outline-offset: 0; border-color: transparent; }
+.lib-q::placeholder { color: var(--ink-faint); opacity: 1; }
 .lib-filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
@@ -1274,11 +1275,11 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   background: var(--gold-wash);
   border-radius: var(--radius);
 }
-.lib-recent-head { display: flex; justify-content: space-between; gap: 1rem; margin: 0 0 .5rem; font-size: .74rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+.lib-recent-head { display: flex; justify-content: space-between; gap: 1rem; margin: 0 0 .5rem; font-size: .74rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
 .lib-recent-head .lib-forget { font-size: .8rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
 .lib-recent-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
 .lib-recent-list a { font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); }
-.lib-recent-list span { font-size: .8rem; color: var(--ink-faint); margin-left: .4rem; }
+.lib-recent-list span { font-size: .8rem; color: var(--ink-soft); margin-left: .4rem; }
 
 .lib-shelves { margin-top: 1.25rem; border-bottom: 1px solid var(--rule); }
 .lib-shelf { border-top: 1px solid var(--rule); }
@@ -1317,6 +1318,10 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 
 .lib-list { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: .7rem; }
 .lib-item {
+  /* A shelf of a hundred books opens fast, since the books below the screen
+     are not laid out until they are scrolled to. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 14rem;
   padding: 1rem 1.2rem 1.05rem;
   background: var(--paper-raised);
   border: 1px solid var(--rule);
@@ -1342,7 +1347,6 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 }
 .lib-mark.lib-start { color: var(--gold); border-color: var(--gold-soft); }
 .lib-by { margin: 0 0 .55rem; font-family: var(--font-ui); font-size: .82rem; line-height: 1.5; color: var(--ink-faint); }
-.lib-by .lib-dates { white-space: nowrap; }
 .lib-trad::before, .lib-year::before { content: " · "; }
 .lib-blurb { margin: 0 0 .55rem; font-size: .98rem; line-height: 1.55; color: var(--ink-soft); }
 .lib-passage { margin: 0 0 .55rem; font-size: .9rem; font-style: italic; color: var(--ink-soft); }
@@ -1367,6 +1371,7 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 .lib-dl { color: var(--ink-soft); border: 1px solid var(--rule-strong); }
 .lib-dl span { font-size: .76rem; color: var(--ink-faint); }
 .lib-dl:hover { color: var(--ink); background: var(--gold-wash); border-color: var(--gold); }
+.lib-dl:hover span { color: var(--ink-soft); }
 
 .lib-vols { list-style: none; margin: .7rem 0 0; padding: 0; }
 .lib-vol {
@@ -1410,4 +1415,10 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 
 @media print {
   .lib-finder, .lib-recent, .lib-actions, .lib-tags { display: none !important; }
+  .lib-item { content-visibility: visible; }
+}
+
+/* In a high contrast mode the chosen topic still has to show as chosen. */
+@media (forced-colors: active) {
+  .lib-topic[aria-pressed="true"] { forced-color-adjust: none; color: HighlightText; background: Highlight; border-color: Highlight; }
 }

@@ -23,8 +23,8 @@ What it looks for.
 
 Quoted Scripture is skipped on the punctuation check. The Authorized Version
 uses colons and semicolons far more than we do, and nothing here should
-change it. So is the library list on the Resources page, for the titles of
-old books.
+change it. So are the titles, bylines, and volume contents in the library
+list on the Resources page, which come from the old books themselves.
 
 An exit code of 0 means everything passed.
 """
@@ -127,9 +127,12 @@ def prose(source):
     text = re.sub(r'(?s)<blockquote class="scripture">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<blockquote class="confession">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<p class="(footer-verse|mock-verse|verse)">.*?</p>', " ", text)
-    # The library list carries the old books' own titles, which are full of
-    # colons and semicolons, and nothing here should change them either.
-    text = re.sub(r'(?s)<div class="lib-shelves" id="lib-shelves">.*?<p class="lib-empty"', " <p ", text)
+    # The library list carries the old books' own titles, bylines, and lists of
+    # what each volume holds, which are full of colons and semicolons, and
+    # nothing here should change them either. Its descriptions and notes are
+    # our own words, so they are still checked.
+    text = re.sub(r'(?s)<p class="lib-(title|by|in)">.*?</p>', " ", text)
+    text = re.sub(r'(?s)<span class="lib-vol-(name|contents)"[^>]*>.*?</span>', " ", text)
     text = re.sub(r"<[^>]+>", "\n", text)
     return html.unescape(text)
 

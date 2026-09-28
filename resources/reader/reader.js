@@ -29,7 +29,7 @@ const saveSettings = () => store.set(SETTINGS_KEY, settings)
 
 const PAGE = {
   light: { bg: '#fbf8f2', fg: '#1c1a17', link: '#7d5f34', faint: '#706859' },
-  sepia: { bg: '#f4ecd8', fg: '#3b2f1e', link: '#8a5a24', faint: '#7d6a50' },
+  sepia: { bg: '#f4ecd8', fg: '#3b2f1e', link: '#84561f', faint: '#6f5d45' },
   dark: { bg: '#151310', fg: '#ece6d9', link: '#d8b955', faint: '#8a8272' },
 }
 
@@ -84,7 +84,10 @@ async function openBook() {
     fail('No book was named in the address, or the name is not one from the library.', false)
     return
   }
-  $('#btn-download').href = path
+  const download = $('#btn-download')
+  download.href = path
+  download.setAttribute('download', '')
+  download.removeAttribute('aria-disabled')
   const placeKey = 'gk-read:' + path
 
   view = document.createElement('foliate-view')
@@ -101,6 +104,9 @@ async function openBook() {
   }
 
   const { book } = view
+  // A book in Hebrew that does not name its page direction still reads from
+  // right to left, so the arrows, taps, and slider should turn that way.
+  if (!book.dir && view.language?.direction === 'rtl') book.dir = 'rtl'
   const title = langText(book.metadata?.title) || 'Untitled'
   const author = contributor(book.metadata?.author)
   document.title = `${title} · Gentle King`
@@ -112,13 +118,29 @@ async function openBook() {
   view.addEventListener('load', onLoad)
   view.addEventListener('relocate', e => onRelocate(e.detail, { title, author, placeKey }))
   view.addEventListener('link', onLink)
+  view.addEventListener('external-link', openOutside)
 
   buildTOC(book.toc || [])
-  await view.init({ lastLocation: store.get(placeKey, null) })
+  // A place saved before a book was replaced may no longer exist in it. Then
+  // the book opens at its start, and the old place is forgotten.
+  try {
+    await view.init({ lastLocation: store.get(placeKey, null) })
+  } catch (e) {
+    console.warn(e)
+  }
+  if (!view.lastLocation) {
+    store.set(placeKey, null)
+    try { await view.init({}) } catch (e) { console.warn(e) }
+  }
 
   status.hidden = true
   for (const id of ['#btn-toc', '#btn-search', '#btn-prev', '#btn-next', '#progress']) $(id).disabled = false
   $('#progress').dir = book.dir === 'rtl' ? 'rtl' : 'ltr'
+  // in a right to left book the next page is the one on the left
+  if (book.dir === 'rtl') {
+    $('#btn-prev').setAttribute('aria-label', 'Next page')
+    $('#btn-next').setAttribute('aria-label', 'Previous page')
+  }
   $('#stage').focus({ preventScroll: true })
 }
 
@@ -139,7 +161,10 @@ function onLoad({ detail: { doc } }) {
     if (settings.flow !== 'paginated') return
     if (e.target.closest('a, button, input, select, textarea, summary')) return
     if (doc.getSelection()?.toString()) return
-    const w = doc.defaultView.innerWidth
+    // In pages mode the chapter is one long strip, a page wide per page, so
+    // the tap is measured within the page on screen.
+    const w = view.renderer.size
+    if (!w) return
     const x = e.clientX % w
     if (x < w * 0.25) view.goLeft()
     else if (x > w * 0.75) view.goRight()
@@ -150,6 +175,7 @@ function onRelocate(detail, { title, author, placeKey }) {
   const { fraction = 0, tocItem, cfi } = detail
   const pct = Math.round(fraction * 100)
   $('#progress').value = fraction
+  $('#progress').setAttribute('aria-valuetext', [tocItem?.label, `${pct}%`].filter(Boolean).join(', '))
   $('#where-text').textContent = [tocItem?.label, `${pct}%`].filter(Boolean).join(' · ')
   if (tocItem?.href) markCurrent(tocItem.href)
   if (!cfi) return
@@ -179,6 +205,7 @@ const footnotes = new FootnoteHandler()
 footnotes.addEventListener('before-render', e => {
   const { view: noteView } = e.detail
   noteView.addEventListener('link', le => { le.preventDefault() })
+  noteView.addEventListener('external-link', openOutside)
   $('#note-body').replaceChildren(noteView)
   if (!$('#note-dialog').open) $('#note-dialog').showModal()
   noteView.renderer.setAttribute('flow', 'scrolled')
@@ -189,9 +216,17 @@ footnotes.addEventListener('before-render', e => {
 // the small view is shut down before the box hides, or it tries to lay out
 // text in a box that is no longer there
 function closeNote() {
-  $('#note-body').querySelector('foliate-view')?.close()
+  // a note shut while it is still loading has nothing to close yet
+  try { $('#note-body').querySelector('foliate-view')?.close() } catch (e) { console.warn(e) }
   $('#note-body').replaceChildren()
-  $('#note-dialog').close()
+  if ($('#note-dialog').open) $('#note-dialog').close()
+  $('#stage').focus({ preventScroll: true })
+}
+
+// a link out of the book opens in a new tab that cannot reach back into this one
+function openOutside(e) {
+  e.preventDefault()
+  window.open(e.detail.href_, '_blank', 'noopener')
 }
 $('#note-dialog').addEventListener('cancel', e => { e.preventDefault(); closeNote() })
 $('#note-dialog').addEventListener('submit', e => { e.preventDefault(); closeNote() })
@@ -209,10 +244,22 @@ function onLink(e) {
 }
 
 // --------------------------------------------------------------- contents
+// Each chapter is a link, and a chapter with parts has a small button beside
+// it to show them, so the keyboard meets one of each and nothing nested.
+function setOpen(li, open) {
+  const toggle = li.querySelector(':scope > .toc-row > .toc-toggle')
+  const sub = li.querySelector(':scope > ol')
+  if (!toggle || !sub) return
+  toggle.setAttribute('aria-expanded', String(open))
+  sub.hidden = !open
+}
+
 function tocList(items) {
   const ol = document.createElement('ol')
   for (const item of items) {
     const li = document.createElement('li')
+    const row = document.createElement('div')
+    row.className = 'toc-row'
     const a = document.createElement('a')
     a.textContent = item.label?.trim() || 'Section'
     a.href = '#'
@@ -221,15 +268,26 @@ function tocList(items) {
       e.preventDefault()
       if (!item.href) return
       view.goTo(item.href)
-      closePanels()
+      closePanels(false)
+      $('#stage').focus({ preventScroll: true })
     })
     if (item.subitems?.length) {
-      const details = document.createElement('details')
-      const summary = document.createElement('summary')
-      summary.append(a)
-      details.append(summary, tocList(item.subitems))
-      li.append(details)
-    } else li.append(a)
+      const toggle = document.createElement('button')
+      toggle.type = 'button'
+      toggle.className = 'toc-toggle'
+      toggle.setAttribute('aria-expanded', 'false')
+      toggle.setAttribute('aria-label', 'Show the parts of ' + a.textContent)
+      toggle.addEventListener('click', () => setOpen(li, toggle.getAttribute('aria-expanded') !== 'true'))
+      row.append(toggle, a)
+      const sub = tocList(item.subitems)
+      sub.hidden = true
+      li.append(row, sub)
+    } else {
+      const spacer = document.createElement('span')
+      spacer.className = 'toc-spacer'
+      row.append(spacer, a)
+      li.append(row)
+    }
     ol.append(li)
   }
   return ol
@@ -246,7 +304,7 @@ function markCurrent(href) {
   const a = [...nav.querySelectorAll('a')].find(x => x.dataset.href === href)
   if (!a) return
   a.setAttribute('aria-current', 'true')
-  for (let d = a.closest('details'); d; d = d.parentElement.closest('details')) d.open = true
+  for (let li = a.closest('li')?.parentElement.closest('li'); li; li = li.parentElement.closest('li')) setOpen(li, true)
 }
 
 // old printings spell John as Iohn and Saviour as Sauiour, so i and j, and
@@ -258,11 +316,11 @@ $('#toc-filter').addEventListener('input', e => {
   for (const li of items) li.classList.remove('hidden')
   if (!q) return
   for (const li of items.reverse()) {
-    const own = li.querySelector(':scope > a, :scope > details > summary > a')
+    const own = li.querySelector(':scope > .toc-row > a')
     const hit = own && fold(own.textContent).includes(q)
-    const childHit = li.querySelector('li:not(.hidden)')
+    const childHit = li.querySelector(':scope > ol > li:not(.hidden)')
     if (!hit && !childHit) li.classList.add('hidden')
-    else if (childHit) { const d = li.querySelector(':scope > details'); if (d) d.open = true }
+    else if (childHit) setOpen(li, true)
   }
 })
 
@@ -274,17 +332,27 @@ $('#search-form').addEventListener('submit', async e => {
   const list = $('#search-results')
   list.replaceChildren()
   view.clearSearch()
+  // a new search, even one too short to run, stops the one before it
+  searching = null
   if (query.length < 2) { $('#search-note').textContent = 'Type at least two letters.'; return }
   const run = searching = {}
   let found = 0
+  let told = 0
   $('#search-note').textContent = 'Searching'
   try {
-    for await (const result of view.search({ query })) {
+    // Past 300 finds the search stops, since leaving the loop tells foliate
+    // to stop reading the book, and a common word in a large book would
+    // otherwise hold the page for a long time.
+    search: for await (const result of view.search({ query })) {
       if (run !== searching) return
       if (result === 'done') break
-      if (result.progress != null) { $('#search-note').textContent = `Searching, ${Math.round(result.progress * 100)}%`; continue }
+      if (result.progress != null) {
+        const pct = Math.round(result.progress * 100)
+        if (pct - told >= 25) { told = pct; $('#search-note').textContent = `Searching, ${pct}%` }
+        continue
+      }
       for (const { cfi, excerpt } of result.subitems || []) {
-        if (found >= 300) break
+        if (found >= 300) break search
         found++
         const li = document.createElement('li')
         const b = document.createElement('button')
@@ -295,12 +363,16 @@ $('#search-form').addEventListener('submit', async e => {
         const mark = document.createElement('mark')
         mark.textContent = excerpt.match
         b.append(where, document.createTextNode('…' + excerpt.pre), mark, document.createTextNode(excerpt.post + '…'))
-        b.addEventListener('click', () => { view.goTo(cfi); if (matchMedia('(max-width: 50rem)').matches) closePanels() })
+        b.addEventListener('click', () => {
+          view.goTo(cfi)
+          if (matchMedia('(max-width: 50rem)').matches) { closePanels(false); $('#stage').focus({ preventScroll: true }) }
+        })
         li.append(b)
         list.append(li)
       }
     }
-    $('#search-note').textContent = found ? `${found}${found >= 300 ? '+' : ''} found` : 'Not found in this book.'
+    if (run !== searching) return
+    $('#search-note').textContent = found >= 300 ? 'The first 300 found' : found ? `${found} found` : 'Not found in this book.'
   } catch (err) {
     console.error(err)
     $('#search-note').textContent = 'The search could not finish.'
@@ -309,15 +381,22 @@ $('#search-form').addEventListener('submit', async e => {
 
 // ---------------------------------------------------------------- panels
 const panels = { '#btn-toc': '#toc-panel', '#btn-search': '#search-panel', '#btn-settings': '#settings-panel' }
-function closePanels() {
+let opener = null
+const anyPanelOpen = () => Object.values(panels).some(p => !$(p).hidden)
+// Closing a panel gives the keyboard back to the button that opened it,
+// unless the reader chose a place in the book, which then takes it.
+function closePanels(restore = true) {
+  const wasOpen = anyPanelOpen()
   for (const [btn, panel] of Object.entries(panels)) { $(panel).hidden = true; $(btn).setAttribute('aria-expanded', 'false') }
   $('#scrim').hidden = true
+  if (wasOpen && restore && opener) opener.focus({ preventScroll: true })
 }
 for (const [btn, panel] of Object.entries(panels)) {
   $(btn).addEventListener('click', () => {
     const open = $(panel).hidden
-    closePanels()
-    if (!open) return
+    closePanels(false)
+    if (!open) { $(btn).focus(); return }
+    opener = $(btn)
     $(panel).hidden = false
     $(btn).setAttribute('aria-expanded', 'true')
     $('#scrim').hidden = false
@@ -328,8 +407,8 @@ for (const [btn, panel] of Object.entries(panels)) {
     first?.focus()
   })
 }
-$('#scrim').addEventListener('click', closePanels)
-document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closePanels))
+$('#scrim').addEventListener('click', () => closePanels())
+document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => closePanels()))
 
 // -------------------------------------------------------------- settings
 function reflectSettings() {
@@ -354,12 +433,37 @@ reflectSettings()
 
 // ------------------------------------------------------------ navigation
 function onKey(e) {
-  if (e.target.closest?.('input, textarea')) return
-  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); view?.goLeft() }
-  else if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && settings.flow === 'paginated')) { e.preventDefault(); view?.goRight() }
-  else if (e.key === 'Escape') closePanels()
+  // Escape shuts an open panel from anywhere, its search box included. An
+  // open note shuts itself.
+  if (e.key === 'Escape') {
+    if (!$('#note-dialog').open && anyPanelOpen()) { e.preventDefault(); closePanels() }
+    return
+  }
+  // Keys belong to a note, a panel, or a box being typed in while one is open.
+  if ($('#note-dialog').open) return
+  const t = e.target
+  if (t.closest?.('input, textarea, select, .panel, dialog')) return
+  // Space presses a focused button, as it always does.
+  if (e.key === ' ' && t.closest?.('button, a, summary')) return
+  const scrolled = settings.flow === 'scrolled'
+  if (e.key === 'ArrowLeft') { e.preventDefault(); view?.goLeft() }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); view?.goRight() }
+  else if (e.key === 'PageUp' || (e.key === ' ' && e.shiftKey)) { e.preventDefault(); view?.prev() }
+  else if (e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); view?.next() }
+  else if (scrolled && e.key === 'ArrowUp') { e.preventDefault(); view?.prev(40) }
+  else if (scrolled && e.key === 'ArrowDown') { e.preventDefault(); view?.next(40) }
 }
 document.addEventListener('keydown', onKey)
+// On a wide screen the page sits in the middle, and a tap in the blank space
+// to either side turns the page too. A tap on the page itself is handled in
+// onLoad, since it lands inside the book's own frame.
+$('#stage').addEventListener('click', e => {
+  if (!view || settings.flow !== 'paginated' || !status.hidden) return
+  const r = $('#stage').getBoundingClientRect()
+  const x = (e.clientX - r.left) / r.width
+  if (x < 0.25) view.goLeft()
+  else if (x > 0.75) view.goRight()
+})
 $('#btn-prev').addEventListener('click', () => view?.goLeft())
 $('#btn-next').addEventListener('click', () => view?.goRight())
 $('#progress').addEventListener('change', e => view?.goToFraction(parseFloat(e.target.value)))

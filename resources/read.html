@@ -36,7 +36,7 @@
     <button class="tool" id="btn-settings" type="button" aria-label="Reading settings" aria-controls="settings-panel" aria-expanded="false">
       <span class="aa" aria-hidden="true">Aa</span>
     </button>
-    <a class="tool" id="btn-download" href="../resources.html#library" aria-label="Download this book" download>
+    <a class="tool" id="btn-download" aria-label="Download this book" aria-disabled="true">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
     </a>
   </div>
@@ -86,7 +86,7 @@
     <input class="field" id="search-input" type="search" placeholder="A word or phrase" aria-label="Word or phrase to find">
     <button class="pill" type="submit">Find</button>
   </form>
-  <p class="search-note" id="search-note"></p>
+  <p class="search-note" id="search-note" role="status"></p>
   <ol class="search-results" id="search-results"></ol>
 </aside>
 
@@ -101,7 +101,7 @@
     <p class="setting-name">Text size</p>
     <div class="pills">
       <button class="pill" type="button" id="size-down" aria-label="Smaller text">A&minus;</button>
-      <span class="size-value" id="size-value">100%</span>
+      <span class="size-value" id="size-value" aria-live="polite">100%</span>
       <button class="pill" type="button" id="size-up" aria-label="Larger text">A+</button>
     </div>
   </div>
