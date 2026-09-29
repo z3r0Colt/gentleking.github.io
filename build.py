@@ -55,6 +55,7 @@ APP_FULL = "Sojourner, Bible Study Companion"
 APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
 APP_EMAIL = "sojourner@gentleking.org"
 APP_REPO = "https://github.com/z3r0Colt/sojourner"
+APP_PAGE = "sojourner.html"
 
 # Who writes the site, as the About page names him. Search engines and AI tools
 # read this from the structured data, so it says only what that page says.
@@ -78,16 +79,17 @@ COPYRIGHT_YEAR = "2026"
 
 # Nine items is the most the desktop nav holds on one line at 1025px.
 # A tenth needs the 64rem breakpoint in site.css and the 1024 in site.js raised,
-# or belongs in the footer.
+# or belongs in the footer. Sojourner comes last because on a wide screen it is
+# drawn as an outlined button at the end of the row, so no one has to hunt for it.
 NAV = [
     ("./", "Home"),
     ("gospel.html", "The Gospel"),
     ("comfort.html", "Comfort"),
     ("struggle.html", "Fighting Sin"),
-    ("sojourner.html", "Sojourner"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
     ("about.html", "About"),
+    (APP_PAGE, APP_NAME),
 ]
 
 # --------------------------------------------------------------------------
@@ -318,6 +320,25 @@ MARK_SVG = (
     "</svg>"
 )
 
+# An open book, drawn like the crown. It marks the way to Sojourner in the
+# header and under the verse on the home page, so the two read as one signpost.
+BOOK_SVG = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'
+    '<path d="M12 7.1C10 5.6 7.2 5 3.6 5.2v12.7c3.6-.2 6.4.4 8.4 1.9 2-1.5 4.8-2.1 8.4-1.9V5.2'
+    'C16.8 5 14 5.6 12 7.1z"/>'
+    '<path d="M12 7.1v12.7"/>'
+    "</svg>"
+)
+
+# On a phone every page folds into the menu, so Sojourner keeps a button of its
+# own beside the menu button. On a wide screen site.css hides this one, since
+# the row of pages already ends with Sojourner drawn the same way.
+APP_LINK = (
+    '<a class="app-link" href="{app_page}"{current}>{book}'
+    '<span class="app-link-name">{app_name}</span></a>'
+)
+
 HEAD = """<!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
@@ -369,6 +390,7 @@ HEADER = """<header class="site-header">
 {nav_links}
     </nav>
     <div class="nav-tools">
+      {app_link}
       <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -394,6 +416,12 @@ HERO = """<section class="hero hero-word">
     </div>
   </div>
 </section>
+<aside class="app-notice" aria-label="{app_name}">
+  <div class="wrap">
+    <a href="{app_page}">{book}<strong>{app_name}</strong>, a free Bible study app for Windows.
+      <span class="app-notice-go"><span class="app-notice-label">See it</span></span></a>
+  </div>
+</aside>
 """
 
 PAGE_HEAD = """<div class="page-head">
@@ -840,8 +868,21 @@ def nav_links(current):
     for href, label in NAV:
         here = href == current or (href == "./" and current == "index.html")
         mark = ' aria-current="page"' if here else ""
-        out.append(f'      <a href="{href}"{mark}>{label}</a>')
+        if href == APP_PAGE:
+            out.append(f'      <a class="nav-app" href="{href}"{mark}>{BOOK_SVG}{label}</a>')
+        else:
+            out.append(f'      <a href="{href}"{mark}>{label}</a>')
     return "\n".join(out)
+
+
+def app_link(current):
+    return render(
+        APP_LINK,
+        app_page=APP_PAGE,
+        current=' aria-current="page"' if current == APP_PAGE else "",
+        book=BOOK_SVG,
+        app_name=APP_NAME,
+    )
 
 
 def sections(body):
@@ -1226,11 +1267,12 @@ def build_page(page, dates):
             structured_data=structured_data(page, canonical, body, dates),
             robots="noindex" if page.get("hidden") else "max-image-preview:large",
         ),
-        render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"])),
+        render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"]),
+               app_link=app_link(page["file"])),
     ]
 
     if page.get("hero"):
-        parts.append(HERO)
+        parts.append(render(HERO, app_page=APP_PAGE, app_name=APP_NAME, book=BOOK_SVG))
     elif page.get("logo"):
         parts.append(
             render(

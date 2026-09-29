@@ -637,6 +637,76 @@ blockquote { margin: 2rem 0; }
   .nav a:last-child { border-bottom: 0; }
 }
 
+/* Sojourner, kept in reach. It is drawn like the secondary buttons, an
+   outlined link with an open book, so it reads as a thing to go and get
+   without raising its voice over the rest. On a wide screen it ends the row
+   of pages. On a phone the row folds into the menu, so .app-link keeps it out
+   beside the menu button, and in the menu it is a plain row like the others. */
+.app-link { display: none; }
+
+@media (min-width: 64.0625rem) {
+  .nav a.nav-app {
+    display: inline-flex;
+    align-items: center;
+    gap: .42rem;
+    margin-left: .5rem;
+    padding-inline: .8rem .7rem;
+    color: var(--ink);
+    border: 1px solid var(--rule-strong);
+    transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
+  }
+}
+
+@media (max-width: 64rem) {
+  .nav .nav-app svg { display: none; }
+  .nav-tools { margin-left: 0; }
+  .app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .42rem;
+    height: 2.3rem;
+    padding: 0 .75rem 0 .62rem;
+    font-family: var(--font-ui);
+    font-size: .85rem;
+    line-height: 1;
+    color: var(--ink);
+    white-space: nowrap;
+    text-decoration: none;
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius);
+    transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
+  }
+}
+
+.app-link svg,
+.nav a.nav-app svg { width: 1.05rem; height: 1.05rem; color: var(--gold); flex-shrink: 0; }
+.app-link:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+.app-link[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
+/* A narrow phone has little room beside the name of the site. The book goes
+   first and the name stays. Only on the very narrowest does the name give way
+   to the book, and it is still read aloud. */
+@media (max-width: 24rem) {
+  .site-header .wrap { gap: .75rem; }
+  .app-link { padding-inline: .65rem; }
+  .app-link svg { display: none; }
+}
+@media (max-width: 21.5rem) {
+  .app-link { padding-inline: .6rem; }
+  .app-link svg { display: block; }
+  .app-link-name {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+@media (min-width: 64.0625rem) {
+  .nav a.nav-app:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+  .nav a.nav-app[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
+}
+
 /* --------------------------------------------------------------------------
    8. Hero
    -------------------------------------------------------------------------- */
@@ -684,6 +754,86 @@ blockquote { margin: 2rem 0; }
 .hero-word .hero-deck { margin-inline: auto; }
 .hero-word .btn-row { justify-content: center; }
 .hero-word .btn { margin-inline: 0; }
+
+/* One quiet line under the hero, never inside it, so the verse and its one
+   button stay the first thing and the main thing. It names Sojourner for the
+   visitor who came looking for it, and says what it is for the one who did not. */
+.app-notice {
+  background: var(--paper-sunk);
+  border-bottom: 1px solid var(--rule);
+}
+.app-notice a {
+  display: block;
+  padding-block: .8rem;
+  font-family: var(--font-ui);
+  font-size: .86rem;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.app-notice svg {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-right: .45rem;
+  vertical-align: -.28em;
+  color: var(--gold);
+}
+.app-notice strong {
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color .18s var(--ease);
+}
+.app-notice-go {
+  display: inline-block;
+  margin-left: .7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--gold);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+  transition: text-decoration-color .18s var(--ease);
+}
+/* A small chevron, drawn with two borders so it takes the text's color. */
+.app-notice-go::after {
+  content: "";
+  display: inline-block;
+  width: .38rem;
+  height: .38rem;
+  margin-left: .35rem;
+  vertical-align: .08em;
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+.app-notice a:hover { color: var(--ink); }
+.app-notice a:hover strong { color: var(--gold); }
+.app-notice a:hover .app-notice-go { text-decoration-color: currentColor; }
+.app-notice a:focus-visible { outline-offset: -2px; }
+
+/* On a phone the sentence fills the line, so the chevron stands for the words.
+   They are still read aloud. */
+@media (max-width: 34rem) {
+  .app-notice a { font-size: .8rem; }
+  .app-notice strong { font-size: 1.05rem; }
+  .app-notice svg { margin-right: .35rem; }
+  .app-notice-go { margin-left: .3rem; }
+  .app-notice-go::after { margin-left: 0; }
+  .app-notice-label {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
 
 /* --------------------------------------------------------------------------
    9. Page header, for interior pages
@@ -846,7 +996,7 @@ blockquote { margin: 2rem 0; }
 
 @media print {
   :root { --paper: #fff; --ink: #000; --ink-soft: #333; }
-  .site-header, .site-footer, .to-top, .toc, .btn-row, .skip-link { display: none !important; }
+  .site-header, .site-footer, .to-top, .toc, .btn-row, .app-notice, .skip-link { display: none !important; }
   body { font-size: 11pt; }
   :root { --section-gap: 1.5rem; }
   main > .section > h3 { font-size: 15pt; break-after: avoid; page-break-after: avoid; }
@@ -934,6 +1084,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 /* A picture as tall as it is wide, like two phones side by side, would fill
    the whole screen at the column's width, so it is held narrower. */
 .shot-tall > a { max-width: 34rem; }
+/* On a page with no rail beside its column, a picture is held to about the
+   width it has on the Sojourner page, near the prose it sits in. */
+.shot-prose { max-width: calc(var(--measure) + 8rem); }
 .shot figcaption {
   margin-top: .8rem;
   font-family: var(--font-ui);
