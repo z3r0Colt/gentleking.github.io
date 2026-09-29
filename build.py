@@ -368,7 +368,7 @@ HEAD = """<!DOCTYPE html>
 <link rel="alternate icon" href="assets/img/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/ebgaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="{css}">
 <script>
 /* Applied before paint. The js class lets a page hide what script will reveal,
    so nothing flashes, and a reader who chose a theme never sees the other one. */
@@ -495,10 +495,21 @@ FOOTER = """<footer class="site-footer">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="assets/js/site.js" defer></script>
+<script src="{site_js}" defer></script>
 </body>
 </html>
 """
+
+
+def asset(path):
+    """A stylesheet or script address that changes whenever the file does.
+
+    GitHub Pages lets a browser keep a file for ten minutes. Without this, a
+    reader who came by just before a push gets the new page with the old
+    stylesheet, and anything new on the page is drawn unstyled.
+    """
+    digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:10]
+    return f"{path}?v={digest}"
 
 
 def render(template, **fields):
@@ -1265,6 +1276,7 @@ def build_page(page, dates):
                 quote=True,
             ),
             structured_data=structured_data(page, canonical, body, dates),
+            css=asset("assets/css/site.css"),
             robots="noindex" if page.get("hidden") else "max-image-preview:large",
         ),
         render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"]),
@@ -1298,13 +1310,11 @@ def build_page(page, dates):
         parts.append(toc_html(body))
     parts.append(body)
     parts.append("\n</main>\n\n")
+    site_js = f'<script src="{asset("assets/js/site.js")}" defer></script>\n'
     footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
-                    donate_url=DONATE_URL)
+                    donate_url=DONATE_URL, site_js=asset("assets/js/site.js"))
     for script in page.get("scripts", []):
-        footer = footer.replace(
-            '<script src="assets/js/site.js" defer></script>\n',
-            f'<script src="assets/js/site.js" defer></script>\n<script src="{script}" defer></script>\n',
-        )
+        footer = footer.replace(site_js, site_js + f'<script src="{asset(script)}" defer></script>\n')
     parts.append(footer)
 
     (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
