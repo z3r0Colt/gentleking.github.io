@@ -644,7 +644,7 @@ blockquote { margin: 2rem 0; }
    beside the menu button, and in the menu it is a plain row like the others. */
 .app-link { display: none; }
 
-@media (min-width: 64.0625rem) {
+@media not all and (max-width: 64rem) {
   .nav a.nav-app {
     display: inline-flex;
     align-items: center;
@@ -702,7 +702,7 @@ blockquote { margin: 2rem 0; }
     white-space: nowrap;
   }
 }
-@media (min-width: 64.0625rem) {
+@media not all and (max-width: 64rem) {
   .nav a.nav-app:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
   .nav a.nav-app[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
 }
