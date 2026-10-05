@@ -57,6 +57,11 @@ APP_EMAIL = "sojourner@gentleking.org"
 APP_REPO = "https://github.com/z3r0Colt/sojourner"
 APP_PAGE = "sojourner.html"
 
+# The web app for the fight against sin. It lives at its own address, and the
+# Fighting Sin page is its home on this site.
+MORTIFY_NAME = "Mortify"
+MORTIFY_URL = "https://mortify.gentleking.org/"
+
 # Who writes the site, as the About page names him. Search engines and AI tools
 # read this from the structured data, so it says only what that page says.
 AUTHOR_NAME = "Colt"
@@ -196,6 +201,15 @@ PAGES = [
             "putting sin to death by the Spirit, and on assurance that rests on Christ."
         ),
         "schema": "Article",
+        # A line under the page head, so a reader in temptation finds Mortify on
+        # the first screen. The full section is #mortify in the page itself.
+        "notice": {
+            "label": MORTIFY_NAME,
+            "href": MORTIFY_URL,
+            "icon": '<img src="assets/img/mortify-icon-192.png" width="192" height="192" alt="">',
+            "text": f"<strong>{MORTIFY_NAME}</strong>, a free app for the fight against sin.",
+            "go": "Open it",
+        },
         "about": [
             "Struggling with sin", "Mortification of sin", "Love for Christ",
             "Assurance of salvation",
@@ -424,6 +438,16 @@ HERO = """<section class="hero hero-word">
 </aside>
 """
 
+# A quiet line under a page head, the same as the Sojourner line under the
+# hero on the home page. A page asks for one with "notice" in PAGES.
+NOTICE = """<aside class="app-notice" aria-label="{label}">
+  <div class="wrap">
+    <a href="{href}"{target}>{icon}{text}
+      <span class="app-notice-go"><span class="app-notice-label">{go}</span></span></a>
+  </div>
+</aside>
+"""
+
 PAGE_HEAD = """<div class="page-head">
   <div class="wrap">
     <p class="eyebrow">{eyebrow}</p>
@@ -471,6 +495,7 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Get</p>
         <ul class="footer-links">
           <li><a href="sojourner.html">Sojourner</a></li>
+          <li><a href="https://mortify.gentleking.org/" target="_blank" rel="noopener">Mortify</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
         <p class="footer-head footer-give">Give</p>
@@ -553,6 +578,8 @@ def fingerprint(page):
     shown = [str(page.get(key, "")) for key in ("eyebrow", "h1", "deck")]
     if page.get("hero"):
         shown.append(HERO)
+    if page.get("notice"):
+        shown.append(json.dumps(page["notice"], sort_keys=True))
     return hashlib.sha256("\n".join(shown + [body]).encode("utf-8")).hexdigest()[:16]
 
 
@@ -609,6 +636,7 @@ ORG_ID = f"{SITE_URL}/#organization"
 SITE_ID = f"{SITE_URL}/#website"
 PERSON_ID = f"{SITE_URL}/#colt"
 APP_ID = f"{SITE_URL}/sojourner.html#app"
+MORTIFY_ID = f"{SITE_URL}/struggle.html#mortify-app"
 LOGO_URL = f"{SITE_URL}/brand/gentle-king-icon-512.png"
 
 ORG_DESCRIPTION = (
@@ -765,6 +793,31 @@ def software_node(page, canonical, body):
     }
 
 
+def mortify_node(canonical):
+    """Mortify as the Fighting Sin page describes it. Nothing here the page does not say."""
+    return {
+        "@type": "WebApplication",
+        "@id": MORTIFY_ID,
+        "name": MORTIFY_NAME,
+        "description": (
+            "A free web app for the fight against sin. Scripture, counsel from John Owen and "
+            "Thomas Watson, and prayer in the hour of temptation, with a daily reading, an "
+            "evening examination, and help after a fall."
+        ),
+        "url": MORTIFY_URL,
+        "image": f"{SITE_URL}/assets/img/mortify-icon-512.png",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "A current web browser",
+        "isAccessibleForFree": True,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": MORTIFY_URL},
+        "inLanguage": "en",
+        "mainEntityOfPage": {"@id": f"{canonical}#webpage"},
+        "author": {"@id": PERSON_ID},
+        "publisher": {"@id": ORG_ID},
+    }
+
+
 def structured_data(page, canonical, body, dates):
     """One JSON-LD graph for the page."""
     kind = page.get("schema", "WebPage")
@@ -839,6 +892,9 @@ def structured_data(page, canonical, body, dates):
         }
         if page.get("about"):
             article["about"] = [{"@type": "Thing", "name": t} for t in page["about"]]
+        if MORTIFY_URL in body:
+            article["mentions"] = {"@id": MORTIFY_ID}
+            graph.append(mortify_node(canonical))
         cites = citations(body) + page.get("cites", [])
         if cites:
             article["citation"] = cites
@@ -1303,6 +1359,18 @@ def build_page(page, dates):
                 deck=html.escape(page["deck"], quote=False),
             )
         )
+    if page.get("notice"):
+        notice = page["notice"]
+        outside = notice["href"].startswith("http")
+        parts.append(render(
+            NOTICE,
+            label=html.escape(notice["label"], quote=True),
+            href=notice["href"],
+            target=' target="_blank" rel="noopener"' if outside else "",
+            icon=notice["icon"],
+            text=notice["text"],
+            go=notice["go"],
+        ))
 
     main_class = "wrap page-body has-toc" if page.get("toc") else "wrap page-body"
     parts.append(f'<main id="main" class="{main_class}">\n')
@@ -1435,6 +1503,10 @@ def build_llms_txt():
         f"{APP_NAME} {version} is free Bible study software for Windows 10 and 11, 64-bit, made "
         "by the same writer and given away free. It needs no account, works with the network "
         f"off, and sends no telemetry. The installer is about {size_mb} MB.",
+        "",
+        f"{MORTIFY_NAME} ({MORTIFY_URL}) is a free web app by the same writer for the fight "
+        "against sin. It works in the browser on a phone or a computer, and the Fighting Sin page "
+        "describes it.",
         "",
         "Anyone in danger or thinking of ending their life can call 911, or call or text 988, in "
         "the United States. Anyone being hurt at home can call the National Domestic Violence "

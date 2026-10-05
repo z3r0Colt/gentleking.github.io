@@ -812,6 +812,15 @@ blockquote { margin: 2rem 0; }
   border-right: 1.5px solid currentColor;
   transform: rotate(45deg);
 }
+/* An app's own icon in place of the book, as on the Fighting Sin page. */
+.app-notice img {
+  display: inline-block;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: .5rem;
+  vertical-align: -.36em;
+  border-radius: 22%;
+}
 .app-notice a:hover { color: var(--ink); }
 .app-notice a:hover strong { color: var(--gold); }
 .app-notice a:hover .app-notice-go { text-decoration-color: currentColor; }
@@ -1162,6 +1171,28 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 }
 .get > p { font-size: .97rem; color: var(--ink-soft); }
 .get .btn-row { margin-top: 1.3rem; }
+/* A web app's box shows its icon beside the name, the way a phone would. */
+.get-app {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  column-gap: 1.25rem;
+  align-items: start;
+}
+.get-app > * { grid-column: 2; }
+.get-icon {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 22%;
+  box-shadow: var(--shadow);
+}
+.get-app h3 { margin-top: .2rem; }
+@media (max-width: 30rem) {
+  .get-app { grid-template-columns: 3.4rem minmax(0, 1fr); column-gap: 1rem; }
+  .get-icon { width: 3.4rem; height: 3.4rem; }
+  .get-app > p:not(.get-meta), .get-app > .btn-row { grid-column: 1 / -1; }
+}
 
 .spec {
   display: grid;
