@@ -123,7 +123,8 @@
       var sec = sections[i];
       if (sec.hasAttribute('data-half') && !sec.classList.contains('is-shown')) { continue; }
       var h2 = sec.querySelector('h2');
-      if (h2) { headings.push({ id: sec.id, text: h2.textContent.trim(), el: sec }); }
+      // A heading that is a verse gives a shorter name for the list in data-toc.
+      if (h2) { headings.push({ id: sec.id, text: h2.getAttribute('data-toc') || h2.textContent.trim(), el: sec }); }
     }
 
     if (headings.length < 3) { return; }

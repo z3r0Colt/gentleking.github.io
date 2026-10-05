@@ -742,7 +742,8 @@ blockquote { margin: 2rem 0; }
 .hero-word { text-align: center; }
 .hero-word .wrap { max-width: 50rem; }
 .hero-word h1 { max-width: 24ch; margin-inline: auto; margin-bottom: .45em; }
-.hero-ref {
+.hero-ref,
+.verse-ref {
   font-family: var(--font-ui);
   font-size: .74rem;
   font-weight: 600;
@@ -752,6 +753,15 @@ blockquote { margin: 2rem 0; }
   margin: 0 0 1.6rem;
 }
 .hero-word .hero-deck { margin-inline: auto; }
+
+/* A section that leads with a verse sets it as its heading, the way the home
+   page leads with Matthew 11:28, with the reference under it. */
+main > .section > h2.verse-head {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.15rem);
+  line-height: 1.24;
+  margin-bottom: .55em;
+  text-wrap: pretty;
+}
 .hero-word .btn-row { justify-content: center; }
 .hero-word .btn { margin-inline: 0; }
 

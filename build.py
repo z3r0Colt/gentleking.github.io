@@ -62,6 +62,15 @@ APP_PAGE = "sojourner.html"
 MORTIFY_NAME = "Mortify"
 MORTIFY_URL = "https://mortify.gentleking.org/"
 
+# The line that points to Mortify's section on the Fighting Sin page. Each page
+# that shows it gives the address of the section from where it stands.
+MORTIFY_NOTICE = {
+    "label": MORTIFY_NAME,
+    "icon": '<img src="assets/img/mortify-icon-192.png" width="192" height="192" alt="">',
+    "text": f"<strong>{MORTIFY_NAME}</strong>, a free app for the fight against sin.",
+    "go": "See it",
+}
+
 # Who writes the site, as the About page names him. Search engines and AI tools
 # read this from the structured data, so it says only what that page says.
 AUTHOR_NAME = "Colt"
@@ -112,6 +121,9 @@ PAGES = [
             "for grief, help against sin, and Sojourner, a Bible study app for Windows."
         ),
         "hero": True,
+        # Under the Sojourner line, a second for Mortify, which goes to its
+        # section on the Fighting Sin page.
+        "notice": dict(MORTIFY_NOTICE, href="struggle.html#mortify"),
         "toc": False,
     },
     {
@@ -203,13 +215,7 @@ PAGES = [
         "schema": "Article",
         # A line under the page head, so a reader in temptation finds Mortify on
         # the first screen. The full section is #mortify in the page itself.
-        "notice": {
-            "label": MORTIFY_NAME,
-            "href": MORTIFY_URL,
-            "icon": '<img src="assets/img/mortify-icon-192.png" width="192" height="192" alt="">',
-            "text": f"<strong>{MORTIFY_NAME}</strong>, a free app for the fight against sin.",
-            "go": "Open it",
-        },
+        "notice": dict(MORTIFY_NOTICE, href="#mortify"),
         "about": [
             "Struggling with sin", "Mortification of sin", "Love for Christ",
             "Assurance of salvation",
@@ -963,9 +969,12 @@ def sections(body):
     Run it through plain() for anything that is not HTML."""
     found = []
     for sid, inner in re.findall(r'(?s)<section class="section" id="([^"]+)"[^>]*>(.*?)</section>', body):
-        h2 = re.search(r"(?s)<h2[^>]*>(.*?)</h2>", inner)
+        h2 = re.search(r"(?s)<h2([^>]*)>(.*?)</h2>", inner)
         if h2:
-            found.append((sid, " ".join(re.sub(r"<[^>]+>", "", h2.group(1)).split())))
+            # A heading that is a verse names itself shorter in data-toc.
+            short = re.search(r'data-toc="([^"]+)"', h2.group(1))
+            text = short.group(1) if short else re.sub(r"<[^>]+>", "", h2.group(2))
+            found.append((sid, " ".join(text.split())))
     return found
 
 

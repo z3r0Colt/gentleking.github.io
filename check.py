@@ -127,6 +127,7 @@ def prose(source):
     text = re.sub(r'(?s)<blockquote class="scripture">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<blockquote class="confession">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<p class="(footer-verse|mock-verse|verse)">.*?</p>', " ", text)
+    text = re.sub(r'(?s)<h2 class="verse-head"[^>]*>.*?</h2>', " ", text)
     # The library list carries the old books' own titles, bylines, and lists of
     # what each volume holds, which are full of colons and semicolons, and
     # nothing here should change them either. Its descriptions and notes are
