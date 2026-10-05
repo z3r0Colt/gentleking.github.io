@@ -1099,6 +1099,15 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 /* A phone held upright is twice as tall as it is wide, so it is held to about
    the width of a phone in the hand, with the rounder corners a phone has. */
 .shot-phone > a { max-width: 16rem; border-radius: 1.1rem; }
+/* A screenshot taken in both themes shows the one that matches the page, by
+   the same rules the theme toggle uses for the Sojourner mark. */
+.shot > .shot-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shot > .shot-light { display: none; }
+  :root:not([data-theme="light"]) .shot > .shot-dark { display: block; }
+}
+:root[data-theme="dark"] .shot > .shot-light { display: none; }
+:root[data-theme="dark"] .shot > .shot-dark { display: block; }
 .shot figcaption {
   margin-top: .8rem;
   font-family: var(--font-ui);
