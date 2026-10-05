@@ -806,6 +806,11 @@ def mortify_node(canonical):
         ),
         "url": MORTIFY_URL,
         "image": f"{SITE_URL}/assets/img/mortify-icon-512.png",
+        "screenshot": {
+            "@type": "ImageObject",
+            "url": f"{SITE_URL}/assets/img/mortify-home.webp",
+            "caption": "Mortify on a phone. Flee is the first thing on its home page, with the day's word under it.",
+        },
         "applicationCategory": "LifestyleApplication",
         "operatingSystem": "Any",
         "browserRequirements": "A current web browser",

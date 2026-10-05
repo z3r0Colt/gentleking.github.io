@@ -1096,6 +1096,9 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 /* On a page with no rail beside its column, a picture is held to about the
    width it has on the Sojourner page, near the prose it sits in. */
 .shot-prose { max-width: calc(var(--measure) + 8rem); }
+/* A phone held upright is twice as tall as it is wide, so it is held to about
+   the width of a phone in the hand, with the rounder corners a phone has. */
+.shot-phone > a { max-width: 16rem; border-radius: 1.1rem; }
 .shot figcaption {
   margin-top: .8rem;
   font-family: var(--font-ui);
