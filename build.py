@@ -677,6 +677,7 @@ APP_FEATURES = [
     "The Westminster Confession and Catechisms with their Scripture proofs, and the Three Forms of Unity",
     "An encyclopedia, a Bible dictionary, Webster's dictionary of 1828, cross references, a Factbook, an atlas, and a timeline with the history of the church",
     "Optional book shelves of Puritan and Reformed works, the Church Fathers, and more",
+    "Optional map packs that give the atlas its hills, a 3D view of the land, and a view from the sky",
     "Linked panes that turn to the same verse together, and one search box for everything",
     "Notes, highlights, a prayer journal, reading plans, and Scripture and catechism memory",
     "A sermon editor with templates, a preaching mode, slides, handouts, and a podium file for phones",
