@@ -831,6 +831,18 @@ main > .section > h2.verse-head {
   vertical-align: -.36em;
   border-radius: 22%;
 }
+/* Color text's seven families as a small strip, the way Sojourner shows them
+   under its toolbar. */
+.app-notice .ct-strip {
+  display: inline-flex;
+  width: 1.6rem;
+  height: .42rem;
+  margin-right: .55rem;
+  vertical-align: .12em;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.ct-strip > span { flex: 1; background: var(--ct); }
 .app-notice a:hover { color: var(--ink); }
 .app-notice a:hover strong { color: var(--gold); }
 .app-notice a:hover .app-notice-go { text-decoration-color: currentColor; }
@@ -1627,4 +1639,51 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 /* In a high contrast mode the chosen topic still has to show as chosen. */
 @media (forced-colors: active) {
   .lib-topic[aria-pressed="true"] { forced-color-adjust: none; color: HighlightText; background: Highlight; border-color: Highlight; }
+}
+
+/* --------------------------------------------------------------------------
+   24. Color text
+   Sojourner's seven families, in shades near the program's own, lifted for
+   the dark theme. The words beside each dot name the color as well, so
+   nothing here depends on seeing it.
+   -------------------------------------------------------------------------- */
+
+.ct-god     { --ct: #7d43b5; }
+.ct-angels  { --ct: #8f841f; }
+.ct-people  { --ct: #2b80c2; }
+.ct-nature  { --ct: #14897f; }
+.ct-places  { --ct: #2f8b3b; }
+.ct-time    { --ct: #9b5b20; }
+.ct-numbers { --ct: #a3182f; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ct-god     { --ct: #b88ce6; }
+  :root:not([data-theme="light"]) .ct-angels  { --ct: #cbbf5c; }
+  :root:not([data-theme="light"]) .ct-people  { --ct: #72b5ea; }
+  :root:not([data-theme="light"]) .ct-nature  { --ct: #4fc4b7; }
+  :root:not([data-theme="light"]) .ct-places  { --ct: #6fc87b; }
+  :root:not([data-theme="light"]) .ct-time    { --ct: #d49c61; }
+  :root:not([data-theme="light"]) .ct-numbers { --ct: #e96a7e; }
+}
+:root[data-theme="dark"] .ct-god     { --ct: #b88ce6; }
+:root[data-theme="dark"] .ct-angels  { --ct: #cbbf5c; }
+:root[data-theme="dark"] .ct-people  { --ct: #72b5ea; }
+:root[data-theme="dark"] .ct-nature  { --ct: #4fc4b7; }
+:root[data-theme="dark"] .ct-places  { --ct: #6fc87b; }
+:root[data-theme="dark"] .ct-time    { --ct: #d49c61; }
+:root[data-theme="dark"] .ct-numbers { --ct: #e96a7e; }
+
+.ct-legend { list-style: none; padding: 0; margin: 1.4rem 0 1.6rem; }
+.ct-legend li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .7rem;
+}
+.ct-dot {
+  position: absolute;
+  left: .15rem;
+  top: .48em;
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: var(--ct);
 }

@@ -147,6 +147,19 @@ PAGES = [
             "the Hebrew and Greek, Matthew Henry, Calvin, and the Westminster Standards."
         ),
         "schema": "ItemPage",
+        # The newest feature, named under the mark on the first screen.
+        "notice": {
+            "label": "New in Sojourner",
+            "href": "#color-text",
+            "icon": (
+                '<span class="ct-strip" aria-hidden="true">'
+                + "".join(f'<span class="ct-{f}"></span>' for f in (
+                    "god", "angels", "people", "nature", "places", "time", "numbers"))
+                + "</span>"
+            ),
+            "text": "<strong>Color text</strong>, new in this version. Every person, place, time, and number in its own color.",
+            "go": "See it",
+        },
         "toc": True,
     },
     {
@@ -669,6 +682,7 @@ APP_FEATURES = [
     "A sermon editor with templates, a preaching mode, slides, handouts, and a podium file for phones",
     "A guided family worship page with a reading, a psalm, a catechism question, and prayer",
     "The 1650 Scottish Metrical Psalter on a page of its own, with tunes that play",
+    "Color text, with every person, place, time, and number in the Bible in its own color, and God's own words set apart",
 ]
 
 CONFESSION_WORKS = [
