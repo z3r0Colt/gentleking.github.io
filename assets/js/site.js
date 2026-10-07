@@ -36,15 +36,17 @@
     if (meta) { meta.setAttribute('content', currentTheme() === 'dark' ? '#151310' : '#fbf8f2'); }
   }
 
+  /* The icon in the header, and on a phone the row at the foot of the menu,
+     which says in words what it will do and so needs no label. */
   var toggle = doc.querySelector('.theme-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
+  Array.prototype.forEach.call(doc.querySelectorAll('.theme-toggle, .menu-theme'), function (button) {
+    button.addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
       setTheme(next);
       storeTheme(next);
-      toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light' : 'Switch to dark');
+      if (toggle) { toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light' : 'Switch to dark'); }
     });
-  }
+  });
   setTheme(readStoredTheme());
 
   /* ------------------------------------------------------------ mobile nav */

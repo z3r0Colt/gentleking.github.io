@@ -61,14 +61,15 @@ APP_PAGE = "sojourner.html"
 # Fighting Sin page is its home on this site.
 MORTIFY_NAME = "Mortify"
 MORTIFY_URL = "https://mortify.gentleking.org/"
+MORTIFY_PAGE = "mortify.html"
 
-# The line that points to Mortify's section on the Fighting Sin page. Each page
-# that shows it gives the address of the section from where it stands.
+# The line that points to Mortify's page, on the home page and the Fighting Sin page.
 MORTIFY_NOTICE = {
     "label": MORTIFY_NAME,
-    "icon": '<img src="assets/img/mortify-icon-192.png" width="192" height="192" alt="">',
+    "icon": '<img src="assets/img/mortify-icon-64.png" width="64" height="64" alt="">',
     "text": f"<strong>{MORTIFY_NAME}</strong>, a free app for the fight against sin.",
     "go": "See it",
+    "href": MORTIFY_PAGE,
 }
 
 # Who writes the site, as the About page names him. Search engines and AI tools
@@ -91,10 +92,13 @@ SCRIPTURE_NOTICE = (
 
 COPYRIGHT_YEAR = "2026"
 
-# Nine items is the most the desktop nav holds on one line at 1025px.
-# A tenth needs the 64rem breakpoint in site.css and the 1024 in site.js raised,
-# or belongs in the footer. Sojourner comes last because on a wide screen it is
-# drawn as an outlined button at the end of the row, so no one has to hunt for it.
+# The desktop row is full. Seven pages and the two apps fit on one line from
+# 1025px, with the apps' marks left off until the header reaches its full width
+# at 66rem. Past that the row cannot grow, since the header is no wider than the
+# page. Another item needs the 64rem breakpoint in site.css and the 1024 in
+# site.js raised, or belongs in the footer. The apps come last because on a wide
+# screen they are drawn as one outlined pair at the end of the row, so no one
+# has to hunt for them.
 NAV = [
     ("./", "Home"),
     ("gospel.html", "The Gospel"),
@@ -104,6 +108,7 @@ NAV = [
     ("apologetics.html", "Apologetics"),
     ("about.html", "About"),
     (APP_PAGE, APP_NAME),
+    (MORTIFY_PAGE, MORTIFY_NAME),
 ]
 
 # --------------------------------------------------------------------------
@@ -122,8 +127,8 @@ PAGES = [
         ),
         "hero": True,
         # Under the Sojourner line, a second for Mortify, which goes to its
-        # section on the Fighting Sin page.
-        "notice": dict(MORTIFY_NOTICE, href="struggle.html#mortify"),
+        # own page.
+        "notice": MORTIFY_NOTICE,
         "toc": False,
     },
     {
@@ -160,6 +165,38 @@ PAGES = [
             "text": "<strong>Color text</strong>, new in this version. Every person, place, time, and number in its own color.",
             "go": "See it",
         },
+        "toc": True,
+    },
+    {
+        "file": MORTIFY_PAGE,
+        "content": "mortify.html",
+        "title": MORTIFY_NAME,
+        "full_title": "Mortify \u00b7 A Free App for Putting Sin to Death by the Spirit",
+        "h1": MORTIFY_NAME,
+        # The page leads with the app's own mark, Jeremiah 3:22, and a way in.
+        "app_head": {
+            "icon": "mortify-icon-512.png",
+            "verse": (
+                "Return, ye backsliding children, and I will heal your backslidings. Behold, "
+                "we come unto thee; for thou art the LORD our God."
+            ),
+            "ref": "Jeremiah 3:22 (KJV)",
+            "href": MORTIFY_URL,
+            "go": "Open Mortify",
+        },
+        "deck": (
+            "A free app for the daily work of putting sin to death by the Spirit. It meets you "
+            "in the hour of temptation, morning and evening, and after a fall, and it sends you "
+            "back to Christ every time."
+        ),
+        "description": (
+            "Mortify is a free app for putting sin to death by the Spirit. Flee in temptation, "
+            "a morning reading, an evening examination, and help after a fall."
+        ),
+        "og_image": "og-mortify.png",
+        "og_alt": "Mortify. A free app for putting sin to death by the Spirit.",
+        "schema": "ItemPage",
+        "app": "mortify",
         "toc": True,
     },
     {
@@ -227,8 +264,8 @@ PAGES = [
         ),
         "schema": "Article",
         # A line under the page head, so a reader in temptation finds Mortify on
-        # the first screen. The full section is #mortify in the page itself.
-        "notice": dict(MORTIFY_NOTICE, href="#mortify"),
+        # the first screen. It goes to Mortify's own page.
+        "notice": MORTIFY_NOTICE,
         "about": [
             "Struggling with sin", "Mortification of sin", "Love for Christ",
             "Assurance of salvation",
@@ -364,13 +401,27 @@ BOOK_SVG = (
     "</svg>"
 )
 
-# On a phone every page folds into the menu, so Sojourner keeps a button of its
-# own beside the menu button. On a wide screen site.css hides this one, since
-# the row of pages already ends with Sojourner drawn the same way.
-APP_LINK = (
-    '<a class="app-link" href="{app_page}"{current}>{book}'
-    '<span class="app-link-name">{app_name}</span></a>'
+# Mortify's own icon, shown small with rounded corners beside its name. The name
+# is always there for a screen reader, so the picture says nothing.
+MORTIFY_ICON = (
+    '<img src="assets/img/mortify-icon-64.png" width="64" height="64" alt="" decoding="async">'
 )
+
+# On a phone every page folds into the menu, so the two apps keep a pair of
+# buttons of their own beside the menu button. On a wide screen site.css hides
+# these, since the row of pages already ends with the same pair.
+APP_LINK = (
+    '<a class="app-link" href="{href}"{current}>{icon}'
+    '<span class="app-link-name">{name}</span></a>'
+)
+
+# The light and dark switch as a row at the foot of the menu. On a phone the
+# header has room for the two apps or for the switch, not both, and the switch
+# is the one a reader sets once and leaves. site.css shows this row only there.
+MENU_THEME = """      <button class="menu-theme" type="button">
+        <span class="menu-theme-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Switch to dark</span>
+        <span class="menu-theme-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Switch to light</span>
+      </button>"""
 
 HEAD = """<!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
@@ -421,9 +472,10 @@ HEADER = """<header class="site-header">
     </a>
     <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
 {nav_links}
+{menu_theme}
     </nav>
     <div class="nav-tools">
-      {app_link}
+      {app_links}
       <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -476,6 +528,24 @@ PAGE_HEAD = """<div class="page-head">
 </div>
 """
 
+# A web app's page leads with its icon, its name, a verse, and the way in.
+PAGE_HEAD_APP = """<div class="page-head page-head-app">
+  <div class="wrap">
+    <img class="app-mark" src="assets/img/{icon}" width="512" height="512" alt="" decoding="async">
+    <h1>{h1}</h1>
+    <blockquote class="scripture app-verse">
+      <p>{verse}</p>
+      <cite>{ref}</cite>
+    </blockquote>
+    <p class="page-deck">{deck}</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{href}" target="_blank" rel="noopener">{go}</a>
+      <a class="btn" href="#open">How to begin</a>
+    </div>
+  </div>
+</div>
+"""
+
 # A page with its own mark shows it in place of a typeset name. The name still
 # sits in the heading for screen readers and for search, just not drawn twice.
 PAGE_HEAD_LOGO = """<div class="page-head page-head-logo">
@@ -514,7 +584,7 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-head">Get</p>
         <ul class="footer-links">
           <li><a href="sojourner.html">Sojourner</a></li>
-          <li><a href="https://mortify.gentleking.org/" target="_blank" rel="noopener">Mortify</a></li>
+          <li><a href="mortify.html">Mortify</a></li>
           <li><a href="about.html#contact">Contact</a></li>
         </ul>
         <p class="footer-head footer-give">Give</p>
@@ -599,6 +669,8 @@ def fingerprint(page):
         shown.append(HERO)
     if page.get("notice"):
         shown.append(json.dumps(page["notice"], sort_keys=True))
+    if page.get("app_head"):
+        shown.append(json.dumps(page["app_head"], sort_keys=True))
     return hashlib.sha256("\n".join(shown + [body]).encode("utf-8")).hexdigest()[:16]
 
 
@@ -655,14 +727,15 @@ ORG_ID = f"{SITE_URL}/#organization"
 SITE_ID = f"{SITE_URL}/#website"
 PERSON_ID = f"{SITE_URL}/#colt"
 APP_ID = f"{SITE_URL}/sojourner.html#app"
-MORTIFY_ID = f"{SITE_URL}/struggle.html#mortify-app"
+MORTIFY_ID = f"{SITE_URL}/{MORTIFY_PAGE}#app"
 LOGO_URL = f"{SITE_URL}/brand/gentle-king-icon-512.png"
 
 ORG_DESCRIPTION = (
     "A confessionally Reformed and Presbyterian ministry website. It sets out the gospel of "
     "Jesus Christ, Scripture for hard hours, help in the fight against sin, Reformed doctrine "
     "held to the Westminster Confession of Faith, and apologetics, and it "
-    "gives away Sojourner, a free Bible study app for Windows. It is the work of one layman "
+    "gives away Sojourner, a free Bible study app for Windows, and Mortify, a free app for the "
+    "fight against sin. It is the work of one layman "
     "and is not a church."
 )
 
@@ -814,16 +887,29 @@ def software_node(page, canonical, body):
     }
 
 
-def mortify_node(canonical):
-    """Mortify as the Fighting Sin page describes it. Nothing here the page does not say."""
+def mortify_node(own_page=True):
+    """Mortify as its own page describes it. Nothing here the page does not say.
+    Graphs do not join up across pages, so another page that mentions it names
+    the app in brief, without pointing back to a page it does not describe."""
+    if not own_page:
+        return {
+            "@type": "WebApplication",
+            "@id": MORTIFY_ID,
+            "name": MORTIFY_NAME,
+            "url": f"{SITE_URL}/{MORTIFY_PAGE}",
+            "applicationCategory": "LifestyleApplication",
+            "isAccessibleForFree": True,
+            "author": {"@id": PERSON_ID},
+            "publisher": {"@id": ORG_ID},
+        }
     return {
         "@type": "WebApplication",
         "@id": MORTIFY_ID,
         "name": MORTIFY_NAME,
         "description": (
-            "A free web app for the fight against sin. Scripture, counsel from John Owen and "
-            "Thomas Watson, and prayer in the hour of temptation, with a daily reading, an "
-            "evening examination, and help after a fall."
+            "A free web app for putting sin to death by the Spirit. Scripture, Puritan counsel, "
+            "and prayer in the hour of temptation, a morning reading, an evening examination, "
+            "help after a fall, and a few brethren from your own church to pray for you."
         ),
         "url": MORTIFY_URL,
         "image": f"{SITE_URL}/assets/img/mortify-icon-512.png",
@@ -838,7 +924,7 @@ def mortify_node(canonical):
         "isAccessibleForFree": True,
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": MORTIFY_URL},
         "inLanguage": "en",
-        "mainEntityOfPage": {"@id": f"{canonical}#webpage"},
+        "mainEntityOfPage": {"@id": f"{SITE_URL}/{MORTIFY_PAGE}#webpage"},
         "author": {"@id": PERSON_ID},
         "publisher": {"@id": ORG_ID},
     }
@@ -918,13 +1004,16 @@ def structured_data(page, canonical, body, dates):
         }
         if page.get("about"):
             article["about"] = [{"@type": "Thing", "name": t} for t in page["about"]]
-        if MORTIFY_URL in body:
+        if MORTIFY_PAGE in body or MORTIFY_URL in body:
             article["mentions"] = {"@id": MORTIFY_ID}
-            graph.append(mortify_node(canonical))
+            graph.append(mortify_node(own_page=False))
         cites = citations(body) + page.get("cites", [])
         if cites:
             article["citation"] = cites
         graph.append(article)
+    elif kind == "ItemPage" and page.get("app") == "mortify":
+        webpage["mainEntity"] = {"@id": MORTIFY_ID}
+        graph.append(mortify_node())
     elif kind == "ItemPage":
         webpage["mainEntity"] = {"@id": APP_ID}
         graph.append(software_node(page, canonical, body))
@@ -956,26 +1045,34 @@ def structured_data(page, canonical, body, dates):
     return f'<script type="application/ld+json">{text}</script>\n'
 
 
+# Each app's page and the mark that goes beside its name.
+APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON}
+
+
 def nav_links(current):
     out = []
     for href, label in NAV:
         here = href == current or (href == "./" and current == "index.html")
         mark = ' aria-current="page"' if here else ""
-        if href == APP_PAGE:
-            out.append(f'      <a class="nav-app" href="{href}"{mark}>{BOOK_SVG}{label}</a>')
+        if href in APP_ICONS:
+            out.append(f'      <a class="nav-app" href="{href}"{mark}>{APP_ICONS[href]}{label}</a>')
         else:
             out.append(f'      <a href="{href}"{mark}>{label}</a>')
     return "\n".join(out)
 
 
-def app_link(current):
-    return render(
-        APP_LINK,
-        app_page=APP_PAGE,
-        current=' aria-current="page"' if current == APP_PAGE else "",
-        book=BOOK_SVG,
-        app_name=APP_NAME,
+def app_links(current):
+    links = "".join(
+        render(
+            APP_LINK,
+            href=href,
+            current=' aria-current="page"' if current == href else "",
+            icon=APP_ICONS[href],
+            name=name,
+        )
+        for href, name in ((APP_PAGE, APP_NAME), (MORTIFY_PAGE, MORTIFY_NAME))
     )
+    return f'<div class="app-links">{links}</div>'
 
 
 def sections(body):
@@ -1365,11 +1462,25 @@ def build_page(page, dates):
             robots="noindex" if page.get("hidden") else "max-image-preview:large",
         ),
         render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"]),
-               app_link=app_link(page["file"])),
+               menu_theme=MENU_THEME, app_links=app_links(page["file"])),
     ]
 
     if page.get("hero"):
         parts.append(render(HERO, app_page=APP_PAGE, app_name=APP_NAME, book=BOOK_SVG))
+    elif page.get("app_head"):
+        head = page["app_head"]
+        parts.append(
+            render(
+                PAGE_HEAD_APP,
+                icon=head["icon"],
+                h1=html.escape(page["h1"], quote=False),
+                verse=html.escape(head["verse"], quote=False),
+                ref=html.escape(head["ref"], quote=False),
+                deck=html.escape(page["deck"], quote=False),
+                href=head["href"],
+                go=html.escape(head["go"], quote=False),
+            )
+        )
     elif page.get("logo"):
         parts.append(
             render(
@@ -1533,9 +1644,9 @@ def build_llms_txt():
         "by the same writer and given away free. It needs no account, works with the network "
         f"off, and sends no telemetry. The installer is about {size_mb} MB.",
         "",
-        f"{MORTIFY_NAME} ({MORTIFY_URL}) is a free web app by the same writer for the fight "
-        "against sin. It works in the browser on a phone or a computer, and the Fighting Sin page "
-        "describes it.",
+        f"{MORTIFY_NAME} ({MORTIFY_URL}) is a free web app by the same writer for putting sin to "
+        "death by the Spirit. It works in the browser on a phone or a computer, and it needs a "
+        "free account made with an email address.",
         "",
         "Anyone in danger or thinking of ending their life can call 911, or call or text 988, in "
         "the United States. Anyone being hurt at home can call the National Domestic Violence "
@@ -1563,6 +1674,12 @@ def build_llms_txt():
     lines += [
         f"- [Download {APP_NAME}]({APP_RELEASES}): The Windows installer and the four optional "
         "book shelves, on GitHub",
+        "",
+    ]
+    lines += [f"## {MORTIFY_NAME}, a free app for the fight against sin", ""]
+    lines += entry(by_file[MORTIFY_PAGE], MORTIFY_NAME)
+    lines += [
+        f"- [Open {MORTIFY_NAME}]({MORTIFY_URL}): The app itself, in the browser",
         "",
         "## About the site",
         "",

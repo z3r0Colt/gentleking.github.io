@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gentleking.org/</loc>
-    <lastmod>2026-10-05T16:07:43+00:00</lastmod>
+    <lastmod>2026-10-07T21:16:57+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/sojourner.html</loc>
     <lastmod>2026-10-07T02:15:41+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/mortify.html</loc>
+    <lastmod>2026-10-07T21:15:37+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/gospel.html</loc>
@@ -18,7 +22,7 @@
   </url>
   <url>
     <loc>https://gentleking.org/struggle.html</loc>
-    <lastmod>2026-10-05T16:08:26+00:00</lastmod>
+    <lastmod>2026-10-07T21:15:37+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/doctrine.html</loc>

@@ -563,7 +563,7 @@ blockquote { margin: 2rem 0; }
 
 .nav { display: flex; align-items: center; gap: .1rem; }
 .nav a {
-  padding: .5rem .72rem;
+  padding: .5rem .55rem;
   font-family: var(--font-ui);
   font-size: .85rem;
   color: var(--ink-soft);
@@ -575,7 +575,7 @@ blockquote { margin: 2rem 0; }
 .nav a:hover { color: var(--ink); }
 .nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
-.nav-tools { display: flex; align-items: center; gap: .3rem; margin-left: .5rem; }
+.nav-tools { display: flex; align-items: center; gap: .3rem; }
 
 .icon-btn {
   display: grid;
@@ -634,33 +634,71 @@ blockquote { margin: 2rem 0; }
     font-size: 1rem;
     border-bottom: 1px solid var(--rule);
   }
-  .nav a:last-child { border-bottom: 0; }
+  .nav a:last-of-type { border-bottom: 0; }
 }
 
-/* Sojourner, kept in reach. It is drawn like the secondary buttons, an
-   outlined link with an open book, so it reads as a thing to go and get
-   without raising its voice over the rest. On a wide screen it ends the row
-   of pages. On a phone the row folds into the menu, so .app-link keeps it out
-   beside the menu button, and in the menu it is a plain row like the others. */
-.app-link { display: none; }
+/* The two apps, kept in reach. Sojourner and Mortify are drawn like the
+   secondary buttons, as one outlined pair, each with its own mark, so they
+   read as things to go and get without raising their voice over the rest.
+   The halves share the line between them, so the second is pulled over the
+   first by its border, and whichever is hovered or current is drawn on top.
+   On a wide screen the pair ends the row of pages. On a phone the row folds
+   into the menu, so .app-links keeps the pair out beside the menu button, and
+   in the menu they are plain rows like the others. */
+.app-links { display: none; }
+.menu-theme { display: none; }
+
+/* Sojourner's open book and Mortify's own icon, the icon small with rounded
+   corners as .app-notice img has it. */
+.app-link svg,
+.app-link img,
+.nav a.nav-app svg,
+.nav a.nav-app img { width: 1.05rem; height: 1.05rem; flex-shrink: 0; }
+.app-link svg,
+.nav a.nav-app svg { color: var(--gold); }
+.app-link img,
+.nav a.nav-app img { border-radius: 22%; }
 
 @media not all and (max-width: 64rem) {
   .nav a.nav-app {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: .42rem;
     margin-left: .5rem;
-    padding-inline: .8rem .7rem;
+    padding-inline: .7rem .6rem;
     color: var(--ink);
     border: 1px solid var(--rule-strong);
     transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
   }
+  .nav a.nav-app:has(+ a.nav-app) { border-start-end-radius: 0; border-end-end-radius: 0; }
+  .nav a.nav-app + a.nav-app {
+    margin-left: calc(-.1rem - 1px);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+  .nav a.nav-app:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+  .nav a.nav-app[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
+  .nav a.nav-app:hover,
+  .nav a.nav-app[aria-current="page"],
+  .nav a.nav-app:focus-visible { z-index: 1; }
+}
+/* Until the header reaches its full width at 66rem the row is short of room,
+   so there the pair goes without its marks. */
+@media not all and (max-width: 64rem) {
+  @media (max-width: 66rem) {
+    .nav a.nav-app svg,
+    .nav a.nav-app img { display: none; }
+    .nav a.nav-app { padding-inline: .7rem; }
+  }
 }
 
 @media (max-width: 64rem) {
-  .nav .nav-app svg { display: none; }
-  .nav-tools { margin-left: 0; }
+  .nav .nav-app svg,
+  .nav .nav-app img { display: none; }
+  .app-links { display: flex; }
   .app-link {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: .42rem;
@@ -673,26 +711,63 @@ blockquote { margin: 2rem 0; }
     white-space: nowrap;
     text-decoration: none;
     border: 1px solid var(--rule-strong);
-    border-radius: var(--radius);
+    border-radius: var(--radius) 0 0 var(--radius);
     transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
   }
+  .app-link + .app-link { margin-left: -1px; border-radius: 0 var(--radius) var(--radius) 0; }
+  .app-link:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+  .app-link[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
+  .app-link:hover,
+  .app-link[aria-current="page"],
+  .app-link:focus-visible { z-index: 1; }
 }
 
-.app-link svg,
-.nav a.nav-app svg { width: 1.05rem; height: 1.05rem; color: var(--gold); flex-shrink: 0; }
-.app-link:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
-.app-link[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
-/* A narrow phone has little room beside the name of the site. The book goes
-   first and the name stays. Only on the very narrowest does the name give way
-   to the book, and it is still read aloud. */
-@media (max-width: 24rem) {
-  .site-header .wrap { gap: .75rem; }
-  .app-link { padding-inline: .65rem; }
-  .app-link svg { display: none; }
+/* A phone held upright has room beside the name of the site for the two apps
+   or for the light and dark switch, not for both. The apps stay, named, in
+   smaller type and without their marks, and the switch moves to the foot of
+   the menu, where it reads as words. */
+@media (max-width: 32rem) {
+  .nav-tools { gap: .2rem; }
+  .theme-toggle { display: none; }
+  .app-link { padding-inline: .6rem; font-size: .8rem; }
+  .app-link svg,
+  .app-link img { display: none; }
+  .menu-theme {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .85rem .2rem;
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    line-height: inherit;
+    color: var(--ink-soft);
+    text-align: left;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--rule);
+    cursor: pointer;
+  }
+  .menu-theme:hover { color: var(--ink); }
+  .menu-theme > span { display: inline-flex; align-items: center; gap: .65rem; }
+  .menu-theme svg { width: 1.05rem; height: 1.05rem; color: var(--gold); }
+  .menu-theme > .menu-theme-light { display: none; }
+  :root[data-theme="dark"] .menu-theme > .menu-theme-dark { display: none; }
+  :root[data-theme="dark"] .menu-theme > .menu-theme-light { display: inline-flex; }
 }
-@media (max-width: 21.5rem) {
+@media (max-width: 32rem) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .menu-theme > .menu-theme-dark { display: none; }
+  :root:not([data-theme="light"]) .menu-theme > .menu-theme-light { display: inline-flex; }
+}
+/* Narrower still, the pair draws in closer. Only on the very narrowest do the
+   names give way to the two marks, and they are still read aloud. */
+@media (max-width: 24rem) {
+  .site-header .wrap { gap: .625rem; }
+  .app-link { padding-inline: .5rem; }
+}
+@media (max-width: 22.25rem) {
   .app-link { padding-inline: .6rem; }
-  .app-link svg { display: block; }
+  .app-link svg,
+  .app-link img { display: block; }
   .app-link-name {
     position: absolute;
     width: 1px; height: 1px;
@@ -701,10 +776,6 @@ blockquote { margin: 2rem 0; }
     clip: rect(0 0 0 0);
     white-space: nowrap;
   }
-}
-@media not all and (max-width: 64rem) {
-  .nav a.nav-app:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
-  .nav a.nav-app[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
 }
 
 /* --------------------------------------------------------------------------
@@ -1687,3 +1758,43 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   border-radius: 50%;
   background: var(--ct);
 }
+
+/* --------------------------------------------------------------------------
+   25. A web app's own page
+   It leads with the app's icon where Sojourner leads with its wordmark, then
+   its name, the verse that heads it, a word on what it is, and the way in.
+   -------------------------------------------------------------------------- */
+
+.page-head-app {
+  padding-block: clamp(2.25rem, 6vw, 4rem) clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+.page-head-app .app-mark {
+  display: block;
+  width: clamp(5.5rem, 12vw, 7.5rem);
+  height: auto;
+  margin: 0 auto clamp(.9rem, 2vw, 1.25rem);
+  border-radius: 22%;
+  box-shadow: var(--shadow-lift);
+}
+.page-head-app h1 { max-width: none; margin-bottom: .55em; }
+.page-head-app .app-verse {
+  max-width: 34rem;
+  margin: 0 auto 1.6rem;
+  padding: 0;
+  border-left: 0;
+  font-size: clamp(1.3rem, 1.05rem + 1.1vw, 1.75rem);
+  line-height: 1.38;
+}
+.page-head-app .app-verse p { margin-bottom: .6em; }
+.page-head-app .page-deck { margin-inline: auto; }
+.page-head-app .btn-row { justify-content: center; }
+.page-head-app .btn { margin-inline: 0; }
+
+/* The sins an app knows by name, in two columns where there is room. */
+.battle-list {
+  columns: 2 15rem;
+  column-gap: 2rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.battle-list li { break-inside: avoid; margin-bottom: .35rem; }

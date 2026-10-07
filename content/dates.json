@@ -25,9 +25,14 @@
     "published": "2026-09-17T00:07:53+00:00"
   },
   "index.html": {
-    "hash": "edf28254109c6d32",
-    "modified": "2026-10-05T16:07:43+00:00",
+    "hash": "173d74423450cba7",
+    "modified": "2026-10-07T21:16:57+00:00",
     "published": "2026-09-17T00:07:53+00:00"
+  },
+  "mortify.html": {
+    "hash": "f57adab8354187dc",
+    "modified": "2026-10-07T21:15:37+00:00",
+    "published": "2026-10-07T20:59:32+00:00"
   },
   "resources.html": {
     "hash": "371266d8ed955caa",
@@ -40,8 +45,8 @@
     "published": "2026-09-17T00:07:53+00:00"
   },
   "struggle.html": {
-    "hash": "36d88497c6c9dfdb",
-    "modified": "2026-10-05T16:08:26+00:00",
+    "hash": "41f92e7efeac8b25",
+    "modified": "2026-10-07T21:15:37+00:00",
     "published": "2026-09-24T16:57:20+00:00"
   }
 }

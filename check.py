@@ -124,8 +124,8 @@ def prose(source):
     """Visible prose, with quoted Scripture and confessions taken out."""
     text = re.sub(r"(?s)<(script|style)\b.*?</\1>", " ", source)
     text = re.sub(r"(?s)<!--.*?-->", " ", text)
-    text = re.sub(r'(?s)<blockquote class="scripture">.*?</blockquote>', " ", text)
-    text = re.sub(r'(?s)<blockquote class="confession">.*?</blockquote>', " ", text)
+    text = re.sub(r'(?s)<blockquote class="scripture(?: [^"]*)?">.*?</blockquote>', " ", text)
+    text = re.sub(r'(?s)<blockquote class="confession(?: [^"]*)?">.*?</blockquote>', " ", text)
     text = re.sub(r'(?s)<p class="(footer-verse|mock-verse|verse)">.*?</p>', " ", text)
     text = re.sub(r'(?s)<h2 class="verse-head"[^>]*>.*?</h2>', " ", text)
     # The library list carries the old books' own titles, bylines, and lists of
