@@ -4,7 +4,7 @@
 
 The site is written by Colt, a layman in the Reformed Presbyterian tradition. He is not a pastor or an elder, and the site is no substitute for a local church. Scripture is quoted from the King James Version. The Westminster Standards are quoted from the text of 1647. The writing may be copied and shared freely under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 license. Please do not sell it, and please do not change the words and keep the name on it.
 
-Sojourner 0.3.9 is free Bible study software for Windows 10 and 11, 64-bit, made by the same writer and given away free. It needs no account, works with the network off, and sends no telemetry. The installer is about 592 MB.
+Sojourner 0.4.0 is free Bible study software for Windows 10 and 11, 64-bit, made by the same writer and given away free. It needs no account, works with the network off, and sends no telemetry. The installer is about 592 MB.
 
 Mortify (https://mortify.gentleking.org/) is a free web app by the same writer for the fight against sin. It works in the browser on a phone or a computer, and the Fighting Sin page describes it.
 
