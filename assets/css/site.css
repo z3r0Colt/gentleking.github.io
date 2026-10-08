@@ -2109,3 +2109,50 @@ main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 
   border: 1px solid var(--gold-soft);
   border-radius: var(--radius);
 }
+
+/* --------------------------------------------------------------------------
+   28. The home page's ways in
+   Short cards, a name, a line, and the way in, so the page stays tight.
+   -------------------------------------------------------------------------- */
+
+.grid-tight { gap: .8rem; margin-top: 1.4rem; }
+.grid-tight .card { display: flex; flex-direction: column; padding: 1.15rem 1.25rem 1.1rem; }
+.grid-tight .card h3 { font-size: clamp(1.25rem, 1.15rem + .4vw, 1.42rem); font-weight: 600; margin-bottom: .25rem; }
+.grid-tight .card p { margin-bottom: .5em; }
+.grid-tight .card .card-go { margin-top: auto; padding-top: .35rem; margin-bottom: 0; }
+.card-app h3 { display: flex; align-items: center; gap: .6rem; }
+.card-app h3 img,
+.card-app h3 svg { width: 1.6rem; height: 1.6rem; flex: none; }
+.card-app h3 img { border-radius: 22%; }
+.card-app h3 svg { color: var(--gold); }
+
+/* The church, set between the ways in and the tools, so no reader leaves the
+   home page without being sent to one. */
+.callout-church { position: relative; margin-top: 0; }
+.callout-church:hover { border-color: var(--gold); }
+.callout-church .card-go { margin: .9rem 0 0; }
+.section:has(> .callout-church) { margin-top: 1.5rem; }
+
+/* --------------------------------------------------------------------------
+   29. Links in the prose
+   A link inside a sentence is drawn in the theme's gold with a firm underline,
+   so it cannot be missed against the ink. Buttons, cards, menus, and the lists
+   of sorrows and guides keep their own looks, since they say what they are.
+   -------------------------------------------------------------------------- */
+
+main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 55%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: .2em;
+}
+main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]):hover {
+  color: var(--ink);
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+}
+@supports not (color: color-mix(in srgb, red, blue)) {
+  main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) { text-decoration-color: var(--gold-soft); }
+}

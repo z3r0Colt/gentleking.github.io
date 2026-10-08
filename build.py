@@ -1145,15 +1145,10 @@ HERO = """<section class="hero hero-word">
       you, and he means every word.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="#the-gospel">Hear the gospel</a>
+      <a class="btn" href="#where-to-turn">Find help for where you are</a>
     </div>
   </div>
 </section>
-<aside class="app-notice app-notice-pair" aria-label="Free tools from this ministry">
-  <div class="wrap">
-    <a href="{app_page}">{book}<strong>{app_name}</strong>, Bible study for Windows</a>
-    <a href="{mortify_page}">{mortify_icon}<strong>{mortify_name}</strong>, for the fight against sin</a>
-  </div>
-</aside>
 """
 
 # A quiet line under a page head, the same as the Sojourner line under the
