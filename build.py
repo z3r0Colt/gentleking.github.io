@@ -56,6 +56,11 @@ APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
 APP_EMAIL = "sojourner@gentleking.org"
 APP_REPO = "https://github.com/z3r0Colt/sojourner"
 APP_PAGE = "sojourner.html"
+# The current release. Written into the pages wherever {{version}} and {{size}}
+# appear, into the structured data, and into llms.txt, so a new release changes
+# these two lines and nothing else.
+APP_VERSION = "0.4.0"
+APP_SIZE_MB = "592"
 
 # The web app for the fight against sin. It lives at its own address, and the
 # Fighting Sin page is its home on this site.
@@ -92,13 +97,13 @@ SCRIPTURE_NOTICE = (
 
 COPYRIGHT_YEAR = "2026"
 
-# The desktop row is full. Seven pages and the two apps fit on one line from
-# 1025px, with the apps' marks left off until the header reaches its full width
-# at 66rem. Past that the row cannot grow, since the header is no wider than the
-# page. Another item needs the 64rem breakpoint in site.css and the 1024 in
-# site.js raised, or belongs in the footer. The apps come last because on a wide
-# screen they are drawn as one outlined pair at the end of the row, so no one
-# has to hunt for them.
+# The ministry's own pages come first, with the gospel at the head of them. The
+# two apps are tools of the ministry, so they sit together at the end of the row
+# under Tools, a small menu that opens on a click. On a phone every page folds
+# into the menu, and the header keeps one link of its own beside the menu
+# button, the gospel. The row fits on one line from 1025px. Another item needs
+# the 64rem breakpoint in site.css and the 1024 in site.js raised, or belongs in
+# the footer.
 NAV = [
     ("./", "Home"),
     ("gospel.html", "The Gospel"),
@@ -107,8 +112,12 @@ NAV = [
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
     ("about.html", "About"),
-    (APP_PAGE, APP_NAME),
-    (MORTIFY_PAGE, MORTIFY_NAME),
+]
+
+# The apps under Tools, each with a line saying what it is for.
+TOOLS = [
+    (APP_PAGE, APP_NAME, "Bible study for Windows"),
+    (MORTIFY_PAGE, MORTIFY_NAME, "For the fight against sin"),
 ]
 
 # --------------------------------------------------------------------------
@@ -126,9 +135,6 @@ PAGES = [
             "for grief, help against sin, and Sojourner, a Bible study app for Windows."
         ),
         "hero": True,
-        # Under the Sojourner line, a second for Mortify, which goes to its
-        # own page.
-        "notice": MORTIFY_NOTICE,
         "toc": False,
     },
     {
@@ -143,28 +149,18 @@ PAGES = [
         "og_image": "og-sojourner.png",
         "og_alt": "Sojourner, Bible Study Companion. A free, offline Bible study companion for Windows.",
         "deck": (
-            "Scripture beside the commentaries, confessions, and reference works of the "
-            "Reformed church. It runs on your own Windows machine, it works with the network off, "
-            "and it is free."
+            "A free Bible study program for Windows, for the pastor, the family, and the "
+            "student. Scripture beside the commentaries, confessions, and reference works of the "
+            "Reformed church, on your own computer, with no account and no internet needed."
         ),
         "description": (
             "Sojourner is free, offline Bible study software for Windows. Thirteen translations, "
             "the Hebrew and Greek, Matthew Henry, Calvin, and the Westminster Standards."
         ),
         "schema": "ItemPage",
-        # The newest feature, named under the mark on the first screen.
-        "notice": {
-            "label": "New in Sojourner",
-            "href": "#color-text",
-            "icon": (
-                '<span class="ct-strip" aria-hidden="true">'
-                + "".join(f'<span class="ct-{f}"></span>' for f in (
-                    "god", "angels", "people", "nature", "places", "time", "numbers"))
-                + "</span>"
-            ),
-            "text": "<strong>Color text</strong>, new in this version. Every person, place, time, and number in its own color.",
-            "go": "See it",
-        },
+        # The first screen says what it is, for whom, and where to get it.
+        "facts": ["Free", "Windows 10 and 11", "Works offline", "No account", "No telemetry"],
+        "head_shot": "sojourner-shot",
         "toc": True,
     },
     {
@@ -230,21 +226,24 @@ PAGES = [
         "full_title": "Bible Verses for Grief and Hard Times (KJV) \u00b7 Gentle King",
         "eyebrow": "Comfort",
         "h1": "Scripture for the Hard Hour",
+        "crumb": "Comfort",
         "deck": (
             "For the day the hard news comes, and the long days after. King James Scripture and "
-            "plain counsel, gathered by sorrow."
+            "plain counsel, gathered by sorrow. Find yours below."
         ),
         "description": (
             "King James Bible verses and plain counsel for grief, the death of a spouse or child, "
             "suicide loss, illness, divorce, a prodigal child, depression, and danger."
         ),
-        "schema": "Article",
+        "schema": "CollectionPage",
+        # Old links into the one long page this used to be still land on the
+        # right part. site.js follows them.
+        "moved": "comfort",
         "about": [
             "Grief", "The death of a husband or wife", "The death of a child", "Suicide loss",
             "Serious illness", "A breaking marriage and divorce", "A child who turns from the Lord",
             "Loss of work or home", "Depression", "Safety from violence at home",
         ],
-        "cites": [{"@type": "CreativeWork", "name": "Canons of Dort"}],
         "toc": False,
     },
     {
@@ -314,19 +313,20 @@ PAGES = [
         "h1": "A Reason for the Hope",
         "deck": (
             "Straight answers for the one who objects to the faith, and comfort for the "
-            "one who holds it with a shaking hand. Each has his own half of this page."
+            "one who holds it with a shaking hand. Each has pages of his own."
         ),
         "description": (
             "Honest answers to common objections to Christianity, from God and the Bible to evil "
             "and hell, and Scripture for the believer who fears he is not really saved."
         ),
-        "schema": "Article",
+        "schema": "CollectionPage",
         "about": [
             "Christian apologetics", "The existence of God", "The reliability of the Bible",
             "The resurrection of Jesus", "The problem of evil", "Hell", "Election",
             "Assurance of salvation", "Doubt",
         ],
-        "toc": True,
+        "moved": "apologetics",
+        "toc": False,
     },
     {
         "file": "resources.html",
@@ -378,6 +378,569 @@ PAGES = [
 ]
 
 # --------------------------------------------------------------------------
+# The pages under Comfort and Apologetics, one for each sorrow and each question.
+# Each was once a part of its parent page. They are listed here in the order
+# they stand on the parent, and child_pages() puts each group after its parent.
+# A series reads in order, so its pages carry Previous and Next at the foot.
+# --------------------------------------------------------------------------
+
+def _child(file, title, full_title, eyebrow, h1, deck, description, about, **more):
+    page = {
+        "file": file, "content": file, "title": title, "full_title": full_title,
+        "eyebrow": eyebrow, "h1": h1, "deck": deck, "description": description,
+        "schema": "Article", "about": about, "toc": True,
+    }
+    page.update(more)
+    return page
+
+
+COMFORT_PAGES = [
+    _child(
+        'comfort-grief.html',
+        'When Someone You Love Has Died',
+        'When Someone You Love Has Died · Bible Verses for Grief (KJV) · Gentle King',
+        'Grief',
+        'When Someone You Love Has Died',
+        ('The house is quiet, or it is full of people, and either way the one you want is not '
+         'in it. You do not have to be strong tonight. Christ has stood where you are '
+         'standing.'),
+        ('Scripture and plain counsel for the night someone you love has died. Christ wept at '
+         'a grave, and he will not hurry you past your grief.'),
+        ['Grief'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-widowed.html',
+        'When Your Husband or Wife Has Died',
+        'When Your Husband or Wife Has Died · Scripture for the Widowed · Gentle King',
+        'Widowhood',
+        'When Your Husband or Wife Has Died',
+        ('The one who knew you best is gone, and half of every habit in the house went with '
+         'them. There is no timetable for this. Christ saw to those left behind even while he '
+         'was dying.'),
+        ('King James Scripture and plain counsel for a widow or widower. The one who saw to '
+         'his mother from the cross still sees the one left behind.'),
+        ['The death of a husband or wife'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-death-of-a-child.html',
+        'When Your Child Has Died',
+        'When Your Child Has Died · Comfort for Grieving Parents · Gentle King',
+        'A child',
+        'When Your Child Has Died',
+        ('No parent should outlive a child, and every part of you knows it. Whether you lost a'
+         ' baby you barely held, or never held at all, or a son or daughter you raised, Christ'
+         ' has not looked away.'),
+        ('Scripture for parents who have lost a child, before birth, as a baby, or grown. '
+         'Christ took little children in his arms, and he holds the keys of death.'),
+        ['The death of a child', 'Miscarriage'],
+        parent="comfort.html", crisis=True, close="comfort-close", cites=[{"@type": "CreativeWork", "name": "Canons of Dort"}],
+    ),
+    _child(
+        'comfort-did-they-know-christ.html',
+        'When You Fear They Did Not Know Christ',
+        'When You Fear They Did Not Know Christ · Gentle King',
+        'The hardest question',
+        'When You Fear They Did Not Know Christ',
+        ('Some of us bury people we love without knowing whether they knew Christ. Some of you'
+         ' are not unsure. You fear you know. This is for you too, and you are not asked to '
+         'settle anything tonight.'),
+        ('Grieving someone who may not have known Christ? Leave them with the Judge of all the'
+         ' earth, who will do right, and bring your own soul to him.'),
+        ['Grief for an unbeliever'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-suicide-loss.html',
+        'When Someone You Love Took Their Own Life',
+        'When Someone You Love Took Their Own Life · Gentle King',
+        'Loss by suicide',
+        'When Someone You Love Took Their Own Life',
+        ('A death like this leaves questions no other death leaves. You may be carrying grief '
+         'and guilt and fear all at once. God saw what you could not see, and he is near you '
+         'now.'),
+        ('For those left behind after a suicide. Scripture on grief, false guilt, and the '
+         'keeping of Christ. If you are in danger, call or text 988 now.'),
+        ['Suicide loss'],
+        parent="comfort.html", close="comfort-close",
+    ),
+    _child(
+        'comfort-illness.html',
+        'When Serious Illness Comes',
+        'When Serious Illness Comes · Scripture for the Sick and Dying · Gentle King',
+        'Sickness',
+        'When Serious Illness Comes',
+        ('One conversation in a small room, and the future looks different than it did this '
+         'morning, for you or for someone you love. Or it has looked this way for years. You '
+         'do not have to be brave tonight. Your times are in God’s hand.'),
+        ('King James Scripture for a hard diagnosis, a long illness, caring for someone, and '
+         'the end of life. Your times are in the hand of God.'),
+        ['Serious illness', 'Caregiving', 'The end of life'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-marriage.html',
+        'When Your Marriage Is Breaking',
+        'When Your Marriage Is Breaking · Betrayal, Divorce, and Hope · Gentle King',
+        'A broken marriage',
+        'When Your Marriage Is Breaking',
+        ('You were left, or betrayed, or handed papers you did not want. The one who promised '
+         'to stay did not. Whether you are the husband or the wife, Christ knows what it is to'
+         ' be betrayed.'),
+        ('Scripture for the betrayed and the deserted, what God has said about divorce, a word'
+         ' for the one who broke faith, and a word for children of divorce.'),
+        ['A breaking marriage and divorce'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-prodigal.html',
+        'When Your Child Walks Away From the Lord',
+        'When Your Child Walks Away From the Lord · Gentle King',
+        'A wandering child',
+        'When Your Child Walks Away From the Lord',
+        ('You taught them to pray, and now they want nothing to do with Christ. You cannot '
+         'give anyone a new heart. Only God can, and he has done it for sons and daughters as '
+         'far off as yours.'),
+        ('For parents of a prodigal. Only God gives a new heart, and he has done it for sons '
+         'and daughters as far off as yours. Pray, wait, and keep the door open.'),
+        ['A child who turns from the Lord'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-work-and-home.html',
+        'When the Work or the Home Is Gone',
+        'When the Work or the Home Is Gone · Scripture for Hard Times · Gentle King',
+        'Want',
+        'When the Work or the Home Is Gone',
+        ('The job or the business is gone, or the savings, or a fire or a flood took the '
+         'house. It is hard to be the one who is supposed to provide. If you are his, your '
+         'Father knows what you need.'),
+        ('For a lost job, a failed business, or a house taken by fire or flood. Your Father '
+         'knows what you need, and his church is bound to help.'),
+        ['Loss of work or home'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
+        'comfort-depression.html',
+        'When Your Own Mind Has Gone Dark',
+        'When Your Own Mind Has Gone Dark · Depression and the Christian · Gentle King',
+        'Darkness',
+        'When Your Own Mind Has Gone Dark',
+        ('For weeks or years the heaviness has not lifted, or it keeps coming back. Sleep does'
+         ' not rest you, and the promises you once loved seem to belong to someone else. '
+         'Christ has been in the dark before you.'),
+        ('For the Christian under depression. Christ was very heavy in Gethsemane, and he will'
+         ' not break a bruised reed. Scripture, care for the body, and help.'),
+        ['Depression'],
+        parent="comfort.html", close="comfort-close",
+    ),
+    _child(
+        'comfort-safety.html',
+        'If You Are Not Safe',
+        'If You Are Not Safe · Abuse, Danger, and Thoughts of Suicide · Gentle King',
+        'Safety',
+        'If You Are Not Safe',
+        ('Some hard hours are dangerous. If yours is, the first faithful thing to do is to get'
+         ' safe. Read the rest later.'),
+        ('In danger now? Call 911. Thinking of ending your life? Call or text 988. Being hurt '
+         'at home? Call 1-800-799-7233. Leaving to be safe is not a sin.'),
+        ['Safety from violence at home', 'Suicide prevention'],
+        parent="comfort.html", close="comfort-close",
+    ),
+    _child(
+        'comfort-for-others.html',
+        'If You Came Here for Someone Else',
+        'Comforting Someone Who Grieves · For Friends, Pastors, and Elders · Gentle King',
+        'For pastors and friends',
+        'If You Came Here for Someone Else',
+        ('You want to help, and you are afraid of saying the wrong thing. Most of the help is '
+         'simply being there.'),
+        ('How to help a friend who grieves, and a summary for pastors and elders on the longer'
+         ' visit. Most of the help is simply being there.'),
+        ['Comforting the grieving', 'Pastoral care'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+]
+
+OBJECTOR_PAGES = [
+    _child(
+        'apologetics-god.html',
+        'Is God There',
+        'Is God There? Answering the Objections to God · Gentle King',
+        'God',
+        'Is God There',
+        ('Every argument against God is made with tools that only work if he is there.'),
+        ('Is there no evidence for God? Who made God? Has science replaced him? Every argument'
+         ' against God is made with tools that only work if he is there.'),
+        ['The existence of God'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-bible.html',
+        'Can the Bible Be Trusted',
+        'Can the Bible Be Trusted? Answers to Common Objections · Gentle King',
+        'Scripture',
+        'Can the Bible Be Trusted',
+        ('The Bible claims that when it speaks, God speaks. It does not wait on your verdict '
+         'to be true, and it has nothing to fear from your questions.'),
+        ('Men wrote it, men chose the books, it contradicts itself, it was changed. Plain '
+         'answers on the authority of the Bible, its canon, and its manuscripts.'),
+        ['The reliability of the Bible'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-resurrection.html',
+        'Did Jesus Rise',
+        'Did Jesus Rise From the Dead? The Evidence and the Objections · Gentle King',
+        'The resurrection',
+        'Did Jesus Rise',
+        ('The faith rests on an event at a real time and place. If Jesus did not rise, set it '
+         'all aside. If he did, you will have to deal with him.'),
+        ('Did Jesus live? Is the resurrection a legend? Did the disciples lie, or were they '
+         'fooled? The faith rests on an event at a real time and place.'),
+        ['The resurrection of Jesus'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-evil.html',
+        'Why Is There Evil',
+        'Why Does God Allow Evil and Suffering? · Gentle King',
+        'The problem of evil',
+        'Why Is There Evil',
+        ('Many who ask this are carrying a grief of their own, and they should be answered '
+         'with care.'),
+        ('The problem of evil, whether God is to blame, the conquest of Canaan, and slavery in'
+         ' the Bible, answered with care for those who carry a grief of their own.'),
+        ['The problem of evil'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-morality.html',
+        'Who Decides What Is Good',
+        'Can You Be Good Without God? Who Decides What Is Good · Gentle King',
+        'The moral law',
+        'Who Decides What Is Good',
+        ('Nearly everyone is sure that some things are really wrong. Very few ask what makes '
+         'them so.'),
+        ('Is morality only evolution or culture? Nearly everyone is sure that some things are '
+         'really wrong. Very few ask what makes them so.'),
+        ['The moral law'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-hell.html',
+        'Is Hell Just',
+        'Is Hell Just? Why a Loving God Judges Sin · Gentle King',
+        'Judgment',
+        'Is Hell Just',
+        ('Hell is real, and it is felt without end. It should never be spoken of lightly, and '
+         'never left out.'),
+        ('Would a loving God send anyone to hell? Is forever too long for a short life of sin?'
+         ' Hell is real, and it should never be spoken of lightly or left out.'),
+        ['Hell'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-only-jesus.html',
+        'Why Only Jesus',
+        'Why Is Jesus the Only Way to God? · Gentle King',
+        'Other religions',
+        'Why Only Jesus',
+        ('Few things Christians say offend more in our day than that Jesus is the only way to '
+         'God.'),
+        ('Do all religions lead to God? What about those who never heard? Is it arrogant to '
+         'say you are right? Why Christians say Jesus is the only way.'),
+        ['The exclusivity of Christ'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-christians.html',
+        'What About the Christians',
+        'What About the Hypocrites in the Church? · Gentle King',
+        'The church',
+        'What About the Christians',
+        ('Some of the strongest arguments against Christ come from people who carry his name, '
+         'and they deserve an honest answer.'),
+        ('The church is full of hypocrites, and religion has done great harm. Some of the '
+         'strongest arguments against Christ come from people who carry his name.'),
+        ['Hypocrisy', 'Religion and harm'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-election.html',
+        'Is Election Fair',
+        'Is Election Fair? If God Chooses, How Can He Blame Me · Gentle King',
+        'Election',
+        'Is Election Fair',
+        ('The Bible teaches that God chooses whom he will save. Some hear that as a way off '
+         'the hook.'),
+        ('The Bible teaches that God chooses whom he will save. Is that fair, and is there any'
+         ' point in trying? Paul raised the objection himself.'),
+        ['Election'],
+        parent="apologetics.html", series="objector", close="apologetics-close",
+    ),
+    _child(
+        'apologetics-the-real-objection.html',
+        'The Objection Under the Others',
+        'The Objection Under the Others · Am I a Good Person · Gentle King',
+        'The heart of it',
+        'The Objection Under the Others',
+        ('Every objection on these pages has had an answer. Jesus said the reason men stay away '
+         'from him lies somewhere else.'),
+        ('Every objection has an answer. Jesus said the reason men stay away from him lies '
+         'somewhere else. The law, the human heart, and the hope for sinners.'),
+        ['Sin', 'Repentance and faith'],
+        parent="apologetics.html", series="objector",
+    ),
+]
+
+BELIEVER_PAGES = [
+    _child(
+        'assurance-am-i-his.html',
+        'Am I Really His',
+        'Am I Really Saved? Assurance of Salvation · Gentle King',
+        'Assurance',
+        'Am I Really His',
+        ('God does not want his children living on guesses. John wrote his first letter to '
+         'believers so that they would know they have eternal life (1 John 5:13).'),
+        ('Not sure you are saved? Afraid your faith was never real, or that you were not '
+         'chosen? The Westminster Confession on the grounds of assurance.'),
+        ['Assurance of salvation'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-remaining-sin.html',
+        'When Sin Will Not Leave',
+        'When Sin Will Not Leave · Assurance for the Struggling Christian · Gentle King',
+        'Remaining sin',
+        'When Sin Will Not Leave',
+        ('Few things shake a Christian like meeting the same sin again, years after he first '
+         'wept over it. Your fear draws one conclusion from that. God has drawn another, and '
+         'he has written it down.'),
+        ('The same sin again, a sin too great to forgive, a God surely tired of forgiving. '
+         'What God has written for the believer who keeps falling.'),
+        ['Remaining sin', 'Forgiveness'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-night-fears.html',
+        'Fears That Keep You Awake',
+        'The Unpardonable Sin, Hebrews 6, and Losing Your Salvation · Gentle King',
+        'Night fears',
+        'Fears That Keep You Awake',
+        ('Some fears come back at night, when the house is quiet and there is nothing to do '
+         'but think. Each of these has an answer that will not give way under you.'),
+        ('Afraid you committed the unpardonable sin, frightened by Hebrews 6 and 10, or afraid'
+         ' you could lose your salvation? Answers that will not give way.'),
+        ['The unpardonable sin', 'Perseverance of the saints'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-god-feels-far.html',
+        'When God Feels Far',
+        'When God Feels Far Away · Spiritual Darkness · Gentle King',
+        'In the dark',
+        'When God Feels Far',
+        ('There are seasons when prayer feels like talking to the ceiling and the Bible is '
+         'only ink. They do not mean that God has gone.'),
+        ('Prayer feels like talking to the ceiling and the Bible is only ink. Scripture for '
+         'the believer who fears the Lord and still walks in darkness.'),
+        ['Spiritual darkness'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-doubts-and-thoughts.html',
+        'Doubts and Unwanted Thoughts',
+        'Doubts and Unwanted Thoughts · For the Doubting Christian · Gentle King',
+        'Doubt',
+        'Doubts and Unwanted Thoughts',
+        ('Some believers are afraid it is not true, and the question will not leave them '
+         'alone. Others are afraid of what their own minds keep saying to them.'),
+        ('For the believer who wonders if any of it is true, and for one troubled by '
+         'blasphemous thoughts that will not stop. Lord, I believe, help thou mine unbelief.'),
+        ['Doubt', 'Intrusive thoughts'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-affliction.html',
+        'When Life Breaks',
+        'Is God Against Me? Is He Punishing Me? · Gentle King',
+        'Affliction',
+        'When Life Breaks',
+        ('The diagnosis comes, or the child dies, or the marriage comes apart. Under the grief'
+         ' a harder question rises, about what God thinks of you.'),
+        ('When life breaks, a harder question rises about what God thinks of you. Romans 8, '
+         'Hebrews 12, and the difference between punishment and chastening.'),
+        ['Affliction', 'Chastening'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-death.html',
+        'When Death Comes Near',
+        'Afraid of Dying? Comfort for the Christian Facing Death · Gentle King',
+        'The last enemy',
+        'When Death Comes Near',
+        ('Christians still die, and many of them dread it. Hebrews says the Son of God took '
+         'flesh and blood for this very reason.'),
+        ('Christians still die, and many dread it. Christ took flesh to deliver those who '
+         'through fear of death were all their lifetime subject to bondage.'),
+        ['The fear of death'],
+        parent="apologetics.html", series="believer", close="assurance-close",
+    ),
+    _child(
+        'assurance-kept.html',
+        'Safe in His Keeping',
+        'Safe in His Keeping · Perseverance and Assurance · Gentle King',
+        'Rest',
+        'Safe in His Keeping',
+        ('Underneath all these fears is the same suspicion, that in the end it all hangs on '
+         'you. Paul closes Romans 8 by naming everything that could come between a believer '
+         'and God.'),
+        ('Underneath every fear is the suspicion that it all hangs on you. Nothing can '
+         'separate a believer from the love of God in Christ Jesus our Lord.'),
+        ['Perseverance of the saints'],
+        parent="apologetics.html", series="believer",
+    ),
+]
+
+SOJOURNER_PAGES = [
+    {
+        "file": "sojourner-features.html",
+        "content": "sojourner-features.html",
+        "title": "Everything Sojourner Does",
+        "full_title": "Sojourner Features · Color Text, Interlinear, Sermons, Atlas · Gentle King",
+        "eyebrow": "Sojourner",
+        "h1": "Everything Sojourner Does",
+        "deck": (
+            "The whole account, with pictures. Start with the panes, since the rest of the "
+            "program hangs on them, or go straight to the part you came for."
+        ),
+        "description": (
+            "Everything Sojourner does, with pictures. Linked panes, Color text, the Hebrew and "
+            "Greek, the atlas and timeline, search, sermons, and family worship."
+        ),
+        "about": ["Bible study software", "Interlinear Bible", "Sermon preparation", "Family worship"],
+        "parent": APP_PAGE,
+        "close": "sojourner-get",
+        "toc": True,
+    },
+    {
+        "file": "sojourner-library.html",
+        "content": "sojourner-library.html",
+        "title": "What Comes With Sojourner",
+        "full_title": "What Comes With Sojourner · Bibles, Commentaries, Confessions · Gentle King",
+        "eyebrow": "Sojourner",
+        "h1": "What Comes in the Box",
+        "deck": (
+            "The translations, the original texts, the lexicons, the commentaries and "
+            "confessions, the four book shelves, and where every one of them came from."
+        ),
+        "description": (
+            "The Bibles, Hebrew and Greek texts, lexicons, commentaries, Westminster Standards, "
+            "and book shelves that come with Sojourner, and where each one came from."
+        ),
+        "about": ["Bible translations", "Bible commentaries", "Westminster Standards", "Public domain Christian books"],
+        "parent": APP_PAGE,
+        "close": "sojourner-get",
+        "toc": True,
+    },
+    {
+        "file": "sojourner-install.html",
+        "content": "sojourner-install.html",
+        "title": "Installing and Updating Sojourner",
+        "full_title": "Installing and Updating Sojourner · Gentle King",
+        "eyebrow": "Sojourner",
+        "h1": "Installing and Updating",
+        "deck": (
+            "What to expect when you install it, how to update without losing anything, and how "
+            "to add the book shelves and the map packs."
+        ),
+        "description": (
+            "How to install Sojourner on Windows, what the SmartScreen warning means, how to "
+            "update without losing your notes, and how to add the book shelves and map packs."
+        ),
+        "about": ["Installing Sojourner"],
+        "parent": APP_PAGE,
+        "toc": True,
+    },
+]
+
+# Where each part of the two old long pages went. A link from before the split,
+# such as comfort.html#grief, is sent on by site.js to the page that holds it now.
+MOVED = {
+    'comfort': {
+        'baby': 'comfort-death-of-a-child.html#baby',
+        'caregiver': 'comfort-illness.html#caregiver',
+        'child': 'comfort-death-of-a-child.html',
+        'child-hurt': 'comfort-safety.html#child-hurt',
+        'child-search': 'comfort-death-of-a-child.html#child-search',
+        'darkness': 'comfort-depression.html',
+        'darkness-search': 'comfort-depression.html#darkness-search',
+        'divorce': 'comfort-marriage.html#divorce',
+        'dying': 'comfort-illness.html#dying',
+        'elders': 'comfort-for-others.html#elders',
+        'ending-your-life': 'comfort-safety.html#ending-your-life',
+        'every-parent': 'comfort-death-of-a-child.html#every-parent',
+        'for-a-friend': 'comfort-for-others.html',
+        'grief': 'comfort-grief.html',
+        'grief-search': 'comfort-grief.html#grief-search',
+        'help': 'comfort-safety.html',
+        'if-it-was-me': 'comfort-marriage.html#if-it-was-me',
+        'illness': 'comfort-illness.html',
+        'illness-search': 'comfort-illness.html#illness-search',
+        'long-illness': 'comfort-illness.html#long-illness',
+        'marriage': 'comfort-marriage.html',
+        'marriage-search': 'comfort-marriage.html#marriage-search',
+        'older-child': 'comfort-death-of-a-child.html#older-child',
+        'parents': 'comfort-marriage.html#parents',
+        'prodigal': 'comfort-prodigal.html',
+        'prodigal-search': 'comfort-prodigal.html#prodigal-search',
+        'someone-hurting-you': 'comfort-safety.html#someone-hurting-you',
+        'suicide-loss': 'comfort-suicide-loss.html',
+        'suicide-loss-search': 'comfort-suicide-loss.html#suicide-loss-search',
+        'unsure': 'comfort-did-they-know-christ.html',
+        'unsure-search': 'comfort-did-they-know-christ.html#unsure-search',
+        'want': 'comfort-work-and-home.html',
+        'want-search': 'comfort-work-and-home.html#want-search',
+        'whole-church': 'comfort-for-others.html#whole-church',
+        'widowed': 'comfort-widowed.html',
+        'widowed-heaven': 'comfort-widowed.html#widowed-heaven',
+        'widowed-search': 'comfort-widowed.html#widowed-search',
+    },
+    'apologetics': {
+        'am-i-his': 'assurance-am-i-his.html',
+        'bible': 'apologetics-bible.html',
+        'christians': 'apologetics-christians.html',
+        'dark': 'assurance-god-feels-far.html',
+        'death': 'assurance-death.html',
+        'evil': 'apologetics-evil.html',
+        'fairness': 'apologetics-election.html',
+        'fears': 'assurance-night-fears.html',
+        'god': 'apologetics-god.html',
+        'hell': 'apologetics-hell.html',
+        'jesus': 'apologetics-resurrection.html',
+        'kept': 'assurance-kept.html',
+        'mind': 'assurance-doubts-and-thoughts.html',
+        'one-way': 'apologetics-only-jesus.html',
+        'right-and-wrong': 'apologetics-morality.html',
+        'sin-remains': 'assurance-remaining-sin.html',
+        'suffering': 'assurance-affliction.html',
+        'the-real-objection': 'apologetics-the-real-objection.html',
+    },
+}
+
+SERIES = {"objector": OBJECTOR_PAGES, "believer": BELIEVER_PAGES}
+CHILDREN = {
+    "comfort.html": COMFORT_PAGES,
+    "apologetics.html": OBJECTOR_PAGES + BELIEVER_PAGES,
+    APP_PAGE: SOJOURNER_PAGES,
+}
+PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
+BY_FILE = {p["file"]: p for p in PAGES}
+
+
+# --------------------------------------------------------------------------
 # Shell pieces
 # --------------------------------------------------------------------------
 
@@ -407,12 +970,22 @@ MORTIFY_ICON = (
     '<img src="assets/img/mortify-icon-64.png" width="64" height="64" alt="" decoding="async">'
 )
 
-# On a phone every page folds into the menu, so the two apps keep a pair of
-# buttons of their own beside the menu button. On a wide screen site.css hides
-# these, since the row of pages already ends with the same pair.
-APP_LINK = (
-    '<a class="app-link" href="{href}"{current}>{icon}'
-    '<span class="app-link-name">{name}</span></a>'
+# On a phone every page folds into the menu, so the gospel keeps a link of its
+# own beside the menu button. On a wide screen site.css hides it, since the row
+# of pages already holds it.
+HEADER_GOSPEL = '<a class="header-gospel" href="gospel.html"{current}>The Gospel</a>'
+
+# The two apps under Tools. With script the list opens from its button, and
+# without it the list simply shows.
+NAV_TOOLS = """      <div class="nav-group">
+        <button class="nav-group-btn{current}" type="button" aria-expanded="false" aria-controls="nav-tools">Tools<span class="nav-group-caret" aria-hidden="true"></span></button>
+        <ul class="nav-group-list" id="nav-tools" aria-label="Tools">
+{items}
+        </ul>
+      </div>"""
+NAV_TOOL = (
+    '          <li><a href="{href}"{current}>{icon}<span class="nav-tool-name">{name}</span>'
+    '<span class="nav-tool-note">{note}</span></a></li>'
 )
 
 # The light and dark switch as a row at the foot of the menu. On a phone the
@@ -472,10 +1045,11 @@ HEADER = """<header class="site-header">
     </a>
     <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
 {nav_links}
+{nav_tools}
 {menu_theme}
     </nav>
     <div class="nav-tools">
-      {app_links}
+      {header_gospel}
       <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -501,10 +1075,10 @@ HERO = """<section class="hero hero-word">
     </div>
   </div>
 </section>
-<aside class="app-notice" aria-label="{app_name}">
+<aside class="app-notice app-notice-pair" aria-label="Free tools from this ministry">
   <div class="wrap">
-    <a href="{app_page}">{book}<strong>{app_name}</strong>, a free Bible study app for Windows.
-      <span class="app-notice-go"><span class="app-notice-label">See it</span></span></a>
+    <a href="{app_page}">{book}<strong>{app_name}</strong>, Bible study for Windows</a>
+    <a href="{mortify_page}">{mortify_icon}<strong>{mortify_name}</strong>, for the fight against sin</a>
   </div>
 </aside>
 """
@@ -521,7 +1095,7 @@ NOTICE = """<aside class="app-notice" aria-label="{label}">
 
 PAGE_HEAD = """<div class="page-head">
   <div class="wrap">
-    <p class="eyebrow">{eyebrow}</p>
+{crumbs}    <p class="eyebrow">{eyebrow}</p>
     <h1>{h1}</h1>
     <p class="page-deck">{deck}</p>
   </div>
@@ -558,8 +1132,31 @@ PAGE_HEAD_LOGO = """<div class="page-head page-head-logo">
       <span class="visually-hidden">{logo_alt}</span>
     </h1>
     <p class="page-deck">{deck}</p>
-  </div>
+{actions}  </div>
 </div>
+"""
+
+# Under a software page's mark, the plain facts and the way to get it, so the
+# first screen says what it is, what it runs on, and where the download is.
+HEAD_ACTIONS = """    <ul class="facts" aria-label="At a glance">
+{facts}
+    </ul>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{releases}" target="_blank" rel="noopener">Download for Windows</a>
+      <a class="btn" href="#features">See what it does</a>
+    </div>
+    <p class="head-meta">Version {version} &middot; About {size} MB &middot; 64-bit</p>
+{shot}"""
+
+# Where a page sits, above its eyebrow, for a page that belongs under another.
+CRUMBS = """    <nav class="crumbs" aria-label="Breadcrumb"><ol>{items}</ol></nav>
+"""
+
+# The foot of a page in a series or under a parent. Previous and Next for a
+# series that reads in order, and the way back up for every child page.
+PAGER = """<nav class="pager" aria-label="{label}">
+{links}
+</nav>
 """
 
 FOOTER = """<footer class="site-footer">
@@ -570,36 +1167,38 @@ FOOTER = """<footer class="site-footer">
           in heart: and ye shall find rest unto your souls.</p>
         <p class="footer-verse-ref">Matthew 11:29 (KJV)</p>
       </div>
-      <div>
+      <nav aria-label="Read">
         <p class="footer-head">Read</p>
         <ul class="footer-links">
           <li><a href="gospel.html">The Gospel</a></li>
-          <li><a href="comfort.html">Comfort</a></li>
-          <li><a href="struggle.html">Fighting Sin</a></li>
+          <li><a href="comfort.html">Comfort in hard hours</a></li>
+          <li><a href="struggle.html">Fighting sin</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
-          <li><a href="apologetics.html">Apologetics</a></li>
+          <li><a href="apologetics.html#objector">Answers to objections</a></li>
+          <li><a href="apologetics.html#believer">Fear and doubt</a></li>
         </ul>
-      </div>
-      <div>
-        <p class="footer-head">Get</p>
+      </nav>
+      <nav aria-label="Tools">
+        <p class="footer-head">Tools</p>
         <ul class="footer-links">
           <li><a href="sojourner.html">Sojourner</a></li>
           <li><a href="mortify.html">Mortify</a></li>
-          <li><a href="about.html#contact">Contact</a></li>
         </ul>
         <p class="footer-head footer-give">Give</p>
         <a class="btn btn-primary" href="{donate_url}" target="_blank" rel="noopener">Donate</a>
-      </div>
-      <div>
-        <p class="footer-head">Elsewhere</p>
+      </nav>
+      <nav aria-label="About">
+        <p class="footer-head">About</p>
         <ul class="footer-links">
-          <li><a href="https://thewestminsterstandard.org/the-westminster-confession/" target="_blank" rel="noopener">Westminster Confession</a></li>
+          <li><a href="about.html">About this site</a></li>
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="https://thewestminsterstandard.org/the-westminster-confession/" target="_blank" rel="noopener">The Westminster Confession</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="footer-base">
       <p>&copy; {year} Gentle King. Everything written here may be copied and shared freely.</p>
-      <p><a href="about.html">About this site</a></p>
+      <p><a href="about.html#what-this-is">This site is no substitute for a local church</a></p>
     </div>
     <p class="footer-fineprint">{scripture_notice}</p>
   </div>
@@ -651,13 +1250,42 @@ def render(template, **fields):
 DATES = CONTENT / "dates.json"
 
 
+PARTIALS = CONTENT / "partials"
+
+
+def include(name):
+    """A block shared by several pages, from content/partials/."""
+    path = PARTIALS / f"{name}.html"
+    if not path.exists():
+        raise SystemExit(f"missing partial: {path}")
+    return path.read_text(encoding="utf-8").strip()
+
+
+def paths_html(series):
+    """The list of a series' pages on its parent, each with its deck, so the list
+    can never disagree with the pages it points to."""
+    rows = []
+    for page in SERIES[series]:
+        rows.append(
+            f'    <li><a href="{page["file"]}"><span class="paths-title">{html.escape(page["h1"])}</span>'
+            f'<span class="paths-desc">{html.escape(page["deck"])}</span></a></li>'
+        )
+    return "\n".join(rows)
+
+
 def fragment(page):
-    """A page's words, as content/ holds them, with the library list written in
-    where the fragment asks for it."""
+    """A page's words, as content/ holds them, with the shared blocks, the
+    library list, and the Sojourner version written in where it asks for them."""
     body = (CONTENT / page["content"]).read_text(encoding="utf-8")
     if LIBRARY_MARK in body:
         body = body.replace(LIBRARY_MARK, library_html())
-    return body
+    body = re.sub(r"<!-- include ([a-z-]+) -->", lambda m: include(m.group(1)), body)
+    body = re.sub(r"<!-- paths ([a-z]+) -->", lambda m: paths_html(m.group(1)), body)
+    return tokens(body)
+
+
+def tokens(text):
+    return text.replace("{{version}}", APP_VERSION).replace("{{size}}", APP_SIZE_MB)
 
 
 def fingerprint(page):
@@ -665,6 +1293,13 @@ def fingerprint(page):
     out, so tuning them for search does not pretend the page was rewritten."""
     body = fragment(page)
     shown = [str(page.get(key, "")) for key in ("eyebrow", "h1", "deck")]
+    if page.get("head_shot"):
+        shown.append(include(page["head_shot"]))
+    for key in ("crisis", "close", "facts"):
+        if page.get(key):
+            shown.append(json.dumps(page[key]))
+    if page.get("close"):
+        shown.append(include(page["close"]))
     if page.get("hero"):
         shown.append(HERO)
     if page.get("notice"):
@@ -690,7 +1325,9 @@ def git_date(page, first):
 
 
 def page_dates():
-    """Read the ledger, move the date of any page whose words changed, save it."""
+    """Read the ledger, move the date of any page whose words changed, save it.
+    A page carved out of its parent keeps the parent's first date, since its
+    words were published then."""
     try:
         ledger = json.loads(DATES.read_text(encoding="utf-8"))
     except FileNotFoundError:
@@ -700,14 +1337,17 @@ def page_dates():
         mark = fingerprint(page)
         seen = ledger.get(page["file"])
         if seen is None:
+            parent = ledger.get(page.get("parent", ""))
             ledger[page["file"]] = {
                 "hash": mark,
-                "published": git_date(page, first=True) or now,
-                "modified": git_date(page, first=False) or now,
+                "published": (parent or {}).get("published") or git_date(page, first=True) or now,
+                "modified": now if parent else (git_date(page, first=False) or now),
             }
         elif seen["hash"] != mark:
             seen["hash"] = mark
             seen["modified"] = now
+    for gone in set(ledger) - {page["file"] for page in PAGES}:
+        del ledger[gone]
     DATES.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return ledger
 
@@ -770,6 +1410,15 @@ def page_url(page):
     return f"{SITE_URL}/" if page["file"] == "index.html" else f"{SITE_URL}/{page['file']}"
 
 
+def ancestors(page):
+    """The pages above this one, the highest first."""
+    up = []
+    while page.get("parent"):
+        page = BY_FILE[page["parent"]]
+        up.insert(0, page)
+    return up
+
+
 def page_title(page):
     return page.get("full_title") or f"{page['title']} · {SITE_NAME}"
 
@@ -783,23 +1432,25 @@ def plain(fragment):
     return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", fragment)).split())
 
 
-def app_facts(body):
-    """The version and download size, read from the Get Sojourner block."""
-    version = re.search(r"<h3>Sojourner ([0-9][0-9.]*)</h3>", body)
-    size = re.search(r'class="get-meta">[^<]*?About ([0-9,]+) MB', body)
-    if not version or not size:
-        raise SystemExit("sojourner.html no longer shows the version and size where build.py looks")
-    return version.group(1), size.group(1).replace(",", "")
+def app_facts(body=None):
+    """The version and download size of the current release."""
+    return APP_VERSION, APP_SIZE_MB
 
 
 def screenshots(body):
-    """Each screenshot on the page, full size, with its caption."""
-    shots = []
-    for href, caption in re.findall(
-        r'(?s)<figure class="shot[^"]*">\s*<a href="([^"]+)".*?<figcaption>(.*?)</figcaption>', body
-    ):
-        url = f"{SITE_URL}/{href}"
-        shots.append({"@type": "ImageObject", "url": url, "contentUrl": url, "caption": plain(caption)})
+    """Each screenshot on the Sojourner pages, full size, with its caption. The
+    pictures on the main page come first."""
+    bodies = [include("sojourner-shot"), body] + [fragment(p) for p in SOJOURNER_PAGES]
+    shots, seen = [], set()
+    for text in bodies:
+        for href, caption in re.findall(
+            r'(?s)<figure class="shot[^"]*">\s*<a href="([^"]+)".*?<figcaption>(.*?)</figcaption>', text
+        ):
+            if href in seen:
+                continue
+            seen.add(href)
+            url = f"{SITE_URL}/{href}"
+            shots.append({"@type": "ImageObject", "url": url, "contentUrl": url, "caption": plain(caption)})
     return shots
 
 
@@ -957,14 +1608,25 @@ def structured_data(page, canonical, body, dates):
 
     if not is_home:
         webpage["breadcrumb"] = {"@id": f"{canonical}#breadcrumb"}
+        trail = [("Home", f"{SITE_URL}/")]
+        trail += [(p["title"], page_url(p)) for p in ancestors(page)]
+        trail.append((page["title"], canonical))
         graph.append({
             "@type": "BreadcrumbList",
             "@id": f"{canonical}#breadcrumb",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_URL}/"},
-                {"@type": "ListItem", "position": 2, "name": page["title"], "item": canonical},
+                {"@type": "ListItem", "position": i, "name": name, "item": url}
+                for i, (name, url) in enumerate(trail, 1)
             ],
         })
+    if page.get("parent"):
+        parent = BY_FILE[page["parent"]]
+        webpage["isPartOf"] = [{"@id": SITE_ID}, {
+            "@type": "CollectionPage" if parent.get("schema") == "CollectionPage" else "WebPage",
+            "@id": f"{page_url(parent)}#webpage",
+            "url": page_url(parent),
+            "name": page_title(parent),
+        }]
 
     if is_home:
         webpage["about"] = {"@id": ORG_ID}
@@ -1004,6 +1666,8 @@ def structured_data(page, canonical, body, dates):
         }
         if page.get("about"):
             article["about"] = [{"@type": "Thing", "name": t} for t in page["about"]]
+        if page.get("parent"):
+            article["isPartOf"] = {"@id": f"{page_url(BY_FILE[page['parent']])}#webpage"}
         if MORTIFY_PAGE in body or MORTIFY_URL in body:
             article["mentions"] = {"@id": MORTIFY_ID}
             graph.append(mortify_node(own_page=False))
@@ -1049,30 +1713,84 @@ def structured_data(page, canonical, body, dates):
 APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON}
 
 
+def section_of(current):
+    """The top page a page belongs under, for marking its place in the menu."""
+    page = BY_FILE.get(current, {})
+    up = ancestors(page)
+    return up[0]["file"] if up else current
+
+
+def mark(href, current):
+    """The page itself is the current page. Its parent is the current section."""
+    if href == current or (href == "./" and current == "index.html"):
+        return ' aria-current="page"'
+    if href == section_of(current):
+        return ' aria-current="true"'
+    return ""
+
+
 def nav_links(current):
-    out = []
-    for href, label in NAV:
-        here = href == current or (href == "./" and current == "index.html")
-        mark = ' aria-current="page"' if here else ""
-        if href in APP_ICONS:
-            out.append(f'      <a class="nav-app" href="{href}"{mark}>{APP_ICONS[href]}{label}</a>')
-        else:
-            out.append(f'      <a href="{href}"{mark}>{label}</a>')
-    return "\n".join(out)
+    return "\n".join(f'      <a href="{href}"{mark(href, current)}>{label}</a>' for href, label in NAV)
 
 
-def app_links(current):
-    links = "".join(
-        render(
-            APP_LINK,
-            href=href,
-            current=' aria-current="page"' if current == href else "",
-            icon=APP_ICONS[href],
-            name=name,
-        )
-        for href, name in ((APP_PAGE, APP_NAME), (MORTIFY_PAGE, MORTIFY_NAME))
+def nav_tools(current):
+    items = "\n".join(
+        render(NAV_TOOL, href=href, current=mark(href, current), icon=APP_ICONS[href],
+               name=name, note=note)
+        for href, name, note in TOOLS
     )
-    return f'<div class="app-links">{links}</div>'
+    here = any(mark(href, current) for href, _, _ in TOOLS)
+    return render(NAV_TOOLS, items=items, current=" is-current" if here else "")
+
+
+def header_gospel(current):
+    return render(HEADER_GOSPEL, current=' aria-current="page"' if current == "gospel.html" else "")
+
+
+def crumbs_html(page):
+    up = ancestors(page)
+    if not up:
+        return ""
+    items = '<li><a href="./">Home</a></li>' + "".join(
+        f'<li><a href="{p["file"]}">{html.escape(p.get("crumb", p["title"]))}</a></li>' for p in up
+    )
+    return render(CRUMBS, items=items)
+
+
+def pager_html(page):
+    """Previous and Next through a series, and the way back to the parent."""
+    if not page.get("parent"):
+        return ""
+    parent = BY_FILE[page["parent"]]
+    links = []
+    series = SERIES.get(page.get("series"))
+    if series:
+        i = series.index(page)
+        if i > 0:
+            prev = series[i - 1]
+            links.append(f'  <a class="pager-prev" href="{prev["file"]}" rel="prev"><span class="pager-dir">Previous</span>'
+                         f'<span class="pager-title">{html.escape(prev["h1"])}</span></a>')
+        if i < len(series) - 1:
+            nxt = series[i + 1]
+            links.append(f'  <a class="pager-next" href="{nxt["file"]}" rel="next"><span class="pager-dir">Next</span>'
+                         f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
+        up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer"}[page["series"]]
+        word = {"objector": "All the questions", "believer": "All the fears"}[page["series"]]
+    else:
+        up = parent["file"]
+        word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
+    links.append(f'  <a class="pager-up" href="{up}">{html.escape(word)}</a>')
+    return render(PAGER, label="More pages like this", links="\n".join(links))
+
+
+def new_tab_note(text):
+    """A link that opens a new tab says so to a screen reader, which cannot see
+    the tab appear."""
+    def note(m):
+        if "opens in a new tab" in m.group(2):
+            return m.group(0)
+        return f'{m.group(1)}{m.group(2)}<span class="visually-hidden"> (opens in a new tab)</span></a>'
+    return re.sub(r'(?s)(<a [^>]*target="_blank"[^>]*>)(.*?)</a>', note, text)
 
 
 def sections(body):
@@ -1093,11 +1811,10 @@ def sections(body):
 def toc_html(body):
     """The On this page list, written into the HTML so a reader without script,
     a search engine, or an AI tool sees the page's sections at the top. site.js
-    builds the same list again on load. A page that shows one half at a time is
-    left to the script, since its list depends on the half the reader chose."""
+    builds the same list again on load."""
     empty = "<nav data-toc></nav>\n"
     found = sections(body)
-    if "data-half" in body or len(found) < 3:
+    if len(found) < 3:
         return empty
     items = "".join(f'<li><a href="#{sid}">{text}</a></li>' for sid, text in found)
     return (
@@ -1435,6 +2152,8 @@ def build_page(page, dates):
     if not fragment_path.exists():
         raise SystemExit(f"missing content fragment: {fragment_path}")
     body = fragment(page).strip()
+    if page.get("close"):
+        body += "\n\n<hr class=\"rule\">\n\n" + tokens(include(page["close"]))
 
     canonical = page_url(page)
     full_title = page_title(page)
@@ -1462,11 +2181,14 @@ def build_page(page, dates):
             robots="noindex" if page.get("hidden") else "max-image-preview:large",
         ),
         render(HEADER, mark=MARK_SVG, nav_links=nav_links(page["file"]),
-               menu_theme=MENU_THEME, app_links=app_links(page["file"])),
+               nav_tools=nav_tools(page["file"]), menu_theme=MENU_THEME,
+               header_gospel=header_gospel(page["file"])),
     ]
 
     if page.get("hero"):
-        parts.append(render(HERO, app_page=APP_PAGE, app_name=APP_NAME, book=BOOK_SVG))
+        parts.append(render(HERO, app_page=APP_PAGE, app_name=APP_NAME, book=BOOK_SVG,
+                            mortify_page=MORTIFY_PAGE, mortify_name=MORTIFY_NAME,
+                            mortify_icon=MORTIFY_ICON))
     elif page.get("app_head"):
         head = page["app_head"]
         parts.append(
@@ -1488,12 +2210,19 @@ def build_page(page, dates):
                 logo=page["logo"],
                 logo_alt=html.escape(page["logo_alt"], quote=True),
                 deck=html.escape(page["deck"], quote=False),
+                actions=render(
+                    HEAD_ACTIONS,
+                    facts="\n".join(f"      <li>{html.escape(f)}</li>" for f in page["facts"]),
+                    releases=APP_RELEASES, version=APP_VERSION, size=APP_SIZE_MB,
+                    shot=include(page["head_shot"]) + "\n" if page.get("head_shot") else "",
+                ) if page.get("facts") else "",
             )
         )
     else:
         parts.append(
             render(
                 PAGE_HEAD,
+                crumbs=crumbs_html(page),
                 eyebrow=html.escape(page["eyebrow"], quote=False),
                 h1=html.escape(page["h1"], quote=False),
                 deck=html.escape(page["deck"], quote=False),
@@ -1514,9 +2243,18 @@ def build_page(page, dates):
 
     main_class = "wrap page-body has-toc" if page.get("toc") else "wrap page-body"
     parts.append(f'<main id="main" class="{main_class}">\n')
+    # The numbers to call come before anything else, the page's own list included.
+    if page.get("crisis"):
+        parts.append(include("crisis") + "\n\n")
     if page.get("toc"):
         parts.append(toc_html(body))
     parts.append(body)
+    parts.append("\n" + pager_html(page) if page.get("parent") else "")
+    if page.get("moved"):
+        # Where each part of the old long page went, for site.js to follow.
+        moved = MOVED[page["moved"]]
+        parts.append('\n<script type="application/json" id="moved">'
+                     + json.dumps(moved, separators=(",", ":")) + "</script>")
     parts.append("\n</main>\n\n")
     site_js = f'<script src="{asset("assets/js/site.js")}" defer></script>\n'
     footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
@@ -1525,7 +2263,7 @@ def build_page(page, dates):
         footer = footer.replace(site_js, site_js + f'<script src="{asset(script)}" defer></script>\n')
     parts.append(footer)
 
-    (ROOT / page["file"]).write_text("".join(parts), encoding="utf-8")
+    (ROOT / page["file"]).write_text(new_tab_note("".join(parts)), encoding="utf-8")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     return page["file"], words
 
@@ -1594,10 +2332,11 @@ def build_sitemap(dates):
 # before the app, because it matters as much or more.
 LLMS_GROUPS = [
     ("The gospel", ["gospel.html"]),
-    ("Comfort in hard hours", ["comfort.html"]),
+    ("Comfort in hard hours", ["comfort.html"] + [p["file"] for p in COMFORT_PAGES]),
     ("Fighting sin", ["struggle.html"]),
     ("Doctrine", ["doctrine.html"]),
-    ("Apologetics", ["apologetics.html"]),
+    ("Answers to objections", ["apologetics.html"] + [p["file"] for p in OBJECTOR_PAGES]),
+    ("Fear, doubt, and assurance, for believers", [p["file"] for p in BELIEVER_PAGES]),
 ]
 
 
@@ -1651,8 +2390,8 @@ def build_llms_txt():
         "Anyone in danger or thinking of ending their life can call 911, or call or text 988, in "
         "the United States. Anyone being hurt at home can call the National Domestic Violence "
         "Hotline at 1-800-799-7233, or text START to 88788. If a child is being hurt, call 911. "
-        "Outside the United States, call the local emergency number. The comfort page gives "
-        "these numbers and more.",
+        "Outside the United States, call the local emergency number. The page If You Are Not "
+        f"Safe ({SITE_URL}/comfort-safety.html) gives these numbers and more.",
         "",
     ]
     for heading, files in LLMS_GROUPS:
@@ -1671,6 +2410,8 @@ def build_llms_txt():
 
     lines += [f"## {APP_NAME}, a free Bible study app", ""]
     lines += entry(by_file["sojourner.html"], APP_NAME)
+    for page in SOJOURNER_PAGES:
+        lines += entry(page)
     lines += [
         f"- [Download {APP_NAME}]({APP_RELEASES}): The Windows installer and the four optional "
         "book shelves, on GitHub",

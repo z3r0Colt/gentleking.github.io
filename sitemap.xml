@@ -2,27 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gentleking.org/</loc>
-    <lastmod>2026-10-07T21:27:45+00:00</lastmod>
+    <lastmod>2026-10-08T04:09:15+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/sojourner.html</loc>
-    <lastmod>2026-10-07T02:15:41+00:00</lastmod>
+    <lastmod>2026-10-08T04:10:01+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/sojourner-features.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/sojourner-library.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/sojourner-install.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/mortify.html</loc>
-    <lastmod>2026-10-08T03:01:23+00:00</lastmod>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/gospel.html</loc>
-    <lastmod>2026-09-28T06:17:04+00:00</lastmod>
+    <lastmod>2026-10-08T04:09:15+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/comfort.html</loc>
-    <lastmod>2026-09-28T06:17:04+00:00</lastmod>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-grief.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-widowed.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-death-of-a-child.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-did-they-know-christ.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-suicide-loss.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-illness.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-marriage.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-prodigal.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-work-and-home.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-depression.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-safety.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/comfort-for-others.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/struggle.html</loc>
-    <lastmod>2026-10-08T03:01:23+00:00</lastmod>
+    <lastmod>2026-10-08T04:09:15+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/doctrine.html</loc>
@@ -30,10 +90,82 @@
   </url>
   <url>
     <loc>https://gentleking.org/apologetics.html</loc>
-    <lastmod>2026-09-24T17:16:32+00:00</lastmod>
+    <lastmod>2026-10-08T04:10:45+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-god.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-bible.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-resurrection.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-evil.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-morality.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-hell.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-only-jesus.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-christians.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-election.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/apologetics-the-real-objection.html</loc>
+    <lastmod>2026-10-08T04:10:45+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-am-i-his.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-remaining-sin.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-night-fears.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-god-feels-far.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-doubts-and-thoughts.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-affliction.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-death.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance-kept.html</loc>
+    <lastmod>2026-10-08T04:06:27+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/about.html</loc>
-    <lastmod>2026-09-28T17:10:21+00:00</lastmod>
+    <lastmod>2026-10-08T04:09:15+00:00</lastmod>
   </url>
 </urlset>

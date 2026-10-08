@@ -37,17 +37,22 @@
   }
 
   /* The icon in the header, and on a phone the row at the foot of the menu,
-     which says in words what it will do and so needs no label. */
+     which says in words what it will do and so needs no label. The icon's
+     label says what a press will do, from the first moment. */
   var toggle = doc.querySelector('.theme-toggle');
+  function labelToggle() {
+    if (toggle) { toggle.setAttribute('aria-label', currentTheme() === 'dark' ? 'Switch to light' : 'Switch to dark'); }
+  }
   Array.prototype.forEach.call(doc.querySelectorAll('.theme-toggle, .menu-theme'), function (button) {
     button.addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
       setTheme(next);
       storeTheme(next);
-      if (toggle) { toggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light' : 'Switch to dark'); }
+      labelToggle();
     });
   });
   setTheme(readStoredTheme());
+  labelToggle();
 
   /* ------------------------------------------------------------ mobile nav */
 
@@ -67,13 +72,47 @@
       navToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
     });
     nav.addEventListener('click', function (event) {
-      if (event.target.tagName === 'A') { closeNav(); }
+      if (event.target.closest('a')) { closeNav(); }
     });
     doc.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') { closeNav(); }
+      if (event.key === 'Escape' && nav.getAttribute('data-open') === 'true') {
+        closeNav();
+        navToggle.focus();
+      }
     });
     window.addEventListener('resize', function () {
       if (window.innerWidth > 1024) { closeNav(); }
+    });
+  }
+
+  /* ----------------------------------------------------------- tools menu */
+
+  /* Tools opens below its button on a wide screen. Escape, a click elsewhere,
+     or moving focus out of it closes it again. On a phone site.css shows the
+     list open inside the menu, and the button is not drawn. */
+  var group = doc.querySelector('.nav-group');
+  var groupBtn = group ? group.querySelector('.nav-group-btn') : null;
+
+  function setGroup(open) {
+    if (groupBtn) { groupBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  }
+
+  if (group && groupBtn) {
+    groupBtn.addEventListener('click', function () {
+      setGroup(groupBtn.getAttribute('aria-expanded') !== 'true');
+    });
+    group.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && groupBtn.getAttribute('aria-expanded') === 'true') {
+        event.stopPropagation();
+        setGroup(false);
+        groupBtn.focus();
+      }
+    });
+    group.addEventListener('focusout', function (event) {
+      if (!group.contains(event.relatedTarget)) { setGroup(false); }
+    });
+    doc.addEventListener('click', function (event) {
+      if (!group.contains(event.target)) { setGroup(false); }
     });
   }
 
@@ -109,8 +148,7 @@
   var main = doc.querySelector('main');
   var tocObserver = null;
 
-  /* Built from the sections that are actually showing, so a page that changes
-     what it shows can build it again. */
+  /* Built from the page's sections, the same list build.py writes in. */
   function buildToc() {
     if (!mount || !main) { return; }
     if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
@@ -123,7 +161,6 @@
 
     for (var i = 0; i < sections.length; i++) {
       var sec = sections[i];
-      if (sec.hasAttribute('data-half') && !sec.classList.contains('is-shown')) { continue; }
       var h2 = sec.querySelector('h2');
       // A heading that is a verse gives a shorter name for the list in data-toc.
       if (h2) { headings.push({ id: sec.id, text: h2.getAttribute('data-toc') || h2.textContent.trim(), el: sec }); }
@@ -167,96 +204,27 @@
     }
   }
 
-  /* ----------------------------------------------------- one half at a time */
+  buildToc();
 
-  /* A page can split into halves, each section marked with data-half. Nothing
-     in either half shows until the reader chooses, then only the chosen half
-     does. The address follows the choice, so back, reload, and a shared link
-     all land in the right half. */
-  var halfSections = doc.querySelectorAll('[data-half]');
-  var choosers = doc.querySelectorAll('[data-choose]');
-  var currentHalf = null;
+  /* -------------------------------------------------------- moved anchors */
 
-  function hashId() {
-    try { return decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return ''; }
+  /* Comfort and Apologetics were once one long page each. A link from before
+     they were divided, such as comfort.html#grief, is sent on to the page
+     that holds that part now. The page carries the map. */
+  var moved = doc.getElementById('moved');
+
+  function followMoved() {
+    if (!moved) { return; }
+    var id = '';
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return; }
+    if (!id || doc.getElementById(id)) { return; }
+    var map = {};
+    try { map = JSON.parse(moved.textContent); } catch (e) { return; }
+    if (map[id]) { window.location.replace(map[id]); }
   }
 
-  function halfOf(id) {
-    var el = id ? doc.getElementById(id) : null;
-    var owner = el ? el.closest('[data-half]') : null;
-    return owner ? owner.getAttribute('data-half') : null;
-  }
-
-  function showHalf(name) {
-    currentHalf = name;
-    for (var i = 0; i < halfSections.length; i++) {
-      halfSections[i].classList.toggle('is-shown', halfSections[i].getAttribute('data-half') === name);
-    }
-    for (var j = 0; j < choosers.length; j++) {
-      if (choosers[j].getAttribute('data-choose') === name) {
-        choosers[j].setAttribute('aria-current', 'true');
-      } else {
-        choosers[j].removeAttribute('aria-current');
-      }
-    }
-    buildToc();
-  }
-
-  function goTo(id, smooth, moveFocus) {
-    var el = doc.getElementById(id);
-    if (!el) { return; }
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var jump = !smooth || reduce;
-    /* The stylesheet makes all scrolling smooth, and 'auto' obeys it, so a
-       shared link would glide down the whole page. Jump straight there. */
-    if (jump) { root.style.scrollBehavior = 'auto'; }
-    el.scrollIntoView({ behavior: jump ? 'auto' : 'smooth', block: 'start' });
-    if (jump) { root.style.scrollBehavior = ''; }
-    if (moveFocus) {
-      var heading = el.querySelector('h2') || el;
-      heading.setAttribute('tabindex', '-1');
-      heading.focus({ preventScroll: true });
-    }
-  }
-
-  /* Bring the page into line with the address. A link inside one half that
-     points into the other switches halves here, since the browser cannot
-     scroll to a section it cannot see. */
-  function syncToHash() {
-    var id = hashId();
-    if (!id) { showHalf(null); return; }
-    var half = halfOf(id);
-    if (half && half !== currentHalf) {
-      showHalf(half);
-      goTo(id, true, true);
-    }
-  }
-
-  if (halfSections.length) {
-    var startId = hashId();
-    var startHalf = halfOf(startId);
-    showHalf(startHalf);
-    if (startHalf) { goTo(startId, false, false); }
-
-    for (var c = 0; c < choosers.length; c++) {
-      choosers[c].addEventListener('click', function (event) {
-        var name = this.getAttribute('data-choose');
-        var href = this.getAttribute('href') || '';
-        var target = href.charAt(0) === '#' && halfOf(href.slice(1)) === name ? href.slice(1) : name;
-        event.preventDefault();
-        if (hashId() !== target && window.history && history.pushState) {
-          history.pushState(null, '', '#' + target);
-        }
-        showHalf(name);
-        goTo(target, true, true);
-      });
-    }
-
-    window.addEventListener('popstate', syncToHash);
-    window.addEventListener('hashchange', syncToHash);
-  } else {
-    buildToc();
-  }
+  followMoved();
+  window.addEventListener('hashchange', followMoved);
 
   /* ------------------------------------------------------- email addresses */
 

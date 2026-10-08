@@ -1,7 +1,9 @@
 # Gentle King
 
-The ministry site for Gentle King. Reformed doctrine, the whole gospel, reading and
-study resources, and Sojourner, the free Bible study software published here.
+The ministry site for Gentle King. The gospel of Jesus Christ, Scripture for hard
+hours, help in the fight against sin, Reformed doctrine, and answers to objections.
+It also gives away two tools, Sojourner, a Bible study program for Windows, and
+Mortify, an app for the fight against sin.
 
 It is a plain static site. No framework, no npm, no dependencies. GitHub Pages
 serves the `.html` files at the top of this repository exactly as they are.
@@ -39,9 +41,38 @@ python3 check.py
 Phone links must be written with digits only, like `tel:988`, or the checker will
 stop you. A number with dashes in it may not dial.
 
-The comfort page carries crisis phone numbers. Check them on the hotlines' own
-sites once a year, and change the date in the comment at the top of
-`content/comfort.html` when you do.
+The Comfort pages carry crisis phone numbers. They are written in
+`content/comfort.html`, `content/partials/crisis.html`, `content/comfort-safety.html`,
+and the llms.txt text in `build.py`. Check them on the hotlines' own sites once a
+year, and change the date in the comment at the top of `content/comfort.html` when
+you do.
+
+---
+
+## How the pages fit together
+
+Comfort and Apologetics are each a short landing page with a page of its own for
+every sorrow and every question under it. Sojourner has a short main page and three
+pages under it for the full feature account, the library, and installing.
+
+- **A page under another** names its parent with `parent` in `PAGES`. It then gets
+  a breadcrumb above its heading, a link back at its foot, and its parent is marked
+  in the menu while you are on it.
+- **A series** is a set of pages meant to be read in order, such as the answers to
+  objections. Each page in one gets Previous and Next at its foot, and the list on
+  the parent page is written from the series, so it can never disagree with it.
+- **Shared blocks** live in `content/partials/`. A page asks for one at its foot with
+  `close` in `PAGES`, or anywhere in its words with `<!-- include name -->`. The
+  crisis numbers at the top of each Comfort page are one, and so are the closing
+  word on the church and the gospel that ends each of them. That repetition is on
+  purpose. A grieving reader may land on one page and never see another.
+- **Old links still work.** Comfort and Apologetics were once one long page each.
+  `MOVED` in `build.py` lists where each part went, and a link such as
+  `comfort.html#grief` is sent on to `comfort-grief.html`.
+
+To add a sorrow or a question, write its file in `content/`, add it to the right
+list in `build.py` (`COMFORT_PAGES`, `OBJECTOR_PAGES`, or `BELIEVER_PAGES`), add it
+to the list on `content/comfort.html` if it is a sorrow, and rebuild.
 
 ---
 
@@ -52,8 +83,9 @@ build.py                the builder. Wraps content in the shell.
 check.py                looks over the built pages for mistakes.
 .github/workflows/      rebuilds and checks the site on every push to main.
 content/                the words. One file per page. Edit these.
+content/partials/       blocks shared by several pages.
 assets/css/site.css     the whole design. Colors and fonts at the top.
-assets/js/site.js       theme switch, mobile menu, on-this-page links.
+assets/js/site.js       theme switch, menus, on-this-page links, old links.
 assets/img/             the crown mark, the favicons, the social card.
 brand/                  the logo files to use elsewhere, light and dark. See its README.
 resources/              files to keep and share, such as PDFs and handouts. Public.
@@ -73,23 +105,25 @@ favicon.ico             a copy of the tab icon, for tools that only look at the 
 ## Releasing a new version of Sojourner
 
 The download button points at the releases page, not at a specific file, so it
-keeps working when you post a new build. After a release, update the version in
-`content/sojourner.html`. It is written out four times there, in the Get Sojourner
-heading, the Version row, the paragraph on what the version number means, and the
-closing download button. The installer size is written out twice, in the Get
-Sojourner block and in the warning about the large download. If the release adds,
-removes, or renames translations, shelves, or reference works, the counts and names
-on the page, the description for `sojourner.html` in `build.py`, and the one paragraph
-about Sojourner on the home page want updating too. If it adds or drops a whole kind
-of feature, look over `APP_FEATURES` in `build.py` too. The version, the size, and
-the screenshots in the structured data are read from `content/sojourner.html` on
-their own, and the build stops if the Get Sojourner heading or size line changes shape.
+keeps working when you post a new build. After a release, change `APP_VERSION` and
+`APP_SIZE_MB` near the top of `build.py`. Those two lines fill in every place the
+pages show the version or the size, written as `{{version}}` and `{{size}}` in
+`content/`, along with the structured data and llms.txt. If the release brings
+something new, say so in the Updating part of `content/sojourner-install.html`.
+
+If the release adds, removes, or renames translations, shelves, or reference works,
+the counts and names in `content/sojourner.html`, `content/sojourner-library.html`,
+the description for `sojourner.html` in `build.py`, and the one paragraph about
+Sojourner on the home page want updating too. If it adds or drops a whole kind of
+feature, look over `APP_FEATURES` in `build.py`, the six features on
+`content/sojourner.html`, and `content/sojourner-features.html`.
 
 Then run `python3 build.py`, check it, commit and push.
 
 The screenshots live in `assets/img/` as `sojourner-*.webp`, each with a 1000px copy
-beside it for the page itself. Each one has alt text and a caption in
-`content/sojourner.html` that describe what it shows. When the app looks meaningfully
+beside it for the page itself. Each one has alt text and a caption in the Sojourner
+pages in `content/` that describe what it shows. The picture at the top of the main
+page is in `content/partials/sojourner-shot.html`. When the app looks meaningfully
 different, replace both copies and check that the alt text and the caption still
 match the picture.
 

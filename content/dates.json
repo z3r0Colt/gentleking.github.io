@@ -1,17 +1,167 @@
 {
   "about.html": {
-    "hash": "4ca2febe6edbda8f",
-    "modified": "2026-09-28T17:10:21+00:00",
+    "hash": "39f6153f86a7e614",
+    "modified": "2026-10-08T04:09:15+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
-  "apologetics.html": {
-    "hash": "cd86e651de591b45",
-    "modified": "2026-09-24T17:16:32+00:00",
+  "apologetics-bible.html": {
+    "hash": "68b4b3ea990d21cc",
+    "modified": "2026-10-08T04:06:27+00:00",
     "published": "2026-09-23T07:36:20+00:00"
   },
+  "apologetics-christians.html": {
+    "hash": "0dbefe9400563d1a",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-election.html": {
+    "hash": "e06898840e698499",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-evil.html": {
+    "hash": "87dd8c9e193807b8",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-god.html": {
+    "hash": "6a5e84f17e16ad8b",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-hell.html": {
+    "hash": "feae785cc10c0f29",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-morality.html": {
+    "hash": "609d4b9fbb8136b9",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-only-jesus.html": {
+    "hash": "95223246bddd0ea8",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-resurrection.html": {
+    "hash": "616d9ef7aac16c88",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics-the-real-objection.html": {
+    "hash": "083b8b39c3cff6f5",
+    "modified": "2026-10-08T04:10:45+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "apologetics.html": {
+    "hash": "c9b2c87f46197cc4",
+    "modified": "2026-10-08T04:10:45+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-affliction.html": {
+    "hash": "7887ab068500af71",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-am-i-his.html": {
+    "hash": "8bf05b2614f9bce6",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-death.html": {
+    "hash": "f019dfbaec5d8e3f",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-doubts-and-thoughts.html": {
+    "hash": "2efb2f6e0e74a5d0",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-god-feels-far.html": {
+    "hash": "0dddf291761a28af",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-kept.html": {
+    "hash": "ff70eccb47ad8cca",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-night-fears.html": {
+    "hash": "53c1bfac8e84079e",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance-remaining-sin.html": {
+    "hash": "830a53435615601b",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T07:36:20+00:00"
+  },
+  "comfort-death-of-a-child.html": {
+    "hash": "cbfc6a044a9524a4",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-depression.html": {
+    "hash": "15b32fc7723ec981",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-did-they-know-christ.html": {
+    "hash": "3babbd6030c3a0f8",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-for-others.html": {
+    "hash": "886f2ef959cce9c9",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-grief.html": {
+    "hash": "e2f4694b22cff776",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-illness.html": {
+    "hash": "179f40f649c5a31d",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-marriage.html": {
+    "hash": "b066ff10a32dc86f",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-prodigal.html": {
+    "hash": "fb55a4b10299b5b8",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-safety.html": {
+    "hash": "91daaf1aeedef9e3",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-suicide-loss.html": {
+    "hash": "f9593e3933b26a62",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-widowed.html": {
+    "hash": "bad64ed74fe994ab",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-work-and-home.html": {
+    "hash": "75fb3cdd12c9d1c5",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
   "comfort.html": {
-    "hash": "345e18825dc6b43b",
-    "modified": "2026-09-28T06:17:04+00:00",
+    "hash": "1cdb2c90e59e0c56",
+    "modified": "2026-10-08T04:06:27+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "doctrine.html": {
@@ -20,18 +170,18 @@
     "published": "2026-09-17T00:07:53+00:00"
   },
   "gospel.html": {
-    "hash": "8b39fc06b69c62e5",
-    "modified": "2026-09-28T06:17:04+00:00",
+    "hash": "59b3d75fb75dc202",
+    "modified": "2026-10-08T04:09:15+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "index.html": {
-    "hash": "7514659d58d98ad9",
-    "modified": "2026-10-07T21:27:45+00:00",
+    "hash": "2ea6f9eeffe57053",
+    "modified": "2026-10-08T04:09:15+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "mortify.html": {
-    "hash": "6ae83936386e5efe",
-    "modified": "2026-10-08T03:01:23+00:00",
+    "hash": "1bc940db64a885d4",
+    "modified": "2026-10-08T04:06:27+00:00",
     "published": "2026-10-07T20:59:32+00:00"
   },
   "resources.html": {
@@ -39,14 +189,29 @@
     "modified": "2026-09-28T17:10:21+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
+  "sojourner-features.html": {
+    "hash": "289670db63f7bc9f",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "sojourner-install.html": {
+    "hash": "293bb44cb19384fe",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "sojourner-library.html": {
+    "hash": "bc0eb2a9af8d5f4f",
+    "modified": "2026-10-08T04:06:27+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
   "sojourner.html": {
-    "hash": "f435821e11d4bb05",
-    "modified": "2026-10-07T02:15:41+00:00",
+    "hash": "da78d4b323bc994f",
+    "modified": "2026-10-08T04:10:01+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "struggle.html": {
-    "hash": "76fbefb58030f44e",
-    "modified": "2026-10-08T03:01:23+00:00",
+    "hash": "f40ba6a4ce71b127",
+    "modified": "2026-10-08T04:09:15+00:00",
     "published": "2026-09-24T16:57:20+00:00"
   }
 }
