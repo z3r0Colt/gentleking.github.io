@@ -522,6 +522,19 @@ COMFORT_PAGES = [
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
     _child(
+        'comfort-loneliness.html',
+        'When You Are Alone',
+        'When You Are Alone \u00b7 Scripture for the Lonely Christian \u00b7 Gentle King',
+        'Loneliness',
+        'When You Are Alone',
+        ('The house is quiet, or the room is full and no one knows you. You may have been '
+         'alone for years. Christ knew what it was to be left, and he has not left you.'),
+        ('For the single, the divorced, the newly moved, and the lonely in a crowded church. '
+         'Christ was left alone, and God setteth the solitary in families.'),
+        ['Loneliness'],
+        parent="comfort.html", crisis=True, close="comfort-close",
+    ),
+    _child(
         'comfort-depression.html',
         'When Your Own Mind Has Gone Dark',
         'When Your Own Mind Has Gone Dark · Depression and the Christian · Gentle King',
