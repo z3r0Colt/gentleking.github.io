@@ -561,19 +561,6 @@ COMFORT_PAGES = [
         ['Safety from violence at home', 'Suicide prevention'],
         parent="comfort.html", close="comfort-close",
     ),
-    _child(
-        'comfort-for-others.html',
-        'If You Came Here for Someone Else',
-        'Comforting Someone Who Grieves · For Friends, Pastors, and Elders · Gentle King',
-        'For pastors and friends',
-        'If You Came Here for Someone Else',
-        ('You want to help, and you are afraid of saying the wrong thing. Most of the help is '
-         'simply being there.'),
-        ('How to help a friend who grieves, and a summary for pastors and elders on the longer'
-         ' visit. Most of the help is simply being there.'),
-        ['Comforting the grieving', 'Pastoral care'],
-        parent="comfort.html", crisis=True, close="comfort-close",
-    ),
 ]
 
 OBJECTOR_PAGES = [
@@ -892,10 +879,8 @@ MOVED = {
         'darkness-search': 'comfort-depression.html#darkness-search',
         'divorce': 'comfort-marriage.html#divorce',
         'dying': 'comfort-illness.html#dying',
-        'elders': 'comfort-for-others.html#elders',
         'ending-your-life': 'comfort-safety.html#ending-your-life',
         'every-parent': 'comfort-death-of-a-child.html#every-parent',
-        'for-a-friend': 'comfort-for-others.html',
         'grief': 'comfort-grief.html',
         'grief-search': 'comfort-grief.html#grief-search',
         'help': 'comfort-safety.html',
@@ -916,7 +901,6 @@ MOVED = {
         'unsure-search': 'comfort-did-they-know-christ.html#unsure-search',
         'want': 'comfort-work-and-home.html',
         'want-search': 'comfort-work-and-home.html#want-search',
-        'whole-church': 'comfort-for-others.html#whole-church',
         'widowed': 'comfort-widowed.html',
         'widowed-heaven': 'comfort-widowed.html#widowed-heaven',
         'widowed-search': 'comfort-widowed.html#widowed-search',
