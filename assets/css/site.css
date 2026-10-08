@@ -96,7 +96,7 @@
     --paper-raised: #1d1a15;
     --ink:          #ece6d9;
     --ink-soft:     #b7af9f;
-    --ink-faint:    #8a8272;
+    --ink-faint:    #948c7c;
     --rule:         #2e2a22;
     --rule-strong:  #413b30;
     --gold:         #c9a227;
@@ -113,7 +113,7 @@
   --paper-raised: #1d1a15;
   --ink:          #ece6d9;
   --ink-soft:     #b7af9f;
-  --ink-faint:    #8a8272;
+  --ink-faint:    #948c7c;
   --rule:         #2e2a22;
   --rule-strong:  #413b30;
   --gold:         #c9a227;
@@ -444,9 +444,8 @@ blockquote { margin: 2rem 0; }
   gap: 1.1rem;
   margin: 1.9rem 0;
 }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
-/* The Sojourner library cards come in pairs, so never three across. */
-#library .grid-2 { grid-template-columns: repeat(auto-fit, minmax(max(17rem, calc((100% - 1.1rem) / 2)), 1fr)); }
+/* Cards in pairs are never three across, so four cards always make two rows. */
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(max(17rem, calc((100% - 1.1rem) / 2)), 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 
 .card {
@@ -637,73 +636,96 @@ blockquote { margin: 2rem 0; }
   .nav a:last-of-type { border-bottom: 0; }
 }
 
-/* The two apps, kept in reach. Sojourner and Mortify are drawn like the
-   secondary buttons, as one outlined pair, each with its own mark, so they
-   read as things to go and get without raising their voice over the rest.
-   The halves share the line between them, so the second is pulled over the
-   first by its border, and whichever is hovered or current is drawn on top.
-   On a wide screen the pair ends the row of pages. On a phone the row folds
-   into the menu, so .app-links keeps the pair out beside the menu button, and
-   in the menu they are plain rows like the others. */
-.app-links { display: none; }
+/* The light and dark switch as a row in the menu shows only on a phone. */
 .menu-theme { display: none; }
 
-/* Sojourner's open book and Mortify's own icon, the icon small with rounded
-   corners as .app-notice img has it. */
-.app-link svg,
-.app-link img,
-.nav a.nav-app svg,
-.nav a.nav-app img { width: 1.05rem; height: 1.05rem; flex-shrink: 0; }
-.app-link svg,
-.nav a.nav-app svg { color: var(--gold); }
-.app-link img,
-.nav a.nav-app img { border-radius: 22%; }
+/* The ministry's pages run along the row, and the two apps sit at its end
+   under Tools, a small menu. Its button reads like the links beside it, and
+   the list drops below it on a wide screen. Without script there is no menu to
+   open, so the two apps simply stand in the row. */
+.nav a[aria-current="true"] { color: var(--ink); font-weight: 600; }
 
-@media not all and (max-width: 64rem) {
-  .nav a.nav-app {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: .42rem;
-    margin-left: .5rem;
-    padding-inline: .7rem .6rem;
-    color: var(--ink);
-    border: 1px solid var(--rule-strong);
-    transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
-  }
-  .nav a.nav-app:has(+ a.nav-app) { border-start-end-radius: 0; border-end-end-radius: 0; }
-  .nav a.nav-app + a.nav-app {
-    margin-left: calc(-.1rem - 1px);
-    border-start-start-radius: 0;
-    border-end-start-radius: 0;
-  }
-  .nav a.nav-app:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
-  .nav a.nav-app[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
-  .nav a.nav-app:hover,
-  .nav a.nav-app[aria-current="page"],
-  .nav a.nav-app:focus-visible { z-index: 1; }
+.nav-group { position: relative; }
+.nav-group-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem .55rem;
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  line-height: inherit;
+  color: var(--ink-soft);
+  background: none;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  margin-left: .45rem;
+  padding-inline: .75rem .65rem;
+  cursor: pointer;
+  transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
 }
-/* Until the header reaches its full width at 66rem the row is short of room,
-   so there the pair goes without its marks. */
-@media not all and (max-width: 64rem) {
-  @media (max-width: 66rem) {
-    .nav a.nav-app svg,
-    .nav a.nav-app img { display: none; }
-    .nav a.nav-app { padding-inline: .7rem; }
-  }
+.nav-group-btn:hover,
+.nav-group-btn[aria-expanded="true"] { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+.nav-group-btn.is-current { color: var(--ink); font-weight: 600; border-color: var(--gold-soft); }
+/* A small chevron, drawn with two borders so it takes the text's color. */
+.nav-group-caret {
+  width: .38rem;
+  height: .38rem;
+  margin-top: -.2rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .15s var(--ease);
 }
+.nav-group-btn[aria-expanded="true"] .nav-group-caret { transform: rotate(225deg); margin-top: .2rem; }
+
+.nav-group-list {
+  list-style: none;
+  margin: 0;
+  padding: .4rem;
+  position: absolute;
+  right: 0;
+  top: calc(100% + .45rem);
+  z-index: 45;
+  min-width: 17rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lift);
+}
+.js .nav-group-btn[aria-expanded="false"] + .nav-group-list { display: none; }
+.nav .nav-group-list a {
+  display: grid;
+  grid-template-columns: 1.15rem minmax(0, 1fr);
+  column-gap: .7rem;
+  align-items: center;
+  padding: .6rem .7rem;
+  white-space: normal;
+  color: var(--ink);
+}
+.nav .nav-group-list a:hover { background: var(--gold-wash); color: var(--ink); }
+.nav .nav-group-list a[aria-current="page"] { background: var(--gold-wash); }
+.nav-group-list svg,
+.nav-group-list img { grid-row: 1 / span 2; width: 1.15rem; height: 1.15rem; }
+.nav-group-list svg { color: var(--gold); }
+.nav-group-list img { border-radius: 22%; }
+.nav-tool-name { font-weight: 600; }
+.nav-tool-note { grid-column: 2; font-size: .78rem; color: var(--ink-faint); }
+
+/* With no script, nothing opens the menu, so the two apps stand in the row. */
+html:not(.js) .nav-group-btn { display: none; }
+html:not(.js) .nav-group-list { position: static; display: flex; min-width: 0; padding: 0; background: none; border: 0; box-shadow: none; }
+html:not(.js) .nav .nav-group-list a { display: inline-flex; gap: .4rem; }
+html:not(.js) .nav-tool-note { display: none; }
+
+/* On a phone the gospel keeps a link of its own beside the menu button. */
+.header-gospel { display: none; }
 
 @media (max-width: 64rem) {
-  .nav .nav-app svg,
-  .nav .nav-app img { display: none; }
-  .app-links { display: flex; }
-  .app-link {
-    position: relative;
+  .header-gospel {
     display: inline-flex;
     align-items: center;
-    gap: .42rem;
     height: 2.3rem;
-    padding: 0 .75rem 0 .62rem;
+    padding: 0 .85rem;
     font-family: var(--font-ui);
     font-size: .85rem;
     line-height: 1;
@@ -711,27 +733,49 @@ blockquote { margin: 2rem 0; }
     white-space: nowrap;
     text-decoration: none;
     border: 1px solid var(--rule-strong);
-    border-radius: var(--radius) 0 0 var(--radius);
+    border-radius: var(--radius);
     transition: color .18s var(--ease), border-color .18s var(--ease), background-color .18s var(--ease);
   }
-  .app-link + .app-link { margin-left: -1px; border-radius: 0 var(--radius) var(--radius) 0; }
-  .app-link:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
-  .app-link[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
-  .app-link:hover,
-  .app-link[aria-current="page"],
-  .app-link:focus-visible { z-index: 1; }
+  .header-gospel:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
+  .header-gospel[aria-current="page"] { border-color: var(--gold-soft); background: var(--gold-wash); }
+
+  /* In the menu Tools is a heading over two plain rows, always open. */
+  .nav-group-btn { display: none; }
+  .nav-group-list,
+  .js .nav-group-btn[aria-expanded="false"] + .nav-group-list {
+    display: block;
+    position: static;
+    min-width: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--rule);
+    box-shadow: none;
+  }
+  .nav-group-list::before {
+    content: "Tools";
+    display: block;
+    padding: 1rem .2rem .2rem;
+    font-family: var(--font-ui);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .nav .nav-group-list a { padding: .75rem .2rem; font-size: 1rem; border-bottom: 1px solid var(--rule); }
+  .nav .nav-group-list li:last-child a { border-bottom: 0; }
+  .nav .nav-group-list a:hover { background: none; }
+  .nav .nav-group-list a[aria-current="page"] { background: none; font-weight: 600; }
+  .nav-tool-note { font-size: .82rem; }
 }
 
-/* A phone held upright has room beside the name of the site for the two apps
-   or for the light and dark switch, not for both. The apps stay, named, in
-   smaller type and without their marks, and the switch moves to the foot of
-   the menu, where it reads as words. */
+/* A phone held upright has room beside the name of the site for the gospel
+   link or for the light and dark switch, not for both. The gospel stays, and
+   the switch moves to the foot of the menu, where it reads as words. */
 @media (max-width: 32rem) {
   .nav-tools { gap: .2rem; }
   .theme-toggle { display: none; }
-  .app-link { padding-inline: .6rem; font-size: .8rem; }
-  .app-link svg,
-  .app-link img { display: none; }
   .menu-theme {
     display: flex;
     align-items: center;
@@ -758,24 +802,12 @@ blockquote { margin: 2rem 0; }
   :root:not([data-theme="light"]) .menu-theme > .menu-theme-dark { display: none; }
   :root:not([data-theme="light"]) .menu-theme > .menu-theme-light { display: inline-flex; }
 }
-/* Narrower still, the pair draws in closer. Only on the very narrowest do the
-   names give way to the two marks, and they are still read aloud. */
+/* Narrower still, everything in the header draws in closer. */
 @media (max-width: 24rem) {
-  .site-header .wrap { gap: .625rem; }
-  .app-link { padding-inline: .5rem; }
-}
-@media (max-width: 22.25rem) {
-  .app-link { padding-inline: .6rem; }
-  .app-link svg,
-  .app-link img { display: block; }
-  .app-link-name {
-    position: absolute;
-    width: 1px; height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
+  .site-header .wrap { gap: .5rem; }
+  .brand { gap: .45rem; }
+  .brand-name { font-size: 1.1rem; }
+  .header-gospel { padding-inline: .6rem; font-size: .8rem; }
 }
 
 /* --------------------------------------------------------------------------
@@ -902,18 +934,20 @@ main > .section > h2.verse-head {
   vertical-align: -.36em;
   border-radius: 22%;
 }
-/* Color text's seven families as a small strip, the way Sojourner shows them
-   under its toolbar. */
-.app-notice .ct-strip {
-  display: inline-flex;
-  width: 1.6rem;
-  height: .42rem;
-  margin-right: .55rem;
-  vertical-align: .12em;
-  border-radius: 2px;
-  overflow: hidden;
+/* On the home page the line names both apps, side by side where they fit and
+   one above the other on a phone. */
+.app-notice-pair .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2.5rem;
 }
-.ct-strip > span { flex: 1; background: var(--ct); }
+.app-notice-pair a { display: inline-block; padding-block: .75rem; }
+.app-notice-pair a:hover strong { color: var(--gold); }
+@media (max-width: 34rem) {
+  .app-notice-pair a { display: block; width: 100%; padding-block: .55rem; }
+  .app-notice-pair a + a { border-top: 1px solid var(--rule); }
+}
 .app-notice a:hover { color: var(--ink); }
 .app-notice a:hover strong { color: var(--gold); }
 .app-notice a:hover .app-notice-go { text-decoration-color: currentColor; }
@@ -1369,34 +1403,11 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 :root[data-theme="dark"] .brandmark-dark { display: block; }
 
 /* --------------------------------------------------------------------------
-   20. One half at a time
-   The apologetics and comfort pages show a chooser, then only the part that was chosen.
-   Hidden only on screen and only once script is running, so a reader with
-   scripts off, or anyone printing the page, still gets all of it.
-   -------------------------------------------------------------------------- */
-
-@media screen {
-  .js [data-half]:not(.is-shown) { display: none; }
-}
-
-.chooser { margin-top: 2rem; }
-.chooser .btn[aria-current="true"] {
-  color: var(--paper);
-  background: var(--ink);
-  border-color: var(--ink);
-}
-.chooser .btn[aria-current="true"]:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-}
-
-/* --------------------------------------------------------------------------
    21. The list of sorrows
    The comfort page opens on this list. Each row is a whole tap target, sized
    for an unsteady thumb, drawn only in the theme's own colors so it reads the
-   same at night. It is the chooser for one sorrow at a time, run by the same
-   script as the apologetics page. Links do nothing on paper, so it is left off
-   a printed copy.
+   same at night. Each opens the page for that sorrow. Links do nothing on
+   paper, so it is left off a printed copy.
    -------------------------------------------------------------------------- */
 
 .sorrows {
@@ -1422,22 +1433,40 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
   transition: border-color .18s var(--ease), background-color .18s var(--ease);
 }
 .sorrows a:hover { color: var(--ink); border-color: var(--gold); background: var(--gold-wash); }
-.sorrows a[aria-current="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+/* A small chevron at the end of each row says it goes somewhere. */
+.sorrows a::after {
+  content: "";
+  flex: none;
+  width: .42rem;
+  height: .42rem;
+  margin-left: auto;
+  padding-left: 0;
+  border-top: 1.5px solid var(--ink-faint);
+  border-right: 1.5px solid var(--ink-faint);
+  transform: rotate(45deg);
+}
+.sorrows a:hover::after { border-color: var(--gold); }
+.sorrows a { gap: 1rem; }
 
-/* On the comfort page a chosen part should land just under the header, so the
-   safety numbers are not pushed off a small screen. Other pages keep their
-   usual spacing. */
-main:has(.sorrows) .section { scroll-margin-top: 0; }
+/* The small heading over each group of sorrows, quiet enough that the rows
+   stay the first thing the eye finds. */
+main > .section > h3.sorrows-head {
+  margin: 1.9rem 0 .6rem;
+  font-family: var(--font-ui);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+main > .section > h3.sorrows-head::before { display: none; }
+main > .section > h3.sorrows-head + .sorrows { margin-top: 0; }
 
 /* A phone number split across two lines is hard to read in a hurry. */
 a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 
 @media print {
-  .sorrows { display: none; }
-  /* With any part open, including the friend's part, print that part and the
-     closing sections. With nothing chosen, the whole page prints. Only a page
-     with this list is affected, so the apologetics page prints as it always has. */
-  .js main:has(.sorrows):has([data-half].is-shown) [data-half]:not(.is-shown) { display: none; }
+  .sorrows, .sorrows-head { display: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -1806,3 +1835,210 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   margin: 1.2rem 0 1.6rem;
 }
 .battle-list li { break-inside: avoid; margin-bottom: .35rem; }
+
+/* --------------------------------------------------------------------------
+   26. Where a page sits, and where to go from it
+   A page under Comfort or Apologetics names its parent above its eyebrow, and
+   at its foot offers the next page in its series and the way back up.
+   -------------------------------------------------------------------------- */
+
+.crumbs { margin: 0 0 1rem; font-family: var(--font-ui); font-size: .8rem; line-height: 1.5; }
+.crumbs ol { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.crumbs li + li::before { content: "/"; margin: 0 .55rem; color: var(--rule-strong); }
+.crumbs a { color: var(--ink-faint); text-decoration-color: transparent; }
+.crumbs a:hover { color: var(--gold); text-decoration-color: currentColor; }
+/* A crumb is a target for a thumb too. */
+@media (pointer: coarse) {
+  .crumbs a { display: inline-block; padding-block: .3rem; }
+}
+
+.pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  margin-top: var(--section-gap);
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  max-width: calc(var(--measure) + 4rem);
+  font-family: var(--font-ui);
+}
+.pager-prev, .pager-next {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .95rem 1.1rem 1rem;
+  text-decoration: none;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  transition: border-color .18s var(--ease), background-color .18s var(--ease);
+}
+.pager-next { grid-column: 2; text-align: right; }
+.pager-prev:hover, .pager-next:hover { border-color: var(--gold); background: var(--gold-wash); }
+.pager-dir {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.pager-title { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.3; color: var(--ink); }
+.pager-up {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: .35rem;
+  padding-block: .35rem;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.pager-up::before {
+  content: "";
+  display: inline-block;
+  width: .38rem;
+  height: .38rem;
+  margin-right: .55rem;
+  vertical-align: .1em;
+  border-left: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+@media (max-width: 34rem) {
+  .pager { grid-template-columns: minmax(0, 1fr); }
+  .pager-next { grid-column: 1; }
+}
+@media print {
+  .pager, .crumbs { display: none; }
+}
+
+/* The questions and fears on the apologetics page, in reading order. Each row
+   is one link, its title and a line from its page. */
+.paths {
+  list-style: none;
+  counter-reset: path;
+  margin: 2rem 0 1.5rem;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+.paths > li { counter-increment: path; border-bottom: 1px solid var(--rule); }
+.paths a {
+  position: relative;
+  display: grid;
+  gap: .25rem;
+  padding: 1rem 0 1.05rem 3rem;
+  text-decoration: none;
+}
+.paths a::before {
+  content: counter(path);
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--gold);
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+}
+.paths-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.1rem + .4vw, 1.36rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+  transition: color .18s var(--ease);
+}
+.paths-desc { font-size: .95rem; line-height: 1.55; color: var(--ink-soft); }
+.paths a:hover .paths-title { color: var(--gold); }
+.paths a:hover::before { border-color: var(--gold); }
+
+/* The numbers to call, at the top of every page under Comfort. */
+.callout-crisis { margin-top: 0; font-size: .95rem; }
+@media (max-width: 34rem) {
+  .callout { padding: 1.1rem 1.15rem; }
+  .callout-crisis { font-size: .93rem; line-height: 1.6; }
+}
+main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 2.25rem; }
+
+/* --------------------------------------------------------------------------
+   27. A software page's first screen and its features
+   -------------------------------------------------------------------------- */
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .45rem;
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  max-width: 40rem;
+  font-family: var(--font-ui);
+  font-size: .8rem;
+}
+.facts li {
+  padding: .3rem .75rem;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+}
+.page-head-logo .btn-row { justify-content: center; }
+.page-head-logo .btn { margin-inline: 0; }
+.page-head-logo .btn-row,
+.page-head-app .btn-row { gap: .6rem; }
+/* A software page shows the program itself on its first screen. */
+.head-shot { margin: clamp(1.75rem, 4vw, 2.5rem) auto 0; max-width: 54rem; text-align: left; }
+.head-shot figcaption { margin-inline: auto; text-align: center; }
+.head-meta {
+  margin: .9rem 0 0;
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  color: var(--ink-faint);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(16rem, calc((100% - 1.25rem) / 2)), 1fr));
+  gap: 1.25rem;
+  margin: 1.9rem 0 2rem;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.feature > :not(.feature-shot) { margin-inline: 1.3rem; }
+.feature-shot {
+  display: block;
+  background: var(--paper-sunk);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.15rem;
+}
+.feature-shot img { display: block; width: 100%; height: auto; transition: opacity .2s var(--ease); }
+.feature-shot:hover img { opacity: .92; }
+.feature h3 { font-size: clamp(1.2rem, 1.1rem + .4vw, 1.36rem); font-weight: 600; margin-bottom: .4rem; }
+.feature p { font-size: .96rem; color: var(--ink-soft); margin-bottom: .75em; }
+.feature .feature-more { margin-top: auto; margin-bottom: 1.2rem; padding-top: .2rem; font-family: var(--font-ui); font-size: .85rem; }
+.feature-more a { font-weight: 600; color: var(--gold); }
+.feature-new {
+  display: inline-block;
+  margin-left: .4rem;
+  padding: .1rem .45rem;
+  font-family: var(--font-ui);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  vertical-align: .3em;
+  color: var(--gold);
+  border: 1px solid var(--gold-soft);
+  border-radius: var(--radius);
+}
