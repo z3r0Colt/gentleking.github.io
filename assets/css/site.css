@@ -2109,3 +2109,19 @@ main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 
   border: 1px solid var(--gold-soft);
   border-radius: var(--radius);
 }
+
+/* --------------------------------------------------------------------------
+   28. The home page's ways in
+   Short cards, a name, a line, and the way in, so the page stays tight.
+   -------------------------------------------------------------------------- */
+
+.grid-tight { gap: .8rem; margin-top: 1.4rem; }
+.grid-tight .card { display: flex; flex-direction: column; padding: 1.15rem 1.25rem 1.1rem; }
+.grid-tight .card h3 { font-size: clamp(1.25rem, 1.15rem + .4vw, 1.42rem); font-weight: 600; margin-bottom: .25rem; }
+.grid-tight .card p { margin-bottom: .5em; }
+.grid-tight .card .card-go { margin-top: auto; padding-top: .35rem; margin-bottom: 0; }
+.card-app h3 { display: flex; align-items: center; gap: .6rem; }
+.card-app h3 img,
+.card-app h3 svg { width: 1.6rem; height: 1.6rem; flex: none; }
+.card-app h3 img { border-radius: 22%; }
+.card-app h3 svg { color: var(--gold); }
