@@ -2125,3 +2125,10 @@ main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 
 .card-app h3 svg { width: 1.6rem; height: 1.6rem; flex: none; }
 .card-app h3 img { border-radius: 22%; }
 .card-app h3 svg { color: var(--gold); }
+
+/* The church, set between the ways in and the tools, so no reader leaves the
+   home page without being sent to one. */
+.callout-church { position: relative; margin-top: 0; }
+.callout-church:hover { border-color: var(--gold); }
+.callout-church .card-go { margin: .9rem 0 0; }
+.section:has(> .callout-church) { margin-top: 1.5rem; }
