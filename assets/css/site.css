@@ -1739,6 +1739,47 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
 .card .card-read { margin-top: .9rem; font-family: var(--font-ui); font-size: .85rem; color: var(--ink-faint); }
 .card-read a { font-weight: 600; color: var(--gold); }
 
+/* A card that leads somewhere is one target, the whole card, and its link is
+   drawn as a plain way in, in gold with a chevron. A second link inside it,
+   such as the line about Mortify, sits above and stays its own. */
+.card:has(.card-go) { cursor: pointer; box-shadow: var(--shadow); border-color: var(--rule-strong); }
+.card:has(.card-go):hover { border-color: var(--gold); background: var(--gold-wash); }
+.card .card-go { margin-top: 1rem; }
+.card-go a {
+  font-family: var(--font-ui);
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+}
+.card-go a::after {
+  content: "";
+  display: inline-block;
+  margin-left: .5rem;
+  vertical-align: .08em;
+  width: .42rem;
+  height: .42rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+/* The whole card answers to the link. */
+.card-go a::before { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.card .card-read { position: relative; z-index: 1; }
+.card-go a:focus-visible { outline: none; }
+.card:has(.card-go a:focus-visible) { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* The links under the features on the Sojourner page carry the same chevron. */
+.feature-more a { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; }
+.feature-more a::after {
+  content: "";
+  width: .42rem;
+  height: .42rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
 @media print {
   .lib-finder, .lib-recent, .lib-actions, .lib-tags { display: none !important; }
   .lib-item { content-visibility: visible; }
@@ -1918,20 +1959,28 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   counter-reset: path;
   margin: 2rem 0 1.5rem;
   padding: 0;
-  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: .65rem;
 }
-.paths > li { counter-increment: path; border-bottom: 1px solid var(--rule); }
+.paths > li { counter-increment: path; }
+/* Each row is drawn as a button, the whole row one target, with its number
+   at the left and a chevron at the right to say it goes somewhere. */
 .paths a {
   position: relative;
   display: grid;
   gap: .25rem;
-  padding: 1rem 0 1.05rem 3rem;
+  padding: 1rem 2.9rem 1.05rem 3.75rem;
   text-decoration: none;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: border-color .18s var(--ease), background-color .18s var(--ease), transform .18s var(--ease);
 }
 .paths a::before {
   content: counter(path);
   position: absolute;
-  left: 0;
+  left: 1rem;
   top: 1.05rem;
   width: 2rem;
   height: 2rem;
@@ -1941,20 +1990,38 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   font-size: .78rem;
   font-weight: 600;
   color: var(--gold);
-  border: 1px solid var(--rule-strong);
+  border: 1px solid var(--gold-soft);
   border-radius: 50%;
+}
+.paths a::after {
+  content: "";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  width: .5rem;
+  height: .5rem;
+  margin-top: -.25rem;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+  transform: rotate(45deg);
+  transition: right .18s var(--ease);
 }
 .paths-title {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 1.1rem + .4vw, 1.36rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   color: var(--ink);
-  transition: color .18s var(--ease);
 }
 .paths-desc { font-size: .95rem; line-height: 1.55; color: var(--ink-soft); }
-.paths a:hover .paths-title { color: var(--gold); }
-.paths a:hover::before { border-color: var(--gold); }
+.paths a:hover { border-color: var(--gold); background: var(--gold-wash); }
+.paths a:hover::after { right: 1rem; }
+.paths a:active { transform: translateY(1px); }
+@media (max-width: 34rem) {
+  .paths a { padding: .9rem 2.4rem .95rem 3.3rem; }
+  .paths a::before { left: .8rem; top: .95rem; width: 1.8rem; height: 1.8rem; }
+  .paths a::after { right: 1rem; }
+}
 
 /* The numbers to call, at the top of every page under Comfort. */
 .callout-crisis { margin-top: 0; font-size: .95rem; }
