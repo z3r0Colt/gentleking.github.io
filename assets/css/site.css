@@ -1192,6 +1192,14 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 /* A phone held upright is twice as tall as it is wide, so it is held to about
    the width of a phone in the hand, with the rounder corners a phone has. */
 .shot-phone > a { max-width: 16rem; border-radius: 1.1rem; }
+/* Two phone pictures side by side, each held to a phone's width. */
+.shot-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 16rem));
+  gap: 1.25rem;
+  margin: 2.25rem 0;
+}
+.shot-pair > .shot { margin: 0; }
 /* A screenshot taken in both themes shows the one that matches the page, by
    the same rules the theme toggle uses for the Sojourner mark. */
 .shot > .shot-dark { display: none; }
