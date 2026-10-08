@@ -2132,3 +2132,27 @@ main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 
 .callout-church:hover { border-color: var(--gold); }
 .callout-church .card-go { margin: .9rem 0 0; }
 .section:has(> .callout-church) { margin-top: 1.5rem; }
+
+/* --------------------------------------------------------------------------
+   29. Links in the prose
+   A link inside a sentence is drawn in the theme's gold with a firm underline,
+   so it cannot be missed against the ink. Buttons, cards, menus, and the lists
+   of sorrows and guides keep their own looks, since they say what they are.
+   -------------------------------------------------------------------------- */
+
+main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 55%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: .2em;
+}
+main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]):hover {
+  color: var(--ink);
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+}
+@supports not (color: color-mix(in srgb, red, blue)) {
+  main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) { text-decoration-color: var(--gold-soft); }
+}
