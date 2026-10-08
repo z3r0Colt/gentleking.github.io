@@ -51,8 +51,8 @@ you do.
 
 ## How the pages fit together
 
-Comfort and Apologetics are each a short landing page with a page of its own for
-every sorrow and every question under it. Sojourner has a short main page and three
+Comfort, Apologetics, and Guides are each a short landing page with a page of its
+own for every sorrow, every question, and every guide under it. Sojourner has a short main page and three
 pages under it for the full feature account, the library, and installing.
 
 - **A page under another** names its parent with `parent` in `PAGES`. It then gets
@@ -71,7 +71,8 @@ pages under it for the full feature account, the library, and installing.
   `comfort.html#grief` is sent on to `comfort-grief.html`.
 
 To add a sorrow or a question, write its file in `content/`, add it to the right
-list in `build.py` (`COMFORT_PAGES`, `OBJECTOR_PAGES`, or `BELIEVER_PAGES`), add it
+list in `build.py` (`COMFORT_PAGES`, `OBJECTOR_PAGES`, `BELIEVER_PAGES`, or
+`GUIDE_PAGES` with its series, `life` or `discern`), add it
 to the list on `content/comfort.html` if it is a sorrow, and rebuild.
 
 ---

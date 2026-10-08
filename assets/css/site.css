@@ -934,20 +934,6 @@ main > .section > h2.verse-head {
   vertical-align: -.36em;
   border-radius: 22%;
 }
-/* On the home page the line names both apps, side by side where they fit and
-   one above the other on a phone. */
-.app-notice-pair .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 2.5rem;
-}
-.app-notice-pair a { display: inline-block; padding-block: .75rem; }
-.app-notice-pair a:hover strong { color: var(--gold); }
-@media (max-width: 34rem) {
-  .app-notice-pair a { display: block; width: 100%; padding-block: .55rem; }
-  .app-notice-pair a + a { border-top: 1px solid var(--rule); }
-}
 .app-notice a:hover { color: var(--ink); }
 .app-notice a:hover strong { color: var(--gold); }
 .app-notice a:hover .app-notice-go { text-decoration-color: currentColor; }
@@ -1220,9 +1206,6 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 /* A picture as tall as it is wide, like two phones side by side, would fill
    the whole screen at the column's width, so it is held narrower. */
 .shot-tall > a { max-width: 34rem; }
-/* On a page with no rail beside its column, a picture is held to about the
-   width it has on the Sojourner page, near the prose it sits in. */
-.shot-prose { max-width: calc(var(--measure) + 8rem); }
 /* A phone held upright is twice as tall as it is wide, so it is held to about
    the width of a phone in the hand, with the rounder corners a phone has. */
 .shot-phone > a { max-width: 16rem; border-radius: 1.1rem; }
