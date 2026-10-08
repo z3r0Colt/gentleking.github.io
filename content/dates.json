@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "hash": "15eedb1fd9bf1d96",
-    "modified": "2026-10-08T04:17:02+00:00",
+    "hash": "ec9014b9f03964b2",
+    "modified": "2026-10-08T05:19:24+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "apologetics-bible.html": {
@@ -165,14 +165,79 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "doctrine.html": {
-    "hash": "8f5db03655c74ab1",
-    "modified": "2026-10-08T04:17:02+00:00",
+    "hash": "18abd076832c7063",
+    "modified": "2026-10-08T05:53:45+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "gospel.html": {
     "hash": "10b96c51f39e5793",
     "modified": "2026-10-08T04:17:02+00:00",
     "published": "2026-09-17T00:07:53+00:00"
+  },
+  "guide-bible-reading.html": {
+    "hash": "fd94cd0b269e8f0a",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-evangelism.html": {
+    "hash": "17513ade1a4a5488",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-examine-yourself.html": {
+    "hash": "591e60e69408ac04",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-false-church.html": {
+    "hash": "67351b88b1a94dde",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-false-teachers.html": {
+    "hash": "15cf6b0431a72092",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-family-worship.html": {
+    "hash": "8d219ad236c6409c",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-find-a-church.html": {
+    "hash": "3986e3d623df286e",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-heresy.html": {
+    "hash": "d62cdfbe5f2ecc3a",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-lords-day.html": {
+    "hash": "71814739595a9c3c",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-prayer.html": {
+    "hash": "d7c5a4c6bea02262",
+    "modified": "2026-10-08T05:36:35+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-ten-commandments.html": {
+    "hash": "bf202c9aa44366ee",
+    "modified": "2026-10-08T05:53:45+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-worship.html": {
+    "hash": "e901cc581a74160d",
+    "modified": "2026-10-08T05:53:45+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guides.html": {
+    "hash": "6f2a51223a84c2d6",
+    "modified": "2026-10-08T05:53:53+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
     "hash": "7d4d743e775241ad",
