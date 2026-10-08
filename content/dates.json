@@ -165,8 +165,8 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "doctrine.html": {
-    "hash": "cb945e1ffd0f9ba8",
-    "modified": "2026-10-08T05:19:24+00:00",
+    "hash": "18abd076832c7063",
+    "modified": "2026-10-08T05:53:45+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "gospel.html": {
@@ -225,13 +225,18 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-ten-commandments.html": {
-    "hash": "d6138f585f9713e2",
-    "modified": "2026-10-08T05:36:35+00:00",
+    "hash": "bf202c9aa44366ee",
+    "modified": "2026-10-08T05:53:45+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-worship.html": {
+    "hash": "e901cc581a74160d",
+    "modified": "2026-10-08T05:53:45+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "46dcc386522c31aa",
-    "modified": "2026-10-08T05:36:35+00:00",
+    "hash": "6f2a51223a84c2d6",
+    "modified": "2026-10-08T05:53:53+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
