@@ -111,6 +111,7 @@ NAV = [
     ("struggle.html", "Fighting Sin"),
     ("doctrine.html", "Doctrine"),
     ("apologetics.html", "Apologetics"),
+    ("guides.html", "Guides"),
     ("about.html", "About"),
 ]
 
@@ -326,6 +327,25 @@ PAGES = [
             "Assurance of salvation", "Doubt",
         ],
         "moved": "apologetics",
+        "toc": False,
+    },
+    {
+        "file": "guides.html",
+        "content": "guides.html",
+        "title": "Guides",
+        "full_title": "Practical Guides for the Christian Life \u00b7 Gentle King",
+        "eyebrow": "Guides",
+        "h1": "Plain Guides for the Christian Life",
+        "deck": (
+            "How to pray, read the Bible, keep the Lord\u2019s Day, share the gospel, and examine "
+            "yourself. How to test a teacher, a doctrine, and a church, and how to find a faithful one."
+        ),
+        "description": (
+            "Short practical guides. Prayer, Bible reading, the Ten Commandments, "
+            "evangelism, false teachers, heresy, true churches, and finding an RPCNA church."
+        ),
+        "schema": "CollectionPage",
+        "about": ["Christian living", "Discernment", "The church"],
         "toc": False,
     },
     {
@@ -866,6 +886,53 @@ SOJOURNER_PAGES = [
     },
 ]
 
+GUIDE_PAGES = [
+    _child('guide-prayer.html', 'How to Pray', 'How to Pray in a Way That Pleases God · Gentle King', 'Guide', 'How to Pray',
+           'What prayer is, how to pray through Christ, the Lord’s Prayer as a pattern, and the habits that keep a believer praying.',
+           'What prayer is, how to pray in the name of Christ, how to use the Lord’s Prayer as a pattern, what displeases God in prayer, and how to make it a habit.',
+           ['How to Pray'], parent="guides.html", series='life'),
+    _child('guide-bible-reading.html', 'How to Read the Bible', 'How to Read the Bible for Yourself · Gentle King', 'Guide', 'How to Read the Bible',
+           'How to read Scripture with understanding, where to start, and which helps are worth having.',
+           'How to read the Bible for yourself with prayer and understanding, where a new reader should start, a plan for the whole Bible, and helps worth having.',
+           ['How to Read the Bible'], parent="guides.html", series='life'),
+    _child('guide-examine-yourself.html', 'How to Examine Yourself', 'How to Examine Yourself Biblically · Gentle King', 'Guide', 'How to Examine Yourself',
+           'Questions from Scripture and the Larger Catechism to ask yourself, how to do it each day, and how not to drown in it.',
+           'How to examine yourself as Scripture commands, with questions from the Larger Catechism, a short daily habit, and a caution for the anxious.',
+           ['How to Examine Yourself'], parent="guides.html", series='life'),
+    _child('guide-ten-commandments.html', 'The Ten Commandments for a Believer', 'The Ten Commandments for a Believer · What Each One Requires · Gentle King', 'Guide', 'The Ten Commandments for a Believer',
+           'Why a forgiven Christian still keeps God’s law, how to read it, what each commandment requires and forbids, and how to use them this week.',
+           'Why a Christian keeps the Ten Commandments, how to read them, what each one requires and forbids by the Shorter Catechism, and how to use them.',
+           ['The Ten Commandments for a Believer'], parent="guides.html", series='life'),
+    _child('guide-lords-day.html', 'How to Keep the Lord’s Day', 'How to Keep the Lord’s Day, the Christian Sabbath · Gentle King', 'Guide', 'How to Keep the Lord’s Day',
+           'Why God set apart one day in seven, how to keep it, what counts as necessity and mercy, and how to make it a delight for children.',
+           'Why the Lord’s Day is the Christian Sabbath, how to keep it holy, works of necessity and mercy, and how to make it a delight for a family.',
+           ['How to Keep the Lord’s Day'], parent="guides.html", series='life'),
+    _child('guide-family-worship.html', 'How to Lead Family Worship', 'How to Lead Family Worship · Gentle King', 'Guide', 'How to Lead Family Worship',
+           'Read, sing, and pray. A few minutes a day, the way Reformed households have done it for centuries.',
+           'How to lead family worship in a few minutes a day. Read the Bible, sing a psalm, and pray, with plain counsel for starting and keeping on.',
+           ['How to Lead Family Worship'], parent="guides.html", series='life'),
+    _child('guide-evangelism.html', 'How to Share the Gospel', 'How to Share the Gospel With Others · Gentle King', 'Guide', 'How to Share the Gospel',
+           'Know the message, pray for people by name, tell the bad news and the good, call for repentance and faith, and bring them to church.',
+           'How an ordinary Christian shares the gospel. Know the message, pray, ask questions, call for repentance and faith, and invite people to church.',
+           ['How to Share the Gospel'], parent="guides.html", series='life'),
+    _child('guide-false-teachers.html', 'How to Spot a False Teacher', 'How to Spot a False Teacher · Gentle King', 'Guide', 'How to Spot a False Teacher',
+           'Seven questions to test any teacher by Scripture, the common warning signs today, and what to do when you find one.',
+           'How to spot a false teacher. Seven questions to test any preacher by Scripture, common warning signs today, and what to do about it.',
+           ['How to Spot a False Teacher'], parent="guides.html", series='discern'),
+    _child('guide-heresy.html', 'How to Spot Real Heresy', 'How to Spot Real Heresy · Heresy, Error, and Disagreement · Gentle King', 'Guide', 'How to Spot Real Heresy',
+           'The difference between heresy, serious error, and honest disagreement, the truths that mark the line, and how to respond.',
+           'The difference between heresy, serious error, and disagreement among the faithful, the truths that mark the line, and how to respond.',
+           ['How to Spot Real Heresy'], parent="guides.html", series='discern'),
+    _child('guide-false-church.html', 'How to Tell a True Church From a False One', 'How to Tell a True Church From a False One · Gentle King', 'Guide', 'How to Tell a True Church From a False One',
+           'The marks of a true church, what makes a church false and why, the warning signs, and what to do.',
+           'The three marks of a true church, what makes a church false and why, warning signs to look for, and when you must leave.',
+           ['How to Tell a True Church From a False One'], parent="guides.html", series='discern'),
+    _child('guide-find-a-church.html', 'How to Find a Faithful Church', 'How to Find a Reformed Presbyterian (RPCNA) Church · Gentle King', 'Guide', 'How to Find a Faithful Church',
+           'How to find a Reformed Presbyterian congregation, what to expect when you visit, what to do if none is near, and the questions to ask any church.',
+           'How to find an RPCNA Reformed Presbyterian church near you, what to expect when you visit, what to do if none is near, and questions to ask any church.',
+           ['How to Find a Faithful Church'], parent="guides.html", series='discern'),
+]
+
 # Where each part of the two old long pages went. A link from before the split,
 # such as comfort.html#grief, is sent on by site.js to the page that holds it now.
 MOVED = {
@@ -927,11 +994,16 @@ MOVED = {
     },
 }
 
-SERIES = {"objector": OBJECTOR_PAGES, "believer": BELIEVER_PAGES}
+SERIES = {
+    "objector": OBJECTOR_PAGES, "believer": BELIEVER_PAGES,
+    "life": [p for p in GUIDE_PAGES if p["series"] == "life"],
+    "discern": [p for p in GUIDE_PAGES if p["series"] == "discern"],
+}
 CHILDREN = {
     "comfort.html": COMFORT_PAGES,
     "apologetics.html": OBJECTOR_PAGES + BELIEVER_PAGES,
     APP_PAGE: SOJOURNER_PAGES,
+    "guides.html": GUIDE_PAGES,
 }
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
@@ -1173,6 +1245,7 @@ FOOTER = """<footer class="site-footer">
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html#objector">Answers to objections</a></li>
           <li><a href="apologetics.html#believer">Fear and doubt</a></li>
+          <li><a href="guides.html">Practical guides</a></li>
         </ul>
       </nav>
       <nav aria-label="Tools">
@@ -1771,8 +1844,10 @@ def pager_html(page):
             nxt = series[i + 1]
             links.append(f'  <a class="pager-next" href="{nxt["file"]}" rel="next"><span class="pager-dir">Next</span>'
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
-        up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer"}[page["series"]]
-        word = {"objector": "All the questions", "believer": "All the fears"}[page["series"]]
+        up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer",
+              "life": "guides.html#christian-life", "discern": "guides.html#discernment"}[page["series"]]
+        word = {"objector": "All the questions", "believer": "All the fears",
+                "life": "All the guides", "discern": "All the guides"}[page["series"]]
     else:
         up = parent["file"]
         word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
@@ -2334,6 +2409,7 @@ LLMS_GROUPS = [
     ("Doctrine", ["doctrine.html"]),
     ("Answers to objections", ["apologetics.html"] + [p["file"] for p in OBJECTOR_PAGES]),
     ("Fear, doubt, and assurance, for believers", [p["file"] for p in BELIEVER_PAGES]),
+    ("Practical guides", ["guides.html"] + [p["file"] for p in GUIDE_PAGES]),
 ]
 
 
