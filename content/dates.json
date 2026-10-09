@@ -100,8 +100,8 @@
     "published": "2026-09-23T07:36:20+00:00"
   },
   "comfort-death-of-a-child.html": {
-    "hash": "18979958a4d9d99c",
-    "modified": "2026-10-08T06:31:40+00:00",
+    "hash": "98e44f5899334535",
+    "modified": "2026-10-09T18:33:18+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-depression.html": {
@@ -174,6 +174,11 @@
     "modified": "2026-10-08T04:17:02+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
+  "guide-abortion.html": {
+    "hash": "6f0bf855cf0607a7",
+    "modified": "2026-10-09T18:33:18+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-bible-reading.html": {
     "hash": "f44f1685ed1d255b",
     "modified": "2026-10-08T06:32:44+00:00",
@@ -225,8 +230,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-ten-commandments.html": {
-    "hash": "ee902944f37674a2",
-    "modified": "2026-10-08T06:32:44+00:00",
+    "hash": "9faccd406e3fce52",
+    "modified": "2026-10-09T18:33:18+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-worship.html": {
@@ -235,8 +240,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "6f2a51223a84c2d6",
-    "modified": "2026-10-08T05:53:53+00:00",
+    "hash": "aa5df34f02c578cf",
+    "modified": "2026-10-09T18:33:18+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
