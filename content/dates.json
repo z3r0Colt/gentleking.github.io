@@ -100,8 +100,8 @@
     "published": "2026-09-23T07:36:20+00:00"
   },
   "comfort-death-of-a-child.html": {
-    "hash": "18979958a4d9d99c",
-    "modified": "2026-10-08T06:31:40+00:00",
+    "hash": "98e44f5899334535",
+    "modified": "2026-10-09T18:33:18+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-depression.html": {
@@ -174,9 +174,29 @@
     "modified": "2026-10-08T04:17:02+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
+  "guide-abortion.html": {
+    "hash": "e57da0e9f6a02d95",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-alcohol.html": {
+    "hash": "75ccb0be2014d8b9",
+    "modified": "2026-10-10T03:58:32+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-bible-reading.html": {
     "hash": "f44f1685ed1d255b",
     "modified": "2026-10-08T06:32:44+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-birth-control.html": {
+    "hash": "173f1195ef56141e",
+    "modified": "2026-10-10T03:50:58+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-death.html": {
+    "hash": "8d74d06597f0a5af",
+    "modified": "2026-10-10T03:50:58+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-evangelism.html": {
@@ -209,9 +229,29 @@
     "modified": "2026-10-08T06:32:44+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-gambling.html": {
+    "hash": "00974a492d392736",
+    "modified": "2026-10-10T03:51:19+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-government.html": {
+    "hash": "7a4157925bf5da05",
+    "modified": "2026-10-10T03:58:32+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-heresy.html": {
     "hash": "1060cd05a13d993a",
     "modified": "2026-10-08T12:30:14+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-homosexuality.html": {
+    "hash": "e18c8f1573498bbc",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-ivf.html": {
+    "hash": "8cf797988805441a",
+    "modified": "2026-10-10T03:50:58+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-lords-day.html": {
@@ -219,14 +259,49 @@
     "modified": "2026-10-08T06:32:44+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-marriage.html": {
+    "hash": "a8475a79004cfdfb",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-money.html": {
+    "hash": "03a59cce8ae86cc8",
+    "modified": "2026-10-10T03:50:58+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-parenting.html": {
+    "hash": "c6b74bf9f4c61883",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-prayer.html": {
     "hash": "4af19d2f2338e629",
     "modified": "2026-10-08T06:32:44+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-sex.html": {
+    "hash": "c1c4dd9669a977ce",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-spanking.html": {
+    "hash": "978e1b32d7efe6ef",
+    "modified": "2026-10-10T03:40:10+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-tattoos.html": {
+    "hash": "04633d4e78dfad83",
+    "modified": "2026-10-10T03:50:58+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-ten-commandments.html": {
-    "hash": "ee902944f37674a2",
-    "modified": "2026-10-08T06:32:44+00:00",
+    "hash": "9faccd406e3fce52",
+    "modified": "2026-10-09T18:33:18+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-work.html": {
+    "hash": "0ecef8b130fa7785",
+    "modified": "2026-10-10T03:40:10+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-worship.html": {
@@ -235,13 +310,13 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "6f2a51223a84c2d6",
-    "modified": "2026-10-08T05:53:53+00:00",
+    "hash": "5d6fad2edddb9822",
+    "modified": "2026-10-10T03:51:19+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
-    "hash": "8c7a80188bfef9c7",
-    "modified": "2026-10-08T06:16:27+00:00",
+    "hash": "ddfb68f44606b824",
+    "modified": "2026-10-10T03:40:10+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "mortify.html": {

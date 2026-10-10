@@ -43,7 +43,8 @@ stop you. A number with dashes in it may not dial.
 
 The Comfort pages carry crisis phone numbers. They are written in
 `content/comfort.html`, `content/partials/crisis.html`, `content/comfort-safety.html`,
-and the llms.txt text in `build.py`. Check them on the hotlines' own sites once a
+and the llms.txt text in `build.py`. The Option Line number for pregnant mothers is
+in `content/guide-abortion.html`. Check them on the hotlines' own sites once a
 year, and change the date in the comment at the top of `content/comfort.html` when
 you do.
 

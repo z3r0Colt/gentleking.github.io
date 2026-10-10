@@ -338,14 +338,14 @@ PAGES = [
         "h1": "Plain Guides for the Christian Life",
         "deck": (
             "How to pray, read the Bible, keep the Lord\u2019s Day, share the gospel, and examine "
-            "yourself. How to test a teacher, a doctrine, and a church, and how to find a faithful one."
+            "yourself. How to test a teacher, a doctrine, and a church. And what the Bible says "
+            "about marriage, sex, children, work, money, drink, government, death, and the hard questions."
         ),
         "description": (
-            "Short practical guides. Prayer, Bible reading, the Ten Commandments, "
-            "evangelism, false teachers, heresy, true churches, and finding an RPCNA church."
+            "What the Bible says about marriage, sex, abortion, IVF, money, alcohol, gambling, tattoos, government, and death, and practical guides for prayer and church."
         ),
         "schema": "CollectionPage",
-        "about": ["Christian living", "Discernment", "The church"],
+        "about": ["Christian living", "Discernment", "The church", "Christian ethics"],
         "toc": False,
     },
     {
@@ -935,6 +935,66 @@ GUIDE_PAGES = [
            'How to find a Reformed Presbyterian congregation, what to expect when you visit, what to do if none is near, and the questions to ask any church.',
            'How to find an RPCNA Reformed Presbyterian church near you, what to expect when you visit, what to do if none is near, and questions to ask any church.',
            ['How to Find a Faithful Church'], parent="guides.html", series='discern'),
+    _child('guide-marriage.html', 'What the Bible Says About Marriage', 'What the Bible Says About Marriage · Gentle King', 'What the Bible says', 'What the Bible Says About Marriage',
+           'God made marriage before sin entered the world. What it is, what it pictures, what husbands and wives owe each other, and when it may end.',
+           'What the Bible says about marriage. One man and one woman for life, headship and submission, marrying in the Lord, divorce, and singleness.',
+           ['Marriage'], parent="guides.html", series='says'),
+    _child('guide-sex.html', 'What the Bible Says About Sex', 'What the Bible Says About Sex and Purity · Gentle King', 'What the Bible says', 'What the Bible Says About Sex',
+           'Sex is a good gift of God, made for marriage. What Scripture gives, what it forbids, and the cleansing Christ gives the guilty.',
+           'What the Bible says about sex. A good gift for marriage alone, what the seventh commandment forbids, purity for the single, and pardon in Christ.',
+           ['Sexual purity', 'The seventh commandment'], parent="guides.html", series='says'),
+    _child('guide-homosexuality.html', 'What the Bible Says About Homosexuality and Gender', 'What the Bible Says About Homosexuality and Transgender Identity · Gentle King', 'What the Bible says', 'What the Bible Says About Homosexuality and Gender',
+           'God made us male and female. What Scripture says, plainly and kindly, to the curious, the struggling, and the families who love them.',
+           'What the Bible says about homosexuality and transgender identity, help for Christians who struggle, and how to love a gay or trans family member.',
+           ['Homosexuality', 'Gender'], parent="guides.html", series='says'),
+    _child('guide-birth-control.html', 'What the Bible Says About Birth Control', 'What the Bible Says About Birth Control and Contraception · Gentle King', 'What the Bible says', 'What the Bible Says About Birth Control',
+           'Children are a blessing. Where Scripture is plain, where faithful believers differ, and why no method may end a life.',
+           'What the Bible says about birth control. Children as a blessing, where Reformed believers differ, Onan, motives, and methods that can end a life.',
+           ['Birth control', 'Contraception'], parent="guides.html", series='says'),
+    _child('guide-ivf.html', 'What the Bible Says About IVF and Infertility', 'What the Bible Says About IVF and Infertility · Gentle King', 'What the Bible says', 'What the Bible Says About IVF and Infertility',
+           'The grief of an empty cradle, what is wrong in IVF as commonly done, frozen embryos, and the hope of the childless in Christ.',
+           'What the Bible says about infertility and IVF. Comfort for the childless, the moral problems in IVF, frozen embryos, donors, and adoption.',
+           ['Infertility', 'In vitro fertilization'], parent="guides.html", series='says'),
+    _child('guide-parenting.html', 'What the Bible Says About Raising Children', 'What the Bible Says About Raising Children · Gentle King', 'What the Bible says', 'What the Bible Says About Raising Children',
+           'Children are a heritage of the Lord. Teaching them, disciplining them, praying for them, and walking with them through the teen years.',
+           'What the Bible says about parenting. Covenant children, teaching the faith at home, fathers and mothers, the teen years, and Proverbs 22:6.',
+           ['Parenting', 'Christian family'], parent="guides.html", series='says'),
+    _child('guide-spanking.html', 'What the Bible Says About Spanking and Discipline', 'What the Bible Says About Spanking and Discipline · Gentle King', 'What the Bible says', 'What the Bible Says About Spanking and Discipline',
+           'What the rod in Proverbs means, how to correct a child in love and never in anger, and where discipline ends and abuse begins.',
+           'What the Bible says about spanking and disciplining children. The rod in Proverbs, guardrails against anger and abuse, and discipline as love.',
+           ['Discipline of children', 'Corporal punishment'], parent="guides.html", series='says'),
+    _child('guide-abortion.html', 'What the Bible Says About Abortion', 'What the Bible Says About Abortion and the Unborn · Gentle King', 'What the Bible says', 'What the Bible Says About Abortion',
+           'The unborn child bears the image of God. What Scripture says, the hard cases, help for a mother who is afraid, and mercy for the guilty.',
+           'What the Bible says about abortion and the unborn child, answers to common objections, help if you are pregnant and afraid, and forgiveness in Christ.',
+           ['Abortion', 'The sanctity of human life'], parent="guides.html", series='says'),
+    _child('guide-work.html', 'What the Bible Says About Work', 'What the Bible Says About Work · Gentle King', 'What the Bible says', 'What the Bible Says About Work',
+           'God gave work before the fall. Working as to the Lord, a hard boss, laziness and overwork, providing for a family, and resting in Christ.',
+           'What the Bible says about work. Every lawful calling as service to God, diligence, a hard boss, overwork and rest, and losing a job.',
+           ['Work and vocation'], parent="guides.html", series='says'),
+    _child('guide-money.html', 'What the Bible Says About Money and Debt', 'What the Bible Says About Money and Debt · Gentle King', 'What the Bible says', 'What the Bible Says About Money and Debt',
+           'God owns it all. Contentment, giving, the tithe, borrowing and debt, cosigning, saving, taxes, and help when debt has you under.',
+           'What the Bible says about money and debt. Stewardship, contentment, giving and the tithe, credit and loans, cosigning, and getting out from under.',
+           ['Money', 'Debt', 'Christian giving'], parent="guides.html", series='says'),
+    _child('guide-gambling.html', 'What the Bible Says About Gambling', 'What the Bible Says About Gambling · Gentle King', 'What the Bible says', 'What the Bible Says About Gambling',
+           'No verse says thou shalt not gamble. What the commandments do say, about lotteries, betting apps, lots, and the way out.',
+           'What the Bible says about gambling. Covetousness, lotteries and betting apps, casting lots, friendly bets, and help when gambling has hold of you.',
+           ['Gambling'], parent="guides.html", series='says'),
+    _child('guide-alcohol.html', 'What the Bible Says About Alcohol', 'What the Bible Says About Alcohol and Drinking · Gentle King', 'What the Bible says', 'What the Bible Says About Alcohol',
+           'Wine is a gift and drunkenness is sin. Christian liberty, the weaker brother, when to abstain, drugs, and help when drink has hold.',
+           'What the Bible says about alcohol. Wine as a gift, drunkenness as sin, freedom to drink or abstain, marijuana and drugs, and help for the addicted.',
+           ['Alcohol', 'Christian liberty'], parent="guides.html", series='says'),
+    _child('guide-tattoos.html', 'What the Bible Says About Tattoos', 'What the Bible Says About Tattoos and Piercings · Gentle King', 'What the Bible says', 'What the Bible Says About Tattoos',
+           'What Leviticus 19:28 meant, how Old Testament laws bind now, Christian liberty, and a word for those who already have them.',
+           'What the Bible says about tattoos. Leviticus 19:28 in its setting, moral and ceremonial law, Christian liberty, piercings, and parents.',
+           ['Tattoos', 'Old Testament law'], parent="guides.html", series='says'),
+    _child('guide-government.html', 'What the Bible Says About Government', 'What the Bible Says About Government and Christ the King · Gentle King', 'What the Bible says', 'What the Bible Says About Government',
+           'Rulers are ordained of God and owe allegiance to his Son. Obeying, praying, paying taxes, and when to obey God rather than men.',
+           'What the Bible says about government. Rulers as God’s ministers, the kingship of Christ over nations, taxes, and obeying God rather than men.',
+           ['Civil government', 'The kingship of Christ'], parent="guides.html", series='says'),
+    _child('guide-death.html', 'What the Bible Says About Death, Burial, and Cremation', 'What the Bible Says About Death, Burial, and Cremation · Gentle King', 'What the Bible says', 'What the Bible Says About Death, Burial, and Cremation',
+           'Death is an enemy Christ has beaten. What happens when we die, the resurrection, burial and cremation, and the end of life.',
+           'What the Bible says about death. What happens when we die, the resurrection of the body, burial and cremation, euthanasia, and preparing to die.',
+           ['Death', 'Burial', 'Cremation'], parent="guides.html", series='says'),
 ]
 
 # Where each part of the two old long pages went. A link from before the split,
@@ -1002,6 +1062,7 @@ SERIES = {
     "objector": OBJECTOR_PAGES, "believer": BELIEVER_PAGES,
     "life": [p for p in GUIDE_PAGES if p["series"] == "life"],
     "discern": [p for p in GUIDE_PAGES if p["series"] == "discern"],
+    "says": [p for p in GUIDE_PAGES if p["series"] == "says"],
 }
 CHILDREN = {
     "comfort.html": COMFORT_PAGES,
@@ -1844,9 +1905,10 @@ def pager_html(page):
             links.append(f'  <a class="pager-next" href="{nxt["file"]}" rel="next"><span class="pager-dir">Next</span>'
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
         up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer",
-              "life": "guides.html#christian-life", "discern": "guides.html#discernment"}[page["series"]]
+              "life": "guides.html#christian-life", "discern": "guides.html#discernment",
+              "says": "guides.html#bible-says"}[page["series"]]
         word = {"objector": "All the questions", "believer": "All the fears",
-                "life": "All the guides", "discern": "All the guides"}[page["series"]]
+                "life": "All the guides", "discern": "All the guides", "says": "All the guides"}[page["series"]]
     else:
         up = parent["file"]
         word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
