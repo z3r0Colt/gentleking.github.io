@@ -199,6 +199,11 @@
     "modified": "2026-10-10T03:50:58+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-disagreeing.html": {
+    "hash": "2191f72749694ce1",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-evangelism.html": {
     "hash": "db06210464b5b4a0",
     "modified": "2026-10-08T06:32:44+00:00",
@@ -224,9 +229,19 @@
     "modified": "2026-10-08T05:36:35+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-fasting.html": {
+    "hash": "a98c357442013c25",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-find-a-church.html": {
     "hash": "4af524f9a9be249c",
     "modified": "2026-10-08T06:32:44+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-forgiveness.html": {
+    "hash": "b399c194c9f46fe5",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-gambling.html": {
@@ -237,6 +252,11 @@
   "guide-government.html": {
     "hash": "7a4157925bf5da05",
     "modified": "2026-10-10T03:58:32+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-hearing-sermons.html": {
+    "hash": "7a7cf74866f5fde3",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-heresy.html": {
@@ -254,9 +274,19 @@
     "modified": "2026-10-10T03:50:58+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-leaving-a-church.html": {
+    "hash": "92a3a7f2b79053f9",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-lords-day.html": {
     "hash": "7db9389a3fdf6d75",
     "modified": "2026-10-08T06:32:44+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-lords-supper.html": {
+    "hash": "34ea36b8c4e2ea53",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-marriage.html": {
@@ -264,9 +294,24 @@
     "modified": "2026-10-10T04:07:08+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-media.html": {
+    "hash": "4133f834aa926e7b",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-meditation.html": {
+    "hash": "01b24a420711a5d2",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-money.html": {
     "hash": "03a59cce8ae86cc8",
     "modified": "2026-10-10T03:50:58+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-new-revelation.html": {
+    "hash": "9c8f9043bcc1f198",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-parenting.html": {
@@ -277,6 +322,21 @@
   "guide-prayer.html": {
     "hash": "4af19d2f2338e629",
     "modified": "2026-10-08T06:32:44+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-prophecy.html": {
+    "hash": "21b5bfd270f41102",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-reading-scripture.html": {
+    "hash": "355f0782b82e5c3b",
+    "modified": "2026-10-10T21:29:57+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
+  "guide-repentance.html": {
+    "hash": "dbcd75e8e9ec4eb1",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-sex.html": {
@@ -310,8 +370,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "c247838290d44113",
-    "modified": "2026-10-10T04:07:08+00:00",
+    "hash": "04374a4068d1702b",
+    "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
