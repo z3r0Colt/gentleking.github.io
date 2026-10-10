@@ -339,11 +339,10 @@ PAGES = [
         "deck": (
             "How to pray, read the Bible, keep the Lord\u2019s Day, share the gospel, and examine "
             "yourself. How to test a teacher, a doctrine, and a church. And what the Bible says "
-            "about marriage, sex, children, work, and the hard questions."
+            "about marriage, sex, children, work, money, drink, government, death, and the hard questions."
         ),
         "description": (
-            "Practical guides and what the Bible says. Prayer, the Ten Commandments, false "
-            "teachers, true churches, marriage, sex, parenting, work, and abortion."
+            "What the Bible says about marriage, sex, abortion, IVF, money, alcohol, gambling, tattoos, government, and death, and practical guides for prayer and church."
         ),
         "schema": "CollectionPage",
         "about": ["Christian living", "Discernment", "The church", "Christian ethics"],
@@ -948,6 +947,14 @@ GUIDE_PAGES = [
            'God made us male and female. What Scripture says, plainly and kindly, to the curious, the struggling, and the families who love them.',
            'What the Bible says about homosexuality and transgender identity, help for Christians who struggle, and how to love a gay or trans family member.',
            ['Homosexuality', 'Gender'], parent="guides.html", series='says'),
+    _child('guide-birth-control.html', 'What the Bible Says About Birth Control', 'What the Bible Says About Birth Control and Contraception · Gentle King', 'What the Bible says', 'What the Bible Says About Birth Control',
+           'Children are a blessing. Where Scripture is plain, where faithful believers differ, and why no method may end a life.',
+           'What the Bible says about birth control. Children as a blessing, where Reformed believers differ, Onan, motives, and methods that can end a life.',
+           ['Birth control', 'Contraception'], parent="guides.html", series='says'),
+    _child('guide-ivf.html', 'What the Bible Says About IVF and Infertility', 'What the Bible Says About IVF and Infertility · Gentle King', 'What the Bible says', 'What the Bible Says About IVF and Infertility',
+           'The grief of an empty cradle, what is wrong in IVF as commonly done, frozen embryos, and the hope of the childless in Christ.',
+           'What the Bible says about infertility and IVF. Comfort for the childless, the moral problems in IVF, frozen embryos, donors, and adoption.',
+           ['Infertility', 'In vitro fertilization'], parent="guides.html", series='says'),
     _child('guide-parenting.html', 'What the Bible Says About Raising Children', 'What the Bible Says About Raising Children · Gentle King', 'What the Bible says', 'What the Bible Says About Raising Children',
            'Children are a heritage of the Lord. Teaching them, disciplining them, praying for them, and walking with them through the teen years.',
            'What the Bible says about parenting. Covenant children, teaching the faith at home, fathers and mothers, the teen years, and Proverbs 22:6.',
@@ -964,6 +971,30 @@ GUIDE_PAGES = [
            'God gave work before the fall. Working as to the Lord, a hard boss, laziness and overwork, providing for a family, and resting in Christ.',
            'What the Bible says about work. Every lawful calling as service to God, diligence, a hard boss, overwork and rest, and losing a job.',
            ['Work and vocation'], parent="guides.html", series='says'),
+    _child('guide-money.html', 'What the Bible Says About Money and Debt', 'What the Bible Says About Money and Debt · Gentle King', 'What the Bible says', 'What the Bible Says About Money and Debt',
+           'God owns it all. Contentment, giving, the tithe, borrowing and debt, cosigning, saving, taxes, and help when debt has you under.',
+           'What the Bible says about money and debt. Stewardship, contentment, giving and the tithe, credit and loans, cosigning, and getting out from under.',
+           ['Money', 'Debt', 'Christian giving'], parent="guides.html", series='says'),
+    _child('guide-gambling.html', 'What the Bible Says About Gambling', 'What the Bible Says About Gambling · Gentle King', 'What the Bible says', 'What the Bible Says About Gambling',
+           'No verse says thou shalt not gamble. What the commandments do say, about lotteries, betting apps, lots, and the way out.',
+           'What the Bible says about gambling. Covetousness, lotteries and betting apps, casting lots, friendly bets, and help when gambling has hold of you.',
+           ['Gambling'], parent="guides.html", series='says'),
+    _child('guide-alcohol.html', 'What the Bible Says About Alcohol', 'What the Bible Says About Alcohol and Drinking · Gentle King', 'What the Bible says', 'What the Bible Says About Alcohol',
+           'Wine is a gift and drunkenness is sin. Christian liberty, the weaker brother, when to abstain, drugs, and help when drink has hold.',
+           'What the Bible says about alcohol. Wine as a gift, drunkenness as sin, freedom to drink or abstain, marijuana and drugs, and help for the addicted.',
+           ['Alcohol', 'Christian liberty'], parent="guides.html", series='says'),
+    _child('guide-tattoos.html', 'What the Bible Says About Tattoos', 'What the Bible Says About Tattoos and Piercings · Gentle King', 'What the Bible says', 'What the Bible Says About Tattoos',
+           'What Leviticus 19:28 meant, how Old Testament laws bind now, Christian liberty, and a word for those who already have them.',
+           'What the Bible says about tattoos. Leviticus 19:28 in its setting, moral and ceremonial law, Christian liberty, piercings, and parents.',
+           ['Tattoos', 'Old Testament law'], parent="guides.html", series='says'),
+    _child('guide-government.html', 'What the Bible Says About Government', 'What the Bible Says About Government and Christ the King · Gentle King', 'What the Bible says', 'What the Bible Says About Government',
+           'Rulers are ordained of God and owe allegiance to his Son. Obeying, praying, paying taxes, and when to obey God rather than men.',
+           'What the Bible says about government. Rulers as God’s ministers, the kingship of Christ over nations, taxes, and obeying God rather than men.',
+           ['Civil government', 'The kingship of Christ'], parent="guides.html", series='says'),
+    _child('guide-death.html', 'What the Bible Says About Death, Burial, and Cremation', 'What the Bible Says About Death, Burial, and Cremation · Gentle King', 'What the Bible says', 'What the Bible Says About Death, Burial, and Cremation',
+           'Death is an enemy Christ has beaten. What happens when we die, the resurrection, burial and cremation, and the end of life.',
+           'What the Bible says about death. What happens when we die, the resurrection of the body, burial and cremation, euthanasia, and preparing to die.',
+           ['Death', 'Burial', 'Cremation'], parent="guides.html", series='says'),
 ]
 
 # Where each part of the two old long pages went. A link from before the split,
