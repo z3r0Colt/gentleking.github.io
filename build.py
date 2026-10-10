@@ -338,14 +338,15 @@ PAGES = [
         "h1": "Plain Guides for the Christian Life",
         "deck": (
             "How to pray, read the Bible, keep the Lord\u2019s Day, share the gospel, and examine "
-            "yourself. How to test a teacher, a doctrine, and a church, and how to find a faithful one."
+            "yourself. How to test a teacher, a doctrine, and a church. And what the Bible says "
+            "about marriage, sex, children, work, and the hard questions."
         ),
         "description": (
-            "Short practical guides. Prayer, Bible reading, the Ten Commandments, "
-            "evangelism, false teachers, heresy, true churches, and finding an RPCNA church."
+            "Practical guides and what the Bible says. Prayer, the Ten Commandments, false "
+            "teachers, true churches, marriage, sex, parenting, work, and abortion."
         ),
         "schema": "CollectionPage",
-        "about": ["Christian living", "Discernment", "The church"],
+        "about": ["Christian living", "Discernment", "The church", "Christian ethics"],
         "toc": False,
     },
     {
@@ -903,10 +904,6 @@ GUIDE_PAGES = [
            'Why a forgiven Christian still keeps God’s law, how to read it, what each commandment requires and forbids, and how to use them this week.',
            'Why a Christian keeps the Ten Commandments, how to read them, what each one requires and forbids by the Shorter Catechism, and how to use them.',
            ['The Ten Commandments for a Believer'], parent="guides.html", series='life'),
-    _child('guide-abortion.html', 'What the Bible Says About Abortion', 'What the Bible Says About Abortion and the Unborn · Gentle King', 'Guide', 'What the Bible Says About Abortion',
-           'The unborn child bears the image of God. What Scripture says, the hard cases, help for a mother who is afraid, and mercy for the guilty.',
-           'What the Bible says about abortion and the unborn child, answers to common objections, help if you are pregnant and afraid, and forgiveness in Christ.',
-           ['Abortion', 'The sanctity of human life'], parent="guides.html", series='life'),
     _child('guide-worship.html', 'How God Is to Be Worshiped', 'The Regulative Principle of Worship \u00b7 How God Is to Be Worshiped \u00b7 Gentle King', 'Guide', 'How God Is to Be Worshiped',
            'The regulative principle in plain words. God decides how he is worshiped, what he has commanded, what that rules out, and why it matters.',
            'The regulative principle of worship explained plainly. What God commands in worship, elements and circumstances, psalm singing, and why it matters.',
@@ -939,6 +936,34 @@ GUIDE_PAGES = [
            'How to find a Reformed Presbyterian congregation, what to expect when you visit, what to do if none is near, and the questions to ask any church.',
            'How to find an RPCNA Reformed Presbyterian church near you, what to expect when you visit, what to do if none is near, and questions to ask any church.',
            ['How to Find a Faithful Church'], parent="guides.html", series='discern'),
+    _child('guide-marriage.html', 'What the Bible Says About Marriage', 'What the Bible Says About Marriage · Gentle King', 'What the Bible says', 'What the Bible Says About Marriage',
+           'God made marriage before sin entered the world. What it is, what it pictures, what husbands and wives owe each other, and when it may end.',
+           'What the Bible says about marriage. One man and one woman for life, headship and submission, marrying in the Lord, divorce, and singleness.',
+           ['Marriage'], parent="guides.html", series='says'),
+    _child('guide-sex.html', 'What the Bible Says About Sex', 'What the Bible Says About Sex and Purity · Gentle King', 'What the Bible says', 'What the Bible Says About Sex',
+           'Sex is a good gift of God, made for marriage. What Scripture gives, what it forbids, and the cleansing Christ gives the guilty.',
+           'What the Bible says about sex. A good gift for marriage alone, what the seventh commandment forbids, purity for the single, and pardon in Christ.',
+           ['Sexual purity', 'The seventh commandment'], parent="guides.html", series='says'),
+    _child('guide-homosexuality.html', 'What the Bible Says About Homosexuality and Gender', 'What the Bible Says About Homosexuality and Transgender Identity · Gentle King', 'What the Bible says', 'What the Bible Says About Homosexuality and Gender',
+           'God made us male and female. What Scripture says, plainly and kindly, to the curious, the struggling, and the families who love them.',
+           'What the Bible says about homosexuality and transgender identity, help for Christians who struggle, and how to love a gay or trans family member.',
+           ['Homosexuality', 'Gender'], parent="guides.html", series='says'),
+    _child('guide-parenting.html', 'What the Bible Says About Raising Children', 'What the Bible Says About Raising Children · Gentle King', 'What the Bible says', 'What the Bible Says About Raising Children',
+           'Children are a heritage of the Lord. Teaching them, disciplining them, praying for them, and walking with them through the teen years.',
+           'What the Bible says about parenting. Covenant children, teaching the faith at home, fathers and mothers, the teen years, and Proverbs 22:6.',
+           ['Parenting', 'Christian family'], parent="guides.html", series='says'),
+    _child('guide-spanking.html', 'What the Bible Says About Spanking and Discipline', 'What the Bible Says About Spanking and Discipline · Gentle King', 'What the Bible says', 'What the Bible Says About Spanking and Discipline',
+           'What the rod in Proverbs means, how to correct a child in love and never in anger, and where discipline ends and abuse begins.',
+           'What the Bible says about spanking and disciplining children. The rod in Proverbs, guardrails against anger and abuse, and discipline as love.',
+           ['Discipline of children', 'Corporal punishment'], parent="guides.html", series='says'),
+    _child('guide-abortion.html', 'What the Bible Says About Abortion', 'What the Bible Says About Abortion and the Unborn · Gentle King', 'What the Bible says', 'What the Bible Says About Abortion',
+           'The unborn child bears the image of God. What Scripture says, the hard cases, help for a mother who is afraid, and mercy for the guilty.',
+           'What the Bible says about abortion and the unborn child, answers to common objections, help if you are pregnant and afraid, and forgiveness in Christ.',
+           ['Abortion', 'The sanctity of human life'], parent="guides.html", series='says'),
+    _child('guide-work.html', 'What the Bible Says About Work', 'What the Bible Says About Work · Gentle King', 'What the Bible says', 'What the Bible Says About Work',
+           'God gave work before the fall. Working as to the Lord, a hard boss, laziness and overwork, providing for a family, and resting in Christ.',
+           'What the Bible says about work. Every lawful calling as service to God, diligence, a hard boss, overwork and rest, and losing a job.',
+           ['Work and vocation'], parent="guides.html", series='says'),
 ]
 
 # Where each part of the two old long pages went. A link from before the split,
@@ -1006,6 +1031,7 @@ SERIES = {
     "objector": OBJECTOR_PAGES, "believer": BELIEVER_PAGES,
     "life": [p for p in GUIDE_PAGES if p["series"] == "life"],
     "discern": [p for p in GUIDE_PAGES if p["series"] == "discern"],
+    "says": [p for p in GUIDE_PAGES if p["series"] == "says"],
 }
 CHILDREN = {
     "comfort.html": COMFORT_PAGES,
@@ -1848,9 +1874,10 @@ def pager_html(page):
             links.append(f'  <a class="pager-next" href="{nxt["file"]}" rel="next"><span class="pager-dir">Next</span>'
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
         up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer",
-              "life": "guides.html#christian-life", "discern": "guides.html#discernment"}[page["series"]]
+              "life": "guides.html#christian-life", "discern": "guides.html#discernment",
+              "says": "guides.html#bible-says"}[page["series"]]
         word = {"objector": "All the questions", "believer": "All the fears",
-                "life": "All the guides", "discern": "All the guides"}[page["series"]]
+                "life": "All the guides", "discern": "All the guides", "says": "All the guides"}[page["series"]]
     else:
         up = parent["file"]
         word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
