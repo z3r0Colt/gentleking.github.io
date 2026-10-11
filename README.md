@@ -2,7 +2,7 @@
 
 The ministry site for Gentle King. The gospel of Jesus Christ, Scripture for hard
 hours, help in the fight against sin, Reformed doctrine, and answers to objections.
-It also gives away two tools, Sojourner, a Bible study program for Windows, and
+It also gives away two tools, Sojourner, a Bible study program for Windows and Linux, and
 Mortify, an app for the fight against sin.
 
 It is a plain static site. No framework, no npm, no dependencies. GitHub Pages
@@ -107,11 +107,16 @@ favicon.ico             a copy of the tab icon, for tools that only look at the 
 ## Releasing a new version of Sojourner
 
 The download button points at the releases page, not at a specific file, so it
-keeps working when you post a new build. After a release, change `APP_VERSION` and
-`APP_SIZE_MB` near the top of `build.py`. Those two lines fill in every place the
-pages show the version or the size, written as `{{version}}` and `{{size}}` in
-`content/`, along with the structured data and llms.txt. If the release brings
+keeps working when you post a new build. After a release, change `APP_VERSION`,
+`APP_SIZE_MB`, `APP_SIZE_DEB_MB`, and `APP_SIZE_APPIMAGE_MB` near the top of
+`build.py`, using the sizes the release notes give for the Windows installer, the
+Linux .deb, and the AppImage. Those four lines fill in every place the pages show
+the version or a size, written as `{{version}}`, `{{size}}`, `{{size_deb}}`, and
+`{{size_appimage}}` in `content/`, along with the structured data and llms.txt. If the release brings
 something new, say so in the Updating part of `content/sojourner-install.html`.
+
+If the release changes which systems Sojourner runs on, look over the System line on
+`content/sojourner.html` and the Installing It part of `content/sojourner-install.html`.
 
 If the release adds, removes, or renames translations, shelves, or reference works,
 the counts and names in `content/sojourner.html`, `content/sojourner-library.html`,

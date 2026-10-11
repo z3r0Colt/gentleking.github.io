@@ -1,13 +1,29 @@
 <section class="section" id="install">
   <p class="eyebrow">The first time</p>
   <h2>Installing It</h2>
-  <p>Download the installer from the <a href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">releases page</a>
-    and run it. It installs for you alone, so it needs no administrator rights. It bundles the
-    Microsoft Edge WebView2 runtime that Sojourner draws with, so it installs on a machine that has
-    never been online.</p>
-  <p>One installer holds everything but the book library. The books come as four shelves, each its
-    own download, and they are on the releases page too, further down, under Sojourner Library
-    Packs. <a href="#shelves">Adding a shelf</a> is set out below.</p>
+  <p>Go to the <a href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">releases page</a>
+    and download the one file for your computer. All three hold the same program, with everything in it.</p>
+  <h3 id="windows">On Windows</h3>
+  <p>Download the file ending in <code>x64-setup.exe</code> and run it. It installs for you alone, so
+    it needs no administrator rights. It bundles the Microsoft Edge WebView2 runtime that Sojourner
+    draws with, so it installs on a machine that has never been online. It runs on Windows 10 or 11, 64-bit.</p>
+  <h3 id="linux">On Linux</h3>
+  <p>Sojourner needs a 64-bit Linux system from 2024 or later.</p>
+  <ol class="steps">
+    <li><strong>Ubuntu 24.04, Linux Mint 22, Debian 13, or newer.</strong> Download the file ending in
+      <code>.deb</code> and open it in your software installer. Or, in a terminal in the folder where
+      it landed, run <code>sudo apt install ./Sojourner_{{version}}_amd64.deb</code>.</li>
+    <li><strong>Most other systems, such as Fedora 40 or newer.</strong> Download the file ending in
+      <code>.AppImage</code>. It runs without installing. Make it executable, either in its
+      Properties by allowing it to run as a program or with <code>chmod +x</code> in a terminal, and
+      then open it. It needs the <code>libfuse2</code> package, which Ubuntu 24.04 calls
+      <code>libfuse2t64</code>.</li>
+  </ol>
+  <p>Moving from Windows to Linux? On the Windows computer, open Settings, choose Data and backups,
+    and Export. Copy that file across, then choose Import in the same place on Linux.</p>
+  <p>The book library is not in any of the three. The books come as four shelves, each its own
+    download, on the releases page too, further down, under Sojourner Library Packs. The same shelf
+    files work on Windows and Linux alike. <a href="#shelves">Adding a shelf</a> is set out below.</p>
   <p>New to the program? A tutorial built into it walks through every feature. You will find it in
     Settings, under Tutorial.</p>
 </section>
@@ -18,17 +34,18 @@
   <p>Neither of these is a problem with the program, but you should know about both before you
     double-click anything.</p>
   <div class="callout">
-    <p><strong>Windows will warn you.</strong> The installer is not code-signed, because a
+    <p><strong>Windows will warn you.</strong> The Windows installer is not code-signed, because a
       certificate costs money this work does not have. So SmartScreen shows a blue box the first
       time you run it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. The
-      release page lists the installer&rsquo;s SHA-256 checksum, a kind of fingerprint for the file,
-      so anyone who knows how can confirm the file is the one that was published. The installer is
+      release page lists each file&rsquo;s SHA-256 checksum, a kind of fingerprint for the file,
+      so anyone who knows how can confirm the file is the one that was published. All three files are
       built by GitHub from the public source code, not on anyone&rsquo;s own computer, and the
       release page links the record of that build. If the warning
       makes you uneasy, that instinct is a good one, and you are welcome to pass on it.</p>
   </div>
   <div class="callout">
-    <p><strong>It is a large download.</strong> About {{size}} MB, because the texts and the reading voice
+    <p><strong>It is a large download.</strong> About {{size}} MB for Windows, {{size_deb}} MB for the
+      .deb, and {{size_appimage}} MB for the AppImage, because the texts and the reading voice
       are all inside it rather than fetched from a server later. That is the trade. One long
       download once, and then the program never needs the network again.</p>
   </div>
@@ -42,10 +59,13 @@
   <h2>Updating</h2>
   <p>Sojourner does not update itself. To see whether a newer version exists, open the About page
     in Settings and press the button there. That button is the only thing in the program that goes
-    online. Then download the new installer and run it over the old one.</p>
-  <p>Your notes, highlights, sermons, prayers, bookmarks, and installed shelves are all kept. Even
-    so, make a backup first. You will find it in Settings, under Data and backups.</p>
-  <p>Version 0.4.0 brought <a href="sojourner-features.html#color-text">Color text</a>, which puts
+    online. On Windows, download the new installer and run it over the old one. On Linux, install the
+    new .deb the same way you installed the first, or put the new AppImage in place of the old one.</p>
+  <p>Your notes, highlights, sermons, prayers, bookmarks, and installed shelves live in your own data,
+    apart from the program, and they are kept. Even so, make a backup first. You will find it in
+    Settings, under Data and backups.</p>
+  <p>Version 0.4.1 brought Sojourner to Linux, the same program with everything the Windows version
+    has. Version 0.4.0 brought <a href="sojourner-features.html#color-text">Color text</a>, which puts
     every person, place, time, and number in the Bible in its own color, and Who&rsquo;s speaking,
     which sets God&rsquo;s own words apart from the story around them.</p>
 </section>
