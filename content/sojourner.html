@@ -1,7 +1,7 @@
 <section class="section" id="what">
   <p class="eyebrow">What it is</p>
   <h2>Scripture, and the Church Reading It With You</h2>
-  <p class="lede">Sojourner is a free, offline Windows desktop application for reading the Bible beside the
+  <p class="lede">Sojourner is a free, offline desktop application for Windows and Linux, for reading the Bible beside the
     commentaries, confessions, and reference works the Reformed church has been handing down for
     four hundred years. The Hebrew and Greek lie underneath, and the tools for preparing a sermon
     and leading family worship sit on top. All of it is on your own machine. None of it asks you to sign in.</p>
@@ -117,19 +117,20 @@
   <h2>Get Sojourner</h2>
   <div class="get">
     <h3>Sojourner {{version}}</h3>
-    <p class="get-meta">Free &middot; Windows 10 and 11, 64-bit &middot; About {{size}} MB</p>
-    <p>One installer with everything but the book library inside it. No account to make and
-      nothing to buy. The books come as four shelves, each its own download, further down the same
+    <p class="get-meta">Free &middot; Windows 10 and 11, and Linux &middot; 64-bit</p>
+    <p>One download with everything but the book library inside it, for Windows or for Linux. No
+      account to make and nothing to buy. The books come as four shelves, each its own download, further down the same
       releases page under Sojourner Library Packs.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows</a>
+      <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows or Linux</a>
       <a class="btn" href="sojourner-install.html">Installing and updating</a>
     </div>
   </div>
   <dl class="spec">
     <dt>Version</dt><dd>{{version}}</dd>
-    <dt>System</dt><dd>Windows 10 or 11, 64-bit. There is no Mac, Linux, or phone version.</dd>
-    <dt>Install</dt><dd>Per user. No administrator rights needed.</dd>
+    <dt>System</dt><dd>Windows 10 or 11, 64-bit. Linux, 64-bit, from 2024 on, as a .deb for Ubuntu 24.04, Linux Mint 22, and Debian 13 or newer, or as an AppImage for most other systems, Fedora 40 or newer among them. There is no Mac or phone version.</dd>
+    <dt>Size</dt><dd>About {{size}} MB for Windows, {{size_deb}} MB for the .deb, and {{size_appimage}} MB for the AppImage</dd>
+    <dt>Install</dt><dd>On Windows, per user, with no administrator rights. On Linux, through your software installer, or run the AppImage without installing.</dd>
     <dt>Network</dt><dd>None required, at install or after</dd>
     <dt>Updates</dt><dd>By hand. Check on the About page in Settings, then download the new installer.</dd>
     <dt>Price</dt><dd>Free</dd>
@@ -139,18 +140,19 @@
     <dt>Built with</dt><dd>Tauri, Rust, and React</dd>
   </dl>
   <div class="callout">
-    <p><strong>Windows will warn you the first time.</strong> The installer is not code-signed, so
+    <p><strong>Windows will warn you the first time.</strong> The Windows installer is not code-signed, so
       SmartScreen shows a blue box. Click <strong>More info</strong>, then <strong>Run anyway</strong>.
       <a href="sojourner-install.html#before-you-install">Why it warns, and how to check the file</a>.</p>
-    <p><strong>It is a large download,</strong> about {{size}} MB, because the texts and the reading
-      voice are all inside it. After that the program never needs the network again.</p>
+    <p><strong>It is a large download,</strong> about {{size}} MB on Windows and a little more or less
+      on Linux, because the texts and the reading voice are all inside it. After that the program never needs the network again.</p>
   </div>
 </section>
 
 <section class="section" id="free-bible-software">
-  <p class="eyebrow">For Windows</p>
-  <h2>Free Bible Software for Windows</h2>
-  <p>If you are looking for a free Bible program for your Windows PC, Sojourner is one. It costs
+  <p class="eyebrow">For Windows and Linux</p>
+  <h2>Free Bible Software for Windows and Linux</h2>
+  <p>If you are looking for a free Bible program for your Windows PC or your Linux machine,
+    Sojourner is one. On Linux it is the same program, with everything in it. It costs
     nothing, it needs no account, and once it is installed it works with no internet connection at
     all. It is a Bible study app for the desktop, not a phone app or a website.</p>
   <p>Anyone who has used e-Sword or theWord will know the idea. The Bible sits in one pane and the
@@ -163,8 +165,8 @@
 
 <section class="section" id="limits">
   <h2>What It Does Not Have</h2>
-  <p>It runs on Windows only, and nothing syncs between computers. It does not update itself
-    either.</p>
+  <p>It runs on Windows and Linux, not on a Mac or a phone, and nothing syncs between computers.
+    It does not update itself either.</p>
   <p>It cannot include the ESV, the NIV, or the NASB, because they are under copyright. The same is
     true of BDAG and HALOT, the standard scholarly lexicons for Greek and Hebrew. If you own a
     modern translation as a Zefania XML file, you can add it yourself.</p>
@@ -188,8 +190,8 @@
     </article>
     <article class="card">
       <h3>Installing and updating</h3>
-      <p>The Windows warning, updating over an old version, and adding the book shelves and the
-        map packs.</p>
+      <p>Installing on Windows or Linux, the Windows warning, updating over an old version, and
+        adding the book shelves and the map packs.</p>
       <p class="card-go"><a href="sojourner-install.html">Install, update, and add shelves</a></p>
     </article>
   </div>
