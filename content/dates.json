@@ -1,7 +1,7 @@
 {
   "about.html": {
-    "hash": "4ea8fabbf6fe3803",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "a8f43efc2791d621",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "apologetics-bible.html": {
@@ -185,8 +185,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-bible-reading.html": {
-    "hash": "847f20d285545517",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "2e75336b2ec0b14f",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-birth-control.html": {
@@ -375,13 +375,13 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
-    "hash": "7e825ab8891018c7",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "646b5ebc1fa52890",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "mortify.html": {
-    "hash": "c1b49584a593f5c6",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "7af87de927ca3519",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-10-07T20:59:32+00:00"
   },
   "resources.html": {
@@ -390,23 +390,28 @@
     "published": "2026-09-17T00:07:53+00:00"
   },
   "sojourner-features.html": {
-    "hash": "3e10bdfd700f8a69",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "7b6d70b5dd15d163",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "sojourner-install.html": {
-    "hash": "343d9673f4717025",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "e1f680db1942a8c5",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "sojourner-library.html": {
-    "hash": "3a9e2bcc5c34f875",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "7d1152e675862d8b",
+    "modified": "2026-10-13T15:48:39+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "sojourner-web.html": {
+    "hash": "8c650d7745c2b17d",
+    "modified": "2026-10-13T15:48:39+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "sojourner.html": {
-    "hash": "2fbc767fa9db777c",
-    "modified": "2026-10-11T19:21:00+00:00",
+    "hash": "5349352d10bab222",
+    "modified": "2026-10-13T15:49:35+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "struggle.html": {
