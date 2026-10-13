@@ -1,10 +1,12 @@
 <section class="section" id="what">
   <p class="eyebrow">What it is</p>
   <h2>Scripture, and the Church Reading It With You</h2>
-  <p class="lede">Sojourner is a free, offline desktop application for Windows and Linux, for reading the Bible beside the
+  <p class="lede">Sojourner is a free Bible study companion for your phone, tablet, or computer, for reading the Bible beside the
     commentaries, confessions, and reference works the Reformed church has been handing down for
     four hundred years. The Hebrew and Greek lie underneath, and the tools for preparing a sermon
-    and leading family worship sit on top. All of it is on your own machine. None of it asks you to sign in.</p>
+    and leading family worship sit on top. It runs in any browser at
+    <a href="https://app.gentleking.org/" target="_blank" rel="noopener">app.gentleking.org</a>, or as a
+    program on Windows and Linux. Your notes stay on your own device, and none of it asks you to sign in.</p>
   <p>Most study software wants something from you first. An account. A subscription. A connection.
     A tier that hides the good commentaries until you pay. Sojourner wants none of it. You install
     it, and the Bibles, the commentaries, and the reference works are already there. It is for the
@@ -103,6 +105,11 @@
     and no telemetry of any kind. Nothing you read, search, write, or pray is reported anywhere,
     because there is nowhere for it to go. Even the book shelves install from files you download
     yourself, so they can just as well arrive on a USB stick.</p>
+  <p>That is the desktop program. The web app keeps the same promise in a browser. Your notes stay
+    in your browser&rsquo;s private storage on your own device, there is no account, and the app sends
+    nothing about you. It fetches the books from this ministry&rsquo;s own server as you read them,
+    and it can download the whole library once so that it never needs the network again.
+    <a href="sojourner-web.html#your-data">More on the web app and your data</a>.</p>
   <p>Everything you write lives in one file on your machine. Snapshots and automatic backups run in
     the background. You can export the whole database and import it again, run an integrity check,
     keep a copy in a OneDrive or Dropbox folder if you want one, and look at your own reading
@@ -117,24 +124,28 @@
   <h2>Get Sojourner</h2>
   <div class="get">
     <h3>Sojourner {{version}}</h3>
-    <p class="get-meta">Free &middot; Windows 10 and 11, and Linux &middot; 64-bit</p>
-    <p>One download with everything but the book library inside it, for Windows or for Linux. No
+    <p class="get-meta">Free &middot; In any browser, or on Windows and Linux</p>
+    <p>Open it in the browser on any phone, tablet, or computer, and put it on your home screen. Or
+      download the program for Windows or Linux, with everything but the book library inside it. No
       account to make and nothing to buy. The books come as four shelves, each its own download, further down the same
       releases page under Sojourner Library Packs.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows or Linux</a>
-      <a class="btn" href="sojourner-install.html">Installing and updating</a>
+      <a class="btn btn-primary" href="https://app.gentleking.org/" target="_blank" rel="noopener">Open in your browser</a>
+      <a class="btn" href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">Download for Windows or Linux</a>
     </div>
+    <p>On a phone or a Mac? See <a href="sojourner-web.html">Sojourner on Your Phone</a>. On Windows
+      or Linux, see <a href="sojourner-install.html">Installing and updating</a>.</p>
   </div>
   <dl class="spec">
     <dt>Version</dt><dd>{{version}}</dd>
-    <dt>System</dt><dd>Windows 10 or 11, 64-bit. Linux, 64-bit, from 2024 on, as a .deb for Ubuntu 24.04, Linux Mint 22, and Debian 13 or newer, or as an AppImage for most other systems, Fedora 40 or newer among them. There is no Mac or phone version.</dd>
+    <dt>In the browser</dt><dd>Any modern browser, at <a href="https://app.gentleking.org/" target="_blank" rel="noopener">app.gentleking.org</a>. It installs to the home screen on iPhone, iPad, and Android, and to the dock on a Mac. <a href="sojourner-web.html">How it works</a></dd>
+    <dt>Desktop</dt><dd>Windows 10 or 11, 64-bit. Linux, 64-bit, from 2024 on, as a .deb for Ubuntu 24.04, Linux Mint 22, and Debian 13 or newer, or as an AppImage for most other systems, Fedora 40 or newer among them. For a Mac or a phone, use the web app.</dd>
     <dt>Size</dt><dd>About {{size}} MB for Windows, {{size_deb}} MB for the .deb, and {{size_appimage}} MB for the AppImage</dd>
-    <dt>Install</dt><dd>On Windows, per user, with no administrator rights. On Linux, through your software installer, or run the AppImage without installing.</dd>
-    <dt>Network</dt><dd>None required, at install or after</dd>
-    <dt>Updates</dt><dd>By hand. Check on the About page in Settings, then download the new installer.</dd>
+    <dt>Install</dt><dd>In the browser, add it to your home screen. On Windows, per user, with no administrator rights. On Linux, through your software installer, or run the AppImage without installing.</dd>
+    <dt>Network</dt><dd>The desktop program needs none, at install or after. The web app fetches books as you read them, or all at once to use offline.</dd>
+    <dt>Updates</dt><dd>The desktop program, by hand. Check on the About page in Settings, then download the new installer.</dd>
     <dt>Price</dt><dd>Free</dd>
-    <dt>Privacy</dt><dd>No account and no telemetry. It goes online only when you press the button that checks for a new version.</dd>
+    <dt>Privacy</dt><dd>No account and no telemetry. Your notes stay on your device. The desktop program goes online only when you press the button that checks for a new version.</dd>
     <dt>Made by</dt><dd>Colt, <a href="about.html#who">who writes this site</a>. Published by <a href="./">gentleking.org</a>.</dd>
     <dt>Download</dt><dd><a href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">github.com/z3r0Colt/sojourner/releases</a></dd>
     <dt>Built with</dt><dd>Tauri, Rust, and React</dd>
@@ -149,12 +160,12 @@
 </section>
 
 <section class="section" id="free-bible-software">
-  <p class="eyebrow">For Windows and Linux</p>
-  <h2>Free Bible Software for Windows and Linux</h2>
-  <p>If you are looking for a free Bible program for your Windows PC or your Linux machine,
-    Sojourner is one. On Linux it is the same program, with everything in it. It costs
+  <p class="eyebrow">For every device</p>
+  <h2>Free Bible Software for Your Phone and Computer</h2>
+  <p>If you are looking for a free Bible app for your iPhone, your Android, your Mac, your Windows PC,
+    or your Linux machine, Sojourner is one. It is the same program everywhere. It costs
     nothing, it needs no account, and once it is installed it works with no internet connection at
-    all. It is a Bible study app for the desktop, not a phone app or a website.</p>
+    all. In the browser it can download its whole library and do the same.</p>
   <p>Anyone who has used e-Sword or theWord will know the idea. The Bible sits in one pane and the
     commentaries follow along in another. Sojourner differs in what comes in the box. Matthew Henry,
     Calvin, the Westminster Standards, the Three Forms of Unity, the Psalter, and the Hebrew and Greek
@@ -165,8 +176,10 @@
 
 <section class="section" id="limits">
   <h2>What It Does Not Have</h2>
-  <p>It runs on Windows and Linux, not on a Mac or a phone, and nothing syncs between computers.
-    It does not update itself either.</p>
+  <p>Nothing syncs between devices, though Export and Import carry your notes across. The desktop
+    program does not update itself. In the browser, a few things are left out because a browser
+    cannot do them, and <a href="sojourner-web.html#differences">What the Web Version Leaves Out</a>
+    names them.</p>
   <p>It cannot include the ESV, the NIV, or the NASB, because they are under copyright. The same is
     true of BDAG and HALOT, the standard scholarly lexicons for Greek and Hebrew. If you own a
     modern translation as a Zefania XML file, you can add it yourself.</p>
@@ -175,12 +188,18 @@
 <section class="section" id="more">
   <p class="eyebrow">The fuller account</p>
   <h2>More About Sojourner</h2>
-  <div class="grid grid-3">
+  <div class="grid grid-2">
     <article class="card">
       <h3>Everything it does</h3>
       <p>Color text, the panes, the Hebrew and Greek, the atlas and timeline, search, reading,
         notes, sermons, memory, the Psalter, and family worship, each with pictures.</p>
       <p class="card-go"><a href="sojourner-features.html">Every feature, in full</a></p>
+    </article>
+    <article class="card">
+      <h3>On your phone</h3>
+      <p>Sojourner in the browser on an iPhone, an Android, an iPad, or a Mac. Putting it on your
+        home screen, using it offline, and what it leaves out.</p>
+      <p class="card-go"><a href="sojourner-web.html">Sojourner on your phone</a></p>
     </article>
     <article class="card">
       <h3>What comes in the box</h3>

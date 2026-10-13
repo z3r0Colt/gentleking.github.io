@@ -2,7 +2,7 @@
 
 The ministry site for Gentle King. The gospel of Jesus Christ, Scripture for hard
 hours, help in the fight against sin, Reformed doctrine, and answers to objections.
-It also gives away two tools, Sojourner, a Bible study program for Windows and Linux, and
+It also gives away two tools, Sojourner, a Bible study app for the browser, Windows, and Linux, and
 Mortify, an app for the fight against sin.
 
 It is a plain static site. No framework, no npm, no dependencies. GitHub Pages

@@ -56,6 +56,9 @@ APP_RELEASES = "https://github.com/z3r0Colt/sojourner/releases"
 APP_EMAIL = "sojourner@gentleking.org"
 APP_REPO = "https://github.com/z3r0Colt/sojourner"
 APP_PAGE = "sojourner.html"
+# The same app as a web app, for phones, tablets, Macs, and any browser.
+APP_WEB_URL = "https://app.gentleking.org/"
+APP_WEB_PAGE = "sojourner-web.html"
 # The current release. Written into the pages wherever {{version}}, {{size}},
 # {{size_deb}}, and {{size_appimage}} appear, into the structured data, and into
 # llms.txt, so a new release changes these four lines and nothing else. The sizes
@@ -79,6 +82,15 @@ MORTIFY_NOTICE = {
     "text": f"<strong>{MORTIFY_NAME}</strong>, a free app for the fight against sin.",
     "go": "See it",
     "href": MORTIFY_PAGE,
+}
+
+# The line that points to Sojourner in the browser, on the home page.
+SOJOURNER_WEB_NOTICE = {
+    "label": "Sojourner on the web",
+    "icon": '<img src="assets/img/sojourner-icon-64.png" width="64" height="64" alt="">',
+    "text": "<strong>Sojourner</strong> now runs in your browser, on your phone, tablet, or Mac.",
+    "go": "See how",
+    "href": APP_WEB_PAGE,
 }
 
 # Who writes the site, as the About page names him. Search engines and AI tools
@@ -121,7 +133,7 @@ NAV = [
 
 # The apps under Tools, each with a line saying what it is for.
 TOOLS = [
-    (APP_PAGE, APP_NAME, "Bible study for Windows and Linux"),
+    (APP_PAGE, APP_NAME, "Bible study on any device"),
     (MORTIFY_PAGE, MORTIFY_NAME, "For the fight against sin"),
 ]
 
@@ -137,34 +149,35 @@ PAGES = [
         "full_title": "Gentle King · The gospel of Jesus Christ and the Reformed faith",
         "description": (
             "Gentle King, a free Reformed ministry. The gospel of Jesus Christ, Scripture for "
-            "grief, help against sin, and Sojourner, Bible study for Windows and Linux."
+            "grief, help against sin, and Sojourner, Bible study on any device."
         ),
         "hero": True,
+        "notice": SOJOURNER_WEB_NOTICE,
         "toc": False,
     },
     {
         "file": "sojourner.html",
         "content": "sojourner.html",
         "title": "Sojourner",
-        "full_title": "Sojourner Bible Study Software \u00b7 Free and Offline for Windows and Linux",
+        "full_title": "Sojourner Bible Study \u00b7 Free for Phone, Tablet, Windows, Mac, and Linux",
         "eyebrow": "Bible Study Companion",
         "h1": "Sojourner",
         "logo": "sojourner-logo",
         "logo_alt": "Sojourner, Bible Study Companion",
         "og_image": "og-sojourner.png",
-        "og_alt": "Sojourner, Bible Study Companion. A free, offline Bible study companion for Windows and Linux.",
+        "og_alt": "Sojourner, Bible Study Companion. A free, private Bible study companion for any device.",
         "deck": (
-            "A free Bible study program for Windows and Linux, for the pastor, the family, and the "
-            "student. Scripture beside the commentaries, confessions, and reference works of the "
-            "Reformed church, on your own computer, with no account and no internet needed."
+            "A free Bible study program for your phone, tablet, or computer, for the pastor, the "
+            "family, and the student. Scripture beside the commentaries, confessions, and reference "
+            "works of the Reformed church, with no account and nothing to buy."
         ),
         "description": (
-            "Free, offline Bible study software for Windows and Linux. Thirteen translations, "
-            "the Hebrew and Greek, Matthew Henry, Calvin, and the Westminster Standards."
+            "Free Bible study for phone, tablet, and computer. Thirteen translations, the Hebrew "
+            "and Greek, Matthew Henry, Calvin, and the Westminster Standards."
         ),
         "schema": "ItemPage",
         # The first screen says what it is, for whom, and where to get it.
-        "facts": ["Free", "Windows and Linux", "Works offline", "No account", "No telemetry"],
+        "facts": ["Free", "Phone, tablet, and computer", "Works offline", "No account", "No telemetry"],
         "head_shot": "sojourner-shot",
         "toc": True,
     },
@@ -850,6 +863,25 @@ SOJOURNER_PAGES = [
         "toc": True,
     },
     {
+        "file": APP_WEB_PAGE,
+        "content": APP_WEB_PAGE,
+        "title": "Sojourner on Your Phone",
+        "full_title": "Sojourner on Your Phone, Tablet, or Mac · Free Bible App in the Browser · Gentle King",
+        "eyebrow": "Sojourner",
+        "h1": "Sojourner on Your Phone",
+        "deck": (
+            "The same Bible study companion, in your browser. Open it on an iPhone, an Android, an "
+            "iPad, or a Mac, put it on your home screen, and take it offline if you like."
+        ),
+        "description": (
+            "A free Bible study app for iPhone, Android, iPad, and Mac, in the browser. The "
+            "commentaries, confessions, Greek and Hebrew, with no account and no store."
+        ),
+        "about": ["Bible app for iPhone", "Bible app for Android", "Progressive web app"],
+        "parent": APP_PAGE,
+        "toc": True,
+    },
+    {
         "file": "sojourner-library.html",
         "content": "sojourner-library.html",
         "title": "What Comes With Sojourner",
@@ -1323,10 +1355,10 @@ HEAD_ACTIONS = """    <ul class="facts" aria-label="At a glance">
 {facts}
     </ul>
     <div class="btn-row">
-      <a class="btn btn-primary" href="{releases}" target="_blank" rel="noopener">Download for Windows or Linux</a>
-      <a class="btn" href="#features">See what it does</a>
+      <a class="btn btn-primary" href="{web}" target="_blank" rel="noopener">Open in your browser</a>
+      <a class="btn" href="{releases}" target="_blank" rel="noopener">Download for Windows or Linux</a>
     </div>
-    <p class="head-meta">Version {version} &middot; Windows and Linux &middot; 64-bit</p>
+    <p class="head-meta">Version {version} &middot; In any browser, or on Windows and Linux</p>
 {shot}"""
 
 # Where a page sits, above its eyebrow, for a page that belongs under another.
@@ -1557,7 +1589,7 @@ ORG_DESCRIPTION = (
     "A confessionally Reformed and Presbyterian ministry website. It sets out the gospel of "
     "Jesus Christ, Scripture for hard hours, help in the fight against sin, Reformed doctrine "
     "held to the Westminster Confession of Faith, and apologetics, and it "
-    "gives away Sojourner, a free Bible study app for Windows and Linux, and Mortify, a free app for the "
+    "gives away Sojourner, a free Bible study app for the browser, Windows, and Linux, and Mortify, a free app for the "
     "fight against sin. It is the work of one layman "
     "and is not a church."
 )
@@ -1698,14 +1730,14 @@ def software_node(page, canonical, body):
         "@id": APP_ID,
         "name": APP_NAME,
         "alternateName": [APP_FULL, "Sojourner Bible Study Software", "Sojourner Bible app"],
-        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Bible software for Linux, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
+        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Bible software for Linux, free Bible app for iPhone and Android, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
         "description": page["description"],
         "url": canonical,
         "mainEntityOfPage": {"@id": f"{canonical}#webpage"},
         "image": f"{SITE_URL}/assets/img/sojourner-logo.png",
         "applicationCategory": "ReferenceApplication",
         "applicationSubCategory": "Bible study",
-        "operatingSystem": "Windows 10, Windows 11, Linux",
+        "operatingSystem": "Windows 10, Windows 11, Linux, and any modern web browser on iOS, Android, or macOS",
         "processorRequirements": "64-bit",
         "softwareVersion": version,
         "fileSize": f"{size_mb}MB",
@@ -1821,10 +1853,10 @@ def structured_data(page, canonical, body, dates):
             "@id": APP_ID,
             "name": APP_NAME,
             "alternateName": [APP_FULL, "Sojourner Bible Study Software", "Sojourner Bible app"],
-        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Bible software for Linux, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
+        "keywords": "free Bible software, offline Bible, Bible study app for Windows, Bible software for Linux, free Bible app for iPhone and Android, Reformed Bible study, Matthew Henry commentary, Westminster Confession",
             "url": f"{SITE_URL}/sojourner.html",
             "applicationCategory": "ReferenceApplication",
-            "operatingSystem": "Windows 10, Windows 11, Linux",
+            "operatingSystem": "Windows 10, Windows 11, Linux, and any modern web browser on iOS, Android, or macOS",
             "isAccessibleForFree": True,
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
             "author": {"@id": PERSON_ID},
@@ -2399,7 +2431,7 @@ def build_page(page, dates):
                 actions=render(
                     HEAD_ACTIONS,
                     facts="\n".join(f"      <li>{html.escape(f)}</li>" for f in page["facts"]),
-                    releases=APP_RELEASES, version=APP_VERSION, size=APP_SIZE_MB,
+                    releases=APP_RELEASES, web=APP_WEB_URL, version=APP_VERSION, size=APP_SIZE_MB,
                     shot=include(page["head_shot"]) + "\n" if page.get("head_shot") else "",
                 ) if page.get("facts") else "",
             )
@@ -2557,7 +2589,7 @@ def build_llms_txt():
         "Reformed and Presbyterian. It sets out the gospel of Jesus Christ, Scripture for grief "
         "and other hard hours, help for the fight against sin, Reformed doctrine held to the "
         "Westminster Confession of Faith, answers to objections against Christianity, and "
-        f"{APP_NAME}, a free offline Bible study app for Windows and Linux.",
+        f"{APP_NAME}, a free Bible study app for the browser, Windows, and Linux.",
         "",
         f"The site is written by {AUTHOR_NAME}, a layman in the Reformed Presbyterian tradition. "
         "He is not a pastor or an elder, and the site is no substitute for a local church. "
@@ -2571,7 +2603,9 @@ def build_llms_txt():
         "Ubuntu 24.04, Linux Mint 22, and Debian 13 or newer, and as an AppImage for most other "
         "systems from 2024 on. It needs no account, works with the network off, and sends no "
         f"telemetry. The Windows installer is about {size_mb} MB, the .deb about "
-        f"{APP_SIZE_DEB_MB} MB, and the AppImage about {APP_SIZE_APPIMAGE_MB} MB.",
+        f"{APP_SIZE_DEB_MB} MB, and the AppImage about {APP_SIZE_APPIMAGE_MB} MB. The same app "
+        f"runs in any modern browser at {APP_WEB_URL}, on phones, tablets, and computers, and "
+        "can be installed to the home screen as a progressive web app.",
         "",
         f"{MORTIFY_NAME} ({MORTIFY_URL}) is a free web app by the same writer for putting sin to "
         "death by the Spirit. It works in the browser on a phone or a computer, and it needs a "
@@ -2603,6 +2637,7 @@ def build_llms_txt():
     for page in SOJOURNER_PAGES:
         lines += entry(page)
     lines += [
+        f"- [Open {APP_NAME} in the browser]({APP_WEB_URL}): The web app, for any device",
         f"- [Download {APP_NAME}]({APP_RELEASES}): The Windows installer, the Linux .deb and "
         "AppImage, and the four optional book shelves, on GitHub",
         "",
