@@ -1107,11 +1107,14 @@ GUIDE_PAGES = [
 
 # One report per teacher, under Teachers Weighed. Each has a PDF of the full
 # report in resources/discernment/, linked from its page. Add the newest last.
+# verdict says whether he is safe to sit under, True or False. It is drawn big
+# at the top of his page and beside his name in the list, so no one skims past it.
 TEACHER_PAGES = [
     _child('teacher-philip-anthony-mitchell.html', 'Philip Anthony Mitchell', 'Philip Anthony Mitchell · A Discernment Report · Gentle King', 'Discernment report', 'Philip Anthony Mitchell',
            'Pastor of 2819 Church in Atlanta and founder of the ACCESS prayer gatherings. Many true things, and errors that reach the person of Christ.',
            'Philip Anthony Mitchell of 2819 Church weighed by Scripture and the Westminster Confession. His Christology, words from God, ACCESS, and fasting.',
-           ['Philip Anthony Mitchell', '2819 Church'], parent="teachers.html", series='teachers'),
+           ['Philip Anthony Mitchell', '2819 Church'], parent="teachers.html", series='teachers',
+           verdict=False),
 ]
 
 # Where each part of the two old long pages went. A link from before the split,
@@ -1346,7 +1349,7 @@ PAGE_HEAD = """<div class="page-head">
 {crumbs}    <p class="eyebrow">{eyebrow}</p>
     <h1>{h1}</h1>
     <p class="page-deck">{deck}</p>
-  </div>
+{verdict}  </div>
 </div>
 """
 
@@ -1511,13 +1514,49 @@ def include(name):
     return path.read_text(encoding="utf-8").strip()
 
 
+VERDICT_MARK = {
+    True: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    False: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+}
+
+VERDICT = """    <div class="verdict verdict-{kind}">
+      <span class="verdict-mark">{mark}</span>
+      <p class="verdict-text"><span class="verdict-label">Safe to sit under?</span>
+        <strong class="verdict-word">{word}</strong>
+        <span class="verdict-line">{line}</span></p>
+    </div>
+"""
+
+
+def verdict_html(page):
+    """The big yes or no at the top of a teacher's report."""
+    if "verdict" not in page:
+        return ""
+    safe = page["verdict"]
+    return render(
+        VERDICT, kind="safe" if safe else "unsafe", mark=VERDICT_MARK[safe],
+        word="Yes" if safe else "No",
+        line=(f"{html.escape(page['h1'])} is a safe teacher to sit under." if safe
+              else f"{html.escape(page['h1'])} is not a safe teacher to sit under."),
+    )
+
+
+def verdict_badge(page):
+    """The same verdict, small, beside his name in the list of reports."""
+    if "verdict" not in page:
+        return ""
+    safe = page["verdict"]
+    return (f'<span class="paths-verdict verdict-{"safe" if safe else "unsafe"}">'
+            f'{VERDICT_MARK[safe]}{"Safe" if safe else "Not safe"}</span>')
+
+
 def paths_html(series):
     """The list of a series' pages on its parent, each with its deck, so the list
     can never disagree with the pages it points to."""
     rows = []
     for page in SERIES[series]:
         rows.append(
-            f'    <li><a href="{page["file"]}"><span class="paths-title">{html.escape(page["h1"])}</span>'
+            f'    <li><a href="{page["file"]}">{verdict_badge(page)}<span class="paths-title">{html.escape(page["h1"])}</span>'
             f'<span class="paths-desc">{html.escape(page["deck"])}</span></a></li>'
         )
     return "\n".join(rows)
@@ -2481,6 +2520,7 @@ def build_page(page, dates):
                 eyebrow=html.escape(page["eyebrow"], quote=False),
                 h1=html.escape(page["h1"], quote=False),
                 deck=html.escape(page["deck"], quote=False),
+                verdict=verdict_html(page),
             )
         )
     if page.get("notice"):
