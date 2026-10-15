@@ -69,6 +69,10 @@
   --gold:         #7d5f34;
   --gold-soft:    #b1925f;
   --gold-wash:    #f3ecdd;
+  --safe:         #2d6a3a;
+  --safe-wash:    #e7f1e6;
+  --unsafe:       #a1262a;
+  --unsafe-wash:  #f8e6e3;
   --shadow:       0 1px 2px rgba(28, 26, 23, .04), 0 8px 28px -18px rgba(28, 26, 23, .28);
   --shadow-lift:  0 2px 4px rgba(28, 26, 23, .05), 0 18px 44px -22px rgba(28, 26, 23, .34);
 
@@ -102,6 +106,10 @@
     --gold:         #c9a227;
     --gold-soft:    #d8b955;
     --gold-wash:    #221e16;
+    --safe:         #7cc68a;
+    --safe-wash:    #16241a;
+    --unsafe:       #f08377;
+    --unsafe-wash:  #2a1614;
     --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 28px -18px rgba(0, 0, 0, .8);
     --shadow-lift:  0 2px 4px rgba(0, 0, 0, .45), 0 18px 44px -22px rgba(0, 0, 0, .9);
   }
@@ -119,6 +127,10 @@
   --gold:         #c9a227;
   --gold-soft:    #d8b955;
   --gold-wash:    #221e16;
+  --safe:         #7cc68a;
+  --safe-wash:    #16241a;
+  --unsafe:       #f08377;
+  --unsafe-wash:  #2a1614;
   --shadow:       0 1px 2px rgba(0, 0, 0, .4), 0 8px 28px -18px rgba(0, 0, 0, .8);
   --shadow-lift:  0 2px 4px rgba(0, 0, 0, .45), 0 18px 44px -22px rgba(0, 0, 0, .9);
 }
@@ -1997,6 +2009,86 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   color: var(--ink);
 }
 .paths-desc { font-size: .95rem; line-height: 1.55; color: var(--ink-soft); }
+
+/* The verdict on a teacher, at the top of his report. It is meant to be seen
+   by someone who reads nothing else on the page, so it is big and plain, a
+   green check for safe and a red cross for not. */
+.verdict {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  max-width: 40rem;
+  margin-top: 1.75rem;
+  padding: 1.15rem 1.4rem;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+}
+.verdict-safe   { color: var(--safe);   background: var(--safe-wash); }
+.verdict-unsafe { color: var(--unsafe); background: var(--unsafe-wash); }
+.verdict-mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+.verdict-mark svg { width: 2.2rem; height: 2.2rem; color: var(--paper); }
+.verdict-text { margin: 0; line-height: 1.2; }
+.verdict-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.verdict-word {
+  display: block;
+  margin: .1rem 0 .2rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+}
+.verdict-line {
+  display: block;
+  font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+.verdict-why {
+  display: block;
+  margin-top: .35rem;
+  font-size: .98rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+@media (max-width: 30rem) {
+  .verdict { gap: .85rem; padding: 1rem 1.05rem; }
+  .verdict-mark { width: 2.9rem; height: 2.9rem; }
+  .verdict-mark svg { width: 1.75rem; height: 1.75rem; }
+}
+
+/* The same verdict, small, on a report's row in the list. */
+.paths-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  justify-self: start;
+  padding: .2rem .6rem .2rem .45rem;
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+}
+.paths-verdict.verdict-safe   { color: var(--safe);   background: var(--safe-wash); }
+.paths-verdict.verdict-unsafe { color: var(--unsafe); background: var(--unsafe-wash); }
+.paths-verdict svg { width: 1rem; height: 1rem; }
 .paths a:hover { border-color: var(--gold); background: var(--gold-wash); }
 .paths a:hover::after { right: 1rem; }
 .paths a:active { transform: translateY(1px); }
