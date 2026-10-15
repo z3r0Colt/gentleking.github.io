@@ -366,6 +366,26 @@ PAGES = [
         "toc": False,
     },
     {
+        "file": "teachers.html",
+        "content": "teachers.html",
+        "title": "Teachers Weighed",
+        "full_title": "Teachers Weighed \u00b7 Popular Preachers Tested by Scripture \u00b7 Gentle King",
+        "eyebrow": "Discernment",
+        "h1": "Teachers Weighed",
+        "deck": (
+            "Careful reports on popular preachers, each weighed by Scripture and the Westminster "
+            "Standards from the man\u2019s own words, with what he gets right told as plainly as "
+            "what he gets wrong."
+        ),
+        "description": (
+            "Popular preachers weighed by Scripture and the Westminster Confession, from their own "
+            "words. Fair, sourced discernment reports to read or download."
+        ),
+        "schema": "CollectionPage",
+        "about": ["Discernment", "False teachers"],
+        "toc": False,
+    },
+    {
         "file": "resources.html",
         "content": "resources.html",
         "title": "Resources",
@@ -1085,6 +1105,15 @@ GUIDE_PAGES = [
            ['Death', 'Burial', 'Cremation'], parent="guides.html", series='says'),
 ]
 
+# One report per teacher, under Teachers Weighed. Each has a PDF of the full
+# report in resources/discernment/, linked from its page. Add the newest last.
+TEACHER_PAGES = [
+    _child('teacher-philip-anthony-mitchell.html', 'Philip Anthony Mitchell', 'Philip Anthony Mitchell · A Discernment Report · Gentle King', 'Discernment report', 'Philip Anthony Mitchell',
+           'Pastor of 2819 Church in Atlanta and founder of the ACCESS prayer gatherings. Many true things, and errors that reach the person of Christ.',
+           'Philip Anthony Mitchell of 2819 Church weighed by Scripture and the Westminster Confession. His Christology, words from God, ACCESS, and fasting.',
+           ['Philip Anthony Mitchell', '2819 Church'], parent="teachers.html", series='teachers'),
+]
+
 # Where each part of the two old long pages went. A link from before the split,
 # such as comfort.html#grief, is sent on by site.js to the page that holds it now.
 MOVED = {
@@ -1151,12 +1180,14 @@ SERIES = {
     "life": [p for p in GUIDE_PAGES if p["series"] == "life"],
     "discern": [p for p in GUIDE_PAGES if p["series"] == "discern"],
     "says": [p for p in GUIDE_PAGES if p["series"] == "says"],
+    "teachers": TEACHER_PAGES,
 }
 CHILDREN = {
     "comfort.html": COMFORT_PAGES,
     "apologetics.html": OBJECTOR_PAGES + BELIEVER_PAGES,
     APP_PAGE: SOJOURNER_PAGES,
     "guides.html": GUIDE_PAGES,
+    "teachers.html": TEACHER_PAGES,
 }
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
@@ -1394,6 +1425,7 @@ FOOTER = """<footer class="site-footer">
           <li><a href="apologetics.html#objector">Answers to objections</a></li>
           <li><a href="apologetics.html#believer">Fear and doubt</a></li>
           <li><a href="guides.html">Practical guides</a></li>
+          <li><a href="teachers.html">Teachers weighed</a></li>
         </ul>
       </nav>
       <nav aria-label="Tools">
@@ -1995,9 +2027,10 @@ def pager_html(page):
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
         up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer",
               "life": "guides.html#christian-life", "discern": "guides.html#discernment",
-              "says": "guides.html#bible-says"}[page["series"]]
+              "says": "guides.html#bible-says", "teachers": "teachers.html#reports"}[page["series"]]
         word = {"objector": "All the questions", "believer": "All the fears",
-                "life": "All the guides", "discern": "All the guides", "says": "All the guides"}[page["series"]]
+                "life": "All the guides", "discern": "All the guides", "says": "All the guides",
+                "teachers": "All the reports"}[page["series"]]
     else:
         up = parent["file"]
         word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
@@ -2560,6 +2593,7 @@ LLMS_GROUPS = [
     ("Answers to objections", ["apologetics.html"] + [p["file"] for p in OBJECTOR_PAGES]),
     ("Fear, doubt, and assurance, for believers", [p["file"] for p in BELIEVER_PAGES]),
     ("Practical guides", ["guides.html"] + [p["file"] for p in GUIDE_PAGES]),
+    ("Teachers weighed", ["teachers.html"] + [p["file"] for p in TEACHER_PAGES]),
 ]
 
 
