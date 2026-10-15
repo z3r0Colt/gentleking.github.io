@@ -1109,12 +1109,13 @@ GUIDE_PAGES = [
 # report in resources/discernment/, linked from its page. Add the newest last.
 # verdict says whether he is safe to sit under, True or False. It is drawn big
 # at the top of his page and beside his name in the list, so no one skims past it.
+# verdict_why is the one line under it that says why, as the report gives it.
 TEACHER_PAGES = [
     _child('teacher-philip-anthony-mitchell.html', 'Philip Anthony Mitchell', 'Philip Anthony Mitchell · A Discernment Report · Gentle King', 'Discernment report', 'Philip Anthony Mitchell',
            'Pastor of 2819 Church in Atlanta and founder of the ACCESS prayer gatherings. Many true things, and errors that reach the person of Christ.',
            'Philip Anthony Mitchell of 2819 Church weighed by Scripture and the Westminster Confession. His Christology, words from God, ACCESS, and fasting.',
            ['Philip Anthony Mitchell', '2819 Church'], parent="teachers.html", series='teachers',
-           verdict=False),
+           verdict=False, verdict_why='A grave error on the person of Christ, with serious errors besides.'),
 ]
 
 # Where each part of the two old long pages went. A link from before the split,
@@ -1523,7 +1524,7 @@ VERDICT = """    <div class="verdict verdict-{kind}">
       <span class="verdict-mark">{mark}</span>
       <p class="verdict-text"><span class="verdict-label">Safe to sit under?</span>
         <strong class="verdict-word">{word}</strong>
-        <span class="verdict-line">{line}</span></p>
+        <span class="verdict-line">{line}</span>{why}</p>
     </div>
 """
 
@@ -1538,6 +1539,8 @@ def verdict_html(page):
         word="Yes" if safe else "No",
         line=(f"{html.escape(page['h1'])} is a safe teacher to sit under." if safe
               else f"{html.escape(page['h1'])} is not a safe teacher to sit under."),
+        why=(f'\n        <span class="verdict-why">{html.escape(page["verdict_why"])}</span>'
+             if page.get("verdict_why") else ""),
     )
 
 

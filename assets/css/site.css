@@ -2058,6 +2058,13 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   font-weight: 700;
   color: var(--ink);
 }
+.verdict-why {
+  display: block;
+  margin-top: .35rem;
+  font-size: .98rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
 @media (max-width: 30rem) {
   .verdict { gap: .85rem; padding: 1rem 1.05rem; }
   .verdict-mark { width: 2.9rem; height: 2.9rem; }
