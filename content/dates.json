@@ -220,8 +220,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-false-teachers.html": {
-    "hash": "3d4fde8693e347d6",
-    "modified": "2026-10-10T04:07:08+00:00",
+    "hash": "0acf88ac4334eb71",
+    "modified": "2026-10-15T20:42:55+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-family-worship.html": {
@@ -375,8 +375,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "b60f85e514d99c04",
-    "modified": "2026-10-15T02:24:30+00:00",
+    "hash": "109a1d29f7e64031",
+    "modified": "2026-10-15T20:42:55+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
@@ -423,5 +423,15 @@
     "hash": "10552d9c3e1f105d",
     "modified": "2026-10-08T05:07:05+00:00",
     "published": "2026-09-24T16:57:20+00:00"
+  },
+  "teacher-philip-anthony-mitchell.html": {
+    "hash": "5325b8e7565fdbba",
+    "modified": "2026-10-15T20:47:49+00:00",
+    "published": "2026-10-15T20:42:55+00:00"
+  },
+  "teachers.html": {
+    "hash": "caba1b213decb398",
+    "modified": "2026-10-15T20:42:55+00:00",
+    "published": "2026-10-15T20:42:55+00:00"
   }
 }
