@@ -165,8 +165,8 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "doctrine.html": {
-    "hash": "18abd076832c7063",
-    "modified": "2026-10-08T05:53:45+00:00",
+    "hash": "b7bdf1504951e44d",
+    "modified": "2026-10-15T02:24:30+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "gospel.html": {
@@ -244,6 +244,11 @@
     "modified": "2026-10-10T21:29:57+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "guide-free-will.html": {
+    "hash": "3b5398c5664c76ad",
+    "modified": "2026-10-15T02:24:30+00:00",
+    "published": "2026-10-08T05:36:35+00:00"
+  },
   "guide-gambling.html": {
     "hash": "00974a492d392736",
     "modified": "2026-10-10T03:51:19+00:00",
@@ -260,8 +265,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-heresy.html": {
-    "hash": "609b42b6551d210d",
-    "modified": "2026-10-10T04:07:08+00:00",
+    "hash": "5d011bdcbc6e2a45",
+    "modified": "2026-10-15T02:24:30+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-homosexuality.html": {
@@ -370,8 +375,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "04374a4068d1702b",
-    "modified": "2026-10-10T21:29:57+00:00",
+    "hash": "b60f85e514d99c04",
+    "modified": "2026-10-15T02:24:30+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "index.html": {
