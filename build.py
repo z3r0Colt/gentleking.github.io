@@ -1418,6 +1418,9 @@ FOOTER = """<footer class="site-footer">
         <p class="footer-verse">Take my yoke upon you, and learn of me; for I am meek and lowly
           in heart: and ye shall find rest unto your souls.</p>
         <p class="footer-verse-ref">Matthew 11:29 (KJV)</p>
+        <a class="footer-abolish" href="https://abolishabortionindiana.org/" target="_blank" rel="noopener">
+          <img src="assets/img/abortion-is-murder-160.webp" srcset="assets/img/abortion-is-murder-160.webp 1x, assets/img/abortion-is-murder-320.webp 2x" width="96" height="96" loading="lazy" alt="Abortion is murder and everybody knows it. Abolish Abortion Indiana">
+        </a>
       </div>
       <nav aria-label="Read">
         <p class="footer-head">Read</p>
