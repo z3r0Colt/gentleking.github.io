@@ -1051,17 +1051,15 @@ main > .section > h2.verse-head {
   max-width: 26rem;
   margin: 0 0 .6rem;
 }
-/* A small sign against abortion under the verse, linked to the abolitionists
-   in Indiana. */
+/* The plain word against abortion under the verse, in the footer's own voice. */
 .footer-abolish {
-  display: inline-block;
-  margin-top: 1.4rem;
-  line-height: 0;
-  border-radius: var(--radius);
-  transition: opacity .18s var(--ease);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 .7rem;
 }
-.footer-abolish img { width: 6rem; height: auto; border-radius: var(--radius); }
-.footer-abolish:hover { opacity: .85; }
 .footer-verse-ref {
   font-family: var(--font-ui);
   font-size: .7rem;
