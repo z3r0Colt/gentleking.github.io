@@ -1051,6 +1051,15 @@ main > .section > h2.verse-head {
   max-width: 26rem;
   margin: 0 0 .6rem;
 }
+/* The plain word against abortion under the verse, in the footer's own voice. */
+.footer-abolish {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 .7rem;
+}
 .footer-verse-ref {
   font-family: var(--font-ui);
   font-size: .7rem;
