@@ -121,14 +121,11 @@ COPYRIGHT_YEAR = "2026"
 # the 64rem breakpoint in site.css and the 1024 in site.js raised, or belongs in
 # the footer.
 NAV = [
-    ("./", "Home"),
-    ("gospel.html", "The Gospel"),
-    ("comfort.html", "Comfort"),
-    ("struggle.html", "Fighting Sin"),
-    ("doctrine.html", "Doctrine"),
-    ("apologetics.html", "Apologetics"),
-    ("guides.html", "Guides"),
-    ("about.html", "About"),
+    ("start-here.html", "Start Here"),
+    ("help.html", "Find Help"),
+    ("learn.html", "Learn the Faith"),
+    ("guides.html", "Christian Living"),
+    ("search.html", "Search"),
 ]
 
 # The apps under Tools, each with a line saying what it is for.
@@ -1193,6 +1190,191 @@ CHILDREN = {
     "guides.html": GUIDE_PAGES,
     "teachers.html": TEACHER_PAGES,
 }
+
+# Reader entrances and individual doctrine subjects.
+PAGES.extend([{'file': 'start-here.html',
+  'content': 'start-here.html',
+  'title': 'Start Here',
+  'full_title': 'Start Here · Gentle King',
+  'eyebrow': 'Start Here',
+  'h1': 'A Place to Begin',
+  'deck': 'New here? Begin with the gospel, then take one step at a time.',
+  'description': 'New here? Begin with the gospel, then take one step at a time.',
+  'schema': 'CollectionPage',
+  'toc': False},
+ {'file': 'help.html',
+  'content': 'help.html',
+  'title': 'Find Help',
+  'full_title': 'Find Help · Gentle King',
+  'eyebrow': 'Find Help',
+  'h1': 'Help for Where You Are',
+  'deck': 'Choose the need that brought you here. You can read one page at a time.',
+  'description': 'Choose the need that brought you here. You can read one page at a time.',
+  'schema': 'CollectionPage',
+  'toc': False},
+ {'file': 'learn.html',
+  'content': 'learn.html',
+  'title': 'Learn the Faith',
+  'full_title': 'Learn the Faith · Gentle King',
+  'eyebrow': 'Learn the Faith',
+  'h1': 'Learn the Christian Faith',
+  'deck': 'Begin with an overview, or follow the question you have today.',
+  'description': 'Begin with an overview, or follow the question you have today.',
+  'schema': 'CollectionPage',
+  'toc': False},
+ {'file': 'assurance.html',
+  'content': 'assurance.html',
+  'title': 'Assurance and Doubt',
+  'full_title': 'Assurance and Doubt · Gentle King',
+  'eyebrow': 'Assurance and Doubt',
+  'h1': 'Assurance and Doubt',
+  'deck': 'For those who trust Christ but fear they are not really his.',
+  'description': 'For those who trust Christ but fear they are not really his.',
+  'schema': 'CollectionPage',
+  'toc': False},
+ {'file': 'search.html',
+  'content': 'search.html',
+  'title': 'Search',
+  'full_title': 'Search · Gentle King',
+  'eyebrow': 'Search',
+  'h1': 'Search Gentle King',
+  'deck': 'Find a subject or ask your question in ordinary words.',
+  'description': 'Find a subject or ask your question in ordinary words.',
+  'schema': 'WebPage',
+  'toc': False,
+  'scripts': ['assets/js/search.js']},
+ {'file': 'doctrine-why-doctrine.html',
+  'content': 'doctrine-why-doctrine.html',
+  'title': 'Why Doctrine Is Not the Enemy of Devotion',
+  'full_title': 'Why Doctrine Is Not the Enemy of Devotion · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'Why Doctrine Is Not the Enemy of Devotion',
+  'deck': 'Why sound teaching belongs to the Christian life.',
+  'description': 'Why sound teaching belongs to the Christian life.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-scripture.html',
+  'content': 'doctrine-scripture.html',
+  'title': 'The Word of God',
+  'full_title': 'The Word of God · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Word of God',
+  'deck': 'Why Scripture is our final rule of faith and life.',
+  'description': 'Why Scripture is our final rule of faith and life.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-god-and-trinity.html',
+  'content': 'doctrine-god-and-trinity.html',
+  'title': 'God and the Trinity',
+  'full_title': 'God and the Trinity · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'God and the Trinity',
+  'deck': 'The one living God, Father, Son, and Holy Ghost.',
+  'description': 'The one living God, Father, Son, and Holy Ghost.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-five-solas.html',
+  'content': 'doctrine-five-solas.html',
+  'title': 'The Five Solas',
+  'full_title': 'The Five Solas · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Five Solas',
+  'deck': 'Salvation by grace alone through faith alone in Christ alone.',
+  'description': 'Salvation by grace alone through faith alone in Christ alone.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-doctrines-of-grace.html',
+  'content': 'doctrine-doctrines-of-grace.html',
+  'title': 'The Doctrines of Grace',
+  'full_title': 'The Doctrines of Grace · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Doctrines of Grace',
+  'deck': 'How God brings sinners to Christ and keeps them.',
+  'description': 'How God brings sinners to Christ and keeps them.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-covenant.html',
+  'content': 'doctrine-covenant.html',
+  'title': 'Covenant Theology',
+  'full_title': 'Covenant Theology · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'Covenant Theology',
+  'deck': 'One covenant of grace across the Old and New Testaments.',
+  'description': 'One covenant of grace across the Old and New Testaments.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-law-and-gospel.html',
+  'content': 'doctrine-law-and-gospel.html',
+  'title': 'Law and Gospel',
+  'full_title': 'Law and Gospel · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'Law and Gospel',
+  'deck': 'What God commands and what he gives in Christ.',
+  'description': 'What God commands and what he gives in Christ.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-church-and-worship.html',
+  'content': 'doctrine-church-and-worship.html',
+  'title': 'The Church and Worship',
+  'full_title': 'The Church and Worship · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Church and Worship',
+  'deck': 'The church, worship, and the ordinary means of grace.',
+  'description': 'The church, worship, and the ordinary means of grace.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-last-things.html',
+  'content': 'doctrine-last-things.html',
+  'title': 'The Last Things',
+  'full_title': 'The Last Things · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Last Things',
+  'deck': 'Christ’s return, the resurrection, and the judgment.',
+  'description': 'Christ’s return, the resurrection, and the judgment.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True},
+ {'file': 'doctrine-standards.html',
+  'content': 'doctrine-standards.html',
+  'title': 'The Westminster Standards',
+  'full_title': 'The Westminster Standards · Gentle King',
+  'eyebrow': 'Doctrine',
+  'h1': 'The Westminster Standards',
+  'deck': 'Where to begin with the Westminster Standards.',
+  'description': 'Where to begin with the Westminster Standards.',
+  'schema': 'Article',
+  'parent': 'doctrine.html',
+  'toc': True}])
+MOVED["doctrine"] = {'why-doctrine': 'doctrine-why-doctrine.html#why-doctrine',
+ 'scripture': 'doctrine-scripture.html#scripture',
+ 'god-and-trinity': 'doctrine-god-and-trinity.html#god-and-trinity',
+ 'five-solas': 'doctrine-five-solas.html#five-solas',
+ 'doctrines-of-grace': 'doctrine-doctrines-of-grace.html#doctrines-of-grace',
+ 'covenant': 'doctrine-covenant.html#covenant',
+ 'law-and-gospel': 'doctrine-law-and-gospel.html#law-and-gospel',
+ 'church-and-worship': 'doctrine-church-and-worship.html#church-and-worship',
+ 'last-things': 'doctrine-last-things.html#last-things',
+ 'standards': 'doctrine-standards.html#standards'}
+for page in PAGES:
+    if page["file"] == "doctrine.html":
+        page.update(schema="CollectionPage", toc=False, moved="doctrine")
+        page["deck"] = "Explore Reformed doctrine one subject at a time, from Scripture to the things to come."
+    if page["file"] == "guides.html":
+        page["deck"] = "Find help for daily Christian life. Choose a topic or search the guides below."
+        page["scripts"] = ["assets/js/guides.js"]
+    if page["file"] == "index.html":
+        page.pop("notice", None)
+for page in BELIEVER_PAGES:
+    page["parent"] = "assurance.html"
+
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
 
@@ -1328,7 +1510,7 @@ HERO = """<section class="hero hero-word">
       God in the place of sinners, and on the third day he rose from the dead. He is speaking to
       you, and he means every word.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="#the-gospel">Hear the gospel</a>
+      <a class="btn btn-primary" href="gospel.html">Hear the gospel</a>
       <a class="btn" href="#where-to-turn">Find help for where you are</a>
     </div>
   </div>
@@ -1428,12 +1610,14 @@ FOOTER = """<footer class="site-footer">
       <nav aria-label="Read">
         <p class="footer-head">Read</p>
         <ul class="footer-links">
+          <li><a href="start-here.html">Start here</a></li>
           <li><a href="gospel.html">The Gospel</a></li>
+          <li><a href="search.html">Search all teaching</a></li>
           <li><a href="comfort.html">Comfort in hard hours</a></li>
           <li><a href="struggle.html">Fighting sin</a></li>
           <li><a href="doctrine.html">Doctrine</a></li>
           <li><a href="apologetics.html#objector">Answers to objections</a></li>
-          <li><a href="apologetics.html#believer">Fear and doubt</a></li>
+          <li><a href="assurance.html">Assurance and doubt</a></li>
           <li><a href="guides.html">Practical guides</a></li>
           <li><a href="teachers.html">Teachers weighed</a></li>
         </ul>
@@ -1559,14 +1743,62 @@ def verdict_badge(page):
             f'{VERDICT_MARK[safe]}{"Safe" if safe else "Not safe"}</span>')
 
 
+
+def guide_topic(page):
+    name = page["file"]
+    if any(x in name for x in ("bible", "reading-scripture", "prophecy", "meditation")):
+        return "Bible Study"
+    if any(x in name for x in ("marriage", "sex", "homosexuality", "birth-control", "ivf", "parenting", "spanking", "abortion", "family-worship")):
+        return "Family"
+    if any(x in name for x in ("prayer", "repentance", "examine", "forgiveness", "fasting", "evangelism")):
+        return "Prayer and Growth"
+    if any(x in name for x in ("worship", "church", "lords", "sermons")):
+        return "Church and Worship"
+    return "Discernment" if page.get("series") == "discern" else "Daily Life"
+
+
+def reading_minutes(page):
+    body = fragment(page)
+    if page.get("close"):
+        body += include(page["close"])
+    return max(1, (len(plain(body).split()) + 199) // 200)
+
+
+def related_html(page):
+    if page.get("schema") != "Article":
+        return ""
+    name = page["file"]
+    choices = {
+        "guide-bible-reading.html": ["guide-reading-scripture.html", "guide-meditation.html"],
+        "guide-free-will.html": ["doctrine-doctrines-of-grace.html", "guide-disagreeing.html"],
+        "struggle.html": ["guide-repentance.html", "assurance-remaining-sin.html"],
+        "gospel.html": ["guide-bible-reading.html", "guide-find-a-church.html"],
+    }.get(name)
+    if not choices:
+        if name.startswith("assurance-"):
+            choices = ["assurance-am-i-his.html", "assurance-kept.html", "struggle.html"]
+        elif name.startswith("comfort-"):
+            choices = ["assurance-affliction.html", "guide-prayer.html"]
+        elif name.startswith("doctrine-"):
+            choices = ["guide-bible-reading.html", "doctrine-standards.html", "gospel.html"]
+        elif name.startswith("guide-"):
+            topic = guide_topic(page)
+            choices = [p["file"] for p in GUIDE_PAGES if guide_topic(p) == topic and p["file"] != name]
+        else:
+            choices = ["gospel.html", "guide-reading-scripture.html"]
+    choices = [x for x in choices if x != name][:2]
+    links = "".join(f'<li><a href="{x}">{html.escape(BY_FILE[x]["h1"])}</a></li>' for x in choices)
+    return f'<aside class="related-reading" aria-label="Related reading"><h2>Read Next</h2><ul>{links}</ul></aside>'
+
+
 def paths_html(series):
     """The list of a series' pages on its parent, each with its deck, so the list
     can never disagree with the pages it points to."""
     rows = []
     for page in SERIES[series]:
         rows.append(
-            f'    <li><a href="{page["file"]}">{verdict_badge(page)}<span class="paths-title">{html.escape(page["h1"])}</span>'
-            f'<span class="paths-desc">{html.escape(page["deck"])}</span></a></li>'
+            f'    <li data-topic="{guide_topic(page)}"><a href="{page["file"]}">{verdict_badge(page)}<span class="paths-title">{html.escape(page["h1"])}</span>'
+            f'<span class="paths-desc">{html.escape(page["description"] if series in ("life", "discern", "says") else page["deck"])}</span><span class="reading-time">{reading_minutes(page)} min read</span></a></li>'
         )
     return "\n".join(rows)
 
@@ -2014,6 +2246,12 @@ APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON}
 
 def section_of(current):
     """The top page a page belongs under, for marking its place in the menu."""
+    if current.startswith(("assurance", "comfort")) or current == "struggle.html":
+        return "help.html"
+    if current.startswith(("doctrine", "apologetics")):
+        return "learn.html"
+    if current == "gospel.html":
+        return "start-here.html"
     page = BY_FILE.get(current, {})
     up = ancestors(page)
     return up[0]["file"] if up else current
@@ -2073,7 +2311,7 @@ def pager_html(page):
             nxt = series[i + 1]
             links.append(f'  <a class="pager-next" href="{nxt["file"]}" rel="next"><span class="pager-dir">Next</span>'
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
-        up = {"objector": "apologetics.html#objector", "believer": "apologetics.html#believer",
+        up = {"objector": "apologetics.html#objector", "believer": "assurance.html#begin",
               "life": "guides.html#christian-life", "discern": "guides.html#discernment",
               "says": "guides.html#bible-says", "teachers": "teachers.html#reports"}[page["series"]]
         word = {"objector": "All the questions", "believer": "All the fears",
@@ -2552,7 +2790,21 @@ def build_page(page, dates):
         parts.append(include("crisis") + "\n\n")
     if page.get("toc"):
         parts.append(toc_html(body))
+    if page.get("schema") == "Article":
+        parts.append(f'<p class="reading-time">About {reading_minutes(page)} minutes to read</p>')
+        answers = {
+            "guide-free-will.html": "God gives the new heart and the faith by which a sinner freely comes to Christ. Salvation rests on his mercy, not on a better choice made by one sinner than another.",
+            "guide-prophecy.html": "Christ will return bodily, the dead will rise, and God will judge the world. Read symbolic passages in light of clear teaching elsewhere in Scripture.",
+            "guide-reading-scripture.html": "Read a passage according to its context and kind of writing. Figures of speech communicate truth, and clear passages help explain difficult ones.",
+            "struggle.html": "Bring your sin into the light and turn to Christ again. Fight it by the Spirit through the means God gives, with the help of your church.",
+            "guide-heresy.html": "Test teaching by Scripture. Denying a truth essential to the Christian faith is different from a serious error or a disagreement between faithful believers.",
+        }
+        if page["file"] in answers:
+            parts.append(f'<aside class="quick-answer"><h2>The Short Answer</h2><p>{html.escape(answers[page["file"]])}</p></aside>')
+    body = re.sub(r'<blockquote class="confession">[\s\S]*?</blockquote>',
+                  lambda m: '<details class="supporting-text"><summary>Read the full confessional statement</summary>' + m.group(0) + '</details>' if len(plain(m.group(0)).split()) > 90 else m.group(0), body)
     parts.append(body)
+    parts.append(related_html(page))
     parts.append("\n" + pager_html(page) if page.get("parent") else "")
     if page.get("moved"):
         # Where each part of the old long page went, for site.js to follow.
@@ -2750,6 +3002,23 @@ def build_llms_txt():
     (ROOT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
 
 
+
+def build_search_index():
+    records = []
+    for page in PAGES:
+        if page.get("hidden") or page["file"] == "search.html":
+            continue
+        body = fragment(page)
+        records.append(dict(url=page["file"], title=page["title"],
+                            section="", text=page.get("deck", page["description"])+(" "+plain(body) if len(sections(body)) < 1 else "")))
+        for sid, inner in re.findall(r'<section class="section" id="([^"]+)"[^>]*>([\s\S]*?)</section>', body):
+            heading = re.search(r'<h2[^>]*>(.*?)</h2>', inner, re.S)
+            if heading:
+                records.append(dict(url=page["file"]+"#"+sid, title=page["title"],
+                                    section=plain(heading.group(1)), text=plain(inner)))
+    (ROOT / "assets" / "search-index.json").write_text(json.dumps(records, ensure_ascii=False, separators=(",", ":"))+"\n", encoding="utf-8")
+
+
 def main():
     dates = page_dates()
     total = 0
@@ -2757,6 +3026,7 @@ def main():
         name, words = build_page(page, dates)
         total += words
         print(f"  {name:<18} {words:>6,} words")
+    build_search_index()
     build_sitemap(dates)
     build_llms_txt()
     # Some tools ask for the icon at the root without reading the page's links.

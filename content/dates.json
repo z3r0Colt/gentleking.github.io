@@ -55,8 +55,8 @@
     "published": "2026-09-23T07:36:20+00:00"
   },
   "apologetics.html": {
-    "hash": "46029ad05d9b38aa",
-    "modified": "2026-10-08T06:32:04+00:00",
+    "hash": "ad577c25c54bf3f6",
+    "modified": "2026-10-23T22:57:36+00:00",
     "published": "2026-09-23T07:36:20+00:00"
   },
   "assurance-affliction.html": {
@@ -98,6 +98,11 @@
     "hash": "b17d0a2744b5cb04",
     "modified": "2026-10-08T06:32:04+00:00",
     "published": "2026-09-23T07:36:20+00:00"
+  },
+  "assurance.html": {
+    "hash": "5c22fcd4baccab9c",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-10-23T22:55:38+00:00"
   },
   "comfort-death-of-a-child.html": {
     "hash": "98e44f5899334535",
@@ -164,9 +169,59 @@
     "modified": "2026-10-08T06:31:40+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
+  "doctrine-church-and-worship.html": {
+    "hash": "6cdc476173f6db10",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-covenant.html": {
+    "hash": "8b89c7edb8bcb048",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-doctrines-of-grace.html": {
+    "hash": "040d488b56098894",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-five-solas.html": {
+    "hash": "c1c1555f4a321a0f",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-god-and-trinity.html": {
+    "hash": "ea880204ba9c4e3a",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-last-things.html": {
+    "hash": "8d2e29ebd7800f3c",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-law-and-gospel.html": {
+    "hash": "0cf5a5485f3cb1d8",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-scripture.html": {
+    "hash": "765c03289b836c4e",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-standards.html": {
+    "hash": "c7f7bdf4e44b5e60",
+    "modified": "2026-10-23T22:57:36+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
+  "doctrine-why-doctrine.html": {
+    "hash": "747b7e0c960b83bb",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-09-17T00:07:53+00:00"
+  },
   "doctrine.html": {
-    "hash": "b7bdf1504951e44d",
-    "modified": "2026-10-15T02:24:30+00:00",
+    "hash": "10307e8d16d35ec7",
+    "modified": "2026-10-23T22:57:36+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
   "gospel.html": {
@@ -245,8 +300,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-free-will.html": {
-    "hash": "466816bcca21a956",
-    "modified": "2026-10-15T03:32:54+00:00",
+    "hash": "07fb47afc1edb7a9",
+    "modified": "2026-10-23T22:56:04+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-gambling.html": {
@@ -330,8 +385,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-prophecy.html": {
-    "hash": "21b5bfd270f41102",
-    "modified": "2026-10-10T21:29:57+00:00",
+    "hash": "14750de9277c8ad0",
+    "modified": "2026-10-23T22:56:04+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-reading-scripture.html": {
@@ -375,14 +430,24 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guides.html": {
-    "hash": "109a1d29f7e64031",
-    "modified": "2026-10-15T20:42:55+00:00",
+    "hash": "465c4e3e00bf03fc",
+    "modified": "2026-10-23T22:58:12+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
+  "help.html": {
+    "hash": "90085818ae82beaf",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-10-23T22:55:38+00:00"
+  },
   "index.html": {
-    "hash": "646b5ebc1fa52890",
-    "modified": "2026-10-13T15:48:39+00:00",
+    "hash": "583a503d27787570",
+    "modified": "2026-10-23T22:55:38+00:00",
     "published": "2026-09-17T00:07:53+00:00"
+  },
+  "learn.html": {
+    "hash": "5ecf60641ddb5fed",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-10-23T22:55:38+00:00"
   },
   "mortify.html": {
     "hash": "7af87de927ca3519",
@@ -393,6 +458,11 @@
     "hash": "371266d8ed955caa",
     "modified": "2026-09-28T17:10:21+00:00",
     "published": "2026-09-17T00:07:53+00:00"
+  },
+  "search.html": {
+    "hash": "0982f34931e9ef30",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-10-23T22:55:38+00:00"
   },
   "sojourner-features.html": {
     "hash": "7b6d70b5dd15d163",
@@ -419,9 +489,14 @@
     "modified": "2026-10-13T15:49:35+00:00",
     "published": "2026-09-17T00:07:53+00:00"
   },
+  "start-here.html": {
+    "hash": "7486821f6f830f7a",
+    "modified": "2026-10-23T22:55:38+00:00",
+    "published": "2026-10-23T22:55:38+00:00"
+  },
   "struggle.html": {
-    "hash": "10552d9c3e1f105d",
-    "modified": "2026-10-08T05:07:05+00:00",
+    "hash": "61e2504b9c8d5a7d",
+    "modified": "2026-10-23T22:56:04+00:00",
     "published": "2026-09-24T16:57:20+00:00"
   },
   "teacher-philip-anthony-mitchell.html": {
@@ -430,8 +505,8 @@
     "published": "2026-10-15T20:42:55+00:00"
   },
   "teachers.html": {
-    "hash": "3468ec4a0b1af920",
-    "modified": "2026-10-15T20:54:03+00:00",
+    "hash": "d15b42d37e11e7aa",
+    "modified": "2026-10-23T22:55:38+00:00",
     "published": "2026-10-15T20:42:55+00:00"
   }
 }

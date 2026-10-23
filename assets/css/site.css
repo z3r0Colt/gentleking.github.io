@@ -2240,3 +2240,32 @@ main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class])
 @supports not (color: color-mix(in srgb, red, blue)) {
   main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) { text-decoration-color: var(--gold-soft); }
 }
+
+/* Finding a page and finding your place within it. */
+[hidden] { display: none !important; }
+.reading-time { display: block; font-family: var(--font-ui); font-size: .78rem; color: var(--ink-soft); margin-block: .5rem 1rem; }
+.quick-answer, .related-reading { max-width: var(--measure); border-left: 2px solid var(--gold); padding: 1rem 1.3rem; margin-block: 1.5rem 2rem; background: var(--paper-sunk); }
+.quick-answer h2, .related-reading h2 { font-size: 1.2rem; margin-bottom: .5rem; }
+.quick-answer p { margin: 0; }
+.guide-finder { max-width: var(--measure); display: grid; gap: .6rem; padding: 1.3rem; border: 1px solid var(--rule); background: var(--paper-sunk); margin-block: 1.5rem; }
+.guide-finder label, #site-search label { font-family: var(--font-ui); font-size: .9rem; font-weight: 600; }
+.guide-finder input, .guide-finder select, #site-search input { min-width: 0; width: 100%; padding: .8rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink); font: inherit; font-size: 1rem; }
+.search-row { display: flex; gap: .6rem; margin-top: .6rem; }
+.search-result { max-width: var(--measure); padding-block: 1.3rem; border-bottom: 1px solid var(--rule); }
+.search-result h2 { font-size: 1.4rem; }
+.search-result p { margin-bottom: 0; }
+.toc-toggle { border: 0; background: none; padding: .4rem 0; text-align: left; cursor: pointer; }
+@media (max-width: 77.99rem) {
+  .js main.has-toc > .toc { position: sticky; top: 4.6rem; z-index: 20; padding: .55rem 1rem; background: var(--paper); max-height: calc(100dvh - 6rem); overflow-y: auto; margin-bottom: 1.4rem; }
+  .toc-toggle { width: 100%; margin: 0; min-height: 2.75rem; }
+  .toc-toggle::after { content: ' +'; }
+  .toc-toggle[aria-expanded="true"]::after { content: ' −'; }
+  .toc-toggle[aria-expanded="false"] + ol { display: none; }
+  .toc-toggle[aria-expanded="true"] + ol { display: block; padding-bottom: .75rem; }
+  .toc a { display: inline-block; padding-block: .4rem; }
+}
+@media (max-width: 35rem) { .search-row { flex-direction: column; } }
+@media print { .guide-finder, .quick-answer, .related-reading, .reading-time { display: none; } }
+.supporting-text { max-width: var(--measure); margin-block: 1.3rem; padding: 1rem; border: 1px solid var(--rule); }
+.supporting-text summary { cursor: pointer; font-family: var(--font-ui); font-size: .85rem; color: var(--ink-soft); }
+.supporting-text blockquote { margin-bottom: 0; }

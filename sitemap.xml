@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gentleking.org/</loc>
-    <lastmod>2026-10-13T15:48:39+00:00</lastmod>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/sojourner.html</loc>
@@ -86,15 +86,15 @@
   </url>
   <url>
     <loc>https://gentleking.org/struggle.html</loc>
-    <lastmod>2026-10-08T05:07:05+00:00</lastmod>
+    <lastmod>2026-10-23T22:56:04+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/doctrine.html</loc>
-    <lastmod>2026-10-15T02:24:30+00:00</lastmod>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/apologetics.html</loc>
-    <lastmod>2026-10-08T06:32:04+00:00</lastmod>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/apologetics-god.html</loc>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://gentleking.org/guides.html</loc>
-    <lastmod>2026-10-15T20:42:55+00:00</lastmod>
+    <lastmod>2026-10-23T22:58:12+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/guide-prayer.html</loc>
@@ -234,7 +234,7 @@
   </url>
   <url>
     <loc>https://gentleking.org/guide-prophecy.html</loc>
-    <lastmod>2026-10-10T21:29:57+00:00</lastmod>
+    <lastmod>2026-10-23T22:56:04+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/guide-false-teachers.html</loc>
@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://gentleking.org/guide-free-will.html</loc>
-    <lastmod>2026-10-15T03:32:54+00:00</lastmod>
+    <lastmod>2026-10-23T22:56:04+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/guide-new-revelation.html</loc>
@@ -334,7 +334,7 @@
   </url>
   <url>
     <loc>https://gentleking.org/teachers.html</loc>
-    <lastmod>2026-10-15T20:54:03+00:00</lastmod>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
   </url>
   <url>
     <loc>https://gentleking.org/teacher-philip-anthony-mitchell.html</loc>
@@ -343,5 +343,65 @@
   <url>
     <loc>https://gentleking.org/about.html</loc>
     <lastmod>2026-10-13T15:48:39+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/start-here.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/help.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/learn.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/assurance.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/search.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-why-doctrine.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-scripture.html</loc>
+    <lastmod>2026-10-23T22:55:38+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-god-and-trinity.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-five-solas.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-doctrines-of-grace.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-covenant.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-law-and-gospel.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-church-and-worship.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-last-things.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://gentleking.org/doctrine-standards.html</loc>
+    <lastmod>2026-10-23T22:57:36+00:00</lastmod>
   </url>
 </urlset>

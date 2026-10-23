@@ -202,3 +202,23 @@ Printing one would put the pages under a publisher's terms.
 
 Everything written here may be copied, printed, and shared freely. Please do not
 sell it and please do not alter it.
+
+
+## Finding teaching and guides
+
+The main menu begins with `start-here.html`, `help.html`, and `learn.html`.
+Assurance has its own entrance at `assurance.html`. Doctrine is an overview
+linking to individual subjects, with old section addresses redirected by `MOVED`.
+
+`build.py` generates `assets/search-index.json` from public page content and
+section anchors. `assets/js/search.js` searches that index in the browser, with
+no external service. Hidden pages are excluded. `check.py` validates its links.
+
+The Guides directory keeps every guide in the HTML. `assets/js/guides.js` adds
+topic filters and shows eight selected guides before the reader chooses View all.
+Set a guide's topic in `guide_topic()` and update the featured list when needed.
+Reading estimates use 200 words per minute. Articles include an overview and
+related reading. Long confessional quotations can be expanded in place.
+
+On smaller screens, the contents list becomes a sticky expandable control.
+The full list and every guide remain readable without JavaScript.
