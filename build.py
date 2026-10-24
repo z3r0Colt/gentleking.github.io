@@ -2690,11 +2690,30 @@ def library_html():
     return "\n".join(out)
 
 
+def whole_card_links(body):
+    """Use one semantic link for a card with one destination and no other controls."""
+    def convert(match):
+        attrs, content = match.group(1), match.group(2)
+        classes = re.search(r'class="([^"]*)"', attrs)
+        if not classes or "card" not in classes.group(1).split():
+            return match.group(0)
+        links = list(re.finditer(r'<a\b([^>]*)>([\s\S]*?)</a>', content))
+        if len(links) != 1 or re.search(r'<(?:button|input|select|textarea|details)\b', content):
+            return match.group(0)
+        link = links[0]
+        if re.search(r'\bid=', attrs + link.group(1)):
+            return match.group(0)
+        content = content[:link.start()] + '<span class="card-action">' + link.group(2) + '</span>' + content[link.end():]
+        attrs = attrs[:classes.start()] + 'class="' + classes.group(1) + ' card-link"' + attrs[classes.end():]
+        return '<a' + attrs + link.group(1) + '>' + content + '</a>'
+    return re.sub(r'<article([^>]*)>([\s\S]*?)</article>', convert, body)
+
+
 def build_page(page, dates):
     fragment_path = CONTENT / page["content"]
     if not fragment_path.exists():
         raise SystemExit(f"missing content fragment: {fragment_path}")
-    body = fragment(page).strip()
+    body = whole_card_links(fragment(page).strip())
     if page.get("close"):
         body += "\n\n<hr class=\"rule\">\n\n" + tokens(include(page["close"]))
 

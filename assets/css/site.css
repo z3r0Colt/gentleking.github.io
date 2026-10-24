@@ -2269,3 +2269,35 @@ main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class])
 .supporting-text { max-width: var(--measure); margin-block: 1.3rem; padding: 1rem; border: 1px solid var(--rule); }
 .supporting-text summary { cursor: pointer; font-family: var(--font-ui); font-size: .85rem; color: var(--ink-soft); }
 .supporting-text blockquote { margin-bottom: 0; }
+
+/* Shared interaction styles apply to every ministry page. */
+:root { --link: #145f83; }
+:root[data-theme="dark"] { --link: #8dd3f5; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --link: #8dd3f5; } }
+a { color: var(--link); text-decoration-color: currentColor; text-decoration-thickness: 1.5px; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class]) li, ol:not([class]) li) a:not([class]) { color: var(--link); text-decoration-color: currentColor; }
+.card-go a, .feature-more a, .crumbs a, .footer-links a, .footer-base a, .toc a, .related-reading a, .search-result h2 a { color: var(--link); text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: .2em; text-decoration-thickness: 1.5px; }
+.nav > a { text-decoration: underline; text-underline-offset: .3em; min-height: 44px; display: inline-flex; align-items: center; }
+.footer-links a, .footer-base a { display: inline-block; padding-block: .45rem; }
+.btn { min-height: 44px; justify-content: center; border: 2px solid var(--link); background: var(--paper-raised); color: var(--link); font-weight: 650; text-decoration: none; position: relative; }
+.btn:hover { border-color: var(--link); color: var(--link); background: var(--gold-wash); }
+.btn-primary { background: var(--link); color: var(--paper); }
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.icon-btn, .to-top { min-width: 44px; min-height: 44px; border: 1px solid var(--rule-strong); background: var(--paper-raised); }
+.nav-group-btn, .toc-toggle { min-height: 44px; border: 1px solid var(--link); border-radius: var(--radius); padding: .65rem .8rem; color: var(--link); background: var(--paper-raised); font-weight: 600; cursor: pointer; }
+.card-link { display: flex; flex-direction: column; color: var(--ink); text-decoration: none; border: 2px solid var(--rule-strong); box-shadow: var(--shadow); cursor: pointer; }
+.card-link:hover { color: var(--ink); border-color: var(--link); background: var(--gold-wash); }
+.card-link:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+.card-action, .paths-title, .pager-title { color: var(--link); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: .2em; }
+.card-link .card-go { margin-top: auto; padding-top: .75rem; }
+.card-link .card-go .card-action { display: inline-block; font-family: var(--font-ui); font-weight: 650; font-size: .9rem; }
+.card-link .card-go .card-action::after { content: ' →'; text-decoration: none; }
+.paths a { border: 2px solid var(--rule-strong); }
+@media print { a { color: #000; } }
+.menu-theme, .lib-clear, .lib-forget { min-height: 44px; padding: .6rem .85rem; color: var(--link); background: var(--paper-raised); border: 1px solid var(--link); border-radius: var(--radius); cursor: pointer; }
+.lib-topic, .lib-tag { min-height: 44px; border-color: var(--link); }
+.header-gospel { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-color: var(--link); background: var(--paper-raised); color: var(--link); font-weight: 600; }
+.footer-links a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 24rem) { .site-header .wrap { gap: .4rem; } .brand { gap: .3rem; } .brand-name { font-size: 1rem; } .brand svg { width: 1.25rem; height: 1.25rem; } }
