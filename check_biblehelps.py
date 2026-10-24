@@ -17,6 +17,12 @@ def main():
     assert len(data['catechismCourse']) == 107, 'Expected all 107 Catechism lessons'
     assert len(data['lessons']) == 24, 'Expected all 24 study lessons'
     assert len(data['standards']) == 8, 'Expected all eight source documents'
+    # The main page and companion intentionally teach the same gospel in the same words.
+    # The final paragraph describes the reading tool itself rather than gospel doctrine.
+    core_paragraphs = [paragraph for section in data['gospel']
+                       for paragraph in re.findall(r'<p>[\s\S]*?</p>', section['html'])][:-1]
+    main_gospel = (ROOT / 'content/gospel.html').read_text()
+    assert all(paragraph in main_gospel for paragraph in core_paragraphs), 'Main and companion gospel wording has drifted'
     for i, book in enumerate(metadata):
         content = json.loads((APP / f'assets/bible/{i + 1:02}.json').read_text())
         assert content['name'] == book['name'], f'Book name differs at {i + 1}'

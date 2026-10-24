@@ -240,3 +240,11 @@ The companion saves reading progress and settings in browser storage, using
 the original `brh-v2` key. It does not require an account. No service worker
 or full offline download is installed. Keep cache-version strings current
 when changing its CSS, JavaScript, or teaching data.
+
+
+The main Gospel page shares the companion's 19 substantive gospel paragraphs
+verbatim, with additional Scripture quotations and explanations. The companion's
+closing note about the reading tool is omitted. `check_biblehelps.py` checks this
+agreement so future edits cannot silently give the two pages different wording.
+When revising a shared paragraph, update both copies and the content integrity
+manifest for the companion data.
