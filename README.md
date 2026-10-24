@@ -242,9 +242,13 @@ or full offline download is installed. Keep cache-version strings current
 when changing its CSS, JavaScript, or teaching data.
 
 
-The main Gospel page shares the companion's 19 substantive gospel paragraphs
+The main Gospel page shares the companion's core gospel paragraphs and Scripture quotations
 verbatim, with additional Scripture quotations and explanations. The companion's
 closing note about the reading tool is omitted. `check_biblehelps.py` checks this
 agreement so future edits cannot silently give the two pages different wording.
 When revising a shared paragraph, update both copies and the content integrity
 manifest for the companion data.
+
+The short Gospel summary is shared through `metadata.gospelSummary` in the
+companion content data. Both presentations put an immediate call to Christ near
+the beginning, and quote Romans 3:25 and 1 John 4:10 on propitiation.

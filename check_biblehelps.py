@@ -23,6 +23,8 @@ def main():
                        for paragraph in re.findall(r'<p>[\s\S]*?</p>', section['html'])][:-1]
     main_gospel = (ROOT / 'content/gospel.html').read_text()
     assert all(paragraph in main_gospel for paragraph in core_paragraphs), 'Main and companion gospel wording has drifted'
+    assert data['metadata']['gospelCall'] in main_gospel, 'Gospel invitations have drifted'
+    assert data['metadata']['gospelSummary'] in (ROOT / 'gospel.html').read_text(), 'Gospel summaries have drifted'
     for i, book in enumerate(metadata):
         content = json.loads((APP / f'assets/bible/{i + 1:02}.json').read_text())
         assert content['name'] == book['name'], f'Book name differs at {i + 1}'

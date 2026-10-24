@@ -36,6 +36,7 @@ CONTENT = ROOT / "content"
 # --------------------------------------------------------------------------
 
 SITE_NAME = "Gentle King"
+GOSPEL_SUMMARY = json.loads((ROOT / "biblehelps/assets/content.json").read_text(encoding="utf-8"))["metadata"]["gospelSummary"]
 SITE_TAGLINE = "The King who is gentle toward sinners reigns over all things."
 
 # Where the site is actually served from, used for canonical links and for the
@@ -218,11 +219,7 @@ PAGES = [
         "full_title": "The Gospel of Jesus Christ and How to Be Saved \u00b7 Gentle King",
         "eyebrow": "The Gospel",
         "h1": "The Gospel of Jesus Christ",
-        "deck": (
-            "The gospel is the good news that God sent his Son, Jesus Christ, who died for sinners "
-            "and rose again, and that everyone who trusts in him alone is forgiven and counted "
-            "righteous before God. Read it slowly. Nothing matters more."
-        ),
+        "deck": GOSPEL_SUMMARY,
         "description": (
             "What is the gospel? Who God is, what sin has done, how Christ died and rose for "
             "sinners, and how you are forgiven and made right with God by faith alone."
