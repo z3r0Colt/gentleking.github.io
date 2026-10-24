@@ -47,3 +47,5 @@ button:not(.button):not(.icon):not(.pill) { cursor:pointer; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline:3px solid var(--link); outline-offset:4px; }
 .help .anchor { min-height:44px; }
 .standard-proofs>summary, .source-study>summary, .check-answer>summary, .reader-tools>summary { min-height:44px; color:var(--link); }
+
+.gospel-callout{max-width:70ch}.gospel-callout h2{font-size:1.5rem;margin-bottom:12px}.gospel-callout p{margin-bottom:16px}.prose .scripture{margin:26px 0;padding:12px 0 12px 20px;border-left:3px solid var(--gold)}.prose .scripture p{margin-bottom:10px}.prose .scripture cite{display:block;font:normal .82rem/1.5 var(--sans);color:var(--muted)}
