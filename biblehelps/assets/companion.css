@@ -25,3 +25,25 @@ dialog{width:min(760px,calc(100% - 32px));max-height:85dvh;border:1px solid var(
 
 
 .ministry-return{font:600 .72rem var(--sans);text-decoration:none;color:var(--muted);white-space:nowrap}.ministry-return:hover{color:var(--green)}.loading-companion{padding:50px 0;max-width:70ch}.loading-companion h1{font-size:2.6rem}.load-error{padding:20px;border:1px solid var(--line);border-radius:6px}@media(max-width:700px){.header-inner{gap:12px;flex-wrap:wrap;padding-block:10px}.ministry-return{font-size:.68rem}.header-tools{margin-left:auto}.brand{order:1}.header-tools{order:2}.ministry-return{order:0;width:100%}}
+
+/* Recognizable links and full-surface controls throughout the companion. */
+:root { --link:#145f83; }
+html[data-theme=dark] { --link:#8dd3f5; }
+a { color:var(--link); text-decoration-color:currentColor; text-decoration-thickness:1.5px; text-underline-offset:.2em; }
+a:hover { text-decoration-thickness:2px; }
+.prose a.ref, .standard-wording a, .standards-text a, a[data-standard-permalink], .breadcrumbs a, .reader-sidebar nav a, .library-menu a, .quiet-links a, .reading-footer a, .footer a, .ministry-return { color:var(--link); text-decoration:underline; text-decoration-style:solid; text-decoration-color:currentColor; text-decoration-thickness:1.5px; text-underline-offset:.2em; }
+a.button, button.button, .button.secondary { min-height:44px; border:2px solid var(--link); background:var(--link); color:var(--bg); font-weight:650; text-decoration:none; position:relative; }
+.button.secondary { background:var(--surface); color:var(--link); }
+.icon { min-width:44px; min-height:44px; border:1.5px solid var(--green); background:var(--surface); }
+button:not(.button):not(.icon):not(.pill) { cursor:pointer; }
+.desktop-nav button { padding:9px 14px; min-height:44px; border:1.5px solid var(--link); border-radius:6px; background:var(--surface); color:var(--link); font-weight:650; }
+.desktop-nav a, .menu-section a, .course-reader-tools nav a { color:var(--link); text-decoration:underline; text-underline-offset:.2em; }
+.menu-section a { min-height:44px; padding-block:10px; }
+.destination, .book-link, .card-link { border:2px solid var(--line); }
+.destination:hover, .book-link:hover, .card-link:hover, .browse-row:hover { border-color:var(--link); }
+.destination h2, .destination>span:last-child, .book-link b, .card-link h3, .browse-row strong { color:var(--link); text-decoration:underline; text-decoration-thickness:1.5px; text-underline-offset:.2em; }
+.browse-row { padding:18px 14px; margin-block:8px; border:1.5px solid var(--line); border-radius:6px; background:var(--surface); }
+.pill { border:1.5px solid var(--green); background:var(--surface); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline:3px solid var(--link); outline-offset:4px; }
+.help .anchor { min-height:44px; }
+.standard-proofs>summary, .source-study>summary, .check-answer>summary, .reader-tools>summary { min-height:44px; color:var(--link); }
