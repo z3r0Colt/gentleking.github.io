@@ -2271,9 +2271,9 @@ main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class])
 .supporting-text blockquote { margin-bottom: 0; }
 
 /* Shared interaction styles apply to every ministry page. */
-:root { --link: #145f83; }
-:root[data-theme="dark"] { --link: #8dd3f5; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --link: #8dd3f5; } }
+:root { --link: var(--gold); }
+:root[data-theme="dark"] { --link: var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --link: var(--gold); } }
 a { color: var(--link); text-decoration-color: currentColor; text-decoration-thickness: 1.5px; text-underline-offset: .2em; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }

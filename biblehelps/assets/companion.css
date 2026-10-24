@@ -27,8 +27,8 @@ dialog{width:min(760px,calc(100% - 32px));max-height:85dvh;border:1px solid var(
 .ministry-return{font:600 .72rem var(--sans);text-decoration:none;color:var(--muted);white-space:nowrap}.ministry-return:hover{color:var(--green)}.loading-companion{padding:50px 0;max-width:70ch}.loading-companion h1{font-size:2.6rem}.load-error{padding:20px;border:1px solid var(--line);border-radius:6px}@media(max-width:700px){.header-inner{gap:12px;flex-wrap:wrap;padding-block:10px}.ministry-return{font-size:.68rem}.header-tools{margin-left:auto}.brand{order:1}.header-tools{order:2}.ministry-return{order:0;width:100%}}
 
 /* Recognizable links and full-surface controls throughout the companion. */
-:root { --link:#145f83; }
-html[data-theme=dark] { --link:#8dd3f5; }
+:root { --link:var(--green); }
+html[data-theme=dark] { --link:var(--green); }
 a { color:var(--link); text-decoration-color:currentColor; text-decoration-thickness:1.5px; text-underline-offset:.2em; }
 a:hover { text-decoration-thickness:2px; }
 .prose a.ref, .standard-wording a, .standards-text a, a[data-standard-permalink], .breadcrumbs a, .reader-sidebar nav a, .library-menu a, .quiet-links a, .reading-footer a, .footer a, .ministry-return { color:var(--link); text-decoration:underline; text-decoration-style:solid; text-decoration-color:currentColor; text-decoration-thickness:1.5px; text-underline-offset:.2em; }
