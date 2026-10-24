@@ -130,6 +130,7 @@ NAV = [
 
 # The apps under Tools, each with a line saying what it is for.
 TOOLS = [
+    ("biblehelps/", "Bible Reading Helps", "Book guides and study lessons"),
     (APP_PAGE, APP_NAME, "Bible study on any device"),
     (MORTIFY_PAGE, MORTIFY_NAME, "For the fight against sin"),
 ]
@@ -1625,6 +1626,7 @@ FOOTER = """<footer class="site-footer">
       <nav aria-label="Tools">
         <p class="footer-head">Tools</p>
         <ul class="footer-links">
+          <li><a href="biblehelps/">Bible Reading Helps</a></li>
           <li><a href="sojourner.html">Sojourner</a></li>
           <li><a href="mortify.html">Mortify</a></li>
         </ul>
@@ -2241,7 +2243,7 @@ def structured_data(page, canonical, body, dates):
 
 
 # Each app's page and the mark that goes beside its name.
-APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON}
+APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON, "biblehelps/": BOOK_SVG}
 
 
 def section_of(current):
@@ -2855,7 +2857,7 @@ NOT_PAGES = [
 
 
 def build_sitemap(dates):
-    urls = []
+    urls = [f"  <url>\n    <loc>{SITE_URL}/biblehelps/</loc>\n  </url>"]
     for page in PAGES:
         if page.get("hidden"):
             continue
@@ -3004,7 +3006,9 @@ def build_llms_txt():
 
 
 def build_search_index():
-    records = []
+    records = [dict(url="biblehelps/index.html", title="Bible Reading Helps", section="",
+                    text="Interactive Bible reading companion. Guides to all 66 books, 24 study lessons, 107 Shorter Catechism lessons, Westminster Confession and Catechisms, Scripture memory, worked examples, and KJV passage reading.")]
+
     for page in PAGES:
         if page.get("hidden") or page["file"] == "search.html":
             continue

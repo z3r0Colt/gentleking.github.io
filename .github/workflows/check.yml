@@ -62,4 +62,7 @@ jobs:
           exit 1
 
       - name: Check the pages
-        run: python3 check.py
+        run: |
+          python3 check.py
+          python3 check_biblehelps.py
+          node --check biblehelps/assets/companion.js

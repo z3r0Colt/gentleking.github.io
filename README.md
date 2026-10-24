@@ -222,3 +222,21 @@ related reading. Long confessional quotations can be expanded in place.
 
 On smaller screens, the contents list becomes a sticky expandable control.
 The full list and every guide remain readable without JavaScript.
+
+
+## Bible Reading Helps
+
+The interactive companion lives at `/biblehelps/`. GitHub Pages redirects
+`/biblehelps` to that directory. It keeps its own layout, with a return link to
+Gentle King. Find it under Tools, Learn the Faith, and the Bible-reading guide.
+
+`biblehelps/index.html` is its shell. `biblehelps/assets/companion.css` and
+`companion.js` provide the interface. `content.json` preserves the supplied
+teaching. The 66 files under `assets/bible/` preserve the supplied KJV text.
+Only the Bible book being opened is downloaded. Verse counts in the shell
+allow reference links to be checked before that book loads.
+
+The companion saves reading progress and settings in browser storage, using
+the original `brh-v2` key. It does not require an account. No service worker
+or full offline download is installed. Keep cache-version strings current
+when changing its CSS, JavaScript, or teaching data.
