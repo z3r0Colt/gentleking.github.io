@@ -215,8 +215,10 @@ section anchors. `assets/js/search.js` searches that index in the browser, with
 no external service. Hidden pages are excluded. `check.py` validates its links.
 
 The Guides directory keeps every guide in the HTML. `assets/js/guides.js` adds
-topic filters and shows eight selected guides before the reader chooses View all.
-Set a guide's topic in `guide_topic()` and update the featured list when needed.
+topic filters. All guides appear in six native collapsible topic groups, open by
+default, with no featured subset or pagination. Search opens matching groups and
+restores the reader's previous open or closed choices when cleared. Set a guide's
+topic in `guide_topic()` and group order in `GUIDE_TOPIC_GROUPS`.
 Reading estimates use 200 words per minute. Articles include an overview and
 related reading. Long confessional quotations can be expanded in place.
 

@@ -148,6 +148,10 @@ def check(path):
     # a hand written page may carry its own styles, 404.html does
     inline = " ".join(re.findall(r"(?s)<style\b[^>]*>(.*?)</style>", source))
     KNOWN = SHARED | class_names(inline)
+    for href in re.findall(r'<link rel="stylesheet" href="([^"]+)"', source):
+        local_css = ROOT / href.split("?", 1)[0].lstrip("/")
+        if local_css.is_file():
+            KNOWN |= class_names(local_css.read_text(encoding="utf-8"))
     reader = Reader()
     reader.feed(source)
     reader.close()
