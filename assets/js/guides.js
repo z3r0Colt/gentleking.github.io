@@ -1,4 +1,4 @@
-/* Keep the complete directory readable when scripts are unavailable. */
+/* Every guide is present in native, open-by-default topic groups. */
 (function () {
   'use strict';
   var finder = document.getElementById('guide-finder');
@@ -6,26 +6,46 @@
   var query = document.getElementById('guide-query');
   var topic = document.getElementById('guide-topic');
   var status = document.getElementById('guide-status');
-  var all = document.getElementById('guide-all');
-  var groups = Array.from(document.querySelectorAll('section.section')).filter(function (s) { return s.querySelector('.paths'); });
-  var rows = Array.from(document.querySelectorAll('.paths > li'));
-  var expanded = Boolean(location.hash);
-  var featured = ['guide-prayer.html', 'guide-bible-reading.html', 'guide-repentance.html', 'guide-reading-scripture.html', 'guide-find-a-church.html', 'guide-marriage.html', 'guide-parenting.html', 'guide-work.html'];
+  var groups = Array.from(document.querySelectorAll('.guide-group'));
+  var rows = Array.from(document.querySelectorAll('.guide-group .paths > li'));
+  var filtering = false;
+  var previousOpen = new Map();
   function update() {
     var terms = query.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-    var matches = rows.filter(function (row) {
-      return (topic.value === 'all' || row.dataset.topic === topic.value) && terms.every(function (term) { return row.textContent.toLowerCase().includes(term); });
+    var active = Boolean(terms.length || topic.value !== 'all');
+    if (active && !filtering) groups.forEach(function (group) { previousOpen.set(group, group.open); });
+    var count = 0;
+    rows.forEach(function (row) {
+      var match = (topic.value === 'all' || row.dataset.topic === topic.value) && terms.every(function (term) { return row.textContent.toLowerCase().includes(term); });
+      row.hidden = !match;
+      if (match) count++;
     });
-    var filtering = terms.length || topic.value !== 'all';
-    rows.forEach(function (row) { row.hidden = !matches.includes(row) || (!expanded && !filtering && !featured.includes(row.querySelector('a').getAttribute('href'))); });
-    groups.forEach(function (group) { group.hidden = !Array.from(group.querySelectorAll('.paths > li')).some(function (row) { return !row.hidden; }); if (group.previousElementSibling && group.previousElementSibling.matches('hr')) group.previousElementSibling.hidden = group.hidden; });
-    status.textContent = matches.length ? ((expanded || filtering ? matches.length : Math.min(8, matches.length)) + ' of ' + matches.length + ' guides shown') : 'No guides match. Try another word or topic.';
-    all.hidden = Boolean(expanded || filtering || matches.length <= 8);
+    groups.forEach(function (group) {
+      var matches = Array.from(group.querySelectorAll('.paths > li')).filter(function (row) { return !row.hidden; }).length;
+      group.hidden = matches === 0;
+      group.querySelector('[data-guide-count]').textContent = matches + (matches === 1 ? ' guide' : ' guides');
+      if (active && matches) group.open = true;
+      else if (!active && filtering) group.open = previousOpen.get(group) !== false;
+    });
+    status.textContent = active ? (count ? count + ' of ' + rows.length + ' guides match' : 'No guides match. Try another word or topic.') : rows.length + ' guides in ' + groups.length + ' topics';
+    filtering = active;
+  }
+  function followTopicLink() {
+    query.value = ''; topic.value = 'all'; update();
+    var id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
+    var target = document.getElementById(id);
+    if (!target) return;
+    var group = target.matches('.guide-group') ? target : target.closest('.guide-group') || target.nextElementSibling;
+    if (group && group.matches('.guide-group')) group.open = true;
+    target.scrollIntoView({block: 'start'});
   }
   finder.hidden = false;
   query.addEventListener('input', update);
   topic.addEventListener('change', update);
-  all.addEventListener('click', function () { expanded = true; update(); });
-  window.addEventListener('hashchange', function () { expanded = true; query.value = ''; topic.value = 'all'; update(); var target = document.getElementById(location.hash.slice(1)); if (target) target.scrollIntoView(); });
+  document.getElementById('guide-expand').addEventListener('click', function () { groups.forEach(function (group) { if (!group.hidden) group.open = true; }); });
+  document.getElementById('guide-collapse').addEventListener('click', function () { groups.forEach(function (group) { if (!group.hidden) group.open = false; }); });
+  window.addEventListener('hashchange', followTopicLink);
   update();
+  if (location.hash) followTopicLink();
 })();

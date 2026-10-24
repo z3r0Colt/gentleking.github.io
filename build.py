@@ -1368,6 +1368,7 @@ for page in PAGES:
     if page["file"] == "guides.html":
         page["deck"] = "Find help for daily Christian life. Choose a topic or search the guides below."
         page["scripts"] = ["assets/js/guides.js"]
+        page["styles"] = ["assets/css/guides.css"]
     if page["file"] == "index.html":
         page.pop("notice", None)
 for page in BELIEVER_PAGES:
@@ -1790,22 +1791,45 @@ def related_html(page):
     return f'<aside class="related-reading" aria-label="Related reading"><h2>Read Next</h2><ul>{links}</ul></aside>'
 
 
-def paths_html(series):
+def paths_html(series, pages=None):
     """The list of a series' pages on its parent, each with its deck, so the list
     can never disagree with the pages it points to."""
     rows = []
-    for page in SERIES[series]:
+    for page in (SERIES[series] if pages is None else pages):
         rows.append(
             f'    <li data-topic="{guide_topic(page)}"><a href="{page["file"]}">{verdict_badge(page)}<span class="paths-title">{html.escape(page["h1"])}</span>'
-            f'<span class="paths-desc">{html.escape(page["description"] if series in ("life", "discern", "says") else page["deck"])}</span><span class="reading-time">{reading_minutes(page)} min read</span></a></li>'
+            f'<span class="paths-desc">{html.escape(page["description"] if pages is not None or series in ("life", "discern", "says") else page["deck"])}</span><span class="reading-time">{reading_minutes(page)} min read</span></a></li>'
         )
     return "\n".join(rows)
+
+
+GUIDE_TOPIC_GROUPS = (
+    ("Bible Study", "bible-study", None),
+    ("Prayer and Growth", "prayer-and-growth", "christian-life"),
+    ("Church and Worship", "church-and-worship", None),
+    ("Discernment", "discernment", "discernment"),
+    ("Family", "family", "bible-says"),
+    ("Daily Life", "daily-life", None),
+)
+
+
+def guide_topics_html():
+    groups = []
+    for title, slug, legacy in GUIDE_TOPIC_GROUPS:
+        pages = [page for page in GUIDE_PAGES if guide_topic(page) == title]
+        anchor = f'<span class="guide-anchor" id="{legacy}" aria-hidden="true"></span>' if legacy else ""
+        groups.append(anchor + f'<details class="guide-group" id="topic-{slug}" open>'
+                      f'<summary><h2>{title}</h2><span class="guide-count" data-guide-count>{len(pages)} guides</span></summary>'
+                      f'<ol class="paths">{paths_html("topics", pages)}</ol></details>')
+    return "\n".join(groups)
 
 
 def fragment(page):
     """A page's words, as content/ holds them, with the shared blocks, the
     library list, and the Sojourner version written in where it asks for them."""
     body = (CONTENT / page["content"]).read_text(encoding="utf-8")
+    if "<!-- guide-topics -->" in body:
+        body = body.replace("<!-- guide-topics -->", guide_topics_html())
     if LIBRARY_MARK in body:
         body = body.replace(LIBRARY_MARK, library_html())
     body = re.sub(r"<!-- include ([a-z-]+) -->", lambda m: include(m.group(1)), body)
@@ -2744,6 +2768,9 @@ def build_page(page, dates):
                header_gospel=header_gospel(page["file"])),
     ]
 
+    if page.get("styles"):
+        styles = "".join(f'<link rel="stylesheet" href="{asset(path)}">\n' for path in page["styles"])
+        parts[0] = parts[0].replace("</head>", styles + "</head>")
     if page.get("hero"):
         parts.append(render(HERO, app_page=APP_PAGE, app_name=APP_NAME, book=BOOK_SVG,
                             mortify_page=MORTIFY_PAGE, mortify_name=MORTIFY_NAME,
