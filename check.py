@@ -240,6 +240,31 @@ def check(path):
     return found
 
 
+def check_search_index():
+    """Every search destination must be public and resolve to a real page or section."""
+    from urllib.parse import urlsplit
+    index = ROOT / "assets" / "search-index.json"
+    try:
+        records = json.loads(index.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return [f"search index could not be read: {exc}"]
+    problems = []
+    if not records:
+        return ["search index is empty"]
+    for record in records:
+        url = urlsplit(record["url"])
+        destination = ROOT / url.path
+        if not destination.is_file():
+            problems.append(f"search destination is missing: {record['url']}")
+            continue
+        body = destination.read_text(encoding="utf-8")
+        if re.search(r'<meta name="robots" content="noindex"', body):
+            problems.append(f"hidden page appears in search: {record['url']}")
+        if url.fragment and not re.search(r'\bid="' + re.escape(url.fragment) + r'"', body):
+            problems.append(f"search section is missing: {record['url']}")
+    return problems
+
+
 def main():
     pages = sorted(ROOT.glob("*.html"))
     if not pages:
@@ -257,6 +282,10 @@ def main():
         if found:
             bad += 1
 
+    search_problems = check_search_index()
+    for problem in search_problems:
+        print(f"Search index FAIL {problem}")
+    bad += bool(search_problems)
     print()
     if bad:
         print(f"{bad} of {len(pages)} pages need attention.")

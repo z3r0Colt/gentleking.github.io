@@ -168,11 +168,25 @@
 
     if (headings.length < 3) { return; }
 
-    var title = doc.createElement('p');
-    title.className = 'toc-title';
+    var title = doc.createElement('button');
+    title.type = 'button';
+    title.className = 'toc-title toc-toggle';
+    title.setAttribute('aria-expanded', 'false');
+    title.setAttribute('aria-controls', 'toc-links');
     title.textContent = 'On this page';
 
     var list = doc.createElement('ol');
+    list.id = 'toc-links';
+    title.addEventListener('click', function () {
+      var open = title.getAttribute('aria-expanded') !== 'true';
+      title.setAttribute('aria-expanded', String(open));
+    });
+    list.addEventListener('click', function (event) {
+      if (event.target.closest('a')) title.setAttribute('aria-expanded', 'false');
+    });
+    mount.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') { title.setAttribute('aria-expanded', 'false'); title.focus(); }
+    });
     var links = [];
 
     headings.forEach(function (h) {
