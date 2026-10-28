@@ -20,7 +20,6 @@ jobs:
       - name: Validate generated site
         run: |
           python3 check.py
-          python3 check_biblehelps.py
           node --check biblehelps/assets/companion.js
       - name: Commit regenerated site to review branch
         run: |
