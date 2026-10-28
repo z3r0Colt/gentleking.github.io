@@ -2,12 +2,12 @@
   <p class="eyebrow">The first time</p>
   <h2>Installing It</h2>
   <p>Go to the <a href="https://github.com/z3r0Colt/sojourner/releases" target="_blank" rel="noopener">releases page</a>
-    and download the one file for your computer. All three hold the same program, with everything in it.
+    and download the one file for your computer. All three hold the same full program.
     On a phone, a tablet, or a Mac, use <a href="sojourner-web.html">Sojourner in the browser</a> instead.</p>
   <h3 id="windows">On Windows</h3>
   <p>Download the file ending in <code>x64-setup.exe</code> and run it. It installs for you alone, so
-    it needs no administrator rights. It bundles the Microsoft Edge WebView2 runtime that Sojourner
-    draws with, so it installs on a machine that has never been online. It runs on Windows 10 or 11, 64-bit.</p>
+    it doesn&rsquo;t need administrator rights. It includes the Microsoft Edge WebView2 runtime that
+    Sojourner draws with, so it installs on a machine that has never been online. It runs on Windows 10 or 11, 64-bit.</p>
   <h3 id="linux">On Linux</h3>
   <p>Sojourner needs a 64-bit Linux system from 2024 or later.</p>
   <ol class="steps">
@@ -15,56 +15,53 @@
       <code>.deb</code> and open it in your software installer. Or, in a terminal in the folder where
       it landed, run <code>sudo apt install ./Sojourner_{{version}}_amd64.deb</code>.</li>
     <li><strong>Most other systems, such as Fedora 40 or newer.</strong> Download the file ending in
-      <code>.AppImage</code>. It runs without installing. Make it executable, either in its
-      Properties by allowing it to run as a program or with <code>chmod +x</code> in a terminal, and
-      then open it. It needs the <code>libfuse2</code> package, which Ubuntu 24.04 calls
+      <code>.AppImage</code>. It runs without installing. Make it executable, then open it. You can
+      do that in its Properties by allowing it to run as a program, or with <code>chmod +x</code> in a terminal. It needs the <code>libfuse2</code> package, which Ubuntu 24.04 calls
       <code>libfuse2t64</code>.</li>
   </ol>
   <p>Moving from Windows to Linux? On the Windows computer, open Settings, choose Data and backups,
     and Export. Copy that file across, then choose Import in the same place on Linux.</p>
-  <p>The book library is not in any of the three. The books come as four shelves, each its own
-    download, on the releases page too, further down, under Sojourner Library Packs. The same shelf
-    files work on Windows and Linux alike. <a href="#shelves">Adding a shelf</a> is set out below.</p>
-  <p>New to the program? A tutorial built into it walks through every feature. You will find it in
+  <p>The book library isn&rsquo;t in any of the three. The books come as four shelves, each a
+    separate download. They&rsquo;re further down the releases page, under Sojourner Library Packs.
+    The same shelf files work on Windows and Linux. <a href="#shelves">Adding a shelf</a> is explained below.</p>
+  <p>New to the program? A built-in tutorial walks through every feature. It&rsquo;s in
     Settings, under Tutorial.</p>
 </section>
 
 <section class="section" id="before-you-install">
   <p class="eyebrow">Before you double-click</p>
-  <h2>Two Honest Warnings</h2>
-  <p>Neither of these is a problem with the program, but you should know about both before you
-    double-click anything.</p>
+  <h2>Two Things to Know First</h2>
+  <p>Neither of these is a problem with the program, but you should know about both.</p>
   <div class="callout">
-    <p><strong>Windows will warn you.</strong> The Windows installer is not code-signed, because a
-      certificate costs money this work does not have. So SmartScreen shows a blue box the first
+    <p><strong>Windows will warn you.</strong> The Windows installer isn&rsquo;t code-signed, because a
+      certificate costs money this work doesn&rsquo;t have. So SmartScreen shows a blue box the first
       time you run it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. The
-      release page lists each file&rsquo;s SHA-256 checksum, a kind of fingerprint for the file,
-      so anyone who knows how can confirm the file is the one that was published. All three files are
-      built by GitHub from the public source code, not on anyone&rsquo;s own computer, and the
+      release page lists each file&rsquo;s SHA-256 checksum, a kind of fingerprint for the file.
+      Anyone who knows how can use it to confirm the file is the one that was published. All three
+      files are built by GitHub from the public source code, not on anyone&rsquo;s own computer. The
       release page links the record of that build. If the warning
-      makes you uneasy, that instinct is a good one, and you are welcome to pass on it.</p>
+      makes you uneasy, that&rsquo;s a good instinct, and you&rsquo;re welcome to pass on it.</p>
   </div>
   <div class="callout">
     <p><strong>It is a large download.</strong> About {{size}} MB for Windows, {{size_deb}} MB for the
       .deb, and {{size_appimage}} MB for the AppImage, because the texts and the reading voice
-      are all inside it rather than fetched from a server later. That is the trade. One long
+      are all inside it rather than fetched from a server later. That&rsquo;s the trade. One long
       download once, and then the program never needs the network again.</p>
   </div>
-  <p>Version {{version}} means what it says. This is early, real, and in use, but it is not finished.
+  <p>Version {{version}} means what it says. It&rsquo;s early, real, and in use, but it isn&rsquo;t finished.
     Things will change and some of them will break. If something goes wrong, <a href="#trouble">tell
-    me</a> and I will fix it.</p>
+    me</a> and I&rsquo;ll fix it.</p>
 </section>
 
 <section class="section" id="updating">
   <p class="eyebrow">A new version</p>
   <h2>Updating</h2>
-  <p>Sojourner does not update itself. To see whether a newer version exists, open the About page
+  <p>Sojourner doesn&rsquo;t update itself. To see whether a newer version exists, open the About page
     in Settings and press the button there. That button is the only thing in the program that goes
     online. On Windows, download the new installer and run it over the old one. On Linux, install the
     new .deb the same way you installed the first, or put the new AppImage in place of the old one.</p>
-  <p>Your notes, highlights, sermons, prayers, bookmarks, and installed shelves live in your own data,
-    apart from the program, and they are kept. Even so, make a backup first. You will find it in
-    Settings, under Data and backups.</p>
+  <p>Your notes, highlights, sermons, prayers, bookmarks, and installed shelves are stored apart from
+    the program, and they&rsquo;re kept. Even so, make a backup first, in Settings under Data and backups.</p>
   <p>Version 0.4.1 brought Sojourner to Linux, the same program with everything the Windows version
     has. Version 0.4.0 brought <a href="sojourner-features.html#color-text">Color text</a>, which puts
     every person, place, time, and number in the Bible in its own color, and Who&rsquo;s speaking,
@@ -73,25 +70,25 @@
 
 <section class="section" id="shelves">
   <p class="eyebrow">Library packs</p>
-  <h2>The Book Shelves and the Map Packs</h2>
+  <h2>Adding Books and Maps</h2>
   <p>The book shelves are on the releases page under Sojourner Library Packs 0.3.6, with two map
-    packs that give the Atlas its hills and a view from the sky. To install one, open Settings,
+    packs that add terrain and satellite views to the Atlas. To install one, open Settings,
     choose Library packs, and pick Install from file. Once a shelf is in, that button reads Install or
     update a shelf. <a href="sojourner-library.html#shelves">What
-    is on each shelf</a> is set out with the rest of the library.</p>
+    is on each shelf</a> is listed with the rest of the library.</p>
   <p>If your Puritan and Reformed shelf is older than 0.3.6, install the new one. It was rebuilt
-    from cleaner texts, and it takes the old one&rsquo;s place and keeps your notes on its books.
+    from cleaner texts. It replaces the old one and keeps your notes on its books.
     The other three shelves have the same books as before, so they work as they are.</p>
   <p>The map packs need Sojourner 0.3.6 or later. To add one, open Settings, choose Library packs,
     and pick Install a map pack. <a href="sojourner-features.html#map-packs">What each pack shows</a>
-    is described with the atlas. Like the shelves, they come as files you download yourself, so they
-    can just as well arrive on a USB stick.</p>
+    is described with the atlas. Like the shelves, they&rsquo;re files you download yourself, so they
+    can also come on a USB stick.</p>
 </section>
 
 <section class="section" id="trouble">
   <p class="eyebrow">If something goes wrong</p>
   <h2>Bug Reports and Corrections</h2>
-  <p>If something does not work, or a text is wrong, or you want the program to do a thing it does
-    not do, write to <span class="mail" data-user="sojourner" data-domain="gentleking.org">sojourner at gentleking.org</span>.
-    Bug reports are genuinely welcome, and corrections to the texts most of all.</p>
+  <p>If something doesn&rsquo;t work, or a text is wrong, or you want the program to do something it
+    doesn&rsquo;t, write to <span class="mail" data-user="sojourner" data-domain="gentleking.org">sojourner at gentleking.org</span>.
+    Bug reports are welcome, and corrections to the texts most of all.</p>
 </section>
