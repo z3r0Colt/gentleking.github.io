@@ -125,7 +125,7 @@ NAV = [
     ("start-here.html", "Start Here"),
     ("help.html", "Find Help"),
     ("learn.html", "Learn the Faith"),
-    ("guides.html", "Christian Living"),
+    ("guides.html", "Guides"),
     ("search.html", "Search"),
 ]
 
@@ -235,10 +235,10 @@ PAGES = [
     {
         "file": "comfort.html",
         "content": "comfort.html",
-        "title": "Scripture for the Hard Hour",
+        "title": "Grief and Hard Times",
         "full_title": "Bible Verses for Grief and Hard Times (KJV) \u00b7 Gentle King",
         "eyebrow": "Comfort",
-        "h1": "Scripture for the Hard Hour",
+        "h1": "Grief and Hard Times",
         "crumb": "Comfort",
         "deck": (
             "For the day the hard news comes, and the long days after. King James Scripture and "
@@ -265,7 +265,7 @@ PAGES = [
         "title": "Struggling With Sin",
         "full_title": "Struggling With Sin? How to Put It to Death \u00b7 Gentle King",
         "eyebrow": "Fighting Sin",
-        "h1": "A Greater Affection",
+        "h1": "Struggling With Sin",
         "deck": (
             "For anyone worn down by a sin that will not let go. A heart gives up an old love "
             "only for a stronger one, and Christ is the one love strong enough to drive the others out."
@@ -300,7 +300,7 @@ PAGES = [
         "title": "Doctrine",
         "full_title": "Reformed Theology and the Westminster Confession \u00b7 Gentle King",
         "eyebrow": "Doctrine",
-        "h1": "What the Reformed Have Confessed",
+        "h1": "What We Believe",
         "deck": (
             "Scripture, the Trinity, the five solas, the doctrines of grace, covenant "
             "theology, the law and the gospel, the church, and the things to come."
@@ -323,7 +323,7 @@ PAGES = [
         "title": "Apologetics",
         "full_title": "Christian Apologetics for Skeptics and Doubters \u00b7 Gentle King",
         "eyebrow": "Apologetics",
-        "h1": "A Reason for the Hope",
+        "h1": "Questions About Christianity",
         "deck": (
             "Straight answers for the one who objects to the faith, and comfort for the "
             "one who holds it with a shaking hand. Each has pages of his own."
@@ -363,10 +363,10 @@ PAGES = [
     {
         "file": "teachers.html",
         "content": "teachers.html",
-        "title": "Teachers Weighed",
-        "full_title": "Teachers Weighed \u00b7 Popular Preachers Tested by Scripture \u00b7 Gentle King",
+        "title": "Teacher Reviews",
+        "full_title": "Teacher Reviews \u00b7 Popular Preachers Tested by Scripture \u00b7 Gentle King",
         "eyebrow": "Discernment",
-        "h1": "Teachers Weighed",
+        "h1": "Teacher Reviews",
         "deck": (
             "Careful reports on popular preachers, each weighed by Scripture and the Westminster "
             "Standards from the man\u2019s own words, with what he gets right told as plainly as "
@@ -561,10 +561,10 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-work-and-home.html',
-        'When the Work or the Home Is Gone',
-        'When the Work or the Home Is Gone · Scripture for Hard Times · Gentle King',
-        'Want',
-        'When the Work or the Home Is Gone',
+        'When You Lose Your Job or Home',
+        'When You Lose Your Job or Home · Scripture for Hard Times · Gentle King',
+        'Job or home loss',
+        'When You Lose Your Job or Home',
         ('The job or the business is gone, or the savings, or a fire or a flood took the '
          'house. It is hard to be the one who is supposed to provide. If you are his, your '
          'Father knows what you need.'),
@@ -575,10 +575,10 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-loneliness.html',
-        'When You Are Alone',
-        'When You Are Alone \u00b7 Scripture for the Lonely Christian \u00b7 Gentle King',
+        'When You Are Lonely',
+        'When You Are Lonely \u00b7 Scripture for the Lonely Christian \u00b7 Gentle King',
         'Loneliness',
-        'When You Are Alone',
+        'When You Are Lonely',
         ('The house is quiet, or the room is full and no one knows you. You may have been '
          'alone for years. Christ knew what it was to be left, and he has not left you.'),
         ('For the single, the divorced, the newly moved, and the lonely in a crowded church. '
@@ -588,10 +588,10 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-depression.html',
-        'When Your Own Mind Has Gone Dark',
-        'When Your Own Mind Has Gone Dark · Depression and the Christian · Gentle King',
-        'Darkness',
-        'When Your Own Mind Has Gone Dark',
+        'When You Are Depressed',
+        'When You Are Depressed · Depression and the Christian · Gentle King',
+        'Depression',
+        'When You Are Depressed',
         ('For weeks or years the heaviness has not lifted, or it keeps coming back. Sleep does'
          ' not rest you, and the promises you once loved seem to belong to someone else. '
          'Christ has been in the dark before you.'),
@@ -618,10 +618,10 @@ COMFORT_PAGES = [
 OBJECTOR_PAGES = [
     _child(
         'apologetics-god.html',
-        'Is God There',
-        'Is God There? Answering the Objections to God · Gentle King',
+        'Is God Real?',
+        'Is God Real? Answering the Objections to God · Gentle King',
         'God',
-        'Is God There',
+        'Is God Real?',
         ('Every argument against God is made with tools that only work if he is there.'),
         ('Is there no evidence for God? Who made God? Has science replaced him? Every argument'
          ' against God is made with tools that only work if he is there.'),
@@ -630,10 +630,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-bible.html',
-        'Can the Bible Be Trusted',
+        'Can the Bible Be Trusted?',
         'Can the Bible Be Trusted? Answers to Common Objections · Gentle King',
         'Scripture',
-        'Can the Bible Be Trusted',
+        'Can the Bible Be Trusted?',
         ('The Bible claims that when it speaks, God speaks. It does not wait on your verdict '
          'to be true, and it has nothing to fear from your questions.'),
         ('Men wrote it, men chose the books, it contradicts itself, it was changed. Plain '
@@ -643,10 +643,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-resurrection.html',
-        'Did Jesus Rise',
+        'Did Jesus Rise From the Dead?',
         'Did Jesus Rise From the Dead? The Evidence and the Objections · Gentle King',
         'The resurrection',
-        'Did Jesus Rise',
+        'Did Jesus Rise From the Dead?',
         ('The faith rests on an event at a real time and place. If Jesus did not rise, set it '
          'all aside. If he did, you will have to deal with him.'),
         ('Did Jesus live? Is the resurrection a legend? Did the disciples lie, or were they '
@@ -656,10 +656,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-evil.html',
-        'Why Is There Evil',
+        'Why Does God Allow Evil?',
         'Why Does God Allow Evil and Suffering? · Gentle King',
         'The problem of evil',
-        'Why Is There Evil',
+        'Why Does God Allow Evil?',
         ('Many who ask this are carrying a grief of their own, and they should be answered '
          'with care.'),
         ('The problem of evil, whether God is to blame, the conquest of Canaan, and slavery in'
@@ -669,10 +669,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-morality.html',
-        'Who Decides What Is Good',
+        'Can You Be Good Without God?',
         'Can You Be Good Without God? Who Decides What Is Good · Gentle King',
         'The moral law',
-        'Who Decides What Is Good',
+        'Can You Be Good Without God?',
         ('Nearly everyone is sure that some things are really wrong. Very few ask what makes '
          'them so.'),
         ('Is morality only evolution or culture? Nearly everyone is sure that some things are '
@@ -682,10 +682,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-hell.html',
-        'Is Hell Just',
-        'Is Hell Just? Why a Loving God Judges Sin · Gentle King',
+        'Is Hell Fair?',
+        'Is Hell Fair? Why a Loving God Judges Sin · Gentle King',
         'Judgment',
-        'Is Hell Just',
+        'Is Hell Fair?',
         ('Hell is real, and it is felt without end. It should never be spoken of lightly, and '
          'never left out.'),
         ('Would a loving God send anyone to hell? Is forever too long for a short life of sin?'
@@ -695,10 +695,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-only-jesus.html',
-        'Why Only Jesus',
+        'Is Jesus the Only Way?',
         'Why Is Jesus the Only Way to God? · Gentle King',
         'Other religions',
-        'Why Only Jesus',
+        'Is Jesus the Only Way?',
         ('Few things Christians say offend more in our day than that Jesus is the only way to '
          'God.'),
         ('Do all religions lead to God? What about those who never heard? Is it arrogant to '
@@ -708,10 +708,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-christians.html',
-        'What About the Christians',
+        'What About the Hypocrites?',
         'What About the Hypocrites in the Church? · Gentle King',
         'The church',
-        'What About the Christians',
+        'What About the Hypocrites?',
         ('Some of the strongest arguments against Christ come from people who carry his name, '
          'and they deserve an honest answer.'),
         ('The church is full of hypocrites, and religion has done great harm. Some of the '
@@ -721,10 +721,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-election.html',
-        'Is Election Fair',
+        'Is It Fair That God Chooses?',
         'Is Election Fair? If God Chooses, How Can He Blame Me · Gentle King',
         'Election',
-        'Is Election Fair',
+        'Is It Fair That God Chooses?',
         ('The Bible teaches that God chooses whom he will save. Some hear that as a way off '
          'the hook.'),
         ('The Bible teaches that God chooses whom he will save. Is that fair, and is there any'
@@ -734,10 +734,10 @@ OBJECTOR_PAGES = [
     ),
     _child(
         'apologetics-the-real-objection.html',
-        'The Objection Under the Others',
-        'The Objection Under the Others · Am I a Good Person · Gentle King',
-        'The heart of it',
-        'The Objection Under the Others',
+        'Am I a Good Person?',
+        'Am I a Good Person? The Real Reason People Reject Christ · Gentle King',
+        'The real issue',
+        'Am I a Good Person?',
         ('Every objection on these pages has had an answer. Jesus said the reason men stay away '
          'from him lies somewhere else.'),
         ('Every objection has an answer. Jesus said the reason men stay away from him lies '
@@ -750,10 +750,10 @@ OBJECTOR_PAGES = [
 BELIEVER_PAGES = [
     _child(
         'assurance-am-i-his.html',
-        'Am I Really His',
+        'Am I Really Saved?',
         'Am I Really Saved? Assurance of Salvation · Gentle King',
         'Assurance',
-        'Am I Really His',
+        'Am I Really Saved?',
         ('God does not want his children living on guesses. John wrote his first letter to '
          'believers so that they would know they have eternal life (1 John 5:13).'),
         ('Not sure you are saved? Afraid your faith was never real, or that you were not '
@@ -763,10 +763,10 @@ BELIEVER_PAGES = [
     ),
     _child(
         'assurance-remaining-sin.html',
-        'When Sin Will Not Leave',
-        'When Sin Will Not Leave · Assurance for the Struggling Christian · Gentle King',
+        'When the Same Sin Keeps Coming Back',
+        'When the Same Sin Keeps Coming Back · Assurance for the Struggling Christian · Gentle King',
         'Remaining sin',
-        'When Sin Will Not Leave',
+        'When the Same Sin Keeps Coming Back',
         ('Few things shake a Christian like meeting the same sin again, years after he first '
          'wept over it. Your fear draws one conclusion from that. God has drawn another, and '
          'he has written it down.'),
@@ -777,10 +777,10 @@ BELIEVER_PAGES = [
     ),
     _child(
         'assurance-night-fears.html',
-        'Fears That Keep You Awake',
+        'The Unpardonable Sin and Falling Away',
         'The Unpardonable Sin, Hebrews 6, and Losing Your Salvation · Gentle King',
-        'Night fears',
-        'Fears That Keep You Awake',
+        'Fears',
+        'The Unpardonable Sin and Falling Away',
         ('Some fears come back at night, when the house is quiet and there is nothing to do '
          'but think. Each of these has an answer that will not give way under you.'),
         ('Afraid you committed the unpardonable sin, frightened by Hebrews 6 and 10, or afraid'
@@ -792,7 +792,7 @@ BELIEVER_PAGES = [
         'assurance-god-feels-far.html',
         'When God Feels Far',
         'When God Feels Far Away · Spiritual Darkness · Gentle King',
-        'In the dark',
+        'Spiritual dryness',
         'When God Feels Far',
         ('There are seasons when prayer feels like talking to the ceiling and the Bible is '
          'only ink. They do not mean that God has gone.'),
@@ -816,10 +816,10 @@ BELIEVER_PAGES = [
     ),
     _child(
         'assurance-affliction.html',
-        'When Life Breaks',
+        'Is God Punishing Me?',
         'Is God Against Me? Is He Punishing Me? · Gentle King',
         'Affliction',
-        'When Life Breaks',
+        'Is God Punishing Me?',
         ('The diagnosis comes, or the child dies, or the marriage comes apart. Under the grief'
          ' a harder question rises, about what God thinks of you.'),
         ('When life breaks, a harder question rises about what God thinks of you. Romans 8, '
@@ -829,10 +829,10 @@ BELIEVER_PAGES = [
     ),
     _child(
         'assurance-death.html',
-        'When Death Comes Near',
+        'Afraid of Dying',
         'Afraid of Dying? Comfort for the Christian Facing Death · Gentle King',
-        'The last enemy',
-        'When Death Comes Near',
+        'Facing death',
+        'Afraid of Dying',
         ('Christians still die, and many of them dread it. Hebrews says the Son of God took '
          'flesh and blood for this very reason.'),
         ('Christians still die, and many dread it. Christ took flesh to deliver those who '
@@ -842,10 +842,10 @@ BELIEVER_PAGES = [
     ),
     _child(
         'assurance-kept.html',
-        'Safe in His Keeping',
-        'Safe in His Keeping · Perseverance and Assurance · Gentle King',
-        'Rest',
-        'Safe in His Keeping',
+        'Will God Keep Me to the End?',
+        'Will God Keep Me to the End? Perseverance and Assurance · Gentle King',
+        'Perseverance',
+        'Will God Keep Me to the End?',
         ('Underneath all these fears is the same suspicion, that in the end it all hangs on '
          'you. Paul closes Romans 8 by naming everything that could come between a believer '
          'and God.'),
@@ -902,7 +902,7 @@ SOJOURNER_PAGES = [
         "title": "What Comes With Sojourner",
         "full_title": "What Comes With Sojourner · Bibles, Commentaries, Confessions · Gentle King",
         "eyebrow": "Sojourner",
-        "h1": "What Comes in the Box",
+        "h1": "What Comes With Sojourner",
         "deck": (
             "The translations, the original texts, the lexicons, the commentaries and "
             "confessions, the four book shelves, and where every one of them came from."
@@ -962,7 +962,7 @@ GUIDE_PAGES = [
            'Why a forgiven Christian still keeps God’s law, how to read it, what each commandment requires and forbids, and how to use them this week.',
            'Why a Christian keeps the Ten Commandments, how to read them, what each one requires and forbids by the Shorter Catechism, and how to use them.',
            ['The Ten Commandments for a Believer'], parent="guides.html", series='life'),
-    _child('guide-worship.html', 'How God Is to Be Worshiped', 'The Regulative Principle of Worship \u00b7 How God Is to Be Worshiped \u00b7 Gentle King', 'Guide', 'How God Is to Be Worshiped',
+    _child('guide-worship.html', 'How God Wants to Be Worshiped', 'The Regulative Principle of Worship \u00b7 How God Is to Be Worshiped \u00b7 Gentle King', 'Guide', 'How God Wants to Be Worshiped',
            'The regulative principle in plain words. God decides how he is worshiped, what he has commanded, what that rules out, and why it matters.',
            'The regulative principle of worship explained plainly. What God commands in worship, elements and circumstances, psalm singing, and why it matters.',
            ['The regulative principle of worship'], parent="guides.html", series='life'),
@@ -1022,10 +1022,10 @@ GUIDE_PAGES = [
            'Testing teaching online, your own elders, worship music, books and films, and your time and attention.',
            'Christian discernment for books, podcasts, music, films, and online preachers. Testing by Scripture, your own elders, and guarding your time.',
            ['How to Test Books, Music, and Preachers Online'], parent="guides.html", series='discern'),
-    _child('guide-disagreeing.html', 'How to Disagree With a Brother', 'How to Disagree With a Christian Brother · Gentle King', 'Guide', 'How to Disagree With a Brother',
+    _child('guide-disagreeing.html', 'How to Disagree With Another Christian', 'How to Disagree With a Christian Brother · Gentle King', 'Guide', 'How to Disagree With Another Christian',
            'Three kinds of difference, Romans 14 in practice, how to disagree well, and when to let it go.',
            'How Christians should disagree. Matters of faith, serious error, and liberty, Romans 14, online arguments, and church disputes.',
-           ['How to Disagree With a Brother'], parent="guides.html", series='discern'),
+           ['How to Disagree With Another Christian'], parent="guides.html", series='discern'),
     _child('guide-false-church.html', 'How to Tell a True Church From a False One', 'How to Tell a True Church From a False One · Gentle King', 'Guide', 'How to Tell a True Church From a False One',
            'The marks of a true church, what makes a church false and why, the warning signs, and what to do.',
            'The three marks of a true church, what makes a church false and why, warning signs to look for, and when you must leave.',
@@ -1100,7 +1100,7 @@ GUIDE_PAGES = [
            ['Death', 'Burial', 'Cremation'], parent="guides.html", series='says'),
 ]
 
-# One report per teacher, under Teachers Weighed. Each has a PDF of the full
+# One report per teacher, under Teacher Reviews. Each has a PDF of the full
 # report in resources/discernment/, linked from its page. Add the newest last.
 # verdict says whether he is safe to sit under, True or False. It is drawn big
 # at the top of his page and beside his name in the list, so no one skims past it.
@@ -1243,10 +1243,10 @@ PAGES.extend([{'file': 'start-here.html',
   'scripts': ['assets/js/search.js']},
  {'file': 'doctrine-why-doctrine.html',
   'content': 'doctrine-why-doctrine.html',
-  'title': 'Why Doctrine Is Not the Enemy of Devotion',
-  'full_title': 'Why Doctrine Is Not the Enemy of Devotion · Gentle King',
+  'title': 'Why Doctrine Matters',
+  'full_title': 'Why Doctrine Matters · Gentle King',
   'eyebrow': 'Doctrine',
-  'h1': 'Why Doctrine Is Not the Enemy of Devotion',
+  'h1': 'Why Doctrine Matters',
   'deck': 'Why sound teaching belongs to the Christian life.',
   'description': 'Why sound teaching belongs to the Christian life.',
   'schema': 'Article',
@@ -1254,10 +1254,10 @@ PAGES.extend([{'file': 'start-here.html',
   'toc': True},
  {'file': 'doctrine-scripture.html',
   'content': 'doctrine-scripture.html',
-  'title': 'The Word of God',
-  'full_title': 'The Word of God · Gentle King',
+  'title': 'The Bible',
+  'full_title': 'The Bible · Gentle King',
   'eyebrow': 'Doctrine',
-  'h1': 'The Word of God',
+  'h1': 'The Bible',
   'deck': 'Why Scripture is our final rule of faith and life.',
   'description': 'Why Scripture is our final rule of faith and life.',
   'schema': 'Article',
@@ -1331,10 +1331,10 @@ PAGES.extend([{'file': 'start-here.html',
   'toc': True},
  {'file': 'doctrine-last-things.html',
   'content': 'doctrine-last-things.html',
-  'title': 'The Last Things',
-  'full_title': 'The Last Things · Gentle King',
+  'title': 'The End Times',
+  'full_title': 'The End Times · Gentle King',
   'eyebrow': 'Doctrine',
-  'h1': 'The Last Things',
+  'h1': 'The End Times',
   'deck': 'Christ’s return, the resurrection, and the judgment.',
   'description': 'Christ’s return, the resurrection, and the judgment.',
   'schema': 'Article',

@@ -32,7 +32,7 @@
       }).filter(function (x) { return x.score > 0; }).sort(function (a, b) { return b.score - a.score; });
       var seen = new Set();
       ranked = ranked.filter(function (x) { var page = x.record.url.split('#')[0]; if (seen.has(page)) return false; seen.add(page); return true; });
-      status.textContent = ranked.length ? ranked.length + ' pages found. Showing the closest matches.' : 'No matches. Try fewer words, or browse Find Help and Christian Living.';
+      status.textContent = ranked.length ? ranked.length + ' pages found. Showing the closest matches.' : 'No matches. Try fewer words, or browse Find Help and Guides.';
       ranked.slice(0, 20).forEach(function (hit) {
         var record = hit.record;
         var article = document.createElement('article'); article.className = 'search-result';
@@ -45,7 +45,7 @@
         p.textContent = (start ? '…' : '') + text.slice(start, start + 240) + (text.length > start + 240 ? '…' : '');
         article.append(h, p); results.appendChild(article);
       });
-    }).catch(function () { status.textContent = 'Search could not load. Please try again, or browse Find Help and Christian Living.'; });
+    }).catch(function () { status.textContent = 'Search could not load. Please try again, or browse Find Help and Guides.'; });
   }
   form.addEventListener('submit', function (e) { e.preventDefault(); var query = field.value.trim(); history.replaceState(null, '', 'search.html?q=' + encodeURIComponent(query)); run(query); });
   field.value = new URLSearchParams(location.search).get('q') || '';
