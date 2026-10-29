@@ -24,6 +24,25 @@ person, not a generated study-guide template.
 - Use plain words without flattening the doctrine. Define any term an ordinary
   reader might not know.
 
+## Contractions and natural speech
+
+Write the way an ordinary believer would speak. Use "don't," "can't,"
+"doesn't," "I'm," "you're," and "it's" where the sentence calls for them.
+Contractions are not an excuse for clipped or artificial writing.
+
+Never contract an auxiliary stranded at the end of a clause. Write
+"Who I Am," "where they are," and "what it is," not "Who I'm,"
+"where they're," or "what it's." In American English, "you have a Bible"
+is usually more natural than "you've a Bible." Preserve emphasis when
+the uncontracted form carries real meaning.
+
+Keep every KJV quotation, historical quotation, and original Westminster
+passage exactly as given. Don't rewrite the divine "I AM." The
+`contractions_audit.py` and `builder_copy_contractions.py` scripts are
+tools for examining possible edits. They do not replace reading the
+sentences aloud. For a sensitive revision, use `verify_quoted_text.py`
+against a known original branch.
+
 ## Precision before force
 
 - "May," "might," "sometimes," and "we don't know" belong where Scripture
