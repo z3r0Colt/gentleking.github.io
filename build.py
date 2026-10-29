@@ -1416,6 +1416,8 @@ for page in PAGES:
         page["styles"] = ["assets/css/guides.css"]
     if page["file"] == "index.html":
         page.pop("notice", None)
+    if page["file"] == "corrections.html":
+        page["scripts"] = ["assets/js/corrections.js"]
 for page in BELIEVER_PAGES:
     page["parent"] = "assurance.html"
 
@@ -2797,6 +2799,11 @@ def build_page(page, dates):
     body = whole_card_links(fragment(page).strip())
     if page.get("close"):
         body += "\n\n<hr class=\"rule\">\n\n" + tokens(include(page["close"]))
+
+    if page.get("schema") == "Article" and page["file"] != "corrections.html":
+        article = html.escape(page["file"], quote=True)
+        body += ('\n<p class="article-correction">Notice something that needs correcting? '
+                 '<a href="corrections.html?article=' + article + '">Report an issue with this page</a>.</p>')
 
     canonical = page_url(page)
     full_title = page_title(page)

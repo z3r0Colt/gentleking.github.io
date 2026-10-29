@@ -83,10 +83,10 @@ class Reader(html.parser.HTMLParser):
             self.ids[attr["id"]] += 1
         if tag == "a" and attr.get("href"):
             href = attr["href"]
-            if href.startswith(("tel:", "sms:")):
+            if href.startswith(("tel:", "sms:", "mailto:")):
                 # These open the reader's own phone, so there is no page to look for.
                 # A number with a dash or a space in it may not dial, so keep it bare.
-                if not re.fullmatch(r"(tel|sms):\+?\d+", href):
+                if not href.startswith("mailto:") and not re.fullmatch(r"(tel|sms):\+?\d+", href):
                     self.problems.append(f"phone link should be digits only: {href}")
             else:
                 (self.external if href.startswith("http") else self.internal).append((href, attr))
