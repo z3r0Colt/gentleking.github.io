@@ -67,13 +67,19 @@ def valid_scripture(match):
     return True
 
 def confessional_url(match):
+    """Open the exact original section and proof texts in Bible Reading Helps.
+
+    Its Westminster data comes solely from thewestminsterstandard.org and
+    each document provides a link back to that original source.
+    """
     name, num = match.group("name").lower(), int(match.group("num"))
-    if name in ("wcf", "westminster confession of faith"):
-        return CONFESSION if 1 <= num <= 33 else None
-    if name in ("wlc", "westminster larger catechism"):
-        return LARGER if 1 <= num <= 196 else None
-    if name in ("wsc", "westminster shorter catechism"):
-        return SHORTER if 1 <= num <= 107 else None
+    if name in ("wcf", "westminster confession of faith") and 1 <= num <= 33:
+        sub = match.group("sub")
+        return f"biblehelps/index.html#standards/wcf/{num}" + (f"/{int(sub)}" if sub else "")
+    if name in ("wlc", "westminster larger catechism") and 1 <= num <= 196:
+        return f"biblehelps/index.html#standards/wlc/{num}"
+    if name in ("wsc", "westminster shorter catechism") and 1 <= num <= 107:
+        return f"biblehelps/index.html#standards/wsc/{num}"
     return None
 
 def link_text(text):
@@ -88,7 +94,7 @@ def link_text(text):
     for match in CONFESSIONAL.finditer(text):
         url = confessional_url(match)
         if url:
-            matches.append((match.start(), match.end(), url, "Read the original Westminster Standard"))
+            matches.append((match.start(), match.end(), url, "Read the original Westminster text and Scripture proofs"))
     if not matches:
         return text
     matches.sort(key=lambda t: (t[0], -(t[1] - t[0])))

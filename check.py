@@ -183,7 +183,10 @@ def check(path):
         if target and not page.exists():
             found.append(f"link to {href} but that file is not in the repo")
         elif anchor and page.is_file():
-            if f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
+            # Bible Reading Helps uses a client-side document/section router.
+            # Validate its semantic routes in audit_site.py, not as HTML ids.
+            is_reader_route = target == "biblehelps/index.html" and anchor.startswith("standards/")
+            if not is_reader_route and f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
                 found.append(f"link to {href} but nothing on that page has that id")
 
     for href, attr in reader.external:

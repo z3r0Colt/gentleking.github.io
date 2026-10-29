@@ -1419,6 +1419,19 @@ for page in PAGES:
 for page in BELIEVER_PAGES:
     page["parent"] = "assurance.html"
 
+# Include the practical church guides in the existing visible topic finder.
+GUIDE_PAGES.extend([
+    _child('guide-church-membership.html', 'Church Membership',
+           'Church Membership · Gentle King', 'Church and Worship',
+           'Church Membership', 'Communicant membership, elders and vows.',
+           'How to join and serve in a faithful congregation.',
+           ['Church Membership'], parent='guides.html', series='discern'),
+    _child('guide-joining-rpc.html', 'Visiting and Joining an RP Church',
+           'Visiting and Joining an RP Church · Gentle King', 'Church and Worship',
+           'Visiting and Joining an RP Church', 'What to expect at worship and membership.',
+           'A practical introduction to Reformed Presbyterian church membership.',
+           ['RPCNA Membership'], parent='guides.html', series='discern'),
+])
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
 
