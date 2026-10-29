@@ -66,4 +66,6 @@ jobs:
           python3 check.py
           python3 check_biblehelps.py
           python3 audit_site.py
+          python3 check_foundations.py
           node --check biblehelps/assets/companion.js
+          node --check assets/js/corrections.js

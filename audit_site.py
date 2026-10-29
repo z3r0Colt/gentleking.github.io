@@ -31,6 +31,8 @@ def main():
                 if not match or not __import__("reference_links").valid_scripture(match):
                     invalid.append(f"{page['file']} has invalid reference {reference}")
                 bible += 1
+            elif href.startswith("biblehelps/index.html#standards/") and re.fullmatch(r"(?:wcf|wlc|wsc)/[0-9]+(?:/[0-9]+)?", href.split("#standards/", 1)[1]):
+                standards += 1
             elif href in (
                 "https://thewestminsterstandard.org/the-westminster-confession/",
                 "https://thewestminsterstandard.org/westminster-larger-catechism/",

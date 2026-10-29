@@ -10,6 +10,34 @@ serves the `.html` files at the top of this repository exactly as they are.
 
 ---
 
+## Foundations and Westminster study
+
+The ministry now includes `foundations.html`, a sixteen-lesson pathway from the
+gospel to the life of the church, and `westminster-study.html`, an index of all
+thirty-three chapters of the original Confession. Each chapter opens the
+specific historical text and Scripture proofs within Bible Reading Helps.
+
+Six doctrine guides cover baptism, the person and work of Christ, justification,
+the fall and original sin, Christian liberty, and lawful oaths and vows.
+Two practical guides explain church membership and visiting an RP congregation.
+They distinguish the original 1647 Standards from current denominational rules.
+
+`reference_links.py` now opens exact WCF paragraphs and Catechism answers in
+the local original-text reader. The same reader has links to
+thewestminsterstandard.org, the sole original Westminster text source used here.
+`check_foundations.py` guards these links and the learning pages in normal CI.
+
+Each authored article contains a link to `corrections.html` with its page address.
+The form opens the user's email app and transmits nothing to the site itself.
+The sources and corrections policy explains the verification process.
+
+`browser_smoke.py` uses Playwright and Chromium to test representative pages
+at phone, tablet, and desktop viewport widths, the correction form, and
+confessional paragraph navigation. Run the on-demand GitHub Actions
+`Browser smoke test` workflow from the Actions tab. It was checked in CI
+for this release, but it is **not** a substitute for physical-device testing,
+manual screen-reader testing, or a full WCAG audit.
+
 ## Editing the site
 
 There is one small build script so that the header, the footer, and all the page

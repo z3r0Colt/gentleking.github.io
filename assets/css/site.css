@@ -2305,3 +2305,20 @@ main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class])
 /* Scripture and original Westminster source links are visible but quiet. */
 a.source-ref { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; text-decoration-color: var(--gold); }
 a.source-ref:hover, a.source-ref:focus-visible { text-decoration-thickness: 2px; }
+
+/* Foundations and Westminster study indexes. Existing theme variables are used. */
+.foundation-steps { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: .85rem; }
+.foundation-step { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper-raised); padding: 1.2rem; }
+.foundation-step h3 { margin: 0 0 .45rem; }
+.foundation-step p { margin: .35rem 0; }
+.chapter-index > li { scroll-margin-top: 6rem; }
+.chapter-index > li p { margin: .3rem 0 .65rem; }
+.article-correction { font-size: .85rem; margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.15rem; color: var(--muted); }
+#correction-form { max-width: 44rem; margin-block: 1.25rem; }
+#correction-form label { display: block; margin-bottom: .4rem; font-family: var(--font-ui); }
+#correction-form input, #correction-form select, #correction-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-size: 1rem; padding: .8rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-raised); color: var(--ink); }
+#correction-form textarea { resize: vertical; min-height: 9rem; }
+#correction-form :is(input,select,textarea):focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+
+/* Quiet source and study notes. */
+.small { font-size: .88rem; line-height: 1.5; }

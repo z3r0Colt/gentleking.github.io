@@ -1381,6 +1381,19 @@ PAGES.extend([
      "schema": "Article", "parent": "doctrine.html", "toc": True},
 ])
 
+# Original Westminster doctrine and discipleship pages.
+PAGES.extend([
+    {"file": "doctrine-baptism.html", "content": "doctrine-baptism.html", "title": "Baptism", "full_title": "Baptism · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Baptism", "deck": "Christ's covenant sign and the work of the Spirit.", "description": "Christ's covenant sign and the work of the Spirit.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-justification.html", "content": "doctrine-justification.html", "title": "Justification", "full_title": "Justification · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Justification", "deck": "Pardoned and accepted through Christ's righteousness alone.", "description": "Pardoned and accepted through Christ's righteousness alone.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-christ-mediator.html", "content": "doctrine-christ-mediator.html", "title": "Christ the Mediator", "full_title": "Christ the Mediator · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Christ the Mediator", "deck": "True God and true man, our Prophet, Priest and King.", "description": "True God and true man, our Prophet, Priest and King.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-fall-and-sin.html", "content": "doctrine-fall-and-sin.html", "title": "The Fall and Original Sin", "full_title": "The Fall and Original Sin · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "The Fall and Original Sin", "deck": "Adam's headship and humanity's need for grace.", "description": "Adam's headship and humanity's need for grace.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-christian-liberty.html", "content": "doctrine-christian-liberty.html", "title": "Christian Liberty", "full_title": "Christian Liberty · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Christian Liberty", "deck": "Conscience and obedience in the 1647 Confession.", "description": "Conscience and obedience in the 1647 Confession.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-oaths-and-vows.html", "content": "doctrine-oaths-and-vows.html", "title": "Oaths and Vows", "full_title": "Oaths and Vows · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Oaths and Vows", "deck": "The solemn promises Scripture permits and requires.", "description": "The solemn promises Scripture permits and requires.", "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "foundations.html", "content": "foundations.html", "title": "Foundations of the Christian Faith", "full_title": "Foundations of the Christian Faith · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Foundations of the Christian Faith", "deck": "Sixteen lessons through the Christian faith.", "description": "Sixteen lessons through the Christian faith.", "schema": "CollectionPage", "parent": "start-here.html", "toc": True},
+    {"file": "westminster-study.html", "content": "westminster-study.html", "title": "Westminster Study Center", "full_title": "Westminster Study Center · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Westminster Study Center", "deck": "The 33 chapters of the original Confession with proofs.", "description": "The 33 chapters of the original Confession with proofs.", "schema": "CollectionPage", "parent": "doctrine.html", "toc": True},
+    {"file": "corrections.html", "content": "corrections.html", "title": "Corrections and Sources", "full_title": "Corrections and Sources · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Corrections and Sources", "deck": "Sources and the process for reporting errors.", "description": "Sources and the process for reporting errors.", "schema": "Article", "parent": "about.html", "toc": True},
+])
+
 MOVED["doctrine"] = {'why-doctrine': 'doctrine-why-doctrine.html#why-doctrine',
  'scripture': 'doctrine-scripture.html#scripture',
  'god-and-trinity': 'doctrine-god-and-trinity.html#god-and-trinity',
@@ -1401,9 +1414,24 @@ for page in PAGES:
         page["styles"] = ["assets/css/guides.css"]
     if page["file"] == "index.html":
         page.pop("notice", None)
+    if page["file"] == "corrections.html":
+        page["scripts"] = ["assets/js/corrections.js"]
 for page in BELIEVER_PAGES:
     page["parent"] = "assurance.html"
 
+# Include the practical church guides in the existing visible topic finder.
+GUIDE_PAGES.extend([
+    _child('guide-church-membership.html', 'Church Membership',
+           'Church Membership · Gentle King', 'Church and Worship',
+           'Church Membership', 'Communicant membership, elders and vows.',
+           'How to join and serve in a faithful congregation.',
+           ['Church Membership'], parent='guides.html'),
+    _child('guide-joining-rpc.html', 'Visiting and Joining an RP Church',
+           'Visiting and Joining an RP Church · Gentle King', 'Church and Worship',
+           'Visiting and Joining an RP Church', 'What to expect at worship and membership.',
+           'A practical introduction to Reformed Presbyterian church membership.',
+           ['RPCNA Membership'], parent='guides.html'),
+])
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
 
@@ -2769,6 +2797,11 @@ def build_page(page, dates):
     body = whole_card_links(fragment(page).strip())
     if page.get("close"):
         body += "\n\n<hr class=\"rule\">\n\n" + tokens(include(page["close"]))
+
+    if page.get("schema") == "Article" and page["file"] != "corrections.html":
+        article = html.escape(page["file"], quote=True)
+        body += ('\n<p class="article-correction">Notice something that needs correcting? '
+                 '<a href="corrections.html?article=' + article + '">Report an issue with this page</a>.</p>')
 
     canonical = page_url(page)
     full_title = page_title(page)

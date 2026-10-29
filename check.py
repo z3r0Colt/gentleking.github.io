@@ -83,10 +83,10 @@ class Reader(html.parser.HTMLParser):
             self.ids[attr["id"]] += 1
         if tag == "a" and attr.get("href"):
             href = attr["href"]
-            if href.startswith(("tel:", "sms:")):
+            if href.startswith(("tel:", "sms:", "mailto:")):
                 # These open the reader's own phone, so there is no page to look for.
                 # A number with a dash or a space in it may not dial, so keep it bare.
-                if not re.fullmatch(r"(tel|sms):\+?\d+", href):
+                if not href.startswith("mailto:") and not re.fullmatch(r"(tel|sms):\+?\d+", href):
                     self.problems.append(f"phone link should be digits only: {href}")
             else:
                 (self.external if href.startswith("http") else self.internal).append((href, attr))
@@ -183,7 +183,10 @@ def check(path):
         if target and not page.exists():
             found.append(f"link to {href} but that file is not in the repo")
         elif anchor and page.is_file():
-            if f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
+            # Bible Reading Helps uses a client-side document/section router.
+            # Validate its semantic routes in audit_site.py, not as HTML ids.
+            is_reader_route = target == "biblehelps/index.html" and anchor.startswith("standards/")
+            if not is_reader_route and f'id="{anchor}"' not in page.read_text(encoding="utf-8"):
                 found.append(f"link to {href} but nothing on that page has that id")
 
     for href, attr in reader.external:
