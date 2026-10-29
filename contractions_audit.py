@@ -57,7 +57,7 @@ RULES = (
     ("I am", "I'm"),
 )
 REGEX = re.compile(r"(?i)\b(?:" + "|".join(re.escape(a) for a, _ in RULES) + r")\b")
-LOOKUP = dict(RULES)
+LOOKUP = {original.lower(): contraction for original, contraction in RULES}
 TOKENS = re.compile(r"(<!--[\s\S]*?-->|<[^>]+>)")
 QUOTE = re.compile(r'(&ldquo;.*?&rdquo;|“.*?”|"[^"]*")', re.S)
 SCRIPTURE_CITATION = re.compile(
