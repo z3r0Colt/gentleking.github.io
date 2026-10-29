@@ -1,0 +1,38 @@
+name: Apply and validate natural contractions
+on:
+  push:
+    branches: [natural-contractions-sitewide-2026-10-29]
+permissions:
+  contents: write
+jobs:
+  edit-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rewrite only original prose, protecting quotations
+        run: python3 contractions_audit.py --apply
+      - name: Rebuild static pages
+        run: python3 build.py
+      - name: Validate generated website and Scripture references
+        run: |
+          python3 check.py
+          python3 check_biblehelps.py
+          python3 audit_site.py
+          python3 check_foundations.py
+          node --check biblehelps/assets/companion.js
+          node --check assets/js/corrections.js
+      - name: Commit authored prose and regenerated website
+        run: |
+          git add -u -- content '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
+          git add -- '*.html'
+          if git diff --cached --quiet; then
+            echo "All text is current."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Use natural contractions throughout authored ministry prose"
+            git push origin HEAD:refs/heads/natural-contractions-sitewide-2026-10-29
+          fi
