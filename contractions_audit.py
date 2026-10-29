@@ -99,7 +99,7 @@ def changes_in_text(text: str, counter: collections.Counter) -> str:
             # reduced at the end of a clause. Neither can page headings
             # such as "Who I Am".
             if form in POSITIVE_FORMS:
-                following = re.match(r"^\\s+([A-Za-z][A-Za-z'-]*)", after)
+                following = re.match(r"^\s+([A-Za-z][A-Za-z'-]*)", after)
                 if not following:
                     return original
                 next_word = following.group(1).lower()
