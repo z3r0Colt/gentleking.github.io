@@ -1,0 +1,35 @@
+name: Editorial revision build
+on:
+  push:
+    branches: [editorial-voice-sitewide-2026-10-29]
+permissions:
+  contents: write
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Review editorial patterns
+        run: python3 editorial_audit.py
+      - name: Build the complete site
+        run: python3 build.py
+      - name: Check HTML, links, confessions and Bible source
+        run: |
+          python3 check.py
+          python3 check_biblehelps.py
+          python3 audit_site.py
+          node --check biblehelps/assets/companion.js
+      - name: Commit generated HTML and indexes
+        run: |
+          git add -u -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
+          if git diff --cached --quiet; then
+            echo "Generated output is current"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Build sitewide editorial revisions"
+            git push origin HEAD:refs/heads/editorial-voice-sitewide-2026-10-29
+          fi
