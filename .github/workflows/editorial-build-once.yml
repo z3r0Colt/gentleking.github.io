@@ -1,0 +1,35 @@
+name: Final editorial build and review
+on:
+  push:
+    branches: [editorial-voice-sitewide-2026-10-29]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Review prose patterns
+        run: python3 editorial_audit.py
+      - name: Generate all HTML
+        run: python3 build.py
+      - name: Validate site
+        run: |
+          python3 check.py
+          python3 check_biblehelps.py
+          python3 audit_site.py
+          node --check biblehelps/assets/companion.js
+      - name: Commit public HTML and indexes
+        run: |
+          git add -u -- '*.html' sitemap.xml robots.txt llms.txt content/dates.json assets/search-index.json
+          if git diff --cached --quiet; then
+            echo "Generated output current"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Generate revised prose for all ministry pages"
+            git push origin HEAD:refs/heads/editorial-voice-sitewide-2026-10-29
+          fi
