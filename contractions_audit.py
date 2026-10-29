@@ -22,7 +22,7 @@ PROTECTED = frozenset(
 EDITABLE = frozenset(("p", "h2", "h3", "h4"))
 VOID = frozenset(("br", "hr", "img", "input", "meta", "link", "source", "wbr"))
 # Keep the old book catalogue and attributed discernment quotations unchanged.
-EXCLUDED = frozenset(("resources.html",))
+EXCLUDED = frozenset(("resources.html", "gospel.html"))
 RULES = (
     ("cannot", "can't"),
     ("do not", "don't"),
