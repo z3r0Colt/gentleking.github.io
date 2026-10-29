@@ -65,4 +65,5 @@ jobs:
         run: |
           python3 check.py
           python3 check_biblehelps.py
+          python3 audit_site.py
           node --check biblehelps/assets/companion.js

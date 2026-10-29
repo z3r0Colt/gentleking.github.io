@@ -27,6 +27,7 @@ import re
 import shutil
 import subprocess
 import sys
+from reference_links import link_references
 
 ROOT = pathlib.Path(__file__).parent.resolve()
 CONTENT = ROOT / "content"
@@ -1351,6 +1352,35 @@ PAGES.extend([{'file': 'start-here.html',
   'schema': 'Article',
   'parent': 'doctrine.html',
   'toc': True}])
+# Further doctrines taught from the original 1647 Westminster Standards.
+PAGES.extend([
+    {"file": "doctrine-providence.html", "content": "doctrine-providence.html",
+     "title": "Providence", "full_title": "Providence · Gentle King",
+     "eyebrow": "Doctrine", "h1": "Providence",
+     "deck": "The Lord preserves and governs all he has made, including the hard things we cannot explain.", "description": "The Lord preserves and governs all he has made, including the hard things we cannot explain.",
+     "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-union-with-christ.html", "content": "doctrine-union-with-christ.html",
+     "title": "Union With Christ", "full_title": "Union With Christ · Gentle King",
+     "eyebrow": "Doctrine", "h1": "Union With Christ",
+     "deck": "How believers are joined to Christ and receive every saving benefit in him.", "description": "How believers are joined to Christ and receive every saving benefit in him.",
+     "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-adoption.html", "content": "doctrine-adoption.html",
+     "title": "Adoption", "full_title": "Adoption · Gentle King",
+     "eyebrow": "Doctrine", "h1": "Adoption",
+     "deck": "What it means to belong to the Father's family through Christ.", "description": "What it means to belong to the Father's family through Christ.",
+     "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-sanctification.html", "content": "doctrine-sanctification.html",
+     "title": "Sanctification", "full_title": "Sanctification · Gentle King",
+     "eyebrow": "Doctrine", "h1": "Sanctification",
+     "deck": "Why sin remains in believers and how the Spirit renews their lives.", "description": "Why sin remains in believers and how the Spirit renews their lives.",
+     "schema": "Article", "parent": "doctrine.html", "toc": True},
+    {"file": "doctrine-church-government.html", "content": "doctrine-church-government.html",
+     "title": "Church Government", "full_title": "Church Government · Gentle King",
+     "eyebrow": "Doctrine", "h1": "Church Government",
+     "deck": "The keys, elders, church courts, and discipline in the 1647 Westminster Confession.", "description": "The keys, elders, church courts, and discipline in the 1647 Westminster Confession.",
+     "schema": "Article", "parent": "doctrine.html", "toc": True},
+])
+
 MOVED["doctrine"] = {'why-doctrine': 'doctrine-why-doctrine.html#why-doctrine',
  'scripture': 'doctrine-scripture.html#scripture',
  'god-and-trinity': 'doctrine-god-and-trinity.html#god-and-trinity',
@@ -1834,7 +1864,9 @@ def fragment(page):
         body = body.replace(LIBRARY_MARK, library_html())
     body = re.sub(r"<!-- include ([a-z-]+) -->", lambda m: include(m.group(1)), body)
     body = re.sub(r"<!-- paths ([a-z]+) -->", lambda m: paths_html(m.group(1)), body)
-    return tokens(body)
+    # The Resources catalogue contains verbatim historical book titles and lists.
+    # Keep its archival text untouched; article and guide references are linked.
+    return tokens(body) if page["file"] == "resources.html" else link_references(tokens(body))
 
 
 def tokens(text):
