@@ -14,6 +14,11 @@ jobs:
           python-version: '3.12'
       - name: Rewrite only original prose, protecting quotations
         run: python3 contractions_audit.py --apply
+      - name: Restore and verify verbatim KJV and confessional text
+        run: |
+          git fetch origin main --depth=1
+          python3 verify_quoted_text.py --restore
+          python3 verify_quoted_text.py
       - name: Rebuild static pages
         run: python3 build.py
       - name: Validate generated website and Scripture references
