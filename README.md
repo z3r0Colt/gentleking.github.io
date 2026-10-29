@@ -31,6 +31,27 @@ preview text**, edit `build.py` and run it again.
 and the spacing are all set as variables near the top of that file, so a small edit
 there changes the whole site at once.
 
+### Source references and confessional texts
+
+The site uses the **original 1647 Westminster Confession and Catechisms**. Its
+source for all Westminster wording and Scripture proofs is
+[The Westminster Standard](https://thewestminsterstandard.org/).
+Do not silently substitute the American Presbyterian revision of 1788, later
+denominational amendments, or quotations taken from other editions.
+
+When an article is built, `reference_links.py` turns recognizable full Bible
+references into KJV reading links to `biblehelps/index.html?ref=...`.
+It links WCF, WLC, and WSC citations to the relevant original document on
+The Westminster Standard. It skips any existing link, code, or interactive
+control. The historical book catalogue on Resources is excluded to preserve
+its verbatim titles and bibliographies. Authoring files under `content/`
+remain plain HTML without machine-generated source-link markup.
+
+The companion supports a one-time `?ref=John%203%3A16` reader link, opening
+the requested KJV passage. Keep this contract stable when changing its UI.
+The CI checks include `python3 audit_site.py`, which validates the generated
+reference links and confirms that doctrine pages are reachable.
+
 **Before you push**, run the checker. It catches broken HTML, links pointing at
 files that are not there, duplicate section ids, and stray punctuation.
 
