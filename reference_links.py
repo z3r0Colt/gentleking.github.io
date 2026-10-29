@@ -43,7 +43,7 @@ def scripture_pattern():
     )
 
 CONFESSIONAL = re.compile(
-    r'(?<![\w])(?P<name>Westminster Confession of Faith|Westminster Larger Catechism|'
+    r'(?<![\w])(?P<name>Westminster Confession of Faith|Westminster Confession|Westminster Larger Catechism|'
     r'Westminster Shorter Catechism|WCF|WLC|WSC)'
     r'\s+(?:(?:Q(?:&amp;|&)A|Q\.)\s*)?'
     r'(?P<num>\d{1,3})(?:\.(?P<sub>\d{1,2}))?'
@@ -73,7 +73,7 @@ def confessional_url(match):
     each document provides a link back to that original source.
     """
     name, num = match.group("name").lower(), int(match.group("num"))
-    if name in ("wcf", "westminster confession of faith") and 1 <= num <= 33:
+    if name in ("wcf", "westminster confession", "westminster confession of faith") and 1 <= num <= 33:
         sub = match.group("sub")
         return f"biblehelps/index.html#standards/wcf/{num}" + (f"/{int(sub)}" if sub else "")
     if name in ("wlc", "westminster larger catechism") and 1 <= num <= 196:
