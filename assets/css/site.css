@@ -2319,3 +2319,6 @@ a.source-ref:hover, a.source-ref:focus-visible { text-decoration-thickness: 2px;
 #correction-form input, #correction-form select, #correction-form textarea { display: block; width: 100%; min-width: 0; font: inherit; font-size: 1rem; padding: .8rem; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-raised); color: var(--ink); }
 #correction-form textarea { resize: vertical; min-height: 9rem; }
 #correction-form :is(input,select,textarea):focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+
+/* Quiet source and study notes. */
+.small { font-size: .88rem; line-height: 1.5; }
