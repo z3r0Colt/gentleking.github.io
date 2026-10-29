@@ -67,8 +67,7 @@ doctrine library. The companion JavaScript also passes Node's syntax check.
 - Browser-level mobile layout, assistive-technology behavior, and dialogue
   interaction still need manual device testing. JavaScript syntax checking
   alone is not a substitute for that.
-- A full article-by-article human editorial reading of the entire
-  multi-hundred-thousand-word website remains a distinct editorial task.
+- A full article-by-article human editorial reading of the complete site remains a distinct editorial task.
   This release improves the whole site's references and build integrity,
   and makes the specific substantive content changes documented above.
 
