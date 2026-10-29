@@ -1864,7 +1864,9 @@ def fragment(page):
         body = body.replace(LIBRARY_MARK, library_html())
     body = re.sub(r"<!-- include ([a-z-]+) -->", lambda m: include(m.group(1)), body)
     body = re.sub(r"<!-- paths ([a-z]+) -->", lambda m: paths_html(m.group(1)), body)
-    return link_references(tokens(body))
+    # The Resources catalogue contains verbatim historical book titles and lists.
+    # Keep its archival text untouched; article and guide references are linked.
+    return tokens(body) if page["file"] == "resources.html" else link_references(tokens(body))
 
 
 def tokens(text):
