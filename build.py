@@ -100,7 +100,7 @@ SOJOURNER_WEB_NOTICE = {
 AUTHOR_NAME = "Colt"
 AUTHOR_DESCRIPTION = (
     "A layman in the Reformed Presbyterian tradition who writes Gentle King and builds "
-    "Sojourner. He is not a pastor or an elder and holds no office in the church."
+    "Sojourner. He isn't a pastor or an elder and holds no office in the church."
 )
 AUTHOR_GITHUB = "https://github.com/z3r0Colt"
 
@@ -223,7 +223,7 @@ PAGES = [
         "deck": GOSPEL_SUMMARY,
         "description": (
             "What is the gospel? Who God is, what sin has done, how Christ died and rose for "
-            "sinners, and how you are forgiven and made right with God by faith alone."
+            "sinners, and how you're forgiven and made right with God by faith alone."
         ),
         "schema": "Article",
         "about": [
@@ -268,7 +268,7 @@ PAGES = [
         "eyebrow": "Fighting Sin",
         "h1": "Struggling With Sin",
         "deck": (
-            "For anyone worn down by a sin that will not let go. A heart gives up an old love "
+            "For anyone worn down by a sin that won't let go. A heart gives up an old love "
             "only for a stronger one, and Christ is the one love strong enough to drive the others out."
         ),
         "description": (
@@ -331,7 +331,7 @@ PAGES = [
         ),
         "description": (
             "Honest answers to common objections to Christianity, from God and the Bible to evil "
-            "and hell, and Scripture for the believer who fears he is not really saved."
+            "and hell, and Scripture for the believer who fears he isn't really saved."
         ),
         "schema": "CollectionPage",
         "about": [
@@ -419,7 +419,7 @@ PAGES = [
         "eyebrow": "About",
         "h1": "About Gentle King",
         "deck": (
-            "What this site is, what it is not, what is believed here, and how to reach out."
+            "What this site is, what it's not, what is believed here, and how to reach out."
         ),
         "description": (
             "Gentle King is written by Colt, a layman in the Reformed Presbyterian tradition who "
@@ -454,11 +454,11 @@ COMFORT_PAGES = [
         'When Someone You Love Has Died · Bible Verses for Grief (KJV) · Gentle King',
         'Grief',
         'When Someone You Love Has Died',
-        ('The house is quiet, or it is full of people, and either way the one you want is not '
-         'in it. You do not have to be strong tonight. Christ has stood where you are '
+        ("The house is quiet, or it's full of people, and either way the one you want isn't "
+         "in it. You don't have to be strong tonight. Christ has stood where you are "
          'standing.'),
         ('Scripture and plain counsel for the night someone you love has died. Christ wept at '
-         'a grave, and he will not hurry you past your grief.'),
+         "a grave, and he won't hurry you past your grief."),
         ['Grief'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -469,7 +469,7 @@ COMFORT_PAGES = [
         'Widowhood',
         'When Your Husband or Wife Has Died',
         ('The one who knew you best is gone, and half of every habit in the house went with '
-         'them. There is no timetable for this. Christ saw to those left behind even while he '
+         "them. There's no timetable for this. Christ saw to those left behind even while he "
          'was dying.'),
         ('King James Scripture and plain counsel for a widow or widower. The one who saw to '
          'his mother from the cross still sees the one left behind.'),
@@ -484,7 +484,7 @@ COMFORT_PAGES = [
         'When Your Child Has Died',
         ('No parent should outlive a child, and every part of you knows it. Whether you lost a'
          ' baby you barely held, or never held at all, or a son or daughter you raised, Christ'
-         ' has not looked away.'),
+         " hasn't looked away."),
         ('Scripture for parents who have lost a child, before birth, as a baby, or grown. '
          'Christ took little children in his arms, and he holds the keys of death.'),
         ['The death of a child', 'Miscarriage'],
@@ -492,12 +492,12 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-did-they-know-christ.html',
-        'When You Fear They Did Not Know Christ',
-        'When You Fear They Did Not Know Christ · Gentle King',
+        "When You Fear They Didn't Know Christ",
+        "When You Fear They Didn't Know Christ · Gentle King",
         'The hardest question',
-        'When You Fear They Did Not Know Christ',
+        "When You Fear They Didn't Know Christ",
         ('Some of us bury people we love without knowing whether they knew Christ. Some of you'
-         ' are not unsure. You fear you know. This is for you too, and you are not asked to '
+         " aren't unsure. You fear you know. This is for you too, and you're not asked to "
          'settle anything tonight.'),
         ('Grieving someone who may not have known Christ? Leave them with the Judge of all the'
          ' earth, who will do right, and bring your own soul to him.'),
@@ -511,10 +511,10 @@ COMFORT_PAGES = [
         'Loss by suicide',
         'When Someone You Love Took Their Own Life',
         ('A death like this leaves questions no other death leaves. You may be carrying grief '
-         'and guilt and fear all at once. God saw what you could not see, and he is near you '
+         "and guilt and fear all at once. God saw what you couldn't see, and he is near you "
          'now.'),
         ('For those left behind after a suicide. Scripture on grief, false guilt, and the '
-         'keeping of Christ. If you are in danger, call or text 988 now.'),
+         "keeping of Christ. If you're in danger, call or text 988 now."),
         ['Suicide loss'],
         parent="comfort.html", close="comfort-close",
     ),
@@ -526,7 +526,7 @@ COMFORT_PAGES = [
         'When Serious Illness Comes',
         ('One conversation in a small room, and the future looks different than it did this '
          'morning, for you or for someone you love. Or it has looked this way for years. You '
-         'do not have to be brave tonight. Your times are in God’s hand.'),
+         "don't have to be brave tonight. Your times are in God’s hand."),
         ('King James Scripture for a hard diagnosis, a long illness, caring for someone, and '
          'the end of life. Your times are in the hand of God.'),
         ['Serious illness', 'Caregiving', 'The end of life'],
@@ -538,8 +538,8 @@ COMFORT_PAGES = [
         'When Your Marriage Is Breaking · Betrayal, Divorce, and Hope · Gentle King',
         'A broken marriage',
         'When Your Marriage Is Breaking',
-        ('You were left, or betrayed, or handed papers you did not want. The one who promised '
-         'to stay did not. Whether you are the husband or the wife, Christ knows what it is to'
+        ("You were left, or betrayed, or handed papers you didn't want. The one who promised "
+         "to stay didn't. Whether you're the husband or the wife, Christ knows what it is to"
          ' be betrayed.'),
         ('Scripture for the betrayed and the deserted, what God has said about divorce, a word'
          ' for the one who broke faith, and a word for children of divorce.'),
@@ -552,7 +552,7 @@ COMFORT_PAGES = [
         'When Your Child Walks Away From the Lord · Gentle King',
         'A wandering child',
         'When Your Child Walks Away From the Lord',
-        ('You taught them to pray, and now they want nothing to do with Christ. You cannot '
+        ("You taught them to pray, and now they want nothing to do with Christ. You can't "
          'give anyone a new heart. Only God can, and he has done it for sons and daughters as '
          'far off as yours.'),
         ('For parents of a prodigal. Only God gives a new heart, and he has done it for sons '
@@ -567,7 +567,7 @@ COMFORT_PAGES = [
         'Job or home loss',
         'When You Lose Your Job or Home',
         ('The job or the business is gone, or the savings, or a fire or a flood took the '
-         'house. It is hard to be the one who is supposed to provide. If you are his, your '
+         "house. It's hard to be the one who is supposed to provide. If you're his, your "
          'Father knows what you need.'),
         ('For a lost job, a failed business, or a house taken by fire or flood. Your Father '
          'knows what you need, and his church is bound to help.'),
@@ -576,12 +576,12 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-loneliness.html',
-        'When You Are Lonely',
-        'When You Are Lonely \u00b7 Scripture for the Lonely Christian \u00b7 Gentle King',
+        "When You're Lonely",
+        "When You're Lonely · Scripture for the Lonely Christian · Gentle King",
         'Loneliness',
-        'When You Are Lonely',
+        "When You're Lonely",
         ('The house is quiet, or the room is full and no one knows you. You may have been '
-         'alone for years. Christ knew what it was to be left, and he has not left you.'),
+         "alone for years. Christ knew what it was to be left, and he hasn't left you."),
         ('For the single, the divorced, the newly moved, and the lonely in a crowded church. '
          'Christ was left alone, and God setteth the solitary in families.'),
         ['Loneliness'],
@@ -589,11 +589,11 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-depression.html',
-        'When You Are Depressed',
-        'When You Are Depressed · Depression and the Christian · Gentle King',
+        "When You're Depressed",
+        "When You're Depressed · Depression and the Christian · Gentle King",
         'Depression',
-        'When You Are Depressed',
-        ('For weeks or years the heaviness has not lifted, or it keeps coming back. Sleep does'
+        "When You're Depressed",
+        ("For weeks or years the heaviness hasn't lifted, or it keeps coming back. Sleep does"
          ' not rest you, and the promises you once loved seem to belong to someone else. '
          'Christ has been in the dark before you.'),
         ('For the Christian under depression. Christ was very heavy in Gethsemane, and he will'
@@ -603,14 +603,14 @@ COMFORT_PAGES = [
     ),
     _child(
         'comfort-safety.html',
-        'If You Are Not Safe',
-        'If You Are Not Safe · Abuse, Danger, and Thoughts of Suicide · Gentle King',
+        "If You're Not Safe",
+        "If You're Not Safe · Abuse, Danger, and Thoughts of Suicide · Gentle King",
         'Safety',
-        'If You Are Not Safe',
+        "If You're Not Safe",
         ('Some hard hours are dangerous. If yours is, the first faithful thing to do is to get'
          ' safe. Read the rest later.'),
         ('In danger now? Call 911. Thinking of ending your life? Call or text 988. Being hurt '
-         'at home? Call 1-800-799-7233. Leaving to be safe is not a sin.'),
+         "at home? Call 1-800-799-7233. Leaving to be safe isn't a sin."),
         ['Safety from violence at home', 'Suicide prevention'],
         parent="comfort.html", close="comfort-close",
     ),
@@ -635,7 +635,7 @@ OBJECTOR_PAGES = [
         'Can the Bible Be Trusted? Answers to Common Objections · Gentle King',
         'Scripture',
         'Can the Bible Be Trusted?',
-        ('The Bible claims that when it speaks, God speaks. It does not wait on your verdict '
+        ("The Bible claims that when it speaks, God speaks. It doesn't wait on your verdict "
          'to be true, and it has nothing to fear from your questions.'),
         ('Men wrote it, men chose the books, it contradicts itself, it was changed. Plain '
          'answers on the authority of the Bible, its canon, and its manuscripts.'),
@@ -648,8 +648,8 @@ OBJECTOR_PAGES = [
         'Did Jesus Rise From the Dead? The Evidence and the Objections · Gentle King',
         'The resurrection',
         'Did Jesus Rise From the Dead?',
-        ('The faith rests on an event at a real time and place. If Jesus did not rise, set it '
-         'all aside. If he did, you will have to deal with him.'),
+        ("The faith rests on an event at a real time and place. If Jesus didn't rise, set it "
+         "all aside. If he did, you'll have to deal with him."),
         ('Did Jesus live? Is the resurrection a legend? Did the disciples lie, or were they '
          'fooled? The faith rests on an event at a real time and place.'),
         ['The resurrection of Jesus'],
@@ -687,7 +687,7 @@ OBJECTOR_PAGES = [
         'Is Hell Fair? Why a Loving God Judges Sin · Gentle King',
         'Judgment',
         'Is Hell Fair?',
-        ('Hell is real, and it is felt without end. It should never be spoken of lightly, and '
+        ("Hell is real, and it's felt without end. It should never be spoken of lightly, and "
          'never left out.'),
         ('Would a loving God send anyone to hell? Is forever too long for a short life of sin?'
          ' Hell is real, and it should never be spoken of lightly or left out.'),
@@ -703,7 +703,7 @@ OBJECTOR_PAGES = [
         ('Few things Christians say offend more in our day than that Jesus is the only way to '
          'God.'),
         ('Do all religions lead to God? What about those who never heard? Is it arrogant to '
-         'say you are right? Why Christians say Jesus is the only way.'),
+         "say you're right? Why Christians say Jesus is the only way."),
         ['The exclusivity of Christ'],
         parent="apologetics.html", series="objector", close="apologetics-close",
     ),
@@ -755,9 +755,9 @@ BELIEVER_PAGES = [
         'Am I Really Saved? Assurance of Salvation · Gentle King',
         'Assurance',
         'Am I Really Saved?',
-        ('God does not want his children living on guesses. John wrote his first letter to '
+        ("God doesn't want his children living on guesses. John wrote his first letter to "
          'believers so that they would know they have eternal life (1 John 5:13).'),
-        ('Not sure you are saved? Afraid your faith was never real, or that you were not '
+        ("Not sure you're saved? Afraid your faith was never real, or that you weren't "
          'chosen? The Westminster Confession on the grounds of assurance.'),
         ['Assurance of salvation'],
         parent="apologetics.html", series="believer", close="assurance-close",
@@ -782,10 +782,10 @@ BELIEVER_PAGES = [
         'The Unpardonable Sin, Hebrews 6, and Losing Your Salvation · Gentle King',
         'Fears',
         'The Unpardonable Sin and Falling Away',
-        ('Some fears come back at night, when the house is quiet and there is nothing to do '
-         'but think. Each of these has an answer that will not give way under you.'),
+        ("Some fears come back at night, when the house is quiet and there's nothing to do "
+         "but think. Each of these has an answer that won't give way under you."),
         ('Afraid you committed the unpardonable sin, frightened by Hebrews 6 and 10, or afraid'
-         ' you could lose your salvation? Answers that will not give way.'),
+         " you could lose your salvation? Answers that won't give way."),
         ['The unpardonable sin', 'Perseverance of the saints'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -796,7 +796,7 @@ BELIEVER_PAGES = [
         'Spiritual dryness',
         'When God Feels Far',
         ('There are seasons when prayer feels like talking to the ceiling and the Bible is '
-         'only ink. They do not mean that God has gone.'),
+         "only ink. They don't mean that God has gone."),
         ('Prayer feels like talking to the ceiling and the Bible is only ink. Scripture for '
          'the believer who fears the Lord and still walks in darkness.'),
         ['Spiritual darkness'],
@@ -808,10 +808,10 @@ BELIEVER_PAGES = [
         'Doubts and Unwanted Thoughts · For the Doubting Christian · Gentle King',
         'Doubt',
         'Doubts and Unwanted Thoughts',
-        ('Some believers are afraid it is not true, and the question will not leave them '
+        ("Some believers are afraid it's not true, and the question won't leave them "
          'alone. Others are afraid of what their own minds keep saying to them.'),
-        ('For the believer who wonders if any of it is true, and for one troubled by '
-         'blasphemous thoughts that will not stop. Lord, I believe, help thou mine unbelief.'),
+        ("For the believer who wonders if any of it's true, and for one troubled by "
+         "blasphemous thoughts that won't stop. Lord, I believe, help thou mine unbelief."),
         ['Doubt', 'Intrusive thoughts'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -980,15 +980,15 @@ GUIDE_PAGES = [
            'Why the Lord’s Day is the Christian Sabbath, how to keep it holy, works of necessity and mercy, and how to make it a delight for a family.',
            ['How to Keep the Lord’s Day'], parent="guides.html", series='life'),
     _child('guide-fasting.html', 'How to Fast', 'How to Fast as a Christian · Gentle King', 'Guide', 'How to Fast',
-           'Why Christians fast, how it joins prayer, what it is not, how to begin, and when not to fast from food.',
-           'How to fast biblically. Fasting with prayer, what Isaiah 58 says it is not, how to begin with one meal, and health cautions.',
+           "Why Christians fast, how it joins prayer, what it's not, how to begin, and when not to fast from food.",
+           "How to fast biblically. Fasting with prayer, what Isaiah 58 says it's not, how to begin with one meal, and health cautions.",
            ['How to Fast'], parent="guides.html", series='life'),
     _child('guide-family-worship.html', 'How to Lead Family Worship', 'How to Lead Family Worship · Gentle King', 'Guide', 'How to Lead Family Worship',
            'Read, sing, and pray. A few minutes a day, the way Reformed households have done it for centuries.',
            'How to lead family worship in a few minutes a day. Read the Bible, sing a psalm, and pray, with plain counsel for starting and keeping on.',
            ['How to Lead Family Worship'], parent="guides.html", series='life'),
     _child('guide-forgiveness.html', 'How to Forgive and Seek Forgiveness', 'How to Forgive and Seek Forgiveness · Gentle King', 'Guide', 'How to Forgive and Seek Forgiveness',
-           'Forgiven people forgive. How to confess a wrong, go to a brother, cover an offense, and what forgiveness does not require.',
+           "Forgiven people forgive. How to confess a wrong, go to a brother, cover an offense, and what forgiveness doesn't require.",
            'How to forgive as a Christian and how to ask forgiveness. Matthew 18, restitution, reconciliation, and why forgiving never means staying in danger.',
            ['How to Forgive and Seek Forgiveness'], parent="guides.html", series='life'),
     _child('guide-evangelism.html', 'How to Share the Gospel', 'How to Share the Gospel With Others · Gentle King', 'Guide', 'How to Share the Gospel',
@@ -996,7 +996,7 @@ GUIDE_PAGES = [
            'How an ordinary Christian shares the gospel. Know the message, pray, ask questions, call for repentance and faith, and invite people to church.',
            ['How to Share the Gospel'], parent="guides.html", series='life'),
     _child('guide-reading-scripture.html', 'How to Read the Bible Rightly', 'How to Read the Bible Rightly · Literal and Figurative · Gentle King', 'Guide', 'How to Read the Bible Rightly',
-           'All of it is true. What reading literally means, the kinds of writing in Scripture, how to tell a figure of speech, and Christ at the center.',
+           "All of it's true. What reading literally means, the kinds of writing in Scripture, how to tell a figure of speech, and Christ at the center.",
            'How to tell what in the Bible is literal and what is figurative. Kinds of biblical writing, Scripture interpreting Scripture, and Christ at the center.',
            ['How to Read the Bible Rightly'], parent="guides.html", series='discern'),
     _child('guide-prophecy.html', 'How to Read Prophecy and Revelation', 'How to Read Prophecy, Revelation, and the Millennium · Gentle King', 'Guide', 'How to Read Prophecy and Revelation',
@@ -1069,7 +1069,7 @@ GUIDE_PAGES = [
            ['Discipline of children', 'Corporal punishment'], parent="guides.html", series='says'),
     _child('guide-abortion.html', 'What the Bible Says About Abortion', 'What the Bible Says About Abortion and the Unborn · Gentle King', 'What the Bible says', 'What the Bible Says About Abortion',
            'The unborn child bears the image of God. What Scripture says, the hard cases, help for a mother who is afraid, and mercy for the guilty.',
-           'What the Bible says about abortion and the unborn child, answers to common objections, help if you are pregnant and afraid, and forgiveness in Christ.',
+           "What the Bible says about abortion and the unborn child, answers to common objections, help if you're pregnant and afraid, and forgiveness in Christ.",
            ['Abortion', 'The sanctity of human life'], parent="guides.html", series='says'),
     _child('guide-work.html', 'What the Bible Says About Work', 'What the Bible Says About Work · Gentle King', 'What the Bible says', 'What the Bible Says About Work',
            'God gave work before the fall. Working as to the Lord, a hard boss, laziness and overwork, providing for a family, and resting in Christ.',
@@ -1227,8 +1227,8 @@ PAGES.extend([{'file': 'start-here.html',
   'full_title': 'Assurance and Doubt · Gentle King',
   'eyebrow': 'Assurance and Doubt',
   'h1': 'Assurance and Doubt',
-  'deck': 'For those who trust Christ but fear they are not really his.',
-  'description': 'For those who trust Christ but fear they are not really his.',
+  'deck': "For those who trust Christ but fear they're not really his.",
+  'description': "For those who trust Christ but fear they're not really his.",
   'schema': 'CollectionPage',
   'toc': False},
  {'file': 'search.html',
@@ -1357,7 +1357,7 @@ PAGES.extend([
     {"file": "doctrine-providence.html", "content": "doctrine-providence.html",
      "title": "Providence", "full_title": "Providence · Gentle King",
      "eyebrow": "Doctrine", "h1": "Providence",
-     "deck": "The Lord preserves and governs all he has made, including the hard things we cannot explain.", "description": "The Lord preserves and governs all he has made, including the hard things we cannot explain.",
+     "deck": "The Lord preserves and governs all he has made, including the hard things we can't explain.", "description": "The Lord preserves and governs all he has made, including the hard things we can't explain.",
      "schema": "Article", "parent": "doctrine.html", "toc": True},
     {"file": "doctrine-union-with-christ.html", "content": "doctrine-union-with-christ.html",
      "title": "Union With Christ", "full_title": "Union With Christ · Gentle King",
