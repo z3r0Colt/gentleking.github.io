@@ -43,7 +43,7 @@ def main():
                     examples[label].append((path.name, context))
     for label in PATTERNS:
         print(f"\n{label}: {stats[label]} possible instances")
-        for name, context in examples[label][:15]:
+        for name, context in examples[label][:80 if label in ('a-picture-and-it-is-real', 'generic weekly checklist') else 15]:
             print(f"  {name}: {context}")
     print("\nThese are candidates only. Check their context before changing them.")
 
