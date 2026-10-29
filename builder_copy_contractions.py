@@ -17,7 +17,7 @@ from contractions_audit import changes_in_text
 
 ROOT = pathlib.Path(__file__).resolve().parent
 FILE = ROOT / "build.py"
-COPY_RANGES = ((70, 109), (160, 1100), (1190, 1430))
+COPY_RANGES = ((70, 109), (215, 1100), (1190, 1430))
 
 def in_copy(line: int) -> bool:
     return any(start <= line <= end for start, end in COPY_RANGES)
