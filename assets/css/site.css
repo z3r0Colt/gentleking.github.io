@@ -2301,3 +2301,7 @@ main :is(p:not(.card-go), dd, figcaption, blockquote, .steps li, ul:not([class])
 .header-gospel { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-color: var(--link); background: var(--paper-raised); color: var(--link); font-weight: 600; }
 .footer-links a { min-height: 44px; display: inline-flex; align-items: center; }
 @media (max-width: 24rem) { .site-header .wrap { gap: .4rem; } .brand { gap: .3rem; } .brand-name { font-size: 1rem; } .brand svg { width: 1.25rem; height: 1.25rem; } }
+
+/* Scripture and original Westminster source links are visible but quiet. */
+a.source-ref { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; text-decoration-color: var(--gold); }
+a.source-ref:hover, a.source-ref:focus-visible { text-decoration-thickness: 2px; }
