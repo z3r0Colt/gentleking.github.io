@@ -103,7 +103,7 @@ def changes_in_text(text: str, counter: collections.Counter) -> str:
                 if not following:
                     return original
                 next_word = following.group(1).lower()
-                if next_word in ("and", "but", "or", "when", "where",
+                if (form in ("it is", "that is") and next_word == "to") or next_word in ("and", "but", "or", "when", "where",
                                  "whether", "because", "than", "which",
                                  "who", "whom", "whose"):
                     return original
