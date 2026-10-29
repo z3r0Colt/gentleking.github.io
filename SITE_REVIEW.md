@@ -4,6 +4,36 @@ This document records the changes made to Gentle King in the 1647 standards
 revision. The code checks are reproducible. Editorial judgments still require
 the author to read the passages and compare them with Scripture.
 
+## Additional work completed in October 2026
+
+- Added six substantial doctrine guides on baptism, justification, Christ the
+  Mediator, the fall and original sin, Christian liberty, and lawful vows.
+- Added a sixteen-lesson Foundations pathway and all thirty-three chapters
+  of the original Confession in a navigable study index.
+- Connected related teaching from the homepage, doctrine, family worship,
+  church-finding, and Lord's Supper articles.
+- Added two church-membership guides. Current RPCNA procedures are clearly
+  distinguished from the historical 1647 Westminster Confession.
+- Changed WCF references to link to exact original paragraphs and WLC/WSC
+  references to their questions in Bible Reading Helps, which also links to
+  the original source at thewestminsterstandard.org.
+- Added per-article correction links, a source-verification policy, and a
+  report form that prepares a local email without storing submissions.
+- Added historical source links to key apologetics and theology articles.
+- Added permanent regression checks for the new pages and a reusable Chromium
+  browser smoke test. A GitHub Actions run of the browser test passed at
+  375px, 768px and 1280px on eleven representative routes.
+
+### Remaining verification limits
+
+The browser run emulates viewport widths and checks basic behavior. It does
+not emulate every aspect of touch input, platform accessibility APIs, screen
+reader output, or real mobile browsers. External links were selected from
+verified public sources but a live crawl of every external destination is
+outside this test. Historical claims in other older articles deserve ongoing
+primary-source review. Passing CI cannot certify the correctness of every
+theological sentence in the full site.
+
 ## Nonnegotiable standards
 
 - The original **1647 Westminster Confession of Faith**, Larger Catechism,
