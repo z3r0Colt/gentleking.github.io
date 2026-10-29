@@ -27,6 +27,7 @@ import re
 import shutil
 import subprocess
 import sys
+from reference_links import link_references
 
 ROOT = pathlib.Path(__file__).parent.resolve()
 CONTENT = ROOT / "content"
@@ -1834,7 +1835,7 @@ def fragment(page):
         body = body.replace(LIBRARY_MARK, library_html())
     body = re.sub(r"<!-- include ([a-z-]+) -->", lambda m: include(m.group(1)), body)
     body = re.sub(r"<!-- paths ([a-z]+) -->", lambda m: paths_html(m.group(1)), body)
-    return tokens(body)
+    return link_references(tokens(body))
 
 
 def tokens(text):
