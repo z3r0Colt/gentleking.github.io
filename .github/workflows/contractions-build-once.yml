@@ -33,7 +33,7 @@ jobs:
           node --check assets/js/corrections.js
       - name: Commit authored prose and regenerated website
         run: |
-          git add -u -- content '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
+          git add -u -- content build.py '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
           git add -- '*.html'
           if git diff --cached --quiet; then
             echo "All text is current."
