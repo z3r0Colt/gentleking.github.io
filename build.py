@@ -1389,8 +1389,6 @@ PAGES.extend([
     {"file": "doctrine-fall-and-sin.html", "content": "doctrine-fall-and-sin.html", "title": "The Fall and Original Sin", "full_title": "The Fall and Original Sin · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "The Fall and Original Sin", "deck": "Adam's headship and humanity's need for grace.", "description": "Adam's headship and humanity's need for grace.", "schema": "Article", "parent": "doctrine.html", "toc": True},
     {"file": "doctrine-christian-liberty.html", "content": "doctrine-christian-liberty.html", "title": "Christian Liberty", "full_title": "Christian Liberty · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Christian Liberty", "deck": "Conscience and obedience in the 1647 Confession.", "description": "Conscience and obedience in the 1647 Confession.", "schema": "Article", "parent": "doctrine.html", "toc": True},
     {"file": "doctrine-oaths-and-vows.html", "content": "doctrine-oaths-and-vows.html", "title": "Oaths and Vows", "full_title": "Oaths and Vows · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Oaths and Vows", "deck": "The solemn promises Scripture permits and requires.", "description": "The solemn promises Scripture permits and requires.", "schema": "Article", "parent": "doctrine.html", "toc": True},
-    {"file": "guide-church-membership.html", "content": "guide-church-membership.html", "title": "Church Membership", "full_title": "Church Membership · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Church Membership", "deck": "Communicant membership, elders, vows and life in the church.", "description": "Communicant membership, elders, vows and life in the church.", "schema": "Article", "parent": "guides.html", "toc": True},
-    {"file": "guide-joining-rpc.html", "content": "guide-joining-rpc.html", "title": "Visiting and Joining an RP Church", "full_title": "Visiting and Joining an RP Church · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Visiting and Joining an RP Church", "deck": "A practical guide to RP worship and membership.", "description": "A practical guide to RP worship and membership.", "schema": "Article", "parent": "guides.html", "toc": True},
     {"file": "foundations.html", "content": "foundations.html", "title": "Foundations of the Christian Faith", "full_title": "Foundations of the Christian Faith · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Foundations of the Christian Faith", "deck": "Sixteen lessons through the Christian faith.", "description": "Sixteen lessons through the Christian faith.", "schema": "CollectionPage", "parent": "start-here.html", "toc": True},
     {"file": "westminster-study.html", "content": "westminster-study.html", "title": "Westminster Study Center", "full_title": "Westminster Study Center · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Westminster Study Center", "deck": "The 33 chapters of the original Confession with proofs.", "description": "The 33 chapters of the original Confession with proofs.", "schema": "CollectionPage", "parent": "doctrine.html", "toc": True},
     {"file": "corrections.html", "content": "corrections.html", "title": "Corrections and Sources", "full_title": "Corrections and Sources · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Corrections and Sources", "deck": "Sources and the process for reporting errors.", "description": "Sources and the process for reporting errors.", "schema": "Article", "parent": "about.html", "toc": True},
@@ -1427,12 +1425,12 @@ GUIDE_PAGES.extend([
            'Church Membership · Gentle King', 'Church and Worship',
            'Church Membership', 'Communicant membership, elders and vows.',
            'How to join and serve in a faithful congregation.',
-           ['Church Membership'], parent='guides.html', series='discern'),
+           ['Church Membership'], parent='guides.html'),
     _child('guide-joining-rpc.html', 'Visiting and Joining an RP Church',
            'Visiting and Joining an RP Church · Gentle King', 'Church and Worship',
            'Visiting and Joining an RP Church', 'What to expect at worship and membership.',
            'A practical introduction to Reformed Presbyterian church membership.',
-           ['RPCNA Membership'], parent='guides.html', series='discern'),
+           ['RPCNA Membership'], parent='guides.html'),
 ])
 PAGES = [p for page in PAGES for p in [page] + CHILDREN.get(page["file"], [])]
 BY_FILE = {p["file"]: p for p in PAGES}
