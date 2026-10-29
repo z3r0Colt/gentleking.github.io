@@ -19,6 +19,8 @@ jobs:
           git fetch origin main --depth=1
           python3 verify_quoted_text.py --restore
           python3 verify_quoted_text.py
+      - name: Natural contractions in page headings and descriptions
+        run: python3 builder_copy_contractions.py --apply
       - name: Rebuild static pages
         run: python3 build.py
       - name: Validate generated website and Scripture references
