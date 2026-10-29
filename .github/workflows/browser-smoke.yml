@@ -1,0 +1,23 @@
+name: Browser smoke test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright and Chromium
+        run: |
+          python3 -m pip install 'playwright>=1.50,<2'
+          python3 -m playwright install --with-deps chromium
+      - name: Serve the site
+        run: |
+          python3 -m http.server 8755 --bind 127.0.0.1 > /tmp/gentleking-http.log 2>&1 &
+          sleep 2
+      - name: Check responsive layouts, Westminster routes, and correction form
+        run: python3 browser_smoke.py
