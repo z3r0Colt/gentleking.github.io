@@ -124,10 +124,14 @@ The Phase 3 source reads and practical revisions are published in PR 65. Full pr
 - [ ] Correct inaccurate financial, medical, civil, historical, or professional guidance.
 - [ ] Test links to overlapping Comfort, Assurance, and Doctrine material.
 
+Published household/work progress includes money (PR 66), work, marriage, parenting, discipline and sex (PR 68). Other ethics guides and the full proof/source gates remain open. See EDITORIAL_AUDIT.md for individual dispositions.
+
 ### Phase 5. Church and devotional practice guides
 - [ ] Prayer, family worship, Lord's Day, public worship, hearing sermons, sacraments, church membership and joining, church discipline, and related practice.
 - [ ] Explain how a person actually carries out each duty and the role of the local church.
 - [ ] Maintain the original Westminster doctrine and Reformed Presbyterian convictions, including the regulative principle and exclusive psalmody.
+
+Published church-practice progress includes forgiveness (PR 68), prayer, family worship and the Lord's Day (PR 69), public worship, hearing sermons, communion and membership (PR 70), and finding, joining and leaving congregations (PR 71). Other practice guides and full source gates remain open. Current main-source coverage is 50/118, not whole-site completion.
 
 ### Phase 6. Gospel, foundations, biblical learning, and doctrine
 - [ ] Preserve the complete gospel and its free offer.
