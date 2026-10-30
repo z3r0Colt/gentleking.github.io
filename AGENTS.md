@@ -30,6 +30,8 @@ Use EDITORIAL_AUDIT.md as a truthful page-by-page status register during the ful
 - Give direct, realistic guidance and name the appropriate person or service to contact. Consider disability, financial need, lack of a supportive church, abuse, isolation, and other obstacles.
 - Explain biblical hope, God's providence, repentance, and the church's care only where those points truly apply. Do not assume each hardship reveals a hidden sin or spiritual failure.
 - Never make prayer an alternative to necessary medical, legal, crisis, or protective services.
+- Never inject an identical prominent danger banner into every Comfort article. Keep urgent contacts on the Safety page and use brief, relevant directions elsewhere.
+- When writing to someone bereaved by suicide, begin with their grief and questions. Explain the sixth commandment and perseverance accurately and in their proper context, without guessing a particular person's eternal state.
 
 **Money, marriage, parenting, employment, family, prayer, worship, and Christian life**
 
