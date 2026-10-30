@@ -47,8 +47,10 @@ try:
     query_url = 'https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=PLAN%20B%20ONE-STEP'
     with urllib.request.urlopen(query_url, timeout=25) as response:
         labels = json.load(response)['data']
-    for label in labels[:5]:
+    for label in labels:
         print('LABEL RECORD', label, flush=True)
+        if 'FOUNDATION CONSUMER HEALTHCARE' not in label.get('title', ''):
+            continue
         set_id = label.get('setid', '')
         if not re.fullmatch(r'[0-9a-fA-F-]{36}', set_id):
             continue
@@ -59,7 +61,8 @@ try:
             raise ValueError('Label exceeds the review size limit')
         print('LABEL SOURCE', url, hashlib.sha256(raw).hexdigest(), flush=True)
         body = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', ' ', raw.decode('utf-8'))))
-        for needle in ['ovulation', 'implantation', 'fertilization']:
+        print('CURRENT MANUFACTURER LABEL TEXT', body[:16000], flush=True)
+        for needle in ['egg', 'ovulation', 'implantation', 'fertilization']:
             for match in list(re.finditer(needle, body, re.I))[:3]:
                 print(body[max(0, match.start() - 200):match.end() + 700], flush=True)
 except (urllib.error.URLError, UnicodeError, ValueError, KeyError) as error:
