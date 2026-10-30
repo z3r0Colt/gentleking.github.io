@@ -8,6 +8,11 @@ import urllib.error
 import urllib.request
 
 SOURCES = {
+    'https://www.nhs.uk/conditions/alcohol-misuse/treatment/': ['withdrawal', 'seizures'],
+    'https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class': ['seizures', 'suddenly'],
+    'https://www.nhs.uk/conditions/end-of-life-care/controlling-pain-and-other-symptoms/': ['pain', 'morphine'],
+    'https://www.organdonor.gov/learn/process/living-donation': ['kidney', 'risks'],
+
     'https://988lifeline.org/get-help/': ['24', '988'],
     'https://www.thehotline.org/': ['7233', '88788'],
     'https://www.thehotline.org/plan-for-safety/': ['plan', 'safe'],

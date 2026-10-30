@@ -2902,8 +2902,6 @@ def build_page(page, dates):
         }
         if page["file"] in answers:
             parts.append(f'<aside class="quick-answer"><h2>The Short Answer</h2><p>{html.escape(answers[page["file"]])}</p></aside>')
-    body = re.sub(r'<blockquote class="confession">[\s\S]*?</blockquote>',
-                  lambda m: '<details class="supporting-text"><summary>Read the full confessional statement</summary>' + m.group(0) + '</details>' if len(plain(m.group(0)).split()) > 90 else m.group(0), body)
     parts.append(body)
     parts.append(related_html(page))
     parts.append("\n" + pager_html(page) if page.get("parent") else "")

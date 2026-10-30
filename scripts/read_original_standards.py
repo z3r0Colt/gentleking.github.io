@@ -18,6 +18,7 @@ SOURCES = {
         'in the space of six days',
         'This Sabbath is then kept holy',
         'Synods and councils are to handle',
+        'Neither prayer, nor any other part',
         'Marriage is to be between',
         'nothing but adultery',
     ],

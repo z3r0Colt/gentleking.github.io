@@ -62,6 +62,11 @@ def main():
                     if intro and reading_time:
                         gap = intro["y"] - (reading_time["y"] + reading_time["height"])
                         check(gap <= 48, f"Desktop Gospel introduction is displaced by {gap}px below the reading time")
+                if route == "gospel.html":
+                    quotes = page.locator("main blockquote.confession")
+                    check(quotes.count() > 0, "Gospel confessional teaching is missing")
+                    for quote in quotes.all():
+                        check(quote.is_visible(), f"Gospel confessional teaching is hidden at {width}px")
                 if screenshot_path and route in SCREENSHOT_ROUTES:
                     page.evaluate("document.fonts.ready")
                     page.screenshot(path=str(Path(screenshot_path) / f"{width}-{route.replace('/', '-')}.png"))
