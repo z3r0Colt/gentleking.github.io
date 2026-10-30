@@ -326,8 +326,8 @@ PAGES = [
         "eyebrow": "Apologetics",
         "h1": "Questions About Christianity",
         "deck": (
-            "Straight answers for the one who objects to the faith, and comfort for the "
-            "one who holds it with a shaking hand. Each has pages of his own."
+            "Answers to questions about God, Scripture, suffering, and the resurrection. "
+            "For fears about your own salvation, follow the links to Assurance and Doubt."
         ),
         "description": (
             "Honest answers to common objections to Christianity, from God and the Bible to evil "
@@ -419,7 +419,7 @@ PAGES = [
         "eyebrow": "About",
         "h1": "About Gentle King",
         "deck": (
-            "What this site is, what it's not, what is believed here, and how to reach out."
+            "Who writes Gentle King, what the site teaches, and how to get in touch."
         ),
         "description": (
             "Gentle King is written by Colt, a layman in the Reformed Presbyterian tradition who "
@@ -1197,8 +1197,8 @@ PAGES.extend([{'file': 'start-here.html',
   'full_title': 'Start Here · Gentle King',
   'eyebrow': 'Start Here',
   'h1': 'A Place to Begin',
-  'deck': 'New here? Begin with the gospel, then take one step at a time.',
-  'description': 'New here? Begin with the gospel, then take one step at a time.',
+  'deck': 'Read the gospel, begin a course, or find guidance for a particular need.',
+  'description': 'New to Gentle King? Read the gospel, begin the Foundations course, or find help with Bible reading, prayer, and finding a church.',
   'schema': 'CollectionPage',
   'toc': False},
  {'file': 'help.html',
@@ -1207,8 +1207,8 @@ PAGES.extend([{'file': 'start-here.html',
   'full_title': 'Find Help · Gentle King',
   'eyebrow': 'Find Help',
   'h1': 'Help for Where You Are',
-  'deck': 'Choose the need that brought you here. You can read one page at a time.',
-  'description': 'Choose the need that brought you here. You can read one page at a time.',
+  'deck': 'Find urgent help, support with basic needs, or teaching for the trouble you face.',
+  'description': 'Find help for danger, grief, basic needs, money, recurring sin, and fears about salvation. Choose the situation that brought you here.',
   'schema': 'CollectionPage',
   'toc': False},
  {'file': 'learn.html',
@@ -1237,8 +1237,8 @@ PAGES.extend([{'file': 'start-here.html',
   'full_title': 'Search · Gentle King',
   'eyebrow': 'Search',
   'h1': 'Search Gentle King',
-  'deck': 'Find a subject or ask your question in ordinary words.',
-  'description': 'Find a subject or ask your question in ordinary words.',
+  'deck': 'Search the teaching and guides by subject or words from your question.',
+  'description': 'Search Gentle King articles and guides by subject. Find teaching on prayer, money, Scripture, assurance, and Christian life.',
   'schema': 'WebPage',
   'toc': False,
   'scripts': ['assets/js/search.js']},
@@ -1658,7 +1658,7 @@ FOOTER = """<footer class="site-footer">
           in heart: and ye shall find rest unto your souls.</p>
         <p class="footer-verse-ref">Matthew 11:29 (KJV)</p>
         <p class="footer-head footer-give">Abolish Abortion</p>
-        <p class="footer-abolish">Abortion is murder, and everybody knows it.</p>
+        <p class="footer-abolish">Protect unborn children and help mothers in need.</p>
         <ul class="footer-links">
           <li><a href="guide-abortion.html">What the Bible says</a></li>
           <li><a href="https://abolishabortionindiana.org/" target="_blank" rel="noopener">Abolish Abortion Indiana</a></li>

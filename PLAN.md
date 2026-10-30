@@ -1,6 +1,6 @@
 # PLAN.md - Gentle King full-site editorial overhaul
 
-Status: PLANNED. The site-wide overhaul described here has not been completed.
+Status: IN PROGRESS. Phase 0 is complete and the first editorial batch is underway. See EDITORIAL_AUDIT.md. The site-wide overhaul has not been completed.
 Scope: the full public-facing content of the gentleking.github.io repository.
 Companion instructions: AGENTS.md and EDITORIAL_STYLE.md.
 Source of truth: content/, shared partials, and the copy maintained by build.py and related authored data files.
@@ -93,11 +93,11 @@ Tell the visitor what the tool does, how to get and use it, what it costs, what 
 Use these as reviewable pull-request batches, adjusting boundaries when a shared component or dependency makes a different grouping safer. Do not let completed earlier edits exempt a page from a fresh full review.
 
 ### Phase 0. Repository inventory and baseline
-- [ ] Read the repository instructions and inspect its build, page registry, content sources, and published output.
-- [ ] Enumerate all pages and separately authored public-facing copy.
-- [ ] Establish an EDITORIAL_AUDIT.md register with one row per item, category, reader question, priority, change status, review status, verification, PR reference, and open concerns.
-- [ ] Record all existing shared-copy dependencies, historical anchor mappings, and high-stakes pages.
-- [ ] Establish baseline checks and known failures without masking them.
+- [x] Read the repository instructions and inspect its build, page registry, content sources, and published output.
+- [x] Enumerate all pages and separately authored public-facing copy.
+- [x] Establish an EDITORIAL_AUDIT.md register with one row per item, category, reader question, priority, change status, review status, verification, PR reference, and open concerns.
+- [x] Record all existing shared-copy dependencies, historical anchor mappings, and high-stakes pages.
+- [x] Establish baseline checks and known failures without masking them.
 
 ### Phase 1. Entry points, site-wide navigation, and common copy
 - [ ] Homepage, landing pages, Start Here, Find Help, Learn, search, About, and corrections.
