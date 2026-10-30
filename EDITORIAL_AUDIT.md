@@ -28,7 +28,7 @@ The repository browser smoke test passed for 11 routes at 375, 768 and 1280 pixe
 
 ## Open findings and dependencies
 
-- Review crisis numbers and service capabilities against current provider sources before completing crisis coverage. The crisis partial and llms.txt repeat these claims.
+- Crisis contacts are now centralized in the Safety article, with relevant links in other articles and llms.txt source text in build.py. The former generic crisis partial was removed. Reverify service capabilities as needed for future changes.
 - Comfort closing material and Assurance closing material must be assessed in every receiving context. A partial edit alone doesn't complete the receiving articles.
 - The money guide's give-first/essential-needs conflict is corrected in the money batch. Read neighboring household and giving guidance together during the final cross-site review.
 - The main Gospel and companion Gospel share verbatim paragraphs and metadata. Any revision needs both sources and a matching integrity manifest.
@@ -67,6 +67,16 @@ Provider and factual sources accessed October 30, 2026:
 Build, root checks, Bible Reading Helps integrity, citation checks, Foundations checks, contraction preview, both JavaScript syntax checks and protected-quote integrity passed. Responsive checks passed for 19 routes at 375, 768 and 1280 pixels, with working urgent-first order, money search and the historic grief redirect. Screenshots of safety, illness and work/home pages were inspected. All baseline rendered IDs remain present. Final tiny wording changes are rebuilt and rechecked before publication.
 
 Open source-fidelity concern: the required Westminster website prints WSC 37 with “until” where existing historical quotations use “till”. Its WSC 38 prints “raised up to glory” where the existing quotation has “raised up in glory”. These are recorded as source wording variants, not silently corrected. Original quotations and the companion supplied-text integrity remain preserved. The full proof and edition review, and therefore the complete Phase 2 acceptance gate, remain open. These practical edits don't establish all-source verification.
+
+## Suicide-loss follow-up and banner removal, October 30, 2026
+
+The suicide-loss article was read in full again after feedback that it offered too little comfort to those left behind and led readers too readily toward the sixth commandment. The new article begins with the reader's bereavement, anger, unanswered questions, guilt and isolation; addresses Christ's compassion; and explains perseverance and the seriousness of suicide in a later dedicated section without pretending to know any particular person's salvation. Original KJV scripture quotation blocks are retained verbatim. Existing anchor identifiers `suicide-loss`, `suicide-loss-search` and `next-steps` remain present, with new descriptive headings.
+
+Practical survivor support includes help speaking to children, trauma-aware counseling, and verified direct links to the [American Foundation for Suicide Prevention's group directory](https://afsp.org/find-a-support-group/) and [Healing Conversations](https://afsp.org/healing-conversations/). The [American Psychological Association's guidance](https://www.apa.org/topics/suicide/coping-after) and [AFSP's survivor-care guidance](https://afsp.org/taking-care-of-yourself/) informed the distinctions between grief, traumatic reactions, guilt, family communication, and care. The original Westminster teaching on perseverance was checked against [the authorized original Confession](https://thewestminsterstandard.org/the-westminster-confession/) at chapter XVII.
+
+Nine child pages previously received the same injected top-of-page crisis panel through `crisis=True` in build.py. That blanket injection and the unused partial have been removed. The landing page now links briefly to urgent help, the Safety page retains its full contact panel, and topic-specific articles retain proportionate, accessible safety directions. The Safety page's suicide paragraph was rewritten to prioritize patient care and immediate help rather than beginning with a legal command.
+
+Publication and review status for this follow-up must be confirmed through the new PR and final GitHub Actions/Pages runs. This follow-up does not imply completion of the full multi-phase editorial overhaul.
 
 ## Assurance and Fighting Sin batch
 
