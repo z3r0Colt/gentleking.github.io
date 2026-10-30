@@ -1025,3 +1025,14 @@ PR 84 final head `70f998acc7f512d65371db909ae9fdc8158da8d7` passed normal CI 411
 The Browser smoke workflow now saves representative screenshots at the same three viewport widths as its route checks. These artifacts support direct visual inspection from the GitHub runner, where Chromium can launch. Saving an image is not itself a completed visual review.
 
 Apologetics/public-authority local checks passed: build, page/link checks, companion integrity and Gospel agreement, generated-reference audit, Foundations checks, contraction preview, both JavaScript syntax checks and protected-block comparison. Source IDs remain intact. Browser checks and screenshot inspection are pending the batch PR.
+
+
+## Desktop reading-column layout correction
+
+Direct inspection of 27 first-viewport screenshots from PR 85’s browser run (nine representative routes at 375, 768 and 1280 pixels) found a desktop layout defect. The contents rail used `grid-row: 1 / -1` without explicit content rows. Its height enlarged the first implicit row containing the short reading-time line, pushing the article’s first section below the rail. The Gospel introduction could disappear below the initial desktop viewport. Mobile and tablet stacked layouts did not show this defect.
+
+The builder now groups the article, related reading and pager into one reading column, while keeping the contents rail beside it in a single grid row. Existing prose/print selectors include that column. Source quotations and article content are unchanged, and existing IDs, navigation queries and URLs remain intact. A browser assertion checks the actual distance between the Gospel reading time and its opening section at desktop width. Representative screenshots wait for fonts and remain available for visual comparison. This is a layout correction, not additional authored-page review coverage.
+
+PR 85 final source head `c2fa488d12f362b7f9e19df46cb724ca22c645f1` passed normal CI 41142003060 and Browser smoke 41142003052; 27 representative screenshots were inspected directly. Main build 41143755312 succeeded, generated `63e174de6d7893d888ed5d8a0ebf9437f902c94e`, and final Pages deployment 41143779972 succeeded. Live WCF 21.8 and 31.5 were retrieved and read from the required Westminster source in the browser runner.
+
+Layout batch local checks passed: build, root-page/link checks, companion integrity and Gospel agreement, reference audit, Foundations checks, contraction preview, both required JavaScript syntax checks and protected quotation comparison. The new browser regression assertion and post-fix screenshots remain pending CI before merge.

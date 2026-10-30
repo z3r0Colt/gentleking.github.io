@@ -2890,6 +2890,7 @@ def build_page(page, dates):
     # Urgent contacts live in the Safety page and in topic-specific advice.
     if page.get("toc"):
         parts.append(toc_html(body))
+        parts.append('<div class="reading-column">\n')
     if page.get("schema") == "Article":
         parts.append(f'<p class="reading-time">About {reading_minutes(page)} minutes to read</p>')
         answers = {
@@ -2911,6 +2912,8 @@ def build_page(page, dates):
         moved = MOVED[page["moved"]]
         parts.append('\n<script type="application/json" id="moved">'
                      + json.dumps(moved, separators=(",", ":")) + "</script>")
+    if page.get("toc"):
+        parts.append("\n</div>")
     parts.append("\n</main>\n\n")
     site_js = f'<script src="{asset("assets/js/site.js")}" defer></script>\n'
     footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
