@@ -8,7 +8,20 @@ This is Gentle King Ministry, a static Reformed Presbyterian teaching and resour
 
 The guiding editorial rule is **practical first when practical help is the purpose, and full biblical teaching when doctrine is the purpose**.
 
-Answer the reader's question plainly. Explain what the reader actually needs to know or do. Use Scripture to establish the relevant truth, duty, and promise. Do not add spiritual phrases, metaphors, or gospel summaries as padding. Do not strip necessary biblical or confessional teaching from a page whose purpose is theology.
+Answer the reader's question plainly. Explain what the reader actually needs to know or do. Use Scripture to establish the relevant truth, duty, and promise. Do not add spiritual phrases, metaphors, or gospel summaries as padding.
+
+## The whole-counsel check for every ethical and pastoral revision
+
+Before approving an edit involving a biblical obligation, check four things against the relevant Scripture and original 1647 Westminster Standards.
+
+1. **The positive command.** What does God require of the people addressed? State it plainly even when it may be unpopular or uncomfortable.
+2. **The prohibited neglect or abuse.** What sins arise from refusing this duty or exercising authority unlawfully? Name both where the passage does.
+3. **The lawful limits and competing duties.** Explain genuine exceptions, inability, safety, and jurisdiction only where actually relevant. Qualifications must illuminate the rule, not quietly replace it.
+4. **The proportion of the finished page.** Would an ordinary person reading the page learn what to obey, as well as how to avoid doing wrong? If the page is dominated by caveats and never teaches the normal case, revise it. Do not create an opposite error by deleting necessary protections.
+
+Use this especially for marital intimacy, duties of husbands and wives, parental correction and children's obedience, church discipline and membership, forgiveness, evangelism, fasting, work, money, worship and the Lord's Day. Treat an editorial claim that "biblical duties are unsafe" as a reason to check whether the duty has been distorted or the safety issue has been poorly presented, not as permission to remove either. Never assume the critic, pastor, husband, wife, parent, elder, or victim is automatically right; the text must govern.
+
+ Do not strip necessary biblical or confessional teaching from a page whose purpose is theology.
 
 The site should read like a thoughtful layman speaking to a person, not an AI-generated study guide or a collection of inspirational slogans.
 
