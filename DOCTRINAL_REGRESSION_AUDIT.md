@@ -58,28 +58,28 @@
 | `content/comfort-work-and-home.html` | Yes | Screened | Comfort or assurance reviewed for core Christian hope and duty language; no further confirmed doctrinal deletion in this pass |
 | `content/comfort.html` | Yes | Screened | Comfort or assurance reviewed for core Christian hope and duty language; no further confirmed doctrinal deletion in this pass |
 | `content/corrections.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-adoption.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-baptism.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-christ-mediator.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-christian-liberty.html` | No | Focused | WCF 20.4 original civil and ecclesiastical authority discussed explicitly |
-| `content/doctrine-church-and-worship.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-church-government.html` | No | Focused | Keys and church censures remain stated |
-| `content/doctrine-covenant.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-doctrines-of-grace.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-fall-and-sin.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-five-solas.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-god-and-trinity.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-justification.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-last-things.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-law-and-gospel.html` | No | Focused | Third use of law and antinomianism condemned |
-| `content/doctrine-oaths-and-vows.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-providence.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-sanctification.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-scripture.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-standards.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-union-with-christ.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine-why-doctrine.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/doctrine.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/doctrine-adoption.html` | No | Full text, baseline and cited contexts reviewed | Adoption through Christ, filial access, discipline and assurance remain sound in the examined references. No prose change needed. |
+| `content/doctrine-baptism.html` | Yes | Full text, baseline and cited contexts reviewed | Clarified real exhibition and conferral of grace by the Spirit through right use, in God’s appointed time, without automatic regeneration (WCF 27.3/28.6). |
+| `content/doctrine-christ-mediator.html` | No | Full text, baseline and cited contexts reviewed | Two natures, three offices, voluntary satisfaction, resurrection and effectual application of particular redemption remain explicit. No correction needed. |
+| `content/doctrine-christian-liberty.html` | No | Full text, baseline and cited contexts reviewed | Original WCF 20.4 civil/church authority retained alongside liberty of conscience and lawful submission. No correction needed. |
+| `content/doctrine-church-and-worship.html` | Yes | Full text, baseline and cited contexts reviewed | Clarified baptism is a real means of grace by the Spirit, not an empty sign; retained exclusive unaccompanied psalmody and original magistrate doctrine. |
+| `content/doctrine-church-government.html` | No | Full text, baseline and cited contexts reviewed | Keys, censures, lawful appeals, and original WCF 23/30/31 government remain explicit. No correction needed. |
+| `content/doctrine-covenant.html` | No | Full text, baseline and cited contexts reviewed | Works/grace distinction, one covenant of grace, effectual calling, free offer and infant sign retained. Existing WCF 7.3 wording differs from archived supplied text; primary-source comparison remains open. |
+| `content/doctrine-doctrines-of-grace.html` | No | Full text, baseline and cited contexts reviewed | Total inability, unconditional election, particular redemption, effectual calling and perseverance are plainly taught with immediate free invitation. No correction needed. |
+| `content/doctrine-fall-and-sin.html` | No | Full text, baseline and cited contexts reviewed | Historical fall, federal imputation, corruption and spiritual inability remain explicit. No correction needed. |
+| `content/doctrine-five-solas.html` | Yes | Full text, baseline and cited contexts reviewed | Qualified Scripture-alone language to preserve lawful subordinate authority, and identified WCF 11.1 as an excerpt. Faith alone and imputed righteousness retained. |
+| `content/doctrine-god-and-trinity.html` | No | Full text, baseline and cited contexts reviewed | One essence, three distinct equal persons, eternal generation/procession and divine simplicity retained. No correction needed. |
+| `content/doctrine-justification.html` | No | Full text, baseline and cited contexts reviewed | Imputation, faith alone, works as fruit, actual application and continued pardon retained. Romans 4 and James 2 are distinguished coherently. No correction needed. |
+| `content/doctrine-last-things.html` | Yes | Full text, baseline and cited contexts reviewed | Made original WCF 32-33 general-resurrection/judgment sequence explicit rather than implying three millennial schemes are equally confessional. Historical attribution still needs source follow-up. |
+| `content/doctrine-law-and-gospel.html` | Yes | Full text, baseline and cited contexts reviewed | Distinguished Adam’s covenant of works from fallen sinners’ inability to earn salvation. Added gospel call and continuing moral-law duty. |
+| `content/doctrine-oaths-and-vows.html` | Yes | Full text, baseline and cited contexts reviewed | Restored explicit duty to take a lawfully imposed oath in a good and just matter, perform lawful oaths despite personal cost, and avoid vows that obstruct commanded duties (WCF 22). |
+| `content/doctrine-providence.html` | No | Full text, baseline and cited contexts reviewed | Sovereign decree, responsibility for sin, ordinary means and limits on assigning secret purposes retained. No correction needed. |
+| `content/doctrine-sanctification.html` | No | Full text, baseline and cited contexts reviewed | Real Spirit-worked holiness, remaining sin, personal mortification and means of grace remain explicit without making works justify. No correction needed. |
+| `content/doctrine-scripture.html` | Yes | Full text, baseline and cited contexts reviewed | Added providential preservation of Scripture from WCF 1.8 alongside inspiration, inerrancy, sufficiency, clarity and authority. |
+| `content/doctrine-standards.html` | No | Full text, baseline and cited contexts reviewed | Original 1647 scope, church use and free gospel invitation retained. No correction needed. |
+| `content/doctrine-union-with-christ.html` | Yes | Full text, baseline and cited contexts reviewed | Union by Spirit and faith and distinct saving benefits retained. Replaced inaccurate inline wording with the verified exact KJV of Romans 6:8. |
+| `content/doctrine-why-doctrine.html` | No | Full text, baseline and cited contexts reviewed | Necessity of true knowledge and continuing in Christ’s Word retained. No correction needed. |
+| `content/doctrine.html` | No | Full text, baseline and cited contexts reviewed | All doctrinal landing entries read and cross-checked with article subjects. No content change needed. |
 | `content/foundations.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/gospel.html` | No | Focused | Repent, believe, wrath, Christ's definite satisfaction and free offer stated |
 | `content/guide-abortion.html` | No | Focused | Prohibition on taking unborn life and duty of protection remain explicit |
@@ -169,3 +169,13 @@ This confirms that a correct doctrine on the ordinary site's `guide-sex.html` pa
 The full review starts from published main `2e26beae4bbb9818d7b44f7d3dda2dde133eacf1`. Six sources have now been re-read in full and compared with the editorial baseline: money, work, forgiveness, parenting, church membership and leaving a church. Their changed duties were checked against the preserved KJV contexts and the archived original Standards imported from the required Westminster website. The live website remains inaccessible in this environment, so no fresh online retrieval is claimed. Full proof-by-proof verification and the other 116 source articles remain in progress. The prior inventory-wide screen is not upgraded into a full review.
 
 This batch restores explicit duties of receiving a repentant brother in love, submission to lawful church correction, continuing effect of lawful censure, patient honest work under a harsh employer, and ministry support and relief of need. It also clarifies property rights, restitution, and Proverbs 26:4-5. Some clarifications address older source problems rather than editorial regressions. Civil reporting, lawful appeals, genuine inability and protections against coercion remain. Protected quotation blocks and supplied historical sources are unchanged. Validation and publication must be confirmed for this batch.
+
+## Doctrine full-text and contextual review
+
+All 22 `content/doctrine*.html` sources were read in full. Their pre-batch source text was unchanged from baseline `190637a029fe79f5752ec5443cf7bb78a01d4363`, so the precision gaps repaired here are not falsely labeled deletions introduced by the recent overhaul. The current corrective pass has now read 28/122 main articles, including the six in PR 81. The other 94 remain to be re-read in this pass.
+
+Eighty-five merged contexts around the explicit Bible references were read from the preserved KJV, with additional reading for abbreviated references and the inspiration passages. The relevant original Confession chapters and Catechism answers were compared with the archived corpus supplied from the required Westminster website. This is contextual editorial review, not a claim that all historical attributions and textual variants have been independently certified.
+
+Eight articles receive substantive clarification: Scripture’s preservation, baptismal efficacy in two receiving contexts, lawful subordinate authority under sola Scriptura, taking and keeping lawful oaths, the law’s relation to Adam and fallen sinners, original-confessional resurrection and judgment, and an exact inline KJV restoration at Romans 6:8. Other reviewed articles retain their teaching for the specific reasons in their rows. No protected quotation block or imported original text is changed. Existing WCF 7.3 wording and historical millennial attributions remain explicit source-follow-up items. The existing browser CI also retrieves limited primary-source passages for editorial comparison when the required website permits access; retrieval failure is reported as unavailable verification and is never represented as success.
+
+PR 81 publication evidence: Build and check run 41113335992 and Browser smoke run 41113335906 passed; main build 41113697474 passed; generated commit `e08c8b5695afb9f7f8966224543016bad5006032` deployed successfully in Pages run 41113738000.

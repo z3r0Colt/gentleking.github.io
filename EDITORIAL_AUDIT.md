@@ -977,3 +977,9 @@ Local merge validation passed: build, root-page checks, Bible Reading Helps inte
 Following the owner’s instruction, six current sources were read completely and compared with the baseline: money, work, forgiveness, parenting, church membership and leaving a church. The corrective dispositions and core Scripture/Standards checks are recorded in `DOCTRINAL_REGRESSION_AUDIT.md`. This is a new full-text pass, not completion of all 122 sources or of every proof reference. Concrete source corrections restore ordinary duties while retaining necessary protections and lawful appeals. Validation and publication evidence will be tied to the batch PR.
 
 The six-guide corrective batch passed all required local validators and protected-quotation comparison. All six sources retain their existing IDs. Fresh local Chromium execution is blocked by the sandbox’s socket restriction, so no local browser pass is claimed for this batch. The existing Browser smoke test workflow now runs on relevant PR changes and builds the proposed source before testing. Its existing viewport/navigation checks cover every current authored page plus Bible Reading Helps. The GitHub browser result must pass before merging.
+
+## Doctrine review and PR 81 publication
+
+The complete text of all 22 doctrine sources was reviewed with their cited KJV contexts and archived original Standards, and compared with the baseline. Eight precision corrections are documented individually in `DOCTRINAL_REGRESSION_AUDIT.md`; 14 articles need no prose change from this read. Existing source-edition and historical-attribution questions remain visible. The current corrective pass covers 28/122 complete article reads, not a completed full-site review.
+
+PR 81 passed both normal checks and the expanded full-page browser smoke (runs 41113335992 and 41113335906). Main build 41113697474 produced `e08c8b5695afb9f7f8966224543016bad5006032`; Pages run 41113738000 succeeded for that generated commit.
