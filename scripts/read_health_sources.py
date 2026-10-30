@@ -12,9 +12,6 @@ SOURCES = {
     'https://www.nhs.uk/conditions/ectopic-pregnancy/': [
         'symptoms', 'rupture', 'save',
     ],
-    'https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/plan-b-one-step-15-mg-levonorgestrel-information': [
-        'ovulation', 'implantation', 'fertilization',
-    ],
     'https://www.healthychildren.org/English/family-life/family-dynamics/communication-discipline/Pages/Disciplining-Your-Child.aspx': [
         'spanking', 'discipline',
     ],
