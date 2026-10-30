@@ -24,6 +24,52 @@ person, not a generated study-guide template.
 - Use plain words without flattening the doctrine. Define any term an ordinary
   reader might not know.
 
+## Practical-first writing across the whole website
+
+Write for what the reader came to learn or do. A Christian website should teach
+Christian truth faithfully, but religious language must serve the question at
+hand. Do not add devotional sentences to a paragraph merely to make it sound
+spiritual. Neither should practical advice stand apart from biblical duties,
+promises, and moral limits when those truly govern the subject.
+
+Choose the approach by page type:
+
+- **Comfort, assurance, safety, and pastoral help:** Name the problem in ordinary
+  words. Lead with urgent safety or material needs when they exist. Tell the
+  reader who to contact and what to do, with realistic exceptions for illness,
+  disability, abuse, and lack of a faithful local church. Give Scripture and
+  Christian hope where they actually bear on the reader's trouble. Don't
+  mistake medical, financial, or relational problems for proof of spiritual
+  failure. Don't imply that prayer replaces treatment, protection, or work.
+- **Practical guides on money, parenting, marriage, work, prayer, worship, and
+  church life:** Answer the practical question at the start or give a clear
+  route to the applicable section. Explain the biblical rule and its reason,
+  then show how to apply it in a recognizable situation. Use realistic
+  examples, not repeated generic checklists. Explain what to do when the
+  ordinary approach is unsafe, unavailable, or insufficient. A duty such as
+  giving or attending worship must be explained alongside other real duties
+  such as caring for dependents and preserving life.
+- **Doctrine, gospel, confessions, and apologetics:** The main subject is
+  theological, so substantial biblical teaching belongs there. Explain it
+  plainly, with definitions and examples. Don't manufacture practical steps
+  for every doctrine or replace precise doctrine with motivational language.
+  Show the consequences for belief and life where the passage supports them.
+- **Software, download, and resource pages:** Tell readers what the tool
+  actually does, what it costs, how to use it, what it cannot do, and where
+  to get help. Ministry context may be mentioned, but avoid adding unrelated
+  devotional language to feature descriptions or technical instructions.
+
+For every practical page, ask before publishing: What question brought the
+reader here? What is the direct answer? What should they do first? Who can help
+if that step doesn't work? Which Scripture actually governs the advice?
+Would this paragraph still be here if it didn't have religious vocabulary?
+If it adds no information or necessary biblical grounding, cut it.
+
+When quoting or paraphrasing Scripture, keep the meaning of its context.
+Do not force a Bible story to serve as a modern diagnosis, financial formula,
+or promise the passage doesn't make. Use clear speech rather than forcing a
+verse or gospel summary into every heading and closing paragraph.
+
 ## Contractions and natural speech
 
 Write the way an ordinary believer would speak. Use "don't," "can't,"
