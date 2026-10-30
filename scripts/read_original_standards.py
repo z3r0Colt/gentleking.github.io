@@ -17,11 +17,15 @@ SOURCES = {
         'The efficacy of baptism',
         'in the space of six days',
         'whole day',
+        'Marriage is to be between',
+        'nothing but adultery',
     ],
     'https://thewestminsterstandard.org/westminster-larger-catechism/': [
         'What is required of those that hear',
         'How are they that receive',
         'One who doubteth',
+        'The duties required in the seventh commandment',
+        'The sins forbidden in the seventh commandment',
     ],
     'https://thewestminsterstandard.org/westminster-shorter-catechism/': [
         'Q. 37.', 'Q. 38.',
