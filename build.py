@@ -454,11 +454,8 @@ COMFORT_PAGES = [
         'When Someone You Love Has Died · Bible Verses for Grief (KJV) · Gentle King',
         'Grief',
         'When Someone You Love Has Died',
-        ("The house is quiet, or it's full of people, and either way the one you want isn't "
-         "in it. You don't have to be strong tonight. Christ has stood where you are "
-         'standing.'),
-        ('Scripture and plain counsel for the night someone you love has died. Christ wept at '
-         "a grave, and he won't hurry you past your grief."),
+        ("Help with the first days after a death, the weeks after the funeral, and grief that returns. Scripture explains the hope of resurrection in Christ."),
+        ("Help after someone dies. Practical support, grief that returns, and KJV Scripture on mourning and the resurrection of believers."),
         ['Grief'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -468,11 +465,8 @@ COMFORT_PAGES = [
         'When Your Husband or Wife Has Died · Scripture for the Widowed · Gentle King',
         'Widowhood',
         'When Your Husband or Wife Has Died',
-        ('The one who knew you best is gone, and half of every habit in the house went with '
-         "them. There's no timetable for this. Christ saw to those left behind even while he "
-         'was dying.'),
-        ('King James Scripture and plain counsel for a widow or widower. The one who saw to '
-         'his mother from the cross still sees the one left behind.'),
+        ("Help after the death of a husband or wife, including daily tasks, children, and urgent paperwork. Scripture gives believers hope in Christ beyond death."),
+        ("Help for widows and widowers with grief, children, daily tasks, bills, and the Christian hope of resurrection."),
         ['The death of a husband or wife'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -482,11 +476,8 @@ COMFORT_PAGES = [
         'When Your Child Has Died · Comfort for Grieving Parents · Gentle King',
         'A child',
         'When Your Child Has Died',
-        ('No parent should outlive a child, and every part of you knows it. Whether you lost a'
-         ' baby you barely held, or never held at all, or a son or daughter you raised, Christ'
-         " hasn't looked away."),
-        ('Scripture for parents who have lost a child, before birth, as a baby, or grown. '
-         'Christ took little children in his arms, and he holds the keys of death.'),
+        ("For parents grieving a miscarriage, stillbirth, or the death of a child. Find practical care and biblical teaching without guesses about your child's election."),
+        ("Care after miscarriage, stillbirth, or a child's death. Grief, self-blame, practical support, and what Scripture teaches about children and salvation."),
         ['The death of a child', 'Miscarriage'],
         parent="comfort.html", crisis=True, close="comfort-close", cites=[{"@type": "CreativeWork", "name": "Canons of Dort"}],
     ),
@@ -496,11 +487,8 @@ COMFORT_PAGES = [
         "When You Fear They Didn't Know Christ · Gentle King",
         'The hardest question',
         "When You Fear They Didn't Know Christ",
-        ('Some of us bury people we love without knowing whether they knew Christ. Some of you'
-         " aren't unsure. You fear you know. This is for you too, and you're not asked to "
-         'settle anything tonight.'),
-        ('Grieving someone who may not have known Christ? Leave them with the Judge of all the'
-         ' earth, who will do right, and bring your own soul to him.'),
+        ("You can grieve without pretending to know your loved one's final state. Read what Scripture reveals about salvation, judgment, and the things God keeps hidden."),
+        ("Grieving someone whose faith was uncertain? Scripture on judgment, last-hour mercy, regret, and the limits of what we can know."),
         ['Grief for an unbeliever'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -510,11 +498,8 @@ COMFORT_PAGES = [
         'When Someone You Love Took Their Own Life · Gentle King',
         'Loss by suicide',
         'When Someone You Love Took Their Own Life',
-        ('A death like this leaves questions no other death leaves. You may be carrying grief '
-         "and guilt and fear all at once. God saw what you couldn't see, and he is near you "
-         'now.'),
-        ('For those left behind after a suicide. Scripture on grief, false guilt, and the '
-         "keeping of Christ. If you're in danger, call or text 988 now."),
+        ("For those grieving a death by suicide. Find support for the first days, questions about guilt, and what Scripture says about Christ keeping his people."),
+        ("Support after a death by suicide. Scripture on grief and perseverance, help with painful questions, and routes to urgent care."),
         ['Suicide loss'],
         parent="comfort.html", close="comfort-close",
     ),
@@ -524,11 +509,8 @@ COMFORT_PAGES = [
         'When Serious Illness Comes · Scripture for the Sick and Dying · Gentle King',
         'Sickness',
         'When Serious Illness Comes',
-        ('One conversation in a small room, and the future looks different than it did this '
-         'morning, for you or for someone you love. Or it has looked this way for years. You '
-         "don't have to be brave tonight. Your times are in God’s hand."),
-        ('King James Scripture for a hard diagnosis, a long illness, caring for someone, and '
-         'the end of life. Your times are in the hand of God.'),
+        ("Bring your questions to your care team and ask for help with daily needs. Scripture and counsel for a new diagnosis, long illness, caregiving, and dying."),
+        ("Help with serious illness, caregiving, and end-of-life questions. Medical care, practical support, prayer, and biblical hope without promises of healing now."),
         ['Serious illness', 'Caregiving', 'The end of life'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -538,11 +520,8 @@ COMFORT_PAGES = [
         'When Your Marriage Is Breaking · Betrayal, Divorce, and Hope · Gentle King',
         'A broken marriage',
         'When Your Marriage Is Breaking',
-        ("You were left, or betrayed, or handed papers you didn't want. The one who promised "
-         "to stay didn't. Whether you're the husband or the wife, Christ knows what it is to"
-         ' be betrayed.'),
-        ('Scripture for the betrayed and the deserted, what God has said about divorce, a word'
-         ' for the one who broke faith, and a word for children of divorce.'),
+        ("If home is unsafe, seek protection first. This page addresses betrayal, desertion, divorce, repentance, and care for children caught in a breaking marriage."),
+        ("Help when a marriage breaks. Safety, betrayal, desertion, biblical grounds for divorce, repentance, and care for children."),
         ['A breaking marriage and divorce'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -552,11 +531,8 @@ COMFORT_PAGES = [
         'When Your Child Walks Away From the Lord · Gentle King',
         'A wandering child',
         'When Your Child Walks Away From the Lord',
-        ("You taught them to pray, and now they want nothing to do with Christ. You can't "
-         'give anyone a new heart. Only God can, and he has done it for sons and daughters as '
-         'far off as yours.'),
-        ('For parents of a prodigal. Only God gives a new heart, and he has done it for sons '
-         'and daughters as far off as yours. Pray, wait, and keep the door open.'),
+        ("Love your child without approving destructive behavior. Find help with conversation, boundaries, and prayer without claiming God has promised every child will return."),
+        ("Help when a child rejects the faith. Honest conversation, household safety, boundaries, repentance, and prayer for God's grace."),
         ['A child who turns from the Lord'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -566,11 +542,8 @@ COMFORT_PAGES = [
         'When You Lose Your Job or Home · Scripture for Hard Times · Gentle King',
         'Job or home loss',
         'When You Lose Your Job or Home',
-        ('The job or the business is gone, or the savings, or a fire or a flood took the '
-         "house. It's hard to be the one who is supposed to provide. If you're his, your "
-         'Father knows what you need.'),
-        ('For a lost job, a failed business, or a house taken by fire or flood. Your Father '
-         'knows what you need, and his church is bound to help.'),
+        ("Food, necessary medicine, and somewhere safe to sleep come first. Ask for practical help, keep track of deadlines, and read what Scripture teaches about need."),
+        ("Lost work or housing? Help with immediate needs, assistance, deadlines, and seeking work, with Scripture on provision and the church's care."),
         ['Loss of work or home'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -580,10 +553,8 @@ COMFORT_PAGES = [
         "When You're Lonely · Scripture for the Lonely Christian · Gentle King",
         'Loneliness',
         "When You're Lonely",
-        ('The house is quiet, or the room is full and no one knows you. You may have been '
-         "alone for years. Christ knew what it was to be left, and he hasn't left you."),
-        ('For the single, the divorced, the newly moved, and the lonely in a crowded church. '
-         'Christ was left alone, and God setteth the solitary in families.'),
+        ("Ask for a definite visit, call, or shared meal. Find counsel for isolation, being overlooked at church, and receiving care when you can't get out."),
+        ("Help for loneliness, isolation, and being overlooked at church. Ways to ask for company and care, with Scripture for single and married readers."),
         ['Loneliness'],
         parent="comfort.html", crisis=True, close="comfort-close",
     ),
@@ -593,11 +564,8 @@ COMFORT_PAGES = [
         "When You're Depressed · Depression and the Christian · Gentle King",
         'Depression',
         "When You're Depressed",
-        ("For weeks or years the heaviness hasn't lifted, or it keeps coming back. Sleep does"
-         ' not rest you, and the promises you once loved seem to belong to someone else. '
-         'Christ has been in the dark before you.'),
-        ('For the Christian under depression. Christ was very heavy in Gethsemane, and he will'
-         ' not break a bruised reed. Scripture, care for the body, and help.'),
+        ("Tell a health professional about symptoms affecting your daily life. Find help seeking care and biblical counsel that doesn't treat depression as proof of unbelief."),
+        ("Depression and Christian faith. Seeking professional care, asking for support, continuing treatment, and reading Scripture without self-diagnosis."),
         ['Depression'],
         parent="comfort.html", close="comfort-close",
     ),
@@ -607,10 +575,8 @@ COMFORT_PAGES = [
         "If You're Not Safe · Abuse, Danger, and Thoughts of Suicide · Gentle King",
         'Safety',
         "If You're Not Safe",
-        ('Some hard hours are dangerous. If yours is, the first faithful thing to do is to get'
-         ' safe. Read the rest later.'),
-        ('In danger now? Call 911. Thinking of ending your life? Call or text 988. Being hurt '
-         "at home? Call 1-800-799-7233. Leaving to be safe isn't a sin."),
+        ("Use the urgent contacts first. Find help for thoughts of suicide, violence at home, and child abuse, with guidance on safety, reporting, and pastoral care."),
+        ("Urgent help in the United States for danger, suicidal thoughts, domestic violence, and child abuse. Safety, reporting, and church care."),
         ['Safety from violence at home', 'Suicide prevention'],
         parent="comfort.html", close="comfort-close",
     ),
@@ -3060,9 +3026,9 @@ def build_llms_txt():
         "death by the Spirit. It works in the browser on a phone or a computer, and it needs a "
         "free account made with an email address.",
         "",
-        "Anyone in danger or thinking of ending their life can call 911, or call or text 988, in "
-        "the United States. Anyone being hurt at home can call the National Domestic Violence "
-        "Hotline at 1-800-799-7233, or text START to 88788. If a child is being hurt, call 911. "
+        "In immediate danger, call 911 in the United States. For thoughts of suicide or emotional "
+        "distress, call or text 988. Anyone being hurt at home can call the National Domestic Violence "
+        "Hotline at 1-800-799-7233, or text START to 88788. If a child is in immediate danger, call 911. "
         "Outside the United States, call the local emergency number. The page If You Are Not "
         f"Safe ({SITE_URL}/comfort-safety.html) gives these numbers and more.",
         "",
