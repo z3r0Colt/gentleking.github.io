@@ -57,7 +57,12 @@ Choose the approach by page type:
   examples, not repeated generic checklists. Explain what to do when the
   ordinary approach is unsafe, unavailable, or insufficient. A duty such as
   giving or attending worship must be explained alongside other real duties
-  such as caring for dependents and preserving life.
+  such as caring for dependents and preserving life. In marriage and sexuality
+  guides, teach the whole counsel of Scripture, including the reciprocal duty
+  of marital intimacy and the prohibition against defrauding a spouse in
+  1 Corinthians 7:3-5. Never replace that duty with only an abuse warning,
+  but never present it as permission for coercion either. Distinguish persistent
+  unilateral neglect from genuine inability, illness and temporary difficulty.
 - **Doctrine, gospel, confessions, and apologetics:** The main subject is
   theological, so substantial biblical teaching belongs there. Explain it
   plainly, with definitions and examples. Don't manufacture practical steps
