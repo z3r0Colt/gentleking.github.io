@@ -4,6 +4,8 @@
 Run after the static site is served at http://127.0.0.1:8755.
 Checks emulated device widths, not physical phones or assistive-technology tests.
 """
+import base64
+import os
 import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -19,6 +21,11 @@ PAGES += [
     path.name for path in sorted((Path(__file__).resolve().parent / "content").glob("*.html"))
     if path.name not in PAGES
 ]
+SCREENSHOT_ROUTES = {
+    "index.html", "start-here.html", "doctrine.html", "gospel.html",
+    "guide-marriage.html", "comfort-grief.html", "sojourner-features.html",
+    "resources.html", "biblehelps/index.html",
+}
 ISSUES = []
 
 def check(condition, message):
@@ -26,6 +33,9 @@ def check(condition, message):
         ISSUES.append(message)
 
 def main():
+    screenshot_path = os.environ.get("GENTLEKING_SCREENSHOTS")
+    if screenshot_path:
+        Path(screenshot_path).mkdir(parents=True, exist_ok=True)
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         for width in (375, 768, 1280):
@@ -44,7 +54,26 @@ def main():
                 check(h1_count >= 1, f"{route} lacks a page heading at {width}px")
                 check(not js_errors, f"{route} has JS errors at {width}px: {js_errors[:2]}")
                 js_errors.clear()
+                if screenshot_path and route in SCREENSHOT_ROUTES:
+                    page.screenshot(path=str(Path(screenshot_path) / f"{width}-{route.replace('/', '-')}.png"))
             page.close()
+            if screenshot_path:
+                # Return compact contact sheets through read-only job logs as well
+                # as artifacts, so reviewers can inspect them without local network.
+                cell_width = 375 if width == 375 else 512
+                images = sorted(Path(screenshot_path).glob(f"{width}-*.png"))
+                cards = []
+                for shot in images:
+                    data = base64.b64encode(shot.read_bytes()).decode("ascii")
+                    cards.append(f'<figure><figcaption>{shot.name}</figcaption><img src="data:image/png;base64,{data}"></figure>')
+                sheet = browser.new_page(viewport={"width": cell_width * 3 + 32, "height": 850})
+                sheet.set_content(f'<style>body{{margin:8px;display:grid;grid-template-columns:repeat(3,{cell_width}px);gap:8px;background:#ddd}}figure{{margin:0}}figcaption{{font:12px sans-serif;padding:4px}}img{{display:block;width:100%}}</style>' + "".join(cards))
+                sheet.evaluate("Promise.all(Array.from(document.images, image => image.decode()))")
+                encoded = base64.b64encode(sheet.screenshot(type="jpeg", quality=65, full_page=True)).decode("ascii")
+                for part in range(0, len(encoded), 4096):
+                    print(f"VISUAL_REVIEW {width} {part // 4096} {encoded[part:part + 4096]}")
+                print(f"VISUAL_REVIEW_END {width} {len(encoded)}")
+                sheet.close()
         page = browser.new_page(viewport={"width": 375, "height": 850})
         page.goto(BASE + "corrections.html?article=doctrine-baptism.html", wait_until="domcontentloaded")
         page.locator("#correction-page").wait_for()
