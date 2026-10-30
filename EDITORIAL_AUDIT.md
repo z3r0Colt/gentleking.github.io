@@ -833,3 +833,30 @@ A further reader correction identified `comfort-safety.html#ending-your-life` ra
 Safety instructions were checked against the [National Institute of Mental Health's five action steps](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide), [NIMH's suicide FAQ](https://www.nimh.nih.gov/health/publications/suicide-faq) and [988 Lifeline's current help page](https://988lifeline.org/get-help/). These sources support staying with the person, reducing access to lethal means, asking for professional help, and the 988 call/text service in the United States. The KJV Psalm 34:18 quotation was copied verbatim from the existing Comfort index. All previous Safety-page Scripture quotation blocks were preserved and existing URL anchors retained.
 
 This limited follow-up does not change the whole-site audit completion counts. Add the PR, CI, build and deployment identifiers once verified.
+
+## Additional Comfort expansion batch, October 30, 2026
+
+Four **new** authored Comfort pages were added beyond the original 118-page baseline, bringing the registered site count to **122**, subject to the final build verification. The original 118-page inventory remains a historical baseline. The four new files were written and reviewed individually as part of this expansion. The previously reported count of 50 fully assessed original main fragments is not inflated by these new pages. On this basis the project now has 54 assessed main fragments out of 122, with 68 previously unreviewed originals still outstanding. This limited expansion does not complete the site-wide editorial overhaul.
+
+| New source | Reader question | Focus and disposition |
+| --- | --- | --- |
+| `content/comfort-suicidal-thoughts.html` | I am thinking of ending my life. What can I do and does Christ receive me? | New focused page with immediate protection, trusted-person script, 988, clinical follow-up, and contextual biblical hope. The old Safety-page anchor remains as a short route to the page. |
+| `content/comfort-anxiety.html` | What can I do about anxiety, panic, and frightening physical symptoms? | New practical guide distinguishing possible emergency symptoms, professional assessment, anxiety treatment, ordinary responsibilities, prayer, and intrusive religious fears. |
+| `content/comfort-caregiving.html` | How do I care for someone while exhausted or out of my depth? | New guide covering care plans, sharing tasks, respite, dementia concerns, medical boundaries, and church assistance. |
+| `content/comfort-church-hurt.html` | How do I respond when leaders or a church have hurt me? | New guide for safety, evidence, reporting, proper church review, independent advice, and healing after mistreatment. |
+
+Existing `content/comfort-depression.html` and `content/comfort-work-and-home.html` were re-read and expanded with medical appointment preparation, daily functional needs, church support, eviction notices, utilities, unemployment benefits, emergency necessities, and illness-related work loss. The original Scripture and Westminster block quotations were retained.
+
+The Comfort index, Find Help, Safety hub, Illness and Leaving a Church were updated to make the new material discoverable. The historic `comfort-safety.html#ending-your-life` anchor remains. Related wording was updated in Grief, Afraid of Dying, Death, IVF, and When God Feels Far so that distressed readers encounter direct help without guilt-based phrases such as suggesting they must stay alive because others need them.
+
+Current authoritative public references consulted:
+
+- [988 Lifeline](https://988lifeline.org/get-help/) and [National Institute of Mental Health suicide guidance](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide) for immediate support, connecting with safe people, reducing access to dangerous means, and follow-up care.
+- [NIMH depression guidance](https://www.nimh.nih.gov/health/publications/depression), [generalized anxiety](https://www.nimh.nih.gov/health/publications/generalized-anxiety-disorder-gad) and [panic disorder guidance](https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms) for treatment, medical assessment, and symptoms affecting ordinary life.
+- [USAGov unemployment](https://www.usa.gov/unemployment-benefits), [eviction guidance](https://www.usa.gov/avoid-eviction), [housing aid](https://www.usa.gov/emergency-pay-rent), and [211 housing expenses](https://211.org/get-help/housing-expenses) for practical referrals and eligibility cautions.
+- [National Institute on Aging caregiving guidance](https://www.nia.nih.gov/health/frequently-asked-questions-about-caregiving) and [older-adult home services](https://www.nia.nih.gov/health/caregiving/services-older-adults-living-home) for respite, caregiving support, and family help.
+- [National Domestic Violence Hotline on spiritual abuse](https://www.thehotline.org/resources/what-is-spiritual-abuse/) for recognizing coercion through religious authority.
+
+Church government questions remain governed by Scripture and the original 1647 Standards. The site provides no guarantee that a particular grievance, legal claim, insurance benefit, shelter place, or financial assistance program will be approved. Original historical and KJV quotation blocks were protected; source review of every text and proof across the website remains outstanding.
+
+**Publication status** should be recorded from the expansion PR, build/check workflow, generated main commit, and final Pages deployment. Do not treat new source files alone as public release evidence.
