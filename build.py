@@ -721,10 +721,8 @@ BELIEVER_PAGES = [
         'Am I Really Saved? Assurance of Salvation · Gentle King',
         'Assurance',
         'Am I Really Saved?',
-        ("God doesn't want his children living on guesses. John wrote his first letter to "
-         'believers so that they would know they have eternal life (1 John 5:13).'),
-        ("Not sure you're saved? Afraid your faith was never real, or that you weren't "
-         'chosen? The Westminster Confession on the grounds of assurance.'),
+        ("Come to Christ while your doubts remain. Scripture and the Westminster Standards explain assurance, weak faith, self-examination, and the fear of not being chosen."),
+        ("Not sure you are saved? Scripture and the Westminster Confession on assurance, weak faith, election, and receiving help without repeated self-checking."),
         ['Assurance of salvation'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -734,11 +732,8 @@ BELIEVER_PAGES = [
         'When the Same Sin Keeps Coming Back · Assurance for the Struggling Christian · Gentle King',
         'Remaining sin',
         'When the Same Sin Keeps Coming Back',
-        ('Few things shake a Christian like meeting the same sin again, years after he first '
-         'wept over it. Your fear draws one conclusion from that. God has drawn another, and '
-         'he has written it down.'),
-        ('The same sin again, a sin too great to forgive, a God surely tired of forgiving. '
-         'What God has written for the believer who keeps falling.'),
+        ("Remaining sin calls for repentance and help. It does not overturn the justification of those who trust Christ. Read how Scripture holds warning and pardon together."),
+        ("Recurring sin, repentance, and forgiveness. Biblical warnings against excusing sin alongside Christ's promise of pardon to those who turn to him."),
         ['Remaining sin', 'Forgiveness'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -748,10 +743,8 @@ BELIEVER_PAGES = [
         'The Unpardonable Sin, Hebrews 6, and Losing Your Salvation · Gentle King',
         'Fears',
         'The Unpardonable Sin and Falling Away',
-        ("Some fears come back at night, when the house is quiet and there's nothing to do "
-         "but think. Each of these has an answer that won't give way under you."),
-        ('Afraid you committed the unpardonable sin, frightened by Hebrews 6 and 10, or afraid'
-         " you could lose your salvation? Answers that won't give way."),
+        ("Read the warnings about blasphemy and apostasy in their context. Christ calls you to come to him rather than settle every fear by checking your feelings."),
+        ("The unpardonable sin, Hebrews 6 and 10, and fear of losing salvation. Read warnings in context without using repeated prayer as a test."),
         ['The unpardonable sin', 'Perseverance of the saints'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -761,10 +754,8 @@ BELIEVER_PAGES = [
         'When God Feels Far Away · Spiritual Darkness · Gentle King',
         'Spiritual dryness',
         'When God Feels Far',
-        ('There are seasons when prayer feels like talking to the ceiling and the Bible is '
-         "only ink. They don't mean that God has gone."),
-        ('Prayer feels like talking to the ceiling and the Bible is only ink. Scripture for '
-         'the believer who fears the Lord and still walks in darkness.'),
+        ("A loss of comfort does not by itself prove that God has forsaken you. Seek pastoral care, attend to health needs, and read what Scripture says to troubled believers."),
+        ("When God feels far away. Scripture on assurance, known sin, prayer, and receiving pastoral and medical care during spiritual distress."),
         ['Spiritual darkness'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -774,10 +765,8 @@ BELIEVER_PAGES = [
         'Doubts and Unwanted Thoughts · For the Doubting Christian · Gentle King',
         'Doubt',
         'Doubts and Unwanted Thoughts',
-        ("Some believers are afraid it's not true, and the question won't leave them "
-         'alone. Others are afraid of what their own minds keep saying to them.'),
-        ("For the believer who wonders if any of it's true, and for one troubled by "
-         "blasphemous thoughts that won't stop. Lord, I believe, help thou mine unbelief."),
+        ("Doubting an argument and experiencing an unwanted thought call for different kinds of help. Find biblical counsel and guidance on seeking a clinical assessment."),
+        ("Questions about Christianity and distressing unwanted thoughts. Biblical counsel, the difference between temptation and consent, and professional assessment."),
         ['Doubt', 'Intrusive thoughts'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -787,10 +776,8 @@ BELIEVER_PAGES = [
         'Is God Against Me? Is He Punishing Me? · Gentle King',
         'Affliction',
         'Is God Punishing Me?',
-        ('The diagnosis comes, or the child dies, or the marriage comes apart. Under the grief'
-         ' a harder question rises, about what God thinks of you.'),
-        ('When life breaks, a harder question rises about what God thinks of you. Romans 8, '
-         'Hebrews 12, and the difference between punishment and chastening.'),
+        ("Illness, loss, or a breaking marriage does not reveal a secret verdict against you. Read about fatherly discipline and the freedom from condemnation believers have in Christ."),
+        ("Does suffering mean God is punishing you? Romans 8, Hebrews 12, and the difference between fatherly discipline and condemnation."),
         ['Affliction', 'Chastening'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -800,10 +787,8 @@ BELIEVER_PAGES = [
         'Afraid of Dying? Comfort for the Christian Facing Death · Gentle King',
         'Facing death',
         'Afraid of Dying',
-        ('Christians still die, and many of them dread it. Hebrews says the Son of God took '
-         'flesh and blood for this very reason.'),
-        ('Christians still die, and many dread it. Christ took flesh to deliver those who '
-         'through fear of death were all their lifetime subject to bondage.'),
+        ("Tell your care team and someone you trust what frightens you. Scripture explains Christ's victory over death and the resurrection believers await."),
+        ("Fear of death, practical preparation, and the Christian hope. Care-team questions, local advice about documents, and Scripture on resurrection."),
         ['The fear of death'],
         parent="apologetics.html", series="believer", close="assurance-close",
     ),
@@ -813,11 +798,8 @@ BELIEVER_PAGES = [
         'Will God Keep Me to the End? Perseverance and Assurance · Gentle King',
         'Perseverance',
         'Will God Keep Me to the End?',
-        ('Underneath all these fears is the same suspicion, that in the end it all hangs on '
-         'you. Paul closes Romans 8 by naming everything that could come between a believer '
-         'and God.'),
-        ('Underneath every fear is the suspicion that it all hangs on you. Nothing can '
-         'separate a believer from the love of God in Christ Jesus our Lord.'),
+        ("Christ keeps his people through faith, repentance, and the means he gives. His promise sustains obedience while believers seek assurance."),
+        ("How Christ keeps believers to the end. Perseverance, assurance, the Lord's Table, prayer, and access to church care during illness or disability."),
         ['Perseverance of the saints'],
         parent="apologetics.html", series="believer",
     ),
@@ -2872,7 +2854,7 @@ def build_page(page, dates):
             "guide-free-will.html": "God gives the new heart and the faith by which a sinner freely comes to Christ. Salvation rests on his mercy, not on a better choice made by one sinner than another.",
             "guide-prophecy.html": "Christ will return bodily, the dead will rise, and God will judge the world. Read symbolic passages in light of clear teaching elsewhere in Scripture.",
             "guide-reading-scripture.html": "Read a passage according to its context and kind of writing. Figures of speech communicate truth, and clear passages help explain difficult ones.",
-            "struggle.html": "Bring your sin into the light and turn to Christ again. Fight it by the Spirit through the means God gives, with the help of your church.",
+            "struggle.html": "If anyone is in danger, use the urgent help below first. Stop harm and seek appropriate care. Turn from sin to Christ and fight it by the Spirit, with the help of his Word and your church.",
             "guide-heresy.html": "Test teaching by Scripture. Denying a truth essential to the Christian faith is different from a serious error or a disagreement between faithful believers.",
         }
         if page["file"] in answers:
