@@ -80,50 +80,50 @@
 | `content/doctrine-union-with-christ.html` | Yes | Full text, baseline and cited contexts reviewed | Union by Spirit and faith and distinct saving benefits retained. Replaced inaccurate inline wording with the verified exact KJV of Romans 6:8. |
 | `content/doctrine-why-doctrine.html` | No | Full text, baseline and cited contexts reviewed | Necessity of true knowledge and continuing in Christ’s Word retained. No correction needed. |
 | `content/doctrine.html` | No | Full text, baseline and cited contexts reviewed | All doctrinal landing entries read and cross-checked with article subjects. No content change needed. |
-| `content/foundations.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/gospel.html` | No | Focused | Repent, believe, wrath, Christ's definite satisfaction and free offer stated |
+| `content/foundations.html` | No | Full text, baseline and cited contexts reviewed | Full index text read and lesson destinations inspected. Sixteen-lesson sequence agrees with linked subjects. No prose change; separate companion lesson review remains outstanding. |
+| `content/gospel.html` | No | Full text, baseline and cited contexts reviewed | Full text read. Trinity, original sin, definite satisfaction, free gospel offer, repentance, faith and obedience remain explicit. No prose change. WCF 7.3 source wording differs from the embedded historical quotation, requiring edition reconciliation without silent alteration. |
 | `content/guide-abortion.html` | No | Focused | Prohibition on taking unborn life and duty of protection remain explicit |
 | `content/guide-alcohol.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-bible-reading.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/guide-bible-reading.html` | No | Full text, baseline and cited contexts reviewed | Corrected two-chapters-per-day timetable to about twenty months for 1,189 chapters; distinguished this from the M’Cheyne schedule. Reading and obedience duties retained. Software feature claims await repository verification. |
 | `content/guide-birth-control.html` | No | Focused | Holds children to be blessings, prohibits killing, distinguishes contested applications |
 | `content/guide-church-membership.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Added explicit submission and obedience to lawful oversight. Existing credible profession, sacraments, worship, vows and appeal teaching retained. Heb 13:7-18, WLC 127, WCF 30.3/31.3-4. |
 | `content/guide-death.html` | Yes | Screened | Check medical end-of-life examples against sixth-commandment boundaries |
 | `content/guide-disagreeing.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-evangelism.html` | No | Focused | Repentance, judgment, and the free call to believe remain explicit |
-| `content/guide-examine-yourself.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/guide-evangelism.html` | No | Full text, baseline and cited contexts reviewed | Corrected denial of comfort in this life. John 14:16-18 and 16:33 promise Christ’s presence and Spirit-given comfort amid trouble, without a guarantee of health or wealth. Witnessing and repentance remain explicit. |
+| `content/guide-examine-yourself.html` | No | Full text, baseline and cited contexts reviewed | Distinguished Christ’s merit from examination’s evidential purpose, and required repentance when examination exposes unbelief or cherished sin. Owen paraphrase narrowed to the verified argument in Mortification chapter II. Assurance and examination duties retained. |
 | `content/guide-false-church.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-false-teachers.html` | No | Focused | Explicit warnings against false doctrine remain |
-| `content/guide-family-worship.html` | Yes | Focused | WCF 21.6 and fathers' household worship duty remain explicit |
-| `content/guide-fasting.html` | Yes | Focused and corrected | Confirmed mistaken equivalence of media abstinence and religious fasting, fixed in PR 78 |
+| `content/guide-family-worship.html` | Yes | Full text, baseline and cited contexts reviewed | Full text read. Daily family worship, parental leadership and teaching children remain duties. Practical accommodations do not abolish the ordinary requirement. No prose change. |
+| `content/guide-fasting.html` | Yes | Full text, baseline and cited contexts reviewed | Distinguished fasting’s appointed use from earning access to God. Removed blanket instruction for children to skip meals; retained age, health and capacity. Actual food fasting remains distinct from media abstinence, and ordinary fasting duty remains explicit. |
 | `content/guide-find-a-church.html` | Yes | Focused | Obligation to gather and join remains clear despite legitimate accessibility barriers |
 | `content/guide-forgiveness.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored receipt of a repentant brother in love and clarified church discipline still applies to crimes without displacing civil reporting. WCF 15.6/30.1-3, Luke 17:1-4, Rom 12:14-21. |
 | `content/guide-free-will.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-gambling.html` | No | Screened | Distinguish lawful recreation and sinful wagering by Scripture and good-and-necessary consequence |
 | `content/guide-government.html` | No | Focused | Original 1647 magistrate duties remain explicit, without American revisions |
-| `content/guide-hearing-sermons.html` | Yes | Focused and corrected | Lost first-person examination when preaching seems dull; duty restored in this batch |
+| `content/guide-hearing-sermons.html` | Yes | Full text, baseline and cited contexts reviewed | Full text read. Preparation, self-examination, attentive reception and actual obedience remain affirmative duties alongside testing preaching and requesting access support. Earlier restored self-examination preserved. No further prose change. |
 | `content/guide-heresy.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-homosexuality.html` | No | Screened | Review complete applications and pastoral tone against scriptural commands |
 | `content/guide-ivf.html` | Yes | Screened | Further medical verification of embryo-related claims and precision about differing treatments |
 | `content/guide-joining-rpc.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-leaving-a-church.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline comparison. Restored explicit continuing effect of lawful censure after transfer, while retaining appeal/protective routes. WCF 30.1-3/31.3-4, Heb 13:17. |
-| `content/guide-lords-day.html` | Yes | Focused | WSC 60 duty to keep the whole day remains explicit; necessity and mercy are distinguished |
-| `content/guide-lords-supper.html` | Yes | Focused | Communicant examination and withholding from ignorant/scandalous remain explicit |
+| `content/guide-lords-day.html` | Yes | Full text, baseline and cited contexts reviewed | Made pursuit of Sabbath observance explicit when an employer demands nonnecessary Sunday work. Retained necessity, mercy and dependent care. Replaced ambiguous recreation example with shared Scripture, psalm singing and discussion. |
+| `content/guide-lords-supper.html` | Yes | Full text, baseline and cited contexts reviewed | Full text read with 1 Cor 10-11, WCF 29 and WLC 171-175. Real spiritual feeding, examination, guarded admission, weak believer’s duty to come, and post-communion duties retained. No prose change. |
 | `content/guide-marriage.html` | Yes | Focused and corrected | Confirmed imbalance in 1 Corinthians 7 duties, fixed in PR 77; renewed textual screening here |
 | `content/guide-media.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-meditation.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/guide-meditation.html` | No | Full text, baseline and cited contexts reviewed | Removed unsupported generalization about Eastern religion and mindfulness. Retained positively Christian Word-centered meditation. Psalm 23 and Phil 4 read with suffering, hunger, provision and final hope together. Baxter chapter XV supports heavenly-contemplation attribution; Watson title/source remains to verify. |
 | `content/guide-money.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored explicit duty to support ministry and relief, WCF 19.6 obedience after conviction, WCF 26.3 property, and restitution alongside lawful debt relief. Core sources WLC 141-142, WCF 19.6/26.3, 1 Cor 9:7-14, 2 Cor 8:1-15, Gal 6:6-10, 1 John 3:16-18. |
 | `content/guide-new-revelation.html` | No | Screened | Recheck cessationist proof argument and distinctions |
 | `content/guide-parenting.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline comparison. Clarified Prov 26:4-5 rather than saying both cannot be obeyed. Preserved covenant, baptismal efficacy, household teaching, parental correction and lawful child obedience. Core WLC 127-130 and WCF 28.4-6. |
-| `content/guide-prayer.html` | Yes | Focused | Prayer through Christ and forsaking cherished sin remain explicit |
+| `content/guide-prayer.html` | Yes | Full text, baseline and cited contexts reviewed | Full text read. Prayer through Christ, particular confession, Lord’s Prayer pattern, God’s will and forsaking cherished sin remain affirmative teaching. No prose change. |
 | `content/guide-prophecy.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-reading-scripture.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-repentance.html` | No | Focused | Confessional duty to repent of particular sins remains |
+| `content/guide-reading-scripture.html` | No | Full text, baseline and cited contexts reviewed | Clarified Christ-centered reading in literary and canonical context without invented symbols or ignored commands. Teacher disagreement does not make every interpretation confessional. Existing RP Testimony paragraph attribution still requires current-edition verification. |
+| `content/guide-repentance.html` | No | Full text, baseline and cited contexts reviewed | Corrected inline Luke 15 wording to KJV “Father, I have sinned” after reading Luke 15:11-24. Removed anxiety as a reliable test of repentance; retained returning to Christ and particular repentance. Confession and restitution remain duties with lawful safe contact. |
 | `content/guide-sex.html` | Yes | Focused and corrected | Confirmed missing emphasis on not defrauding a spouse, fixed in PR 77 |
 | `content/guide-spanking.html` | Yes | Focused and corrected | Rod language became ambiguous; literal historical sense clarified here, without removing child protection |
 | `content/guide-tattoos.html` | No | Screened | Assess distinction between ceremonial laws and moral duties without inventing prohibitions |
 | `content/guide-ten-commandments.html` | No | Focused | Moral law's positive and negative scope remains present in summary form |
 | `content/guide-work.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored ordinary duty of honest, patient work under a harsh supervisor alongside lawful recourse. 1 Peter 2:18-25, WLC 127/141-142. Other work duties and inability distinctions retained. |
-| `content/guide-worship.html` | Yes | Focused | Regulative principle, exclusive psalmody and second commandment remain explicit |
+| `content/guide-worship.html` | Yes | Full text, baseline and cited contexts reviewed | Full text read. Biblical warrant, elements and circumstances, exclusive unaccompanied psalmody, second-commandment prohibition of divine images and Lord’s Day retained. No prose change. Current RPCNA attribution remains a separate source-verification gate. |
 | `content/guides.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/help.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/index.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
@@ -140,7 +140,7 @@
 | `content/struggle.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/teacher-philip-anthony-mitchell.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/teachers.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/westminster-study.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/westminster-study.html` | No | Full text, baseline and cited contexts reviewed | Full index read, including all 33 chapter entries. Original 1647 scope and chapter-reader directions retained. No prose change. |
 
 ## Remaining acceptance work
 

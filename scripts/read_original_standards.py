@@ -15,6 +15,13 @@ SOURCES = {
         'Man by his fall having made himself incapable',
         'sin to refuse an oath',
         'The efficacy of baptism',
+        'in the space of six days',
+        'whole day',
+    ],
+    'https://thewestminsterstandard.org/westminster-larger-catechism/': [
+        'What is required of those that hear',
+        'How are they that receive',
+        'One who doubteth',
     ],
     'https://thewestminsterstandard.org/westminster-shorter-catechism/': [
         'Q. 37.', 'Q. 38.',
