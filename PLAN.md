@@ -1,6 +1,6 @@
 # PLAN.md - Gentle King full-site editorial overhaul
 
-Status: IN PROGRESS. Phase 0 is complete and the first editorial batch is underway. See EDITORIAL_AUDIT.md. The site-wide overhaul has not been completed.
+Status: IN PROGRESS. Phase 0 is complete and reviewed editorial batches are being published. See EDITORIAL_AUDIT.md for precise coverage, source questions, checks and deployment evidence. The site-wide overhaul has not been completed.
 Scope: the full public-facing content of the gentleking.github.io repository.
 Companion instructions: AGENTS.md and EDITORIAL_STYLE.md.
 Source of truth: content/, shared partials, and the copy maintained by build.py and related authored data files.
@@ -105,16 +105,16 @@ Use these as reviewable pull-request batches, adjusting boundaries when a shared
 - [ ] Confirm that visitors can reach the most useful answer without exploring an overwhelming directory.
 
 ### Phase 2. Comfort and crisis resources
-- [ ] Read and individually revise the Comfort landing page and each of its twelve child pages.
-- [ ] Review shared crisis and closing partials for redundant text or misleading claims.
+- [x] Read and individually revise the Comfort landing page and each of its twelve child pages.
+- [x] Review shared crisis and closing partials for redundant text or misleading claims.
 - [ ] Verify urgent numbers, safety wording, trauma and loss counsel, role boundaries, and medical or legal claims.
-- [ ] Retain a genuinely usable route to immediate assistance and to further pastoral support.
+- [x] Retain a genuinely usable route to immediate assistance and to further pastoral support.
 
 ### Phase 3. Assurance and Fighting Sin
-- [ ] Review all Assurance articles and related links.
-- [ ] Review the entire Fighting Sin guide and its linked cases.
-- [ ] Preserve real biblical teaching about sin and repentance without fueling obsessive self-examination or claiming every intrusive thought is sin.
-- [ ] Ensure practical help comes before unnecessary devotional buildup when the reader is unsafe or overwhelmed.
+- [x] Review all Assurance articles and related links.
+- [x] Review the entire Fighting Sin guide and its linked cases.
+- [x] Preserve real biblical teaching about sin and repentance without fueling obsessive self-examination or claiming every intrusive thought is sin.
+- [x] Ensure practical help comes before unnecessary devotional buildup when the reader is unsafe or overwhelmed.
 
 ### Phase 4. Household, work, money, and ethics guides
 - [ ] Review all household and real-world guides one at a time.
