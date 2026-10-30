@@ -941,7 +941,7 @@ GUIDE_PAGES = [
            ['How to Read the Bible'], parent="guides.html", series='life'),
     _child('guide-meditation.html', 'How to Meditate on and Memorize Scripture', 'How to Meditate on Scripture and Memorize It · Gentle King', 'Guide', 'How to Meditate on and Memorize Scripture',
            'What biblical meditation is, a simple way to think a verse through, and how a busy believer can hide God’s Word in his heart.',
-           'How to meditate on Scripture the biblical way, not by emptying the mind, with a simple method for one verse and a plan to memorize in small moments.',
+           'How to meditate on Scripture with understanding, prayer, and obedience, with a worked example and a plan to memorize in small moments.',
            ['How to Meditate on and Memorize Scripture'], parent="guides.html", series='life'),
     _child('guide-examine-yourself.html', 'How to Examine Yourself', 'How to Examine Yourself Biblically · Gentle King', 'Guide', 'How to Examine Yourself',
            'Questions from Scripture and the Larger Catechism to ask yourself, how to do it each day, and how not to drown in it.',
