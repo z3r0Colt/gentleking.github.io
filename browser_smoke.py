@@ -54,7 +54,16 @@ def main():
                 check(h1_count >= 1, f"{route} lacks a page heading at {width}px")
                 check(not js_errors, f"{route} has JS errors at {width}px: {js_errors[:2]}")
                 js_errors.clear()
+                if width == 1280 and route == "gospel.html":
+                    intro = page.locator("#come").bounding_box()
+                    reading_time = page.locator("main .reading-time").first.bounding_box()
+                    check(intro is not None and reading_time is not None,
+                          "Gospel introduction or reading time is missing")
+                    if intro and reading_time:
+                        gap = intro["y"] - (reading_time["y"] + reading_time["height"])
+                        check(gap <= 48, f"Desktop Gospel introduction is displaced by {gap}px below the reading time")
                 if screenshot_path and route in SCREENSHOT_ROUTES:
+                    page.evaluate("document.fonts.ready")
                     page.screenshot(path=str(Path(screenshot_path) / f"{width}-{route.replace('/', '-')}.png"))
             page.close()
             if screenshot_path:

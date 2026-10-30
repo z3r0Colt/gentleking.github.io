@@ -219,21 +219,21 @@ hr { border: 0; }
 
 /* Prose columns sit narrow inside the wide container, while grids, callouts
    and quotes are allowed to breathe a little wider. */
-main > .section > p,
-main > .section > .lede,
-main > .section > h2,
-main > .section > h3,
-main > .section > h4,
-main > .section > .eyebrow,
-main > .section > ol,
-main > .section > ul,
-main > .section > dl {
+:is(main, .reading-column) > .section > p,
+:is(main, .reading-column) > .section > .lede,
+:is(main, .reading-column) > .section > h2,
+:is(main, .reading-column) > .section > h3,
+:is(main, .reading-column) > .section > h4,
+:is(main, .reading-column) > .section > .eyebrow,
+:is(main, .reading-column) > .section > ol,
+:is(main, .reading-column) > .section > ul,
+:is(main, .reading-column) > .section > dl {
   max-width: var(--measure);
 }
 
-main > .section > blockquote,
-main > .section > .callout,
-main > .section > .pull {
+:is(main, .reading-column) > .section > blockquote,
+:is(main, .reading-column) > .section > .callout,
+:is(main, .reading-column) > .section > .pull {
   max-width: calc(var(--measure) + 4rem);
 }
 
@@ -271,19 +271,19 @@ h2 + p, h2 + .lede, h3 + p { margin-top: 0; }
    does, so its size stays under the h2's and its room above under the gap
    between sections. The mark is a border so it survives printing, and it is
    shorter than the gold tick on the divider between sections. */
-main > .section > h3 {
+:is(main, .reading-column) > .section > h3 {
   font-size: clamp(1.36rem, 1.16rem + .8vw, 1.7rem);
   font-weight: 600;
   margin-top: calc(var(--section-gap) * .75);
 }
-main > .section > h3::before {
+:is(main, .reading-column) > .section > h3::before {
   content: "";
   display: block;
   width: 2rem;
   margin-bottom: .6em;
   border-top: 1px solid var(--gold);
 }
-main > .section > h3 + blockquote { margin-top: .9rem; }
+:is(main, .reading-column) > .section > h3 + blockquote { margin-top: .9rem; }
 
 p { margin: 0 0 1.15em; }
 p:last-child { margin-bottom: 0; }
@@ -871,7 +871,7 @@ html:not(.js) .nav-tool-note { display: none; }
 
 /* A section that leads with a verse sets it as its heading, the way the home
    page leads with Matthew 11:28, with the reference under it. */
-main > .section > h2.verse-head {
+:is(main, .reading-column) > .section > h2.verse-head {
   font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.15rem);
   line-height: 1.24;
   margin-bottom: .55em;
@@ -1142,7 +1142,7 @@ main > .section > h2.verse-head {
   .site-header, .site-footer, .to-top, .toc, .btn-row, .app-notice, .skip-link { display: none !important; }
   body { font-size: 11pt; }
   :root { --section-gap: 1.5rem; }
-  main > .section > h3 { font-size: 15pt; break-after: avoid; page-break-after: avoid; }
+  :is(main, .reading-column) > .section > h3 { font-size: 15pt; break-after: avoid; page-break-after: avoid; }
   .section { margin-block: 1.5rem; page-break-inside: avoid; }
   a { text-decoration: none; color: #000; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
@@ -1162,6 +1162,8 @@ main > .section > h2.verse-head {
    15. The on-this-page rail, once the screen is wide enough to hold it
    -------------------------------------------------------------------------- */
 
+.reading-column { min-width: 0; display: flow-root; }
+
 /* The mount stays invisible until the script fills it. */
 main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 
@@ -1171,11 +1173,12 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
     grid-template-columns: minmax(0, 1fr) 12.5rem;
     column-gap: clamp(2.5rem, 4vw, 3.5rem);
   }
-  /* Everything but the rail belongs in the reading column, rules included. */
-  main.has-toc > * { grid-column: 1; }
+  /* The article and rail share one row. The rail must not size a separate
+     first row and push the opening article section below its links. */
+  main.has-toc > .reading-column { grid-column: 1; grid-row: 1; }
   main.has-toc > .toc {
     grid-column: 2;
-    grid-row: 1 / -1;
+    grid-row: 1;
     align-self: start;
     position: sticky;
     top: 6.75rem;
@@ -1454,7 +1457,7 @@ main.has-toc > nav[data-toc]:not(.toc) { display: none; }
 
 /* The small heading over each group of sorrows, quiet enough that the rows
    stay the first thing the eye finds. */
-main > .section > h3.sorrows-head {
+:is(main, .reading-column) > .section > h3.sorrows-head {
   margin: 1.9rem 0 .6rem;
   font-family: var(--font-ui);
   font-size: .74rem;
@@ -1463,8 +1466,8 @@ main > .section > h3.sorrows-head {
   text-transform: uppercase;
   color: var(--gold);
 }
-main > .section > h3.sorrows-head::before { display: none; }
-main > .section > h3.sorrows-head + .sorrows { margin-top: 0; }
+:is(main, .reading-column) > .section > h3.sorrows-head::before { display: none; }
+:is(main, .reading-column) > .section > h3.sorrows-head + .sorrows { margin-top: 0; }
 
 /* A phone number split across two lines is hard to read in a hurry. */
 a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
@@ -2113,7 +2116,7 @@ a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
   .callout { padding: 1.1rem 1.15rem; }
   .callout-crisis { font-size: .93rem; line-height: 1.6; }
 }
-main > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 2.25rem; }
+:is(main, .reading-column) > .callout-crisis { max-width: calc(var(--measure) + 4rem); margin-bottom: 2.25rem; }
 
 /* --------------------------------------------------------------------------
    27. A software page's first screen and its features
