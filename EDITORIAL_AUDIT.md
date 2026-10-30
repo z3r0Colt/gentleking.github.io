@@ -876,3 +876,13 @@ Source checks include the [original 1647 WCF 24](https://thewestminsterstandard.
 Existing Scripture and confession quotation blocks were preserved. This batch does not add new historical quotations. New content is original exposition or practical guidance, not asserted verbatim Scripture.
 
 This is a targeted revision of previously registered pages and does not itself increase the site's total inventory or the number of baseline pages completed under the larger PLAN.md. Record the final PR, checks, generated revision and deployment after verification.
+
+## Marital duty and 1 Corinthians 7 correction, October 30, 2026
+
+The user identified that the preceding marriage expansion placed too much emphasis on sexual coercion and not enough on the whole counsel of ordinary marital duty and persistent withholding. In response, the `content/guide-sex.html#marriage-bed` section now includes the exact original KJV 1 Corinthians 7:5 alongside the already present verses 3-4. It directly explains mutual marital obligations, what it means to defraud a spouse, Paul's teaching about mutually agreed temporary abstinence, ordinary absence of desire, repeated neglect, practical conversations, and the difference between genuine illness/impediment and unwillingness to address a sustained problem. The marital application list was corrected accordingly.
+
+The `content/guide-marriage.html#affection` section now gives the same reciprocal duty clear prominence and realistic direction. Applications for both husbands and wives were updated so the obligation is not one-sided. The related sex page heading and `build.py` metadata now reflect the complete content. `EDITORIAL_STYLE.md` and `AGENTS.md` have safeguards against future edits that erase conjugal duty or misrepresent it as permission for force.
+
+Sources verified against [KJV 1 Corinthians 7:3-5](https://www.biblegateway.com/passage/?search=1+Corinthians+7%3A3-5&version=KJV), the [original Westminster Larger Catechism questions 138-139](https://thewestminsterstandard.org/westminster-larger-catechism/), and [original Westminster Confession 24.2](https://thewestminsterstandard.org/the-westminster-confession/). Historical KJV and confessional quotation blocks previously in the site were preserved exactly. The new verse 5 text was cross-checked against the KJV.
+
+The counsel remains reciprocal and distinguishes sinful neglect from physical or mental impediments. It does not diagnose a spouse's motives or legitimate unilateral sexual access. This is a targeted correction, not completion of the broader 122-page editorial overhaul. Merge, automated checks, generated publication and Pages deployment must be verified for the final status.
