@@ -32,6 +32,7 @@ Use EDITORIAL_AUDIT.md as a truthful page-by-page status register during the ful
 - Never make prayer an alternative to necessary medical, legal, crisis, or protective services.
 - Never inject an identical prominent danger banner into every Comfort article. Keep urgent contacts on the Safety page and use brief, relevant directions elsewhere.
 - When writing to someone bereaved by suicide, begin with their grief and questions. Explain the sixth commandment and perseverance accurately and in their proper context, without guessing a particular person's eternal state.
+- When writing to a person contemplating their own suicide, begin with a humane response and immediate safety, including clear crisis contacts and plain words they can use to tell someone. Explain Christian hope without delivering a commandment lecture, implying that distress proves unbelief, or delaying professional help.
 
 **Money, marriage, parenting, employment, family, prayer, worship, and Christian life**
 

@@ -45,7 +45,11 @@ Choose the approach by page type:
   contacts on the Safety page and brief, accessible guidance only on pages
   where the reader is at risk. Suicide bereavement articles should begin with
   the survivor's sorrow rather than the sixth commandment or speculation about
-  the deceased person's salvation.
+  the deceased person's salvation. A person thinking about ending their own
+  life needs direct help staying safe, a way to ask someone to stay with them,
+  patient attention to their distress, and biblical comfort in its proper
+  place. Do not turn a page for someone in crisis into a lecture on the
+  sixth commandment or a test of whether they are truly saved.
 - **Practical guides on money, parenting, marriage, work, prayer, worship, and
   church life:** Answer the practical question at the start or give a clear
   route to the applicable section. Explain the biblical rule and its reason,
