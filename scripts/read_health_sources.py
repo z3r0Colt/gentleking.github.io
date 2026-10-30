@@ -8,6 +8,21 @@ import urllib.error
 import urllib.request
 
 SOURCES = {
+    'https://988lifeline.org/get-help/': ['24', '988'],
+    'https://www.thehotline.org/': ['7233', '88788'],
+    'https://www.thehotline.org/plan-for-safety/': ['plan', 'safe'],
+    'https://www.thehotline.org/resources/should-i-go-to-couples-therapy-with-my-abusive-partner/': ['recommend', 'therapy'],
+    'https://www.childhelphotline.org/': ['reporting', '4453', 'mandated'],
+    'https://afsp.org/find-a-support-group/': ['support group'],
+    'https://afsp.org/healing-conversations/': ['loss', 'volunteer'],
+    'https://www.nimh.nih.gov/health/publications/generalized-anxiety-disorder-gad': ['treatment', 'therapy'],
+    'https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms': ['treatment', 'breathing'],
+    'https://www.nia.nih.gov/health/frequently-asked-questions-about-caregiving': ['respite'],
+    'https://www.nia.nih.gov/health/caregiving/getting-started-caregiving': ['care'],
+    'https://211.org/': ['housing', '211'],
+    'https://www.usa.gov/avoid-eviction': ['eviction'],
+    'https://www.usa.gov/unemployment-benefits': ['state'],
+    'https://www.nhs.uk/conditions/miscarriage/symptoms/': ['bleeding', 'fever'],
     'https://optionline.org/': ['24', '800', 'free'],
     'https://www.nhs.uk/conditions/ectopic-pregnancy/': [
         'symptoms', 'rupture', 'save',
