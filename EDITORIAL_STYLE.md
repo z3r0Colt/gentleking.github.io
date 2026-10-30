@@ -41,6 +41,11 @@ Choose the approach by page type:
   Christian hope where they actually bear on the reader's trouble. Don't
   mistake medical, financial, or relational problems for proof of spiritual
   failure. Don't imply that prayer replaces treatment, protection, or work.
+  Don't prepend a generic crisis banner to every page. Keep full emergency
+  contacts on the Safety page and brief, accessible guidance only on pages
+  where the reader is at risk. Suicide bereavement articles should begin with
+  the survivor's sorrow rather than the sixth commandment or speculation about
+  the deceased person's salvation.
 - **Practical guides on money, parenting, marriage, work, prayer, worship, and
   church life:** Answer the practical question at the start or give a clear
   route to the applicable section. Explain the biblical rule and its reason,
