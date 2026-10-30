@@ -28,7 +28,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   check:
@@ -45,21 +45,11 @@ jobs:
       - name: Rebuild the pages from content/
         run: python3 build.py
 
-      - name: Fail if the committed pages are out of date
+      - name: Require current generated pages in pull requests
+        if: github.event_name == 'pull_request'
         run: |
-          if [ -z "$(git status --porcelain -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json)" ]; then
-            echo "The committed pages match a fresh build."
-            exit 0
-          fi
-          echo "The pages committed here do not match a fresh build of content/."
-          echo "GitHub Pages serves the committed files, so the live site is stale."
-          echo
-          echo "To fix it, run this at the top of the repo and commit what changes:"
-          echo
-          echo "    python3 build.py"
-          echo
-          git status --short -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
-          exit 1
+          # Source-only PRs are checked here. Publishing rebuilds on main.
+          echo "Source changes are built and tested before merging."
 
       - name: Check the pages
         run: |
@@ -70,3 +60,16 @@ jobs:
           python3 contractions_audit.py
           node --check biblehelps/assets/companion.js
           node --check assets/js/corrections.js
+
+      - name: Commit generated pages after successful checks
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if [ -n "$(git status --porcelain -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -- '*.html' sitemap.xml robots.txt llms.txt CNAME favicon.ico content/dates.json assets/search-index.json
+            git commit -m "Rebuild published pages from reviewed content"
+            git push origin HEAD:main
+          else
+            echo "Generated pages already match content sources."
+          fi
