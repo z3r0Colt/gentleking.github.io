@@ -90,12 +90,12 @@ python3 check.py
 Phone links must be written with digits only, like `tel:988`, or the checker will
 stop you. A number with dashes in it may not dial.
 
-The Comfort pages carry crisis phone numbers. They are written in
-`content/comfort.html`, `content/partials/crisis.html`, `content/comfort-safety.html`,
-and the llms.txt text in `build.py`. The Option Line number for pregnant mothers is
-in `content/guide-abortion.html`. Check them on the hotlines' own sites once a
-year, and change the date in the comment at the top of `content/comfort.html` when
-you do.
+Urgent-help phone numbers belong primarily on `content/comfort-safety.html`, with
+short, appropriate references in individual articles and `build.py` for llms.txt.
+They are not injected as a generic banner into the Comfort articles. The Option
+Line number for pregnant mothers is in `content/guide-abortion.html`. Verify
+service details on the providers' own sites annually and update the note at the
+top of `content/comfort.html` when you do.
 
 ---
 
@@ -113,9 +113,10 @@ pages under it for the full feature account, the library, and installing.
   the parent page is written from the series, so it can never disagree with it.
 - **Shared blocks** live in `content/partials/`. A page asks for one at its foot with
   `close` in `PAGES`, or anywhere in its words with `<!-- include name -->`. The
-  crisis numbers at the top of each Comfort page are one, and so are the closing
-  word on the church and the gospel that ends each of them. That repetition is on
-  purpose. A grieving reader may land on one page and never see another.
+  church and gospel closing block is intentionally shared across Comfort
+  articles. A grieving reader may land directly on one page. The full emergency
+  contacts live on the dedicated Safety page, with concise help linked in
+  articles where it is needed. No generic danger banner is inserted at the top.
 - **Old links still work.** Comfort and Apologetics were once one long page each.
   `MOVED` in `build.py` lists where each part went, and a link such as
   `comfort.html#grief` is sent on to `comfort-grief.html`.
