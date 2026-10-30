@@ -70,8 +70,8 @@
     "published": "2026-09-23T07:36:20+00:00"
   },
   "assurance-death.html": {
-    "hash": "0a72aa65adfd8539",
-    "modified": "2026-10-30T06:42:28+00:00",
+    "hash": "bcbce6315c0057ad",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T07:36:20+00:00"
   },
   "assurance-doubts-and-thoughts.html": {
@@ -80,8 +80,8 @@
     "published": "2026-09-23T07:36:20+00:00"
   },
   "assurance-god-feels-far.html": {
-    "hash": "e79ece8520952eb6",
-    "modified": "2026-10-30T06:42:28+00:00",
+    "hash": "1a21d2afd21fcdbd",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T07:36:20+00:00"
   },
   "assurance-kept.html": {
@@ -104,14 +104,29 @@
     "modified": "2026-10-30T06:42:28+00:00",
     "published": "2026-10-23T22:55:38+00:00"
   },
+  "comfort-anxiety.html": {
+    "hash": "e32beb81ae840ac3",
+    "modified": "2026-10-30T16:18:17+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-caregiving.html": {
+    "hash": "2b0439193969792b",
+    "modified": "2026-10-30T16:18:17+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-church-hurt.html": {
+    "hash": "ffc54bb7c29bff80",
+    "modified": "2026-10-30T16:18:17+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
   "comfort-death-of-a-child.html": {
     "hash": "c3340c8fe0ba23b6",
     "modified": "2026-10-30T15:17:44+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-depression.html": {
-    "hash": "d674912eba240f31",
-    "modified": "2026-10-30T06:32:51+00:00",
+    "hash": "f906d007f92a83ba",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-did-they-know-christ.html": {
@@ -120,13 +135,13 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-grief.html": {
-    "hash": "8f58493b9d9ce36f",
-    "modified": "2026-10-30T15:17:44+00:00",
+    "hash": "bb159bb21e0db676",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-illness.html": {
-    "hash": "486486366977eb01",
-    "modified": "2026-10-30T15:17:44+00:00",
+    "hash": "349fd86b71b3e034",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-loneliness.html": {
@@ -145,8 +160,13 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-safety.html": {
-    "hash": "87e8fab2d79d6a67",
-    "modified": "2026-10-30T15:52:28+00:00",
+    "hash": "cb5116cfd9e66de5",
+    "modified": "2026-10-30T16:18:17+00:00",
+    "published": "2026-09-23T23:38:46+00:00"
+  },
+  "comfort-suicidal-thoughts.html": {
+    "hash": "c37fc8d86043a1c7",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-suicide-loss.html": {
@@ -160,13 +180,13 @@
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort-work-and-home.html": {
-    "hash": "0403adcf94f41b1f",
-    "modified": "2026-10-30T15:17:44+00:00",
+    "hash": "a58c2c202576bae3",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "comfort.html": {
-    "hash": "8548f79cd5134757",
-    "modified": "2026-10-30T15:17:44+00:00",
+    "hash": "345c17aec29a3e56",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-09-23T23:38:46+00:00"
   },
   "corrections.html": {
@@ -320,8 +340,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-death.html": {
-    "hash": "b38dc79c956fa511",
-    "modified": "2026-10-29T18:33:31+00:00",
+    "hash": "29c932405e2c5374",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-disagreeing.html": {
@@ -400,8 +420,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-ivf.html": {
-    "hash": "0120728d98ed6958",
-    "modified": "2026-10-29T18:33:31+00:00",
+    "hash": "c9d2e7009f22413e",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-joining-rpc.html": {
@@ -410,8 +430,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-leaving-a-church.html": {
-    "hash": "fad69b9316b8eb3d",
-    "modified": "2026-10-30T07:54:26+00:00",
+    "hash": "4e460ee240eabf9f",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-10-08T05:36:35+00:00"
   },
   "guide-lords-day.html": {
@@ -510,8 +530,8 @@
     "published": "2026-10-08T05:36:35+00:00"
   },
   "help.html": {
-    "hash": "8fbe039d0b929f4f",
-    "modified": "2026-10-30T06:18:13+00:00",
+    "hash": "9c328ff2bea5b79c",
+    "modified": "2026-10-30T16:18:17+00:00",
     "published": "2026-10-23T22:55:38+00:00"
   },
   "index.html": {
