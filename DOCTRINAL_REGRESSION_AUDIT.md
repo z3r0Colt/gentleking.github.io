@@ -145,9 +145,21 @@
 ## Remaining acceptance work
 
 1. Verify Scripture proofs and historical/confessional attributions verse by verse for the pages marked for deeper work, especially where a passage is contested or its use governs people's conduct. This requires close reading, not a keyword scan.
-2. Review shared partials, the copy in `build.py`, historical `EDITORIAL_INVENTORY.json` redirects, and the separate Bible Reading Helps authored articles and generated learning data. These are outside the 122-fragment screening count.
+2. Continue proof-by-proof examination of the inventoried Bible Reading Helps lessons and book guides, shared partials, the copy in `build.py`, and historical `EDITORIAL_INVENTORY.json` redirects. A focused Bible Reading Helps correction is documented below, but the broader corpus remains outside the 122-fragment completed screen.
 3. Check product and service claims against their current real implementations and official sources.
 4. Recheck earlier major changes individually against the baseline where the semantic claim was substantially rewritten, rather than trusting a green automated test to settle doctrine.
 5. Rebuild, test, and confirm the final deployed root HTML after the correction batch.
 
 This register must never be presented as proof that the entire earlier editorial overhaul is complete. It records exactly which material has been screened and what has and has not been established.
+
+## Bible Reading Helps authored data follow-up, October 30, 2026
+
+Beyond the 122 root page fragments, the `biblehelps/assets/content.json` source was parsed and its substantive content collections inventoried. The dataset contains 66 book guides, 621 book helps, 132 worked studies, 32 reading rules, 7 gospel sections, 87 glossary entries, 24 lessons, 33 doctrine summaries, 107 catechism-course lessons, and 9 supplements. This was a dataset-wide structural inventory and focused subject review, **not** full word-by-word, proof-by-proof certification of all these units.
+
+**Confirmed third category of omission.** The authored `catechismCourse` lesson 71, tied to WLC 138, discussed chastity and marital love but failed to state plainly its **conjugal love and cohabitation** requirement. Lesson 72, tied to WLC 139, addressed sexual sins but failed to mention the neglect of required marital duties. The 1 Corinthians guide's sixth help described chapter 7 only in general, situational terms without its mutual obligations. Those three units are now corrected to say that 1 Corinthians 7:3-5 imposes reciprocal marital duties, forbids persistent unreasonable withholding, and cannot be construed to authorize force. Genuine illness and inability remain matters for patient care and lawful discernment.
+
+Only the original explanatory strings for `catechismCourse[70].teach`, `catechismCourse[71].teach`, and the `books` entry for 1 Corinthians, `helps[5].text` and `helps[5].html`, were changed. The embedded original historical `standards` corpus, KJV Scripture memory quotations, and all 66 protected KJV biblical-book files were **not changed**. `biblehelps/assets/content-integrity.json` was updated to the SHA-256 of the revised authored content file, `7779f9b796d145284b2896784c162333794056bf3f22ca49792336475915b936`. The previous SHA-256 was verified before editing as `1c1a08a49d183b1ec038d4e1471a986ecbbbf14e0dc40b5559989a93cf23c1ed`.
+
+The five shared authored partials `content/partials/*.html` were also read for core theology and church-duty guidance. The apologetics closing fragment still calls sinners to repent and believe, the assurance closing retains church attendance and the free gospel call, and the comfort closing retains ordinary worship, elders, deacons, and the free offer of Christ. The other two partials are Sojourner UI and installation descriptions. A complete validation of builder metadata and features remains outside this doctrinal screen.
+
+This confirms that a correct doctrine on the ordinary site's `guide-sex.html` page does **not** by itself guarantee that Bible Reading Helps teaches the same doctrine. Both were amended. The wider data remains open for passage-by-passage theological checking.
