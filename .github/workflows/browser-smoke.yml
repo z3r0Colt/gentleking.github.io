@@ -1,6 +1,14 @@
 name: Browser smoke test
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "content/**"
+      - "build.py"
+      - "assets/**"
+      - "biblehelps/**"
+      - "browser_smoke.py"
+      - ".github/workflows/browser-smoke.yml"
 permissions:
   contents: read
 jobs:
@@ -15,6 +23,8 @@ jobs:
         run: |
           python3 -m pip install 'playwright>=1.50,<2'
           python3 -m playwright install --with-deps chromium
+      - name: Build the proposed source changes
+        run: python3 build.py
       - name: Serve the site
         run: |
           python3 -m http.server 8755 --bind 127.0.0.1 > /tmp/gentleking-http.log 2>&1 &

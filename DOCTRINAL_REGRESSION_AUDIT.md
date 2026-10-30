@@ -86,7 +86,7 @@
 | `content/guide-alcohol.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-bible-reading.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-birth-control.html` | No | Focused | Holds children to be blessings, prohibits killing, distinguishes contested applications |
-| `content/guide-church-membership.html` | Yes | Focused | Joining, attending, receiving ordinances and lawful oversight remain stated |
+| `content/guide-church-membership.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Added explicit submission and obedience to lawful oversight. Existing credible profession, sacraments, worship, vows and appeal teaching retained. Heb 13:7-18, WLC 127, WCF 30.3/31.3-4. |
 | `content/guide-death.html` | Yes | Screened | Check medical end-of-life examples against sixth-commandment boundaries |
 | `content/guide-disagreeing.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-evangelism.html` | No | Focused | Repentance, judgment, and the free call to believe remain explicit |
@@ -96,7 +96,7 @@
 | `content/guide-family-worship.html` | Yes | Focused | WCF 21.6 and fathers' household worship duty remain explicit |
 | `content/guide-fasting.html` | Yes | Focused and corrected | Confirmed mistaken equivalence of media abstinence and religious fasting, fixed in PR 78 |
 | `content/guide-find-a-church.html` | Yes | Focused | Obligation to gather and join remains clear despite legitimate accessibility barriers |
-| `content/guide-forgiveness.html` | Yes | Focused | Command to forgive remains, with distinction from restored trust |
+| `content/guide-forgiveness.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored receipt of a repentant brother in love and clarified church discipline still applies to crimes without displacing civil reporting. WCF 15.6/30.1-3, Luke 17:1-4, Rom 12:14-21. |
 | `content/guide-free-will.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-gambling.html` | No | Screened | Distinguish lawful recreation and sinful wagering by Scripture and good-and-necessary consequence |
 | `content/guide-government.html` | No | Focused | Original 1647 magistrate duties remain explicit, without American revisions |
@@ -105,15 +105,15 @@
 | `content/guide-homosexuality.html` | No | Screened | Review complete applications and pastoral tone against scriptural commands |
 | `content/guide-ivf.html` | Yes | Screened | Further medical verification of embryo-related claims and precision about differing treatments |
 | `content/guide-joining-rpc.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-leaving-a-church.html` | Yes | Focused | Membership commitments and discipline remain stated, with safeguards for wrongdoing |
+| `content/guide-leaving-a-church.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline comparison. Restored explicit continuing effect of lawful censure after transfer, while retaining appeal/protective routes. WCF 30.1-3/31.3-4, Heb 13:17. |
 | `content/guide-lords-day.html` | Yes | Focused | WSC 60 duty to keep the whole day remains explicit; necessity and mercy are distinguished |
 | `content/guide-lords-supper.html` | Yes | Focused | Communicant examination and withholding from ignorant/scandalous remain explicit |
 | `content/guide-marriage.html` | Yes | Focused and corrected | Confirmed imbalance in 1 Corinthians 7 duties, fixed in PR 77; renewed textual screening here |
 | `content/guide-media.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-meditation.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
-| `content/guide-money.html` | Yes | Focused | Giving and stewardship remain; financial aid qualifications require contextual application |
+| `content/guide-money.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored explicit duty to support ministry and relief, WCF 19.6 obedience after conviction, WCF 26.3 property, and restitution alongside lawful debt relief. Core sources WLC 141-142, WCF 19.6/26.3, 1 Cor 9:7-14, 2 Cor 8:1-15, Gal 6:6-10, 1 John 3:16-18. |
 | `content/guide-new-revelation.html` | No | Screened | Recheck cessationist proof argument and distinctions |
-| `content/guide-parenting.html` | Yes | Focused | Children's obedience and parental correction present; further discussion of rod texts in separate guide |
+| `content/guide-parenting.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline comparison. Clarified Prov 26:4-5 rather than saying both cannot be obeyed. Preserved covenant, baptismal efficacy, household teaching, parental correction and lawful child obedience. Core WLC 127-130 and WCF 28.4-6. |
 | `content/guide-prayer.html` | Yes | Focused | Prayer through Christ and forsaking cherished sin remain explicit |
 | `content/guide-prophecy.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/guide-reading-scripture.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
@@ -122,7 +122,7 @@
 | `content/guide-spanking.html` | Yes | Focused and corrected | Rod language became ambiguous; literal historical sense clarified here, without removing child protection |
 | `content/guide-tattoos.html` | No | Screened | Assess distinction between ceremonial laws and moral duties without inventing prohibitions |
 | `content/guide-ten-commandments.html` | No | Focused | Moral law's positive and negative scope remains present in summary form |
-| `content/guide-work.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
+| `content/guide-work.html` | Yes | Full text and baseline compared; core proofs checked | Read entire current article and baseline diff. Restored ordinary duty of honest, patient work under a harsh supervisor alongside lawful recourse. 1 Peter 2:18-25, WLC 127/141-142. Other work duties and inability distinctions retained. |
 | `content/guide-worship.html` | Yes | Focused | Regulative principle, exclusive psalmody and second commandment remain explicit |
 | `content/guides.html` | No | Screened | No additional confirmed weakening found by structural and focused regression screening |
 | `content/help.html` | Yes | Screened | No additional confirmed weakening found by structural and focused regression screening |
@@ -163,3 +163,9 @@ Only the original explanatory strings for `catechismCourse[70].teach`, `catechis
 The five shared authored partials `content/partials/*.html` were also read for core theology and church-duty guidance. The apologetics closing fragment still calls sinners to repent and believe, the assurance closing retains church attendance and the free gospel call, and the comfort closing retains ordinary worship, elders, deacons, and the free offer of Christ. The other two partials are Sojourner UI and installation descriptions. A complete validation of builder metadata and features remains outside this doctrinal screen.
 
 This confirms that a correct doctrine on the ordinary site's `guide-sex.html` page does **not** by itself guarantee that Bible Reading Helps teaches the same doctrine. Both were amended. The wider data remains open for passage-by-passage theological checking.
+
+## Full-text corrective review following the owner’s instruction
+
+The full review starts from published main `2e26beae4bbb9818d7b44f7d3dda2dde133eacf1`. Six sources have now been re-read in full and compared with the editorial baseline: money, work, forgiveness, parenting, church membership and leaving a church. Their changed duties were checked against the preserved KJV contexts and the archived original Standards imported from the required Westminster website. The live website remains inaccessible in this environment, so no fresh online retrieval is claimed. Full proof-by-proof verification and the other 116 source articles remain in progress. The prior inventory-wide screen is not upgraded into a full review.
+
+This batch restores explicit duties of receiving a repentant brother in love, submission to lawful church correction, continuing effect of lawful censure, patient honest work under a harsh employer, and ministry support and relief of need. It also clarifies property rights, restitution, and Proverbs 26:4-5. Some clarifications address older source problems rather than editorial regressions. Civil reporting, lawful appeals, genuine inability and protections against coercion remain. Protected quotation blocks and supplied historical sources are unchanged. Validation and publication must be confirmed for this batch.
