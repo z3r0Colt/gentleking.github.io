@@ -860,3 +860,19 @@ Current authoritative public references consulted:
 Church government questions remain governed by Scripture and the original 1647 Standards. The site provides no guarantee that a particular grievance, legal claim, insurance benefit, shelter place, or financial assistance program will be approved. Original historical and KJV quotation blocks were protected; source review of every text and proof across the website remains outstanding.
 
 **Publication status** should be recorded from the expansion PR, build/check workflow, generated main commit, and final Pages deployment. Do not treat new source files alone as public release evidence.
+
+## Marriage practical-content expansion, October 30, 2026
+
+Reader feedback asked for fuller practical marriage guidance, not more generalized exhortation. The authored Marriage guide and breaking-marriage Comfort page were reviewed in full and expanded. Related passages on marital loneliness, sexual relations, and forgiveness were inspected in context and given targeted additions or cross-links.
+
+- `content/guide-marriage.html` now has new sections on household duties and budgeting, recurring disagreement, affection and differing sexual needs, hard seasons such as illness and caregiving, and when to seek trustworthy counsel. Its original theological and 1647 Westminster material remains in place. The opening crisis referral now directs readers to the dedicated suicidal-thoughts guide.
+- `content/comfort-marriage.html` now helps readers distinguish ordinary conflict from abuse and betrayal, take practical steps when living apart, respond when one spouse refuses to work on the marriage, identify meaningful accountability during reconciliation, seek independent legal advice where needed, and protect children from adult conflict. It distinguishes appropriate joint counsel for ordinary disagreements from unsafe joint counseling where there is abuse. The historical `#marriage`, `#divorce`, `#marriage-search`, `#if-it-was-me`, `#parents`, and `#next-steps` anchors remain intact.
+- `content/comfort-loneliness.html` expands the very short Married and Alone section with practical conversation requests, church fellowship, and a safety distinction.
+- `content/guide-sex.html` reinforces reciprocal kindness and medical care when desire differs and changes one application that could be read as pressure for sexual activity.
+- `content/guide-forgiveness.html` links directly to the distinction between reconciliation and a duty to remain safe. `build.py` now describes the expanded scope accurately.
+
+Source checks include the [original 1647 WCF 24](https://thewestminsterstandard.org/the-westminster-confession/) and [Westminster Larger Catechism questions 138-139](https://thewestminsterstandard.org/westminster-larger-catechism/). Practical abuse-safety cautions were informed by the [National Domestic Violence Hotline on individual safety planning](https://www.thehotline.org/plan-for-safety/), [preparing to leave](https://www.thehotline.org/resources/preparing-to-leave-2/) and [why couples counseling with an abusive partner is discouraged](https://www.thehotline.org/resources/should-i-go-to-couples-therapy-with-my-abusive-partner/). These resources do not establish a universal legal conclusion about a given case, and the guide leaves grounds for divorce to an orderly process with qualified counsel.
+
+Existing Scripture and confession quotation blocks were preserved. This batch does not add new historical quotations. New content is original exposition or practical guidance, not asserted verbatim Scripture.
+
+This is a targeted revision of previously registered pages and does not itself increase the site's total inventory or the number of baseline pages completed under the larger PLAN.md. Record the final PR, checks, generated revision and deployment after verification.
