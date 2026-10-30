@@ -930,3 +930,9 @@ Additional high-stakes areas identified for careful, separate proof-level follow
 **References:** [Original 1647 Westminster Confession](https://thewestminsterstandard.org/the-westminster-confession/) and [Original Westminster Larger Catechism](https://thewestminsterstandard.org/westminster-larger-catechism/), specifically Q129-130 and Q160.
 
 The new audit is published for accountability to the owner and future editors. Record PR, CI, generated main SHA, and final GitHub Pages deployment in the merge and deployment logs when verified.
+
+## Bible Reading Helps cross-source correction, October 30, 2026
+
+A follow-up beyond the 122 HTML source articles discovered the same conjugal-duty omission in the separate `biblehelps/assets/content.json` Bible Reading Helps data. Catechism course lesson 71 (WLC 138) and lesson 72 (WLC 139) lacked explicit mutual conjugal obligation and unlawful neglect, and the 1 Corinthians book-help entry for chapter 7 omitted the duty against persistent unreasonable withholding. These three explanatory units now teach the full reciprocal command without implying coercion. The rest of the Bible Reading Helps curriculum requires proof-by-proof examination and is not marked complete.
+
+The full data source was parsed and the protected historical Westminster standards and KJV memory collection compared before and after, with identical values. All protected 66 KJV book JSON files were left unchanged. Only four narrowly scoped explanatory fields changed in the content file, and its entry in the `content-integrity.json` hash manifest was updated to the new SHA-256 `7779f9b796d145284b2896784c162333794056bf3f22ca49792336475915b936`. The five current `content/partials/*.html` shared authored fragments were read for core doctrinal duties and gospel invitation. See `DOCTRINAL_REGRESSION_AUDIT.md` for the complete, properly scoped record.
