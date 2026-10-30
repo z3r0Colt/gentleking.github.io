@@ -8,6 +8,7 @@ on:
       - "assets/**"
       - "biblehelps/**"
       - "browser_smoke.py"
+      - "scripts/read_original_standards.py"
       - ".github/workflows/browser-smoke.yml"
 permissions:
   contents: read
@@ -19,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Read original Westminster passages for editorial verification
+        run: python3 scripts/read_original_standards.py
       - name: Install Playwright and Chromium
         run: |
           python3 -m pip install 'playwright>=1.50,<2'
