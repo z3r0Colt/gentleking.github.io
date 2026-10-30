@@ -4,6 +4,7 @@
 Run after the static site is served at http://127.0.0.1:8755.
 Checks emulated device widths, not physical phones or assistive-technology tests.
 """
+import os
 import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -19,6 +20,11 @@ PAGES += [
     path.name for path in sorted((Path(__file__).resolve().parent / "content").glob("*.html"))
     if path.name not in PAGES
 ]
+SCREENSHOT_ROUTES = {
+    "index.html", "start-here.html", "doctrine.html", "gospel.html",
+    "guide-marriage.html", "comfort-grief.html", "sojourner-features.html",
+    "resources.html", "biblehelps/index.html",
+}
 ISSUES = []
 
 def check(condition, message):
@@ -26,6 +32,9 @@ def check(condition, message):
         ISSUES.append(message)
 
 def main():
+    screenshot_path = os.environ.get("GENTLEKING_SCREENSHOTS")
+    if screenshot_path:
+        Path(screenshot_path).mkdir(parents=True, exist_ok=True)
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         for width in (375, 768, 1280):
@@ -44,6 +53,8 @@ def main():
                 check(h1_count >= 1, f"{route} lacks a page heading at {width}px")
                 check(not js_errors, f"{route} has JS errors at {width}px: {js_errors[:2]}")
                 js_errors.clear()
+                if screenshot_path and route in SCREENSHOT_ROUTES:
+                    page.screenshot(path=str(Path(screenshot_path) / f"{width}-{route.replace('/', '-')}.png"))
             page.close()
         page = browser.new_page(viewport={"width": 375, "height": 850})
         page.goto(BASE + "corrections.html?article=doctrine-baptism.html", wait_until="domcontentloaded")

@@ -36,4 +36,13 @@ jobs:
           python3 -m http.server 8755 --bind 127.0.0.1 > /tmp/gentleking-http.log 2>&1 &
           sleep 2
       - name: Check responsive layouts, Westminster routes, and correction form
+        env:
+          GENTLEKING_SCREENSHOTS: /tmp/gentleking-browser-review
         run: python3 browser_smoke.py
+      - name: Save representative screenshots for visual review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-site-review
+          path: /tmp/gentleking-browser-review
+          retention-days: 7
