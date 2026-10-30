@@ -116,6 +116,8 @@ Use these as reviewable pull-request batches, adjusting boundaries when a shared
 - [x] Preserve real biblical teaching about sin and repentance without fueling obsessive self-examination or claiming every intrusive thought is sin.
 - [x] Ensure practical help comes before unnecessary devotional buildup when the reader is unsafe or overwhelmed.
 
+The Phase 3 source reads and practical revisions are published in PR 65. Full proof, historical attribution, and software-claim verification remain subject to the shared gates and the open entries in EDITORIAL_AUDIT.md.
+
 ### Phase 4. Household, work, money, and ethics guides
 - [ ] Review all household and real-world guides one at a time.
 - [ ] Give each its own practical structure, grounded examples, and relevant qualifications.
