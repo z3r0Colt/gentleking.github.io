@@ -457,7 +457,7 @@ COMFORT_PAGES = [
         ("Help with the first days after a death, the weeks after the funeral, and grief that returns. Scripture explains the hope of resurrection in Christ."),
         ("Help after someone dies. Practical support, grief that returns, and KJV Scripture on mourning and the resurrection of believers."),
         ['Grief'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-widowed.html',
@@ -468,7 +468,7 @@ COMFORT_PAGES = [
         ("Help after the death of a husband or wife, including daily tasks, children, and urgent paperwork. Scripture gives believers hope in Christ beyond death."),
         ("Help for widows and widowers with grief, children, daily tasks, bills, and the Christian hope of resurrection."),
         ['The death of a husband or wife'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-death-of-a-child.html',
@@ -479,7 +479,7 @@ COMFORT_PAGES = [
         ("For parents grieving a miscarriage, stillbirth, or the death of a child. Find practical care and biblical teaching without guesses about your child's election."),
         ("Care after miscarriage, stillbirth, or a child's death. Grief, self-blame, practical support, and what Scripture teaches about children and salvation."),
         ['The death of a child', 'Miscarriage'],
-        parent="comfort.html", crisis=True, close="comfort-close", cites=[{"@type": "CreativeWork", "name": "Canons of Dort"}],
+        parent="comfort.html", close="comfort-close", cites=[{"@type": "CreativeWork", "name": "Canons of Dort"}],
     ),
     _child(
         'comfort-did-they-know-christ.html',
@@ -490,7 +490,7 @@ COMFORT_PAGES = [
         ("You can grieve without pretending to know your loved one's final state. Read what Scripture reveals about salvation, judgment, and the things God keeps hidden."),
         ("Grieving someone whose faith was uncertain? Scripture on judgment, last-hour mercy, regret, and the limits of what we can know."),
         ['Grief for an unbeliever'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-suicide-loss.html',
@@ -512,7 +512,7 @@ COMFORT_PAGES = [
         ("Bring your questions to your care team and ask for help with daily needs. Scripture and counsel for a new diagnosis, long illness, caregiving, and dying."),
         ("Help with serious illness, caregiving, and end-of-life questions. Medical care, practical support, prayer, and biblical hope without promises of healing now."),
         ['Serious illness', 'Caregiving', 'The end of life'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-marriage.html',
@@ -523,7 +523,7 @@ COMFORT_PAGES = [
         ("If home is unsafe, seek protection first. This page addresses betrayal, desertion, divorce, repentance, and care for children caught in a breaking marriage."),
         ("Help when a marriage breaks. Safety, betrayal, desertion, biblical grounds for divorce, repentance, and care for children."),
         ['A breaking marriage and divorce'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-prodigal.html',
@@ -534,7 +534,7 @@ COMFORT_PAGES = [
         ("Love your child without approving destructive behavior. Find help with conversation, boundaries, and prayer without claiming God has promised every child will return."),
         ("Help when a child rejects the faith. Honest conversation, household safety, boundaries, repentance, and prayer for God's grace."),
         ['A child who turns from the Lord'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-work-and-home.html',
@@ -545,7 +545,7 @@ COMFORT_PAGES = [
         ("Food, necessary medicine, and somewhere safe to sleep come first. Ask for practical help, keep track of deadlines, and read what Scripture teaches about need."),
         ("Lost work or housing? Help with immediate needs, assistance, deadlines, and seeking work, with Scripture on provision and the church's care."),
         ['Loss of work or home'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-loneliness.html',
@@ -556,7 +556,7 @@ COMFORT_PAGES = [
         ("Ask for a definite visit, call, or shared meal. Find counsel for isolation, being overlooked at church, and receiving care when you can't get out."),
         ("Help for loneliness, isolation, and being overlooked at church. Ways to ask for company and care, with Scripture for single and married readers."),
         ['Loneliness'],
-        parent="comfort.html", crisis=True, close="comfort-close",
+        parent="comfort.html", close="comfort-close",
     ),
     _child(
         'comfort-depression.html',
@@ -1857,7 +1857,7 @@ def fingerprint(page):
     shown = [str(page.get(key, "")) for key in ("eyebrow", "h1", "deck")]
     if page.get("head_shot"):
         shown.append(include(page["head_shot"]))
-    for key in ("crisis", "close", "facts"):
+    for key in ("close", "facts"):
         if page.get(key):
             shown.append(json.dumps(page[key]))
     if page.get("close"):
@@ -2843,9 +2843,7 @@ def build_page(page, dates):
 
     main_class = "wrap page-body has-toc" if page.get("toc") else "wrap page-body"
     parts.append(f'<main id="main" class="{main_class}">\n')
-    # The numbers to call come before anything else, the page's own list included.
-    if page.get("crisis"):
-        parts.append(include("crisis") + "\n\n")
+    # Urgent contacts live in the Safety page and in topic-specific advice.
     if page.get("toc"):
         parts.append(toc_html(body))
     if page.get("schema") == "Article":
