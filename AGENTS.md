@@ -36,6 +36,8 @@ Use EDITORIAL_AUDIT.md as a truthful page-by-page status register during the ful
 
 **Money, marriage, parenting, employment, family, prayer, worship, and Christian life**
 
+Marital-intimacy guidance must state and explain the whole teaching of 1 Corinthians 7:3-5, including the equal duty of husband and wife, the instruction not to defraud one another, and the ordinarily mutual, time-limited nature of abstinence for prayer. Do not imply the marriage bed is entirely optional according to each day's desire, or give one spouse power to neglect the other indefinitely. Include the seventh-commandment duties of conjugal love from original Westminster Larger Catechism 138-139. Distinguish enduring neglect from pain, disability, trauma, illness, postpartum recovery and other genuine impediments. Biblical obligation never permits forced sex or threats. Do not infer a spouse's motives or sexual capacity merely from other activities. This guidance must remain substantial even on pages intended for readers with no abuse or safety concern.
+
 - State the answer early and show how biblical duties work in ordinary circumstances.
 - Make the practical steps specific to the subject, not a generic checklist repeated across guides.
 - Address real decisions, exceptions, safety concerns, dependent care, obligations, and the limits of the advice.
