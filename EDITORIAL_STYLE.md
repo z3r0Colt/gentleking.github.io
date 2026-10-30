@@ -28,7 +28,12 @@ person, not a generated study-guide template.
 
 Write for what the reader came to learn or do. A Christian website should teach
 Christian truth faithfully, but religious language must serve the question at
-hand. Do not add devotional sentences to a paragraph merely to make it sound
+hand. When Scripture assigns a duty, teach that duty positively and explain
+its corresponding prohibitions. The need to guard against misuse must not
+displace the ordinary requirement. Check whether cautionary paragraphs have
+become the main message while the reader's actual obligation is barely named.
+Equally, never use an obligation to excuse cruelty, coercion, or neglect of
+other biblical duties. Do not add devotional sentences to a paragraph merely to make it sound
 spiritual. Neither should practical advice stand apart from biblical duties,
 promises, and moral limits when those truly govern the subject.
 
