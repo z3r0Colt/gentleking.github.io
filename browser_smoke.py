@@ -5,6 +5,7 @@ Run after the static site is served at http://127.0.0.1:8755.
 Checks emulated device widths, not physical phones or assistive-technology tests.
 """
 import sys
+from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 BASE = "http://127.0.0.1:8755/"
@@ -13,6 +14,10 @@ PAGES = [
     "foundations.html", "westminster-study.html", "guides.html",
     "doctrine-baptism.html", "guide-church-membership.html",
     "corrections.html", "biblehelps/index.html",
+]
+PAGES += [
+    path.name for path in sorted((Path(__file__).resolve().parent / "content").glob("*.html"))
+    if path.name not in PAGES
 ]
 ISSUES = []
 
