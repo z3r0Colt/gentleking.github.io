@@ -21,7 +21,17 @@ def main():
             invalid.append(f"{page['file']} was not built")
             continue
         page_html = path.read_text(encoding="utf-8")
-        found = re.findall(r'<a class="source-ref" href="([^"]+)"[^>]*>(.*?)</a>', page_html, re.S)
+        found = []
+        for attrs, label in re.findall(r'<a\b([^>]*)>(.*?)</a>', page_html, re.S):
+            match = re.search(r'\bhref="([^"]+)"', attrs)
+            if not match:
+                continue
+            href = match.group(1)
+            if 'class="source-ref"' in attrs or href.startswith((
+                "bible.html?", "westminster-confession.html#", "larger-catechism.html#", "shorter-catechism.html#",
+                "biblehelps/index.html?ref=", "biblehelps/index.html#standards/",
+            )):
+                found.append((href, label))
         bible, standards = 0, 0
         for href, label in found:
             if href.startswith("bible.html?"):
