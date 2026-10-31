@@ -32,23 +32,31 @@
     return bookCache[index];
   }
   function parse(reference, metadata) {
-    var match = /^(.+?)\s+(\d{1,3})(?::(\d{1,3})(?:\s*[-\u2013]\s*(\d{1,3}))?)?$/.exec(reference.trim());
+    var match = /^(.+?)\s+(\d{1,3})(?::(\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?)*))?$/.exec(reference.trim());
     if (!match) { throw new Error('Choose a valid Bible reference.'); }
     var name = match[1].toLowerCase();
     if (name === 'psalm') { name = 'psalms'; }
     var index = metadata.findIndex(function (item) { return item.name.toLowerCase() === name; });
     var chapter = Number(match[2]);
-    var start = match[3] ? Number(match[3]) : null;
-    var end = match[4] ? Number(match[4]) : start;
-    if (index < 0 || chapter < 1 || chapter > metadata[index].chapters.length ||
-        (start !== null && (start < 1 || end < start || end > metadata[index].chapters[chapter - 1]))) {
-      throw new Error('Choose a valid Bible reference.');
+    var expression = match[3] || '';
+    if (index >= 0 && metadata[index].chapters.length === 1 && !expression && chapter > 1) {
+      expression = String(chapter);
+      chapter = 1;
     }
-    return { index: index, chapter: chapter, start: start, end: end };
+    var ranges = expression ? expression.split(',').map(function (part) {
+      var pair = part.trim().split(/\s*[-–]\s*/);
+      return [Number(pair[0]), Number(pair[pair.length - 1])];
+    }) : [];
+    if (index < 0 || chapter < 1 || chapter > metadata[index].chapters.length || ranges.some(function (pair) {
+      return pair[0] < 1 || pair[1] < pair[0] || pair[1] > metadata[index].chapters[chapter - 1];
+    })) { throw new Error('Choose a valid Bible reference.'); }
+    return { index: index, chapter: chapter, start: ranges.length ? ranges[0][0] : null,
+      end: ranges.length ? ranges[0][1] : null, ranges: ranges };
   }
   function referenceFor(place, metadata) {
-    return metadata[place.index].name + ' ' + place.chapter +
-      (place.start === null ? '' : ':' + place.start + (place.end === place.start ? '' : '-' + place.end));
+    return metadata[place.index].name + ' ' + place.chapter + (place.ranges.length ? ':' + place.ranges.map(function (pair) {
+      return pair[0] === pair[1] ? String(pair[0]) : pair[0] + '-' + pair[1];
+    }).join(',') : '');
   }
   function render(host, data, place, selectedOnly) {
     host.replaceChildren();
@@ -58,7 +66,7 @@
     var chapter = data.chapters[place.chapter - 1];
     chapter.forEach(function (text, index) {
       var number = index + 1;
-      var selected = place.start !== null && number >= place.start && number <= place.end;
+      var selected = place.ranges.some(function (pair) { return number >= pair[0] && number <= pair[1]; });
       if (selectedOnly && place.start !== null && !selected) { return; }
       var line = document.createElement('p');
       line.id = (selectedOnly ? 'kjv-dialog-verse-' : 'kjv-verse-') + number;
@@ -93,7 +101,7 @@
     });
   }
   document.addEventListener('click', function (event) {
-    var link = event.target.closest('a.source-ref[href^="bible.html?ref="]');
+    var link = event.target.closest('a[href^="bible.html?ref="]');
     if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey ||
         event.shiftKey || event.altKey || !window.HTMLDialogElement ||
         !HTMLDialogElement.prototype.showModal) { return; }

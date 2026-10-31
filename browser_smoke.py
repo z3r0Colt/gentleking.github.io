@@ -15,7 +15,7 @@ PAGES = [
     "index.html", "start-here.html", "learn.html", "doctrine.html",
     "foundations.html", "westminster-study.html", "guides.html",
     "doctrine-baptism.html", "guide-church-membership.html",
-    "corrections.html", "bible.html", "biblehelps/index.html",
+    "corrections.html", "bible.html", "westminster-confession.html", "larger-catechism.html", "shorter-catechism.html", "biblehelps/index.html",
 ]
 PAGES += [
     path.name for path in sorted((Path(__file__).resolve().parent / "content").glob("*.html"))
@@ -130,6 +130,39 @@ def main():
             page.wait_for_function("document.getElementById('kjv-status').textContent.includes('valid Bible reference')")
             check(page.locator("#kjv-passage p").count() == 0, "Invalid Scripture request displayed an unrelated passage")
             page.close()
+
+        page = browser.new_page(viewport={"width": 375, "height": 850}, reduced_motion="reduce")
+        page.route("**/biblehelps/**", lambda route: route.abort())
+        page.goto(BASE + "foundations.html", wait_until="domcontentloaded")
+        assignments = page.locator('.foundation-step a[href^="bible.html?ref="]')
+        check(assignments.count() == 16, "Foundations must use 16 native Scripture links")
+        assignments.first.click()
+        page.locator(".kjv-dialog .kjv-passage p").first.wait_for()
+        check(page.url.endswith("foundations.html"), "Foundations Scripture leaves Gentle King")
+        page.keyboard.press("Escape")
+        page.goto(BASE + "guide-repentance.html?course=foundations&lesson=6", wait_until="domcontentloaded")
+        page.locator(".course-navigation").first.wait_for()
+        page.locator('.course-navigation a[rel="next"]').first.click()
+        page.wait_for_url("**/doctrine-justification.html?course=foundations&lesson=7")
+        check(not page.locator(".pager").is_visible(), "Generic article navigation competes with the course")
+        page.locator('.source-ref[href="westminster-confession.html#chapter-11-paragraph-1"]').first.click()
+        page.wait_for_url("**/westminster-confession.html#chapter-11-paragraph-1")
+        check("freely justifieth" in page.locator("#chapter-11-paragraph-1").inner_text(), "Native original WCF paragraph missing")
+        page.locator('#chapter-11-paragraph-1 details summary').click()
+        proof = page.locator('#chapter-11-paragraph-1 a[href^="bible.html?ref="]').first
+        check(proof.count() == 1, "Native Scripture proofs lack reading links")
+        proof.click()
+        page.locator(".kjv-dialog .kjv-passage p").first.wait_for()
+        page.keyboard.press("Escape")
+        for reference, verses in [("John%204%3A21%2C23", 2), ("Jude%203", 1)]:
+            page.goto(BASE + "bible.html?ref=" + reference, wait_until="domcontentloaded")
+            page.wait_for_function("document.getElementById('kjv-status').textContent === ''")
+            check(page.locator("#kjv-passage .kjv-selected").count() == verses, "Disjoint or single-chapter Scripture reference failed")
+        page.goto(BASE + "guide-family-worship.html?course=foundations&lesson=15", wait_until="domcontentloaded")
+        page.locator(".course-navigation").first.wait_for()
+        page.locator('.course-navigation a[rel="next"]').first.click()
+        page.wait_for_url("**/guide-work.html?course=foundations&lesson=15")
+        page.close()
 
         page = browser.new_page(viewport={"width": 375, "height": 850})
         page.goto(BASE + "corrections.html?article=doctrine-baptism.html", wait_until="domcontentloaded")

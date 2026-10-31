@@ -15,7 +15,9 @@ serves the `.html` files at the top of this repository exactly as they are.
 The ministry now includes `foundations.html`, a sixteen-lesson pathway from the
 gospel to the life of the church, and `westminster-study.html`, an index of all
 thirty-three chapters of the original Confession. Each chapter opens the
-specific historical text and Scripture proofs within Bible Reading Helps.
+specific historical text and Scripture proofs on Gentle King itself. The native
+Confession and Catechism pages use preserved source data under `assets/standards/`.
+Bible Reading Helps remains a separate application.
 
 Six doctrine guides cover baptism, the person and work of Christ, justification,
 the fall and original sin, Christian liberty, and lawful oaths and vows.
@@ -33,7 +35,7 @@ The sources and corrections policy explains the verification process.
 
 `browser_smoke.py` uses Playwright and Chromium to test representative pages
 at phone, tablet, and desktop viewport widths, the correction form, and
-confessional paragraph navigation. Run the on-demand GitHub Actions
+confessional paragraph navigation, disjoint Scripture references and the Foundations sequence. Run the on-demand GitHub Actions
 `Browser smoke test` workflow from the Actions tab. It was checked in CI
 for this release, but it is **not** a substitute for physical-device testing,
 manual screen-reader testing, or a full WCAG audit.
@@ -72,8 +74,8 @@ references into KJV reading links to `bible.html?ref=...`. A normal click opens
 the passage in a dialog on the current article. The full reader uses Gentle
 King’s shared layout, and its text and metadata live under `assets/kjv/`.
 It does not load Bible Reading Helps. Modified clicks still open the full reader.
-It links WCF, WLC, and WSC citations to the relevant original document on
-The Westminster Standard. It skips any existing link, code, or interactive
+It links WCF, WLC, and WSC citations to the native historical-text pages with
+exact paragraph or question anchors. Those pages credit The Westminster Standard. It skips any existing link, code, or interactive
 control. The historical book catalogue on Resources is excluded to preserve
 its verbatim titles and bibliographies. Authoring files under `content/`
 remain plain HTML without machine-generated source-link markup.
@@ -307,3 +309,15 @@ manifest for the companion data.
 The short Gospel summary is shared through `metadata.gospelSummary` in the
 companion content data. Both presentations put an immediate call to Christ near
 the beginning, and quote Romans 3:25 and 1 John 4:10 on propitiation.
+
+## Foundations course navigation
+
+`assets/foundations.json` is the shared sixteen-lesson inventory. The builder
+renders its assigned articles and native Scripture/Standards links on the course
+index. Articles opened with `?course=foundations&lesson=6` use
+`assets/js/foundations.js` to show course navigation in place of generic related
+reading. Multiple assigned articles stay within their lesson before advancing.
+Every assigned article also has a static return link for use without JavaScript.
+
+Named teacher reviews and their PDF downloads were retired in October 2026.
+General teaching on Scripture, doctrine and evaluating claims remains.

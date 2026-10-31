@@ -364,26 +364,6 @@ PAGES = [
         "toc": False,
     },
     {
-        "file": "teachers.html",
-        "content": "teachers.html",
-        "title": "Teacher Reviews",
-        "full_title": "Teacher Reviews \u00b7 Popular Preachers Tested by Scripture \u00b7 Gentle King",
-        "eyebrow": "Discernment",
-        "h1": "Teacher Reviews",
-        "deck": (
-            "Careful reports on popular preachers, each weighed by Scripture and the Westminster "
-            "Standards from the man\u2019s own words, with what he gets right told as plainly as "
-            "what he gets wrong."
-        ),
-        "description": (
-            "Popular preachers weighed by Scripture and the Westminster Confession, from their own "
-            "words. Fair, sourced discernment reports to read or download."
-        ),
-        "schema": "CollectionPage",
-        "about": ["Discernment", "False teachers"],
-        "toc": False,
-    },
-    {
         "file": "resources.html",
         "content": "resources.html",
         "title": "Resources",
@@ -900,11 +880,11 @@ SOJOURNER_PAGES = [
         "h1": "What Comes With Sojourner",
         "deck": (
             "The translations, the original texts, the lexicons, the commentaries and "
-            "confessions, the four book shelves, and where every one of them came from."
+            "confessions, the four optional book shelves, and where every one of them came from."
         ),
         "description": (
             "The Bibles, Hebrew and Greek texts, lexicons, commentaries, Westminster Standards, "
-            "and book shelves that come with Sojourner, and where each one came from."
+            "and optional book shelves for Sojourner, with the source of each text."
         ),
         "about": ["Bible translations", "Bible commentaries", "Westminster Standards", "Public domain Christian books"],
         "parent": APP_PAGE,
@@ -1095,19 +1075,6 @@ GUIDE_PAGES = [
            ['Death', 'Burial', 'Cremation'], parent="guides.html", series='says'),
 ]
 
-# One report per teacher, under Teacher Reviews. Each has a PDF of the full
-# report in resources/discernment/, linked from its page. Add the newest last.
-# verdict says whether he is safe to sit under, True or False. It is drawn big
-# at the top of his page and beside his name in the list, so no one skims past it.
-# verdict_why is the one line under it that says why, as the report gives it.
-TEACHER_PAGES = [
-    _child('teacher-philip-anthony-mitchell.html', 'Philip Anthony Mitchell', 'Philip Anthony Mitchell · A Discernment Report · Gentle King', 'Discernment report', 'Philip Anthony Mitchell',
-           'Pastor of 2819 Church in Atlanta and founder of the ACCESS prayer gatherings. Many true things, and errors that reach the person of Christ.',
-           'Philip Anthony Mitchell of 2819 Church weighed by Scripture and the Westminster Confession. His Christology, words from God, ACCESS, and fasting.',
-           ['Philip Anthony Mitchell', '2819 Church'], parent="teachers.html", series='teachers',
-           verdict=False, verdict_why='A grave error on the person of Christ, with serious errors besides.'),
-]
-
 # Where each part of the two old long pages went. A link from before the split,
 # such as comfort.html#grief, is sent on by site.js to the page that holds it now.
 MOVED = {
@@ -1174,14 +1141,12 @@ SERIES = {
     "life": [p for p in GUIDE_PAGES if p["series"] == "life"],
     "discern": [p for p in GUIDE_PAGES if p["series"] == "discern"],
     "says": [p for p in GUIDE_PAGES if p["series"] == "says"],
-    "teachers": TEACHER_PAGES,
 }
 CHILDREN = {
     "comfort.html": COMFORT_PAGES,
     "apologetics.html": OBJECTOR_PAGES + BELIEVER_PAGES,
     APP_PAGE: SOJOURNER_PAGES,
     "guides.html": GUIDE_PAGES,
-    "teachers.html": TEACHER_PAGES,
 }
 
 # Reader entrances and individual doctrine subjects.
@@ -1382,6 +1347,18 @@ PAGES.append({
     "description": "Read the King James Bible on Gentle King. Choose a book and chapter or open a Scripture reference beside the article you are reading.",
     "schema": "WebPage", "toc": False,
 })
+
+for filename, doc, title in [
+    ("westminster-confession.html", "wcf", "Westminster Confession of Faith"),
+    ("larger-catechism.html", "wlc", "Westminster Larger Catechism"),
+    ("shorter-catechism.html", "wsc", "Westminster Shorter Catechism"),
+]:
+    PAGES.append({"file": filename, "content": filename, "title": title,
+                  "full_title": title + " · Gentle King", "h1": title,
+                  "eyebrow": "The original Westminster Standards",
+                  "deck": "The historical text and Scripture proofs from The Westminster Standard.",
+                  "description": "Read the original " + title + " and its Scripture proofs on Gentle King.",
+                  "schema": "WebPage", "parent": "westminster-study.html", "standard": doc, "toc": False})
 
 # Original Westminster doctrine and discipleship pages.
 PAGES.extend([
@@ -1591,7 +1568,7 @@ PAGE_HEAD = """<div class="page-head">
 {crumbs}    <p class="eyebrow">{eyebrow}</p>
     <h1>{h1}</h1>
     <p class="page-deck">{deck}</p>
-{verdict}  </div>
+  </div>
 </div>
 """
 
@@ -1678,7 +1655,6 @@ FOOTER = """<footer class="site-footer">
           <li><a href="apologetics.html#objector">Answers to objections</a></li>
           <li><a href="assurance.html">Assurance and doubt</a></li>
           <li><a href="guides.html">Practical guides</a></li>
-          <li><a href="teachers.html">Teacher reviews</a></li>
         </ul>
       </nav>
       <nav aria-label="Tools">
@@ -1766,45 +1742,6 @@ def include(name):
     return path.read_text(encoding="utf-8").strip()
 
 
-VERDICT_MARK = {
-    True: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
-    False: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
-}
-
-VERDICT = """    <div class="verdict verdict-{kind}">
-      <span class="verdict-mark">{mark}</span>
-      <p class="verdict-text"><span class="verdict-label">Safe to sit under?</span>
-        <strong class="verdict-word">{word}</strong>
-        <span class="verdict-line">{line}</span>{why}</p>
-    </div>
-"""
-
-
-def verdict_html(page):
-    """The big yes or no at the top of a teacher's report."""
-    if "verdict" not in page:
-        return ""
-    safe = page["verdict"]
-    return render(
-        VERDICT, kind="safe" if safe else "unsafe", mark=VERDICT_MARK[safe],
-        word="Yes" if safe else "No",
-        line=(f"{html.escape(page['h1'])} is a safe teacher to sit under." if safe
-              else f"{html.escape(page['h1'])} is not a safe teacher to sit under."),
-        why=(f'\n        <span class="verdict-why">{html.escape(page["verdict_why"])}</span>'
-             if page.get("verdict_why") else ""),
-    )
-
-
-def verdict_badge(page):
-    """The same verdict, small, beside his name in the list of reports."""
-    if "verdict" not in page:
-        return ""
-    safe = page["verdict"]
-    return (f'<span class="paths-verdict verdict-{"safe" if safe else "unsafe"}">'
-            f'{VERDICT_MARK[safe]}{"Safe" if safe else "Not safe"}</span>')
-
-
-
 def guide_topic(page):
     name = page["file"]
     if any(x in name for x in ("bible", "reading-scripture", "prophecy", "meditation")):
@@ -1858,7 +1795,7 @@ def paths_html(series, pages=None):
     rows = []
     for page in (SERIES[series] if pages is None else pages):
         rows.append(
-            f'    <li data-topic="{guide_topic(page)}"><a href="{page["file"]}">{verdict_badge(page)}<span class="paths-title">{html.escape(page["h1"])}</span>'
+            f'    <li data-topic="{guide_topic(page)}"><a href="{page["file"]}"><span class="paths-title">{html.escape(page["h1"])}</span>'
             f'<span class="paths-desc">{html.escape(page["description"] if pages is not None or series in ("life", "discern", "says") else page["deck"])}</span><span class="reading-time">{reading_minutes(page)} min read</span></a></li>'
         )
     return "\n".join(rows)
@@ -1888,7 +1825,13 @@ def guide_topics_html():
 def fragment(page):
     """A page's words, as content/ holds them, with the shared blocks, the
     library list, and the Sojourner version written in where it asks for them."""
+    if page.get("standard"):
+        from standards_reader import render_standard
+        return render_standard(page["standard"])
     body = (CONTENT / page["content"]).read_text(encoding="utf-8")
+    if "<!-- foundations-lessons -->" in body:
+        from foundations_course import render_lessons
+        body = body.replace("<!-- foundations-lessons -->", render_lessons())
     if "<!-- guide-topics -->" in body:
         body = body.replace("<!-- guide-topics -->", guide_topics_html())
     if LIBRARY_MARK in body:
@@ -1932,7 +1875,7 @@ def git_date(page, first):
     args = ["git", "log", "--format=%aI"]
     if first:
         args += ["--diff-filter=A", "--follow"]
-    args += ["--", f"content/{page['content']}"]
+    args += ["--", f"assets/standards/{page['standard']}.json" if page.get("standard") else f"content/{page['content']}"]
     try:
         out = subprocess.run(args, cwd=ROOT, capture_output=True, text=True, check=True).stdout
     except (OSError, subprocess.CalledProcessError):
@@ -1949,6 +1892,7 @@ def page_dates():
         ledger = json.loads(DATES.read_text(encoding="utf-8"))
     except FileNotFoundError:
         ledger = {}
+    ledger = {name: entry for name, entry in ledger.items() if name in BY_FILE}
     now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
     for page in PAGES:
         mark = fingerprint(page)
@@ -2399,10 +2343,9 @@ def pager_html(page):
                          f'<span class="pager-title">{html.escape(nxt["h1"])}</span></a>')
         up = {"objector": "apologetics.html#objector", "believer": "assurance.html#begin",
               "life": "guides.html#christian-life", "discern": "guides.html#discernment",
-              "says": "guides.html#bible-says", "teachers": "teachers.html#reports"}[page["series"]]
+              "says": "guides.html#bible-says"}[page["series"]]
         word = {"objector": "All the questions", "believer": "All the fears",
-                "life": "All the guides", "discern": "All the guides", "says": "All the guides",
-                "teachers": "All the reports"}[page["series"]]
+                "life": "All the guides", "discern": "All the guides", "says": "All the guides"}[page["series"]]
     else:
         up = parent["file"]
         word = {"comfort.html": "Every sorrow on Comfort"}.get(parent["file"], f"Back to {parent['title']}")
@@ -2795,7 +2738,7 @@ def whole_card_links(body):
 
 def build_page(page, dates):
     fragment_path = CONTENT / page["content"]
-    if not fragment_path.exists():
+    if not fragment_path.exists() and not page.get("standard"):
         raise SystemExit(f"missing content fragment: {fragment_path}")
     body = whole_card_links(fragment(page).strip())
     if page.get("close"):
@@ -2880,7 +2823,6 @@ def build_page(page, dates):
                 eyebrow=html.escape(page["eyebrow"], quote=False),
                 h1=html.escape(page["h1"], quote=False),
                 deck=html.escape(page["deck"], quote=False),
-                verdict=verdict_html(page),
             )
         )
     if page.get("notice"):
@@ -2914,6 +2856,8 @@ def build_page(page, dates):
         if page["file"] in answers:
             parts.append(f'<aside class="quick-answer"><h2>The Short Answer</h2><p>{html.escape(answers[page["file"]])}</p></aside>')
     parts.append(body)
+    from foundations_course import course_return
+    parts.append(course_return(page["file"]))
     parts.append(related_html(page))
     parts.append("\n" + pager_html(page) if page.get("parent") else "")
     if page.get("moved"):
@@ -2928,6 +2872,7 @@ def build_page(page, dates):
     footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
                     donate_url=DONATE_URL, site_js=asset("assets/js/site.js"))
     footer = footer.replace(site_js, site_js + f'<script src="{asset("assets/js/kjv.js")}" defer></script>\n')
+    footer = footer.replace(site_js, site_js + f'<script src="{asset("assets/js/foundations.js")}" defer></script>\n')
     for script in page.get("scripts", []):
         footer = footer.replace(site_js, site_js + f'<script src="{asset(script)}" defer></script>\n')
     parts.append(footer)
@@ -3007,7 +2952,6 @@ LLMS_GROUPS = [
     ("Answers to objections", ["apologetics.html"] + [p["file"] for p in OBJECTOR_PAGES]),
     ("Fear, doubt, and assurance, for believers", [p["file"] for p in BELIEVER_PAGES]),
     ("Practical guides", ["guides.html"] + [p["file"] for p in GUIDE_PAGES]),
-    ("Teachers weighed", ["teachers.html"] + [p["file"] for p in TEACHER_PAGES]),
 ]
 
 

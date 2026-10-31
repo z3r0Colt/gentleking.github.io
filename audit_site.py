@@ -31,7 +31,7 @@ def main():
                 if not match or not __import__("reference_links").valid_scripture(match):
                     invalid.append(f"{page['file']} has invalid reference {reference}")
                 bible += 1
-            elif href.startswith("biblehelps/index.html#standards/") and re.fullmatch(r"(?:wcf|wlc|wsc)/[0-9]+(?:/[0-9]+)?", href.split("#standards/", 1)[1]):
+            elif re.fullmatch(r"(?:westminster-confession\.html#chapter-\d+(?:-paragraph-\d+)?|(?:larger|shorter)-catechism\.html#question-\d+)", href):
                 standards += 1
             elif href in (
                 "https://thewestminsterstandard.org/the-westminster-confession/",
@@ -65,8 +65,20 @@ def main():
         if text["name"] != book["name"] or [len(chapter) for chapter in text["chapters"]] != book["chapters"]:
             invalid.append("KJV book metadata mismatch: " + book["name"])
     for page in build.PAGES:
-        if 'class="source-ref" href="biblehelps/index.html?' in (ROOT / page["file"]).read_text(encoding="utf-8"):
-            invalid.append(page["file"] + " still sends Scripture to the companion app")
+        if re.search(r'href="biblehelps/index\.html(?:\?ref=|#standards/)', (ROOT / page["file"]).read_text(encoding="utf-8")):
+            invalid.append(page["file"] + " still sends reference reading to the companion app")
+    source_docs = {d["id"]: d for d in json.loads((ROOT / "biblehelps/assets/content.json").read_text())["standards"]}
+    for doc_id in ("wcf", "wlc", "wsc"):
+        native = json.loads((ROOT / f"assets/standards/{doc_id}.json").read_text())
+        if native != source_docs[doc_id]:
+            invalid.append("Preserved original Westminster document changed: " + doc_id)
+    retired = ["teachers.html", "teacher-philip-anthony-mitchell.html", "resources/discernment/philip-anthony-mitchell-discernment-report.pdf"]
+    for name in retired:
+        if (ROOT / name).exists():
+            invalid.append("Retired teacher review still published: " + name)
+    for published in [*(ROOT.glob("*.html")), ROOT / "assets/search-index.json", ROOT / "sitemap.xml", ROOT / "llms.txt"]:
+        if any(re.search(r"(?<![\w-])" + re.escape(name) + r'(?=["?#\s<]|$)', published.read_text(encoding="utf-8")) for name in retired):
+            invalid.append("Retired review reference in " + published.name)
     if invalid:
         for issue in invalid:
             print("ERROR:", issue)
