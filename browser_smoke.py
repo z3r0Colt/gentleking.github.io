@@ -15,7 +15,7 @@ PAGES = [
     "index.html", "start-here.html", "learn.html", "doctrine.html",
     "foundations.html", "westminster-study.html", "guides.html",
     "doctrine-baptism.html", "guide-church-membership.html",
-    "corrections.html", "biblehelps/index.html",
+    "corrections.html", "bible.html", "biblehelps/index.html",
 ]
 PAGES += [
     path.name for path in sorted((Path(__file__).resolve().parent / "content").glob("*.html"))
@@ -37,7 +37,7 @@ def main():
     if screenshot_path:
         Path(screenshot_path).mkdir(parents=True, exist_ok=True)
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
+        browser = playwright.chromium.launch(headless=True, executable_path=os.environ.get("CHROMIUM_EXECUTABLE"))
         for width in (375, 768, 1280):
             page = browser.new_page(viewport={"width": width, "height": 850}, reduced_motion="reduce")
             js_errors = []
@@ -88,6 +88,49 @@ def main():
                     print(f"VISUAL_REVIEW {width} {part // 4096} {encoded[part:part + 4096]}")
                 print(f"VISUAL_REVIEW_END {width} {len(encoded)}")
                 sheet.close()
+        # Scripture must work even when the separate companion app is unavailable.
+        for width in (375, 768, 1280):
+            page = browser.new_page(viewport={"width": width, "height": 850}, reduced_motion="reduce")
+            page.route("**/biblehelps/**", lambda route: route.abort())
+            page.goto(BASE + "gospel.html", wait_until="domcontentloaded")
+            reference = page.locator('a.source-ref[href^="bible.html?ref="]').first
+            reference.scroll_into_view_if_needed()
+            before = page.evaluate("scrollY")
+            address = page.url
+            reference.click()
+            page.locator(".kjv-dialog .kjv-passage p").first.wait_for()
+            check(page.url == address, "Scripture click leaves the article")
+            check("Come unto me" in page.locator(".kjv-dialog").inner_text(), "KJV passage did not load independently")
+            check(page.locator(".kjv-dialog .kjv-passage p").count() == 3, "Scripture range did not show exactly three verses")
+            check(page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Scripture dialog overflows at " + str(width))
+            if screenshot_path:
+                page.screenshot(path=str(Path(screenshot_path) / f"kjv-dialog-{width}.png"))
+            page.keyboard.press("Escape")
+            check(not page.locator(".kjv-dialog").is_visible(), "Escape did not close Scripture")
+            check(reference.evaluate("element => element === document.activeElement"), "Closing Scripture did not restore focus")
+            check(abs(page.evaluate("scrollY") - before) <= 2, "Closing Scripture lost article position")
+            page.goto(BASE + "bible.html?ref=John%203%3A16-18", wait_until="domcontentloaded")
+            page.locator("#kjv-verse-36").wait_for()
+            check(page.locator("#kjv-passage .kjv-selected").count() == 3, "Full chapter did not highlight the requested range")
+            check("For God so loved the world" in page.locator("#kjv-verse-16").inner_text(), "Full reader has wrong KJV text")
+            page.locator("#kjv-previous").click()
+            page.wait_for_url("**ref=John%202")
+            check(page.locator("#kjv-passage h2").inner_text() == "John 2", "Previous chapter failed")
+            page.go_back()
+            page.locator("#kjv-verse-36").wait_for()
+            check(page.locator("#kjv-passage .kjv-selected").count() == 3, "Browser Back lost the Scripture range")
+            page.locator("#kjv-book").select_option("0")
+            page.locator("#kjv-chapter").select_option("50")
+            page.locator("#kjv-form").get_by_role("button", name="Read", exact=True).click()
+            page.wait_for_url("**ref=Genesis%2050")
+            page.locator("#kjv-next").click()
+            page.wait_for_url("**ref=Exodus%201")
+            check(page.locator("#kjv-passage h2").inner_text() == "Exodus 1", "Next chapter failed at book boundary")
+            page.goto(BASE + "bible.html?ref=John%20999", wait_until="domcontentloaded")
+            page.wait_for_function("document.getElementById('kjv-status').textContent.includes('valid Bible reference')")
+            check(page.locator("#kjv-passage p").count() == 0, "Invalid Scripture request displayed an unrelated passage")
+            page.close()
+
         page = browser.new_page(viewport={"width": 375, "height": 850})
         page.goto(BASE + "corrections.html?article=doctrine-baptism.html", wait_until="domcontentloaded")
         page.locator("#correction-page").wait_for()

@@ -133,6 +133,7 @@ NAV = [
 
 # The apps under Tools, each with a line saying what it is for.
 TOOLS = [
+    ("bible.html", "KJV Bible", "Read Scripture on Gentle King"),
     ("biblehelps/", "Bible Reading Helps", "Book guides and study lessons"),
     (APP_PAGE, APP_NAME, "Bible study on any device"),
     (MORTIFY_PAGE, MORTIFY_NAME, "For the fight against sin"),
@@ -1374,6 +1375,14 @@ PAGES.extend([
      "schema": "Article", "parent": "doctrine.html", "toc": True},
 ])
 
+PAGES.append({
+    "file": "bible.html", "content": "bible.html", "title": "KJV Bible",
+    "full_title": "King James Bible · Gentle King", "eyebrow": "The Holy Bible",
+    "h1": "King James Bible", "deck": "Read the Authorized Version here on Gentle King.",
+    "description": "Read the King James Bible on Gentle King. Choose a book and chapter or open a Scripture reference beside the article you are reading.",
+    "schema": "WebPage", "toc": False,
+})
+
 # Original Westminster doctrine and discipleship pages.
 PAGES.extend([
     {"file": "doctrine-baptism.html", "content": "doctrine-baptism.html", "title": "Baptism", "full_title": "Baptism · Gentle King", "eyebrow": "Doctrine and discipleship", "h1": "Baptism", "deck": "Christ\u2019s covenant sign and seal, with promised grace truly conferred by the Spirit in God\u2019s appointed time.", "description": "Baptism as a sign and seal of the covenant of grace, infant baptism, and the Spirit\u2019s real efficacy without automatic regeneration.", "schema": "Article", "parent": "doctrine.html", "toc": True},
@@ -1675,6 +1684,7 @@ FOOTER = """<footer class="site-footer">
       <nav aria-label="Tools">
         <p class="footer-head">Tools</p>
         <ul class="footer-links">
+          <li><a href="bible.html">King James Bible</a></li>
           <li><a href="biblehelps/">Bible Reading Helps</a></li>
           <li><a href="sojourner.html">Sojourner</a></li>
           <li><a href="mortify.html">Mortify</a></li>
@@ -2317,7 +2327,7 @@ def structured_data(page, canonical, body, dates):
 
 
 # Each app's page and the mark that goes beside its name.
-APP_ICONS = {APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON, "biblehelps/": BOOK_SVG}
+APP_ICONS = {"bible.html": BOOK_SVG, APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON, "biblehelps/": BOOK_SVG}
 
 
 def section_of(current):
@@ -2917,6 +2927,7 @@ def build_page(page, dates):
     site_js = f'<script src="{asset("assets/js/site.js")}" defer></script>\n'
     footer = render(FOOTER, year=COPYRIGHT_YEAR, scripture_notice=SCRIPTURE_NOTICE,
                     donate_url=DONATE_URL, site_js=asset("assets/js/site.js"))
+    footer = footer.replace(site_js, site_js + f'<script src="{asset("assets/js/kjv.js")}" defer></script>\n')
     for script in page.get("scripts", []):
         footer = footer.replace(site_js, site_js + f'<script src="{asset(script)}" defer></script>\n')
     parts.append(footer)
