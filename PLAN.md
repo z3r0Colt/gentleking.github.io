@@ -1,6 +1,6 @@
 # PLAN.md - Gentle King full-site editorial overhaul
 
-Status: IN PROGRESS. Phase 0 is complete and reviewed editorial batches are being published. See EDITORIAL_AUDIT.md for precise coverage, source questions, checks and deployment evidence. The site-wide overhaul has not been completed.
+Status: IN PROGRESS. All 122 current authored page fragments and the separately authored shared, companion, reader and catalog copy have been read. Repairs through PR 91 are merged and deployed. Primary-source follow-up and final acceptance remain in progress. See EDITORIAL_AUDIT.md for precise coverage, source questions, checks and deployment evidence. The site-wide overhaul has not been completed.
 Scope: the full public-facing content of the gentleking.github.io repository.
 Companion instructions: AGENTS.md and EDITORIAL_STYLE.md.
 Source of truth: content/, shared partials, and the copy maintained by build.py and related authored data files.
@@ -100,8 +100,8 @@ Use these as reviewable pull-request batches, adjusting boundaries when a shared
 - [x] Establish baseline checks and known failures without masking them.
 
 ### Phase 1. Entry points, site-wide navigation, and common copy
-- [ ] Homepage, landing pages, Start Here, Find Help, Learn, search, About, and corrections.
-- [ ] Header, menus, breadcrumbs, page metadata, notice text, footer, common warnings, links, labels, and generated descriptions.
+- [x] Homepage, landing pages, Start Here, Find Help, Learn, search, About, and corrections.
+- [x] Header, menus, breadcrumbs, page metadata, notice text, footer, common warnings, links, labels, and generated descriptions.
 - [ ] Confirm that visitors can reach the most useful answer without exploring an overwhelming directory.
 
 ### Phase 2. Comfort and crisis resources
@@ -119,37 +119,37 @@ Use these as reviewable pull-request batches, adjusting boundaries when a shared
 The Phase 3 source reads and practical revisions are published in PR 65. Full proof, historical attribution, and software-claim verification remain subject to the shared gates and the open entries in EDITORIAL_AUDIT.md.
 
 ### Phase 4. Household, work, money, and ethics guides
-- [ ] Review all household and real-world guides one at a time.
-- [ ] Give each its own practical structure, grounded examples, and relevant qualifications.
+- [x] Review all household and real-world guides one at a time.
+- [x] Give each its own practical structure, grounded examples, and relevant qualifications.
 - [ ] Correct inaccurate financial, medical, civil, historical, or professional guidance.
 - [ ] Test links to overlapping Comfort, Assurance, and Doctrine material.
 
-Published household/work progress includes money (PR 66), work, marriage, parenting, discipline and sex (PR 68). Other ethics guides and the full proof/source gates remain open. See EDITORIAL_AUDIT.md for individual dispositions.
+All household and ethics source pages have now been read, with further repairs in PRs 81, 84 and 88. Full proof/source gates remain individually recorded. See EDITORIAL_AUDIT.md for individual dispositions.
 
 ### Phase 5. Church and devotional practice guides
-- [ ] Prayer, family worship, Lord's Day, public worship, hearing sermons, sacraments, church membership and joining, church discipline, and related practice.
-- [ ] Explain how a person actually carries out each duty and the role of the local church.
-- [ ] Maintain the original Westminster doctrine and Reformed Presbyterian convictions, including the regulative principle and exclusive psalmody.
+- [x] Prayer, family worship, Lord's Day, public worship, hearing sermons, sacraments, church membership and joining, church discipline, and related practice.
+- [x] Explain how a person actually carries out each duty and the role of the local church.
+- [x] Maintain the original Westminster doctrine and Reformed Presbyterian convictions, including the regulative principle and exclusive psalmody.
 
-Published church-practice progress includes forgiveness (PR 68), prayer, family worship and the Lord's Day (PR 69), public worship, hearing sermons, communion and membership (PR 70), and finding, joining and leaving congregations (PR 71). Other practice guides and full source gates remain open. Current main-source coverage is 50/118, not whole-site completion.
+Published church-practice progress includes forgiveness (PR 68), prayer, family worship and the Lord's Day (PR 69), public worship, hearing sermons, communion and membership (PR 70), and finding, joining and leaving congregations (PR 71). The remaining practice guides were subsequently read and repaired in PRs 83 and 88. Current main-source read coverage is 122/122. That count does not close the independent proof/source gates.
 
 ### Phase 6. Gospel, foundations, biblical learning, and doctrine
-- [ ] Preserve the complete gospel and its free offer.
-- [ ] Read every Foundations lesson and doctrine page in full.
+- [x] Preserve the complete gospel and its free offer.
+- [x] Read every Foundations lesson and doctrine page in full.
 - [ ] Review catechetical and confessional references against the original 1647 source.
 - [ ] Resolve duplicated explanations, weak context, inconsistent terminology, and broken proof links.
-- [ ] Maintain Gospel / Bible Reading Helps shared-text and integrity contracts.
+- [x] Maintain Gospel / Bible Reading Helps shared-text and integrity contracts.
 
 ### Phase 7. Apologetics, teachers, and discernment
-- [ ] Review every objection and response.
+- [x] Review every objection and response.
 - [ ] Review teacher reports for attribution, documented quotations, fairness, and sourcing.
 - [ ] Distinguish direct evidence from speculation and remove unsupported claims.
 
 ### Phase 8. Software, libraries, and resources
-- [ ] Review Sojourner, Mortify, and Bible Reading Helps copy hosted in this repository.
+- [x] Review Sojourner, Mortify, and Bible Reading Helps copy hosted in this repository.
 - [ ] Check downloads, supported devices, privacy and offline claims, installation instructions, accessibility and limitations.
-- [ ] Review resource lists, book and source descriptions, hidden/unlisted content, and other public files.
-- [ ] Do not change app feature claims without project evidence.
+- [x] Review resource lists, book and source descriptions, hidden/unlisted content, and other public files.
+- [x] Do not change app feature claims without project evidence.
 
 ### Phase 9. Final cross-site review and publication
 - [ ] Re-read related pages side by side for contradictions, repetition, and inconsistent wording.
