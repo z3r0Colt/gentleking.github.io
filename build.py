@@ -2271,7 +2271,12 @@ def structured_data(page, canonical, body, dates):
 
 
 # Each app's page and the mark that goes beside its name.
-APP_ICONS = {"bible.html": BOOK_SVG, APP_PAGE: BOOK_SVG, MORTIFY_PAGE: MORTIFY_ICON, "biblehelps/": BOOK_SVG}
+APP_ICONS = {
+    "bible.html": '<img src="assets/img/favicon.svg" width="64" height="64" alt="" decoding="async">',
+    APP_PAGE: '<img src="assets/img/sojourner-icon-64.png" width="64" height="64" alt="" decoding="async">',
+    MORTIFY_PAGE: MORTIFY_ICON,
+    "biblehelps/": '<img src="assets/img/bible-reading-helps-icon.svg" width="64" height="64" alt="" decoding="async">',
+}
 
 
 def section_of(current):
