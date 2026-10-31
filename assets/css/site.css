@@ -2354,3 +2354,14 @@ a.source-ref:hover, a.source-ref:focus-visible { text-decoration-thickness: 2px;
 .kjv-controls label { display: grid; gap: .35rem; font-family: var(--font-ui); font-size: .9rem; }
 .kjv-controls select { max-width: 100%; padding: .6rem; background: var(--paper); color: var(--ink); border: 1px solid var(--rule-strong); font: inherit; }
 @media print { .kjv-dialog { display: none; } }
+
+/* Native historical documents and the Foundations reading sequence. */
+.standards-text { max-width: var(--measure); margin-inline: auto; }
+.standards-text [id] { scroll-margin-top: 6rem; }
+.standards-index { display: flex; flex-wrap: wrap; gap: .65rem 1rem; padding-block: 1rem; }
+.standards-text .section { margin-top: 2.5rem; }
+.course-navigation { border: 1px solid var(--rule-strong); background: var(--paper-sunk); padding: 1rem; margin-block: 1rem 2rem; }
+.course-navigation p { font-family: var(--font-ui); font-size: .85rem; margin: 0 0 .8rem; }
+.course-navigation div { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; }
+.course-return { margin-top: 2rem; }
+.course-reading .pager, .course-reading .related-reading, .course-reading .course-return { display: none; }

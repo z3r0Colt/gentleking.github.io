@@ -32,9 +32,12 @@ def scripture_pattern():
     choices = sorted(bible_books(), key=len, reverse=True)
     pattern = "|".join(re.escape(book) for book in choices)
     return re.compile(
-        r'(?<![\w])(?P<book>' + pattern + r')\s+'
+        r'(?<![\w])(?P<single>(?=(?:Obadiah|Philemon|2 John|3 John|Jude)\s))?'
+        r'(?P<book>' + pattern + r')\s+'
         r'(?P<ch>\d{1,3})'
-        r'(?::(?P<vs>\d{1,3})(?:\s*[-\u2013]\s*(?P<ve>\d{1,3}))?)?'
+        r'(?::(?P<vs>\d{1,3})(?:\s*[-\u2013]\s*(?P<ve>\d{1,3}))?'
+        r'(?P<more>(?:\s*,\s*\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?)*))?'
+        r'(?(single)(?P<shorttail>(?:\s*[-–]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-–]\s*\d{1,3})?)*))'
         r'(?!\d)', re.I
     )
 
@@ -47,36 +50,87 @@ CONFESSIONAL = re.compile(
     re.I
 )
 
-def valid_scripture(match):
+def scripture_parts(match):
     book = bible_books().get(match.group("book").lower())
-    if not book:
-        return False
     chapter = int(match.group("ch"))
-    counts = book["chapters"]
-    if chapter < 1 or chapter > len(counts):
+    first = match.group("vs")
+    if len(book["chapters"]) == 1 and first is None and (chapter > 1 or match.group("shorttail")):
+        first, chapter = str(chapter), 1
+    expression = (first or "") + (("-" + match.group("ve")) if match.group("ve") else "") + (match.group("more") or "") + (match.group("shorttail") or "")
+    ranges = []
+    if expression:
+        for part in expression.split(","):
+            pair = re.split(r"[-–]", part.strip())
+            ranges.append((int(pair[0]), int(pair[-1])))
+    return book, chapter, ranges
+
+
+def valid_scripture(match):
+    book, chapter, ranges = scripture_parts(match)
+    if chapter < 1 or chapter > len(book["chapters"]):
         return False
-    if match.group("vs"):
-        verse = int(match.group("vs"))
-        last = int(match.group("ve") or verse)
-        if verse < 1 or last < verse or last > counts[chapter - 1]:
-            return False
-    return True
+    return all(1 <= first <= last <= book["chapters"][chapter - 1] for first, last in ranges)
+
+
+def scripture_url(match):
+    book, chapter, ranges = scripture_parts(match)
+    reference = book["name"] + " " + str(chapter)
+    if ranges:
+        reference += ":" + ",".join(str(a) if a == b else f"{a}-{b}" for a, b in ranges)
+    return "bible.html?ref=" + quote(reference, safe="")
+
 
 def confessional_url(match):
-    """Open the exact original section and proof texts in Bible Reading Helps.
-
-    Its Westminster data comes solely from thewestminsterstandard.org and
-    each document provides a link back to that original source.
-    """
+    """Open the preserved original text and proofs on Gentle King itself."""
     name, num = match.group("name").lower(), int(match.group("num"))
     if name in ("wcf", "westminster confession", "westminster confession of faith") and 1 <= num <= 33:
         sub = match.group("sub")
-        return f"biblehelps/index.html#standards/wcf/{num}" + (f"/{int(sub)}" if sub else "")
+        return f"westminster-confession.html#chapter-{num}" + (f"-paragraph-{int(sub)}" if sub else "")
     if name in ("wlc", "westminster larger catechism") and 1 <= num <= 196:
-        return f"biblehelps/index.html#standards/wlc/{num}"
+        return f"larger-catechism.html#question-{num}"
     if name in ("wsc", "westminster shorter catechism") and 1 <= num <= 107:
-        return f"biblehelps/index.html#standards/wsc/{num}"
+        return f"shorter-catechism.html#question-{num}"
     return None
+
+
+def link_proof_references(fragment):
+    """Link historical proof abbreviations without changing their printed words."""
+    aliases = {book["name"]: book["name"] for book in bible_books().values()}
+    names = {
+        "Gen": "Genesis", "Ex": "Exodus", "Exod": "Exodus", "Lev": "Leviticus", "Num": "Numbers",
+        "Deut": "Deuteronomy", "Josh": "Joshua", "Judg": "Judges", "Sam": "Samuel", "Chr": "Chronicles",
+        "Neh": "Nehemiah", "Est": "Esther", "Psa": "Psalms", "Ps": "Psalms", "Prov": "Proverbs",
+        "Ecc": "Ecclesiastes", "Songs": "Song of Solomon", "Isa": "Isaiah", "Jer": "Jeremiah",
+        "Lam": "Lamentations", "Ezek": "Ezekiel", "Dan": "Daniel", "Hos": "Hosea", "Mic": "Micah",
+        "Hab": "Habakkuk", "Hag": "Haggai", "Zec": "Zechariah", "Zech": "Zechariah", "Zeph": "Zephaniah",
+        "Mal": "Malachi", "Mat": "Matthew", "Matt": "Matthew", "Rom": "Romans", "Cor": "Corinthians",
+        "Gal": "Galatians", "Eph": "Ephesians", "Phil": "Philippians", "Col": "Colossians",
+        "Thes": "Thessalonians", "Thess": "Thessalonians", "Tim": "Timothy", "Heb": "Hebrews",
+        "Jas": "James", "Pet": "Peter",
+    }
+    for short, full in names.items():
+        if full.lower() in bible_books():
+            aliases[short] = full
+        for number in (1, 2, 3):
+            if f"{number} {full}".lower() in bible_books():
+                aliases[f"{number} {short}"] = f"{number} {full}"
+    choices = "|".join(re.escape(name) for name in sorted(aliases, key=len, reverse=True))
+    verses = r"\d{1,3}(?:[-–]\d{1,3})?(?:,\s*\d{1,3}(?:[-–]\d{1,3})?)*"
+    pattern = re.compile(r"(?<![\w])(?:(?P<book>" + choices + r")\.?\s+(?P<ref>" + verses + r"(?::" + verses + r")?)|(?P<implicit>\d{1,3}:" + verses + r"))(?!\d)")
+    previous = None
+    def link(match):
+        nonlocal previous
+        if match.group("book"):
+            previous = aliases[match.group("book")]
+        if previous is None:
+            return match.group(0)
+        canonical = previous + " " + (match.group("ref") or match.group("implicit"))
+        parsed = scripture_pattern().fullmatch(canonical)
+        if not parsed or not valid_scripture(parsed):
+            return match.group(0)
+        return '<a class="source-ref" href="' + scripture_url(parsed) + '" aria-haspopup="dialog">' + match.group(0) + '</a>'
+    return pattern.sub(link, fragment)
+
 
 def link_text(text):
     # Quote only the exact printed reference. We never rewrite its wording,
@@ -85,7 +139,7 @@ def link_text(text):
     for match in scripture_pattern().finditer(text):
         if valid_scripture(match):
             passage = match.group(0)
-            url = "bible.html?ref=" + quote(html.unescape(passage), safe="")
+            url = scripture_url(match)
             matches.append((match.start(), match.end(), url, "Read " + passage + " in the KJV"))
     for match in CONFESSIONAL.finditer(text):
         url = confessional_url(match)
@@ -100,7 +154,7 @@ def link_text(text):
             continue
         result.append(text[pos:start])
         scripture = url.startswith("bible.html?")
-        attributes = ' aria-haspopup="dialog"' if scripture else ' target="_blank" rel="noopener"'
+        attributes = ' aria-haspopup="dialog"' if scripture else ''
         result.append(
             '<a class="source-ref" href="' + html.escape(url, quote=True)
             + '"' + attributes + ' title="' + html.escape(title, quote=True)

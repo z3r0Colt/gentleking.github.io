@@ -23,7 +23,7 @@ def main():
     foundations = page("foundations.html")
     for n in range(1, 34):
         require(f'id="chapter-{n}"' in study, f"Chapter {n} missing from study index")
-        require(f'biblehelps/index.html#standards/wcf/{n}' in study, f"Chapter {n} lacks original text link")
+        require(f'westminster-confession.html#chapter-{n}' in study, f"Chapter {n} lacks original text link")
     require(study.count('class="') > 30, "Westminster index structure missing")
     require(foundations.count('class="foundation-step"') == 16, "Expected 16 foundation lessons")
     for name in (
@@ -38,7 +38,7 @@ def main():
     require("corrections.html?article=" in page("doctrine-baptism.html"), "Missing per-page report link")
     require('id="correction-form"' in page("corrections.html"), "Missing correction form")
     require("assets/js/corrections.js" in page("corrections.html"), "Correction script not loaded")
-    require("biblehelps/index.html#standards/wcf/11/1" in page("doctrine-justification.html"), "Paragraph deep link not generated")
+    require("westminster-confession.html#chapter-11-paragraph-1" in page("doctrine-justification.html"), "Paragraph deep link not generated")
     require("https://thewestminsterstandard.org/" in study, "Original source not credited")
     if ERRORS:
         for err in ERRORS:

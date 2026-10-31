@@ -1,0 +1,278 @@
+[
+  {
+    "number": 1,
+    "title": "Hear the gospel",
+    "description": "Who Christ is and why sinners must come to him now.",
+    "readings": [
+      {
+        "href": "gospel.html",
+        "label": "Hear the gospel"
+      }
+    ],
+    "scripture": "Mark%201%3A14-15",
+    "confession": {
+      "href": "westminster-confession.html#chapter-7-paragraph-3",
+      "label": "WCF 7.3"
+    }
+  },
+  {
+    "number": 2,
+    "title": "The God who speaks",
+    "description": "Why Scripture is our only infallible rule.",
+    "readings": [
+      {
+        "href": "doctrine-scripture.html",
+        "label": "The God who speaks"
+      }
+    ],
+    "scripture": "2%20Timothy%203%3A14-17",
+    "confession": {
+      "href": "westminster-confession.html#chapter-1-paragraph-4",
+      "label": "WCF 1.4"
+    }
+  },
+  {
+    "number": 3,
+    "title": "God, our Creator",
+    "description": "The Father, Son, and Holy Ghost, one living God.",
+    "readings": [
+      {
+        "href": "doctrine-god-and-trinity.html",
+        "label": "God, our Creator"
+      }
+    ],
+    "scripture": "Matthew%2028%3A18-20",
+    "confession": {
+      "href": "westminster-confession.html#chapter-2-paragraph-3",
+      "label": "WCF 2.3"
+    }
+  },
+  {
+    "number": 4,
+    "title": "The fall and our need",
+    "description": "What Adam's sin did and why we can't rescue ourselves.",
+    "readings": [
+      {
+        "href": "doctrine-fall-and-sin.html",
+        "label": "The fall and our need"
+      }
+    ],
+    "scripture": "Romans%205%3A12-19",
+    "confession": {
+      "href": "westminster-confession.html#chapter-6-paragraph-3",
+      "label": "WCF 6.3"
+    }
+  },
+  {
+    "number": 5,
+    "title": "Christ our Mediator",
+    "description": "The person and work of our Prophet, Priest, and King.",
+    "readings": [
+      {
+        "href": "doctrine-christ-mediator.html",
+        "label": "Christ our Mediator"
+      }
+    ],
+    "scripture": "Hebrews%207%3A23-28",
+    "confession": {
+      "href": "westminster-confession.html#chapter-8-paragraph-2",
+      "label": "WCF 8.2"
+    }
+  },
+  {
+    "number": 6,
+    "title": "Repentance and faith",
+    "description": "Turning from sin and believing the freely offered Savior.",
+    "readings": [
+      {
+        "href": "guide-repentance.html",
+        "label": "Repentance and faith"
+      }
+    ],
+    "scripture": "Acts%202%3A37-41",
+    "confession": {
+      "href": "westminster-confession.html#chapter-15-paragraph-1",
+      "label": "WCF 15.1"
+    }
+  },
+  {
+    "number": 7,
+    "title": "Justification",
+    "description": "Accepted for Christ's righteousness, received by faith.",
+    "readings": [
+      {
+        "href": "doctrine-justification.html",
+        "label": "Justification"
+      }
+    ],
+    "scripture": "Romans%204%3A1-8",
+    "confession": {
+      "href": "westminster-confession.html#chapter-11-paragraph-1",
+      "label": "WCF 11.1"
+    }
+  },
+  {
+    "number": 8,
+    "title": "Union and adoption",
+    "description": "Belonging to Christ and received into the Father's family.",
+    "readings": [
+      {
+        "href": "doctrine-union-with-christ.html",
+        "label": "Union and adoption"
+      },
+      {
+        "href": "doctrine-adoption.html",
+        "label": "Adoption"
+      }
+    ],
+    "scripture": "Romans%208%3A14-17",
+    "confession": {
+      "href": "westminster-confession.html#chapter-12-paragraph-1",
+      "label": "WCF 12.1"
+    }
+  },
+  {
+    "number": 9,
+    "title": "A holy life",
+    "description": "The Spirit's work in the ongoing fight against sin.",
+    "readings": [
+      {
+        "href": "doctrine-sanctification.html",
+        "label": "A holy life"
+      }
+    ],
+    "scripture": "Galatians%205%3A16-25",
+    "confession": {
+      "href": "westminster-confession.html#chapter-13-paragraph-1",
+      "label": "WCF 13.1"
+    }
+  },
+  {
+    "number": 10,
+    "title": "Baptism and the covenant",
+    "description": "Christ's sign, believing households, and the visible church.",
+    "readings": [
+      {
+        "href": "doctrine-baptism.html",
+        "label": "Baptism and the covenant"
+      }
+    ],
+    "scripture": "Acts%202%3A38-39",
+    "confession": {
+      "href": "westminster-confession.html#chapter-28-paragraph-4",
+      "label": "WCF 28.4"
+    }
+  },
+  {
+    "number": 11,
+    "title": "Worship and the Lord's Day",
+    "description": "How the Lord gathers and nourishes his people.",
+    "readings": [
+      {
+        "href": "guide-worship.html",
+        "label": "Worship and the Lord's Day"
+      },
+      {
+        "href": "guide-lords-day.html",
+        "label": "Keeping the Lord's Day"
+      }
+    ],
+    "scripture": "Acts%202%3A41-42",
+    "confession": {
+      "href": "westminster-confession.html#chapter-21-paragraph-1",
+      "label": "WCF 21.1"
+    }
+  },
+  {
+    "number": 12,
+    "title": "Joining a church",
+    "description": "Membership, elders, and caring for the congregation.",
+    "readings": [
+      {
+        "href": "guide-church-membership.html",
+        "label": "Joining a church"
+      }
+    ],
+    "scripture": "Hebrews%2010%3A23-25",
+    "confession": {
+      "href": "westminster-confession.html#chapter-25-paragraph-2",
+      "label": "WCF 25.2"
+    }
+  },
+  {
+    "number": 13,
+    "title": "The Lord's Supper",
+    "description": "The spiritual nourishment Christ gives his people.",
+    "readings": [
+      {
+        "href": "guide-lords-supper.html",
+        "label": "The Lord's Supper"
+      }
+    ],
+    "scripture": "1%20Corinthians%2011%3A23-29",
+    "confession": {
+      "href": "westminster-confession.html#chapter-29-paragraph-7",
+      "label": "WCF 29.7"
+    }
+  },
+  {
+    "number": 14,
+    "title": "Assurance and perseverance",
+    "description": "Trusting the Savior through weakness and doubt.",
+    "readings": [
+      {
+        "href": "assurance-am-i-his.html",
+        "label": "Am I Really Saved?"
+      },
+      {
+        "href": "assurance-kept.html",
+        "label": "Will God Keep Me to the End?"
+      }
+    ],
+    "scripture": "John%2010%3A27-29",
+    "confession": {
+      "href": "westminster-confession.html#chapter-18-paragraph-3",
+      "label": "WCF 18.3"
+    }
+  },
+  {
+    "number": 15,
+    "title": "Prayer, family, and work",
+    "description": "Daily devotion and service in the place God has assigned.",
+    "readings": [
+      {
+        "href": "guide-prayer.html",
+        "label": "Prayer"
+      },
+      {
+        "href": "guide-family-worship.html",
+        "label": "Family Worship"
+      },
+      {
+        "href": "guide-work.html",
+        "label": "Work"
+      }
+    ],
+    "scripture": "Deuteronomy%206%3A4-9",
+    "confession": {
+      "href": "westminster-confession.html#chapter-21-paragraph-6",
+      "label": "WCF 21.6"
+    }
+  },
+  {
+    "number": 16,
+    "title": "Christ's return",
+    "description": "The resurrection, judgment, and everlasting life.",
+    "readings": [
+      {
+        "href": "doctrine-last-things.html",
+        "label": "Christ's return"
+      }
+    ],
+    "scripture": "1%20Corinthians%2015%3A20-28",
+    "confession": {
+      "href": "westminster-confession.html#chapter-33-paragraph-1",
+      "label": "WCF 33.1"
+    }
+  }
+]
