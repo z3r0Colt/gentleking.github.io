@@ -32,10 +32,12 @@ def scripture_pattern():
     choices = sorted(bible_books(), key=len, reverse=True)
     pattern = "|".join(re.escape(book) for book in choices)
     return re.compile(
-        r'(?<![\w])(?P<book>' + pattern + r')\s+'
+        r'(?<![\w])(?P<single>(?=(?:Obadiah|Philemon|2 John|3 John|Jude)\s))?'
+        r'(?P<book>' + pattern + r')\s+'
         r'(?P<ch>\d{1,3})'
         r'(?::(?P<vs>\d{1,3})(?:\s*[-\u2013]\s*(?P<ve>\d{1,3}))?'
         r'(?P<more>(?:\s*,\s*\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?)*))?'
+        r'(?(single)(?P<shorttail>(?:\s*[-–]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-–]\s*\d{1,3})?)*))'
         r'(?!\d)', re.I
     )
 
@@ -52,9 +54,9 @@ def scripture_parts(match):
     book = bible_books().get(match.group("book").lower())
     chapter = int(match.group("ch"))
     first = match.group("vs")
-    if len(book["chapters"]) == 1 and first is None and chapter > 1:
+    if len(book["chapters"]) == 1 and first is None and (chapter > 1 or match.group("shorttail")):
         first, chapter = str(chapter), 1
-    expression = (first or "") + (("-" + match.group("ve")) if match.group("ve") else "") + (match.group("more") or "")
+    expression = (first or "") + (("-" + match.group("ve")) if match.group("ve") else "") + (match.group("more") or "") + (match.group("shorttail") or "")
     ranges = []
     if expression:
         for part in expression.split(","):
@@ -114,7 +116,7 @@ def link_proof_references(fragment):
                 aliases[f"{number} {short}"] = f"{number} {full}"
     choices = "|".join(re.escape(name) for name in sorted(aliases, key=len, reverse=True))
     verses = r"\d{1,3}(?:[-–]\d{1,3})?(?:,\s*\d{1,3}(?:[-–]\d{1,3})?)*"
-    pattern = re.compile(r"(?<![\w])(?:(?P<book>" + choices + r")\.?\s+(?P<ref>\d{1,3}(?::" + verses + r")?)|(?P<implicit>\d{1,3}:" + verses + r"))(?!\d)")
+    pattern = re.compile(r"(?<![\w])(?:(?P<book>" + choices + r")\.?\s+(?P<ref>" + verses + r"(?::" + verses + r")?)|(?P<implicit>\d{1,3}:" + verses + r"))(?!\d)")
     previous = None
     def link(match):
         nonlocal previous

@@ -32,17 +32,18 @@
     return bookCache[index];
   }
   function parse(reference, metadata) {
-    var match = /^(.+?)\s+(\d{1,3})(?::(\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?)*))?$/.exec(reference.trim());
+    var match = /^(.+?)\s+(\d{1,3})(?::(\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-\u2013]\s*\d{1,3})?)*))?((?:\s*[-–]\s*\d{1,3})?(?:\s*,\s*\d{1,3}(?:\s*[-–]\s*\d{1,3})?)*)$/.exec(reference.trim());
     if (!match) { throw new Error('Choose a valid Bible reference.'); }
     var name = match[1].toLowerCase();
     if (name === 'psalm') { name = 'psalms'; }
     var index = metadata.findIndex(function (item) { return item.name.toLowerCase() === name; });
     var chapter = Number(match[2]);
     var expression = match[3] || '';
-    if (index >= 0 && metadata[index].chapters.length === 1 && !expression && chapter > 1) {
-      expression = String(chapter);
+    if (index >= 0 && metadata[index].chapters.length === 1 && !expression && (chapter > 1 || match[4])) {
+      expression = String(chapter) + match[4];
       chapter = 1;
     }
+    if (index >= 0 && metadata[index].chapters.length !== 1 && match[4]) { throw new Error('Choose a valid Bible reference.'); }
     var ranges = expression ? expression.split(',').map(function (part) {
       var pair = part.trim().split(/\s*[-–]\s*/);
       return [Number(pair[0]), Number(pair[pair.length - 1])];

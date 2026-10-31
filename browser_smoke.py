@@ -154,7 +154,7 @@ def main():
         proof.click()
         page.locator(".kjv-dialog .kjv-passage p").first.wait_for()
         page.keyboard.press("Escape")
-        for reference, verses in [("John%204%3A21%2C23", 2), ("Jude%203", 1)]:
+        for reference, verses in [("John%204%3A21%2C23", 2), ("Jude%203", 1), ("2%20John%209-10", 2)]:
             page.goto(BASE + "bible.html?ref=" + reference, wait_until="domcontentloaded")
             page.wait_for_function("document.getElementById('kjv-status').textContent === ''")
             check(page.locator("#kjv-passage .kjv-selected").count() == verses, "Disjoint or single-chapter Scripture reference failed")
