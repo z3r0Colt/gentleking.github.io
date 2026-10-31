@@ -1,8 +1,8 @@
 {
  "name": "The Gentle King Library",
- "description": "Public domain Puritan and confessionally Reformed works, gathered for gentleking.org.",
+ "description": "Puritan and Reformed works, historical scans, and Bible editions gathered for gentleking.org. See the rights and edition notes.",
  "generated": "2026-09-28",
- "rights": "Every work here is in the public domain in the United States. The books marked as from CCEL are the typed texts of the Christian Classics Ethereal Library (ccel.org), shared here by its permission. Project Gutenberg books keep the Gutenberg license inside them. The King James Version and the Berean Standard Bible are the public domain editions published by eBible.org, and the translators of the Berean Standard Bible gave it to the public domain in 2023. The works marked as from the Internet Archive are kept only as links to scans of the printing named.",
+ "rights": "Historical works are selected for their public-domain status in the United States. Transcriptions and editions may carry additional notices. Rights can differ outside the United States, including Crown rights in the Authorized Version in the United Kingdom. The books marked as from CCEL are the typed texts of the Christian Classics Ethereal Library (ccel.org), shared here by its permission. Project Gutenberg books keep the Gutenberg license inside them. The King James Version and the Berean Standard Bible are the public domain editions published by eBible.org, and the translators of the Berean Standard Bible gave it to the public domain in 2023. The works marked as from the Internet Archive are kept only as links to scans of the printing named.",
  "paths": "Every path is relative to this file's folder.",
  "categories": [
   "Bibles",
@@ -935,9 +935,25 @@
     "Acts",
     "Romans",
     "1 Corinthians",
-    "2 Corinthians"
+    "2 Corinthians",
+    "Galatians",
+    "Ephesians",
+    "Philippians",
+    "Colossians",
+    "1 Thessalonians",
+    "2 Thessalonians",
+    "1 Timothy",
+    "2 Timothy",
+    "Titus",
+    "Philemon",
+    "Hebrews",
+    "James",
+    "1 Peter",
+    "2 Peter",
+    "1 John",
+    "Jude"
    ],
-   "passage": "the Law, Joshua, Psalms, the Prophets, the Gospels, Acts, Romans, and Corinthians",
+   "passage": "the Law, Joshua, Psalms, the Prophets, the Gospels, Acts, and New Testament letters covered in the listed volumes",
    "blurb": "Calvin's careful verse by verse exposition of much of the Bible, a trusted guide for pastors and serious Bible readers.",
    "source": "CCEL"
   },
@@ -3692,7 +3708,7 @@
    "category": "Christian Life",
    "tier": "core",
    "first_published": 1862,
-   "edition": "Philadelphia : Presbyterian Publication Committee, 1800",
+   "edition": "Philadelphia: Presbyterian Publication Committee. The date of this printing has not been established.",
    "files": [
     {
      "volume": null,
@@ -4213,7 +4229,7 @@
    "category": "Sermons",
    "tier": "core",
    "first_published": 1855,
-   "edition": "London: Passmore & Alabaster, 1855–1917 (New Park Street Pulpit vols 1–6; Metropolitan Tabernacle Pulpit vols 7–63). Only 14 volumes of the original printing can be had on archive.org; 12 are hosted and 2 (vols 51–52) are linked.",
+   "edition": "London: Passmore & Alabaster, 1855–1917 (New Park Street Pulpit vols 1–6; Metropolitan Tabernacle Pulpit vols 7–63). This catalog links 14 volumes as historical scans at the Internet Archive.",
    "files": [],
    "links": [
     {
@@ -6095,7 +6111,7 @@
  "not_found": [
   {
    "id": "ryle-thoughts-for-young-men",
-   "note": "The auto pick (Expository Thoughts on the Gospels) was wrong. The work was first issued as the tract 'Young Men Exhorted"
+   "note": "Not included. The available match was a different work, and a suitable edition has not been verified."
   }
  ]
 }

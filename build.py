@@ -66,7 +66,7 @@ APP_WEB_PAGE = "sojourner-web.html"
 # llms.txt, so a new release changes these four lines and nothing else. The sizes
 # are the ones the release notes give, for the Windows installer, the Linux .deb,
 # and the Linux AppImage.
-APP_VERSION = "0.4.1"
+APP_VERSION = "0.4.3"
 APP_SIZE_MB = "594"
 APP_SIZE_DEB_MB = "519"
 APP_SIZE_APPIMAGE_MB = "626"
@@ -109,7 +109,8 @@ LICENSE_URL = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 SCRIPTURE_NOTICE = (
     "Scripture quotations are from the Authorized Version, the King James Bible "
-    "of 1611, which is in the public domain. If its older English is hard going, "
+    "of 1611. The KJV is in the public domain in the United States. Crown rights apply "
+    "in the United Kingdom. If its older English is hard going, "
     "read the same passages in a careful modern translation such as the ESV or the NASB."
 )
 
@@ -1691,7 +1692,7 @@ FOOTER = """<footer class="site-footer">
       </nav>
     </div>
     <div class="footer-base">
-      <p>&copy; {year} Gentle King. Everything written here may be copied and shared freely.</p>
+      <p>&copy; {year} Gentle King. You may share the original writing unchanged and noncommercially with attribution under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>.</p>
       <p><a href="about.html#what-this-is">This site is no substitute for a local church</a></p>
     </div>
     <p class="footer-fineprint">{scripture_notice}</p>
@@ -2301,8 +2302,8 @@ def structured_data(page, canonical, body, dates):
                 "@id": f"{canonical}#library",
                 "name": "The Gentle King Library",
                 "description": (
-                    "Public domain Puritan and Reformed classics in clean text, with the King James "
-                    "and the Berean Standard Bible, free to read in the browser or to download as EPUB."
+                    "Puritan and Reformed classics, with the King James "
+                    "and the Berean Standard Bible. Read available text editions in the browser, download EPUBs, or follow links to historical scans. Rights vary by edition and country."
                 ),
                 "numberOfItems": count,
                 "url": f"{canonical}#library",
@@ -3051,7 +3052,7 @@ def build_llms_txt():
         "death by the Spirit. It works in the browser on a phone or a computer, and it needs a "
         "free account made with an email address.",
         "",
-        "In immediate danger, call 911 in the United States. For thoughts of suicide or emotional "
+        "In the United States, call 911 for immediate danger. For thoughts of suicide or emotional "
         "distress, call or text 988. Anyone being hurt at home can call the National Domestic Violence "
         "Hotline at 1-800-799-7233, or text START to 88788. If a child is in immediate danger, call 911. "
         "Outside the United States, call the local emergency number. The page If You Are Not "
@@ -3068,9 +3069,21 @@ def build_llms_txt():
                     f"- [The library catalog]({SITE_URL}/resources/library/catalog.json): All {count} "
                     "works in the free library as JSON, each with its author, dates, category, "
                     f"topics, and the paths of its {files_n} EPUB and PDF files, which sit beside it "
-                    f"under {SITE_URL}/resources/library/. Every one is in the public domain."
+                    f"under {SITE_URL}/resources/library/. Consult the catalog rights and edition notes, especially outside the United States."
                 )
         lines.append("")
+
+    # Include every remaining visible registered page once, including entry
+    # pages, Foundations, individual doctrines, and correction/source guidance.
+    listed = {name for _, files in LLMS_GROUPS for name in files}
+    listed.update([APP_PAGE, MORTIFY_PAGE, "about.html", "index.html"])
+    listed.update(page["file"] for page in SOJOURNER_PAGES)
+    remaining = [page for page in PAGES if page["file"] not in listed and not page.get("hidden")]
+    lines += ["## Further teaching and study", ""]
+    lines += [f"- [Bible Reading Helps]({SITE_URL}/biblehelps/): All 66 book guides, interpretation lessons, the catechism course, original Westminster texts, and KJV passage reading."]
+    for page in remaining:
+        lines += entry(page)
+    lines.append("")
 
     lines += [f"## {APP_NAME}, a free Bible study app", ""]
     lines += entry(by_file["sojourner.html"], APP_NAME)
