@@ -2,7 +2,7 @@
 
 'use strict';
 const $=(q,r=document)=>r.querySelector(q), $$=(q,r=document)=>[...r.querySelectorAll(q)];
-const dataResponse = await fetch('assets/content.json?v=1c1a08a49d');
+const dataResponse = await fetch('assets/content.json?v=a09dd2cb47');
 if (!dataResponse.ok) throw new Error('The companion content could not load.');
 const DATA = await dataResponse.json();
 const BIBLE = JSON.parse($('#bibleMetadata').textContent).map(book => ({...book, chapters:book.chapters.map(count=>Array(count).fill(''))}));
