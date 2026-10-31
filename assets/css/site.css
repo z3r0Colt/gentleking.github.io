@@ -2325,3 +2325,32 @@ a.source-ref:hover, a.source-ref:focus-visible { text-decoration-thickness: 2px;
 
 /* Quiet source and study notes. */
 .small { font-size: .88rem; line-height: 1.5; }
+
+/* Scripture opens beside the article, using Gentle King's own KJV reader. */
+.kjv-open { overflow: hidden; }
+.kjv-dialog {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  border-radius: .3rem;
+  box-shadow: var(--shadow-lift);
+  width: min(42rem, calc(100% - 2rem));
+  max-height: 85dvh;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+.kjv-dialog::backdrop { background: rgb(0 0 0 / .55); }
+.kjv-dialog-head { position: sticky; top: 0; background: var(--paper); padding-bottom: .5rem; display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
+.kjv-dialog-head h2 { margin: 0; font-size: 1.6rem; }
+.kjv-dialog-head .btn { flex-shrink: 0; }
+.kjv-dialog-status { margin-top: 1rem; }
+.kjv-dialog-foot { border-top: 1px solid var(--rule); padding-top: 1rem; margin-bottom: 0; }
+.kjv-passage { line-height: 1.85; }
+.kjv-passage h2 { margin: 1.5rem 0 1rem; }
+.kjv-passage p { padding: .2rem .45rem; margin: 0 0 .5rem; }
+.kjv-verse-number { color: var(--ink-faint); font-family: var(--font-ui); font-size: .7em; }
+.kjv-selected { background: var(--gold-wash); border-left: 2px solid var(--gold); }
+.kjv-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; margin: 1.5rem 0; }
+.kjv-controls[hidden] { display: none; }
+.kjv-controls label { display: grid; gap: .35rem; font-family: var(--font-ui); font-size: .9rem; }
+.kjv-controls select { max-width: 100%; padding: .6rem; background: var(--paper); color: var(--ink); border: 1px solid var(--rule-strong); font: inherit; }
+@media print { .kjv-dialog { display: none; } }

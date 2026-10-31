@@ -68,7 +68,10 @@ Do not silently substitute the American Presbyterian revision of 1788, later
 denominational amendments, or quotations taken from other editions.
 
 When an article is built, `reference_links.py` turns recognizable full Bible
-references into KJV reading links to `biblehelps/index.html?ref=...`.
+references into KJV reading links to `bible.html?ref=...`. A normal click opens
+the passage in a dialog on the current article. The full reader uses Gentle
+King’s shared layout, and its text and metadata live under `assets/kjv/`.
+It does not load Bible Reading Helps. Modified clicks still open the full reader.
 It links WCF, WLC, and WSC citations to the relevant original document on
 The Westminster Standard. It skips any existing link, code, or interactive
 control. The historical book catalogue on Resources is excluded to preserve

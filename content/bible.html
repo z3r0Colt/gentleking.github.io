@@ -1,0 +1,18 @@
+<section class="section" id="read-bible">
+  <h2>Choose a Book and Chapter</h2>
+  <div id="kjv-reader">
+    <form id="kjv-form" class="kjv-controls" hidden>
+      <label for="kjv-book">Book <select id="kjv-book" name="book"></select></label>
+      <label for="kjv-chapter">Chapter <select id="kjv-chapter" name="chapter"></select></label>
+      <button class="btn" type="submit">Read</button>
+    </form>
+    <p id="kjv-status" role="status">Loading the Bible reader.</p>
+    <div id="kjv-passage" class="kjv-passage"></div>
+    <nav id="kjv-navigation" class="kjv-controls" aria-label="Bible chapters" hidden>
+      <button id="kjv-previous" class="btn" type="button">Previous chapter</button>
+      <button id="kjv-next" class="btn" type="button">Next chapter</button>
+    </nav>
+  </div>
+  <noscript><p>Turn on JavaScript to choose a chapter here, or download the EPUB below to read it in your own book reader.</p></noscript>
+  <p><a href="resources/library/bibles/king-james-version-1769.epub" download>Download the King James Bible as an EPUB</a>.</p>
+</section>

@@ -22,11 +22,7 @@ SHORTER = "https://thewestminsterstandard.org/westminster-shorter-catechism/"
 
 @lru_cache(maxsize=1)
 def bible_books():
-    index = (ROOT / "biblehelps" / "index.html").read_text(encoding="utf-8")
-    m = re.search(r'<script type="application/json" id="bibleMetadata">([\s\S]*?)</script>', index)
-    if not m:
-        raise RuntimeError("Cannot find the Bible book metadata")
-    books = json.loads(m.group(1))
+    books = json.loads((ROOT / "assets/kjv/books.json").read_text(encoding="utf-8"))
     mapping = {book["name"].lower(): book for book in books}
     mapping["psalm"] = mapping["psalms"]
     return mapping
@@ -89,7 +85,7 @@ def link_text(text):
     for match in scripture_pattern().finditer(text):
         if valid_scripture(match):
             passage = match.group(0)
-            url = "biblehelps/index.html?ref=" + quote(html.unescape(passage), safe="")
+            url = "bible.html?ref=" + quote(html.unescape(passage), safe="")
             matches.append((match.start(), match.end(), url, "Read " + passage + " in the KJV"))
     for match in CONFESSIONAL.finditer(text):
         url = confessional_url(match)
@@ -103,9 +99,11 @@ def link_text(text):
         if start < pos:
             continue
         result.append(text[pos:start])
+        scripture = url.startswith("bible.html?")
+        attributes = ' aria-haspopup="dialog"' if scripture else ' target="_blank" rel="noopener"'
         result.append(
             '<a class="source-ref" href="' + html.escape(url, quote=True)
-            + '" target="_blank" rel="noopener" title="' + html.escape(title, quote=True)
+            + '"' + attributes + ' title="' + html.escape(title, quote=True)
             + '">' + text[start:end] + '</a>'
         )
         pos = end

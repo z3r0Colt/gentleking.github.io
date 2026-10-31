@@ -24,7 +24,7 @@ def main():
         found = re.findall(r'<a class="source-ref" href="([^"]+)"[^>]*>(.*?)</a>', page_html, re.S)
         bible, standards = 0, 0
         for href, label in found:
-            if href.startswith("biblehelps/index.html?"):
+            if href.startswith("bible.html?"):
                 query = parse_qs(urlsplit(href).query)
                 reference = query.get("ref", [""])[0]
                 match = scripture_pattern().fullmatch(reference)
@@ -56,6 +56,17 @@ def main():
             invalid.append("Missing new doctrine article: " + path)
         if f'href="{path}"' not in (ROOT / "doctrine.html").read_text(encoding="utf-8"):
             invalid.append("Doctrine index does not link to " + path)
+    # Validate the independent main-site KJV corpus and catch accidental app links.
+    books = json.loads((ROOT / "assets/kjv/books.json").read_text(encoding="utf-8"))
+    if len(books) != 66:
+        invalid.append("The main-site KJV must contain all 66 books")
+    for index, book in enumerate(books, 1):
+        text = json.loads((ROOT / f"assets/kjv/{index:02d}.json").read_text(encoding="utf-8"))
+        if text["name"] != book["name"] or [len(chapter) for chapter in text["chapters"]] != book["chapters"]:
+            invalid.append("KJV book metadata mismatch: " + book["name"])
+    for page in build.PAGES:
+        if 'class="source-ref" href="biblehelps/index.html?' in (ROOT / page["file"]).read_text(encoding="utf-8"):
+            invalid.append(page["file"] + " still sends Scripture to the companion app")
     if invalid:
         for issue in invalid:
             print("ERROR:", issue)

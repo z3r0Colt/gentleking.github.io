@@ -60,6 +60,7 @@ jobs:
           python3 contractions_audit.py
           node --check biblehelps/assets/companion.js
           node --check assets/js/corrections.js
+          node --check assets/js/kjv.js
 
       - name: Commit generated pages after successful checks
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
