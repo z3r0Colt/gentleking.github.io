@@ -55,7 +55,7 @@ for url, needles in SOURCES.items():
                 print('Passage not located; manual verification required.', flush=True)
             for match in matches:
                 print(body[max(0, match.start() - 250):match.end() + 650], flush=True)
-    except (urllib.error.URLError, UnicodeError, ValueError) as error:
+    except (urllib.error.URLError, TimeoutError, UnicodeError, ValueError) as error:
         print('VERIFICATION UNAVAILABLE:', type(error).__name__, str(error), flush=True)
 
 
@@ -82,5 +82,5 @@ try:
         for needle in ['egg', 'ovulation', 'implantation', 'fertilization']:
             for match in list(re.finditer(needle, body, re.I))[:3]:
                 print(body[max(0, match.start() - 200):match.end() + 700], flush=True)
-except (urllib.error.URLError, UnicodeError, ValueError, KeyError) as error:
+except (urllib.error.URLError, TimeoutError, UnicodeError, ValueError, KeyError) as error:
     print('VERIFICATION UNAVAILABLE:', type(error).__name__, str(error), flush=True)
