@@ -1190,3 +1190,49 @@ Follow-up on the same continuity batch: the final sweep also found the remaining
 Updated only the menu's icon mapping to use each tool's existing visual identity. Sojourner uses its supplied 64-pixel logo; Bible Reading Helps uses an SVG reproduction of its existing green book header mark; the native KJV reader uses Gentle King's existing crown favicon; Mortify retains its existing logo. Labels and existing image sizing remain. The existing nine checks pass. Focused Chromium inspection verified all four images load at 375, 768 and 1280 pixels in light and dark themes, with no horizontal overflow. Phone/light and desktop/dark screenshots were directly inspected. No article wording or protected quotations changed.
 
 Prior continuity PR 94 final source dc4e1785aa3e40ad94c97ccd025c1cca6281ef93 passed build 41222183162 and browser 41222183121. Merge 66f26ebe6ad860f85a8eb8c15f2a35237d2fc88c passed main build 41222338146. Generated 64f667195da6b3a24e6f06bda02d187b7161b0a3 completed final Pages deployment 41222368819 successfully. Actual live checks confirmed the three retired URLs return 404, the new native documents return 200, Foundations and native proof reading work with companion requests blocked, and search/sitemap/llms contain no retired report entries.
+
+
+## November 5, 2026 — complete the remaining guide expansions
+
+Expanded all 26 guides identified in the remaining Christian-life, church-practice, Bible-interpretation, and doctrine-evaluation batch. Read each current article completely before adding page-specific material. The additions provide worked passages, ordinary decisions, and explanations of the duties involved. This is an expansion batch, not a second claim that all site content has been rewritten. The 16 already substantial household, ethics, and free-will guides retain their earlier expansions unchanged.
+
+Every original paragraph, protected quotation, and existing section ID in these 26 articles is retained. Two new sections per article add approximately 11,655 words across the batch. Prose and headings were reviewed sentence by sentence, including the positive duty, prohibited neglect, relevant limits, and the proportion of ordinary instruction. No new historical quotations, denominational procedures, medical instructions, or legal conclusions were introduced. The retired named-teacher report, directory, and PDF remain removed. The general guides teach how to evaluate doctrine without restoring that ministry.
+
+| Source page | Added material |
+| --- | --- |
+| `guide-bible-reading.html` | Work Through One Passage / When Reading Is Difficult |
+| `guide-prayer.html` | Pray Through a Psalm / When the Answer Waits |
+| `guide-family-worship.html` | An Ordinary Evening Together / Lead the Household in Worship |
+| `guide-lords-day.html` | Plan for the Whole Day / Judge Difficult Duties Honestly |
+| `guide-evangelism.html` | A Conversation That Reaches the Gospel / Help Someone Take the Next Step |
+| `guide-examine-yourself.html` | Work Through an Actual Sin / Judge the Evidence Carefully |
+| `guide-repentance.html` | When You've Committed the Same Sin Again / Put Right What You Can |
+| `guide-forgiveness.html` | What an Ordinary Reconciliation Can Look Like / When the Memory Still Hurts |
+| `guide-church-membership.html` | What to Discuss with the Elders / Become Someone the Congregation Can Count on |
+| `guide-joining-rpc.html` | Prepare for a First Visit / Work Through Membership Questions Honestly |
+| `guide-find-a-church.html` | Look at Teaching and Ordinary Practice / When the Available Options Are Difficult |
+| `guide-leaving-a-church.html` | Handle an Ordinary Transfer Responsibly / Enter the Next Congregation Truthfully |
+| `guide-hearing-sermons.html` | Follow What the Passage Is Saying / Ask a Question That Can Be Answered |
+| `guide-lords-supper.html` | Attend to Christ's Appointment / When Preparation Uncovers a Serious Concern |
+| `guide-worship.html` | Take Part in the Appointed Worship / Consider a Proposed Practice Carefully |
+| `guide-ten-commandments.html` | Apply the Commandments to a Real Decision / Learn the Duties as Well as the Prohibitions |
+| `guide-meditation.html` | Keep the Passage Around the Verse / Carry the Truth into Ordinary Life |
+| `guide-fasting.html` | Give the Fast a Definite Purpose / Join a Church Fast and Leave the Answer with God |
+| `guide-reading-scripture.html` | Trace an Argument Before Applying It / Read Old Testament Commands Within the Covenant History |
+| `guide-prophecy.html` | Work Through a Vision in Its Own Setting / Let the Promised End Govern Present Faithfulness |
+| `guide-new-revelation.html` | Make a Decision Under the Written Word / Distinguish Understanding from New Revelation |
+| `guide-media.html` | Check a Claim Before Passing It on / Make Decisions About Actual Use |
+| `guide-disagreeing.html` | Find the Point You Actually Disagree About / Exercise Liberty with Regard for Another Person |
+| `guide-false-church.html` | Establish What the Congregation Actually Teaches / Respond According to What Has Been Established |
+| `guide-false-teachers.html` | Test a Claim in Context / Consider Doctrine, Conduct, and Church Office |
+| `guide-heresy.html` | Understand What the Doctrine Affirms / Know Your Responsibility and Its Limits |
+
+Source/context verification uses the unchanged KJV corpus and the original Westminster documents from https://thewestminsterstandard.org/ exclusively. Rechecked Mark 2, Psalm 13, Ephesians 2, Daniel 7, Romans 3–4, 1 Timothy 6, 2 Corinthians 7 and 12, Matthew 12 and 26, Luke 18, James 4, John 6, Titus 3, and 2 John for the principal worked examples. No narrative supplies an automatic healing promise, a required emotional experience, or knowledge of another person's final state. Confessional checks include WCF 1.6–9, 8.2, 11.1–2, 16.6, 18, 19.3–6, 20.2, 21.6–8, 25.2 and 25.4–5, 26.1–2, and 29.7, plus WLC 99, 160, and 167–175. Current direct HTTP requests to the approved Westminster source returned 403. The web connector successfully opened its Confession and Larger Catechism, including the relevant surrounding paragraphs; the previously verified native source data supplied additional complete paragraph comparisons. No American revision was substituted.
+
+The original scope and distinctions remain. The Bible-reading guide teaches how to begin and sustain reading; the interpretation guide explains context, genre, and covenant-law distinctions; meditation develops sustained reflection. Membership explains ordinary mutual duties; joining explains the visitor and reception conversations; finding a church addresses evaluation and access; leaving addresses transfer and continued care. The grace-alone basis of justification, free call to Christ, continuing moral duties, exclusive unaccompanied Psalm singing, daily family worship, and whole-day Christian Sabbath are retained and explained positively.
+
+Initial verification passed the build, 126-page HTML/link checks, Bible Reading Helps supplied-text checks, reference/doctrine audit, Foundations checks, quotation integrity, contractions preview, and all four relevant JavaScript syntax checks. The full Chromium suite passed 125 routes at 375, 768, and 1280 pixels, including native Scripture/Standards readers and Foundations navigation. A separate source comparison confirmed that removing the new sections leaves every original article body and ID intact. Existing metadata remains accurate to the expanded articles; generated TOCs, reading times, search, and source links are rebuilt from source. Final section-layout review, CI, and publication evidence will be recorded after completion.
+
+Previous tool-logo PR 95 deployed successfully at generated main 8c5250eff5d12cef6fc7b298802780844ff64c86, Pages run 41224786802. This batch began on that current main in a clean worktree.
+
+Final local verification: all 52 added sections and their generated TOC destinations were exercised at all three viewport widths. Nine below-the-fold screenshots were saved; representative phone, tablet, and desktop images were directly inspected. All 52 section URLs are present in the generated search index. The focused check initially tried to click the collapsed phone TOC; opening its existing toggle corrected the test, with no product change needed. After the final wording and heading review, all ten post-build validation commands passed again. Final CI and public deployment remain to be verified.
